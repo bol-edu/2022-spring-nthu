@@ -1,0 +1,50 @@
+INFO-FLOW: Workspace /home/willy/HLS_AES_MIMO/AES_CHANNEL_KBEST_ver5/Final_HLS.prj/solution1 opened at Mon Jun 20 06:01:26 CST 2022
+Execute       send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -default_interface 
+Execute       get_config_rtl -register_reset_num 
+Execute     set_part xcu50-fsvh2104-2-e 
+INFO: [HLS 200-1510] Running: set_part xcu50-fsvh2104-2-e 
+Execute       create_platform xcu50-fsvh2104-2-e -board  
+DBG:HLSDevice: Trying to load device library: /opt/Xilinx/Vitis_HLS/2021.2/lib/lnx64.o/librdi_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /opt/Xilinx/Vivado/2021.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+Execute         source /opt/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/virtexuplus_dsp48e2.hlp 
+INFO: [HLS 200-1611] Setting target device to 'xcu50-fsvh2104-2-e'
+Command       create_platform done; 1.46 sec.
+Execute       source /opt/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/util.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xcu50-fsvh2104-2-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 1.56 sec.
+Execute     create_clock -period 40 
+INFO: [HLS 200-1510] Running: create_clock -period 40 
+Execute       ap_set_clock -name default -period 40 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 40ns.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       ap_part_info -name xcu50-fsvh2104-2-e -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 0.31 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 26.23 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 25.38 seconds. CPU system time: 1.32 seconds. Elapsed time: 26.23 seconds; current allocated memory: -937.109 MB.
+Execute     cleanup_all 

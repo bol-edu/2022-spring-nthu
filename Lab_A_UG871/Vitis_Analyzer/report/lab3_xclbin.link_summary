@@ -1,0 +1,908 @@
+<ENTRY>
+{
+ "thisFile": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Mon Mar  7 19:08:14 2022",
+ "timestampMillis": "1646651294605",
+ "buildStep": {
+  "cmdId": "425f0257-6856-420d-b204-15d497fd7c36",
+  "name": "v++",
+  "logFile": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/link.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2021.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" --target hw_emu --link --config binary_container_1-link.cfg -obinary_container_1.xclbin ../../vts_Opt1Baseline_kernels/Emulation-HW/build/KA.xo ../../vts_Opt1Baseline_kernels/Emulation-HW/build/KB.xo ../../vts_Opt1Baseline_kernels/Emulation-HW/build/KCalc.xo ../../vts_Opt1Baseline_kernels/Emulation-HW/build/KVConstAdd.xo ../../vts_Opt1Baseline_kernels/Emulation-HW/build/KpB.xo ",
+  "args": [
+   "--target",
+   "hw_emu",
+   "--link",
+   "--config",
+   "binary_container_1-link.cfg",
+   "-obinary_container_1.xclbin",
+   "../../vts_Opt1Baseline_kernels/Emulation-HW/build/KA.xo",
+   "../../vts_Opt1Baseline_kernels/Emulation-HW/build/KB.xo",
+   "../../vts_Opt1Baseline_kernels/Emulation-HW/build/KCalc.xo",
+   "../../vts_Opt1Baseline_kernels/Emulation-HW/build/KVConstAdd.xo",
+   "../../vts_Opt1Baseline_kernels/Emulation-HW/build/KpB.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1-link.cfg",
+    "content": "platform=xilinx_u50_gen3x16_xdma_201920_3\nsave-temps=1\ndebug=1\nmessageDb=binary_container_1.mdb\ntemp_dir=binary_container_1.build\nreport_dir=binary_container_1.build/reports\nlog_dir=binary_container_1.build/logs\nremote_ip_cache=/users/course/2022S/HLS17000000/g109061564/lab3/ip_cache\n\n[advanced]\nmisc=solution_name=link\n\n[connectivity]\nnk=KA:1:KA_1\nnk=KB:1:KB_1\nnk=KCalc:1:KCalc_1\nnk=KVConstAdd:1:KVConstAdd_1\nnk=KpB:1:KpB_1\n\n[profile]\ndata=KA:KA_1:A:all\ndata=KA:KA_1:R:all\ndata=KB:KB_1:A:all\ndata=KB:KB_1:R:all\ndata=KCalc:KCalc_1:A:all\ndata=KCalc:KCalc_1:B:all\ndata=KCalc:KCalc_1:R:all\ndata=KVConstAdd:KVConstAdd_1:V:all\ndata=KpB:KpB_1:A:all\ndata=KpB:KpB_1:B:all\ndata=KpB:KpB_1:R:all"
+   }
+  ],
+  "cwd": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar  7 19:08:14 2022",
+ "timestampMillis": "1646651294606",
+ "status": {
+  "cmdId": "425f0257-6856-420d-b204-15d497fd7c36",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Mon Mar  7 19:08:19 2022",
+ "timestampMillis": "1646651299342",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u50_gen3x16_xdma_201920_3.xpfm",
+  "hardwareDsa": "hw.xsa",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW_EMU",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "binary_container_1",
+    "file": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "KA",
+     "file": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_kernels/Emulation-HW/build/KA.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/xo/KA/KA/cpu_sources/K_KA.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "KA_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "KB",
+     "file": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_kernels/Emulation-HW/build/KB.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/xo/KB/KB/cpu_sources/K_KB.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "KB_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "KCalc",
+     "file": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_kernels/Emulation-HW/build/KCalc.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/xo/KCalc/KCalc/cpu_sources/K_KCalc.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "KCalc_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "KVConstAdd",
+     "file": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_kernels/Emulation-HW/build/KVConstAdd.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/xo/KVConstAdd/KVConstAdd/cpu_sources/K_KVConstAdd.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "KVConstAdd_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "KpB",
+     "file": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_kernels/Emulation-HW/build/KpB.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/xo/KpB/KpB/cpu_sources/K_KpB.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "KpB_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2021.2. SW Build 3363252 on 2021-10-14-04:41:01"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Mar  7 19:08:19 2022",
+ "timestampMillis": "1646651299571",
+ "buildStep": {
+  "cmdId": "70360507-8a70-4825-9781-5d11d8047a30",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_kernels/Emulation-HW/build/KA.xo --xo /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_kernels/Emulation-HW/build/KB.xo --xo /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_kernels/Emulation-HW/build/KCalc.xo --xo /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_kernels/Emulation-HW/build/KVConstAdd.xo --xo /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_kernels/Emulation-HW/build/KpB.xo -keep --config /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3/xilinx_u50_gen3x16_xdma_201920_3.xpfm --target emu --output_dir /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int --temp_dir /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/sys_link",
+  "args": [
+   "--xo",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_kernels/Emulation-HW/build/KA.xo",
+   "--xo",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_kernels/Emulation-HW/build/KB.xo",
+   "--xo",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_kernels/Emulation-HW/build/KCalc.xo",
+   "--xo",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_kernels/Emulation-HW/build/KVConstAdd.xo",
+   "--xo",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_kernels/Emulation-HW/build/KpB.xo",
+   "-keep",
+   "--config",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3/xilinx_u50_gen3x16_xdma_201920_3.xpfm",
+   "--target",
+   "emu",
+   "--output_dir",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int",
+   "--temp_dir",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/syslinkConfig.ini",
+    "content": "nk=KA:1:KA_1\nnk=KB:1:KB_1\nnk=KCalc:1:KCalc_1\nnk=KVConstAdd:1:KVConstAdd_1\nnk=KpB:1:KpB_1\n\n"
+   }
+  ],
+  "cwd": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar  7 19:08:19 2022",
+ "timestampMillis": "1646651299572",
+ "status": {
+  "cmdId": "70360507-8a70-4825-9781-5d11d8047a30",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar  7 19:08:36 2022",
+ "timestampMillis": "1646651316108",
+ "status": {
+  "cmdId": "70360507-8a70-4825-9781-5d11d8047a30",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Mar  7 19:08:36 2022",
+ "timestampMillis": "1646651316116",
+ "buildStep": {
+  "cmdId": "178d81bd-3599-482d-812e-66d31ed6fe9b",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/sdsl.dat -rtd /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/cf2sw.rtd -nofilter /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/cf2sw_full.rtd -xclbin /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/xclbin_orig.xml -o /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/sdsl.dat",
+   "-rtd",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/cf2sw.rtd",
+   "-nofilter",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/xclbin_orig.xml",
+   "-o",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar  7 19:08:36 2022",
+ "timestampMillis": "1646651316116",
+ "status": {
+  "cmdId": "178d81bd-3599-482d-812e-66d31ed6fe9b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar  7 19:08:40 2022",
+ "timestampMillis": "1646651320034",
+ "status": {
+  "cmdId": "178d81bd-3599-482d-812e-66d31ed6fe9b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Mar  7 19:08:40 2022",
+ "timestampMillis": "1646651320041",
+ "buildStep": {
+  "cmdId": "41bf99b5-929d-43ad-879e-0a3162cf5f3c",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar  7 19:08:40 2022",
+ "timestampMillis": "1646651320041",
+ "status": {
+  "cmdId": "41bf99b5-929d-43ad-879e-0a3162cf5f3c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Mar  7 19:08:40 2022",
+ "timestampMillis": "1646651320282",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar  7 19:08:40 2022",
+ "timestampMillis": "1646651320284",
+ "status": {
+  "cmdId": "41bf99b5-929d-43ad-879e-0a3162cf5f3c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Mar  7 19:08:40 2022",
+ "timestampMillis": "1646651320296",
+ "buildStep": {
+  "cmdId": "ae24e5f6-cb03-4b22-af99-317887c97549",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw_emu -f xilinx_u50_gen3x16_xdma_201920_3 -g --remote_ip_cache /users/course/2022S/HLS17000000/g109061564/lab3/ip_cache -s --output_dir /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int --log_dir /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/logs/link --report_dir /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/reports/link --config /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/vplConfig.ini -k /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link --emulation_mode debug_waveform --no-info --iprepo /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/xo/ip_repo/xilinx_com_hls_KpB_2_0 --iprepo /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/xo/ip_repo/xilinx_com_hls_KVConstAdd_2_0 --iprepo /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/xo/ip_repo/xilinx_com_hls_KCalc_2_0 --iprepo /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/xo/ip_repo/xilinx_com_hls_KA_2_0 --iprepo /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/xo/ip_repo/xilinx_com_hls_KB_2_0 --messageDb /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/run_link/vpl.pb /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw_emu",
+   "-f",
+   "xilinx_u50_gen3x16_xdma_201920_3",
+   "-g",
+   "--remote_ip_cache",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/ip_cache",
+   "-s",
+   "--output_dir",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int",
+   "--log_dir",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/logs/link",
+   "--report_dir",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/reports/link",
+   "--config",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/vplConfig.ini",
+   "-k",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link",
+   "--emulation_mode",
+   "debug_waveform",
+   "--no-info",
+   "--iprepo",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/xo/ip_repo/xilinx_com_hls_KpB_2_0",
+   "--iprepo",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/xo/ip_repo/xilinx_com_hls_KVConstAdd_2_0",
+   "--iprepo",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/xo/ip_repo/xilinx_com_hls_KCalc_2_0",
+   "--iprepo",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/xo/ip_repo/xilinx_com_hls_KA_2_0",
+   "--iprepo",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/xo/ip_repo/xilinx_com_hls_KB_2_0",
+   "--messageDb",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/run_link/vpl.pb",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nmisc=solution_name=link\nparam=hw_emu.enableDebugWaveform=1\nparam=hw_emu.enableProfiling=1\nparam=compiler.vppCurrentWorkingDir=/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW\nmisc=BinaryName=binary_container_1\n\n[connectivity]\nnk=KA:1:KA_1\nnk=KB:1:KB_1\nnk=KCalc:1:KCalc_1\nnk=KVConstAdd:1:KVConstAdd_1\nnk=KpB:1:KpB_1\n\n[vivado]\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\n\n"
+   }
+  ],
+  "cwd": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar  7 19:08:40 2022",
+ "timestampMillis": "1646651320296",
+ "status": {
+  "cmdId": "ae24e5f6-cb03-4b22-af99-317887c97549",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Mon Mar  7 19:08:42 2022",
+ "timestampMillis": "1646651322189",
+ "buildStep": {
+  "cmdId": "dd19ae1d-3f7b-4c3b-baf9-d49ef5f27a0e",
+  "name": "vpl",
+  "logFile": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/link.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2021.2/bin/unwrapped/lnx64.o/vpl -t hw_emu -f xilinx_u50_gen3x16_xdma_201920_3 -g --remote_ip_cache /users/course/2022S/HLS17000000/g109061564/lab3/ip_cache -s --output_dir /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int --log_dir /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/logs/link --report_dir /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/reports/link --config /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/vplConfig.ini -k /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link --emulation_mode debug_waveform --no-info --iprepo /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/xo/ip_repo/xilinx_com_hls_KpB_2_0 --iprepo /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/xo/ip_repo/xilinx_com_hls_KVConstAdd_2_0 --iprepo /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/xo/ip_repo/xilinx_com_hls_KCalc_2_0 --iprepo /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/xo/ip_repo/xilinx_com_hls_KA_2_0 --iprepo /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/xo/ip_repo/xilinx_com_hls_KB_2_0 --messageDb /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/run_link/vpl.pb /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar  7 19:08:42 2022",
+ "timestampMillis": "1646651322190",
+ "status": {
+  "cmdId": "dd19ae1d-3f7b-4c3b-baf9-d49ef5f27a0e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Mon Mar  7 19:08:56 2022",
+ "timestampMillis": "1646651336452",
+ "vivadoProject": {
+  "openDir": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Mar  7 19:08:56 2022",
+ "timestampMillis": "1646651336455",
+ "buildStep": {
+  "cmdId": "8eed7995-9d58-4cac-b9d3-2a36c9424d85",
+  "name": "vivado",
+  "logFile": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar  7 19:08:56 2022",
+ "timestampMillis": "1646651336455",
+ "status": {
+  "cmdId": "8eed7995-9d58-4cac-b9d3-2a36c9424d85",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Mar  7 19:10:15 2022",
+ "timestampMillis": "1646651415502",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/debug_ip_layout.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "DEBUG_IP_LAYOUT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar  7 19:14:41 2022",
+ "timestampMillis": "1646651681432",
+ "status": {
+  "cmdId": "8eed7995-9d58-4cac-b9d3-2a36c9424d85",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar  7 19:14:46 2022",
+ "timestampMillis": "1646651686994",
+ "status": {
+  "cmdId": "dd19ae1d-3f7b-4c3b-baf9-d49ef5f27a0e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar  7 19:14:47 2022",
+ "timestampMillis": "1646651687008",
+ "status": {
+  "cmdId": "ae24e5f6-cb03-4b22-af99-317887c97549",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Mar  7 19:14:47 2022",
+ "timestampMillis": "1646651687017",
+ "buildStep": {
+  "cmdId": "547e3691-157f-4ce2-b06f-418df75e406b",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar  7 19:14:47 2022",
+ "timestampMillis": "1646651687017",
+ "status": {
+  "cmdId": "547e3691-157f-4ce2-b06f-418df75e406b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Mar  7 19:14:47 2022",
+ "timestampMillis": "1646651687023",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/binary_container_1_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Mar  7 19:14:47 2022",
+ "timestampMillis": "1646651687029",
+ "buildStep": {
+  "cmdId": "4df5692e-6c13-44cf-ac3d-8ad7e16dc1e4",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/address_map.xml -sdsl /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/sdsl.dat -xclbin /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/xclbin_orig.xml -rtd /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/binary_container_1.rtd -o /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/binary_container_1.xml",
+  "args": [
+   "-a",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/address_map.xml",
+   "-sdsl",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/sdsl.dat",
+   "-xclbin",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/binary_container_1.rtd",
+   "-o",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/binary_container_1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar  7 19:14:47 2022",
+ "timestampMillis": "1646651687029",
+ "status": {
+  "cmdId": "4df5692e-6c13-44cf-ac3d-8ad7e16dc1e4",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar  7 19:14:50 2022",
+ "timestampMillis": "1646651690572",
+ "status": {
+  "cmdId": "4df5692e-6c13-44cf-ac3d-8ad7e16dc1e4",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Mar  7 19:14:57 2022",
+ "timestampMillis": "1646651697604",
+ "buildStep": {
+  "cmdId": "0fa57807-d32d-4a11-93f6-f16efe3e352c",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/binary_container_1.rtd",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar  7 19:14:57 2022",
+ "timestampMillis": "1646651697604",
+ "status": {
+  "cmdId": "0fa57807-d32d-4a11-93f6-f16efe3e352c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Mar  7 19:14:57 2022",
+ "timestampMillis": "1646651697610",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar  7 19:14:57 2022",
+ "timestampMillis": "1646651697612",
+ "status": {
+  "cmdId": "0fa57807-d32d-4a11-93f6-f16efe3e352c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar  7 19:14:57 2022",
+ "timestampMillis": "1646651697613",
+ "status": {
+  "cmdId": "547e3691-157f-4ce2-b06f-418df75e406b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Mar  7 19:14:57 2022",
+ "timestampMillis": "1646651697624",
+ "buildStep": {
+  "cmdId": "9272596c-df6c-42d0-b471-4608b4398591",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section DEBUG_IP_LAYOUT:JSON:/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/debug_ip_layout.rtd --add-section BITSTREAM:RAW:/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/behav.xse --force --target hw_emu --key-value SYS:dfx_enable:false --add-section :JSON:/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/binary_container_1.rtd --append-section :JSON:/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/binary_container_1_xml.rtd --add-section BUILD_METADATA:JSON:/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/binary_container_1_build.rtd --add-section EMBEDDED_METADATA:RAW:/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/binary_container_1.xml --add-section SYSTEM_METADATA:RAW:/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_u50_gen3x16_xdma_201920_3 --output /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.xclbin",
+  "args": [
+   "--add-section",
+   "DEBUG_IP_LAYOUT:JSON:/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/debug_ip_layout.rtd",
+   "--add-section",
+   "BITSTREAM:RAW:/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/behav.xse",
+   "--force",
+   "--target",
+   "hw_emu",
+   "--key-value",
+   "SYS:dfx_enable:false",
+   "--add-section",
+   ":JSON:/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/binary_container_1.rtd",
+   "--append-section",
+   ":JSON:/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/binary_container_1_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/binary_container_1_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/binary_container_1.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--key-value",
+   "SYS:PlatformVBNV:xilinx_u50_gen3x16_xdma_201920_3",
+   "--output",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar  7 19:14:57 2022",
+ "timestampMillis": "1646651697624",
+ "status": {
+  "cmdId": "9272596c-df6c-42d0-b471-4608b4398591",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar  7 19:14:58 2022",
+ "timestampMillis": "1646651698450",
+ "status": {
+  "cmdId": "9272596c-df6c-42d0-b471-4608b4398591",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Mar  7 19:14:58 2022",
+ "timestampMillis": "1646651698456",
+ "buildStep": {
+  "cmdId": "fc77d99a-77fb-4377-b105-ab3545ccfb5b",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.xclbin.info --input /users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.xclbin.info",
+   "--input",
+   "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar  7 19:14:58 2022",
+ "timestampMillis": "1646651698456",
+ "status": {
+  "cmdId": "fc77d99a-77fb-4377-b105-ab3545ccfb5b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar  7 19:14:59 2022",
+ "timestampMillis": "1646651699197",
+ "status": {
+  "cmdId": "fc77d99a-77fb-4377-b105-ab3545ccfb5b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Mar  7 19:14:59 2022",
+ "timestampMillis": "1646651699203",
+ "buildStep": {
+  "cmdId": "835a989f-fef3-4d94-8e40-bf6ad917c18a",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar  7 19:14:59 2022",
+ "timestampMillis": "1646651699203",
+ "status": {
+  "cmdId": "835a989f-fef3-4d94-8e40-bf6ad917c18a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar  7 19:14:59 2022",
+ "timestampMillis": "1646651699205",
+ "status": {
+  "cmdId": "835a989f-fef3-4d94-8e40-bf6ad917c18a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Mar  7 19:14:59 2022",
+ "timestampMillis": "1646651699235",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/reports/link/system_estimate_binary_container_1.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Mar  7 19:14:59 2022",
+ "timestampMillis": "1646651699247",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Mar  7 19:14:59 2022",
+ "timestampMillis": "1646651699247",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Mar  7 19:14:59 2022",
+ "timestampMillis": "1646651699250",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g109061564/lab3/vts_Opt1Baseline_system_hw_link/Emulation-HW/binary_container_1.build/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Mar  7 19:14:59 2022",
+ "timestampMillis": "1646651699253",
+ "status": {
+  "cmdId": "425f0257-6856-420d-b204-15d497fd7c36",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

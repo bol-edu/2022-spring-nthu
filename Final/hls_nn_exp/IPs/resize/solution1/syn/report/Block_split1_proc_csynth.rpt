@@ -1,0 +1,140 @@
+
+
+================================================================
+== Vitis HLS Report for 'Block_split1_proc'
+================================================================
+* Date:           Sat Jun 18 18:21:40 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        resize
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|      0 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    0|    0|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|      2|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     45|    -|
+|Register         |        -|    -|     130|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     130|     47|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------+----+-----------+-----+-----------+
+    |     Name    | LUT| Input Size| Bits| Total Bits|
+    +-------------+----+-----------+-----+-----------+
+    |ap_done      |   9|          2|    1|          2|
+    |ap_return_0  |   9|          2|   32|         64|
+    |ap_return_1  |   9|          2|   32|         64|
+    |ap_return_2  |   9|          2|   32|         64|
+    |ap_return_3  |   9|          2|   32|         64|
+    +-------------+----+-----------+-----+-----------+
+    |Total        |  45|         10|  129|        258|
+    +-------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------+----+----+-----+-----------+
+    |       Name       | FF | LUT| Bits| Const Bits|
+    +------------------+----+----+-----+-----------+
+    |ap_CS_fsm         |   1|   0|    1|          0|
+    |ap_done_reg       |   1|   0|    1|          0|
+    |ap_return_0_preg  |  32|   0|   32|          0|
+    |ap_return_1_preg  |  32|   0|   32|          0|
+    |ap_return_2_preg  |  32|   0|   32|          0|
+    |ap_return_3_preg  |  32|   0|   32|          0|
+    +------------------+----+----+-----+-----------+
+    |Total             | 130|   0|  130|          0|
+    +------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------+-----+-----+------------+--------------------+--------------+
+|  RTL Ports  | Dir | Bits|  Protocol  |    Source Object   |    C Type    |
++-------------+-----+-----+------------+--------------------+--------------+
+|ap_clk       |   in|    1|  ap_ctrl_hs|  Block_.split1_proc|  return value|
+|ap_rst       |   in|    1|  ap_ctrl_hs|  Block_.split1_proc|  return value|
+|ap_start     |   in|    1|  ap_ctrl_hs|  Block_.split1_proc|  return value|
+|ap_done      |  out|    1|  ap_ctrl_hs|  Block_.split1_proc|  return value|
+|ap_continue  |   in|    1|  ap_ctrl_hs|  Block_.split1_proc|  return value|
+|ap_idle      |  out|    1|  ap_ctrl_hs|  Block_.split1_proc|  return value|
+|ap_ready     |  out|    1|  ap_ctrl_hs|  Block_.split1_proc|  return value|
+|ap_return_0  |  out|   32|  ap_ctrl_hs|  Block_.split1_proc|  return value|
+|ap_return_1  |  out|   32|  ap_ctrl_hs|  Block_.split1_proc|  return value|
+|ap_return_2  |  out|   32|  ap_ctrl_hs|  Block_.split1_proc|  return value|
+|ap_return_3  |  out|   32|  ap_ctrl_hs|  Block_.split1_proc|  return value|
+|src_rows     |   in|   32|     ap_none|            src_rows|        scalar|
+|src_cols     |   in|   32|     ap_none|            src_cols|        scalar|
+|dst_rows     |   in|   32|     ap_none|            dst_rows|        scalar|
+|dst_cols     |   in|   32|     ap_none|            dst_cols|        scalar|
++-------------+-----+-----+------------+--------------------+--------------+
+

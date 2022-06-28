@@ -1,0 +1,343 @@
+
+
+================================================================
+== Vitis HLS Report for 'channel_mult_Pipeline_CHANNEL2REAL'
+================================================================
+* Date:           Fri Jun 17 13:16:08 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        MIMO
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  40.00 ns|  2.691 ns|    10.80 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       18|       18|  0.720 us|  0.720 us|   18|   18|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- CHANNEL2REAL  |       16|       16|         2|          1|          1|    16|       yes|
+        +----------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      51|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      54|    -|
+|Register         |        -|     -|    1042|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|    1042|     105|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1824|  2520|  548160|  274080|    0|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |i_10_fu_924_p2                    |         +|   0|  0|  12|           5|           1|
+    |CHANNEL_V_64_fu_969_p2            |         -|   0|  0|  23|           1|          16|
+    |ap_block_pp0_stage0_01001         |       and|   0|  0|   2|           1|           1|
+    |icmp_ln53_fu_918_p2               |      icmp|   0|  0|  10|           5|           6|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  51|          14|          27|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |H_imag_spl0_blk_n        |   9|          2|    1|          2|
+    |H_real_spl0_blk_n        |   9|          2|    1|          2|
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_9     |   9|          2|    5|         10|
+    |i_fu_190                 |   9|          2|    5|         10|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  54|         12|   14|         28|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |CHANNEL_V_10_fu_338      |  16|   0|   16|          0|
+    |CHANNEL_V_11_fu_334      |  16|   0|   16|          0|
+    |CHANNEL_V_12_fu_330      |  16|   0|   16|          0|
+    |CHANNEL_V_13_fu_326      |  16|   0|   16|          0|
+    |CHANNEL_V_14_fu_322      |  16|   0|   16|          0|
+    |CHANNEL_V_15_fu_318      |  16|   0|   16|          0|
+    |CHANNEL_V_16_fu_314      |  16|   0|   16|          0|
+    |CHANNEL_V_17_fu_310      |  16|   0|   16|          0|
+    |CHANNEL_V_18_fu_302      |  16|   0|   16|          0|
+    |CHANNEL_V_19_fu_298      |  16|   0|   16|          0|
+    |CHANNEL_V_1_fu_378       |  16|   0|   16|          0|
+    |CHANNEL_V_20_fu_294      |  16|   0|   16|          0|
+    |CHANNEL_V_21_fu_290      |  16|   0|   16|          0|
+    |CHANNEL_V_22_fu_286      |  16|   0|   16|          0|
+    |CHANNEL_V_23_fu_282      |  16|   0|   16|          0|
+    |CHANNEL_V_24_fu_278      |  16|   0|   16|          0|
+    |CHANNEL_V_25_fu_274      |  16|   0|   16|          0|
+    |CHANNEL_V_26_fu_270      |  16|   0|   16|          0|
+    |CHANNEL_V_27_fu_266      |  16|   0|   16|          0|
+    |CHANNEL_V_28_fu_262      |  16|   0|   16|          0|
+    |CHANNEL_V_29_fu_258      |  16|   0|   16|          0|
+    |CHANNEL_V_2_fu_374       |  16|   0|   16|          0|
+    |CHANNEL_V_30_fu_254      |  16|   0|   16|          0|
+    |CHANNEL_V_31_fu_250      |  16|   0|   16|          0|
+    |CHANNEL_V_32_fu_246      |  16|   0|   16|          0|
+    |CHANNEL_V_33_fu_238      |  16|   0|   16|          0|
+    |CHANNEL_V_34_fu_234      |  16|   0|   16|          0|
+    |CHANNEL_V_35_fu_230      |  16|   0|   16|          0|
+    |CHANNEL_V_36_fu_226      |  16|   0|   16|          0|
+    |CHANNEL_V_37_fu_222      |  16|   0|   16|          0|
+    |CHANNEL_V_38_fu_218      |  16|   0|   16|          0|
+    |CHANNEL_V_39_fu_214      |  16|   0|   16|          0|
+    |CHANNEL_V_3_fu_366       |  16|   0|   16|          0|
+    |CHANNEL_V_40_fu_210      |  16|   0|   16|          0|
+    |CHANNEL_V_41_fu_206      |  16|   0|   16|          0|
+    |CHANNEL_V_42_fu_202      |  16|   0|   16|          0|
+    |CHANNEL_V_43_fu_198      |  16|   0|   16|          0|
+    |CHANNEL_V_44_fu_194      |  16|   0|   16|          0|
+    |CHANNEL_V_45_fu_370      |  16|   0|   16|          0|
+    |CHANNEL_V_47_fu_386      |  16|   0|   16|          0|
+    |CHANNEL_V_48_fu_390      |  16|   0|   16|          0|
+    |CHANNEL_V_49_fu_394      |  16|   0|   16|          0|
+    |CHANNEL_V_4_fu_362       |  16|   0|   16|          0|
+    |CHANNEL_V_50_fu_398      |  16|   0|   16|          0|
+    |CHANNEL_V_51_fu_402      |  16|   0|   16|          0|
+    |CHANNEL_V_52_fu_406      |  16|   0|   16|          0|
+    |CHANNEL_V_53_fu_410      |  16|   0|   16|          0|
+    |CHANNEL_V_54_fu_414      |  16|   0|   16|          0|
+    |CHANNEL_V_55_fu_418      |  16|   0|   16|          0|
+    |CHANNEL_V_56_fu_422      |  16|   0|   16|          0|
+    |CHANNEL_V_57_fu_426      |  16|   0|   16|          0|
+    |CHANNEL_V_58_fu_430      |  16|   0|   16|          0|
+    |CHANNEL_V_59_fu_434      |  16|   0|   16|          0|
+    |CHANNEL_V_5_fu_358       |  16|   0|   16|          0|
+    |CHANNEL_V_60_fu_438      |  16|   0|   16|          0|
+    |CHANNEL_V_61_fu_442      |  16|   0|   16|          0|
+    |CHANNEL_V_62_fu_446      |  16|   0|   16|          0|
+    |CHANNEL_V_6_fu_354       |  16|   0|   16|          0|
+    |CHANNEL_V_7_fu_350       |  16|   0|   16|          0|
+    |CHANNEL_V_8_fu_346       |  16|   0|   16|          0|
+    |CHANNEL_V_9_fu_342       |  16|   0|   16|          0|
+    |CHANNEL_V_fu_382         |  16|   0|   16|          0|
+    |TEMP0_1_fu_306           |  16|   0|   16|          0|
+    |TEMP0_fu_242             |  16|   0|   16|          0|
+    |and_ln_reg_1945          |   2|   0|    3|          1|
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |i_fu_190                 |   5|   0|    5|          0|
+    |trunc_ln56_1_reg_1957    |   2|   0|    2|          0|
+    |trunc_ln56_2_reg_1953    |   2|   0|    2|          0|
+    |trunc_ln56_3_reg_1949    |   2|   0|    2|          0|
+    |trunc_ln56_reg_1961      |   2|   0|    2|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    |1042|   0| 1043|          1|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------+-----+-----+------------+------------------------------------+--------------+
+|           RTL Ports          | Dir | Bits|  Protocol  |            Source Object           |    C Type    |
++------------------------------+-----+-----+------------+------------------------------------+--------------+
+|ap_clk                        |   in|    1|  ap_ctrl_hs|  channel_mult_Pipeline_CHANNEL2REAL|  return value|
+|ap_rst                        |   in|    1|  ap_ctrl_hs|  channel_mult_Pipeline_CHANNEL2REAL|  return value|
+|ap_start                      |   in|    1|  ap_ctrl_hs|  channel_mult_Pipeline_CHANNEL2REAL|  return value|
+|ap_done                       |  out|    1|  ap_ctrl_hs|  channel_mult_Pipeline_CHANNEL2REAL|  return value|
+|ap_idle                       |  out|    1|  ap_ctrl_hs|  channel_mult_Pipeline_CHANNEL2REAL|  return value|
+|ap_ready                      |  out|    1|  ap_ctrl_hs|  channel_mult_Pipeline_CHANNEL2REAL|  return value|
+|H_real_spl0_dout              |   in|   16|     ap_fifo|                         H_real_spl0|       pointer|
+|H_real_spl0_empty_n           |   in|    1|     ap_fifo|                         H_real_spl0|       pointer|
+|H_real_spl0_read              |  out|    1|     ap_fifo|                         H_real_spl0|       pointer|
+|H_imag_spl0_dout              |   in|   16|     ap_fifo|                         H_imag_spl0|       pointer|
+|H_imag_spl0_empty_n           |   in|    1|     ap_fifo|                         H_imag_spl0|       pointer|
+|H_imag_spl0_read              |  out|    1|     ap_fifo|                         H_imag_spl0|       pointer|
+|p_0_0_080344_i_out            |  out|   16|      ap_vld|                  p_0_0_080344_i_out|       pointer|
+|p_0_0_080344_i_out_ap_vld     |  out|    1|      ap_vld|                  p_0_0_080344_i_out|       pointer|
+|p_0_0_080341_i_out            |  out|   16|      ap_vld|                  p_0_0_080341_i_out|       pointer|
+|p_0_0_080341_i_out_ap_vld     |  out|    1|      ap_vld|                  p_0_0_080341_i_out|       pointer|
+|p_0_0_080338_i_out            |  out|   16|      ap_vld|                  p_0_0_080338_i_out|       pointer|
+|p_0_0_080338_i_out_ap_vld     |  out|    1|      ap_vld|                  p_0_0_080338_i_out|       pointer|
+|p_0_0_080335_i_out            |  out|   16|      ap_vld|                  p_0_0_080335_i_out|       pointer|
+|p_0_0_080335_i_out_ap_vld     |  out|    1|      ap_vld|                  p_0_0_080335_i_out|       pointer|
+|p_0_0_080330_i_out            |  out|   16|      ap_vld|                  p_0_0_080330_i_out|       pointer|
+|p_0_0_080330_i_out_ap_vld     |  out|    1|      ap_vld|                  p_0_0_080330_i_out|       pointer|
+|p_0_0_080327_i_out            |  out|   16|      ap_vld|                  p_0_0_080327_i_out|       pointer|
+|p_0_0_080327_i_out_ap_vld     |  out|    1|      ap_vld|                  p_0_0_080327_i_out|       pointer|
+|p_0_0_080324_i_out            |  out|   16|      ap_vld|                  p_0_0_080324_i_out|       pointer|
+|p_0_0_080324_i_out_ap_vld     |  out|    1|      ap_vld|                  p_0_0_080324_i_out|       pointer|
+|p_0_0_080321_i_out            |  out|   16|      ap_vld|                  p_0_0_080321_i_out|       pointer|
+|p_0_0_080321_i_out_ap_vld     |  out|    1|      ap_vld|                  p_0_0_080321_i_out|       pointer|
+|p_0_0_080320_i_out            |  out|   16|      ap_vld|                  p_0_0_080320_i_out|       pointer|
+|p_0_0_080320_i_out_ap_vld     |  out|    1|      ap_vld|                  p_0_0_080320_i_out|       pointer|
+|p_0_0_080317_i_out            |  out|   16|      ap_vld|                  p_0_0_080317_i_out|       pointer|
+|p_0_0_080317_i_out_ap_vld     |  out|    1|      ap_vld|                  p_0_0_080317_i_out|       pointer|
+|p_0_0_080314_i_out            |  out|   16|      ap_vld|                  p_0_0_080314_i_out|       pointer|
+|p_0_0_080314_i_out_ap_vld     |  out|    1|      ap_vld|                  p_0_0_080314_i_out|       pointer|
+|p_0_0_080311_i_out            |  out|   16|      ap_vld|                  p_0_0_080311_i_out|       pointer|
+|p_0_0_080311_i_out_ap_vld     |  out|    1|      ap_vld|                  p_0_0_080311_i_out|       pointer|
+|p_0_0_080308_i_out            |  out|   16|      ap_vld|                  p_0_0_080308_i_out|       pointer|
+|p_0_0_080308_i_out_ap_vld     |  out|    1|      ap_vld|                  p_0_0_080308_i_out|       pointer|
+|p_0_0_080305_i_out            |  out|   16|      ap_vld|                  p_0_0_080305_i_out|       pointer|
+|p_0_0_080305_i_out_ap_vld     |  out|    1|      ap_vld|                  p_0_0_080305_i_out|       pointer|
+|p_0_0_080302_i_out            |  out|   16|      ap_vld|                  p_0_0_080302_i_out|       pointer|
+|p_0_0_080302_i_out_ap_vld     |  out|    1|      ap_vld|                  p_0_0_080302_i_out|       pointer|
+|p_0_0_080299_i_out            |  out|   16|      ap_vld|                  p_0_0_080299_i_out|       pointer|
+|p_0_0_080299_i_out_ap_vld     |  out|    1|      ap_vld|                  p_0_0_080299_i_out|       pointer|
+|CHANNEL_V_out                 |  out|   16|      ap_vld|                       CHANNEL_V_out|       pointer|
+|CHANNEL_V_out_ap_vld          |  out|    1|      ap_vld|                       CHANNEL_V_out|       pointer|
+|CHANNEL_V_1_out               |  out|   16|      ap_vld|                     CHANNEL_V_1_out|       pointer|
+|CHANNEL_V_1_out_ap_vld        |  out|    1|      ap_vld|                     CHANNEL_V_1_out|       pointer|
+|CHANNEL_V_2_out               |  out|   16|      ap_vld|                     CHANNEL_V_2_out|       pointer|
+|CHANNEL_V_2_out_ap_vld        |  out|    1|      ap_vld|                     CHANNEL_V_2_out|       pointer|
+|conv_i_i_i35287_i_out         |  out|   16|      ap_vld|               conv_i_i_i35287_i_out|       pointer|
+|conv_i_i_i35287_i_out_ap_vld  |  out|    1|      ap_vld|               conv_i_i_i35287_i_out|       pointer|
+|CHANNEL_V_3_out               |  out|   16|      ap_vld|                     CHANNEL_V_3_out|       pointer|
+|CHANNEL_V_3_out_ap_vld        |  out|    1|      ap_vld|                     CHANNEL_V_3_out|       pointer|
+|CHANNEL_V_4_out               |  out|   16|      ap_vld|                     CHANNEL_V_4_out|       pointer|
+|CHANNEL_V_4_out_ap_vld        |  out|    1|      ap_vld|                     CHANNEL_V_4_out|       pointer|
+|CHANNEL_V_5_out               |  out|   16|      ap_vld|                     CHANNEL_V_5_out|       pointer|
+|CHANNEL_V_5_out_ap_vld        |  out|    1|      ap_vld|                     CHANNEL_V_5_out|       pointer|
+|CHANNEL_V_6_out               |  out|   16|      ap_vld|                     CHANNEL_V_6_out|       pointer|
+|CHANNEL_V_6_out_ap_vld        |  out|    1|      ap_vld|                     CHANNEL_V_6_out|       pointer|
+|CHANNEL_V_7_out               |  out|   16|      ap_vld|                     CHANNEL_V_7_out|       pointer|
+|CHANNEL_V_7_out_ap_vld        |  out|    1|      ap_vld|                     CHANNEL_V_7_out|       pointer|
+|CHANNEL_V_8_out               |  out|   16|      ap_vld|                     CHANNEL_V_8_out|       pointer|
+|CHANNEL_V_8_out_ap_vld        |  out|    1|      ap_vld|                     CHANNEL_V_8_out|       pointer|
+|CHANNEL_V_9_out               |  out|   16|      ap_vld|                     CHANNEL_V_9_out|       pointer|
+|CHANNEL_V_9_out_ap_vld        |  out|    1|      ap_vld|                     CHANNEL_V_9_out|       pointer|
+|CHANNEL_V_10_out              |  out|   16|      ap_vld|                    CHANNEL_V_10_out|       pointer|
+|CHANNEL_V_10_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_10_out|       pointer|
+|CHANNEL_V_11_out              |  out|   16|      ap_vld|                    CHANNEL_V_11_out|       pointer|
+|CHANNEL_V_11_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_11_out|       pointer|
+|CHANNEL_V_12_out              |  out|   16|      ap_vld|                    CHANNEL_V_12_out|       pointer|
+|CHANNEL_V_12_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_12_out|       pointer|
+|CHANNEL_V_13_out              |  out|   16|      ap_vld|                    CHANNEL_V_13_out|       pointer|
+|CHANNEL_V_13_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_13_out|       pointer|
+|CHANNEL_V_14_out              |  out|   16|      ap_vld|                    CHANNEL_V_14_out|       pointer|
+|CHANNEL_V_14_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_14_out|       pointer|
+|CHANNEL_V_15_out              |  out|   16|      ap_vld|                    CHANNEL_V_15_out|       pointer|
+|CHANNEL_V_15_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_15_out|       pointer|
+|CHANNEL_V_16_out              |  out|   16|      ap_vld|                    CHANNEL_V_16_out|       pointer|
+|CHANNEL_V_16_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_16_out|       pointer|
+|CHANNEL_V_17_out              |  out|   16|      ap_vld|                    CHANNEL_V_17_out|       pointer|
+|CHANNEL_V_17_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_17_out|       pointer|
+|p_0_0_079239_i_out            |  out|   16|      ap_vld|                  p_0_0_079239_i_out|       pointer|
+|p_0_0_079239_i_out_ap_vld     |  out|    1|      ap_vld|                  p_0_0_079239_i_out|       pointer|
+|CHANNEL_V_18_out              |  out|   16|      ap_vld|                    CHANNEL_V_18_out|       pointer|
+|CHANNEL_V_18_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_18_out|       pointer|
+|CHANNEL_V_19_out              |  out|   16|      ap_vld|                    CHANNEL_V_19_out|       pointer|
+|CHANNEL_V_19_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_19_out|       pointer|
+|CHANNEL_V_20_out              |  out|   16|      ap_vld|                    CHANNEL_V_20_out|       pointer|
+|CHANNEL_V_20_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_20_out|       pointer|
+|CHANNEL_V_21_out              |  out|   16|      ap_vld|                    CHANNEL_V_21_out|       pointer|
+|CHANNEL_V_21_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_21_out|       pointer|
+|CHANNEL_V_22_out              |  out|   16|      ap_vld|                    CHANNEL_V_22_out|       pointer|
+|CHANNEL_V_22_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_22_out|       pointer|
+|CHANNEL_V_23_out              |  out|   16|      ap_vld|                    CHANNEL_V_23_out|       pointer|
+|CHANNEL_V_23_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_23_out|       pointer|
+|CHANNEL_V_24_out              |  out|   16|      ap_vld|                    CHANNEL_V_24_out|       pointer|
+|CHANNEL_V_24_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_24_out|       pointer|
+|CHANNEL_V_25_out              |  out|   16|      ap_vld|                    CHANNEL_V_25_out|       pointer|
+|CHANNEL_V_25_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_25_out|       pointer|
+|CHANNEL_V_26_out              |  out|   16|      ap_vld|                    CHANNEL_V_26_out|       pointer|
+|CHANNEL_V_26_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_26_out|       pointer|
+|CHANNEL_V_27_out              |  out|   16|      ap_vld|                    CHANNEL_V_27_out|       pointer|
+|CHANNEL_V_27_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_27_out|       pointer|
+|CHANNEL_V_28_out              |  out|   16|      ap_vld|                    CHANNEL_V_28_out|       pointer|
+|CHANNEL_V_28_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_28_out|       pointer|
+|CHANNEL_V_29_out              |  out|   16|      ap_vld|                    CHANNEL_V_29_out|       pointer|
+|CHANNEL_V_29_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_29_out|       pointer|
+|CHANNEL_V_30_out              |  out|   16|      ap_vld|                    CHANNEL_V_30_out|       pointer|
+|CHANNEL_V_30_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_30_out|       pointer|
+|CHANNEL_V_31_out              |  out|   16|      ap_vld|                    CHANNEL_V_31_out|       pointer|
+|CHANNEL_V_31_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_31_out|       pointer|
+|CHANNEL_V_32_out              |  out|   16|      ap_vld|                    CHANNEL_V_32_out|       pointer|
+|CHANNEL_V_32_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_32_out|       pointer|
+|p_0_0_079191_i_out            |  out|   16|      ap_vld|                  p_0_0_079191_i_out|       pointer|
+|p_0_0_079191_i_out_ap_vld     |  out|    1|      ap_vld|                  p_0_0_079191_i_out|       pointer|
+|CHANNEL_V_33_out              |  out|   16|      ap_vld|                    CHANNEL_V_33_out|       pointer|
+|CHANNEL_V_33_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_33_out|       pointer|
+|CHANNEL_V_34_out              |  out|   16|      ap_vld|                    CHANNEL_V_34_out|       pointer|
+|CHANNEL_V_34_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_34_out|       pointer|
+|CHANNEL_V_35_out              |  out|   16|      ap_vld|                    CHANNEL_V_35_out|       pointer|
+|CHANNEL_V_35_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_35_out|       pointer|
+|CHANNEL_V_36_out              |  out|   16|      ap_vld|                    CHANNEL_V_36_out|       pointer|
+|CHANNEL_V_36_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_36_out|       pointer|
+|CHANNEL_V_37_out              |  out|   16|      ap_vld|                    CHANNEL_V_37_out|       pointer|
+|CHANNEL_V_37_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_37_out|       pointer|
+|CHANNEL_V_38_out              |  out|   16|      ap_vld|                    CHANNEL_V_38_out|       pointer|
+|CHANNEL_V_38_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_38_out|       pointer|
+|CHANNEL_V_39_out              |  out|   16|      ap_vld|                    CHANNEL_V_39_out|       pointer|
+|CHANNEL_V_39_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_39_out|       pointer|
+|CHANNEL_V_40_out              |  out|   16|      ap_vld|                    CHANNEL_V_40_out|       pointer|
+|CHANNEL_V_40_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_40_out|       pointer|
+|CHANNEL_V_41_out              |  out|   16|      ap_vld|                    CHANNEL_V_41_out|       pointer|
+|CHANNEL_V_41_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_41_out|       pointer|
+|CHANNEL_V_42_out              |  out|   16|      ap_vld|                    CHANNEL_V_42_out|       pointer|
+|CHANNEL_V_42_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_42_out|       pointer|
+|CHANNEL_V_43_out              |  out|   16|      ap_vld|                    CHANNEL_V_43_out|       pointer|
+|CHANNEL_V_43_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_43_out|       pointer|
+|CHANNEL_V_44_out              |  out|   16|      ap_vld|                    CHANNEL_V_44_out|       pointer|
+|CHANNEL_V_44_out_ap_vld       |  out|    1|      ap_vld|                    CHANNEL_V_44_out|       pointer|
++------------------------------+-----+-----+------------+------------------------------------+--------------+
+

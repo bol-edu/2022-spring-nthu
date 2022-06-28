@@ -1,0 +1,7 @@
+<pragmas>
+<pragma file="array_io.c" line="65" pragmaType="unroll" parentfunction="array_io" factor="-1" skip_exit_check="0"/>
+<pragma file="array_io.c" line="57" pragmaType="array_partition" parentfunction="array_io" dim="1" factor="2" mode="block" dynamic="0" variable="d_i"/>
+<pragma file="array_io.c" line="58" pragmaType="array_partition" parentfunction="array_io" dim="1" factor="4" mode="block" dynamic="0" variable="d_o"/>
+<pragma file="array_io.c" line="58" pragmaType="bind_storage" parentfunction="array_io" op="666" impl="22" latency="-1" variable="d_i"/>
+<pragma file="array_io.c" line="58" pragmaType="interface" parentfunction="array_io" mode="ap_fifo" port="d_o" register="0" name="" depth="-1"/>
+</pragmas>

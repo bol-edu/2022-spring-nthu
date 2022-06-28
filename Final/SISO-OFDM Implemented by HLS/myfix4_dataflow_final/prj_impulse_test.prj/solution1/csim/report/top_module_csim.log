@@ -1,0 +1,35 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+make[1]: Entering directory `/users/course/2022S/HLS17000000/g110064539/Vitis_Libraries/dsp/L1/examples/OFDM_Implemented_by_HLS/myfix4_dataflow_final/prj_impulse_test.prj/solution1/csim/build'
+   Compiling ../../../../src/main.cpp in debug mode
+   Compiling ../../../../src/deQAM_to_pixl/data2pic.cpp in debug mode
+   Compiling ../../../../src/deQAM_to_pixl/data_out_main.cpp in debug mode
+   Compiling ../../../../src/deQAM_to_pixl/deQAM.cpp in debug mode
+   Compiling ../../../../src/channel_stream/channel_gen.cpp in debug mode
+   Compiling ../../../../src/channel_stream/rand_func.cpp in debug mode
+   Compiling ../../../../src/channel_stream/rand.cpp in debug mode
+   Compiling ../../../../src/QAM/qam.cpp in debug mode
+   Compiling ../../../../src/fft/fft.cpp in debug mode
+   Compiling ../../../../src/picture_to_symbol/pixl_to_symbol.cpp in debug mode
+   Compiling ../../../../src/top_module.cpp in debug mode
+   Compiling ../../../../src/pilot_insertion/pilot_insertion.cpp in debug mode
+   Compiling ../../../../src/CP_insertion/Cp_insertion.cpp in debug mode
+   Compiling ../../../../src/Tx.cpp in debug mode
+   Compiling ../../../../src/AWGN.cpp in debug mode
+   Compiling ../../../../src/Rx.cpp in debug mode
+   Compiling ../../../../src/equalizer/equalizer.cpp in debug mode
+   Generating csim.exe
+make[1]: Leaving directory `/users/course/2022S/HLS17000000/g110064539/Vitis_Libraries/dsp/L1/examples/OFDM_Implemented_by_HLS/myfix4_dataflow_final/prj_impulse_test.prj/solution1/csim/build'
+>> Test Start
+>> Load Input
+>> Read Data
+>> Start Calculation
+>> Calculation Finished!
+>> Pixl_Error_Rate
+6.25%
+>> Symbol_Error_Rate
+4.01786%
+>> Bit_Error_Rate
+1.00446%
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

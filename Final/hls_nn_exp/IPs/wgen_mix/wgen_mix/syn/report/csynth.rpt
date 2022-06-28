@@ -1,0 +1,165 @@
+
+
+================================================================
+== Synthesis Summary Report of 'wgen_mix'
+================================================================
++ General Information: 
+    * Date:           Sat Jun 18 17:48:36 2022
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+    * Project:        wgen_mix
+    * Solution:       wgen_mix (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |                Modules                | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |    |           |           |     |
+    |                & Loops                | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT    | URAM|
+    +---------------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |+ wgen_mix                             |     -|  1.29|        -|       -|         -|        -|     -|        no|     -|   -|  777 (~0%)|  1255 (2%)|    -|
+    | + wgen_mix_Pipeline_VITIS_LOOP_60_4   |     -|  3.16|        -|       -|         -|        -|     -|        no|     -|   -|   34 (~0%)|   79 (~0%)|    -|
+    |  o VITIS_LOOP_60_4                    |     -|  7.30|        -|       -|         1|        1|     -|       yes|     -|   -|          -|          -|    -|
+    | o VITIS_LOOP_31_1                     |     -|  7.30|        -|       -|         -|        -|     -|        no|     -|   -|          -|          -|    -|
+    |  + wgen_mix_Pipeline_VITIS_LOOP_33_2  |     -|  1.29|        -|       -|         -|        -|     -|        no|     -|   -|  116 (~0%)|  278 (~0%)|    -|
+    |   o VITIS_LOOP_33_2                   |     -|  7.30|        -|       -|         2|        1|     -|       yes|     -|   -|          -|          -|    -|
+    |  + wgen_mix_Pipeline_VITIS_LOOP_51_3  |     -|  3.16|        -|       -|         -|        -|     -|        no|     -|   -|   34 (~0%)|   97 (~0%)|    -|
+    |   o VITIS_LOOP_51_3                   |     -|  7.30|        -|       -|         1|        1|     -|       yes|     -|   -|          -|          -|    -|
+    +---------------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 6             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------+
+| Interface     | Register   | Offset | Width | Access | Description                      | Bit Fields                                               |
++---------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------+
+| s_axi_control | CTRL       | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART |
+| s_axi_control | GIER       | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                 |
+| s_axi_control | IP_IER     | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN 5=CHAN2_INT_EN             |
+| s_axi_control | IP_ISR     | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST 5=CHAN2_INT_ST             |
+| s_axi_control | rows       | 0x10   | 32    | W      | Data signal of rows              |                                                          |
+| s_axi_control | cols       | 0x18   | 32    | W      | Data signal of cols              |                                                          |
+| s_axi_control | wrecv      | 0x20   | 32    | R      | Data signal of wrecv             |                                                          |
+| s_axi_control | wrecv_ctrl | 0x24   | 32    | R      | Control signal of wrecv          | 0=wrecv_ap_vld                                           |
+| s_axi_control | isent      | 0x30   | 32    | R      | Data signal of isent             |                                                          |
+| s_axi_control | isent_ctrl | 0x34   | 32    | R      | Control signal of isent          | 0=isent_ap_vld                                           |
++---------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------+
+
+* AXIS
++-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| Interface | Register Mode | TDATA | TDEST | TID | TKEEP | TLAST | TREADY | TSTRB | TUSER | TVALID |
++-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| dst       | both          | 24    | 1     | 1   | 3     | 1     | 1      | 3     | 1     | 1      |
+| src       | both          | 24    | 1     | 1   | 3     | 1     | 1      | 3     | 1     | 1      |
+| word      | both          | 24    | 1     | 1   | 3     | 1     | 1      | 3     | 1     | 1      |
++-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+---------------------------------------------+
+| Argument | Direction | Datatype                                    |
++----------+-----------+---------------------------------------------+
+| src      | in        | stream<hls::axis<ap_uint<24>, 1, 1, 1>, 0>& |
+| dst      | out       | stream<hls::axis<ap_uint<24>, 1, 1, 1>, 0>& |
+| word     | in        | stream<hls::axis<ap_uint<24>, 1, 1, 1>, 0>& |
+| rows     | in        | int                                         |
+| cols     | in        | int                                         |
+| wrecv    | out       | int&                                        |
+| isent    | out       | int&                                        |
++----------+-----------+---------------------------------------------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+--------------------------------------+
+| Argument | HW Interface  | HW Type   | HW Info                              |
++----------+---------------+-----------+--------------------------------------+
+| src      | src           | interface |                                      |
+| dst      | dst           | interface |                                      |
+| word     | word          | interface |                                      |
+| rows     | s_axi_control | register  | name=rows offset=0x10 range=32       |
+| cols     | s_axi_control | register  | name=cols offset=0x18 range=32       |
+| wrecv    | s_axi_control | register  | name=wrecv offset=0x20 range=32      |
+| wrecv    | s_axi_control | register  | name=wrecv_ctrl offset=0x24 range=32 |
+| isent    | s_axi_control | register  | name=isent offset=0x30 range=32      |
+| isent    | s_axi_control | register  | name=isent_ctrl offset=0x34 range=32 |
++----------+---------------+-----------+--------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------+-----+--------+------------------+-----+--------+---------+
+| Name                                 | DSP | Pragma | Variable         | Op  | Impl   | Latency |
++--------------------------------------+-----+--------+------------------+-----+--------+---------+
+| + wgen_mix                           | 0   |        |                  |     |        |         |
+|   sub_fu_288_p2                      | -   |        | sub              | add | fabric | 0       |
+|   sub13_fu_294_p2                    | -   |        | sub13            | add | fabric | 0       |
+|   i_2_fu_329_p2                      | -   |        | i_2              | add | fabric | 0       |
+|   isent                              | -   |        | add_ln33         | add | fabric | 0       |
+|   sub_ln51_fu_399_p2                 | -   |        | sub_ln51         | add | tadder | 0       |
+|   add_ln51_fu_405_p2                 | -   |        | add_ln51         | add | tadder | 0       |
+|  + wgen_mix_Pipeline_VITIS_LOOP_33_2 | 0   |        |                  |     |        |         |
+|    j_5_fu_246_p2                     | -   |        | j_5              | add | fabric | 0       |
+|    word_row_usage_1_fu_274_p2        | -   |        | word_row_usage_1 | add | fabric | 0       |
+|    wrecv                             | -   |        | add_ln43         | add | fabric | 0       |
+|  + wgen_mix_Pipeline_VITIS_LOOP_51_3 | 0   |        |                  |     |        |         |
+|    j_3_fu_86_p2                      | -   |        | j_3              | add | fabric | 0       |
+|  + wgen_mix_Pipeline_VITIS_LOOP_60_4 | 0   |        |                  |     |        |         |
+|    add_ln62_out                      | -   |        | add_ln62         | add | fabric | 0       |
++--------------------------------------+-----+--------+------------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++--------------+-----------------------+-----------------------------------------+
+| Type         | Options               | Location                                |
++--------------+-----------------------+-----------------------------------------+
+| interface    | axis port=src         | src/wgen_mix.cpp:18 in wgen_mix, src    |
+| interface    | axis port=dst         | src/wgen_mix.cpp:19 in wgen_mix, dst    |
+| interface    | axis port=word        | src/wgen_mix.cpp:20 in wgen_mix, word   |
+| interface    | s_axilite port=wrecv  | src/wgen_mix.cpp:21 in wgen_mix, wrecv  |
+| interface    | s_axilite port=isent  | src/wgen_mix.cpp:22 in wgen_mix, isent  |
+| interface    | s_axilite port=rows   | src/wgen_mix.cpp:23 in wgen_mix, rows   |
+| interface    | s_axilite port=cols   | src/wgen_mix.cpp:24 in wgen_mix, cols   |
+| interface    | s_axilite port=return | src/wgen_mix.cpp:25 in wgen_mix, return |
+| loop_flatten | off                   | src/wgen_mix.cpp:34 in wgen_mix         |
++--------------+-----------------------+-----------------------------------------+
+
+

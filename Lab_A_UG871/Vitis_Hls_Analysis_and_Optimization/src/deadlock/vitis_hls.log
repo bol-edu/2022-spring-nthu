@@ -1,0 +1,39 @@
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'g110064539' on host 'ic21' (Linux_x86_64 version 3.10.0-1160.45.1.el7.x86_64) on Tue Mar 29 05:53:04 CST 2022
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
+INFO: [HLS 200-10] In directory '/users/course/2022S/HLS17000000/g110064539/Vitis-Tutorials/Hardware_Acceleration/Feature_Tutorials/03-dataflow_debug_and_optimization/reference_files/deadlock'
+Sourcing Tcl script '/users/course/2022S/HLS17000000/g110064539/Vitis-Tutorials/Hardware_Acceleration/Feature_Tutorials/03-dataflow_debug_and_optimization/reference_files/deadlock/proj/solution1/export.tcl'
+INFO: [HLS 200-1510] Running: open_project proj 
+INFO: [HLS 200-10] Opening project '/users/course/2022S/HLS17000000/g110064539/Vitis-Tutorials/Hardware_Acceleration/Feature_Tutorials/03-dataflow_debug_and_optimization/reference_files/deadlock/proj'.
+INFO: [HLS 200-1510] Running: set_top example 
+INFO: [HLS 200-1510] Running: add_files example.cpp 
+INFO: [HLS 200-10] Adding design file 'example.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb example_test.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'example_test.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/users/course/2022S/HLS17000000/g110064539/Vitis-Tutorials/Hardware_Acceleration/Feature_Tutorials/03-dataflow_debug_and_optimization/reference_files/deadlock/proj/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 13.333ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7v585t-ffg1761-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_export -version=2.0.1
+INFO: [HLS 200-1510] Running: set_part xc7v585t-ffg1761-2 
+INFO: [HLS 200-1510] Running: create_clock -period 75MHz -name default 
+INFO: [HLS 200-1510] Running: config_export -version 2.0.1 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2021.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 29 05:53:22 2022...
+INFO: [HLS 200-802] Generated output file proj/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 17 seconds. CPU system time: 1.36 seconds. Elapsed time: 15.65 seconds; current allocated memory: -937.109 MB.
+INFO: [HLS 200-112] Total CPU user time: 20.06 seconds. Total CPU system time: 1.99 seconds. Total elapsed time: 17.9 seconds; peak allocated memory: 264.164 MB.

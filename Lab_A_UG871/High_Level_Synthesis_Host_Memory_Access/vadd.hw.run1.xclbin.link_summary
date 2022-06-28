@@ -1,0 +1,1226 @@
+<ENTRY>
+{
+ "thisFile": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/vadd.hw.run1.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Mar 25 00:39:17 2022",
+ "timestampMillis": "1648139957243",
+ "buildStep": {
+  "cmdId": "ea9473b5-1e87-4021-8f99-269937ba7512",
+  "name": "v++",
+  "logFile": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/link.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2021.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -s -t hw --platform xilinx_u50_gen3x16_xdma_201920_3 -l -o vadd.hw.run1.xclbin vadd.hw.xo --config ./src/link.cfg ",
+  "args": [
+   "-s",
+   "-t",
+   "hw",
+   "--platform",
+   "xilinx_u50_gen3x16_xdma_201920_3",
+   "-l",
+   "-o",
+   "vadd.hw.run1.xclbin",
+   "vadd.hw.xo",
+   "--config",
+   "./src/link.cfg"
+  ],
+  "iniFiles": [
+   {
+    "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/src/link.cfg",
+    "content": "[connectivity]\nnk=vadd:12:vadd_1.vadd_2.vadd_3.vadd_4.vadd_5.vadd_6.vadd_7.vadd_8.vadd_9.vadd_10.vadd_11.vadd_12\nslr=vadd_1:SLR0\nslr=vadd_2:SLR0\nslr=vadd_3:SLR0\nslr=vadd_4:SLR0\nslr=vadd_5:SLR0\nslr=vadd_6:SLR0\nslr=vadd_7:SLR1\nslr=vadd_8:SLR1\nslr=vadd_9:SLR1\nslr=vadd_10:SLR1\nslr=vadd_11:SLR1\nslr=vadd_12:SLR1\n\nsp=vadd_1.m_axi_gmem:HBM[0]\nsp=vadd_2.m_axi_gmem:HBM[1]\nsp=vadd_3.m_axi_gmem:HBM[2]\nsp=vadd_4.m_axi_gmem:HBM[3]\nsp=vadd_5.m_axi_gmem:HBM[4]\nsp=vadd_6.m_axi_gmem:HBM[5]\nsp=vadd_7.m_axi_gmem:HBM[6]\nsp=vadd_8.m_axi_gmem:HBM[7]\nsp=vadd_9.m_axi_gmem:HBM[8]\nsp=vadd_10.m_axi_gmem:HBM[9]\nsp=vadd_11.m_axi_gmem:HBM[10]\nsp=vadd_12.m_axi_gmem:HBM[11]"
+   }
+  ],
+  "cwd": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 00:39:17 2022",
+ "timestampMillis": "1648139957244",
+ "status": {
+  "cmdId": "ea9473b5-1e87-4021-8f99-269937ba7512",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Mar 25 00:39:22 2022",
+ "timestampMillis": "1648139962945",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u50_gen3x16_xdma_201920_3.xpfm",
+  "hardwareDsa": "hw.xsa",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "vadd.hw.run1",
+    "file": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/vadd.hw.run1.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "vadd",
+     "file": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/vadd.hw.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/xo/vadd/vadd/cpu_sources/kernel.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "vadd_1",
+     "vadd_2",
+     "vadd_3",
+     "vadd_4",
+     "vadd_5",
+     "vadd_6",
+     "vadd_7",
+     "vadd_8",
+     "vadd_9",
+     "vadd_10",
+     "vadd_11",
+     "vadd_12"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2021.2. SW Build 3363252 on 2021-10-14-04:41:01"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Mar 25 00:39:23 2022",
+ "timestampMillis": "1648139963137",
+ "buildStep": {
+  "cmdId": "3b419dc4-f463-44bc-aba6-a564de7b1b1c",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/vadd.hw.xo -keep --config /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3/xilinx_u50_gen3x16_xdma_201920_3.xpfm --target hw --output_dir /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int --temp_dir /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/sys_link",
+  "args": [
+   "--xo",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/vadd.hw.xo",
+   "-keep",
+   "--config",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3/xilinx_u50_gen3x16_xdma_201920_3.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int",
+   "--temp_dir",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/syslinkConfig.ini",
+    "content": "nk=vadd:12:vadd_1.vadd_2.vadd_3.vadd_4.vadd_5.vadd_6.vadd_7.vadd_8.vadd_9.vadd_10.vadd_11.vadd_12\nsp=vadd_1.m_axi_gmem:HBM[0]\nsp=vadd_2.m_axi_gmem:HBM[1]\nsp=vadd_3.m_axi_gmem:HBM[2]\nsp=vadd_4.m_axi_gmem:HBM[3]\nsp=vadd_5.m_axi_gmem:HBM[4]\nsp=vadd_6.m_axi_gmem:HBM[5]\nsp=vadd_7.m_axi_gmem:HBM[6]\nsp=vadd_8.m_axi_gmem:HBM[7]\nsp=vadd_9.m_axi_gmem:HBM[8]\nsp=vadd_10.m_axi_gmem:HBM[9]\nsp=vadd_11.m_axi_gmem:HBM[10]\nsp=vadd_12.m_axi_gmem:HBM[11]\nslr=vadd_1:SLR0\nslr=vadd_2:SLR0\nslr=vadd_3:SLR0\nslr=vadd_4:SLR0\nslr=vadd_5:SLR0\nslr=vadd_6:SLR0\nslr=vadd_7:SLR1\nslr=vadd_8:SLR1\nslr=vadd_9:SLR1\nslr=vadd_10:SLR1\nslr=vadd_11:SLR1\nslr=vadd_12:SLR1\n\n"
+   }
+  ],
+  "cwd": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 00:39:23 2022",
+ "timestampMillis": "1648139963137",
+ "status": {
+  "cmdId": "3b419dc4-f463-44bc-aba6-a564de7b1b1c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 00:39:37 2022",
+ "timestampMillis": "1648139977710",
+ "status": {
+  "cmdId": "3b419dc4-f463-44bc-aba6-a564de7b1b1c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Mar 25 00:39:37 2022",
+ "timestampMillis": "1648139977718",
+ "buildStep": {
+  "cmdId": "f5d0c7db-8912-4d3d-a4c8-93c3a0c77fa5",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/sdsl.dat -rtd /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/cf2sw.rtd -nofilter /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/cf2sw_full.rtd -xclbin /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/xclbin_orig.xml -o /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/sdsl.dat",
+   "-rtd",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/cf2sw.rtd",
+   "-nofilter",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/xclbin_orig.xml",
+   "-o",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 00:39:37 2022",
+ "timestampMillis": "1648139977718",
+ "status": {
+  "cmdId": "f5d0c7db-8912-4d3d-a4c8-93c3a0c77fa5",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 00:39:42 2022",
+ "timestampMillis": "1648139982811",
+ "status": {
+  "cmdId": "f5d0c7db-8912-4d3d-a4c8-93c3a0c77fa5",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Mar 25 00:39:42 2022",
+ "timestampMillis": "1648139982818",
+ "buildStep": {
+  "cmdId": "2ceff689-c50c-44b0-9e10-7800744c572e",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 00:39:42 2022",
+ "timestampMillis": "1648139982818",
+ "status": {
+  "cmdId": "2ceff689-c50c-44b0-9e10-7800744c572e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 00:39:43 2022",
+ "timestampMillis": "1648139983045",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 00:39:43 2022",
+ "timestampMillis": "1648139983047",
+ "status": {
+  "cmdId": "2ceff689-c50c-44b0-9e10-7800744c572e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Mar 25 00:39:43 2022",
+ "timestampMillis": "1648139983057",
+ "buildStep": {
+  "cmdId": "7f0ecbef-c25b-4e3a-b6da-4ffff1240053",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_u50_gen3x16_xdma_201920_3 --remote_ip_cache /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/.ipcache -s --output_dir /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int --log_dir /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/logs/link --report_dir /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link --config /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/vplConfig.ini -k /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link --no-info --iprepo /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/xo/ip_repo/xilinx_com_hls_vadd_1_0 --messageDb /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/run_link/vpl.pb /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_u50_gen3x16_xdma_201920_3",
+   "--remote_ip_cache",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/.ipcache",
+   "-s",
+   "--output_dir",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int",
+   "--log_dir",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/logs/link",
+   "--report_dir",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link",
+   "--config",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/vplConfig.ini",
+   "-k",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link",
+   "--no-info",
+   "--iprepo",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/xo/ip_repo/xilinx_com_hls_vadd_1_0",
+   "--messageDb",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/run_link/vpl.pb",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=compiler.vppCurrentWorkingDir=/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files\nmisc=BinaryName=vadd.hw.run1\n\n[connectivity]\nnk=vadd:12:vadd_1.vadd_2.vadd_3.vadd_4.vadd_5.vadd_6.vadd_7.vadd_8.vadd_9.vadd_10.vadd_11.vadd_12\n\n[vivado]\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\n\n"
+   }
+  ],
+  "cwd": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 00:39:43 2022",
+ "timestampMillis": "1648139983057",
+ "status": {
+  "cmdId": "7f0ecbef-c25b-4e3a-b6da-4ffff1240053",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Mar 25 00:39:44 2022",
+ "timestampMillis": "1648139984966",
+ "buildStep": {
+  "cmdId": "5c82e51b-7e6c-4aca-bbb9-06d27f2e506f",
+  "name": "vpl",
+  "logFile": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/link.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2021.2/bin/unwrapped/lnx64.o/vpl -t hw -f xilinx_u50_gen3x16_xdma_201920_3 --remote_ip_cache /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/.ipcache -s --output_dir /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int --log_dir /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/logs/link --report_dir /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link --config /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/vplConfig.ini -k /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link --no-info --iprepo /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/xo/ip_repo/xilinx_com_hls_vadd_1_0 --messageDb /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/run_link/vpl.pb /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 00:39:44 2022",
+ "timestampMillis": "1648139984967",
+ "status": {
+  "cmdId": "5c82e51b-7e6c-4aca-bbb9-06d27f2e506f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Fri Mar 25 00:40:01 2022",
+ "timestampMillis": "1648140001424",
+ "vivadoProject": {
+  "openDir": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Mar 25 00:40:01 2022",
+ "timestampMillis": "1648140001426",
+ "buildStep": {
+  "cmdId": "ac926127-f3f9-4e6c-b0c2-1a0f66074a72",
+  "name": "vivado",
+  "logFile": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 00:40:01 2022",
+ "timestampMillis": "1648140001427",
+ "status": {
+  "cmdId": "ac926127-f3f9-4e6c-b0c2-1a0f66074a72",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Mar 25 00:49:19 2022",
+ "timestampMillis": "1648140559716",
+ "buildStep": {
+  "cmdId": "c17c1151-d367-4ae3-94b0-43a99a664c24",
+  "name": "vivado.impl",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/vivado/vpl"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 00:49:19 2022",
+ "timestampMillis": "1648140559717",
+ "status": {
+  "cmdId": "c17c1151-d367-4ae3-94b0-43a99a664c24",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Mar 25 00:49:19 2022",
+ "timestampMillis": "1648140559718",
+ "buildStep": {
+  "cmdId": "bc38c16f-f200-4396-91c0-7b24d0fa5183",
+  "name": "vivado.impl.impl_1",
+  "logFile": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/vivado/vpl/prj/prj.runs/impl_1/runme.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/vivado/vpl/prj/prj.runs/impl_1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 00:49:19 2022",
+ "timestampMillis": "1648140559718",
+ "status": {
+  "cmdId": "bc38c16f-f200-4396-91c0-7b24d0fa5183",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:33:53 2022",
+ "timestampMillis": "1648146833348",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/vivado/vpl/prj/prj.runs/impl_1/system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:36:15 2022",
+ "timestampMillis": "1648146975435",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/kernel_service.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:36:15 2022",
+ "timestampMillis": "1648146975440",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/kernel_service.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 02:50:50 2022",
+ "timestampMillis": "1648147850372",
+ "status": {
+  "cmdId": "ac926127-f3f9-4e6c-b0c2-1a0f66074a72",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:50 2022",
+ "timestampMillis": "1648147850814",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link/imp/impl_1_kernel_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:50 2022",
+ "timestampMillis": "1648147850818",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link/imp/impl_1_slr_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:50 2022",
+ "timestampMillis": "1648147850820",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link/imp/impl_1_full_util_synthed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:50 2022",
+ "timestampMillis": "1648147850822",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link/imp/impl_1_kernel_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:50 2022",
+ "timestampMillis": "1648147850824",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link/imp/impl_1_full_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:50 2022",
+ "timestampMillis": "1648147850826",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link/imp/impl_1_slr_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:50 2022",
+ "timestampMillis": "1648147850828",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link/imp/impl_1_kernel_util_placed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:50 2022",
+ "timestampMillis": "1648147850831",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link/imp/impl_1_full_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:50 2022",
+ "timestampMillis": "1648147850833",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link/imp/impl_1_kernel_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:50 2022",
+ "timestampMillis": "1648147850837",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link/imp/impl_1_kernel_util_synthed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:50 2022",
+ "timestampMillis": "1648147850839",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link/imp/impl_1_slr_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:50 2022",
+ "timestampMillis": "1648147850841",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link/imp/impl_1_slr_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:50 2022",
+ "timestampMillis": "1648147850843",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link/imp/impl_1_kernel_util_routed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:50 2022",
+ "timestampMillis": "1648147850846",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link/imp/impl_1_full_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:51 2022",
+ "timestampMillis": "1648147851321",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link/syn/ulp_hmss_0_0_synth_1_ulp_hmss_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:51 2022",
+ "timestampMillis": "1648147851324",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link/syn/ulp_xbar_0_synth_1_ulp_xbar_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:51 2022",
+ "timestampMillis": "1648147851326",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link/syn/bd_85ad_hbm_inst_0_synth_1_bd_85ad_hbm_inst_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:51 2022",
+ "timestampMillis": "1648147851328",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link/syn/ulp_xbar_1_synth_1_ulp_xbar_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:51 2022",
+ "timestampMillis": "1648147851331",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link/syn/bd_85ad_interconnect0_12_0_synth_1_bd_85ad_interconnect0_12_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:51 2022",
+ "timestampMillis": "1648147851334",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link/imp/impl_1_system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": "bc38c16f-f200-4396-91c0-7b24d0fa5183"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:51 2022",
+ "timestampMillis": "1648147851468",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "bc38c16f-f200-4396-91c0-7b24d0fa5183"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:51 2022",
+ "timestampMillis": "1648147851598",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "bc38c16f-f200-4396-91c0-7b24d0fa5183"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:51 2022",
+ "timestampMillis": "1648147851601",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "bc38c16f-f200-4396-91c0-7b24d0fa5183"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 02:50:51 2022",
+ "timestampMillis": "1648147851632",
+ "status": {
+  "cmdId": "5c82e51b-7e6c-4aca-bbb9-06d27f2e506f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 02:50:51 2022",
+ "timestampMillis": "1648147851646",
+ "status": {
+  "cmdId": "7f0ecbef-c25b-4e3a-b6da-4ffff1240053",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Mar 25 02:50:51 2022",
+ "timestampMillis": "1648147851666",
+ "buildStep": {
+  "cmdId": "4b9ca441-6025-4ab1-b232-7ce6a19588da",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 02:50:51 2022",
+ "timestampMillis": "1648147851666",
+ "status": {
+  "cmdId": "4b9ca441-6025-4ab1-b232-7ce6a19588da",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:51 2022",
+ "timestampMillis": "1648147851672",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/vadd.hw.run1_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Mar 25 02:50:51 2022",
+ "timestampMillis": "1648147851677",
+ "buildStep": {
+  "cmdId": "a80ed9fd-5e06-4c52-80bf-6306bb17f9f2",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/address_map.xml -sdsl /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/sdsl.dat -xclbin /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/xclbin_orig.xml -rtd /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/vadd.hw.run1.rtd -o /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/vadd.hw.run1.xml",
+  "args": [
+   "-a",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/address_map.xml",
+   "-sdsl",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/sdsl.dat",
+   "-xclbin",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/vadd.hw.run1.rtd",
+   "-o",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/vadd.hw.run1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 02:50:51 2022",
+ "timestampMillis": "1648147851677",
+ "status": {
+  "cmdId": "a80ed9fd-5e06-4c52-80bf-6306bb17f9f2",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 02:50:56 2022",
+ "timestampMillis": "1648147856404",
+ "status": {
+  "cmdId": "a80ed9fd-5e06-4c52-80bf-6306bb17f9f2",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Mar 25 02:50:56 2022",
+ "timestampMillis": "1648147856405",
+ "buildStep": {
+  "cmdId": "19206110-c56a-4ac6-bc85-54c926f3b88d",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/vadd.hw.run1.rtd",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 02:50:56 2022",
+ "timestampMillis": "1648147856405",
+ "status": {
+  "cmdId": "19206110-c56a-4ac6-bc85-54c926f3b88d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:56 2022",
+ "timestampMillis": "1648147856412",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 02:50:56 2022",
+ "timestampMillis": "1648147856414",
+ "status": {
+  "cmdId": "19206110-c56a-4ac6-bc85-54c926f3b88d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 02:50:56 2022",
+ "timestampMillis": "1648147856415",
+ "status": {
+  "cmdId": "4b9ca441-6025-4ab1-b232-7ce6a19588da",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Mar 25 02:50:56 2022",
+ "timestampMillis": "1648147856423",
+ "buildStep": {
+  "cmdId": "64c30606-6dc2-41a3-a9c8-a18b3718e605",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section BITSTREAM:RAW:/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/partial.bit --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/vadd.hw.run1.rtd --append-section :JSON:/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/vadd.hw.run1_xml.rtd --add-section BUILD_METADATA:JSON:/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/vadd.hw.run1_build.rtd --add-section EMBEDDED_METADATA:RAW:/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/vadd.hw.run1.xml --add-section SYSTEM_METADATA:RAW:/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_u50_gen3x16_xdma_201920_3 --output /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/vadd.hw.run1.xclbin",
+  "args": [
+   "--add-section",
+   "BITSTREAM:RAW:/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/partial.bit",
+   "--force",
+   "--target",
+   "hw",
+   "--key-value",
+   "SYS:dfx_enable:true",
+   "--add-section",
+   ":JSON:/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/vadd.hw.run1.rtd",
+   "--append-section",
+   ":JSON:/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/vadd.hw.run1_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/vadd.hw.run1_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/vadd.hw.run1.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--key-value",
+   "SYS:PlatformVBNV:xilinx_u50_gen3x16_xdma_201920_3",
+   "--output",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/vadd.hw.run1.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 02:50:56 2022",
+ "timestampMillis": "1648147856423",
+ "status": {
+  "cmdId": "64c30606-6dc2-41a3-a9c8-a18b3718e605",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 02:50:57 2022",
+ "timestampMillis": "1648147857388",
+ "status": {
+  "cmdId": "64c30606-6dc2-41a3-a9c8-a18b3718e605",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Mar 25 02:50:57 2022",
+ "timestampMillis": "1648147857393",
+ "buildStep": {
+  "cmdId": "0e564dd7-d38d-455e-b9e9-a666a234d5c3",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/vadd.hw.run1.xclbin.info --input /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/vadd.hw.run1.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/vadd.hw.run1.xclbin.info",
+   "--input",
+   "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/vadd.hw.run1.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 02:50:57 2022",
+ "timestampMillis": "1648147857393",
+ "status": {
+  "cmdId": "0e564dd7-d38d-455e-b9e9-a666a234d5c3",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 02:50:57 2022",
+ "timestampMillis": "1648147857879",
+ "status": {
+  "cmdId": "0e564dd7-d38d-455e-b9e9-a666a234d5c3",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Mar 25 02:50:57 2022",
+ "timestampMillis": "1648147857885",
+ "buildStep": {
+  "cmdId": "bed19017-df90-4122-afeb-1906d8a5a22d",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 02:50:57 2022",
+ "timestampMillis": "1648147857885",
+ "status": {
+  "cmdId": "bed19017-df90-4122-afeb-1906d8a5a22d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 02:50:57 2022",
+ "timestampMillis": "1648147857887",
+ "status": {
+  "cmdId": "bed19017-df90-4122-afeb-1906d8a5a22d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:57 2022",
+ "timestampMillis": "1648147857951",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link/system_estimate_vadd.hw.run1.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:58 2022",
+ "timestampMillis": "1648147858057",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link/v++_link_vadd.hw.run1_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:58 2022",
+ "timestampMillis": "1648147858057",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/v++_link_vadd.hw.run1_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 02:50:58 2022",
+ "timestampMillis": "1648147858061",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 02:50:58 2022",
+ "timestampMillis": "1648147858063",
+ "status": {
+  "cmdId": "ea9473b5-1e87-4021-8f99-269937ba7512",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

@@ -1,0 +1,216 @@
+
+
+================================================================
+== Vitis HLS Report for 'Axi2Mat'
+================================================================
+* Date:           Sun May  1 11:32:01 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        color_detect
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu50-fsvh2104-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.433 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+-----------+-----+---------+----------+
+    |  Latency (cycles) |  Latency (absolute)  |    Interval   | Pipeline |
+    |   min   |   max   |    min   |    max    | min |   max   |   Type   |
+    +---------+---------+----------+-----------+-----+---------+----------+
+    |       79|  8294478|  0.263 us|  27.645 ms|   10|  8294409|  dataflow|
+    +---------+---------+----------+-----------+-----+---------+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------+----------------------------+---------+---------+-----------+-----------+-----+---------+----------+
+        |                               |                            |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline |
+        |            Instance           |           Module           |   min   |   max   |    min    |    max    | min |   max   |   Type   |
+        +-------------------------------+----------------------------+---------+---------+-----------+-----------+-----+---------+----------+
+        |addrbound_1_U0                 |addrbound_1                 |        4|        4|  13.332 ns|  13.332 ns|    4|        4|        no|
+        |Axi2Mat_Block_split35_proc_U0  |Axi2Mat_Block_split35_proc  |        0|        0|       0 ns|       0 ns|    0|        0|        no|
+        |Axi2AxiStream_U0               |Axi2AxiStream               |        2|  6220875|   6.666 ns|  20.734 ms|    2|  6220875|        no|
+        |AxiStream2Mat_U0               |AxiStream2Mat               |       10|  8294409|  33.330 ns|  27.645 ms|   10|  8294409|  dataflow|
+        +-------------------------------+----------------------------+---------+---------+-----------+-----------+-----+---------+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+--------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT  | URAM|
++---------------------+---------+------+---------+--------+-----+
+|DSP                  |        -|     -|        -|       -|    -|
+|Expression           |        -|     -|        0|      12|    -|
+|FIFO                 |        -|     -|      214|     172|    -|
+|Instance             |        -|     4|     1318|    3214|    -|
+|Memory               |        -|     -|        -|       -|    -|
+|Multiplexer          |        -|     -|        -|      18|    -|
+|Register             |        -|     -|        2|       -|    -|
++---------------------+---------+------+---------+--------+-----+
+|Total                |        0|     4|     1534|    3416|    0|
++---------------------+---------+------+---------+--------+-----+
+|Available SLR        |     1344|  2976|   871680|  435840|  320|
++---------------------+---------+------+---------+--------+-----+
+|Utilization SLR (%)  |        0|    ~0|       ~0|      ~0|    0|
++---------------------+---------+------+---------+--------+-----+
+|Available            |     2688|  5952|  1743360|  871680|  640|
++---------------------+---------+------+---------+--------+-----+
+|Utilization (%)      |        0|    ~0|       ~0|      ~0|    0|
++---------------------+---------+------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------+----------------------------+---------+----+------+------+-----+
+    |            Instance           |           Module           | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +-------------------------------+----------------------------+---------+----+------+------+-----+
+    |Axi2AxiStream_U0               |Axi2AxiStream               |        0|   0|   200|   626|    0|
+    |Axi2Mat_Block_split35_proc_U0  |Axi2Mat_Block_split35_proc  |        0|   0|    26|    20|    0|
+    |AxiStream2Mat_U0               |AxiStream2Mat               |        0|   3|  1037|  2432|    0|
+    |addrbound_1_U0                 |addrbound_1                 |        0|   1|    55|   136|    0|
+    +-------------------------------+----------------------------+---------+----+------+------+-----+
+    |Total                          |                            |        0|   4|  1318|  3214|    0|
+    +-------------------------------+----------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +--------------+---------+----+----+-----+------+-----+---------+
+    |     Name     | BRAM_18K| FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +--------------+---------+----+----+-----+------+-----+---------+
+    |axibound_V_U  |        0|  68|   0|    -|     2|   24|       48|
+    |cols_c_U      |        0|   5|   0|    -|     4|   32|      128|
+    |ldata_U       |        0|  68|   0|    -|     2|   32|       64|
+    |p_channel_U   |        0|  68|   0|    -|     2|   24|       48|
+    |rows_c_U      |        0|   5|   0|    -|     4|   32|      128|
+    +--------------+---------+----+----+-----+------+-----+---------+
+    |Total         |        0| 214|   0|    0|    14|  144|      416|
+    +--------------+---------+----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +-----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name           | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------+----------+----+---+----+------------+------------+
+    |Axi2AxiStream_U0_ap_start          |       and|   0|  0|   2|           1|           1|
+    |addrbound_1_U0_ap_start            |       and|   0|  0|   2|           1|           1|
+    |ap_idle                            |       and|   0|  0|   2|           1|           1|
+    |ap_sync_ready                      |       and|   0|  0|   2|           1|           1|
+    |ap_sync_Axi2AxiStream_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_addrbound_1_U0_ap_ready    |        or|   0|  0|   2|           1|           1|
+    +-----------------------------------+----------+----+---+----+------------+------------+
+    |Total                              |          |   0|  0|  12|           6|           6|
+    +-----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------+----+-----------+-----+-----------+
+    |                  Name                 | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_Axi2AxiStream_U0_ap_ready  |   9|          2|    1|          2|
+    |ap_sync_reg_addrbound_1_U0_ap_ready    |   9|          2|    1|          2|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |Total                                  |  18|          4|    2|          4|
+    +---------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------+---+----+-----+-----------+
+    |                  Name                 | FF| LUT| Bits| Const Bits|
+    +---------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_Axi2AxiStream_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_addrbound_1_U0_ap_ready    |  1|   0|    1|          0|
+    +---------------------------------------+---+----+-----+-----------+
+    |Total                                  |  2|   0|    2|          0|
+    +---------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+--------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  | Source Object|    C Type    |
++----------------------+-----+-----+------------+--------------+--------------+
+|m_axi_gmem0_AWVALID   |  out|    1|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_AWREADY   |   in|    1|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_AWADDR    |  out|   64|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_AWID      |  out|    1|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_AWLEN     |  out|   32|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_AWSIZE    |  out|    3|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_AWBURST   |  out|    2|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_AWLOCK    |  out|    2|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_AWCACHE   |  out|    4|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_AWPROT    |  out|    3|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_AWQOS     |  out|    4|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_AWREGION  |  out|    4|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_AWUSER    |  out|    1|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_WVALID    |  out|    1|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_WREADY    |   in|    1|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_WDATA     |  out|   32|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_WSTRB     |  out|    4|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_WLAST     |  out|    1|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_WID       |  out|    1|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_WUSER     |  out|    1|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_ARVALID   |  out|    1|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_ARREADY   |   in|    1|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_ARADDR    |  out|   64|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_ARID      |  out|    1|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_ARLEN     |  out|   32|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_ARSIZE    |  out|    3|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_ARBURST   |  out|    2|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_ARLOCK    |  out|    2|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_ARCACHE   |  out|    4|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_ARPROT    |  out|    3|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_ARQOS     |  out|    4|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_ARREGION  |  out|    4|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_ARUSER    |  out|    1|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_RVALID    |   in|    1|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_RREADY    |  out|    1|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_RDATA     |   in|   32|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_RLAST     |   in|    1|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_RID       |   in|    1|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_RFIFONUM  |   in|    9|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_RUSER     |   in|    1|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_RRESP     |   in|    2|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_BVALID    |   in|    1|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_BREADY    |  out|    1|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_BRESP     |   in|    2|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_BID       |   in|    1|       m_axi|         gmem0|       pointer|
+|m_axi_gmem0_BUSER     |   in|    1|       m_axi|         gmem0|       pointer|
+|din                   |   in|   64|     ap_none|           din|        scalar|
+|din_ap_vld            |   in|    1|     ap_none|           din|        scalar|
+|imgInput_499_din      |  out|   24|     ap_fifo|  imgInput_499|       pointer|
+|imgInput_499_full_n   |   in|    1|     ap_fifo|  imgInput_499|       pointer|
+|imgInput_499_write    |  out|    1|     ap_fifo|  imgInput_499|       pointer|
+|rows                  |   in|   32|     ap_none|          rows|        scalar|
+|rows_ap_vld           |   in|    1|     ap_none|          rows|        scalar|
+|cols                  |   in|   32|     ap_none|          cols|        scalar|
+|cols_ap_vld           |   in|    1|     ap_none|          cols|        scalar|
+|ap_clk                |   in|    1|  ap_ctrl_hs|       Axi2Mat|  return value|
+|ap_rst                |   in|    1|  ap_ctrl_hs|       Axi2Mat|  return value|
+|ap_start              |   in|    1|  ap_ctrl_hs|       Axi2Mat|  return value|
+|ap_done               |  out|    1|  ap_ctrl_hs|       Axi2Mat|  return value|
+|ap_ready              |  out|    1|  ap_ctrl_hs|       Axi2Mat|  return value|
+|ap_idle               |  out|    1|  ap_ctrl_hs|       Axi2Mat|  return value|
+|ap_continue           |   in|    1|  ap_ctrl_hs|       Axi2Mat|  return value|
++----------------------+-----+-----+------------+--------------+--------------+
+

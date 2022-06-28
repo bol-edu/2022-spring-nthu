@@ -1,0 +1,115 @@
+
+
+================================================================
+== Synthesis Summary Report of 'spmv'
+================================================================
++ General Information: 
+    * Date:           Sun Mar 27 14:20:40 2022
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+    * Project:        LabB
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------+------+------+---------+--------+----------+---------+------+----------+------+--------+-----------+-----------+-----+
+    |        Modules       | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |        |           |           |     |
+    |        & Loops       | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP  |     FF    |    LUT    | URAM|
+    +----------------------+------+------+---------+--------+----------+---------+------+----------+------+--------+-----------+-----------+-----+
+    |+ spmv                |     -|  0.04|        -|       -|         -|        -|     -|        no|     -|  5 (2%)|  1465 (1%)|  1655 (3%)|    -|
+    | o L1                 |     -|  7.30|        -|       -|         -|        -|     -|        no|     -|       -|          -|          -|    -|
+    |  + spmv_Pipeline_L2  |     -|  0.04|        -|       -|         -|        -|     -|        no|     -|  5 (2%)|  883 (~0%)|  1151 (2%)|    -|
+    |   o L2               |    II|  7.30|        -|       -|        18|       10|     -|       yes|     -|       -|          -|          -|    -|
+    +----------------------+------+------+---------+--------+----------+---------+------+----------+------+--------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 8             | 32     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+----------+
+| Interface | Type         | Ports    |
++-----------+--------------+----------+
+| ap_clk    | clock        | ap_clk   |
+| ap_rst_n  | reset        | ap_rst_n |
+| ap_ctrl   | ap_ctrl_none |          |
++-----------+--------------+----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-------------+-----------+----------+
+| Argument    | Direction | Datatype |
++-------------+-----------+----------+
+| rowPtr      | in        | int*     |
+| columnIndex | in        | int*     |
+| values      | in        | float*   |
+| y           | out       | float*   |
+| x           | in        | float*   |
++-------------+-----------+----------+
+
+* SW-to-HW Mapping
++-------------+---------------+---------+-------------------------------------+
+| Argument    | HW Interface  | HW Type | HW Info                             |
++-------------+---------------+---------+-------------------------------------+
+| rowPtr      | s_axi_control | memory  | name=rowPtr offset=32 range=32      |
+| columnIndex | s_axi_control | memory  | name=columnIndex offset=64 range=64 |
+| values      | s_axi_control | memory  | name=values offset=128 range=64     |
+| y           | s_axi_control | memory  | name=y offset=16 range=16           |
+| x           | s_axi_control | memory  | name=x offset=192 range=16          |
++-------------+---------------+---------+-------------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------+-----+--------+------------------+------+---------+---------+
+| Name                                 | DSP | Pragma | Variable         | Op   | Impl    | Latency |
++--------------------------------------+-----+--------+------------------+------+---------+---------+
+| + spmv                               | 5   |        |                  |      |         |         |
+|   indvars_iv_next6_fu_143_p2         | -   |        | indvars_iv_next6 | add  | fabric  | 0       |
+|  + spmv_Pipeline_L2                  | 5   |        |                  |      |         |         |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U2  | 3   |        | mul              | fmul | maxdsp  | 3       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U1 | 2   |        | y0_1             | fadd | fulldsp | 4       |
+|    add_ln12_fu_215_p2                | -   |        | add_ln12         | add  | fabric  | 0       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U2  | 3   |        | mul_1            | fmul | maxdsp  | 3       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U1 | 2   |        | y0_1_1           | fadd | fulldsp | 4       |
+|    add_ln12_1_fu_231_p2              | -   |        | add_ln12_1       | add  | fabric  | 0       |
++--------------------------------------+-----+--------+------------------+------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+----------------------------+----------------------------------------------+
+| Type      | Options                    | Location                                     |
++-----------+----------------------------+----------------------------------------------+
+| unroll    | factor=2                   | ../../../../Desktop/LabB/spmv.cpp:13 in spmv |
+| pipeline  |                            | ../../../../Desktop/LabB/spmv.cpp:14 in spmv |
+| interface | s_axilite port=columnIndex | DIRECTIVE in spmv, columnIndex               |
+| interface | ap_ctrl_none port=return   | DIRECTIVE in spmv, return                    |
+| interface | s_axilite port=rowPtr      | DIRECTIVE in spmv, rowPtr                    |
+| interface | s_axilite port=values      | DIRECTIVE in spmv, values                    |
+| interface | s_axilite port=x           | DIRECTIVE in spmv, x                         |
+| interface | s_axilite port=y           | DIRECTIVE in spmv, y                         |
++-----------+----------------------------+----------------------------------------------+
+
+

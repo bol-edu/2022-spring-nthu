@@ -1,0 +1,16 @@
+# ==============================================================
+# Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+# Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+# ==============================================================
+OPTION psf_version = 2.1;
+
+BEGIN driver resize_accel
+
+ OPTION supported_peripherals = (resize_accel_v2_0 );
+ OPTION driver_state = ACTIVE;
+ OPTION copyfiles = all;
+ OPTION name = resize_accel;
+ OPTION version = 2.0;
+
+END driver
+

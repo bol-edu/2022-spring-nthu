@@ -1,0 +1,197 @@
+
+
+================================================================
+== Vitis HLS Report for 'Window2D'
+================================================================
+* Date:           Tue Mar 29 06:54:36 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        conv_filter_prj
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu200-fsgd2104-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.433 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+---------+---------+
+    |  Latency (cycles) |  Latency (absolute)  |    Interval   | Pipeline|
+    |   min   |   max   |    min    |    max   | min |   max   |   Type  |
+    +---------+---------+-----------+----------+-----+---------+---------+
+    |        8|  2087055|  26.664 ns|  6.956 ms|    8|  2087055|       no|
+    +---------+---------+-----------+----------+-----+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------+---------------------------------+---------+---------+-----------+----------+-----+---------+---------+
+        |                                            |                                 |  Latency (cycles) |  Latency (absolute)  |    Interval   | Pipeline|
+        |                  Instance                  |              Module             |   min   |   max   |    min    |    max   | min |   max   |   Type  |
+        +--------------------------------------------+---------------------------------+---------+---------+-----------+----------+-----+---------+---------+
+        |grp_Window2D_Pipeline_update_window_fu_132  |Window2D_Pipeline_update_window  |        4|  2087051|  13.332 ns|  6.956 ms|    4|  2087051|       no|
+        +--------------------------------------------+---------------------------------+---------+---------+-----------+----------+-----+---------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     1|        -|        -|    -|
+|Expression           |        -|     -|        0|      105|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|     2113|      293|    -|
+|Memory               |       14|     -|        0|        0|    0|
+|Multiplexer          |        -|     -|        -|       94|    -|
+|Register             |        -|     -|      124|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |       14|     1|     2237|      492|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1440|  2280|   788160|   394080|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |       ~0|    ~0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4320|  6840|  2364480|  1182240|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |       ~0|    ~0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------+---------------------------------+---------+----+------+-----+-----+
+    |                  Instance                  |              Module             | BRAM_18K| DSP|  FF  | LUT | URAM|
+    +--------------------------------------------+---------------------------------+---------+----+------+-----+-----+
+    |grp_Window2D_Pipeline_update_window_fu_132  |Window2D_Pipeline_update_window  |        0|   0|  2113|  293|    0|
+    +--------------------------------------------+---------------------------------+---------+----+------+-----+-----+
+    |Total                                       |                                 |        0|   0|  2113|  293|    0|
+    +--------------------------------------------+---------------------------------+---------+----+------+-----+-----+
+
+    * DSP: 
+    +------------------------------+--------------------------+-----------+
+    |           Instance           |          Module          | Expression|
+    +------------------------------+--------------------------+-----------+
+    |mul_mul_16ns_16ns_32_4_1_U49  |mul_mul_16ns_16ns_32_4_1  |    i0 * i1|
+    +------------------------------+--------------------------+-----------+
+
+    * Memory: 
+    +-----------------+-------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |      Memory     |                Module               | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-----------------+-------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |LineBuffer_1_U   |Window2D_LineBuffer_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|  1920|    8|     1|        15360|
+    |LineBuffer_2_U   |Window2D_LineBuffer_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|  1920|    8|     1|        15360|
+    |LineBuffer_3_U   |Window2D_LineBuffer_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|  1920|    8|     1|        15360|
+    |LineBuffer_4_U   |Window2D_LineBuffer_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|  1920|    8|     1|        15360|
+    |LineBuffer_5_U   |Window2D_LineBuffer_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|  1920|    8|     1|        15360|
+    |LineBuffer_6_U   |Window2D_LineBuffer_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|  1920|    8|     1|        15360|
+    |LineBuffer_7_U   |Window2D_LineBuffer_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|  1920|    8|     1|        15360|
+    |LineBuffer_8_U   |Window2D_LineBuffer_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|  1920|    8|     1|        15360|
+    |LineBuffer_9_U   |Window2D_LineBuffer_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|  1920|    8|     1|        15360|
+    |LineBuffer_10_U  |Window2D_LineBuffer_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|  1920|    8|     1|        15360|
+    |LineBuffer_11_U  |Window2D_LineBuffer_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|  1920|    8|     1|        15360|
+    |LineBuffer_12_U  |Window2D_LineBuffer_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|  1920|    8|     1|        15360|
+    |LineBuffer_13_U  |Window2D_LineBuffer_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|  1920|    8|     1|        15360|
+    |LineBuffer_U     |Window2D_LineBuffer_RAM_AUTO_1R1W    |        1|  0|   0|    0|  1920|    8|     1|        15360|
+    +-----------------+-------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total            |                                     |       14|  0|   0|    0| 26880|  112|    14|       215040|
+    +-----------------+-------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------+----------+----+---+----+------------+------------+
+    |num_iterations_fu_200_p2  |         +|   0|  0|  39|          32|          32|
+    |ramp_up_fu_189_p2         |         +|   0|  0|  20|          20|           3|
+    |sub_fu_206_p2             |         +|   0|  0|  24|          17|           2|
+    |sub_ln96_fu_183_p2        |         -|   0|  0|  20|          20|          20|
+    |ap_block_state1           |        or|   0|  0|   2|           1|           1|
+    +--------------------------+----------+----+---+----+------------+------------+
+    |Total                     |          |   0|  0| 105|          90|          58|
+    +--------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------+----+-----------+-----+-----------+
+    |         Name        | LUT| Input Size| Bits| Total Bits|
+    +---------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm            |  31|          6|    1|          6|
+    |ap_done              |   9|          2|    1|          2|
+    |height_blk_n         |   9|          2|    1|          2|
+    |height_c13_blk_n     |   9|          2|    1|          2|
+    |pixel_stream20_read  |   9|          2|    1|          2|
+    |width_blk_n          |   9|          2|    1|          2|
+    |width_c11_blk_n      |   9|          2|    1|          2|
+    |window_stream_write  |   9|          2|    1|          2|
+    +---------------------+----+-----------+-----+-----------+
+    |Total                |  94|         20|    8|         20|
+    +---------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------------+----+----+-----+-----------+
+    |                           Name                          | FF | LUT| Bits| Const Bits|
+    +---------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                |   5|   0|    5|          0|
+    |ap_done_reg                                              |   1|   0|    1|          0|
+    |grp_Window2D_Pipeline_update_window_fu_132_ap_start_reg  |   1|   0|    1|          0|
+    |num_iterations_reg_248                                   |  32|   0|   32|          0|
+    |num_pixels_reg_243                                       |  32|   0|   32|          0|
+    |ramp_up_reg_238                                          |  20|   0|   20|          0|
+    |sub_reg_253                                              |  17|   0|   17|          0|
+    |width_read_reg_221                                       |  16|   0|   16|          0|
+    +---------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                    | 124|   0|  124|          0|
+    +---------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+------+------------+----------------+--------------+
+|        RTL Ports       | Dir | Bits |  Protocol  |  Source Object |    C Type    |
++------------------------+-----+------+------------+----------------+--------------+
+|ap_clk                  |   in|     1|  ap_ctrl_hs|        Window2D|  return value|
+|ap_rst                  |   in|     1|  ap_ctrl_hs|        Window2D|  return value|
+|ap_start                |   in|     1|  ap_ctrl_hs|        Window2D|  return value|
+|ap_done                 |  out|     1|  ap_ctrl_hs|        Window2D|  return value|
+|ap_continue             |   in|     1|  ap_ctrl_hs|        Window2D|  return value|
+|ap_idle                 |  out|     1|  ap_ctrl_hs|        Window2D|  return value|
+|ap_ready                |  out|     1|  ap_ctrl_hs|        Window2D|  return value|
+|width_dout              |   in|    16|     ap_fifo|           width|       pointer|
+|width_empty_n           |   in|     1|     ap_fifo|           width|       pointer|
+|width_read              |  out|     1|     ap_fifo|           width|       pointer|
+|height_dout             |   in|    16|     ap_fifo|          height|       pointer|
+|height_empty_n          |   in|     1|     ap_fifo|          height|       pointer|
+|height_read             |  out|     1|     ap_fifo|          height|       pointer|
+|pixel_stream20_dout     |   in|     8|     ap_fifo|  pixel_stream20|       pointer|
+|pixel_stream20_empty_n  |   in|     1|     ap_fifo|  pixel_stream20|       pointer|
+|pixel_stream20_read     |  out|     1|     ap_fifo|  pixel_stream20|       pointer|
+|window_stream_din       |  out|  1800|     ap_fifo|   window_stream|       pointer|
+|window_stream_full_n    |   in|     1|     ap_fifo|   window_stream|       pointer|
+|window_stream_write     |  out|     1|     ap_fifo|   window_stream|       pointer|
+|width_c11_din           |  out|    16|     ap_fifo|       width_c11|       pointer|
+|width_c11_full_n        |   in|     1|     ap_fifo|       width_c11|       pointer|
+|width_c11_write         |  out|     1|     ap_fifo|       width_c11|       pointer|
+|height_c13_din          |  out|    16|     ap_fifo|      height_c13|       pointer|
+|height_c13_full_n       |   in|     1|     ap_fifo|      height_c13|       pointer|
+|height_c13_write        |  out|     1|     ap_fifo|      height_c13|       pointer|
++------------------------+-----+------+------------+----------------+--------------+
+

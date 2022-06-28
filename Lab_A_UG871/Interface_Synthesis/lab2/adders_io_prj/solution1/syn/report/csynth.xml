@@ -1,0 +1,471 @@
+<profile>
+    <ReportVersion>
+        <Version>2021.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>virtexuplus</ProductFamily>
+        <Part>xcvu9p-flgb2104-1-e</Part>
+        <TopModelName>adders_io</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>0.907</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>2</Best-caseLatency>
+            <Average-caseLatency>2</Average-caseLatency>
+            <Worst-caseLatency>2</Worst-caseLatency>
+            <Best-caseRealTimeLatency>20.000 ns</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>20.000 ns</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>20.000 ns</Worst-caseRealTimeLatency>
+            <Interval-min>3</Interval-min>
+            <Interval-max>3</Interval-max>
+        </SummaryOfOverallLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <FF>36</FF>
+            <LUT>144</LUT>
+            <BRAM_18K>0</BRAM_18K>
+            <DSP>0</DSP>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>4320</BRAM_18K>
+            <DSP>6840</DSP>
+            <FF>2364480</FF>
+            <LUT>1182240</LUT>
+            <URAM>960</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_local_block</name>
+            <Object>adders_io</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_local_deadlock</name>
+            <Object>adders_io</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>adders_io</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst</name>
+            <Object>adders_io</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_start</name>
+            <Object>adders_io</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_done</name>
+            <Object>adders_io</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_idle</name>
+            <Object>adders_io</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_ready</name>
+            <Object>adders_io</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in1</name>
+            <Object>in1</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in1_ap_vld</name>
+            <Object>in1</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in2</name>
+            <Object>in2</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_ack</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in2_ap_ack</name>
+            <Object>in2</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_ack</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_out1_i</name>
+            <Object>in_out1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_hs</IOProtocol>
+            <IOConfig>register</IOConfig>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_out1_i_ap_vld</name>
+            <Object>in_out1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_hs</IOProtocol>
+            <IOConfig>register</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_out1_i_ap_ack</name>
+            <Object>in_out1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_hs</IOProtocol>
+            <IOConfig>register</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_out1_o</name>
+            <Object>in_out1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_hs</IOProtocol>
+            <IOConfig>register</IOConfig>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_out1_o_ap_vld</name>
+            <Object>in_out1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_hs</IOProtocol>
+            <IOConfig>register</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_out1_o_ap_ack</name>
+            <Object>in_out1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_hs</IOProtocol>
+            <IOConfig>register</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="2">
+            <ModuleName>adders_io</ModuleName>
+            <BindInstances>add_ln50_fu_57_p2 in_out1_o_int_regslice</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>adders_io</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>0.907</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>2</Best-caseLatency>
+                    <Average-caseLatency>2</Average-caseLatency>
+                    <Worst-caseLatency>2</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>20.000 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>20.000 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>20.000 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>3</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>36</FF>
+                    <AVAIL_FF>2364480</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>144</LUT>
+                    <AVAIL_LUT>1182240</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>6840</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln50_fu_57_p2" SOURCE="adders_io.c:50" URAM="0" VARIABLE="add_ln50"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="in_out1_o_int_regslice" SOURCE="adders_io.c:50" URAM="0" VARIABLE="add_ln50_1"/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands/>
+    <Args>
+        <Arg ArgName="in1" index="0" direction="in" srcType="int" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="in1" name="in1" usage="data" direction="in"/>
+                <hwRef type="port" interface="in1_ap_vld" name="in1_ap_vld" usage="control" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in2" index="1" direction="in" srcType="int" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="in2" name="in2" usage="data" direction="in"/>
+                <hwRef type="port" interface="in2_ap_ack" name="in2_ap_ack" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="in_out1" index="2" direction="inout" srcType="int*" srcSize="32">
+            <hwRefs>
+                <hwRef type="port" interface="in_out1_i" name="in_out1_i" usage="data" direction="in"/>
+                <hwRef type="port" interface="in_out1_i_ap_vld" name="in_out1_i_ap_vld" usage="control" direction="in"/>
+                <hwRef type="port" interface="in_out1_i_ap_ack" name="in_out1_i_ap_ack" usage="control" direction="out"/>
+                <hwRef type="port" interface="in_out1_o" name="in_out1_o" usage="data" direction="out"/>
+                <hwRef type="port" interface="in_out1_o_ap_vld" name="in_out1_o_ap_vld" usage="control" direction="out"/>
+                <hwRef type="port" interface="in_out1_o_ap_ack" name="in_out1_o_ap_ack" usage="control" direction="in"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+            <portMaps>
+                <portMap portMapName="ap_start">start</portMap>
+                <portMap portMapName="ap_done">done</portMap>
+                <portMap portMapName="ap_idle">idle</portMap>
+                <portMap portMapName="ap_ready">ready</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_done</port>
+                <port>ap_idle</port>
+                <port>ap_ready</port>
+                <port>ap_start</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="in1" type="data" busTypeName="data" protocol="ap_vld" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="in1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>in1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_vld" register_option="0" argName="in1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="in2" type="data" busTypeName="data" protocol="ap_ack" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="in2">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>in2</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_ack" register_option="0" argName="in2"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="in_out1_i" type="data" busTypeName="data" protocol="ap_hs" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="in_out1_i">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>in_out1_i</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_hs" register_option="0" argName="in_out1"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="in_out1_o" type="data" busTypeName="data" protocol="ap_hs" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="in_out1_o">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>in_out1_o</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_hs" register_option="0" argName="in_out1"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="REGISTER">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Mode, Bitwidth</keys>
+                    <column name="in1">ap_vld, 32</column>
+                    <column name="in2">ap_ack, 32</column>
+                    <column name="in_out1_i">ap_hs, 32</column>
+                    <column name="in_out1_o">ap_hs, 32</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst">reset, ap_rst</column>
+                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start</column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="in1">in, int</column>
+                    <column name="in2">in, int</column>
+                    <column name="in_out1">inout, int*</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="in1">in1, port</column>
+                    <column name="in1">in1_ap_vld, port</column>
+                    <column name="in2">in2, port</column>
+                    <column name="in2">in2_ap_ack, port</column>
+                    <column name="in_out1">in_out1_i, port</column>
+                    <column name="in_out1">in_out1_i_ap_vld, port</column>
+                    <column name="in_out1">in_out1_i_ap_ack, port</column>
+                    <column name="in_out1">in_out1_o, port</column>
+                    <column name="in_out1">in_out1_o_ap_vld, port</column>
+                    <column name="in_out1">in_out1_o_ap_ack, port</column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <PragmaReport>
+        <Pragma type="interface" location="adders_io.c:49" status="valid" parentFunction="adders_io" variable="in1" isDirective="1" options="ap_vld port=in1"/>
+        <Pragma type="interface" location="adders_io.c:49" status="valid" parentFunction="adders_io" variable="in2" isDirective="1" options="ap_ack port=in2"/>
+        <Pragma type="interface" location="adders_io.c:49" status="valid" parentFunction="adders_io" variable="in_out1" isDirective="1" options="ap_hs port=in_out1"/>
+    </PragmaReport>
+</profile>
+

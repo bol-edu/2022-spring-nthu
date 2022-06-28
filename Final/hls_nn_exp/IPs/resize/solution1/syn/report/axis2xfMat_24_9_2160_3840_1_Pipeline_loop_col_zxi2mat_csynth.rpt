@@ -1,0 +1,153 @@
+
+
+================================================================
+== Vitis HLS Report for 'axis2xfMat_24_9_2160_3840_1_Pipeline_loop_col_zxi2mat'
+================================================================
+* Date:           Sat Jun 18 18:21:40 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        resize
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.061 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    | min |  max |   Type  |
+    +---------+---------+-----------+-----------+-----+------+---------+
+    |        2|     3842|  20.000 ns|  38.420 us|    2|  3842|       no|
+    +---------+---------+-----------+-----------+-----+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+----------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip   |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  |   Count  | Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+----------+----------+
+        |- loop_col_zxi2mat  |        0|     3840|         2|          1|          1|  0 ~ 3840|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+----------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     36|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     54|    -|
+|Register         |        -|    -|      39|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      39|     90|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |j_3_fu_107_p2                     |         +|   0|  0|  12|          12|           1|
+    |ap_block_state1_pp0_stage0_iter0  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln47_fu_101_p2               |      icmp|   0|  0|  18|          32|          32|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  36|          47|          37|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_j       |   9|          2|   12|         24|
+    |j_02_fu_54               |   9|          2|   12|         24|
+    |src_TDATA_blk_n          |   9|          2|    1|          2|
+    |src_mat_420_blk_n        |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  54|         12|   28|         56|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |j_02_fu_54               |  12|   0|   12|          0|
+    |tmp_data_V_reg_132       |  24|   0|   24|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    |  39|   0|   39|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+------------------------------------------------------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  |                        Source Object                       |    C Type    |
++--------------------+-----+-----+------------+------------------------------------------------------------+--------------+
+|ap_clk              |   in|    1|  ap_ctrl_hs|  axis2xfMat<24, 9, 2160, 3840, 1>_Pipeline_loop_col_zxi2mat|  return value|
+|ap_rst              |   in|    1|  ap_ctrl_hs|  axis2xfMat<24, 9, 2160, 3840, 1>_Pipeline_loop_col_zxi2mat|  return value|
+|ap_start            |   in|    1|  ap_ctrl_hs|  axis2xfMat<24, 9, 2160, 3840, 1>_Pipeline_loop_col_zxi2mat|  return value|
+|ap_done             |  out|    1|  ap_ctrl_hs|  axis2xfMat<24, 9, 2160, 3840, 1>_Pipeline_loop_col_zxi2mat|  return value|
+|ap_idle             |  out|    1|  ap_ctrl_hs|  axis2xfMat<24, 9, 2160, 3840, 1>_Pipeline_loop_col_zxi2mat|  return value|
+|ap_ready            |  out|    1|  ap_ctrl_hs|  axis2xfMat<24, 9, 2160, 3840, 1>_Pipeline_loop_col_zxi2mat|  return value|
+|src_TVALID          |   in|    1|        axis|                                                src_V_data_V|       pointer|
+|src_TDATA           |   in|   24|        axis|                                                src_V_data_V|       pointer|
+|src_mat_420_din     |  out|   24|     ap_fifo|                                                 src_mat_420|       pointer|
+|src_mat_420_full_n  |   in|    1|     ap_fifo|                                                 src_mat_420|       pointer|
+|src_mat_420_write   |  out|    1|     ap_fifo|                                                 src_mat_420|       pointer|
+|p_read1             |   in|   32|     ap_none|                                                     p_read1|        scalar|
+|src_TREADY          |  out|    1|        axis|                                                src_V_dest_V|       pointer|
+|src_TDEST           |   in|    1|        axis|                                                src_V_dest_V|       pointer|
+|src_TKEEP           |   in|    3|        axis|                                                src_V_keep_V|       pointer|
+|src_TSTRB           |   in|    3|        axis|                                                src_V_strb_V|       pointer|
+|src_TUSER           |   in|    1|        axis|                                                src_V_user_V|       pointer|
+|src_TLAST           |   in|    1|        axis|                                                src_V_last_V|       pointer|
+|src_TID             |   in|    1|        axis|                                                  src_V_id_V|       pointer|
++--------------------+-----+-----+------------+------------------------------------------------------------+--------------+
+

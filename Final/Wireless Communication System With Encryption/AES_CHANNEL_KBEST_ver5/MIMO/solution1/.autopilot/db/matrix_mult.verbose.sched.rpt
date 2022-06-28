@@ -1,0 +1,152 @@
+
+
+================================================================
+== Vitis HLS Report for 'matrix_mult'
+================================================================
+* Date:           Fri Jun 17 13:15:22 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        MIMO
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  40.00 ns|  3.075 ns|    10.80 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      212|      212|  8.480 us|  8.480 us|  212|  212|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%Q_TEMP_V = alloca i64 1" [src/MIMO.cpp:84]   --->   Operation 6 'alloca' 'Q_TEMP_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 7 'wait' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [2/2] (0.00ns)   --->   "%call_ln0 = call void @matrix_mult_Pipeline_VITIS_LOOP_88_1, i16 %Q_TEMP_V, i16 %Q"   --->   Operation 8 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 9 [1/2] (0.00ns)   --->   "%call_ln0 = call void @matrix_mult_Pipeline_VITIS_LOOP_88_1, i16 %Q_TEMP_V, i16 %Q"   --->   Operation 9 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 10 [1/1] (0.00ns)   --->   "%empty_115 = wait i32 @_ssdm_op_Wait"   --->   Operation 10 'wait' 'empty_115' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 11 [1/1] (0.00ns)   --->   "%empty_116 = wait i32 @_ssdm_op_Wait"   --->   Operation 11 'wait' 'empty_116' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 12 [2/2] (0.00ns)   --->   "%call_ln0 = call void @matrix_mult_Pipeline_VITIS_LOOP_94_2, i16 %Q_TEMP_V, i16 %noise_out, i16 %MULQ_out"   --->   Operation 12 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %MULQ_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %MULQ_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %MULQ_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %Q, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %Q, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %Q, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %noise_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %noise_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %noise_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %MULQ_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %noise_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %Q, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 25 [1/2] (0.00ns)   --->   "%call_ln0 = call void @matrix_mult_Pipeline_VITIS_LOOP_94_2, i16 %Q_TEMP_V, i16 %noise_out, i16 %MULQ_out"   --->   Operation 25 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 26 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 26 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 40ns, clock uncertainty: 10.8ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

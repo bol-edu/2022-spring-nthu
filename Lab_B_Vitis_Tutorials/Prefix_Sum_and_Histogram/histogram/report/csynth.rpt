@@ -1,0 +1,108 @@
+
+
+================================================================
+== Synthesis Summary Report of 'histogram'
+================================================================
++ General Information: 
+    * Date:           Tue Mar 22 23:29:34 2022
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+    * Project:        histogram_1
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------+------+------+---------+---------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |      Modules      | Issue|      | Latency | Latency | Iteration|         | Trip |          |      |    |           |           |     |
+    |      & Loops      | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT    | URAM|
+    +-------------------+------+------+---------+---------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |+ histogram        |     -|  0.10|       22|  220.000|         -|       23|     -|        no|     -|   -|  314 (~0%)|  412 (~0%)|    -|
+    | o VITIS_LOOP_8_1  |     -|  7.30|       20|  200.000|         3|        2|    10|       yes|     -|   -|          -|          -|    -|
+    +-------------------+------+------+---------+---------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 8             | 64     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                               |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                 |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN 5=CHAN2_INT_EN             |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST 5=CHAN2_INT_ST             |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| in       | in        | int*     |
+| hist     | inout     | int*     |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+-------------------------------+
+| Argument | HW Interface  | HW Type   | HW Info                       |
++----------+---------------+-----------+-------------------------------+
+| in       | s_axi_control | interface |                               |
+| hist     | s_axi_control | memory    | name=hist offset=128 range=64 |
++----------+---------------+-----------+-------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++---------------------+-----+--------+----------+-----+--------+---------+
+| Name                | DSP | Pragma | Variable | Op  | Impl   | Latency |
++---------------------+-----+--------+----------+-----+--------+---------+
+| + histogram         | 0   |        |          |     |        |         |
+|   add_ln8_fu_120_p2 | -   |        | add_ln8  | add | fabric | 0       |
+|   hist_d0           | -   |        | add_ln11 | add | fabric | 0       |
++---------------------+-----+--------+----------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+------------------------------+----------------------------------------+
+| Type      | Options                      | Location                               |
++-----------+------------------------------+----------------------------------------+
+| interface | s_axilite port=return        | histogramSW.cpp:3 in histogram, return |
+| interface | s_axilite register port=in   | histogramSW.cpp:4 in histogram, in     |
+| interface | s_axilite register port=hist | histogramSW.cpp:5 in histogram, hist   |
+| pipeline  | II=2                         | histogramSW.cpp:9 in histogram         |
++-----------+------------------------------+----------------------------------------+
+
+

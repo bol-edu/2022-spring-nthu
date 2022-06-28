@@ -1,0 +1,120 @@
+
+
+================================================================
+== Synthesis Summary Report of 'hls_macc'
+================================================================
++ General Information: 
+    * Date:           Sun Mar 20 21:27:14 2022
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+    * Project:        labA_1
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------+--------+-------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |   Modules  |  Issue |       | Latency | Latency| Iteration|         | Trip |          |      |    |           |           |     |
+    |   & Loops  |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT    | URAM|
+    +------------+--------+-------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |+ hls_macc  |  Timing|  -8.94|        2|  25.184|         -|        3|     -|        no|     -|   -|  296 (~0%)|  1369 (2%)|    -|
+    +------------+--------+-------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------------------+------------+---------------+--------+----------+
+| Interface                 | Data Width | Address Width | Offset | Register |
++---------------------------+------------+---------------+--------+----------+
+| s_axi_HLS_MACC_PERIPH_BUS | 32         | 6             | 16     | 0        |
++---------------------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------+
+| Interface                 | Register   | Offset | Width | Access | Description                      | Bit Fields                                               |
++---------------------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------+
+| s_axi_HLS_MACC_PERIPH_BUS | CTRL       | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART |
+| s_axi_HLS_MACC_PERIPH_BUS | GIER       | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                 |
+| s_axi_HLS_MACC_PERIPH_BUS | IP_IER     | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN 5=CHAN2_INT_EN             |
+| s_axi_HLS_MACC_PERIPH_BUS | IP_ISR     | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST 5=CHAN2_INT_ST             |
+| s_axi_HLS_MACC_PERIPH_BUS | a          | 0x10   | 32    | W      | Data signal of a                 |                                                          |
+| s_axi_HLS_MACC_PERIPH_BUS | b          | 0x18   | 32    | W      | Data signal of b                 |                                                          |
+| s_axi_HLS_MACC_PERIPH_BUS | accum      | 0x20   | 32    | R      | Data signal of accum             |                                                          |
+| s_axi_HLS_MACC_PERIPH_BUS | accum_ctrl | 0x24   | 32    | R      | Control signal of accum          | 0=accum_ap_vld                                           |
+| s_axi_HLS_MACC_PERIPH_BUS | accum_clr  | 0x30   | 32    | W      | Data signal of accum_clr         |                                                          |
++---------------------------+------------+--------+-------+--------+----------------------------------+----------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------+-----------+----------+
+| Argument  | Direction | Datatype |
++-----------+-----------+----------+
+| a         | in        | int      |
+| b         | in        | int      |
+| accum     | out       | int*     |
+| accum_clr | in        | _Bool    |
++-----------+-----------+----------+
+
+* SW-to-HW Mapping
++-----------+---------------------------+----------+--------------------------------------+
+| Argument  | HW Interface              | HW Type  | HW Info                              |
++-----------+---------------------------+----------+--------------------------------------+
+| a         | s_axi_HLS_MACC_PERIPH_BUS | register | name=a offset=0x10 range=32          |
+| b         | s_axi_HLS_MACC_PERIPH_BUS | register | name=b offset=0x18 range=32          |
+| accum     | s_axi_HLS_MACC_PERIPH_BUS | register | name=accum offset=0x20 range=32      |
+| accum     | s_axi_HLS_MACC_PERIPH_BUS | register | name=accum_ctrl offset=0x24 range=32 |
+| accum_clr | s_axi_HLS_MACC_PERIPH_BUS | register | name=accum_clr offset=0x30 range=32  |
++-----------+---------------------------+----------+--------------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------+-----+--------+----------+-----+--------+---------+
+| Name                    | DSP | Pragma | Variable | Op  | Impl   | Latency |
++-------------------------+-----+--------+----------+-----+--------+---------+
+| + hls_macc              | 0   |        |          |     |        |         |
+|   mul_32s_32s_32_1_1_U1 | -   | yes    | mul_ln20 | mul | fabric | 0       |
+|   add_ln20_fu_98_p2     | -   | yes    | add_ln20 | add | fabric | 0       |
++-------------------------+-----+--------+----------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+-----------------------------------------------------+----------------------------------------------+
+| Type      | Options                                             | Location                                     |
++-----------+-----------------------------------------------------+----------------------------------------------+
+| interface | s_axilite port=return bundle=HLS_MACC_PERIPH_BUS    | hls_macc/hls_macc.c:5 in hls_macc, return    |
+| interface | s_axilite port=a bundle=HLS_MACC_PERIPH_BUS         | hls_macc/hls_macc.c:6 in hls_macc, a         |
+| interface | s_axilite port=b bundle=HLS_MACC_PERIPH_BUS         | hls_macc/hls_macc.c:7 in hls_macc, b         |
+| interface | s_axilite port=accum bundle=HLS_MACC_PERIPH_BUS     | hls_macc/hls_macc.c:8 in hls_macc, accum     |
+| interface | s_axilite port=accum_clr bundle=HLS_MACC_PERIPH_BUS | hls_macc/hls_macc.c:9 in hls_macc, accum_clr |
+| bind_op   | variable=acc_reg op=mul impl=fabric                 | hls_macc/hls_macc.c:15 in hls_macc, acc_reg  |
+| bind_op   | variable=acc_reg op=add impl=fabric                 | hls_macc/hls_macc.c:16 in hls_macc, acc_reg  |
++-----------+-----------------------------------------------------+----------------------------------------------+
+
+

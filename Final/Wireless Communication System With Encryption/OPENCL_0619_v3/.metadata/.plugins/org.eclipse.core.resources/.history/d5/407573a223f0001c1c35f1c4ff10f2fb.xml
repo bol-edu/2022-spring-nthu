@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ASCII"?>
+<hwlink:HwLinkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hwlink="http://www.xilinx.com/acceleration/hwlink" name="MIMO_AES_system_hw_link" platform="/opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3/xilinx_u50_gen3x16_xdma_201920_3.xpfm" systemProject="MIMO_AES_system" cpu="pl">
+  <configuration name="Emulation-SW" id="com.xilinx.ide.accel.config.hwlink.sw_emu.1694203960">
+    <configBuildOptions xsi:type="hwlink:LinkOptions">
+      <binaryContainers name="binary_container_1">
+        <kernels name="TOP" projectName="MIMO_AES_kernels">
+          <computeUnits name="TOP_1" slr="">
+            <args name="in1" master="true" memory=""/>
+            <args name="out" master="true" memory=""/>
+            <args name="CHANNEL_R" master="true" memory=""/>
+            <args name="CHANNEL_I" master="true" memory=""/>
+            <args name="NOISE" master="true" memory=""/>
+          </computeUnits>
+        </kernels>
+      </binaryContainers>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="hwlink:LinkOptions">
+      <binaryContainers name="binary_container_1">
+        <kernels name="TOP" projectName="MIMO_AES_kernels">
+          <computeUnits name="TOP_1" slr="">
+            <args name="in1" master="true" memory=""/>
+            <args name="out" master="true" memory=""/>
+            <args name="CHANNEL_R" master="true" memory=""/>
+            <args name="CHANNEL_I" master="true" memory=""/>
+            <args name="NOISE" master="true" memory=""/>
+          </computeUnits>
+        </kernels>
+      </binaryContainers>
+    </lastBuildOptions>
+  </configuration>
+  <configuration name="Emulation-HW" id="com.xilinx.ide.accel.config.hwlink.hw_emu.2077416879">
+    <configBuildOptions xsi:type="hwlink:LinkOptions" target="hw_emu">
+      <binaryContainers name="binary_container_1">
+        <kernels name="TOP" projectName="MIMO_AES_kernels">
+          <computeUnits name="TOP_1" slr="">
+            <args name="in1" master="true" memory=""/>
+            <args name="out" master="true" memory=""/>
+            <args name="CHANNEL_R" master="true" memory=""/>
+            <args name="CHANNEL_I" master="true" memory=""/>
+            <args name="NOISE" master="true" memory=""/>
+          </computeUnits>
+        </kernels>
+      </binaryContainers>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="hwlink:LinkOptions" target="hw_emu">
+      <binaryContainers name="binary_container_1">
+        <kernels name="TOP" projectName="MIMO_AES_kernels">
+          <computeUnits name="TOP_1" slr="">
+            <args name="in1" master="true" memory=""/>
+            <args name="out" master="true" memory=""/>
+            <args name="CHANNEL_R" master="true" memory=""/>
+            <args name="CHANNEL_I" master="true" memory=""/>
+            <args name="NOISE" master="true" memory=""/>
+          </computeUnits>
+        </kernels>
+      </binaryContainers>
+    </lastBuildOptions>
+  </configuration>
+  <configuration name="Hardware" id="com.xilinx.ide.accel.config.hwlink.hw.1808975881">
+    <configBuildOptions xsi:type="hwlink:LinkOptions" target="hw">
+      <binaryContainers name="binary_container_1">
+        <kernels name="TOP" projectName="MIMO_AES_kernels">
+          <computeUnits name="TOP_1" slr="">
+            <args name="in1" master="true" memory=""/>
+            <args name="out" master="true" memory=""/>
+            <args name="CHANNEL_R" master="true" memory=""/>
+            <args name="CHANNEL_I" master="true" memory=""/>
+            <args name="NOISE" master="true" memory=""/>
+          </computeUnits>
+        </kernels>
+      </binaryContainers>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="hwlink:LinkOptions" target="hw">
+      <binaryContainers name="binary_container_1">
+        <kernels name="TOP" projectName="MIMO_AES_kernels">
+          <computeUnits name="TOP_1" slr="">
+            <args name="in1" master="true" memory=""/>
+            <args name="out" master="true" memory=""/>
+            <args name="CHANNEL_R" master="true" memory=""/>
+            <args name="CHANNEL_I" master="true" memory=""/>
+            <args name="NOISE" master="true" memory=""/>
+          </computeUnits>
+        </kernels>
+      </binaryContainers>
+    </lastBuildOptions>
+  </configuration>
+</hwlink:HwLinkProject>

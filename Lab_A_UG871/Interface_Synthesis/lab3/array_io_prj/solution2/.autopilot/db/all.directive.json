@@ -1,0 +1,75 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "array_io",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "array_io"
+              }]
+          }
+        },
+        {
+          "functionName": "array_io",
+          "label": "For_Loop",
+          "functionLabel": "",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "array_io",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "BIND_STORAGE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "d_i"
+              },
+              {
+                "name": "type",
+                "value": "ram_2p"
+              },
+              {
+                "name": "impl",
+                "value": "bram"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "array_io",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "ap_fifo",
+                "value": ""
+              },
+              {
+                "name": "port",
+                "value": "d_o"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "array_io",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "array_io"
+              }]
+          }
+        }
+      ]
+    }]}

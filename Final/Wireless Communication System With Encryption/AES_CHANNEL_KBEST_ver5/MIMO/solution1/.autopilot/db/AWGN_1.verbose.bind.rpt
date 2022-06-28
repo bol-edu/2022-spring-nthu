@@ -1,0 +1,663 @@
+
+
+================================================================
+== Vitis HLS Report for 'AWGN_1'
+================================================================
+* Date:           Fri Jun 17 13:15:19 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        MIMO
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  |  40.00 ns|  27.335 ns|    10.80 ns|
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |      810|      810|  32.400 us|  32.400 us|  810|  810|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------+---------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |                                           |                                 |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+        |                  Instance                 |              Module             |   min   |   max   |    min    |    max    | min | max |   Type  |
+        +-------------------------------------------+---------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |grp_seedInitialization_fu_58               |seedInitialization               |      629|      629|  25.160 us|  25.160 us|  629|  629|       no|
+        |grp_AWGN_1_Pipeline_VITIS_LOOP_15_1_fu_72  |AWGN_1_Pipeline_VITIS_LOOP_15_1  |      178|      178|   7.120 us|   7.120 us|  178|  178|       no|
+        +-------------------------------------------+---------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.33>
+ST_1 : Operation 5 [1/1] (1.23ns)   --->   "%rngMT19937ICN_uniformRNG_mt_odd_0_V = alloca i64 1" [src/AWGN.cpp:10]   --->   Operation 5 'alloca' 'rngMT19937ICN_uniformRNG_mt_odd_0_V' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 6 [1/1] (1.23ns)   --->   "%rngMT19937ICN_1_i = alloca i64 1"   --->   Operation 6 'alloca' 'rngMT19937ICN_1_i' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 7 [1/1] (1.23ns)   --->   "%rngMT19937ICN_uniformRNG_mt_even_0_V = alloca i64 1" [src/AWGN.cpp:10]   --->   Operation 7 'alloca' 'rngMT19937ICN_uniformRNG_mt_even_0_V' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 8 [1/1] (1.23ns)   --->   "%rngMT19937ICN_3_i = alloca i64 1"   --->   Operation 8 'alloca' 'rngMT19937ICN_3_i' <Predicate = true> <Delay = 1.23>
+ST_1 : Operation 9 [2/2] (2.10ns)   --->   "%call_ret_i = call i128 @seedInitialization, i32 %rngMT19937ICN_uniformRNG_mt_odd_0_V, i32 %rngMT19937ICN_1_i, i32 %rngMT19937ICN_uniformRNG_mt_even_0_V, i32 %rngMT19937ICN_3_i, i6 20" [src/rng.hpp:1145]   --->   Operation 9 'call' 'call_ret_i' <Predicate = true> <Delay = 2.10> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 1.86>
+ST_2 : Operation 10 [1/1] (1.86ns)   --->   "%SNR_read = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %SNR"   --->   Operation 10 'read' 'SNR_read' <Predicate = true> <Delay = 1.86> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.86> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 5> <FIFO>
+ST_2 : Operation 11 [1/2] (1.23ns)   --->   "%call_ret_i = call i128 @seedInitialization, i32 %rngMT19937ICN_uniformRNG_mt_odd_0_V, i32 %rngMT19937ICN_1_i, i32 %rngMT19937ICN_uniformRNG_mt_even_0_V, i32 %rngMT19937ICN_3_i, i6 20" [src/rng.hpp:1145]   --->   Operation 11 'call' 'call_ret_i' <Predicate = true> <Delay = 1.23> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%rngMT19937ICN_uniformRNG_x_k_p_0_V = extractvalue i128 %call_ret_i" [src/rng.hpp:1145]   --->   Operation 12 'extractvalue' 'rngMT19937ICN_uniformRNG_x_k_p_0_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%rngMT19937ICN_uniformRNG_x_k_p_1_V = extractvalue i128 %call_ret_i" [src/rng.hpp:1145]   --->   Operation 13 'extractvalue' 'rngMT19937ICN_uniformRNG_x_k_p_1_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%rngMT19937ICN_uniformRNG_x_k_p_2_V = extractvalue i128 %call_ret_i" [src/rng.hpp:1145]   --->   Operation 14 'extractvalue' 'rngMT19937ICN_uniformRNG_x_k_p_2_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%rngMT19937ICN_uniformRNG_x_k_p_m_V = extractvalue i128 %call_ret_i" [src/rng.hpp:1145]   --->   Operation 15 'extractvalue' 'rngMT19937ICN_uniformRNG_x_k_p_m_V' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 0.42>
+ST_3 : Operation 16 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 16 'wait' 'empty' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 17 [2/2] (0.42ns)   --->   "%call_ln1145 = call void @AWGN.1_Pipeline_VITIS_LOOP_15_1, i32 %rngMT19937ICN_uniformRNG_x_k_p_0_V, i32 %rngMT19937ICN_uniformRNG_x_k_p_1_V, i32 %rngMT19937ICN_uniformRNG_x_k_p_m_V, i32 %rngMT19937ICN_uniformRNG_x_k_p_2_V, i16 %SNR_read, i32 %rngMT19937ICN_uniformRNG_mt_even_0_V, i32 %rngMT19937ICN_uniformRNG_mt_odd_0_V, i16 %channel_out, i16 %noise_out" [src/rng.hpp:1145]   --->   Operation 17 'call' 'call_ln1145' <Predicate = true> <Delay = 0.42> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %SNR, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %channel_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %channel_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %channel_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %noise_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %noise_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %noise_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %noise_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %channel_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 27 [1/2] (0.00ns)   --->   "%call_ln1145 = call void @AWGN.1_Pipeline_VITIS_LOOP_15_1, i32 %rngMT19937ICN_uniformRNG_x_k_p_0_V, i32 %rngMT19937ICN_uniformRNG_x_k_p_1_V, i32 %rngMT19937ICN_uniformRNG_x_k_p_m_V, i32 %rngMT19937ICN_uniformRNG_x_k_p_2_V, i16 %SNR_read, i32 %rngMT19937ICN_uniformRNG_mt_even_0_V, i32 %rngMT19937ICN_uniformRNG_mt_odd_0_V, i16 %channel_out, i16 %noise_out" [src/rng.hpp:1145]   --->   Operation 27 'call' 'call_ln1145' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 28 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ SNR]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ channel_out]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ noise_out]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+rngMT19937ICN_uniformRNG_mt_odd_0_V  (alloca       ) [ 00111]
+rngMT19937ICN_1_i                    (alloca       ) [ 00100]
+rngMT19937ICN_uniformRNG_mt_even_0_V (alloca       ) [ 00111]
+rngMT19937ICN_3_i                    (alloca       ) [ 00100]
+SNR_read                             (read         ) [ 00011]
+call_ret_i                           (call         ) [ 00000]
+rngMT19937ICN_uniformRNG_x_k_p_0_V   (extractvalue ) [ 00011]
+rngMT19937ICN_uniformRNG_x_k_p_1_V   (extractvalue ) [ 00011]
+rngMT19937ICN_uniformRNG_x_k_p_2_V   (extractvalue ) [ 00011]
+rngMT19937ICN_uniformRNG_x_k_p_m_V   (extractvalue ) [ 00011]
+empty                                (wait         ) [ 00000]
+specinterface_ln0                    (specinterface) [ 00000]
+specinterface_ln0                    (specinterface) [ 00000]
+specinterface_ln0                    (specinterface) [ 00000]
+specinterface_ln0                    (specinterface) [ 00000]
+specinterface_ln0                    (specinterface) [ 00000]
+specinterface_ln0                    (specinterface) [ 00000]
+specinterface_ln0                    (specinterface) [ 00000]
+specinterface_ln0                    (specinterface) [ 00000]
+specinterface_ln0                    (specinterface) [ 00000]
+call_ln1145                          (call         ) [ 00000]
+ret_ln0                              (ret          ) [ 00000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="SNR">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="SNR"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="channel_out">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="channel_out"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="noise_out">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="noise_out"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1001" name="const_6">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="seedInitialization"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.i16P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Wait"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="AWGN.1_Pipeline_VITIS_LOOP_15_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ap_fifo_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ScalarProp_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_60"/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_59"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1004" name="rngMT19937ICN_uniformRNG_mt_odd_0_V_alloca_fu_36">
+<pin_list>
+<pin id="37" dir="0" index="0" bw="1" slack="0"/>
+<pin id="38" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="rngMT19937ICN_uniformRNG_mt_odd_0_V/1 "/>
+</bind>
+</comp>
+
+<comp id="40" class="1004" name="rngMT19937ICN_1_i_alloca_fu_40">
+<pin_list>
+<pin id="41" dir="0" index="0" bw="1" slack="0"/>
+<pin id="42" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="rngMT19937ICN_1_i/1 "/>
+</bind>
+</comp>
+
+<comp id="44" class="1004" name="rngMT19937ICN_uniformRNG_mt_even_0_V_alloca_fu_44">
+<pin_list>
+<pin id="45" dir="0" index="0" bw="1" slack="0"/>
+<pin id="46" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="rngMT19937ICN_uniformRNG_mt_even_0_V/1 "/>
+</bind>
+</comp>
+
+<comp id="48" class="1004" name="rngMT19937ICN_3_i_alloca_fu_48">
+<pin_list>
+<pin id="49" dir="0" index="0" bw="1" slack="0"/>
+<pin id="50" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="rngMT19937ICN_3_i/1 "/>
+</bind>
+</comp>
+
+<comp id="52" class="1004" name="SNR_read_read_fu_52">
+<pin_list>
+<pin id="53" dir="0" index="0" bw="16" slack="0"/>
+<pin id="54" dir="0" index="1" bw="16" slack="0"/>
+<pin id="55" dir="1" index="2" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="SNR_read/2 "/>
+</bind>
+</comp>
+
+<comp id="58" class="1004" name="grp_seedInitialization_fu_58">
+<pin_list>
+<pin id="59" dir="0" index="0" bw="128" slack="0"/>
+<pin id="60" dir="0" index="1" bw="32" slack="0"/>
+<pin id="61" dir="0" index="2" bw="32" slack="0"/>
+<pin id="62" dir="0" index="3" bw="32" slack="0"/>
+<pin id="63" dir="0" index="4" bw="32" slack="0"/>
+<pin id="64" dir="0" index="5" bw="6" slack="0"/>
+<pin id="65" dir="1" index="6" bw="128" slack="0"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ret_i/1 "/>
+</bind>
+</comp>
+
+<comp id="72" class="1004" name="grp_AWGN_1_Pipeline_VITIS_LOOP_15_1_fu_72">
+<pin_list>
+<pin id="73" dir="0" index="0" bw="0" slack="0"/>
+<pin id="74" dir="0" index="1" bw="32" slack="1"/>
+<pin id="75" dir="0" index="2" bw="32" slack="1"/>
+<pin id="76" dir="0" index="3" bw="32" slack="1"/>
+<pin id="77" dir="0" index="4" bw="32" slack="1"/>
+<pin id="78" dir="0" index="5" bw="16" slack="1"/>
+<pin id="79" dir="0" index="6" bw="32" slack="2147483647"/>
+<pin id="80" dir="0" index="7" bw="32" slack="2147483647"/>
+<pin id="81" dir="0" index="8" bw="16" slack="0"/>
+<pin id="82" dir="0" index="9" bw="16" slack="0"/>
+<pin id="83" dir="1" index="10" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln1145/3 "/>
+</bind>
+</comp>
+
+<comp id="87" class="1004" name="rngMT19937ICN_uniformRNG_x_k_p_0_V_fu_87">
+<pin_list>
+<pin id="88" dir="0" index="0" bw="128" slack="0"/>
+<pin id="89" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="rngMT19937ICN_uniformRNG_x_k_p_0_V/2 "/>
+</bind>
+</comp>
+
+<comp id="91" class="1004" name="rngMT19937ICN_uniformRNG_x_k_p_1_V_fu_91">
+<pin_list>
+<pin id="92" dir="0" index="0" bw="128" slack="0"/>
+<pin id="93" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="rngMT19937ICN_uniformRNG_x_k_p_1_V/2 "/>
+</bind>
+</comp>
+
+<comp id="95" class="1004" name="rngMT19937ICN_uniformRNG_x_k_p_2_V_fu_95">
+<pin_list>
+<pin id="96" dir="0" index="0" bw="128" slack="0"/>
+<pin id="97" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="rngMT19937ICN_uniformRNG_x_k_p_2_V/2 "/>
+</bind>
+</comp>
+
+<comp id="99" class="1004" name="rngMT19937ICN_uniformRNG_x_k_p_m_V_fu_99">
+<pin_list>
+<pin id="100" dir="0" index="0" bw="128" slack="0"/>
+<pin id="101" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="rngMT19937ICN_uniformRNG_x_k_p_m_V/2 "/>
+</bind>
+</comp>
+
+<comp id="103" class="1005" name="SNR_read_reg_103">
+<pin_list>
+<pin id="104" dir="0" index="0" bw="16" slack="1"/>
+<pin id="105" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="SNR_read "/>
+</bind>
+</comp>
+
+<comp id="108" class="1005" name="rngMT19937ICN_uniformRNG_x_k_p_0_V_reg_108">
+<pin_list>
+<pin id="109" dir="0" index="0" bw="32" slack="1"/>
+<pin id="110" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="rngMT19937ICN_uniformRNG_x_k_p_0_V "/>
+</bind>
+</comp>
+
+<comp id="113" class="1005" name="rngMT19937ICN_uniformRNG_x_k_p_1_V_reg_113">
+<pin_list>
+<pin id="114" dir="0" index="0" bw="32" slack="1"/>
+<pin id="115" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="rngMT19937ICN_uniformRNG_x_k_p_1_V "/>
+</bind>
+</comp>
+
+<comp id="118" class="1005" name="rngMT19937ICN_uniformRNG_x_k_p_2_V_reg_118">
+<pin_list>
+<pin id="119" dir="0" index="0" bw="32" slack="1"/>
+<pin id="120" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="rngMT19937ICN_uniformRNG_x_k_p_2_V "/>
+</bind>
+</comp>
+
+<comp id="123" class="1005" name="rngMT19937ICN_uniformRNG_x_k_p_m_V_reg_123">
+<pin_list>
+<pin id="124" dir="0" index="0" bw="32" slack="1"/>
+<pin id="125" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="rngMT19937ICN_uniformRNG_x_k_p_m_V "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="39"><net_src comp="6" pin="0"/><net_sink comp="36" pin=0"/></net>
+
+<net id="43"><net_src comp="6" pin="0"/><net_sink comp="40" pin=0"/></net>
+
+<net id="47"><net_src comp="6" pin="0"/><net_sink comp="44" pin=0"/></net>
+
+<net id="51"><net_src comp="6" pin="0"/><net_sink comp="48" pin=0"/></net>
+
+<net id="56"><net_src comp="12" pin="0"/><net_sink comp="52" pin=0"/></net>
+
+<net id="57"><net_src comp="0" pin="0"/><net_sink comp="52" pin=1"/></net>
+
+<net id="66"><net_src comp="8" pin="0"/><net_sink comp="58" pin=0"/></net>
+
+<net id="67"><net_src comp="36" pin="1"/><net_sink comp="58" pin=1"/></net>
+
+<net id="68"><net_src comp="40" pin="1"/><net_sink comp="58" pin=2"/></net>
+
+<net id="69"><net_src comp="44" pin="1"/><net_sink comp="58" pin=3"/></net>
+
+<net id="70"><net_src comp="48" pin="1"/><net_sink comp="58" pin=4"/></net>
+
+<net id="71"><net_src comp="10" pin="0"/><net_sink comp="58" pin=5"/></net>
+
+<net id="84"><net_src comp="16" pin="0"/><net_sink comp="72" pin=0"/></net>
+
+<net id="85"><net_src comp="2" pin="0"/><net_sink comp="72" pin=8"/></net>
+
+<net id="86"><net_src comp="4" pin="0"/><net_sink comp="72" pin=9"/></net>
+
+<net id="90"><net_src comp="58" pin="6"/><net_sink comp="87" pin=0"/></net>
+
+<net id="94"><net_src comp="58" pin="6"/><net_sink comp="91" pin=0"/></net>
+
+<net id="98"><net_src comp="58" pin="6"/><net_sink comp="95" pin=0"/></net>
+
+<net id="102"><net_src comp="58" pin="6"/><net_sink comp="99" pin=0"/></net>
+
+<net id="106"><net_src comp="52" pin="2"/><net_sink comp="103" pin=0"/></net>
+
+<net id="107"><net_src comp="103" pin="1"/><net_sink comp="72" pin=5"/></net>
+
+<net id="111"><net_src comp="87" pin="1"/><net_sink comp="108" pin=0"/></net>
+
+<net id="112"><net_src comp="108" pin="1"/><net_sink comp="72" pin=1"/></net>
+
+<net id="116"><net_src comp="91" pin="1"/><net_sink comp="113" pin=0"/></net>
+
+<net id="117"><net_src comp="113" pin="1"/><net_sink comp="72" pin=2"/></net>
+
+<net id="121"><net_src comp="95" pin="1"/><net_sink comp="118" pin=0"/></net>
+
+<net id="122"><net_src comp="118" pin="1"/><net_sink comp="72" pin=4"/></net>
+
+<net id="126"><net_src comp="99" pin="1"/><net_sink comp="123" pin=0"/></net>
+
+<net id="127"><net_src comp="123" pin="1"/><net_sink comp="72" pin=3"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: noise_out | {3 4 }
+ - Input state : 
+	Port: AWGN.1 : SNR | {2 }
+	Port: AWGN.1 : channel_out | {3 4 }
+  - Chain level:
+	State 1
+		call_ret_i : 1
+	State 2
+		rngMT19937ICN_uniformRNG_x_k_p_0_V : 1
+		rngMT19937ICN_uniformRNG_x_k_p_1_V : 1
+		rngMT19937ICN_uniformRNG_x_k_p_2_V : 1
+		rngMT19937ICN_uniformRNG_x_k_p_m_V : 1
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|-------------------------------------------|---------|---------|---------|---------|
+| Operation|              Functional Unit              |   DSP   |  Delay  |    FF   |   LUT   |
+|----------|-------------------------------------------|---------|---------|---------|---------|
+|   call   |        grp_seedInitialization_fu_58       |    3    |   1.33  |   118   |   175   |
+|          | grp_AWGN_1_Pipeline_VITIS_LOOP_15_1_fu_72 |   141   |  7.077  |  10288  |  17427  |
+|----------|-------------------------------------------|---------|---------|---------|---------|
+|   read   |            SNR_read_read_fu_52            |    0    |    0    |    0    |    0    |
+|----------|-------------------------------------------|---------|---------|---------|---------|
+|          |  rngMT19937ICN_uniformRNG_x_k_p_0_V_fu_87 |    0    |    0    |    0    |    0    |
+|extractvalue|  rngMT19937ICN_uniformRNG_x_k_p_1_V_fu_91 |    0    |    0    |    0    |    0    |
+|          |  rngMT19937ICN_uniformRNG_x_k_p_2_V_fu_95 |    0    |    0    |    0    |    0    |
+|          |  rngMT19937ICN_uniformRNG_x_k_p_m_V_fu_99 |    0    |    0    |    0    |    0    |
+|----------|-------------------------------------------|---------|---------|---------|---------|
+|   Total  |                                           |   144   |  8.407  |  10406  |  17602  |
+|----------|-------------------------------------------|---------|---------|---------|---------|
+
+Memories:
++------------------------------------+--------+--------+--------+--------+
+|                                    |  BRAM  |   FF   |   LUT  |  URAM  |
++------------------------------------+--------+--------+--------+--------+
+|          rngMT19937ICN_1_i         |    1   |    0   |    0   |    0   |
+|          rngMT19937ICN_3_i         |    1   |    0   |    0   |    0   |
+|rngMT19937ICN_uniformRNG_mt_even_0_V|    2   |    0   |    0   |    0   |
+| rngMT19937ICN_uniformRNG_mt_odd_0_V|    2   |    0   |    0   |    0   |
++------------------------------------+--------+--------+--------+--------+
+|                Total               |    6   |    0   |    0   |    0   |
++------------------------------------+--------+--------+--------+--------+
+
+* Register list:
++------------------------------------------+--------+
+|                                          |   FF   |
++------------------------------------------+--------+
+|             SNR_read_reg_103             |   16   |
+|rngMT19937ICN_uniformRNG_x_k_p_0_V_reg_108|   32   |
+|rngMT19937ICN_uniformRNG_x_k_p_1_V_reg_113|   32   |
+|rngMT19937ICN_uniformRNG_x_k_p_2_V_reg_118|   32   |
+|rngMT19937ICN_uniformRNG_x_k_p_m_V_reg_123|   32   |
++------------------------------------------+--------+
+|                   Total                  |   144  |
++------------------------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+--------+--------+
+|           |  BRAM  |   DSP  |  Delay |   FF   |   LUT  |  URAM  |
++-----------+--------+--------+--------+--------+--------+--------+
+|  Function |    -   |   144  |    8   |  10406 |  17602 |    -   |
+|   Memory  |    6   |    -   |    -   |    0   |    0   |    0   |
+|Multiplexer|    -   |    -   |    -   |    -   |    -   |    -   |
+|  Register |    -   |    -   |    -   |   144  |    -   |    -   |
++-----------+--------+--------+--------+--------+--------+--------+
+|   Total   |    6   |   144  |    8   |  10550 |  17602 |    0   |
++-----------+--------+--------+--------+--------+--------+--------+

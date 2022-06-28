@@ -1,0 +1,152 @@
+
+
+================================================================
+== Vitis HLS Report for 'AWGN_1'
+================================================================
+* Date:           Fri Jun 17 13:15:19 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        MIMO
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  |  40.00 ns|  27.335 ns|    10.80 ns|
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |      810|      810|  32.400 us|  32.400 us|  810|  810|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.10>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%rngMT19937ICN_uniformRNG_mt_odd_0_V = alloca i64 1" [src/AWGN.cpp:10]   --->   Operation 5 'alloca' 'rngMT19937ICN_uniformRNG_mt_odd_0_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%rngMT19937ICN_1_i = alloca i64 1"   --->   Operation 6 'alloca' 'rngMT19937ICN_1_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%rngMT19937ICN_uniformRNG_mt_even_0_V = alloca i64 1" [src/AWGN.cpp:10]   --->   Operation 7 'alloca' 'rngMT19937ICN_uniformRNG_mt_even_0_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%rngMT19937ICN_3_i = alloca i64 1"   --->   Operation 8 'alloca' 'rngMT19937ICN_3_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [2/2] (2.10ns)   --->   "%call_ret_i = call i128 @seedInitialization, i32 %rngMT19937ICN_uniformRNG_mt_odd_0_V, i32 %rngMT19937ICN_1_i, i32 %rngMT19937ICN_uniformRNG_mt_even_0_V, i32 %rngMT19937ICN_3_i, i6 20" [src/rng.hpp:1145]   --->   Operation 9 'call' 'call_ret_i' <Predicate = true> <Delay = 2.10> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 1.86>
+ST_2 : Operation 10 [1/1] (1.86ns)   --->   "%SNR_read = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %SNR"   --->   Operation 10 'read' 'SNR_read' <Predicate = true> <Delay = 1.86> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.86> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 5> <FIFO>
+ST_2 : Operation 11 [1/2] (1.23ns)   --->   "%call_ret_i = call i128 @seedInitialization, i32 %rngMT19937ICN_uniformRNG_mt_odd_0_V, i32 %rngMT19937ICN_1_i, i32 %rngMT19937ICN_uniformRNG_mt_even_0_V, i32 %rngMT19937ICN_3_i, i6 20" [src/rng.hpp:1145]   --->   Operation 11 'call' 'call_ret_i' <Predicate = true> <Delay = 1.23> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%rngMT19937ICN_uniformRNG_x_k_p_0_V = extractvalue i128 %call_ret_i" [src/rng.hpp:1145]   --->   Operation 12 'extractvalue' 'rngMT19937ICN_uniformRNG_x_k_p_0_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%rngMT19937ICN_uniformRNG_x_k_p_1_V = extractvalue i128 %call_ret_i" [src/rng.hpp:1145]   --->   Operation 13 'extractvalue' 'rngMT19937ICN_uniformRNG_x_k_p_1_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%rngMT19937ICN_uniformRNG_x_k_p_2_V = extractvalue i128 %call_ret_i" [src/rng.hpp:1145]   --->   Operation 14 'extractvalue' 'rngMT19937ICN_uniformRNG_x_k_p_2_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%rngMT19937ICN_uniformRNG_x_k_p_m_V = extractvalue i128 %call_ret_i" [src/rng.hpp:1145]   --->   Operation 15 'extractvalue' 'rngMT19937ICN_uniformRNG_x_k_p_m_V' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 0.42>
+ST_3 : Operation 16 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 16 'wait' 'empty' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 17 [2/2] (0.42ns)   --->   "%call_ln1145 = call void @AWGN.1_Pipeline_VITIS_LOOP_15_1, i32 %rngMT19937ICN_uniformRNG_x_k_p_0_V, i32 %rngMT19937ICN_uniformRNG_x_k_p_1_V, i32 %rngMT19937ICN_uniformRNG_x_k_p_m_V, i32 %rngMT19937ICN_uniformRNG_x_k_p_2_V, i16 %SNR_read, i32 %rngMT19937ICN_uniformRNG_mt_even_0_V, i32 %rngMT19937ICN_uniformRNG_mt_odd_0_V, i16 %channel_out, i16 %noise_out" [src/rng.hpp:1145]   --->   Operation 17 'call' 'call_ln1145' <Predicate = true> <Delay = 0.42> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %SNR, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %channel_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %channel_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %channel_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %noise_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %noise_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %noise_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %noise_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %channel_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 27 [1/2] (0.00ns)   --->   "%call_ln1145 = call void @AWGN.1_Pipeline_VITIS_LOOP_15_1, i32 %rngMT19937ICN_uniformRNG_x_k_p_0_V, i32 %rngMT19937ICN_uniformRNG_x_k_p_1_V, i32 %rngMT19937ICN_uniformRNG_x_k_p_m_V, i32 %rngMT19937ICN_uniformRNG_x_k_p_2_V, i16 %SNR_read, i32 %rngMT19937ICN_uniformRNG_mt_even_0_V, i32 %rngMT19937ICN_uniformRNG_mt_odd_0_V, i16 %channel_out, i16 %noise_out" [src/rng.hpp:1145]   --->   Operation 27 'call' 'call_ln1145' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 28 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 40ns, clock uncertainty: 10.8ns.
+
+ <State 1>: 2.1ns
+The critical path consists of the following:
+	'alloca' operation ('rngMT19937ICN.uniformRNG.mt_odd_0.V', src/AWGN.cpp:10) [6]  (0 ns)
+	'call' operation ('call_ret_i', src/rng.hpp:1145) to 'seedInitialization' [18]  (2.1 ns)
+
+ <State 2>: 1.86ns
+The critical path consists of the following:
+	fifo read operation ('SNR_read') on port 'SNR' [5]  (1.86 ns)
+
+ <State 3>: 0.427ns
+The critical path consists of the following:
+	'call' operation ('call_ln1145', src/rng.hpp:1145) to 'AWGN.1_Pipeline_VITIS_LOOP_15_1' [24]  (0.427 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,24 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="array_io.c:58:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="array_io" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=d_i type=ram_2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="array_io.c:58:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="array_io" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port=d_o" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="array_io.c:58:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="array_io" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=array_io" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="array_io.c:66:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="array_io" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-185" msg_severity="WARNING" msg_loc="array_io.c:57:129" msg_body="The resource pragma (storage) on function argument, in 'call' is unsupported">
+        <args Pragma="call"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="array_io.c:57:0" msg_body="Unrolling loop 'For_Loop' (array_io.c:65:12) in function 'array_io' completely with a factor of 32">
+        <args Factor="32" LoopLoc="array_io.c:65:12" LoopName="For_Loop"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o'">
+        <args Name="d_o"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

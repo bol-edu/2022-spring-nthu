@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="aaa.wdb" id="1">
+         <top_modules>
+            <top_module name="\$unit_dataflow_monitor_sv " />
+            <top_module name="apatb_aaa_top" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="295001fs"></ZoomEndTime>
+      <Cursor1Time time="256fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="257"></NameColumnWidth>
+      <ValueColumnWidth column_width="76"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="5" />
+   <wvobject fp_name="HLS Process Summary Group" type="group">
+      <obj_property name="label">HLS Process Summary</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/apatb_aaa_top/AESL_inst_aaa//AESL_inst_aaa_activity" type="group">
+         <obj_property name="label">AESL_inst_aaa_activity</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="UseFullPath">true</obj_property>
+         <obj_property name="ElementShortName">AESL_inst_aaa_activity</obj_property>
+         <obj_property name="ObjectShortName">AESL_inst_aaa_activity</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">turquoise</obj_property>
+         <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+         <obj_property name="Render_Data">/apatb_aaa_top/AESL_inst_aaa//AESL_inst_aaa_activity.dataflowTxWaveData.Cycles</obj_property>
+         <obj_property name="Value_Data">/apatb_aaa_top/AESL_inst_aaa//AESL_inst_aaa_activity.dataflowTxWaveData.OutStanding</obj_property>
+         <obj_property name="Detail_Data">/apatb_aaa_top/AESL_inst_aaa//AESL_inst_aaa_activity.dataflowTxTooltipData</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/apatb_aaa_top/AESL_inst_aaa/AESL_inst_aaa_activity" type="protoinst">
+      <obj_property name="ElementShortName">AESL_inst_aaa_activity</obj_property>
+      <obj_property name="ObjectShortName">AESL_inst_aaa_activity</obj_property>
+   </wvobject>
+   <wvobject fp_name="AESL_inst_aaa_group" type="group">
+      <obj_property name="label">AESL_inst_aaa</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="AESL_inst_aaa_Handshake_group" type="group">
+         <obj_property name="label">Block-level handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/apatb_aaa_top/AESL_inst_aaa/ap_start" type="logic">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject fp_name="/apatb_aaa_top/AESL_inst_aaa/ap_ready" type="logic">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+         <wvobject fp_name="/apatb_aaa_top/AESL_inst_aaa/ap_done" type="logic">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group17" type="group">
+      <obj_property name="label">Design Top Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="group18" type="group">
+         <obj_property name="label">C InOuts</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="group19" type="group">
+            <obj_property name="label">r_10(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject fp_name="/apatb_aaa_top/AESL_inst_aaa/r_10_o_ap_vld" type="logic">
+               <obj_property name="ElementShortName">r_10_o_ap_vld</obj_property>
+               <obj_property name="ObjectShortName">r_10_o_ap_vld</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_aaa_top/AESL_inst_aaa/r_10_o" type="array">
+               <obj_property name="ElementShortName">r_10_o[31:0]</obj_property>
+               <obj_property name="ObjectShortName">r_10_o[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_aaa_top/AESL_inst_aaa/r_10_i" type="array">
+               <obj_property name="ElementShortName">r_10_i[31:0]</obj_property>
+               <obj_property name="ObjectShortName">r_10_i[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group124" type="group">
+      <obj_property name="label">Test Bench Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="group167" type="group">
+         <obj_property name="label">C InOuts</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="group168" type="group">
+            <obj_property name="label">r_10(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject fp_name="/apatb_aaa_top/r_10_o" type="array">
+               <obj_property name="ElementShortName">r_10_o[31:0]</obj_property>
+               <obj_property name="ObjectShortName">r_10_o[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group172" type="group">
+            <obj_property name="label">r_9(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject fp_name="/apatb_aaa_top/r_9_o" type="array">
+               <obj_property name="ElementShortName">r_9_o[31:0]</obj_property>
+               <obj_property name="ObjectShortName">r_9_o[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group176" type="group">
+            <obj_property name="label">r_8(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject fp_name="/apatb_aaa_top/r_8_o" type="array">
+               <obj_property name="ElementShortName">r_8_o[31:0]</obj_property>
+               <obj_property name="ObjectShortName">r_8_o[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group180" type="group">
+            <obj_property name="label">r_7(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject fp_name="/apatb_aaa_top/r_7_o" type="array">
+               <obj_property name="ElementShortName">r_7_o[31:0]</obj_property>
+               <obj_property name="ObjectShortName">r_7_o[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group184" type="group">
+            <obj_property name="label">r_6(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject fp_name="/apatb_aaa_top/r_6_o" type="array">
+               <obj_property name="ElementShortName">r_6_o[31:0]</obj_property>
+               <obj_property name="ObjectShortName">r_6_o[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group188" type="group">
+            <obj_property name="label">r_5(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject fp_name="/apatb_aaa_top/r_5_o" type="array">
+               <obj_property name="ElementShortName">r_5_o[31:0]</obj_property>
+               <obj_property name="ObjectShortName">r_5_o[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group192" type="group">
+            <obj_property name="label">r_4(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject fp_name="/apatb_aaa_top/r_4_o" type="array">
+               <obj_property name="ElementShortName">r_4_o[31:0]</obj_property>
+               <obj_property name="ObjectShortName">r_4_o[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group196" type="group">
+            <obj_property name="label">r_3(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject fp_name="/apatb_aaa_top/r_3_o" type="array">
+               <obj_property name="ElementShortName">r_3_o[31:0]</obj_property>
+               <obj_property name="ObjectShortName">r_3_o[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group200" type="group">
+            <obj_property name="label">r_2(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject fp_name="/apatb_aaa_top/r_2_o" type="array">
+               <obj_property name="ElementShortName">r_2_o[31:0]</obj_property>
+               <obj_property name="ObjectShortName">r_2_o[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group204" type="group">
+            <obj_property name="label">r_1(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject fp_name="/apatb_aaa_top/r_1_o" type="array">
+               <obj_property name="ElementShortName">r_1_o[31:0]</obj_property>
+               <obj_property name="ObjectShortName">r_1_o[31:0]</obj_property>
+               <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group208" type="group">
+         <obj_property name="label">C Outputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group209" type="group">
+            <obj_property name="label">r_11(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_aaa_top/r_11_ap_vld" type="logic">
+               <obj_property name="ElementShortName">r_11_ap_vld</obj_property>
+               <obj_property name="ObjectShortName">r_11_ap_vld</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_aaa_top/r_11" type="array">
+               <obj_property name="ElementShortName">r_11[31:0]</obj_property>
+               <obj_property name="ObjectShortName">r_11[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group212" type="group">
+            <obj_property name="label">r_0(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_aaa_top/r_0_ap_vld" type="logic">
+               <obj_property name="ElementShortName">r_0_ap_vld</obj_property>
+               <obj_property name="ObjectShortName">r_0_ap_vld</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_aaa_top/r_0" type="array">
+               <obj_property name="ElementShortName">r_0[31:0]</obj_property>
+               <obj_property name="ObjectShortName">r_0[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group215" type="group">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group216" type="group">
+            <obj_property name="label">b_11(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_aaa_top/b_11" type="array">
+               <obj_property name="ElementShortName">b_11[31:0]</obj_property>
+               <obj_property name="ObjectShortName">b_11[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group218" type="group">
+            <obj_property name="label">b_10(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_aaa_top/b_10" type="array">
+               <obj_property name="ElementShortName">b_10[31:0]</obj_property>
+               <obj_property name="ObjectShortName">b_10[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group220" type="group">
+            <obj_property name="label">b_9(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_aaa_top/b_9" type="array">
+               <obj_property name="ElementShortName">b_9[31:0]</obj_property>
+               <obj_property name="ObjectShortName">b_9[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group222" type="group">
+            <obj_property name="label">b_8(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_aaa_top/b_8" type="array">
+               <obj_property name="ElementShortName">b_8[31:0]</obj_property>
+               <obj_property name="ObjectShortName">b_8[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group224" type="group">
+            <obj_property name="label">b_7(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_aaa_top/b_7" type="array">
+               <obj_property name="ElementShortName">b_7[31:0]</obj_property>
+               <obj_property name="ObjectShortName">b_7[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group226" type="group">
+            <obj_property name="label">b_6(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_aaa_top/b_6" type="array">
+               <obj_property name="ElementShortName">b_6[31:0]</obj_property>
+               <obj_property name="ObjectShortName">b_6[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group228" type="group">
+            <obj_property name="label">b_5(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_aaa_top/b_5" type="array">
+               <obj_property name="ElementShortName">b_5[31:0]</obj_property>
+               <obj_property name="ObjectShortName">b_5[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group230" type="group">
+            <obj_property name="label">b_4(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_aaa_top/b_4" type="array">
+               <obj_property name="ElementShortName">b_4[31:0]</obj_property>
+               <obj_property name="ObjectShortName">b_4[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group232" type="group">
+            <obj_property name="label">b_3(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_aaa_top/b_3" type="array">
+               <obj_property name="ElementShortName">b_3[31:0]</obj_property>
+               <obj_property name="ObjectShortName">b_3[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group234" type="group">
+            <obj_property name="label">b_2(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_aaa_top/b_2" type="array">
+               <obj_property name="ElementShortName">b_2[31:0]</obj_property>
+               <obj_property name="ObjectShortName">b_2[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group236" type="group">
+            <obj_property name="label">b_1(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_aaa_top/b_1" type="array">
+               <obj_property name="ElementShortName">b_1[31:0]</obj_property>
+               <obj_property name="ObjectShortName">b_1[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group238" type="group">
+            <obj_property name="label">b_0(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_aaa_top/b_0" type="array">
+               <obj_property name="ElementShortName">b_0[31:0]</obj_property>
+               <obj_property name="ObjectShortName">b_0[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group240" type="group">
+            <obj_property name="label">a_11(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_aaa_top/a_11" type="array">
+               <obj_property name="ElementShortName">a_11[31:0]</obj_property>
+               <obj_property name="ObjectShortName">a_11[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group242" type="group">
+            <obj_property name="label">a_10(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_aaa_top/a_10" type="array">
+               <obj_property name="ElementShortName">a_10[31:0]</obj_property>
+               <obj_property name="ObjectShortName">a_10[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group244" type="group">
+            <obj_property name="label">a_9(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_aaa_top/a_9" type="array">
+               <obj_property name="ElementShortName">a_9[31:0]</obj_property>
+               <obj_property name="ObjectShortName">a_9[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group246" type="group">
+            <obj_property name="label">a_8(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_aaa_top/a_8" type="array">
+               <obj_property name="ElementShortName">a_8[31:0]</obj_property>
+               <obj_property name="ObjectShortName">a_8[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group248" type="group">
+            <obj_property name="label">a_7(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_aaa_top/a_7" type="array">
+               <obj_property name="ElementShortName">a_7[31:0]</obj_property>
+               <obj_property name="ObjectShortName">a_7[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group250" type="group">
+            <obj_property name="label">a_6(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_aaa_top/a_6" type="array">
+               <obj_property name="ElementShortName">a_6[31:0]</obj_property>
+               <obj_property name="ObjectShortName">a_6[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group252" type="group">
+            <obj_property name="label">a_5(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_aaa_top/a_5" type="array">
+               <obj_property name="ElementShortName">a_5[31:0]</obj_property>
+               <obj_property name="ObjectShortName">a_5[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group254" type="group">
+            <obj_property name="label">a_4(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_aaa_top/a_4" type="array">
+               <obj_property name="ElementShortName">a_4[31:0]</obj_property>
+               <obj_property name="ObjectShortName">a_4[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group256" type="group">
+            <obj_property name="label">a_3(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_aaa_top/a_3" type="array">
+               <obj_property name="ElementShortName">a_3[31:0]</obj_property>
+               <obj_property name="ObjectShortName">a_3[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group258" type="group">
+            <obj_property name="label">a_2(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_aaa_top/a_2" type="array">
+               <obj_property name="ElementShortName">a_2[31:0]</obj_property>
+               <obj_property name="ObjectShortName">a_2[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group260" type="group">
+            <obj_property name="label">a_1(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_aaa_top/a_1" type="array">
+               <obj_property name="ElementShortName">a_1[31:0]</obj_property>
+               <obj_property name="ObjectShortName">a_1[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="group262" type="group">
+            <obj_property name="label">a_0(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_aaa_top/a_0" type="array">
+               <obj_property name="ElementShortName">a_0[31:0]</obj_property>
+               <obj_property name="ObjectShortName">a_0[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

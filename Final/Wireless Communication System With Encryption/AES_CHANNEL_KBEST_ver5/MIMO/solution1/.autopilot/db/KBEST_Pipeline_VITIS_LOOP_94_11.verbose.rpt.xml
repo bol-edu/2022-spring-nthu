@@ -1,0 +1,142 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'KBEST_Pipeline_VITIS_LOOP_94_11'" level="0">
+<item name = "Date">Fri Jun 17 13:16:14 2022
+</item>
+<item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)</item>
+<item name = "Project">MIMO</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu9eg-ffvb1156-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">40.00 ns, 1.398 ns, 10.80 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">10, 10, 0.400 us, 0.400 us, 10, 10, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_94_11">8, 8, 1, 1, 1, 8, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 26, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 0, 86, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 27, -</column>
+<column name="Register">-, -, 6, -, -</column>
+<specialColumn name="Available">1824, 2520, 548160, 274080, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="mux_84_32_1_1_U1290">mux_84_32_1_1, 0, 0, 0, 43, 0</column>
+<column name="mux_84_32_1_1_U1291">mux_84_32_1_1, 0, 0, 0, 43, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln94_fu_203_p2">+, 0, 0, 12, 4, 1</column>
+<column name="icmp_ln94_fu_197_p2">icmp, 0, 0, 9, 4, 5</column>
+<column name="xor_ln97_fu_214_p2">xor, 0, 0, 5, 4, 5</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_done_int">9, 2, 1, 2</column>
+<column name="ap_sig_allocacmp_i_23">9, 2, 4, 8</column>
+<column name="i_fu_64">9, 2, 4, 8</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="i_fu_64">4, 0, 4, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, KBEST_Pipeline_VITIS_LOOP_94_11, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, KBEST_Pipeline_VITIS_LOOP_94_11, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, KBEST_Pipeline_VITIS_LOOP_94_11, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, KBEST_Pipeline_VITIS_LOOP_94_11, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, KBEST_Pipeline_VITIS_LOOP_94_11, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, KBEST_Pipeline_VITIS_LOOP_94_11, return value</column>
+<column name="survival_path_address0">out, 4, ap_memory, survival_path, array</column>
+<column name="survival_path_ce0">out, 1, ap_memory, survival_path, array</column>
+<column name="survival_path_we0">out, 1, ap_memory, survival_path, array</column>
+<column name="survival_path_d0">out, 32, ap_memory, survival_path, array</column>
+<column name="survival_path_address1">out, 4, ap_memory, survival_path, array</column>
+<column name="survival_path_ce1">out, 1, ap_memory, survival_path, array</column>
+<column name="survival_path_we1">out, 1, ap_memory, survival_path, array</column>
+<column name="survival_path_d1">out, 32, ap_memory, survival_path, array</column>
+<column name="x_guess_62">in, 32, ap_none, x_guess_62, scalar</column>
+<column name="x_guess_51">in, 32, ap_none, x_guess_51, scalar</column>
+<column name="x_guess_50">in, 32, ap_none, x_guess_50, scalar</column>
+<column name="x_guess_49">in, 32, ap_none, x_guess_49, scalar</column>
+<column name="x_guess_48">in, 32, ap_none, x_guess_48, scalar</column>
+<column name="x_guess_47">in, 32, ap_none, x_guess_47, scalar</column>
+<column name="x_guess_46">in, 32, ap_none, x_guess_46, scalar</column>
+<column name="x_guess_52">in, 32, ap_none, x_guess_52, scalar</column>
+<column name="x_guess_63">in, 32, ap_none, x_guess_63, scalar</column>
+<column name="x_guess_58">in, 32, ap_none, x_guess_58, scalar</column>
+<column name="x_guess_57">in, 32, ap_none, x_guess_57, scalar</column>
+<column name="x_guess_56">in, 32, ap_none, x_guess_56, scalar</column>
+<column name="x_guess_55">in, 32, ap_none, x_guess_55, scalar</column>
+<column name="x_guess_54">in, 32, ap_none, x_guess_54, scalar</column>
+<column name="x_guess_53">in, 32, ap_none, x_guess_53, scalar</column>
+<column name="x_guess_59">in, 32, ap_none, x_guess_59, scalar</column>
+</table>
+</item>
+</section>
+</profile>

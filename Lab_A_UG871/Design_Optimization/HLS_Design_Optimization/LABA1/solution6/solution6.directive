@@ -1,0 +1,32 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="matrixmul" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="matrixmul"/>
+            </pragma>
+        </directive>
+        <directive functionName="matrixmul" label="" functionLabel="">
+            <pragma name="ARRAY_RESHAPE">
+                <option name="variable" positionalBoolean="4" value="a"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="matrixmul" label="" functionLabel="">
+            <pragma name="ARRAY_RESHAPE">
+                <option name="variable" positionalBoolean="4" value="b"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="matrixmul" label="" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="matrixmul" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="matrixmul"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

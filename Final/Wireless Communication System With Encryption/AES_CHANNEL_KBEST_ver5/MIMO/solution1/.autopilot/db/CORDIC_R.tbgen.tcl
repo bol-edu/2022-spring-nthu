@@ -1,0 +1,131 @@
+set moduleName CORDIC_R
+set isTopModule 0
+set isCombinational 0
+set isDatapathOnly 0
+set isPipelined 0
+set pipeline_type none
+set FunctionProtocol ap_ctrl_hs
+set isOneStateSeq 0
+set ProfileFlag 0
+set StallSigGenFlag 0
+set isEnableWaveformDebug 1
+set C_modelName {CORDIC_R}
+set C_modelType { int 128 }
+set C_modelArgList {
+	{ x_in int 16 regular  }
+	{ y_in int 16 regular  }
+	{ z_in int 16 regular  }
+}
+set C_modelArgMapList {[ 
+	{ "Name" : "x_in", "interface" : "wire", "bitwidth" : 16, "direction" : "READONLY"} , 
+ 	{ "Name" : "y_in", "interface" : "wire", "bitwidth" : 16, "direction" : "READONLY"} , 
+ 	{ "Name" : "z_in", "interface" : "wire", "bitwidth" : 16, "direction" : "READONLY"} , 
+ 	{ "Name" : "ap_return", "interface" : "wire", "bitwidth" : 128} ]}
+# RTL Port declarations: 
+set portNum 11
+set portList { 
+	{ ap_clk sc_in sc_logic 1 clock -1 } 
+	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
+	{ ap_start sc_in sc_logic 1 start -1 } 
+	{ ap_done sc_out sc_logic 1 predone -1 } 
+	{ ap_idle sc_out sc_logic 1 done -1 } 
+	{ ap_ready sc_out sc_logic 1 ready -1 } 
+	{ x_in sc_in sc_lv 16 signal 0 } 
+	{ y_in sc_in sc_lv 16 signal 1 } 
+	{ z_in sc_in sc_lv 16 signal 2 } 
+	{ ap_return_0 sc_out sc_lv 64 signal -1 } 
+	{ ap_return_1 sc_out sc_lv 64 signal -1 } 
+}
+set NewPortList {[ 
+	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
+ 	{ "name": "ap_rst", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "reset", "bundle":{"name": "ap_rst", "role": "default" }} , 
+ 	{ "name": "ap_start", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "start", "bundle":{"name": "ap_start", "role": "default" }} , 
+ 	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
+ 	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
+ 	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
+ 	{ "name": "x_in", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "x_in", "role": "default" }} , 
+ 	{ "name": "y_in", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "y_in", "role": "default" }} , 
+ 	{ "name": "z_in", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "z_in", "role": "default" }} , 
+ 	{ "name": "ap_return_0", "direction": "out", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "ap_return_0", "role": "default" }} , 
+ 	{ "name": "ap_return_1", "direction": "out", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "ap_return_1", "role": "default" }}  ]}
+
+set RtlHierarchyInfo {[
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "4", "5"],
+		"CDFG" : "CORDIC_R",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "55", "EstimateLatencyMax" : "145",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"Port" : [
+			{"Name" : "x_in", "Type" : "None", "Direction" : "I"},
+			{"Name" : "y_in", "Type" : "None", "Direction" : "I"},
+			{"Name" : "z_in", "Type" : "None", "Direction" : "I"},
+			{"Name" : "cordic_phase_V", "Type" : "Memory", "Direction" : "I"}],
+		"Loop" : [
+			{"Name" : "VITIS_LOOP_29_1", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "7", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state4"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state5"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.cordic_phase_V_U", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_CORDIC_R_Pipeline_VITIS_LOOP_32_2_fu_163", "Parent" : "0", "Child" : ["3"],
+		"CDFG" : "CORDIC_R_Pipeline_VITIS_LOOP_32_2",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "2", "EstimateLatencyMax" : "11",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"Port" : [
+			{"Name" : "temp_y_V_3", "Type" : "None", "Direction" : "I"},
+			{"Name" : "temp_x_V_3", "Type" : "None", "Direction" : "I"},
+			{"Name" : "k", "Type" : "None", "Direction" : "I"},
+			{"Name" : "temp_y_V_4_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "temp_x_V_4_out", "Type" : "Vld", "Direction" : "O"}],
+		"Loop" : [
+			{"Name" : "VITIS_LOOP_32_2", "PipelineType" : "UPC",
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter1", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_CORDIC_R_Pipeline_VITIS_LOOP_32_2_fu_163.flow_control_loop_pipe_sequential_init_U", "Parent" : "2"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_mul_16s_8ns_25_4_1_U185", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_mul_16s_8ns_25_4_1_U186", "Parent" : "0"}]}
+
+
+set ArgLastReadFirstWriteLatency {
+	CORDIC_R {
+		x_in {Type I LastRead 0 FirstWrite -1}
+		y_in {Type I LastRead 0 FirstWrite -1}
+		z_in {Type I LastRead 0 FirstWrite -1}
+		cordic_phase_V {Type I LastRead -1 FirstWrite -1}}
+	CORDIC_R_Pipeline_VITIS_LOOP_32_2 {
+		temp_y_V_3 {Type I LastRead 0 FirstWrite -1}
+		temp_x_V_3 {Type I LastRead 0 FirstWrite -1}
+		k {Type I LastRead 0 FirstWrite -1}
+		temp_y_V_4_out {Type O LastRead -1 FirstWrite 1}
+		temp_x_V_4_out {Type O LastRead -1 FirstWrite 1}}}
+
+set hasDtUnsupportedChannel 0
+
+set PerformanceInfo {[
+	{"Name" : "Latency", "Min" : "55", "Max" : "145"}
+	, {"Name" : "Interval", "Min" : "55", "Max" : "145"}
+]}
+
+set PipelineEnableSignalInfo {[
+]}
+
+set Spec2ImplPortList { 
+	x_in { ap_none {  { x_in in_data 0 16 } } }
+	y_in { ap_none {  { y_in in_data 0 16 } } }
+	z_in { ap_none {  { z_in in_data 0 16 } } }
+}

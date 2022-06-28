@@ -1,0 +1,187 @@
+
+
+================================================================
+== Synthesis Summary Report of 'hls_xfft2real'
+================================================================
++ General Information: 
+    * Date:           Wed Mar 23 00:45:54 2022
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+    * Project:        labA_2_backend
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------------------------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+--------+-----------+------------+-----+
+    |                                     Modules                                     | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |        |           |            |     |
+    |                                     & Loops                                     | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |   DSP  |     FF    |     LUT    | URAM|
+    +---------------------------------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+--------+-----------+------------+-----+
+    |+ hls_xfft2real*                                                                 |     -|  0.24|     1305|  6.525e+03|         -|      512|     -|  dataflow|  10 (3%)|  4 (1%)|  1881 (1%)|  7958 (14%)|    -|
+    | + Block_ZN8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode0ELi0EEC2Ei_exit_i75_proc  |     -|  0.40|      127|    635.000|         -|      127|     -|        no|        -|       -|  129 (~0%)|  6131 (11%)|    -|
+    | + Loop_realfft_be_buffer_proc1                                                  |     -|  0.40|      512|  2.560e+03|         -|      512|     -|        no|        -|       -|   12 (~0%)|    70 (~0%)|    -|
+    |  o realfft_be_buffer                                                            |     -|  3.65|      511|  2.555e+03|         1|        1|   512|       yes|        -|       -|          -|           -|    -|
+    | + Loop_realfft_be_descramble_proc2                                              |     -|  0.24|      275|  1.375e+03|         -|      275|     -|        no|        -|  4 (1%)|  1460 (1%)|   1259 (2%)|    -|
+    |  + Loop_realfft_be_descramble_proc2_Pipeline_realfft_be_descramble              |     -|  0.24|      272|  1.360e+03|         -|      272|     -|        no|        -|  4 (1%)|  1421 (1%)|   1149 (2%)|    -|
+    |   o realfft_be_descramble                                                       |     -|  3.65|      270|  1.350e+03|        16|        1|   256|       yes|        -|       -|          -|           -|    -|
+    | + Loop_realfft_be_rev_real_hi_proc3                                             |     -|  0.24|      259|  1.295e+03|         -|      259|     -|        no|        -|       -|   46 (~0%)|    76 (~0%)|    -|
+    |  o realfft_be_rev_real_hi                                                       |     -|  3.65|      257|  1.285e+03|         3|        1|   256|       yes|        -|       -|          -|           -|    -|
+    | + Loop_realfft_be_stream_output_proc4                                           |     -|  0.24|      514|  2.570e+03|         -|      514|     -|        no|        -|       -|   26 (~0%)|   144 (~0%)|    -|
+    |  o realfft_be_stream_output                                                     |     -|  3.65|      513|  2.565e+03|         3|        1|   512|       yes|        -|       -|          -|           -|    -|
+    +---------------------------------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+--------+-----------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AXIS
++-----------+---------------+-------+--------+--------+
+| Interface | Register Mode | TDATA | TREADY | TVALID |
++-----------+---------------+-------+--------+--------+
+| din       | both          | 48    | 1      | 1      |
+| dout      | both          | 48    | 1      | 1      |
++-----------+---------------+-------+--------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst_n  | reset      | ap_rst_n                          |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+---------------------------------------------------------------+
+| Argument | Direction | Datatype                                                      |
++----------+-----------+---------------------------------------------------------------+
+| din      | in        | stream<xfft_axis_t<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> >, 0>& |
+| dout     | out       | stream<xfft_axis_t<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> >, 0>& |
++----------+-----------+---------------------------------------------------------------+
+
+* SW-to-HW Mapping
++----------+--------------+-----------+
+| Argument | HW Interface | HW Type   |
++----------+--------------+-----------+
+| din      | din          | interface |
+| dout     | dout         | interface |
++----------+--------------+-----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++---------------------------------------------------------------------+-----+--------+----------------+-----+--------+---------+
+| Name                                                                | DSP | Pragma | Variable       | Op  | Impl   | Latency |
++---------------------------------------------------------------------+-----+--------+----------------+-----+--------+---------+
+| + hls_xfft2real                                                     | 4   |        |                |     |        |         |
+|  + Loop_realfft_be_buffer_proc1                                     | 0   |        |                |     |        |         |
+|    i_fu_166_p2                                                      | -   |        | i              | add | fabric | 0       |
+|  + Loop_realfft_be_descramble_proc2                                 | 4   |        |                |     |        |         |
+|   + Loop_realfft_be_descramble_proc2_Pipeline_realfft_be_descramble | 4   |        |                |     |        |         |
+|     add_ln88_fu_221_p2                                              | -   |        | add_ln88       | add | fabric | 0       |
+|     add_ln712_fu_509_p2                                             | -   |        | add_ln712      | add | fabric | 0       |
+|     sub_ln712_fu_513_p2                                             | -   |        | sub_ln712      | sub | fabric | 0       |
+|     sub_ln712_4_fu_231_p2                                           | -   |        | sub_ln712_4    | sub | fabric | 0       |
+|     sub_ln712_1_fu_250_p2                                           | -   |        | sub_ln712_1    | sub | fabric | 0       |
+|     ret_V_9_fu_317_p2                                               | -   |        | ret_V_9        | sub | fabric | 0       |
+|     ret_V_6_fu_323_p2                                               | -   |        | ret_V_6        | add | fabric | 0       |
+|     sub_ln1201_fu_416_p2                                            | -   |        | sub_ln1201     | sub | fabric | 0       |
+|     sub_ln1201_1_fu_466_p2                                          | -   |        | sub_ln1201_1   | sub | fabric | 0       |
+|     ret_V_8_fu_271_p2                                               | -   |        | ret_V_8        | sub | fabric | 0       |
+|     ret_V_7_fu_277_p2                                               | -   |        | ret_V_7        | add | fabric | 0       |
+|     sub_ln1201_2_fu_347_p2                                          | -   |        | sub_ln1201_2   | sub | fabric | 0       |
+|     sub_ln1201_3_fu_431_p2                                          | -   |        | sub_ln1201_3   | sub | fabric | 0       |
+|     r_V_5_fu_362_p2                                                 | -   |        | r_V_5          | sub | fabric | 0       |
+|     sub_ln1201_4_fu_375_p2                                          | -   |        | sub_ln1201_4   | sub | fabric | 0       |
+|     sub_ln1201_5_fu_445_p2                                          | -   |        | sub_ln1201_5   | sub | fabric | 0       |
+|     sub_ln1201_6_fu_477_p2                                          | -   |        | sub_ln1201_6   | sub | fabric | 0       |
+|     mac_muladd_16s_15ns_31s_31_4_1_U11                              | 1   |        | r_V_4          | mul | dsp    | 3       |
+|     mul_mul_16s_15ns_31_4_1_U9                                      | 1   |        | r_V_2          | mul | dsp    | 3       |
+|     mul_mul_16s_16s_31_4_1_U10                                      | 1   |        | mul_ln1245     | mul | dsp    | 3       |
+|     mac_muladd_16s_15ns_31s_31_4_1_U11                              | 1   |        | ret_V_5        | add | dsp    | 3       |
+|     mac_mulsub_16s_16s_31s_31_4_1_U12                               | 1   |        | mul_ln1246     | mul | dsp    | 3       |
+|     mac_mulsub_16s_16s_31s_31_4_1_U12                               | 1   |        | ret_V          | sub | dsp    | 3       |
+|     sub_ln712_2_fu_517_p2                                           | -   |        | sub_ln712_2    | sub | fabric | 0       |
+|     p_r_M_real_V_1_fu_521_p2                                        | -   |        | p_r_M_real_V_1 | add | fabric | 0       |
+|     sub_ln712_3_fu_525_p2                                           | -   |        | sub_ln712_3    | sub | fabric | 0       |
+|     p_r_M_imag_V_1_fu_529_p2                                        | -   |        | p_r_M_imag_V_1 | add | fabric | 0       |
+|     sub_ln1201_7_fu_577_p2                                          | -   |        | sub_ln1201_7   | sub | fabric | 0       |
+|     sub_ln1201_8_fu_708_p2                                          | -   |        | sub_ln1201_8   | sub | fabric | 0       |
+|     sub_ln1201_9_fu_611_p2                                          | -   |        | sub_ln1201_9   | sub | fabric | 0       |
+|     sub_ln1201_10_fu_723_p2                                         | -   |        | sub_ln1201_10  | sub | fabric | 0       |
+|     sub_ln1201_11_fu_645_p2                                         | -   |        | sub_ln1201_11  | sub | fabric | 0       |
+|     sub_ln1201_12_fu_738_p2                                         | -   |        | sub_ln1201_12  | sub | fabric | 0       |
+|     sub_ln1201_13_fu_679_p2                                         | -   |        | sub_ln1201_13  | sub | fabric | 0       |
+|     sub_ln1201_14_fu_753_p2                                         | -   |        | sub_ln1201_14  | sub | fabric | 0       |
+|  + Loop_realfft_be_rev_real_hi_proc3                                | 0   |        |                |     |        |         |
+|    add_ln116_fu_91_p2                                               | -   |        | add_ln116      | add | fabric | 0       |
+|  + Loop_realfft_be_stream_output_proc4                              | 0   |        |                |     |        |         |
+|    i_fu_100_p2                                                      | -   |        | i              | add | fabric | 0       |
++---------------------------------------------------------------------+-----+--------+----------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++-----------------------------------+------+------+--------+-------------------------------+---------+------+---------+
+| Name                              | BRAM | URAM | Pragma | Variable                      | Storage | Impl | Latency |
++-----------------------------------+------+------+--------+-------------------------------+---------+------+---------+
+| + hls_xfft2real                   | 10   | 0    |        |                               |         |      |         |
+|   real_spectrum_lo_i_U            | -    | -    |        | real_spectrum_lo_i            | fifo    | srl  | 0       |
+|   real_spectrum_hi_i_U            | -    | -    |        | real_spectrum_hi_i            | fifo    | srl  | 0       |
+|   descramble_buf_M_real_V_U       | 1    | -    |        | descramble_buf_M_real_V       | ram_1p  | auto | 1       |
+|   descramble_buf_M_real_V_1_U     | 1    | -    |        | descramble_buf_M_real_V_1     | ram_1p  | auto | 1       |
+|   descramble_buf_M_imag_V_U       | 1    | -    |        | descramble_buf_M_imag_V       | ram_1p  | auto | 1       |
+|   descramble_buf_M_imag_V_1_U     | 1    | -    |        | descramble_buf_M_imag_V_1     | ram_1p  | auto | 1       |
+|   real_spectrum_hi_buf_M_real_V_U | 1    | -    |        | real_spectrum_hi_buf_M_real_V | ram_1p  | auto | 1       |
+|   real_spectrum_hi_buf_M_imag_V_U | 1    | -    |        | real_spectrum_hi_buf_M_imag_V | ram_1p  | auto | 1       |
+|   twid_rom_M_real_V_U             | 1    | -    |        | twid_rom_M_real_V             | ram_t2p | auto | 1       |
+|   twid_rom_M_imag_V_U             | 1    | -    |        | twid_rom_M_imag_V             | ram_t2p | auto | 1       |
++-----------------------------------+------+------+--------+-------------------------------+---------+------+---------+
+
+
+================================================================
+== User Pragma Report
+================================================================
+* Ignored Pragmas
++-----------+----------+-----------------------------------------------+-------------------------------------------------+
+| Type      | Options  | Location                                      | Messages                                        |
++-----------+----------+-----------------------------------------------+-------------------------------------------------+
+| data_pack | variable | hls_designs/xfft2real.cpp:56 in hls_xfft2real | the pragma is not supported and will be ignored |
++-----------+----------+-----------------------------------------------+-------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------------+----------------------------------------+-----------------------------------------------------------+
+| Type            | Options                                | Location                                                  |
++-----------------+----------------------------------------+-----------------------------------------------------------+
+| array_partition | variable=coeff_tab cyclic factor=UF    | hls_designs/window_fn.h:52 in window_fn, coeff_tab        |
+| unroll          | factor=UF                              | hls_designs/window_fn.h:56 in window_fn                   |
+| pipeline        | rewind                                 | hls_designs/window_fn.h:57 in window_fn                   |
+| interface       | axis port=dout                         | hls_designs/xfft2real.cpp:54 in hls_xfft2real, dout       |
+| interface       | axis port=din                          | hls_designs/xfft2real.cpp:55 in hls_xfft2real, din        |
+| dataflow        |                                        | hls_designs/xfft2real.cpp:57 in hls_xfft2real             |
+| stream          | variable=real_spectrum_lo depth=8      | hls_designs/xfft2real.h:68 in xfft2real, real_spectrum_lo |
+| stream          | variable=real_spectrum_hi depth=8      | hls_designs/xfft2real.h:69 in xfft2real, real_spectrum_hi |
+| array_partition | block factor=2 variable=descramble_buf | hls_designs/xfft2real.h:70 in xfft2real, descramble_buf   |
+| inline          |                                        | hls_designs/xfft2real.h:71 in xfft2real                   |
+| pipeline        | rewind                                 | hls_designs/xfft2real.h:80 in xfft2real                   |
+| pipeline        |                                        | hls_designs/xfft2real.h:89 in xfft2real                   |
+| pipeline        |                                        | hls_designs/xfft2real.h:117 in xfft2real                  |
+| pipeline        | rewind                                 | hls_designs/xfft2real.h:122 in xfft2real                  |
++-----------------+----------------------------------------+-----------------------------------------------------------+
+
+

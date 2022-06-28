@@ -1,0 +1,193 @@
+
+
+================================================================
+== Synthesis Summary Report of 'dft'
+================================================================
++ General Information: 
+    * Date:           Fri Mar 25 03:15:26 2022
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+    * Project:        labB_optimize
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+------+----------+-----------+------------+-----+
+    |               Modules              | Issue|      | Latency |  Latency  | Iteration|         |  Trip |          |      |          |           |            |     |
+    |               & Loops              | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count | Pipelined| BRAM |    DSP   |     FF    |     LUT    | URAM|
+    +------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+------+----------+-----------+------------+-----+
+    |+ dft                               |     -|  0.04|    65589|  6.559e+05|         -|    65590|      -|        no|     -|  45 (20%)|  7496 (7%)|  9636 (18%)|    -|
+    | o VITIS_LOOP_17_1_VITIS_LOOP_19_2  |     -|  7.30|    65587|  6.559e+05|        53|        1|  65536|       yes|     -|         -|          -|           -|    -|
+    |  + sin_or_cos_float_s              |     -|  0.23|       19|    190.000|         -|        1|      -|       yes|     -|    9 (4%)|  2352 (2%)|   2893 (5%)|    -|
+    |  + sin_or_cos_float_s              |     -|  0.23|       19|    190.000|         -|        1|      -|       yes|     -|    9 (4%)|  2352 (2%)|   2893 (5%)|    -|
+    +------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+------+----------+-----------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++----------------------+----------+
+| Interface            | Bitwidth |
++----------------------+----------+
+| out_i_address0       | 8        |
+| out_i_address1       | 8        |
+| out_i_d0             | 32       |
+| out_i_q1             | 32       |
+| out_r_address0       | 8        |
+| out_r_address1       | 8        |
+| out_r_d0             | 32       |
+| out_r_q1             | 32       |
+| sample_imag_address0 | 8        |
+| sample_imag_q0       | 32       |
+| sample_real_address0 | 8        |
+| sample_real_q0       | 32       |
++----------------------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-------------+-----------+----------+
+| Argument    | Direction | Datatype |
++-------------+-----------+----------+
+| sample_real | in        | float*   |
+| sample_imag | in        | float*   |
+| out_r       | inout     | float*   |
+| out_i       | inout     | float*   |
++-------------+-----------+----------+
+
+* SW-to-HW Mapping
++-------------+----------------------+---------+----------+
+| Argument    | HW Interface         | HW Type | HW Usage |
++-------------+----------------------+---------+----------+
+| sample_real | sample_real_address0 | port    | offset   |
+| sample_real | sample_real_ce0      | port    |          |
+| sample_real | sample_real_q0       | port    |          |
+| sample_imag | sample_imag_address0 | port    | offset   |
+| sample_imag | sample_imag_ce0      | port    |          |
+| sample_imag | sample_imag_q0       | port    |          |
+| out_r       | out_r_address0       | port    | offset   |
+| out_r       | out_r_ce0            | port    |          |
+| out_r       | out_r_we0            | port    |          |
+| out_r       | out_r_d0             | port    |          |
+| out_r       | out_r_address1       | port    | offset   |
+| out_r       | out_r_ce1            | port    |          |
+| out_r       | out_r_q1             | port    |          |
+| out_i       | out_i_address0       | port    | offset   |
+| out_i       | out_i_ce0            | port    |          |
+| out_i       | out_i_we0            | port    |          |
+| out_i       | out_i_d0             | port    |          |
+| out_i       | out_i_address1       | port    | offset   |
+| out_i       | out_i_ce1            | port    |          |
+| out_i       | out_i_q1             | port    |          |
++-------------+----------------------+---------+----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------+-----+--------+-------------+------+---------+---------+
+| Name                                 | DSP | Pragma | Variable    | Op   | Impl    | Latency |
++--------------------------------------+-----+--------+-------------+------+---------+---------+
+| + dft                                | 45  |        |             |      |         |         |
+|   add_ln17_fu_245_p2                 | -   |        | add_ln17    | add  | fabric  | 0       |
+|   add_ln17_1_fu_291_p2               | -   |        | add_ln17_1  | add  | fabric  | 0       |
+|   mul_mul_9ns_24ns_33_4_1_U35        | 1   |        | mul_ln23    | mul  | dsp     | 3       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U27  | 3   |        | mul5        | fmul | maxdsp  | 3       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U28  | 3   |        | p_x_assign  | fmul | maxdsp  | 3       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U29  | 3   |        | mul         | fmul | maxdsp  | 3       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U30  | 3   |        | mul1        | fmul | maxdsp  | 3       |
+|   fsub_32ns_32ns_32_5_full_dsp_1_U23 | 2   |        | sub         | fsub | fulldsp | 4       |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U25 | 2   |        | add         | fadd | fulldsp | 4       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U31  | 3   |        | mul2        | fmul | maxdsp  | 3       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U32  | 3   |        | mul3        | fmul | maxdsp  | 3       |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U24 | 2   |        | add1        | fadd | fulldsp | 4       |
+|   fadd_32ns_32ns_32_5_full_dsp_1_U26 | 2   |        | add2        | fadd | fulldsp | 4       |
+|   add_ln19_fu_272_p2                 | -   |        | add_ln19    | add  | fabric  | 0       |
+|  + sin_or_cos_float_s                | 9   |        |             |      |         |         |
+|    Ex_V_fu_561_p2                    | -   |        | Ex_V        | add  | fabric  | 0       |
+|    add_ln122_fu_272_p2               | -   |        | add_ln122   | add  | fabric  | 0       |
+|    mul_80s_24ns_80_5_1_U1            | 3   |        | ret         | mul  | auto    | 1       |
+|    Mx_bits_V_1_fu_375_p2             | -   |        | Mx_bits_V_1 | sub  | fabric  | 0       |
+|    Ex_V_3_fu_594_p2                  | -   |        | Ex_V_3      | sub  | fabric  | 0       |
+|    sub_ln1364_fu_612_p2              | -   |        | sub_ln1364  | sub  | fabric  | 0       |
+|    mul_mul_15ns_15ns_30_4_1_U7       | 1   |        | r_V         | mul  | dsp     | 3       |
+|    mul_23s_22ns_45_1_1_U5            | 1   |        | r_V_2       | mul  | auto    | 4       |
+|    mul_mul_15ns_15s_30_4_1_U8        | 1   |        | r_V_4       | mul  | dsp     | 3       |
+|    ret_V_fu_828_p2                   | -   |        | ret_V       | add  | tadder  | 0       |
+|    ret_V_1_fu_838_p2                 | -   |        | ret_V_1     | add  | tadder  | 0       |
+|    mul_30s_29ns_58_2_1_U6            | 3   |        | r_V_6       | mul  | auto    | 0       |
+|    add_ln319_fu_961_p2               | -   |        | add_ln319   | add  | fabric  | 0       |
+|    add_ln329_fu_975_p2               | -   |        | add_ln329   | add  | fabric  | 0       |
+|    newexp_fu_985_p2                  | -   |        | newexp      | sub  | fabric  | 0       |
+|  + sin_or_cos_float_s                | 9   |        |             |      |         |         |
+|    Ex_V_fu_561_p2                    | -   |        | Ex_V        | add  | fabric  | 0       |
+|    add_ln122_fu_272_p2               | -   |        | add_ln122   | add  | fabric  | 0       |
+|    mul_80s_24ns_80_5_1_U1            | 3   |        | ret         | mul  | auto    | 1       |
+|    Mx_bits_V_1_fu_375_p2             | -   |        | Mx_bits_V_1 | sub  | fabric  | 0       |
+|    Ex_V_3_fu_594_p2                  | -   |        | Ex_V_3      | sub  | fabric  | 0       |
+|    sub_ln1364_fu_612_p2              | -   |        | sub_ln1364  | sub  | fabric  | 0       |
+|    mul_mul_15ns_15ns_30_4_1_U7       | 1   |        | r_V         | mul  | dsp     | 3       |
+|    mul_23s_22ns_45_1_1_U5            | 1   |        | r_V_2       | mul  | auto    | 4       |
+|    mul_mul_15ns_15s_30_4_1_U8        | 1   |        | r_V_4       | mul  | dsp     | 3       |
+|    ret_V_fu_828_p2                   | -   |        | ret_V       | add  | tadder  | 0       |
+|    ret_V_1_fu_838_p2                 | -   |        | ret_V_1     | add  | tadder  | 0       |
+|    mul_30s_29ns_58_2_1_U6            | 3   |        | r_V_6       | mul  | auto    | 0       |
+|    add_ln319_fu_961_p2               | -   |        | add_ln319   | add  | fabric  | 0       |
+|    add_ln329_fu_975_p2               | -   |        | add_ln329   | add  | fabric  | 0       |
+|    newexp_fu_985_p2                  | -   |        | newexp      | sub  | fabric  | 0       |
++--------------------------------------+-----+--------+-------------+------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++--------------------------------------+------+------+--------+---------------------------------+---------+--------+---------+
+| Name                                 | BRAM | URAM | Pragma | Variable                        | Storage | Impl   | Latency |
++--------------------------------------+------+------+--------+---------------------------------+---------+--------+---------+
+| + dft                                | 0    | 0    |        |                                 |         |        |         |
+|  + sin_or_cos_float_s                | 0    | 0    |        |                                 |         |        |         |
+|    ref_4oPi_table_100_V_U            | -    | -    | pragma | ref_4oPi_table_100_V            | rom_1p  | lutram | 1       |
+|    second_order_float_sin_cos_K0_V_U | -    | -    | pragma | second_order_float_sin_cos_K0_V | rom_1p  | lutram | 1       |
+|    second_order_float_sin_cos_K1_V_U | -    | -    | pragma | second_order_float_sin_cos_K1_V | rom_1p  | lutram | 1       |
+|    second_order_float_sin_cos_K2_V_U | -    | -    | pragma | second_order_float_sin_cos_K2_V | rom_1p  | lutram | 1       |
+|  + sin_or_cos_float_s                | 0    | 0    |        |                                 |         |        |         |
+|    ref_4oPi_table_100_V_U            | -    | -    | pragma | ref_4oPi_table_100_V            | rom_1p  | lutram | 1       |
+|    second_order_float_sin_cos_K0_V_U | -    | -    | pragma | second_order_float_sin_cos_K0_V | rom_1p  | lutram | 1       |
+|    second_order_float_sin_cos_K1_V_U | -    | -    | pragma | second_order_float_sin_cos_K1_V | rom_1p  | lutram | 1       |
+|    second_order_float_sin_cos_K2_V_U | -    | -    | pragma | second_order_float_sin_cos_K2_V | rom_1p  | lutram | 1       |
++--------------------------------------+------+------+--------+---------------------------------+---------+--------+---------+
+
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++----------+---------+--------------------------------------------------------+
+| Type     | Options | Location                                               |
++----------+---------+--------------------------------------------------------+
+| pipeline | II = 1  | ../../lab/labB/dft_sanpai_2_optimize/dft.cpp:20 in dft |
++----------+---------+--------------------------------------------------------+
+
+

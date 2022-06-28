@@ -1,0 +1,161 @@
+
+
+================================================================
+== Vitis HLS Report for 'aes_return_Pipeline_subBytes_label0_subBytes_label7'
+================================================================
+* Date:           Fri Jun 17 13:15:47 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        MIMO
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  40.00 ns|  2.355 ns|    10.80 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       19|       19|  0.760 us|  0.760 us|   19|   19|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |             Loop Name             |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- subBytes_label0_subBytes_label7  |       17|       17|         3|          1|          1|    16|       yes|
+        +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      71|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      72|    -|
+|Register         |        -|     -|      24|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|      24|     143|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1824|  2520|  548160|  274080|    0|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------+----------+----+---+----+------------+------------+
+    |add_ln187_1_fu_108_p2     |         +|   0|  0|  12|           5|           1|
+    |add_ln187_fu_120_p2       |         +|   0|  0|  10|           3|           1|
+    |add_ln188_fu_175_p2       |         +|   0|  0|  10|           3|           1|
+    |add_ln189_fu_164_p2       |         +|   0|  0|  12|           4|           4|
+    |icmp_ln187_fu_102_p2      |      icmp|   0|  0|  10|           5|           6|
+    |icmp_ln188_fu_126_p2      |      icmp|   0|  0|   9|           3|           4|
+    |select_ln187_1_fu_140_p3  |    select|   0|  0|   3|           1|           3|
+    |select_ln187_fu_132_p3    |    select|   0|  0|   3|           1|           1|
+    |ap_enable_pp0             |       xor|   0|  0|   2|           1|           2|
+    +--------------------------+----------+----+---+----+------------+------------+
+    |Total                     |          |   0|  0|  71|          26|          23|
+    +--------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------+----+-----------+-----+-----------+
+    |                  Name                 | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                            |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1                |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_load                |   9|          2|    3|          6|
+    |ap_sig_allocacmp_indvar_flatten7_load  |   9|          2|    5|         10|
+    |ap_sig_allocacmp_j_load                |   9|          2|    3|          6|
+    |i_fu_46                                |   9|          2|    3|          6|
+    |indvar_flatten7_fu_50                  |   9|          2|    5|         10|
+    |j_fu_42                                |   9|          2|    3|          6|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |Total                                  |  72|         16|   24|         48|
+    +---------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------+---+----+-----+-----------+
+    |                Name               | FF| LUT| Bits| Const Bits|
+    +-----------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                          |  1|   0|    1|          0|
+    |ap_done_reg                        |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1            |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2            |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg   |  1|   0|    1|          0|
+    |i_fu_46                            |  3|   0|    3|          0|
+    |indvar_flatten7_fu_50              |  5|   0|    5|          0|
+    |j_fu_42                            |  3|   0|    3|          0|
+    |pArray_addr_reg_235                |  4|   0|    4|          0|
+    |pArray_addr_reg_235_pp0_iter1_reg  |  4|   0|    4|          0|
+    +-----------------------------------+---+----+-----+-----------+
+    |Total                              | 24|   0|   24|          0|
+    +-----------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------+-----+-----+------------+-----------------------------------------------------+--------------+
+|    RTL Ports    | Dir | Bits|  Protocol  |                    Source Object                    |    C Type    |
++-----------------+-----+-----+------------+-----------------------------------------------------+--------------+
+|ap_clk           |   in|    1|  ap_ctrl_hs|  aes_return_Pipeline_subBytes_label0_subBytes_label7|  return value|
+|ap_rst           |   in|    1|  ap_ctrl_hs|  aes_return_Pipeline_subBytes_label0_subBytes_label7|  return value|
+|ap_start         |   in|    1|  ap_ctrl_hs|  aes_return_Pipeline_subBytes_label0_subBytes_label7|  return value|
+|ap_done          |  out|    1|  ap_ctrl_hs|  aes_return_Pipeline_subBytes_label0_subBytes_label7|  return value|
+|ap_idle          |  out|    1|  ap_ctrl_hs|  aes_return_Pipeline_subBytes_label0_subBytes_label7|  return value|
+|ap_ready         |  out|    1|  ap_ctrl_hs|  aes_return_Pipeline_subBytes_label0_subBytes_label7|  return value|
+|pArray_address0  |  out|    4|   ap_memory|                                               pArray|         array|
+|pArray_ce0       |  out|    1|   ap_memory|                                               pArray|         array|
+|pArray_we0       |  out|    1|   ap_memory|                                               pArray|         array|
+|pArray_d0        |  out|   32|   ap_memory|                                               pArray|         array|
+|pArray_address1  |  out|    4|   ap_memory|                                               pArray|         array|
+|pArray_ce1       |  out|    1|   ap_memory|                                               pArray|         array|
+|pArray_q1        |   in|   32|   ap_memory|                                               pArray|         array|
+|S_address0       |  out|    8|   ap_memory|                                                    S|         array|
+|S_ce0            |  out|    1|   ap_memory|                                                    S|         array|
+|S_q0             |   in|    8|   ap_memory|                                                    S|         array|
++-----------------+-----+-----+------------+-----------------------------------------------------+--------------+
+

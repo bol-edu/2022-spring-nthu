@@ -1,0 +1,50 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'deAes_return'" level="0">
+<item name = "Date">Fri Jun 17 13:15:35 2022
+</item>
+<item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)</item>
+<item name = "Project">MIMO</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu9eg-ffvb1156-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">40.00 ns, 3.912 ns, 10.80 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">543, 543, 21.720 us, 21.720 us, 543, 543, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_deAes_return_Pipeline_convertToIntArray_label0_convertToIntArray_label1_fu_287">deAes_return_Pipeline_convertToIntArray_label0_convertToIntArray_label1, 18, 18, 0.720 us, 0.720 us, 18, 18, no</column>
+<column name="grp_deAes_return_Pipeline_addRoundKey_label0_fu_325">deAes_return_Pipeline_addRoundKey_label0, 18, 18, 0.720 us, 0.720 us, 18, 18, no</column>
+<column name="grp_deAes_return_Pipeline_deAes_return_label22_fu_332">deAes_return_Pipeline_deAes_return_label22, 452, 452, 18.080 us, 18.080 us, 452, 452, no</column>
+<column name="grp_deAes_return_Pipeline_deSubBytes_label1_deSubBytes_label13_fu_342">deAes_return_Pipeline_deSubBytes_label1_deSubBytes_label13, 19, 19, 0.760 us, 0.760 us, 19, 19, no</column>
+<column name="grp_deAes_return_Pipeline_addRoundKey_label010_fu_349">deAes_return_Pipeline_addRoundKey_label010, 18, 18, 0.720 us, 0.720 us, 18, 18, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

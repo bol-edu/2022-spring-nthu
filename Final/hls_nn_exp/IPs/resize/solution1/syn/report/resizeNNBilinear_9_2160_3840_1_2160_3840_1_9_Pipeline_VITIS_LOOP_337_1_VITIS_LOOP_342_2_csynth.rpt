@@ -1,0 +1,163 @@
+
+
+================================================================
+== Vitis HLS Report for 'resizeNNBilinear_9_2160_3840_1_2160_3840_1_9_Pipeline_VITIS_LOOP_337_1_VITIS_LOOP_342_2'
+================================================================
+* Date:           Sat Jun 18 18:21:40 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        resize
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.888 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    | min |  max |   Type  |
+    +---------+---------+-----------+-----------+-----+------+---------+
+    |        4|     7682|  40.000 ns|  76.820 us|    4|  7682|       no|
+    +---------+---------+-----------+-----------+-----+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------------------------+---------+---------+----------+-----------+-----------+----------+----------+
+        |                                     |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip   |          |
+        |              Loop Name              |   min   |   max   |  Latency |  achieved |   target  |   Count  | Pipelined|
+        +-------------------------------------+---------+---------+----------+-----------+-----------+----------+----------+
+        |- VITIS_LOOP_337_1_VITIS_LOOP_342_2  |        2|     7680|         2|          1|          1|  2 ~ 7680|       yes|
+        +-------------------------------------+---------+---------+----------+-----------+-----------+----------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    163|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     72|    -|
+|Register         |        -|    -|     104|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     104|    235|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |add_ln337_1_fu_160_p2      |         +|   0|  0|  10|           2|           1|
+    |add_ln337_fu_135_p2        |         +|   0|  0|  40|          33|           1|
+    |add_ln342_fu_193_p2        |         +|   0|  0|  39|          32|           1|
+    |ap_block_pp0_stage0_11001  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln337_fu_130_p2       |      icmp|   0|  0|  18|          33|          33|
+    |icmp_ln342_fu_147_p2       |      icmp|   0|  0|  18|          32|          32|
+    |select_ln337_1_fu_166_p3   |    select|   0|  0|   2|           1|           2|
+    |select_ln337_fu_152_p3     |    select|   0|  0|  32|           1|           1|
+    |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |Total                      |          |   0|  0| 163|         136|          74|
+    +---------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_j_load  |   9|          2|   32|         64|
+    |i_fu_58                  |   9|          2|    2|          4|
+    |indvar_flatten_fu_62     |   9|          2|   33|         66|
+    |j_fu_54                  |   9|          2|   32|         64|
+    |src_mat_420_blk_n        |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  72|         16|  103|        206|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2  |   1|   0|    1|          0|
+    |i_fu_58                  |   2|   0|    2|          0|
+    |indvar_flatten_fu_62     |  33|   0|   33|          0|
+    |j_fu_54                  |  32|   0|   32|          0|
+    |select_ln337_reg_237     |  32|   0|   32|          0|
+    |trunc_ln337_reg_243      |   1|   0|    1|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    | 104|   0|  104|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+-------------------------------------------------------------------------------------------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |                                          Source Object                                          |    C Type    |
++--------------------------+-----+-----+------------+-------------------------------------------------------------------------------------------------+--------------+
+|ap_clk                    |   in|    1|  ap_ctrl_hs|  resizeNNBilinear<9, 2160, 3840, 1, 2160, 3840, 1, 9>_Pipeline_VITIS_LOOP_337_1_VITIS_LOOP_342_2|  return value|
+|ap_rst                    |   in|    1|  ap_ctrl_hs|  resizeNNBilinear<9, 2160, 3840, 1, 2160, 3840, 1, 9>_Pipeline_VITIS_LOOP_337_1_VITIS_LOOP_342_2|  return value|
+|ap_start                  |   in|    1|  ap_ctrl_hs|  resizeNNBilinear<9, 2160, 3840, 1, 2160, 3840, 1, 9>_Pipeline_VITIS_LOOP_337_1_VITIS_LOOP_342_2|  return value|
+|ap_done                   |  out|    1|  ap_ctrl_hs|  resizeNNBilinear<9, 2160, 3840, 1, 2160, 3840, 1, 9>_Pipeline_VITIS_LOOP_337_1_VITIS_LOOP_342_2|  return value|
+|ap_idle                   |  out|    1|  ap_ctrl_hs|  resizeNNBilinear<9, 2160, 3840, 1, 2160, 3840, 1, 9>_Pipeline_VITIS_LOOP_337_1_VITIS_LOOP_342_2|  return value|
+|ap_ready                  |  out|    1|  ap_ctrl_hs|  resizeNNBilinear<9, 2160, 3840, 1, 2160, 3840, 1, 9>_Pipeline_VITIS_LOOP_337_1_VITIS_LOOP_342_2|  return value|
+|src_mat_420_dout          |   in|   24|     ap_fifo|                                                                                      src_mat_420|       pointer|
+|src_mat_420_empty_n       |   in|    1|     ap_fifo|                                                                                      src_mat_420|       pointer|
+|src_mat_420_read          |  out|    1|     ap_fifo|                                                                                      src_mat_420|       pointer|
+|bound                     |   in|   33|     ap_none|                                                                                            bound|        scalar|
+|p_read1                   |   in|   32|     ap_none|                                                                                          p_read1|        scalar|
+|line_buffer_V_address0    |  out|   12|   ap_memory|                                                                                    line_buffer_V|         array|
+|line_buffer_V_ce0         |  out|    1|   ap_memory|                                                                                    line_buffer_V|         array|
+|line_buffer_V_we0         |  out|    1|   ap_memory|                                                                                    line_buffer_V|         array|
+|line_buffer_V_d0          |  out|   24|   ap_memory|                                                                                    line_buffer_V|         array|
+|line_buffer_V_1_address0  |  out|   12|   ap_memory|                                                                                  line_buffer_V_1|         array|
+|line_buffer_V_1_ce0       |  out|    1|   ap_memory|                                                                                  line_buffer_V_1|         array|
+|line_buffer_V_1_we0       |  out|    1|   ap_memory|                                                                                  line_buffer_V_1|         array|
+|line_buffer_V_1_d0        |  out|   24|   ap_memory|                                                                                  line_buffer_V_1|         array|
++--------------------------+-----+-----+------------+-------------------------------------------------------------------------------------------------+--------------+
+

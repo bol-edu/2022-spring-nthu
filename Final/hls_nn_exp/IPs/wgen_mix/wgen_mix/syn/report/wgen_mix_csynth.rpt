@@ -1,0 +1,229 @@
+
+
+================================================================
+== Vitis HLS Report for 'wgen_mix'
+================================================================
+* Date:           Sat Jun 18 17:48:36 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        wgen_mix
+* Solution:       wgen_mix (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.014 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------------------+-----------------------------------+---------+---------+-----------+----------+-----+-----+---------+
+        |                                              |                                   |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+        |                   Instance                   |               Module              |   min   |   max   |    min    |    max   | min | max |   Type  |
+        +----------------------------------------------+-----------------------------------+---------+---------+-----------+----------+-----+-----+---------+
+        |grp_wgen_mix_Pipeline_VITIS_LOOP_33_2_fu_184  |wgen_mix_Pipeline_VITIS_LOOP_33_2  |        3|        ?|  30.000 ns|         ?|    3|    ?|       no|
+        |grp_wgen_mix_Pipeline_VITIS_LOOP_51_3_fu_239  |wgen_mix_Pipeline_VITIS_LOOP_51_3  |        ?|        ?|          ?|         ?|    ?|    ?|       no|
+        |grp_wgen_mix_Pipeline_VITIS_LOOP_60_4_fu_259  |wgen_mix_Pipeline_VITIS_LOOP_60_4  |        ?|        ?|          ?|         ?|    ?|    ?|       no|
+        +----------------------------------------------+-----------------------------------+---------+---------+-----------+----------+-----+-----+---------+
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count | Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |- VITIS_LOOP_31_1  |        ?|        ?|     3 ~ ?|          -|          -|  1 ~ ?|        no|
+        +-------------------+---------+---------+----------+-----------+-----------+-------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    346|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        0|    -|     379|    752|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|    157|    -|
+|Register         |        -|    -|     398|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     777|   1255|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|      2|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------------------+-----------------------------------+---------+----+-----+-----+-----+
+    |                   Instance                   |               Module              | BRAM_18K| DSP|  FF | LUT | URAM|
+    +----------------------------------------------+-----------------------------------+---------+----+-----+-----+-----+
+    |control_s_axi_U                               |control_s_axi                      |        0|   0|  195|  298|    0|
+    |grp_wgen_mix_Pipeline_VITIS_LOOP_33_2_fu_184  |wgen_mix_Pipeline_VITIS_LOOP_33_2  |        0|   0|  116|  278|    0|
+    |grp_wgen_mix_Pipeline_VITIS_LOOP_51_3_fu_239  |wgen_mix_Pipeline_VITIS_LOOP_51_3  |        0|   0|   34|   97|    0|
+    |grp_wgen_mix_Pipeline_VITIS_LOOP_60_4_fu_259  |wgen_mix_Pipeline_VITIS_LOOP_60_4  |        0|   0|   34|   79|    0|
+    +----------------------------------------------+-----------------------------------+---------+----+-----+-----+-----+
+    |Total                                         |                                   |        0|   0|  379|  752|    0|
+    +----------------------------------------------+-----------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                      Variable Name                      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------------------------+----------+----+---+----+------------+------------+
+    |add_ln33_fu_381_p2                                       |         +|   0|  0|  39|          32|          32|
+    |add_ln51_fu_405_p2                                       |         +|   0|  0|  32|          32|          32|
+    |i_2_fu_329_p2                                            |         +|   0|  0|  38|          31|           1|
+    |sub13_fu_294_p2                                          |         +|   0|  0|  38|          31|           2|
+    |sub_fu_288_p2                                            |         +|   0|  0|  39|          32|           2|
+    |sub_ln51_fu_399_p2                                       |         -|   0|  0|  32|           8|          32|
+    |ap_block_state6_on_subcall_done                          |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op96_call_state6                            |       and|   0|  0|   2|           1|           1|
+    |grp_wgen_mix_Pipeline_VITIS_LOOP_33_2_fu_184_dst_TREADY  |       and|   0|  0|   2|           1|           1|
+    |cmp1171_fu_306_p2                                        |      icmp|   0|  0|  18|          32|           1|
+    |cmp12_fu_352_p2                                          |      icmp|   0|  0|  18|          32|          32|
+    |icmp_fu_345_p2                                           |      icmp|   0|  0|  16|          26|           1|
+    |icmp_ln31_1_fu_324_p2                                    |      icmp|   0|  0|  18|          32|          32|
+    |icmp_ln31_fu_300_p2                                      |      icmp|   0|  0|  18|          32|           1|
+    |icmp_ln51_fu_393_p2                                      |      icmp|   0|  0|  18|          32|           8|
+    |icmp_ln58_fu_367_p2                                      |      icmp|   0|  0|  16|          27|           1|
+    +---------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                    |          |   0|  0| 346|         382|         180|
+    +---------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------+----+-----------+-----+-----------+
+    |             Name             | LUT| Input Size| Bits| Total Bits|
+    +------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                     |  53|         10|    1|         10|
+    |ap_phi_mux_j_2_phi_fu_176_p4  |   9|          2|   32|         64|
+    |i_fu_142                      |   9|          2|   31|         62|
+    |j_2_reg_172                   |   9|          2|   32|         64|
+    |src_TREADY_int_regslice       |   9|          2|    1|          2|
+    |word_TREADY_int_regslice      |  20|          4|    1|          4|
+    |wrecv                         |  20|          4|   32|        128|
+    |wrecv_ap_vld                  |  14|          3|    1|          3|
+    |wrecv_n_local                 |  14|          3|   32|         96|
+    +------------------------------+----+-----------+-----+-----------+
+    |Total                         | 157|         32|  163|        433|
+    +------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------------------------+----+----+-----+-----------+
+    |                            Name                           | FF | LUT| Bits| Const Bits|
+    +-----------------------------------------------------------+----+----+-----+-----------+
+    |add_ln62_loc_fu_134                                        |  32|   0|   32|          0|
+    |ap_CS_fsm                                                  |   9|   0|    9|          0|
+    |cmp1171_reg_481                                            |   1|   0|    1|          0|
+    |cmp12_reg_498                                              |   1|   0|    1|          0|
+    |cols_read_reg_432                                          |  32|   0|   32|          0|
+    |empty_reg_443                                              |  31|   0|   31|          0|
+    |grp_wgen_mix_Pipeline_VITIS_LOOP_33_2_fu_184_ap_start_reg  |   1|   0|    1|          0|
+    |grp_wgen_mix_Pipeline_VITIS_LOOP_51_3_fu_239_ap_start_reg  |   1|   0|    1|          0|
+    |grp_wgen_mix_Pipeline_VITIS_LOOP_60_4_fu_259_ap_start_reg  |   1|   0|    1|          0|
+    |i_2_reg_488                                                |  31|   0|   31|          0|
+    |i_fu_142                                                   |  31|   0|   31|          0|
+    |icmp_ln31_reg_470                                          |   1|   0|    1|          0|
+    |icmp_ln51_reg_507                                          |   1|   0|    1|          0|
+    |icmp_ln58_reg_503                                          |   1|   0|    1|          0|
+    |icmp_reg_493                                               |   1|   0|    1|          0|
+    |isent_n_local                                              |  32|   0|   32|          0|
+    |j_2_reg_172                                                |  32|   0|   32|          0|
+    |rows_read_reg_437                                          |  32|   0|   32|          0|
+    |sub13_reg_465                                              |  31|   0|   31|          0|
+    |sub_reg_460                                                |  32|   0|   32|          0|
+    |wrecv_n_local                                              |  32|   0|   32|          0|
+    |wrecv_n_local_load_reg_511                                 |  32|   0|   32|          0|
+    +-----------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                      | 398|   0|  398|          0|
+    +-----------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+---------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  | Source Object |    C Type    |
++-----------------------+-----+-----+------------+---------------+--------------+
+|s_axi_control_AWVALID  |   in|    1|       s_axi|        control|        scalar|
+|s_axi_control_AWREADY  |  out|    1|       s_axi|        control|        scalar|
+|s_axi_control_AWADDR   |   in|    6|       s_axi|        control|        scalar|
+|s_axi_control_WVALID   |   in|    1|       s_axi|        control|        scalar|
+|s_axi_control_WREADY   |  out|    1|       s_axi|        control|        scalar|
+|s_axi_control_WDATA    |   in|   32|       s_axi|        control|        scalar|
+|s_axi_control_WSTRB    |   in|    4|       s_axi|        control|        scalar|
+|s_axi_control_ARVALID  |   in|    1|       s_axi|        control|        scalar|
+|s_axi_control_ARREADY  |  out|    1|       s_axi|        control|        scalar|
+|s_axi_control_ARADDR   |   in|    6|       s_axi|        control|        scalar|
+|s_axi_control_RVALID   |  out|    1|       s_axi|        control|        scalar|
+|s_axi_control_RREADY   |   in|    1|       s_axi|        control|        scalar|
+|s_axi_control_RDATA    |  out|   32|       s_axi|        control|        scalar|
+|s_axi_control_RRESP    |  out|    2|       s_axi|        control|        scalar|
+|s_axi_control_BVALID   |  out|    1|       s_axi|        control|        scalar|
+|s_axi_control_BREADY   |   in|    1|       s_axi|        control|        scalar|
+|s_axi_control_BRESP    |  out|    2|       s_axi|        control|        scalar|
+|ap_local_block         |  out|    1|  ap_ctrl_hs|       wgen_mix|  return value|
+|ap_clk                 |   in|    1|  ap_ctrl_hs|       wgen_mix|  return value|
+|ap_rst_n               |   in|    1|  ap_ctrl_hs|       wgen_mix|  return value|
+|interrupt              |  out|    1|  ap_ctrl_hs|       wgen_mix|  return value|
+|src_TDATA              |   in|   24|        axis|   src_V_data_V|       pointer|
+|src_TVALID             |   in|    1|        axis|   src_V_dest_V|       pointer|
+|src_TREADY             |  out|    1|        axis|   src_V_dest_V|       pointer|
+|src_TDEST              |   in|    1|        axis|   src_V_dest_V|       pointer|
+|src_TKEEP              |   in|    3|        axis|   src_V_keep_V|       pointer|
+|src_TSTRB              |   in|    3|        axis|   src_V_strb_V|       pointer|
+|src_TUSER              |   in|    1|        axis|   src_V_user_V|       pointer|
+|src_TLAST              |   in|    1|        axis|   src_V_last_V|       pointer|
+|src_TID                |   in|    1|        axis|     src_V_id_V|       pointer|
+|dst_TDATA              |  out|   24|        axis|   dst_V_data_V|       pointer|
+|dst_TVALID             |  out|    1|        axis|   dst_V_dest_V|       pointer|
+|dst_TREADY             |   in|    1|        axis|   dst_V_dest_V|       pointer|
+|dst_TDEST              |  out|    1|        axis|   dst_V_dest_V|       pointer|
+|dst_TKEEP              |  out|    3|        axis|   dst_V_keep_V|       pointer|
+|dst_TSTRB              |  out|    3|        axis|   dst_V_strb_V|       pointer|
+|dst_TUSER              |  out|    1|        axis|   dst_V_user_V|       pointer|
+|dst_TLAST              |  out|    1|        axis|   dst_V_last_V|       pointer|
+|dst_TID                |  out|    1|        axis|     dst_V_id_V|       pointer|
+|word_TDATA             |   in|   24|        axis|  word_V_data_V|       pointer|
+|word_TVALID            |   in|    1|        axis|  word_V_dest_V|       pointer|
+|word_TREADY            |  out|    1|        axis|  word_V_dest_V|       pointer|
+|word_TDEST             |   in|    1|        axis|  word_V_dest_V|       pointer|
+|word_TKEEP             |   in|    3|        axis|  word_V_keep_V|       pointer|
+|word_TSTRB             |   in|    3|        axis|  word_V_strb_V|       pointer|
+|word_TUSER             |   in|    1|        axis|  word_V_user_V|       pointer|
+|word_TLAST             |   in|    1|        axis|  word_V_last_V|       pointer|
+|word_TID               |   in|    1|        axis|    word_V_id_V|       pointer|
++-----------------------+-----+-----+------------+---------------+--------------+
+

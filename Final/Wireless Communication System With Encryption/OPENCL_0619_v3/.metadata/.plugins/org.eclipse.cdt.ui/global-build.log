@@ -1,0 +1,58 @@
+01:37:42 **** Incremental Build of configuration Emulation-SW for project MIMO_AES ****
+make -j64 all 
+g++ -std=c++1y -DVITIS_PLATFORM=xilinx_u50_gen3x16_xdma_201920_3 -D__USE_XOPEN2K8 -I/opt/xilinx/xrt/include/ -I/opt/Xilinx/Vitis_HLS/2021.2/include/ -O0 -g -Wall -c -fmessage-length=0 -o "src/HOST.o" "../src/HOST.cpp"
+g++ -o "MIMO_AES" src/HOST.o -lxilinxopencl -lpthread -lrt -lstdc++ -L/opt/xilinx/xrt/lib/ -Wl,-rpath-link,/opt/xilinx/xrt/lib
+06:59:40 **** Clean-only build of configuration Emulation-SW for project MIMO_AES ****
+make -j64 clean 
+rm -f MIMO_AES src/HOST.o
+06:59:40 **** Clean-only build of configuration Emulation-SW for project MIMO_AES_kernels ****
+make -j64 clean 
+rm -f build/TOP.xo .mdb,build/TOP.o 
+rm -rf build
+rm -rf .Xil
+06:59:42 **** Clean-only build of configuration Emulation-SW for project MIMO_AES_system ****
+make clean 
+rm -rf ./package.build
+rm -rf package
+06:59:44 **** Clean-only build of configuration Emulation-SW for project MIMO_AES_system_hw_link ****
+make clean 
+rm -f binary_container_1.xclbin binary_container_1.mdb 
+rm -f *.xclbin.sh *.xclbin.info *.xclbin.link_summary*
+rm -rf binary_container_1.build
+rm -rf .Xil
+07:00:04 **** Clean-only build of configuration Hardware for project MIMO_AES ****
+make -j64 clean 
+rm -f MIMO_AES src/HOST.o
+07:00:05 **** Clean-only build of configuration Hardware for project MIMO_AES_kernels ****
+make -j64 clean 
+rm -f build/TOP.xo .mdb,build/TOP.o 
+rm -rf build
+rm -rf .Xil
+07:00:06 **** Clean-only build of configuration Hardware for project MIMO_AES_system ****
+make clean 
+rm -rf ./package.build
+rm -rf package
+07:00:08 **** Clean-only build of configuration Hardware for project MIMO_AES_system_hw_link ****
+make clean 
+rm -f binary_container_1.xclbin binary_container_1.mdb 
+rm -f *.xclbin.sh *.xclbin.info *.xclbin.link_summary*
+rm -rf binary_container_1.build
+rm -rf .Xil
+07:00:26 **** Clean-only build of configuration Emulation-HW for project MIMO_AES ****
+make -j64 clean 
+rm -f MIMO_AES src/HOST.o
+07:00:27 **** Clean-only build of configuration Emulation-HW for project MIMO_AES_kernels ****
+make -j64 clean 
+rm -f build/TOP.xo .mdb,build/TOP.o 
+rm -rf build
+rm -rf .Xil
+07:00:28 **** Clean-only build of configuration Emulation-HW for project MIMO_AES_system ****
+make clean 
+rm -rf ./package.build
+rm -rf package
+07:00:31 **** Clean-only build of configuration Emulation-HW for project MIMO_AES_system_hw_link ****
+make clean 
+rm -f binary_container_1.xclbin binary_container_1.mdb 
+rm -f *.xclbin.sh *.xclbin.info *.xclbin.link_summary*
+rm -rf binary_container_1.build
+rm -rf .Xil

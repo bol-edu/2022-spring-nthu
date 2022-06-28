@@ -1,0 +1,181 @@
+
+
+================================================================
+== Vitis HLS Report for 'deAes_return_Pipeline_deSubBytes_label1_deSubBytes_label13'
+================================================================
+* Date:           Fri Jun 17 13:15:34 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        MIMO
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  40.00 ns|  2.355 ns|    10.80 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       19|       19|  0.760 us|  0.760 us|   19|   19|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                        |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |                Loop Name               |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- deSubBytes_label1_deSubBytes_label13  |       17|       17|         3|          1|          1|    16|       yes|
+        +----------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.35>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%j = alloca i32 1"   --->   Operation 6 'alloca' 'j' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%i_7 = alloca i32 1"   --->   Operation 7 'alloca' 'i_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%indvar_flatten7 = alloca i32 1"   --->   Operation 8 'alloca' 'indvar_flatten7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.42ns)   --->   "%store_ln0 = store i5 0, i5 %indvar_flatten7"   --->   Operation 9 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 10 [1/1] (0.42ns)   --->   "%store_ln0 = store i3 0, i3 %i_7"   --->   Operation 10 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 11 [1/1] (0.42ns)   --->   "%store_ln0 = store i3 0, i3 %j"   --->   Operation 11 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.preheader.preheader"   --->   Operation 12 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%indvar_flatten7_load = load i5 %indvar_flatten7" [src/aes.cpp:353]   --->   Operation 13 'load' 'indvar_flatten7_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 14 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.75ns)   --->   "%icmp_ln353 = icmp_eq  i5 %indvar_flatten7_load, i5 16" [src/aes.cpp:353]   --->   Operation 15 'icmp' 'icmp_ln353' <Predicate = true> <Delay = 0.75> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.78ns)   --->   "%add_ln353_1 = add i5 %indvar_flatten7_load, i5 1" [src/aes.cpp:353]   --->   Operation 16 'add' 'add_ln353_1' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln353 = br i1 %icmp_ln353, void %.preheader, void %_ZL10deSubBytesPA4_i.exit56.exitStub" [src/aes.cpp:353]   --->   Operation 17 'br' 'br_ln353' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%j_load = load i3 %j" [src/aes.cpp:354]   --->   Operation 18 'load' 'j_load' <Predicate = (!icmp_ln353)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%i_7_load = load i3 %i_7" [src/aes.cpp:353]   --->   Operation 19 'load' 'i_7_load' <Predicate = (!icmp_ln353)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.67ns)   --->   "%add_ln353 = add i3 %i_7_load, i3 1" [src/aes.cpp:353]   --->   Operation 20 'add' 'add_ln353' <Predicate = (!icmp_ln353)> <Delay = 0.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.58ns)   --->   "%icmp_ln354 = icmp_eq  i3 %j_load, i3 4" [src/aes.cpp:354]   --->   Operation 21 'icmp' 'icmp_ln354' <Predicate = (!icmp_ln353)> <Delay = 0.58> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 22 [1/1] (0.20ns)   --->   "%select_ln353 = select i1 %icmp_ln354, i3 0, i3 %j_load" [src/aes.cpp:353]   --->   Operation 22 'select' 'select_ln353' <Predicate = (!icmp_ln353)> <Delay = 0.20> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.20> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 23 [1/1] (0.20ns)   --->   "%select_ln353_1 = select i1 %icmp_ln354, i3 %add_ln353, i3 %i_7_load" [src/aes.cpp:353]   --->   Operation 23 'select' 'select_ln353_1' <Predicate = (!icmp_ln353)> <Delay = 0.20> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.20> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%trunc_ln355 = trunc i3 %select_ln353_1" [src/aes.cpp:355]   --->   Operation 24 'trunc' 'trunc_ln355' <Predicate = (!icmp_ln353)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_82_cast = bitconcatenate i4 @_ssdm_op_BitConcatenate.i4.i2.i2, i2 %trunc_ln355, i2 0" [src/aes.cpp:355]   --->   Operation 25 'bitconcatenate' 'tmp_82_cast' <Predicate = (!icmp_ln353)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%zext_ln355 = zext i3 %select_ln353" [src/aes.cpp:355]   --->   Operation 26 'zext' 'zext_ln355' <Predicate = (!icmp_ln353)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.79ns)   --->   "%add_ln355 = add i4 %tmp_82_cast, i4 %zext_ln355" [src/aes.cpp:355]   --->   Operation 27 'add' 'add_ln355' <Predicate = (!icmp_ln353)> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%zext_ln355_1 = zext i4 %add_ln355" [src/aes.cpp:355]   --->   Operation 28 'zext' 'zext_ln355_1' <Predicate = (!icmp_ln353)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%cArray_addr = getelementptr i32 %cArray, i64 0, i64 %zext_ln355_1" [src/aes.cpp:355]   --->   Operation 29 'getelementptr' 'cArray_addr' <Predicate = (!icmp_ln353)> <Delay = 0.00>
+ST_1 : Operation 30 [2/2] (0.67ns)   --->   "%cArray_load = load i4 %cArray_addr" [src/aes.cpp:355]   --->   Operation 30 'load' 'cArray_load' <Predicate = (!icmp_ln353)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_1 : Operation 31 [1/1] (0.67ns)   --->   "%add_ln354 = add i3 %select_ln353, i3 1" [src/aes.cpp:354]   --->   Operation 31 'add' 'add_ln354' <Predicate = (!icmp_ln353)> <Delay = 0.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 32 [1/1] (0.42ns)   --->   "%store_ln353 = store i5 %add_ln353_1, i5 %indvar_flatten7" [src/aes.cpp:353]   --->   Operation 32 'store' 'store_ln353' <Predicate = (!icmp_ln353)> <Delay = 0.42>
+ST_1 : Operation 33 [1/1] (0.42ns)   --->   "%store_ln353 = store i3 %select_ln353_1, i3 %i_7" [src/aes.cpp:353]   --->   Operation 33 'store' 'store_ln353' <Predicate = (!icmp_ln353)> <Delay = 0.42>
+ST_1 : Operation 34 [1/1] (0.42ns)   --->   "%store_ln354 = store i3 %add_ln354, i3 %j" [src/aes.cpp:354]   --->   Operation 34 'store' 'store_ln354' <Predicate = (!icmp_ln353)> <Delay = 0.42>
+
+State 2 <SV = 1> <Delay = 1.91>
+ST_2 : Operation 35 [1/2] (0.67ns)   --->   "%cArray_load = load i4 %cArray_addr" [src/aes.cpp:355]   --->   Operation 35 'load' 'cArray_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%trunc_ln347 = trunc i32 %cArray_load" [src/aes.cpp:347]   --->   Operation 36 'trunc' 'trunc_ln347' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%zext_ln347 = zext i8 %trunc_ln347" [src/aes.cpp:347]   --->   Operation 37 'zext' 'zext_ln347' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%S2_addr = getelementptr i8 %S2, i64 0, i64 %zext_ln347" [src/aes.cpp:347]   --->   Operation 38 'getelementptr' 'S2_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [2/2] (1.23ns)   --->   "%S2_load = load i8 %S2_addr" [src/aes.cpp:347]   --->   Operation 39 'load' 'S2_load' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 48 'ret' 'ret_ln0' <Predicate = (icmp_ln353)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.91>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @deSubBytes_label1_deSubBytes_label13_str"   --->   Operation 40 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 16, i64 16, i64 16"   --->   Operation 41 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 42 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%specloopname_ln352 = specloopname void @_ssdm_op_SpecLoopName, void @empty_1" [src/aes.cpp:352]   --->   Operation 43 'specloopname' 'specloopname_ln352' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 44 [1/2] (1.23ns)   --->   "%S2_load = load i8 %S2_addr" [src/aes.cpp:347]   --->   Operation 44 'load' 'S2_load' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%S2_load_1_cast = zext i8 %S2_load" [src/aes.cpp:347]   --->   Operation 45 'zext' 'S2_load_1_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (0.67ns)   --->   "%store_ln355 = store i32 %S2_load_1_cast, i4 %cArray_addr" [src/aes.cpp:355]   --->   Operation 46 'store' 'store_ln355' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.preheader.preheader"   --->   Operation 47 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 40ns, clock uncertainty: 10.8ns.
+
+ <State 1>: 2.35ns
+The critical path consists of the following:
+	'alloca' operation ('i') [4]  (0 ns)
+	'load' operation ('i_7_load', src/aes.cpp:353) on local variable 'i' [18]  (0 ns)
+	'add' operation ('add_ln353', src/aes.cpp:353) [19]  (0.673 ns)
+	'select' operation ('select_ln353_1', src/aes.cpp:353) [24]  (0.208 ns)
+	'add' operation ('add_ln355', src/aes.cpp:355) [29]  (0.797 ns)
+	'getelementptr' operation ('cArray_addr', src/aes.cpp:355) [31]  (0 ns)
+	'load' operation ('cArray_load', src/aes.cpp:355) on array 'cArray' [33]  (0.677 ns)
+
+ <State 2>: 1.91ns
+The critical path consists of the following:
+	'load' operation ('cArray_load', src/aes.cpp:355) on array 'cArray' [33]  (0.677 ns)
+	'getelementptr' operation ('S2_addr', src/aes.cpp:347) [36]  (0 ns)
+	'load' operation ('S2_load', src/aes.cpp:347) on array 'S2' [37]  (1.24 ns)
+
+ <State 3>: 1.91ns
+The critical path consists of the following:
+	'load' operation ('S2_load', src/aes.cpp:347) on array 'S2' [37]  (1.24 ns)
+	'store' operation ('store_ln355', src/aes.cpp:355) of variable 'S2_load_1_cast', src/aes.cpp:347 on array 'cArray' [39]  (0.677 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

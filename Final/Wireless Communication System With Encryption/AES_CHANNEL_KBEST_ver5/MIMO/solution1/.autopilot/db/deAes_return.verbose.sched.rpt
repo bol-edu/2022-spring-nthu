@@ -1,0 +1,320 @@
+
+
+================================================================
+== Vitis HLS Report for 'deAes_return'
+================================================================
+* Date:           Fri Jun 17 13:15:35 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        MIMO
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  40.00 ns|  3.912 ns|    10.80 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |      543|      543|  21.720 us|  21.720 us|  543|  543|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 19
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.16>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%p_read_16 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read15"   --->   Operation 20 'read' 'p_read_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%p_read_17 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read14"   --->   Operation 21 'read' 'p_read_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%p_read_18 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read13"   --->   Operation 22 'read' 'p_read_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%p_read_19 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read12"   --->   Operation 23 'read' 'p_read_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%p_read_20 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read11"   --->   Operation 24 'read' 'p_read_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%p_read_21 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read10"   --->   Operation 25 'read' 'p_read_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%p_read_22 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read9"   --->   Operation 26 'read' 'p_read_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%p_read_23 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read8"   --->   Operation 27 'read' 'p_read_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%p_read_24 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read7"   --->   Operation 28 'read' 'p_read_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%p_read_25 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read6"   --->   Operation 29 'read' 'p_read_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%p_read_26 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read5"   --->   Operation 30 'read' 'p_read_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%p_read_27 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read4"   --->   Operation 31 'read' 'p_read_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%p_read_28 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read3"   --->   Operation 32 'read' 'p_read_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%p_read_29 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read2"   --->   Operation 33 'read' 'p_read_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%p_read_30 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read1"   --->   Operation 34 'read' 'p_read_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%p_read406 = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %p_read"   --->   Operation 35 'read' 'p_read406' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%cArray = alloca i64 1" [src/aes.cpp:447]   --->   Operation 36 'alloca' 'cArray' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%wArray = alloca i64 1" [src/aes.cpp:453]   --->   Operation 37 'alloca' 'wArray' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [2/2] (1.16ns)   --->   "%call_ln0 = call void @deAes_return_Pipeline_convertToIntArray_label0_convertToIntArray_label1, i32 %cArray, i8 %p_read406, i8 %p_read_30, i8 %p_read_29, i8 %p_read_28, i8 %p_read_27, i8 %p_read_26, i8 %p_read_25, i8 %p_read_24, i8 %p_read_23, i8 %p_read_22, i8 %p_read_21, i8 %p_read_20, i8 %p_read_19, i8 %p_read_18, i8 %p_read_17, i8 %p_read_16"   --->   Operation 38 'call' 'call_ln0' <Predicate = true> <Delay = 1.16> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 39 [1/2] (0.00ns)   --->   "%call_ln0 = call void @deAes_return_Pipeline_convertToIntArray_label0_convertToIntArray_label1, i32 %cArray, i8 %p_read406, i8 %p_read_30, i8 %p_read_29, i8 %p_read_28, i8 %p_read_27, i8 %p_read_26, i8 %p_read_25, i8 %p_read_24, i8 %p_read_23, i8 %p_read_22, i8 %p_read_21, i8 %p_read_20, i8 %p_read_19, i8 %p_read_18, i8 %p_read_17, i8 %p_read_16"   --->   Operation 39 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 40 [2/2] (0.00ns)   --->   "%call_ln0 = call void @deAes_return_Pipeline_addRoundKey_label0, i32 %cArray, i32 %w"   --->   Operation 40 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 41 [1/2] (0.00ns)   --->   "%call_ln0 = call void @deAes_return_Pipeline_addRoundKey_label0, i32 %cArray, i32 %w"   --->   Operation 41 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 42 [2/2] (0.00ns)   --->   "%call_ln0 = call void @deAes_return_Pipeline_deAes_return_label22, i32 %wArray, i32 %cArray, i32 %w, i8 %S2"   --->   Operation 42 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 43 [1/2] (0.00ns)   --->   "%call_ln0 = call void @deAes_return_Pipeline_deAes_return_label22, i32 %wArray, i32 %cArray, i32 %w, i8 %S2"   --->   Operation 43 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 44 [2/2] (0.00ns)   --->   "%call_ln0 = call void @deAes_return_Pipeline_deSubBytes_label1_deSubBytes_label13, i32 %cArray, i8 %S2"   --->   Operation 44 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 45 [1/2] (0.00ns)   --->   "%call_ln0 = call void @deAes_return_Pipeline_deSubBytes_label1_deSubBytes_label13, i32 %cArray, i8 %S2"   --->   Operation 45 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.67>
+ST_9 : Operation 46 [1/1] (0.00ns)   --->   "%cArray_addr_9 = getelementptr i32 %cArray, i64 0, i64 4" [src/aes.cpp:355]   --->   Operation 46 'getelementptr' 'cArray_addr_9' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 47 [1/1] (0.00ns)   --->   "%cArray_addr_13 = getelementptr i32 %cArray, i64 0, i64 8" [src/aes.cpp:355]   --->   Operation 47 'getelementptr' 'cArray_addr_13' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 48 [2/2] (0.67ns)   --->   "%cArray_load = load i4 %cArray_addr_9" [src/aes.cpp:379->src/aes.cpp:473]   --->   Operation 48 'load' 'cArray_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_9 : Operation 49 [2/2] (0.67ns)   --->   "%cArray_load_35 = load i4 %cArray_addr_13" [src/aes.cpp:380->src/aes.cpp:473]   --->   Operation 49 'load' 'cArray_load_35' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+
+State 10 <SV = 9> <Delay = 1.35>
+ST_10 : Operation 50 [1/1] (0.00ns)   --->   "%cArray_addr_10 = getelementptr i32 %cArray, i64 0, i64 5" [src/aes.cpp:355]   --->   Operation 50 'getelementptr' 'cArray_addr_10' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 51 [1/1] (0.00ns)   --->   "%cArray_addr_17 = getelementptr i32 %cArray, i64 0, i64 12" [src/aes.cpp:355]   --->   Operation 51 'getelementptr' 'cArray_addr_17' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 52 [1/2] (0.67ns)   --->   "%cArray_load = load i4 %cArray_addr_9" [src/aes.cpp:379->src/aes.cpp:473]   --->   Operation 52 'load' 'cArray_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_10 : Operation 53 [1/2] (0.67ns)   --->   "%cArray_load_35 = load i4 %cArray_addr_13" [src/aes.cpp:380->src/aes.cpp:473]   --->   Operation 53 'load' 'cArray_load_35' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_10 : Operation 54 [2/2] (0.67ns)   --->   "%cArray_load_36 = load i4 %cArray_addr_17" [src/aes.cpp:381->src/aes.cpp:473]   --->   Operation 54 'load' 'cArray_load_36' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_10 : Operation 55 [2/2] (0.67ns)   --->   "%cArray_load_37 = load i4 %cArray_addr_10" [src/aes.cpp:379->src/aes.cpp:473]   --->   Operation 55 'load' 'cArray_load_37' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_10 : Operation 56 [1/1] (0.67ns)   --->   "%store_ln389 = store i32 %cArray_load, i4 %cArray_addr_10" [src/aes.cpp:389->src/aes.cpp:473]   --->   Operation 56 'store' 'store_ln389' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+
+State 11 <SV = 10> <Delay = 0.67>
+ST_11 : Operation 57 [1/1] (0.00ns)   --->   "%cArray_addr_14 = getelementptr i32 %cArray, i64 0, i64 9" [src/aes.cpp:355]   --->   Operation 57 'getelementptr' 'cArray_addr_14' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 58 [1/1] (0.00ns)   --->   "%cArray_addr_18 = getelementptr i32 %cArray, i64 0, i64 13" [src/aes.cpp:355]   --->   Operation 58 'getelementptr' 'cArray_addr_18' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 59 [1/2] (0.67ns)   --->   "%cArray_load_36 = load i4 %cArray_addr_17" [src/aes.cpp:381->src/aes.cpp:473]   --->   Operation 59 'load' 'cArray_load_36' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_11 : Operation 60 [1/2] (0.67ns)   --->   "%cArray_load_37 = load i4 %cArray_addr_10" [src/aes.cpp:379->src/aes.cpp:473]   --->   Operation 60 'load' 'cArray_load_37' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_11 : Operation 61 [2/2] (0.67ns)   --->   "%cArray_load_38 = load i4 %cArray_addr_14" [src/aes.cpp:380->src/aes.cpp:473]   --->   Operation 61 'load' 'cArray_load_38' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_11 : Operation 62 [2/2] (0.67ns)   --->   "%cArray_load_39 = load i4 %cArray_addr_18" [src/aes.cpp:381->src/aes.cpp:473]   --->   Operation 62 'load' 'cArray_load_39' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+
+State 12 <SV = 11> <Delay = 0.67>
+ST_12 : Operation 63 [1/1] (0.00ns)   --->   "%cArray_addr_11 = getelementptr i32 %cArray, i64 0, i64 6" [src/aes.cpp:355]   --->   Operation 63 'getelementptr' 'cArray_addr_11' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 64 [1/1] (0.00ns)   --->   "%cArray_addr_15 = getelementptr i32 %cArray, i64 0, i64 10" [src/aes.cpp:355]   --->   Operation 64 'getelementptr' 'cArray_addr_15' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 65 [1/2] (0.67ns)   --->   "%cArray_load_38 = load i4 %cArray_addr_14" [src/aes.cpp:380->src/aes.cpp:473]   --->   Operation 65 'load' 'cArray_load_38' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_12 : Operation 66 [1/2] (0.67ns)   --->   "%cArray_load_39 = load i4 %cArray_addr_18" [src/aes.cpp:381->src/aes.cpp:473]   --->   Operation 66 'load' 'cArray_load_39' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_12 : Operation 67 [2/2] (0.67ns)   --->   "%cArray_load_40 = load i4 %cArray_addr_11" [src/aes.cpp:379->src/aes.cpp:473]   --->   Operation 67 'load' 'cArray_load_40' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_12 : Operation 68 [2/2] (0.67ns)   --->   "%cArray_load_41 = load i4 %cArray_addr_15" [src/aes.cpp:380->src/aes.cpp:473]   --->   Operation 68 'load' 'cArray_load_41' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_12 : Operation 69 [1/1] (0.67ns)   --->   "%store_ln389 = store i32 %cArray_load_37, i4 %cArray_addr_11" [src/aes.cpp:389->src/aes.cpp:473]   --->   Operation 69 'store' 'store_ln389' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_12 : Operation 70 [1/1] (0.67ns)   --->   "%store_ln390 = store i32 %cArray_load_35, i4 %cArray_addr_15" [src/aes.cpp:390->src/aes.cpp:473]   --->   Operation 70 'store' 'store_ln390' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+
+State 13 <SV = 12> <Delay = 1.35>
+ST_13 : Operation 71 [1/1] (0.00ns)   --->   "%cArray_addr_12 = getelementptr i32 %cArray, i64 0, i64 7" [src/aes.cpp:355]   --->   Operation 71 'getelementptr' 'cArray_addr_12' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 72 [1/1] (0.00ns)   --->   "%cArray_addr = getelementptr i32 %cArray, i64 0, i64 14" [src/aes.cpp:355]   --->   Operation 72 'getelementptr' 'cArray_addr' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 73 [1/2] (0.67ns)   --->   "%cArray_load_40 = load i4 %cArray_addr_11" [src/aes.cpp:379->src/aes.cpp:473]   --->   Operation 73 'load' 'cArray_load_40' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_13 : Operation 74 [1/2] (0.67ns)   --->   "%cArray_load_41 = load i4 %cArray_addr_15" [src/aes.cpp:380->src/aes.cpp:473]   --->   Operation 74 'load' 'cArray_load_41' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_13 : Operation 75 [2/2] (0.67ns)   --->   "%cArray_load_42 = load i4 %cArray_addr" [src/aes.cpp:381->src/aes.cpp:473]   --->   Operation 75 'load' 'cArray_load_42' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_13 : Operation 76 [2/2] (0.67ns)   --->   "%cArray_load_43 = load i4 %cArray_addr_12" [src/aes.cpp:379->src/aes.cpp:473]   --->   Operation 76 'load' 'cArray_load_43' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_13 : Operation 77 [1/1] (0.67ns)   --->   "%store_ln389 = store i32 %cArray_load_40, i4 %cArray_addr_12" [src/aes.cpp:389->src/aes.cpp:473]   --->   Operation 77 'store' 'store_ln389' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+
+State 14 <SV = 13> <Delay = 0.67>
+ST_14 : Operation 78 [1/1] (0.00ns)   --->   "%cArray_addr_16 = getelementptr i32 %cArray, i64 0, i64 11" [src/aes.cpp:355]   --->   Operation 78 'getelementptr' 'cArray_addr_16' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 79 [1/1] (0.00ns)   --->   "%cArray_addr_19 = getelementptr i32 %cArray, i64 0, i64 15" [src/aes.cpp:355]   --->   Operation 79 'getelementptr' 'cArray_addr_19' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 80 [1/2] (0.67ns)   --->   "%cArray_load_42 = load i4 %cArray_addr" [src/aes.cpp:381->src/aes.cpp:473]   --->   Operation 80 'load' 'cArray_load_42' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_14 : Operation 81 [1/2] (0.67ns)   --->   "%cArray_load_43 = load i4 %cArray_addr_12" [src/aes.cpp:379->src/aes.cpp:473]   --->   Operation 81 'load' 'cArray_load_43' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_14 : Operation 82 [2/2] (0.67ns)   --->   "%cArray_load_44 = load i4 %cArray_addr_16" [src/aes.cpp:380->src/aes.cpp:473]   --->   Operation 82 'load' 'cArray_load_44' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_14 : Operation 83 [2/2] (0.67ns)   --->   "%cArray_load_45 = load i4 %cArray_addr_19" [src/aes.cpp:381->src/aes.cpp:473]   --->   Operation 83 'load' 'cArray_load_45' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_14 : Operation 84 [1/1] (0.67ns)   --->   "%store_ln390 = store i32 %cArray_load_38, i4 %cArray_addr_16" [src/aes.cpp:390->src/aes.cpp:473]   --->   Operation 84 'store' 'store_ln390' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_14 : Operation 85 [1/1] (0.67ns)   --->   "%store_ln391 = store i32 %cArray_load_36, i4 %cArray_addr_19" [src/aes.cpp:391->src/aes.cpp:473]   --->   Operation 85 'store' 'store_ln391' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+
+State 15 <SV = 14> <Delay = 0.67>
+ST_15 : Operation 86 [1/2] (0.67ns)   --->   "%cArray_load_44 = load i4 %cArray_addr_16" [src/aes.cpp:380->src/aes.cpp:473]   --->   Operation 86 'load' 'cArray_load_44' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_15 : Operation 87 [1/2] (0.67ns)   --->   "%cArray_load_45 = load i4 %cArray_addr_19" [src/aes.cpp:381->src/aes.cpp:473]   --->   Operation 87 'load' 'cArray_load_45' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_15 : Operation 88 [1/1] (0.67ns)   --->   "%store_ln389 = store i32 %cArray_load_43, i4 %cArray_addr_9" [src/aes.cpp:389->src/aes.cpp:473]   --->   Operation 88 'store' 'store_ln389' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_15 : Operation 89 [1/1] (0.67ns)   --->   "%store_ln390 = store i32 %cArray_load_41, i4 %cArray_addr_13" [src/aes.cpp:390->src/aes.cpp:473]   --->   Operation 89 'store' 'store_ln390' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+
+State 16 <SV = 15> <Delay = 0.67>
+ST_16 : Operation 90 [1/1] (0.67ns)   --->   "%store_ln391 = store i32 %cArray_load_39, i4 %cArray_addr_17" [src/aes.cpp:391->src/aes.cpp:473]   --->   Operation 90 'store' 'store_ln391' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_16 : Operation 91 [1/1] (0.67ns)   --->   "%store_ln390 = store i32 %cArray_load_44, i4 %cArray_addr_14" [src/aes.cpp:390->src/aes.cpp:473]   --->   Operation 91 'store' 'store_ln390' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+
+State 17 <SV = 16> <Delay = 0.67>
+ST_17 : Operation 92 [1/1] (0.67ns)   --->   "%store_ln391 = store i32 %cArray_load_42, i4 %cArray_addr_18" [src/aes.cpp:391->src/aes.cpp:473]   --->   Operation 92 'store' 'store_ln391' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_17 : Operation 93 [1/1] (0.67ns)   --->   "%store_ln391 = store i32 %cArray_load_45, i4 %cArray_addr" [src/aes.cpp:391->src/aes.cpp:473]   --->   Operation 93 'store' 'store_ln391' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+
+State 18 <SV = 17> <Delay = 0.00>
+ST_18 : Operation 94 [2/2] (0.00ns)   --->   "%call_ln0 = call void @deAes_return_Pipeline_addRoundKey_label010, i32 %cArray, i32 %w"   --->   Operation 94 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 19 <SV = 18> <Delay = 0.00>
+ST_19 : Operation 95 [1/2] (0.00ns)   --->   "%call_ln0 = call void @deAes_return_Pipeline_addRoundKey_label010, i32 %cArray, i32 %w"   --->   Operation 95 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_19 : Operation 96 [1/1] (0.00ns)   --->   "%ret_ln481 = ret" [src/aes.cpp:481]   --->   Operation 96 'ret' 'ret_ln481' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 40ns, clock uncertainty: 10.8ns.
+
+ <State 1>: 1.17ns
+The critical path consists of the following:
+	wire read operation ('p_read_16') on port 'p_read15' [19]  (0 ns)
+	'call' operation ('call_ln0') to 'deAes_return_Pipeline_convertToIntArray_label0_convertToIntArray_label1' [49]  (1.17 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+ <State 9>: 0.677ns
+The critical path consists of the following:
+	'getelementptr' operation ('cArray_addr_9', src/aes.cpp:355) [36]  (0 ns)
+	'load' operation ('cArray_load', src/aes.cpp:379->src/aes.cpp:473) on array 'cArray', src/aes.cpp:447 [53]  (0.677 ns)
+
+ <State 10>: 1.35ns
+The critical path consists of the following:
+	'load' operation ('cArray_load', src/aes.cpp:379->src/aes.cpp:473) on array 'cArray', src/aes.cpp:447 [53]  (0.677 ns)
+	'store' operation ('store_ln389', src/aes.cpp:389->src/aes.cpp:473) of variable 'cArray_load', src/aes.cpp:379->src/aes.cpp:473 on array 'cArray', src/aes.cpp:447 [68]  (0.677 ns)
+
+ <State 11>: 0.677ns
+The critical path consists of the following:
+	'load' operation ('cArray_load_36', src/aes.cpp:381->src/aes.cpp:473) on array 'cArray', src/aes.cpp:447 [55]  (0.677 ns)
+
+ <State 12>: 0.677ns
+The critical path consists of the following:
+	'load' operation ('cArray_load_38', src/aes.cpp:380->src/aes.cpp:473) on array 'cArray', src/aes.cpp:447 [57]  (0.677 ns)
+
+ <State 13>: 1.35ns
+The critical path consists of the following:
+	'load' operation ('cArray_load_40', src/aes.cpp:379->src/aes.cpp:473) on array 'cArray', src/aes.cpp:447 [59]  (0.677 ns)
+	'store' operation ('store_ln389', src/aes.cpp:389->src/aes.cpp:473) of variable 'cArray_load_40', src/aes.cpp:379->src/aes.cpp:473 on array 'cArray', src/aes.cpp:447 [74]  (0.677 ns)
+
+ <State 14>: 0.677ns
+The critical path consists of the following:
+	'load' operation ('cArray_load_42', src/aes.cpp:381->src/aes.cpp:473) on array 'cArray', src/aes.cpp:447 [61]  (0.677 ns)
+
+ <State 15>: 0.677ns
+The critical path consists of the following:
+	'load' operation ('cArray_load_44', src/aes.cpp:380->src/aes.cpp:473) on array 'cArray', src/aes.cpp:447 [63]  (0.677 ns)
+
+ <State 16>: 0.677ns
+The critical path consists of the following:
+	'store' operation ('store_ln391', src/aes.cpp:391->src/aes.cpp:473) of variable 'cArray_load_39', src/aes.cpp:381->src/aes.cpp:473 on array 'cArray', src/aes.cpp:447 [67]  (0.677 ns)
+
+ <State 17>: 0.677ns
+The critical path consists of the following:
+	'store' operation ('store_ln391', src/aes.cpp:391->src/aes.cpp:473) of variable 'cArray_load_42', src/aes.cpp:381->src/aes.cpp:473 on array 'cArray', src/aes.cpp:447 [70]  (0.677 ns)
+
+ <State 18>: 0ns
+The critical path consists of the following:
+
+ <State 19>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

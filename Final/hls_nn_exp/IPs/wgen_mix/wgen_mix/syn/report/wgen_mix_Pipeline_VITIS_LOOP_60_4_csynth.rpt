@@ -1,0 +1,146 @@
+
+
+================================================================
+== Vitis HLS Report for 'wgen_mix_Pipeline_VITIS_LOOP_60_4'
+================================================================
+* Date:           Sat Jun 18 17:48:36 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        wgen_mix
+* Solution:       wgen_mix (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.140 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_60_4  |        ?|        ?|         1|          1|          1|     ?|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     43|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     36|    -|
+|Register         |        -|    -|      34|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      34|     79|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln62_fu_93_p2                 |         +|   0|  0|  39|          32|           1|
+    |ap_condition_103                  |       and|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  43|          34|           3|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------+----+-----------+-----+-----------+
+    |              Name              | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                     |   9|          2|    1|          2|
+    |ap_sig_allocacmp_inc26169_load  |   9|          2|   32|         64|
+    |inc26169_fu_46                  |   9|          2|   32|         64|
+    |word_TDATA_blk_n                |   9|          2|    1|          2|
+    +--------------------------------+----+-----------+-----+-----------+
+    |Total                           |  36|          8|   66|        132|
+    +--------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------+----+----+-----+-----------+
+    |      Name      | FF | LUT| Bits| Const Bits|
+    +----------------+----+----+-----+-----------+
+    |ap_CS_fsm       |   1|   0|    1|          0|
+    |ap_done_reg     |   1|   0|    1|          0|
+    |inc26169_fu_46  |  32|   0|   32|          0|
+    +----------------+----+----+-----+-----------+
+    |Total           |  34|   0|   34|          0|
+    +----------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-----+------------+-----------------------------------+--------------+
+|      RTL Ports      | Dir | Bits|  Protocol  |           Source Object           |    C Type    |
++---------------------+-----+-----+------------+-----------------------------------+--------------+
+|ap_clk               |   in|    1|  ap_ctrl_hs|  wgen_mix_Pipeline_VITIS_LOOP_60_4|  return value|
+|ap_rst               |   in|    1|  ap_ctrl_hs|  wgen_mix_Pipeline_VITIS_LOOP_60_4|  return value|
+|ap_start             |   in|    1|  ap_ctrl_hs|  wgen_mix_Pipeline_VITIS_LOOP_60_4|  return value|
+|ap_done              |  out|    1|  ap_ctrl_hs|  wgen_mix_Pipeline_VITIS_LOOP_60_4|  return value|
+|ap_idle              |  out|    1|  ap_ctrl_hs|  wgen_mix_Pipeline_VITIS_LOOP_60_4|  return value|
+|ap_ready             |  out|    1|  ap_ctrl_hs|  wgen_mix_Pipeline_VITIS_LOOP_60_4|  return value|
+|word_TVALID          |   in|    1|        axis|                      word_V_data_V|       pointer|
+|word_TDATA           |   in|   24|        axis|                      word_V_data_V|       pointer|
+|wrecv_n_local_load   |   in|   32|     ap_none|                 wrecv_n_local_load|        scalar|
+|word_TREADY          |  out|    1|        axis|                      word_V_dest_V|       pointer|
+|word_TDEST           |   in|    1|        axis|                      word_V_dest_V|       pointer|
+|word_TKEEP           |   in|    3|        axis|                      word_V_keep_V|       pointer|
+|word_TSTRB           |   in|    3|        axis|                      word_V_strb_V|       pointer|
+|word_TUSER           |   in|    1|        axis|                      word_V_user_V|       pointer|
+|word_TLAST           |   in|    1|        axis|                      word_V_last_V|       pointer|
+|word_TID             |   in|    1|        axis|                        word_V_id_V|       pointer|
+|add_ln62_out         |  out|   32|      ap_vld|                       add_ln62_out|       pointer|
+|add_ln62_out_ap_vld  |  out|    1|      ap_vld|                       add_ln62_out|       pointer|
++---------------------+-----+-----+------------+-----------------------------------+--------------+
+

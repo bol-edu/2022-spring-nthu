@@ -1,0 +1,156 @@
+
+
+================================================================
+== Vitis HLS Report for 'CORDIC_V_Pipeline_VITIS_LOOP_94_2'
+================================================================
+* Date:           Fri Jun 17 13:14:58 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        MIMO
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  40.00 ns|  1.224 ns|    10.80 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        2|       11|  80.000 ns|  0.440 us|    2|   11|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count | Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |- VITIS_LOOP_94_2  |        0|        9|         1|          1|          1|  0 ~ 9|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+-------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.42>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%p_Val2_s = alloca i32 1"   --->   Operation 4 'alloca' 'p_Val2_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%p_Val2_135 = alloca i32 1"   --->   Operation 5 'alloca' 'p_Val2_135' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 6 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%k_read = read i4 @_ssdm_op_Read.ap_auto.i4, i4 %k"   --->   Operation 7 'read' 'k_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%temp_x_V_1_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %temp_x_V_1"   --->   Operation 8 'read' 'temp_x_V_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%temp_y_V_1_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %temp_y_V_1"   --->   Operation 9 'read' 'temp_y_V_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.42ns)   --->   "%store_ln0 = store i4 0, i4 %i"   --->   Operation 10 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 11 [1/1] (0.42ns)   --->   "%store_ln0 = store i16 %temp_y_V_1_read, i16 %p_Val2_135"   --->   Operation 11 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 12 [1/1] (0.42ns)   --->   "%store_ln0 = store i16 %temp_x_V_1_read, i16 %p_Val2_s"   --->   Operation 12 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 13 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.22>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%i_27 = load i4 %i" [src/QRD.cpp:94]   --->   Operation 14 'load' 'i_27' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 15 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.72ns)   --->   "%icmp_ln94 = icmp_eq  i4 %i_27, i4 %k_read" [src/QRD.cpp:94]   --->   Operation 16 'icmp' 'icmp_ln94' <Predicate = true> <Delay = 0.72> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 0, i64 9, i64 0"   --->   Operation 17 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.79ns)   --->   "%add_ln94 = add i4 %i_27, i4 1" [src/QRD.cpp:94]   --->   Operation 18 'add' 'add_ln94' <Predicate = true> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln94 = br i1 %icmp_ln94, void %.split, void %._crit_edge.loopexit_ifconv.exitStub" [src/QRD.cpp:94]   --->   Operation 19 'br' 'br_ln94' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%p_Val2_load_1 = load i16 %p_Val2_s"   --->   Operation 20 'load' 'p_Val2_load_1' <Predicate = (!icmp_ln94)> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%p_Val2_135_load_1 = load i16 %p_Val2_135"   --->   Operation 21 'load' 'p_Val2_135_load_1' <Predicate = (!icmp_ln94)> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%specloopname_ln86 = specloopname void @_ssdm_op_SpecLoopName, void @empty_67" [src/QRD.cpp:86]   --->   Operation 22 'specloopname' 'specloopname_ln86' <Predicate = (!icmp_ln94)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i15 @_ssdm_op_PartSelect.i15.i16.i32.i32, i16 %p_Val2_load_1, i32 1, i32 15"   --->   Operation 23 'partselect' 'trunc_ln' <Predicate = (!icmp_ln94)> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%p_Result_s = partset i16 @llvm.part.set.i16.i15, i16 %p_Val2_load_1, i15 %trunc_ln, i32 0, i32 14"   --->   Operation 24 'partset' 'p_Result_s' <Predicate = (!icmp_ln94)> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%trunc_ln265_1 = partselect i15 @_ssdm_op_PartSelect.i15.i16.i32.i32, i16 %p_Val2_135_load_1, i32 1, i32 15"   --->   Operation 25 'partselect' 'trunc_ln265_1' <Predicate = (!icmp_ln94)> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%p_Result_238 = partset i16 @llvm.part.set.i16.i15, i16 %p_Val2_135_load_1, i15 %trunc_ln265_1, i32 0, i32 14"   --->   Operation 26 'partset' 'p_Result_238' <Predicate = (!icmp_ln94)> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.42ns)   --->   "%store_ln94 = store i4 %add_ln94, i4 %i" [src/QRD.cpp:94]   --->   Operation 27 'store' 'store_ln94' <Predicate = (!icmp_ln94)> <Delay = 0.42>
+ST_2 : Operation 28 [1/1] (0.42ns)   --->   "%store_ln323 = store i16 %p_Result_238, i16 %p_Val2_135"   --->   Operation 28 'store' 'store_ln323' <Predicate = (!icmp_ln94)> <Delay = 0.42>
+ST_2 : Operation 29 [1/1] (0.42ns)   --->   "%store_ln323 = store i16 %p_Result_s, i16 %p_Val2_s"   --->   Operation 29 'store' 'store_ln323' <Predicate = (!icmp_ln94)> <Delay = 0.42>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 30 'br' 'br_ln0' <Predicate = (!icmp_ln94)> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%p_Val2_load = load i16 %p_Val2_s"   --->   Operation 31 'load' 'p_Val2_load' <Predicate = (icmp_ln94)> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%p_Val2_135_load = load i16 %p_Val2_135"   --->   Operation 32 'load' 'p_Val2_135_load' <Predicate = (icmp_ln94)> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %temp_y_V_2_out, i16 %p_Val2_135_load"   --->   Operation 33 'write' 'write_ln0' <Predicate = (icmp_ln94)> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %temp_x_V_2_out, i16 %p_Val2_load"   --->   Operation 34 'write' 'write_ln0' <Predicate = (icmp_ln94)> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 35 'ret' 'ret_ln0' <Predicate = (icmp_ln94)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 40ns, clock uncertainty: 10.8ns.
+
+ <State 1>: 0.427ns
+The critical path consists of the following:
+	'alloca' operation ('i') [8]  (0 ns)
+	'store' operation ('store_ln0') of constant 0 on local variable 'i' [12]  (0.427 ns)
+
+ <State 2>: 1.22ns
+The critical path consists of the following:
+	'load' operation ('i', src/QRD.cpp:94) on local variable 'i' [17]  (0 ns)
+	'add' operation ('add_ln94', src/QRD.cpp:94) [21]  (0.797 ns)
+	'store' operation ('store_ln94', src/QRD.cpp:94) of variable 'add_ln94', src/QRD.cpp:94 on local variable 'i' [31]  (0.427 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

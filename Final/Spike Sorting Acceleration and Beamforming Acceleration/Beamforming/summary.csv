@@ -1,0 +1,165 @@
+Profile Summary
+Generated on: 2022-06-20 02:25:24
+Msec since Epoch: 1655663124454
+Profiled application: BF_v3
+Target platform: Xilinx
+Tool version: 2021.1
+XRT build version: 2.12.427
+Build version branch: 2021.2
+Build version hash: 2719b6027e185000fc49783171631db03fc0ef79
+Build version date: N/A
+Target devices: xilinx_u50_gen3x16_xdma_201920_3-0
+Flow mode: System Run
+
+OpenCL API Calls
+API Name,Number Of Calls,Total Time (ms),Minimum Time (ms),Average Time (ms),Maximum Time (ms),
+clCreateBuffer,6,0.220484,0.010199,0.0367473,0.140324,
+clCreateCommandQueue,1,0.024647,0.024647,0.024647,0.024647,
+clCreateContext,1,6.54478,6.54478,6.54478,6.54478,
+clCreateKernel,1,2.42076,2.42076,2.42076,2.42076,
+clCreateProgramWithBinary,1,5769.42,5769.42,5769.42,5769.42,
+clEnqueueMigrateMemObjects,2,6.09459,0.015819,3.04729,6.07877,
+clEnqueueTask,1,0.131015,0.131015,0.131015,0.131015,
+clFinish,2,1.34298,0.120365,0.671489,1.22261,
+clGetDeviceIDs,2,0.004799,0.000872,0.0023995,0.003927,
+clGetDeviceInfo,2,5.53614,0.005179,2.76807,5.53096,
+clGetPlatformIDs,2,0.017212,0.001092,0.008606,0.01612,
+clGetPlatformInfo,2,0.003846,0.000801,0.001923,0.003045,
+clReleaseCommandQueue,1,0.011071,0.011071,0.011071,0.011071,
+clReleaseContext,1,17.9687,17.9687,17.9687,17.9687,
+clReleaseDevice,2,0.006212,0.001503,0.003106,0.004709,
+clReleaseKernel,1,0.143539,0.143539,0.143539,0.143539,
+clReleaseMemObject,18,0.022221,0.000601,0.0012345,0.006112,
+clReleaseProgram,1,2.73714,2.73714,2.73714,2.73714,
+clRetainDevice,2,0.001663,0.000761,0.0008315,0.000902,
+clRetainMemObject,12,0.014397,0.000631,0.00119975,0.004078,
+clSetKernelArg,6,0.0108,0.000731,0.0018,0.006522,
+
+Kernel Execution
+Kernel,Number Of Enqueues,Total Time (ms),Minimum Time (ms),Average Time (ms),Maximum Time (ms),
+beamformer,1,1.03692,1.03692,1.03692,1.03692,
+
+Top Kernel Execution
+Kernel Instance Address,Kernel,Context ID,Command Queue ID,Device,Start Time (ms),Duration (ms),Global Work Size,Local Work Size,
+24949616,beamformer,0,0,xilinx_u50_gen3x16_xdma_201920_3-0,5945.97,1.03692,1:1:1,1:1:1,
+
+Top Memory Writes: Host to Global Memory
+Buffer Address,Context ID,Command Queue ID,Start Time (ms),Duration (ms),Buffer Size (KB),Writing Rate(MB/s),
+0,0,0,5945.78,0.142578,320.384,45.6797,
+
+Top Memory Reads: Host to Global Memory
+Buffer Address,Context ID,Command Queue ID,Start Time (ms),Duration (ms),Buffer Size (KB),Reading Rate(MB/s),
+335872,0,0,5947.13,0.083767,60,5.02602,
+
+Data Transfer: Host to Global Memory
+Context:Number of Devices,Transfer Type,Number Of Buffer Transfers,Transfer Rate (MB/s),Average Bandwidth Utilization (%),Average Buffer Size (KB),Total Time (ms),Average Time (ms),
+context0:1,READ,1,716.273,7.46117,60,0.083767,0.083767,
+context0:1,WRITE,1,2247.08,23.4071,320.384,0.142578,0.142578,
+
+Compute Unit Utilization
+Device,Compute Unit,Kernel,Global Work Size,Local Work Size,Number Of Calls,Dataflow Execution,Max Overlapping Executions,Dataflow Acceleration,Total Time (ms),Minimum Time (ms),Average Time (ms),Maximum Time (ms),Clock Frequency (MHz),
+
+
+
+
+
+
+
+
+
+Guidance Parameters
+Parameter,Element,Value,
+DEVICE_EXEC_TIME,xilinx_u50_gen3x16_xdma_201920_3-0,1.03692,
+NUM_MONITORS,xilinx_u50_gen3x16_xdma_201920_3-0|XCL_PERF_MON_MEMORY|0,0,
+NUM_MONITORS,xilinx_u50_gen3x16_xdma_201920_3-0|XCL_PERF_MON_ACCEL|0,0,
+NUM_MONITORS,xilinx_u50_gen3x16_xdma_201920_3-0|XCL_PERF_MON_STR|0,0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[0],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[1],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[2],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[3],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[4],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[5],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[6],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[7],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[8],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[9],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[10],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[11],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[12],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[13],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[14],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[15],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[16],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[17],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[18],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[19],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[20],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[21],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[22],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[23],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[24],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[25],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[26],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[27],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[28],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[29],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[30],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|HBM[31],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|PLRAM[0],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|PLRAM[1],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|PLRAM[2],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_201920_3-0|PLRAM[3],0,
+PLRAM_DEVICE,all,1,
+HBM_DEVICE,all,1,
+KDMA_DEVICE,all,0,
+P2P_DEVICE,all,0,
+KERNEL_COUNT,beamformer,1,
+TRACE_MEMORY,all,FIFO,
+PLRAM_SIZE_BYTES,xilinx_u50_gen3x16_xdma_201920_3-0,0,
+TRACE_BUFFER_FULL,xilinx_u50_gen3x16_xdma_201920_3-0,false
+MEMORY_TYPE_BIT_WIDTH,xilinx_u50_gen3x16_xdma_201920_3-0|HBM,256,
+MEMORY_TYPE_BIT_WIDTH,xilinx_u50_gen3x16_xdma_201920_3-0|DDR,512,
+MEMORY_TYPE_BIT_WIDTH,xilinx_u50_gen3x16_xdma_201920_3-0|PLRAM,512,
+APPLICATION_RUN_TIME_MS,all,5993.68,
+MIGRATE_MEM,host,2,
+P2P_HOST_TRANSFERS,host,0,
+OBJECTS_RELEASED,all,1,
+CU_CONTEXT_EN,all,0,
+MAX_PARALLEL_KERNEL_ENQUEUES,beamformer,1,
+COMMAND_QUEUE_OOO,24777008,0,
+KERNEL_BUFFER_INFO,beamformer|RXi_in1|HBM[0]|1,160000,
+KERNEL_BUFFER_INFO,beamformer|RXq_in1|HBM[0]|1,160000,
+KERNEL_BUFFER_INFO,beamformer|Wi_in2|HBM[0]|1,192,
+KERNEL_BUFFER_INFO,beamformer|Wq_in2|HBM[0]|1,192,
+KERNEL_BUFFER_INFO,beamformer|Bi_out_r|HBM[0]|1,30000,
+KERNEL_BUFFER_INFO,beamformer|Bq_out_r|HBM[0]|1,30000,
+BUFFER_RD_ACTIVE_TIME_MS,all,0.083767,
+BUFFER_WR_ACTIVE_TIME_MS,all,0.142578,
+BUFFER_TX_ACTIVE_TIME_MS,all,1.43491,
+TOTAL_KERNEL_RUN_TIME_MS,all,0,
+XRT_INI_SETTING,profile,0,Profiling (deprecated)
+XRT_INI_SETTING,opencl_summary,1,Generation of OpenCL summary report
+XRT_INI_SETTING,opencl_device_counter,0,Hardware counters added to OpenCL summary file
+XRT_INI_SETTING,timeline_trace,0,Timeline trace (deprecated)
+XRT_INI_SETTING,native_xrt_trace,0,Generation of Native XRT API function trace
+XRT_INI_SETTING,xrt_trace,0,Generation of hardware SHIM function trace
+XRT_INI_SETTING,xrt_profile,0,Equivalent to xrt_trace (deprecated)
+XRT_INI_SETTING,data_transfer_trace,coarse,Collection of data from PL monitors and added to summary and trace
+XRT_INI_SETTING,power_profile,0,Polling of power data during execution of application
+XRT_INI_SETTING,power_profile_interval_ms,20,Interval for reading power data (in ms)
+XRT_INI_SETTING,stall_trace,off,Enables hardware generation of stalls in compute units
+XRT_INI_SETTING,trace_buffer_size,1M,Size of buffer to allocate for trace (memory offload only)
+XRT_INI_SETTING,verbosity,4,Verbosity level
+XRT_INI_SETTING,continuous_trace,0,Continuous offloading of trace from memory to host
+XRT_INI_SETTING,continuous_trace_interval_ms,10,Interval for offloading trace (in ms; deprecated)
+XRT_INI_SETTING,trace_buffer_offload_interval_ms,10,Interval for reading of device data to host (in ms)
+XRT_INI_SETTING,lop_trace,0,Generation of lower overhead OpenCL trace. Should not be used with other OpenCL options.
+XRT_INI_SETTING,debug_mode,batch,Debug mode (emulation only)
+XRT_INI_SETTING,aie_trace,0,Generation of AI Engine trace
+XRT_INI_SETTING,aie_trace_buffer_size,8M,Size of buffer to allocate for AI Engine trace
+XRT_INI_SETTING,aie_trace_metrics,functions,Configuration level used for AI Engine trace
+XRT_INI_SETTING,aie_profile,0,Generation of AI Engine profiling
+XRT_INI_SETTING,aie_profile_interval_us,1000,Interval for reading AI Engine profile counters (in us)
+XRT_INI_SETTING,aie_profile_core_metrics,heat_map,Metric set for AI Engine core modules
+XRT_INI_SETTING,aie_profile_memory_metrics,conflicts,Metric set for AI Engine memory modules
+XRT_INI_SETTING,vitis_ai_profile,0,Generation of Vitis AI summary and trace (Vitis AI designs only)

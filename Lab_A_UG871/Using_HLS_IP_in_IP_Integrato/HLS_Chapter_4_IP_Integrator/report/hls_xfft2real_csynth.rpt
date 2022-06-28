@@ -1,0 +1,190 @@
+
+
+================================================================
+== Vitis HLS Report for 'hls_xfft2real'
+================================================================
+* Date:           Sun Mar 27 20:44:40 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        hls_laba_be_v2
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  2.882 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |     1041|     1042|  4.164 us|  4.168 us|  530|  530|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------------------------------------------------+------------------------------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                                                 |                                                                              |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                                     Instance                                    |                                    Module                                    |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +---------------------------------------------------------------------------------+------------------------------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |Block_ZN8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode0ELi0EEC2Ei_exit_i45_proc_U0  |Block_ZN8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode0ELi0EEC2Ei_exit_i45_proc  |      255|      255|  1.020 us|  1.020 us|  255|  255|       no|
+        |Loop_realfft_be_buffer_proc1_U0                                                  |Loop_realfft_be_buffer_proc1                                                  |      511|      512|  2.044 us|  2.048 us|  511|  512|       no|
+        |Loop_realfft_be_descramble_proc2_U0                                              |Loop_realfft_be_descramble_proc2                                              |      529|      529|  2.116 us|  2.116 us|  529|  529|       no|
+        +---------------------------------------------------------------------------------+------------------------------------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     42|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    4|    1638|  11909|    -|
+|Memory           |       12|    -|     192|      0|    0|
+|Multiplexer      |        -|    -|       -|     72|    -|
+|Register         |        -|    -|       8|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |       12|    4|    1838|  12023|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        4|    1|       1|     22|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------------------------------------------------+------------------------------------------------------------------------------+---------+----+------+-------+-----+
+    |                                     Instance                                    |                                    Module                                    | BRAM_18K| DSP|  FF  |  LUT  | URAM|
+    +---------------------------------------------------------------------------------+------------------------------------------------------------------------------+---------+----+------+-------+-----+
+    |Block_ZN8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode0ELi0EEC2Ei_exit_i45_proc_U0  |Block_ZN8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode0ELi0EEC2Ei_exit_i45_proc  |        0|   0|   257|  10947|    0|
+    |Loop_realfft_be_buffer_proc1_U0                                                  |Loop_realfft_be_buffer_proc1                                                  |        0|   0|    12|     70|    0|
+    |Loop_realfft_be_descramble_proc2_U0                                              |Loop_realfft_be_descramble_proc2                                              |        0|   4|  1369|    892|    0|
+    +---------------------------------------------------------------------------------+------------------------------------------------------------------------------+---------+----+------+-------+-----+
+    |Total                                                                            |                                                                              |        0|   4|  1638|  11909|    0|
+    +---------------------------------------------------------------------------------+------------------------------------------------------------------------------+---------+----+------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +-----------------------------+---------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |            Memory           |                 Module                | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-----------------------------+---------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |descramble_buf_M_real_V_U    |descramble_buf_M_real_V_RAM_AUTO_2R1W  |        2|  32|   0|    0|   256|   16|     1|         4096|
+    |descramble_buf_M_real_V_1_U  |descramble_buf_M_real_V_RAM_AUTO_2R1W  |        2|  32|   0|    0|   256|   16|     1|         4096|
+    |descramble_buf_M_imag_V_U    |descramble_buf_M_real_V_RAM_AUTO_2R1W  |        2|  32|   0|    0|   256|   16|     1|         4096|
+    |descramble_buf_M_imag_V_1_U  |descramble_buf_M_real_V_RAM_AUTO_2R1W  |        2|  32|   0|    0|   256|   16|     1|         4096|
+    |twid_rom_M_real_V_U          |twid_rom_M_real_V_RAM_AUTO_2R1W        |        2|  32|   0|    0|   512|   16|     1|         8192|
+    |twid_rom_M_imag_V_U          |twid_rom_M_real_V_RAM_AUTO_2R1W        |        2|  32|   0|    0|   512|   16|     1|         8192|
+    +-----------------------------+---------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total                        |                                       |       12| 192|   0|    0|  2048|   96|     6|        32768|
+    +-----------------------------+---------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                                           Variable Name                                          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Block_ZN8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode0ELi0EEC2Ei_exit_i45_proc_U0_ap_continue       |       and|   0|  0|   2|           1|           1|
+    |Block_ZN8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode0ELi0EEC2Ei_exit_i45_proc_U0_ap_start          |       and|   0|  0|   2|           1|           1|
+    |Loop_realfft_be_buffer_proc1_U0_ap_continue                                                       |       and|   0|  0|   2|           1|           1|
+    |Loop_realfft_be_buffer_proc1_U0_ap_start                                                          |       and|   0|  0|   2|           1|           1|
+    |Loop_realfft_be_descramble_proc2_U0_ap_start                                                      |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_descramble_buf_M_imag_V                                                           |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_descramble_buf_M_imag_V_1                                                         |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_descramble_buf_M_real_V                                                           |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_descramble_buf_M_real_V_1                                                         |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_twid_rom_M_imag_V                                                                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_twid_rom_M_real_V                                                                 |       and|   0|  0|   2|           1|           1|
+    |ap_idle                                                                                           |       and|   0|  0|   2|           1|           1|
+    |ap_sync_ready                                                                                     |       and|   0|  0|   2|           1|           1|
+    |ap_sync_Block_ZN8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode0ELi0EEC2Ei_exit_i45_proc_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_Loop_realfft_be_buffer_proc1_U0_ap_ready                                                  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_descramble_buf_M_imag_V                                                     |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_descramble_buf_M_imag_V_1                                                   |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_descramble_buf_M_real_V                                                     |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_descramble_buf_M_real_V_1                                                   |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_twid_rom_M_imag_V                                                           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_twid_rom_M_real_V                                                           |        or|   0|  0|   2|           1|           1|
+    +--------------------------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                                                             |          |   0|  0|  42|          21|          21|
+    +--------------------------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |                                                 Name                                                 | LUT| Input Size| Bits| Total Bits|
+    +------------------------------------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_Block_ZN8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode0ELi0EEC2Ei_exit_i45_proc_U0_ap_ready  |   9|          2|    1|          2|
+    |ap_sync_reg_Loop_realfft_be_buffer_proc1_U0_ap_ready                                                  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_descramble_buf_M_imag_V                                                     |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_descramble_buf_M_imag_V_1                                                   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_descramble_buf_M_real_V                                                     |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_descramble_buf_M_real_V_1                                                   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_twid_rom_M_imag_V                                                           |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_twid_rom_M_real_V                                                           |   9|          2|    1|          2|
+    +------------------------------------------------------------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                                                                                 |  72|         16|    8|         16|
+    +------------------------------------------------------------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------------------------------------------------------------+---+----+-----+-----------+
+    |                                                 Name                                                 | FF| LUT| Bits| Const Bits|
+    +------------------------------------------------------------------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_Block_ZN8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode0ELi0EEC2Ei_exit_i45_proc_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_Loop_realfft_be_buffer_proc1_U0_ap_ready                                                  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_descramble_buf_M_imag_V                                                     |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_descramble_buf_M_imag_V_1                                                   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_descramble_buf_M_real_V                                                     |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_descramble_buf_M_real_V_1                                                   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_twid_rom_M_imag_V                                                           |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_twid_rom_M_real_V                                                           |  1|   0|    1|          0|
+    +------------------------------------------------------------------------------------------------------+---+----+-----+-----------+
+    |Total                                                                                                 |  8|   0|    8|          0|
+    +------------------------------------------------------------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+---------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  | Source Object |    C Type    |
++-------------------+-----+-----+------------+---------------+--------------+
+|ap_local_block     |  out|    1|  ap_ctrl_hs|  hls_xfft2real|  return value|
+|ap_local_deadlock  |  out|    1|  ap_ctrl_hs|  hls_xfft2real|  return value|
+|ap_clk             |   in|    1|  ap_ctrl_hs|  hls_xfft2real|  return value|
+|ap_rst_n           |   in|    1|  ap_ctrl_hs|  hls_xfft2real|  return value|
+|ap_start           |   in|    1|  ap_ctrl_hs|  hls_xfft2real|  return value|
+|ap_done            |  out|    1|  ap_ctrl_hs|  hls_xfft2real|  return value|
+|ap_ready           |  out|    1|  ap_ctrl_hs|  hls_xfft2real|  return value|
+|ap_idle            |  out|    1|  ap_ctrl_hs|  hls_xfft2real|  return value|
+|din_TDATA          |   in|   48|        axis|            din|       pointer|
+|din_TVALID         |   in|    1|        axis|            din|       pointer|
+|din_TREADY         |  out|    1|        axis|            din|       pointer|
+|dout_TDATA         |  out|   32|        axis|           dout|       pointer|
+|dout_TVALID        |  out|    1|        axis|           dout|       pointer|
+|dout_TREADY        |   in|    1|        axis|           dout|       pointer|
++-------------------+-----+-----+------------+---------------+--------------+
+

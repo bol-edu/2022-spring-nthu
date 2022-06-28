@@ -1,0 +1,214 @@
+
+
+================================================================
+== Vitis HLS Report for 'colorthresholding_9_0_3_2160_3840_1_Block_split2_proc'
+================================================================
+* Date:           Sun May  1 11:32:03 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        color_detect
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu50-fsvh2104-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  1.217 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    0|    0|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+--------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT  | URAM|
++---------------------+---------+------+---------+--------+-----+
+|DSP                  |        -|     -|        -|       -|    -|
+|Expression           |        -|     -|        0|       2|    -|
+|FIFO                 |        -|     -|        -|       -|    -|
+|Instance             |        -|     -|        -|       -|    -|
+|Memory               |        -|     -|        -|       -|    -|
+|Multiplexer          |        -|     -|        -|     207|    -|
+|Register             |        -|     -|      178|       -|    -|
++---------------------+---------+------+---------+--------+-----+
+|Total                |        0|     0|      178|     209|    0|
++---------------------+---------+------+---------+--------+-----+
+|Available SLR        |     1344|  2976|   871680|  435840|  320|
++---------------------+---------+------+---------+--------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|      ~0|    0|
++---------------------+---------+------+---------+--------+-----+
+|Available            |     2688|  5952|  1743360|  871680|  640|
++---------------------+---------+------+---------+--------+-----+
+|Utilization (%)      |        0|     0|       ~0|      ~0|    0|
++---------------------+---------+------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------+----+-----------+-----+-----------+
+    |         Name         | LUT| Input Size| Bits| Total Bits|
+    +----------------------+----+-----------+-----+-----------+
+    |ap_done               |   9|          2|    1|          2|
+    |ap_return_0           |   9|          2|    8|         16|
+    |ap_return_1           |   9|          2|    8|         16|
+    |ap_return_10          |   9|          2|    8|         16|
+    |ap_return_11          |   9|          2|    8|         16|
+    |ap_return_12          |   9|          2|    8|         16|
+    |ap_return_13          |   9|          2|    8|         16|
+    |ap_return_14          |   9|          2|    8|         16|
+    |ap_return_15          |   9|          2|    8|         16|
+    |ap_return_16          |   9|          2|    8|         16|
+    |ap_return_17          |   9|          2|    8|         16|
+    |ap_return_18          |   9|          2|   16|         32|
+    |ap_return_19          |   9|          2|   16|         32|
+    |ap_return_2           |   9|          2|    8|         16|
+    |ap_return_3           |   9|          2|    8|         16|
+    |ap_return_4           |   9|          2|    8|         16|
+    |ap_return_5           |   9|          2|    8|         16|
+    |ap_return_6           |   9|          2|    8|         16|
+    |ap_return_7           |   9|          2|    8|         16|
+    |ap_return_8           |   9|          2|    8|         16|
+    |ap_return_9           |   9|          2|    8|         16|
+    |p_src_mat_cols_blk_n  |   9|          2|    1|          2|
+    |p_src_mat_rows_blk_n  |   9|          2|    1|          2|
+    +----------------------+----+-----------+-----+-----------+
+    |Total                 | 207|         46|  179|        358|
+    +----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------+----+----+-----+-----------+
+    |        Name       | FF | LUT| Bits| Const Bits|
+    +-------------------+----+----+-----+-----------+
+    |ap_CS_fsm          |   1|   0|    1|          0|
+    |ap_done_reg        |   1|   0|    1|          0|
+    |ap_return_0_preg   |   8|   0|    8|          0|
+    |ap_return_10_preg  |   8|   0|    8|          0|
+    |ap_return_11_preg  |   8|   0|    8|          0|
+    |ap_return_12_preg  |   8|   0|    8|          0|
+    |ap_return_13_preg  |   8|   0|    8|          0|
+    |ap_return_14_preg  |   8|   0|    8|          0|
+    |ap_return_15_preg  |   8|   0|    8|          0|
+    |ap_return_16_preg  |   8|   0|    8|          0|
+    |ap_return_17_preg  |   8|   0|    8|          0|
+    |ap_return_18_preg  |  16|   0|   16|          0|
+    |ap_return_19_preg  |  16|   0|   16|          0|
+    |ap_return_1_preg   |   8|   0|    8|          0|
+    |ap_return_2_preg   |   8|   0|    8|          0|
+    |ap_return_3_preg   |   8|   0|    8|          0|
+    |ap_return_4_preg   |   8|   0|    8|          0|
+    |ap_return_5_preg   |   8|   0|    8|          0|
+    |ap_return_6_preg   |   8|   0|    8|          0|
+    |ap_return_7_preg   |   8|   0|    8|          0|
+    |ap_return_8_preg   |   8|   0|    8|          0|
+    |ap_return_9_preg   |   8|   0|    8|          0|
+    +-------------------+----+----+-----+-----------+
+    |Total              | 178|   0|  178|          0|
+    +-------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+--------------------------------------------------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |                         Source Object                        |    C Type    |
++------------------------+-----+-----+------------+--------------------------------------------------------------+--------------+
+|ap_clk                  |   in|    1|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|ap_continue             |   in|    1|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|ap_return_0             |  out|    8|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|ap_return_1             |  out|    8|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|ap_return_2             |  out|    8|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|ap_return_3             |  out|    8|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|ap_return_4             |  out|    8|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|ap_return_5             |  out|    8|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|ap_return_6             |  out|    8|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|ap_return_7             |  out|    8|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|ap_return_8             |  out|    8|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|ap_return_9             |  out|    8|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|ap_return_10            |  out|    8|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|ap_return_11            |  out|    8|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|ap_return_12            |  out|    8|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|ap_return_13            |  out|    8|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|ap_return_14            |  out|    8|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|ap_return_15            |  out|    8|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|ap_return_16            |  out|    8|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|ap_return_17            |  out|    8|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|ap_return_18            |  out|   16|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|ap_return_19            |  out|   16|  ap_ctrl_hs|  colorthresholding<9, 0, 3, 2160, 3840, 1>_Block_.split2_proc|  return value|
+|p_read                  |   in|    8|     ap_none|                                                        p_read|        scalar|
+|p_read2                 |   in|    8|     ap_none|                                                       p_read2|        scalar|
+|p_read6                 |   in|    8|     ap_none|                                                       p_read6|        scalar|
+|p_read10                |   in|    8|     ap_none|                                                      p_read10|        scalar|
+|p_read14                |   in|    8|     ap_none|                                                      p_read14|        scalar|
+|p_read18                |   in|    8|     ap_none|                                                      p_read18|        scalar|
+|p_read22                |   in|    8|     ap_none|                                                      p_read22|        scalar|
+|p_read26                |   in|    8|     ap_none|                                                      p_read26|        scalar|
+|p_read30                |   in|    8|     ap_none|                                                      p_read30|        scalar|
+|p_read34                |   in|    8|     ap_none|                                                      p_read34|        scalar|
+|p_read38                |   in|    8|     ap_none|                                                      p_read38|        scalar|
+|p_read42                |   in|    8|     ap_none|                                                      p_read42|        scalar|
+|p_read46                |   in|    8|     ap_none|                                                      p_read46|        scalar|
+|p_read50                |   in|    8|     ap_none|                                                      p_read50|        scalar|
+|p_read54                |   in|    8|     ap_none|                                                      p_read54|        scalar|
+|p_read58                |   in|    8|     ap_none|                                                      p_read58|        scalar|
+|p_read62                |   in|    8|     ap_none|                                                      p_read62|        scalar|
+|p_read66                |   in|    8|     ap_none|                                                      p_read66|        scalar|
+|p_src_mat_rows_dout     |   in|   16|     ap_fifo|                                                p_src_mat_rows|       pointer|
+|p_src_mat_rows_empty_n  |   in|    1|     ap_fifo|                                                p_src_mat_rows|       pointer|
+|p_src_mat_rows_read     |  out|    1|     ap_fifo|                                                p_src_mat_rows|       pointer|
+|p_src_mat_cols_dout     |   in|   16|     ap_fifo|                                                p_src_mat_cols|       pointer|
+|p_src_mat_cols_empty_n  |   in|    1|     ap_fifo|                                                p_src_mat_cols|       pointer|
+|p_src_mat_cols_read     |  out|    1|     ap_fifo|                                                p_src_mat_cols|       pointer|
++------------------------+-----+-----+------------+--------------------------------------------------------------+--------------+
+

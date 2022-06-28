@@ -1,0 +1,128 @@
+
+
+================================================================
+== Synthesis Summary Report of 'stream8rto8'
+================================================================
++ General Information: 
+    * Date:           Sat Jun 18 17:57:24 2022
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+    * Project:        stream8rto8
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |    Modules    | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |    |           |           |     |
+    |    & Loops    | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT    | URAM|
+    +---------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |+ stream8rto8  |     -|  3.75|        1|  10.000|         -|        2|     -|        no|     -|   -|  180 (~0%)|  279 (~0%)|    -|
+    +---------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 6             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+-----------+--------+-------+--------+------------------------+---------------+
+| Interface     | Register  | Offset | Width | Access | Description            | Bit Fields    |
++---------------+-----------+--------+-------+--------+------------------------+---------------+
+| s_axi_control | recv      | 0x10   | 32    | R      | Data signal of recv    |               |
+| s_axi_control | recv_ctrl | 0x14   | 32    | R      | Control signal of recv | 0=recv_ap_vld |
+| s_axi_control | send      | 0x20   | 32    | R      | Data signal of send    |               |
+| s_axi_control | send_ctrl | 0x24   | 32    | R      | Control signal of send | 0=send_ap_vld |
++---------------+-----------+--------+-------+--------+------------------------+---------------+
+
+* AXIS
++-----------+---------------+-------+-------+-------+--------+-------+--------+
+| Interface | Register Mode | TDATA | TKEEP | TLAST | TREADY | TSTRB | TVALID |
++-----------+---------------+-------+-------+-------+--------+-------+--------+
+| pin8      | both          | 8     |       |       | 1      |       | 1      |
+| pout8     | both          | 8     | 1     | 1     | 1      | 1     | 1      |
++-----------+---------------+-------+-------+-------+--------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+----------+
+| Interface | Type         | Ports    |
++-----------+--------------+----------+
+| ap_clk    | clock        | ap_clk   |
+| ap_rst_n  | reset        | ap_rst_n |
+| ap_ctrl   | ap_ctrl_none |          |
++-----------+--------------+----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+--------------------------------------------+
+| Argument | Direction | Datatype                                   |
++----------+-----------+--------------------------------------------+
+| pin8     | in        | stream<unsigned char, 0>*                  |
+| pout8    | out       | stream<hls::axis<ap_uint<8>, 0, 0, 0>, 0>* |
+| recv     | out       | int&                                       |
+| send     | out       | int&                                       |
++----------+-----------+--------------------------------------------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+-------------------------------------+
+| Argument | HW Interface  | HW Type   | HW Info                             |
++----------+---------------+-----------+-------------------------------------+
+| pin8     | pin8          | interface |                                     |
+| pout8    | pout8         | interface |                                     |
+| recv     | s_axi_control | register  | name=recv offset=0x10 range=32      |
+| recv     | s_axi_control | register  | name=recv_ctrl offset=0x14 range=32 |
+| send     | s_axi_control | register  | name=send offset=0x20 range=32      |
+| send     | s_axi_control | register  | name=send_ctrl offset=0x24 range=32 |
++----------+---------------+-----------+-------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++---------------+-----+--------+----------+-----+--------+---------+
+| Name          | DSP | Pragma | Variable | Op  | Impl   | Latency |
++---------------+-----+--------+----------+-----+--------+---------+
+| + stream8rto8 | 0   |        |          |     |        |         |
+|   recv        | -   |        | add_ln13 | add | fabric | 0       |
+|   send        | -   |        | add_ln20 | add | fabric | 0       |
++---------------+-----+--------+----------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+--------------------------+------------------------------------------+
+| Type      | Options                  | Location                                 |
++-----------+--------------------------+------------------------------------------+
+| interface | axis port=pin8           | stream8rto8.cpp:4 in stream8rto8, pin8   |
+| interface | axis port=pout8          | stream8rto8.cpp:5 in stream8rto8, pout8  |
+| interface | s_axilite port=recv      | stream8rto8.cpp:6 in stream8rto8, recv   |
+| interface | s_axilite port=send      | stream8rto8.cpp:7 in stream8rto8, send   |
+| interface | ap_ctrl_none port=return | stream8rto8.cpp:8 in stream8rto8, return |
++-----------+--------------------------+------------------------------------------+
+
+

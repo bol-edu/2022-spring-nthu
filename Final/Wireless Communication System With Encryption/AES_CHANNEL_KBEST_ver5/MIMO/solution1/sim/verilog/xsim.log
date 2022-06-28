@@ -1,0 +1,177 @@
+#-----------------------------------------------------------
+# xsim v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Fri Jun 17 13:18:42 2022
+# Process ID: 2352
+# Current directory: D:/NTHU/HLS/FINAL/ASE_CHANNEL_KBEST_ver5/MIMO/solution1/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/TOP/xsim_script.tcl}
+# Log file: D:/NTHU/HLS/FINAL/ASE_CHANNEL_KBEST_ver5/MIMO/solution1/sim/verilog/xsim.log
+# Journal file: D:/NTHU/HLS/FINAL/ASE_CHANNEL_KBEST_ver5/MIMO/solution1/sim/verilog\xsim.jou
+# Running On: Cliff, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 12, Host memory: 34088 MB
+#-----------------------------------------------------------
+source xsim.dir/TOP/xsim_script.tcl
+# xsim {TOP} -view {{TOP_dataflow_ana.wcfg}} -tclbatch {TOP.tcl} -protoinst {TOP.protoinst}
+INFO: [Wavedata 42-565] Reading protoinst file TOP.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP//AESL_inst_TOP_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/AES_En_De27_U0/AES_En_De27_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/AES_En_De27_U0/grp_aes_return_fu_643/grp_addRoundKey_fu_322/grp_addRoundKey_fu_322_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/AES_En_De27_U0/grp_aes_return_fu_643/grp_aes_return_Pipeline_aes_return_label12_fu_332/grp_addRoundKey_fu_369/grp_addRoundKey_fu_369_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/AES_En_De27_U0/grp_aes_return_fu_643/grp_aes_return_Pipeline_aes_return_label12_fu_332/grp_aes_return_Pipeline_aes_return_label12_fu_332_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/AES_En_De27_U0/grp_aes_return_fu_643/grp_aes_return_Pipeline_convertToIntArray_label0_convertToIntArray_label1_fu_284/grp_aes_return_Pipeline_convertToIntArray_label0_convertToIntArray_label1_fu_284_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/AES_En_De27_U0/grp_aes_return_fu_643/grp_aes_return_Pipeline_subBytes_label0_subBytes_label7_fu_341/grp_aes_return_Pipeline_subBytes_label0_subBytes_label7_fu_341_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/AES_En_De27_U0/grp_aes_return_fu_643/grp_aes_return_fu_643_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/AES_En_De27_U0/grp_extendKey_fu_633/grp_extendKey_Pipeline_extendKey_label0_fu_20/grp_extendKey_Pipeline_extendKey_label0_fu_20_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/AES_En_De27_U0/grp_extendKey_fu_633/grp_extendKey_Pipeline_extendKey_label5_fu_12/grp_extendKey_Pipeline_extendKey_label5_fu_12_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/AES_En_De27_U0/grp_extendKey_fu_633/grp_extendKey_fu_633_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/AES_En_De_128_U0/AES_En_De_128_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/AES_En_De_128_U0/grp_deAes_return_fu_643/grp_deAes_return_Pipeline_addRoundKey_label010_fu_349/grp_deAes_return_Pipeline_addRoundKey_label010_fu_349_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/AES_En_De_128_U0/grp_deAes_return_fu_643/grp_deAes_return_Pipeline_addRoundKey_label0_fu_325/grp_deAes_return_Pipeline_addRoundKey_label0_fu_325_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/AES_En_De_128_U0/grp_deAes_return_fu_643/grp_deAes_return_Pipeline_convertToIntArray_label0_convertToIntArray_label1_fu_287/grp_deAes_return_Pipeline_convertToIntArray_label0_convertToIntArray_label1_fu_287_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/AES_En_De_128_U0/grp_deAes_return_fu_643/grp_deAes_return_Pipeline_deAes_return_label22_fu_332/grp_deAes_return_Pipeline_deAes_return_label22_fu_332_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/AES_En_De_128_U0/grp_deAes_return_fu_643/grp_deAes_return_Pipeline_deAes_return_label22_fu_332/grp_deMixColumns_fu_542/grp_deMixColumns_fu_542_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/AES_En_De_128_U0/grp_deAes_return_fu_643/grp_deAes_return_Pipeline_deAes_return_label22_fu_332/grp_deMixColumns_fu_548/grp_deMixColumns_fu_548_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/AES_En_De_128_U0/grp_deAes_return_fu_643/grp_deAes_return_Pipeline_deSubBytes_label1_deSubBytes_label13_fu_342/grp_deAes_return_Pipeline_deSubBytes_label1_deSubBytes_label13_fu_342_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/AES_En_De_128_U0/grp_deAes_return_fu_643/grp_deAes_return_fu_643_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/AES_En_De_128_U0/grp_extendKey_fu_633/grp_extendKey_Pipeline_extendKey_label0_fu_20/grp_extendKey_Pipeline_extendKey_label0_fu_20_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/AES_En_De_128_U0/grp_extendKey_fu_633/grp_extendKey_Pipeline_extendKey_label5_fu_12/grp_extendKey_Pipeline_extendKey_label5_fu_12_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/AES_En_De_128_U0/grp_extendKey_fu_633/grp_extendKey_fu_633_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/AWGN_1_U0/AWGN_1_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/AWGN_1_U0/grp_AWGN_1_Pipeline_VITIS_LOOP_15_1_fu_72/grp_AWGN_1_Pipeline_VITIS_LOOP_15_1_fu_72_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/AWGN_1_U0/grp_seedInitialization_fu_58/grp_seedInitialization_Pipeline_SEED_INIT_LOOP_fu_94/grp_seedInitialization_Pipeline_SEED_INIT_LOOP_fu_94_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/AWGN_1_U0/grp_seedInitialization_fu_58/grp_seedInitialization_fu_58_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/DeModulation_U0/DeModulation_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/KBEST_U0/KBEST_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/KBEST_U0/grp_KBEST_Pipeline_1_fu_840/grp_KBEST_Pipeline_1_fu_840_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/KBEST_U0/grp_KBEST_Pipeline_VITIS_LOOP_104_12_fu_953/grp_KBEST_Pipeline_VITIS_LOOP_104_12_fu_953_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/KBEST_U0/grp_KBEST_Pipeline_VITIS_LOOP_21_1_fu_876/grp_KBEST_Pipeline_VITIS_LOOP_21_1_fu_876_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/KBEST_U0/grp_KBEST_Pipeline_VITIS_LOOP_31_3_fu_884/grp_KBEST_Pipeline_VITIS_LOOP_31_3_fu_884_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/KBEST_U0/grp_KBEST_Pipeline_VITIS_LOOP_48_5_fu_891/grp_KBEST_Pipeline_VITIS_LOOP_48_5_fu_891_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/KBEST_U0/grp_KBEST_Pipeline_VITIS_LOOP_57_7_fu_960/grp_KBEST_Pipeline_VITIS_LOOP_57_7_fu_960_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/KBEST_U0/grp_KBEST_Pipeline_VITIS_LOOP_75_8_VITIS_LOOP_76_9_fu_1001/grp_KBEST_Pipeline_VITIS_LOOP_75_8_VITIS_LOOP_76_9_fu_1001_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/KBEST_U0/grp_KBEST_Pipeline_VITIS_LOOP_94_11_fu_1070/grp_KBEST_Pipeline_VITIS_LOOP_94_11_fu_1070_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/Modulation_U0/Modulation_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/QRD_U0/QRD_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/QRD_U0/grp_CORDIC_R_fu_3054/grp_CORDIC_R_Pipeline_VITIS_LOOP_32_2_fu_163/grp_CORDIC_R_Pipeline_VITIS_LOOP_32_2_fu_163_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/QRD_U0/grp_CORDIC_R_fu_3054/grp_CORDIC_R_fu_3054_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/QRD_U0/grp_CORDIC_R_fu_3072/grp_CORDIC_R_Pipeline_VITIS_LOOP_32_2_fu_163/grp_CORDIC_R_Pipeline_VITIS_LOOP_32_2_fu_163_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/QRD_U0/grp_CORDIC_R_fu_3072/grp_CORDIC_R_fu_3072_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/QRD_U0/grp_CORDIC_R_fu_3081/grp_CORDIC_R_Pipeline_VITIS_LOOP_32_2_fu_163/grp_CORDIC_R_Pipeline_VITIS_LOOP_32_2_fu_163_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/QRD_U0/grp_CORDIC_R_fu_3081/grp_CORDIC_R_fu_3081_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/QRD_U0/grp_CORDIC_R_fu_3090/grp_CORDIC_R_Pipeline_VITIS_LOOP_32_2_fu_163/grp_CORDIC_R_Pipeline_VITIS_LOOP_32_2_fu_163_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/QRD_U0/grp_CORDIC_R_fu_3090/grp_CORDIC_R_fu_3090_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/QRD_U0/grp_CORDIC_R_fu_3099/grp_CORDIC_R_Pipeline_VITIS_LOOP_32_2_fu_163/grp_CORDIC_R_Pipeline_VITIS_LOOP_32_2_fu_163_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/QRD_U0/grp_CORDIC_R_fu_3099/grp_CORDIC_R_fu_3099_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/QRD_U0/grp_CORDIC_R_fu_3108/grp_CORDIC_R_Pipeline_VITIS_LOOP_32_2_fu_163/grp_CORDIC_R_Pipeline_VITIS_LOOP_32_2_fu_163_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/QRD_U0/grp_CORDIC_R_fu_3108/grp_CORDIC_R_fu_3108_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/QRD_U0/grp_CORDIC_V_fu_3039/grp_CORDIC_V_Pipeline_VITIS_LOOP_94_2_fu_179/grp_CORDIC_V_Pipeline_VITIS_LOOP_94_2_fu_179_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/QRD_U0/grp_CORDIC_V_fu_3039/grp_CORDIC_V_fu_3039_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/QRD_U0/grp_QRD_Pipeline_CHANNEL2REAL_fu_2983/grp_QRD_Pipeline_CHANNEL2REAL_fu_2983_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/QRD_U0/grp_QRD_Pipeline_LOOP_01_fu_3120/grp_QRD_Pipeline_LOOP_01_fu_3120_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/QRD_U0/grp_QRD_Pipeline_LOOP_02_VITIS_LOOP_260_6_fu_3215/grp_QRD_Pipeline_LOOP_02_VITIS_LOOP_260_6_fu_3215_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/QRD_U0/grp_QRD_Pipeline_VITIS_LOOP_277_8_fu_3285/grp_QRD_Pipeline_VITIS_LOOP_277_8_fu_3285_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/QRD_U0/grp_QRD_Pipeline_VITIS_LOOP_325_9_VITIS_LOOP_326_10_fu_3420/grp_QRD_Pipeline_VITIS_LOOP_325_9_VITIS_LOOP_326_10_fu_3420_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/Rayleigh_1_U0/Rayleigh_1_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/Rayleigh_1_U0/grp_seedInitialization_fu_452/grp_seedInitialization_Pipeline_SEED_INIT_LOOP_fu_94/grp_seedInitialization_Pipeline_SEED_INIT_LOOP_fu_94_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/Rayleigh_1_U0/grp_seedInitialization_fu_452/grp_seedInitialization_fu_452_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/channel_mult_U0/channel_mult_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/channel_mult_U0/grp_channel_mult_Pipeline_CHANNEL2REAL_fu_282/grp_channel_mult_Pipeline_CHANNEL2REAL_fu_282_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/channel_mult_U0/grp_channel_mult_Pipeline_VITIS_LOOP_63_1_fu_354/grp_channel_mult_Pipeline_VITIS_LOOP_63_1_fu_354_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/entry_proc_U0/entry_proc_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/matrix_mult_U0/grp_matrix_mult_Pipeline_VITIS_LOOP_88_1_fu_26/grp_matrix_mult_Pipeline_VITIS_LOOP_88_1_fu_26_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/matrix_mult_U0/grp_matrix_mult_Pipeline_VITIS_LOOP_94_2_fu_34/grp_matrix_mult_Pipeline_VITIS_LOOP_94_2_fu_34_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/matrix_mult_U0/matrix_mult_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/split_1_U0/split_1_U0_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_TOP_top/AESL_inst_TOP/split_U0/split_U0_activity
+Time resolution is 1 ps
+open_wave_config TOP_dataflow_ana.wcfg
+WARNING: Simulation object /apatb_TOP_top/AESL_inst_TOP/AES_En_De27_U0/S29_address0 was not found in the design.
+WARNING: Simulation object /apatb_TOP_top/AESL_inst_TOP/AES_En_De27_U0/S29_q0 was not found in the design.
+WARNING: Simulation object /apatb_TOP_top/AESL_inst_TOP/AES_En_De27_U0/S29_ce0 was not found in the design.
+WARNING: Simulation object /apatb_TOP_top/AESL_inst_TOP/AES_En_De27_U0/Rcon_address0 was not found in the design.
+WARNING: Simulation object /apatb_TOP_top/AESL_inst_TOP/AES_En_De27_U0/Rcon_q0 was not found in the design.
+WARNING: Simulation object /apatb_TOP_top/AESL_inst_TOP/AES_En_De27_U0/Rcon_ce0 was not found in the design.
+WARNING: Simulation object /apatb_TOP_top/AESL_inst_TOP/AES_En_De27_U0/S_address0 was not found in the design.
+WARNING: Simulation object /apatb_TOP_top/AESL_inst_TOP/AES_En_De27_U0/S_q0 was not found in the design.
+WARNING: Simulation object /apatb_TOP_top/AESL_inst_TOP/AES_En_De27_U0/S_ce0 was not found in the design.
+WARNING: Simulation object /apatb_TOP_top/AESL_inst_TOP/QRD_U0/cordic_phase_V30_address0 was not found in the design.
+WARNING: Simulation object /apatb_TOP_top/AESL_inst_TOP/QRD_U0/cordic_phase_V30_q0 was not found in the design.
+WARNING: Simulation object /apatb_TOP_top/AESL_inst_TOP/QRD_U0/cordic_phase_V30_ce0 was not found in the design.
+WARNING: Simulation object /apatb_TOP_top/AESL_inst_TOP/QRD_U0/cordic_phase_V_address0 was not found in the design.
+WARNING: Simulation object /apatb_TOP_top/AESL_inst_TOP/QRD_U0/cordic_phase_V_q0 was not found in the design.
+WARNING: Simulation object /apatb_TOP_top/AESL_inst_TOP/QRD_U0/cordic_phase_V_ce0 was not found in the design.
+WARNING: Simulation object /apatb_TOP_top/AESL_inst_TOP/AES_En_De_128_U0/S29_address0 was not found in the design.
+WARNING: Simulation object /apatb_TOP_top/AESL_inst_TOP/AES_En_De_128_U0/S29_q0 was not found in the design.
+WARNING: Simulation object /apatb_TOP_top/AESL_inst_TOP/AES_En_De_128_U0/S29_ce0 was not found in the design.
+WARNING: Simulation object /apatb_TOP_top/AESL_inst_TOP/AES_En_De_128_U0/Rcon_address0 was not found in the design.
+WARNING: Simulation object /apatb_TOP_top/AESL_inst_TOP/AES_En_De_128_U0/Rcon_q0 was not found in the design.
+WARNING: Simulation object /apatb_TOP_top/AESL_inst_TOP/AES_En_De_128_U0/Rcon_ce0 was not found in the design.
+WARNING: Simulation object /apatb_TOP_top/AESL_inst_TOP/AES_En_De_128_U0/S2_address0 was not found in the design.
+WARNING: Simulation object /apatb_TOP_top/AESL_inst_TOP/AES_En_De_128_U0/S2_q0 was not found in the design.
+WARNING: Simulation object /apatb_TOP_top/AESL_inst_TOP/AES_En_De_128_U0/S2_ce0 was not found in the design.
+open_wave_config: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1204.383 ; gain = 0.000
+source TOP.tcl
+## log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+## set return_group [add_wave_group return(axi_slave) -into $coutputgroup]
+## add_wave /apatb_TOP_top/AESL_inst_TOP/out_data_write -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_TOP_top/AESL_inst_TOP/out_data_full_n -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_TOP_top/AESL_inst_TOP/out_data_din -into $return_group -radix hex
+## add_wave /apatb_TOP_top/AESL_inst_TOP/ap_local_deadlock -into $return_group -radix hex
+## add_wave /apatb_TOP_top/AESL_inst_TOP/ap_local_block -into $return_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set return_group [add_wave_group return(fifo) -into $cinputgroup]
+## add_wave /apatb_TOP_top/AESL_inst_TOP/SNR -into $return_group -radix hex
+## add_wave /apatb_TOP_top/AESL_inst_TOP/in_data_read -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_TOP_top/AESL_inst_TOP/in_data_empty_n -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_TOP_top/AESL_inst_TOP/in_data_dout -into $return_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_TOP_top/AESL_inst_TOP/ap_start -into $blocksiggroup
+## add_wave /apatb_TOP_top/AESL_inst_TOP/ap_done -into $blocksiggroup
+## add_wave /apatb_TOP_top/AESL_inst_TOP/ap_ready -into $blocksiggroup
+## add_wave /apatb_TOP_top/AESL_inst_TOP/ap_idle -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_TOP_top/AESL_inst_TOP/ap_rst -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_TOP_top/AESL_inst_TOP/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_TOP_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_TOP_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_TOP_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_TOP_top/LENGTH_in_data -into $tb_portdepth_group -radix hex
+## add_wave /apatb_TOP_top/LENGTH_out_data -into $tb_portdepth_group -radix hex
+## add_wave /apatb_TOP_top/LENGTH_SNR -into $tb_portdepth_group -radix hex
+## set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
+## set tb_return_group [add_wave_group return(axi_slave) -into $tbcoutputgroup]
+## add_wave /apatb_TOP_top/out_data_write -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_TOP_top/out_data_full_n -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_TOP_top/out_data_din -into $tb_return_group -radix hex
+## add_wave /apatb_TOP_top/ap_local_deadlock -into $tb_return_group -radix hex
+## add_wave /apatb_TOP_top/ap_local_block -into $tb_return_group -radix hex
+## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+## set tb_return_group [add_wave_group return(fifo) -into $tbcinputgroup]
+## add_wave /apatb_TOP_top/SNR -into $tb_return_group -radix hex
+## add_wave /apatb_TOP_top/in_data_read -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_TOP_top/in_data_empty_n -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_TOP_top/in_data_dout -into $tb_return_group -radix hex
+## save_wave_config TOP.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "180000"
+// RTL Simulation : 1 / 1 [100.00%] @ "695020000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 695260 ns : File "D:/NTHU/HLS/FINAL/ASE_CHANNEL_KBEST_ver5/MIMO/solution1/sim/verilog/TOP.autotb.v" Line 332
+run: Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 1204.383 ; gain = 0.000
+## quit
+INFO: xsimkernel Simulation Memory Usage: 163424 KB (Peak: 163424 KB), Simulation CPU Usage: 15608 ms
+INFO: [Common 17-206] Exiting xsim at Fri Jun 17 13:19:14 2022...

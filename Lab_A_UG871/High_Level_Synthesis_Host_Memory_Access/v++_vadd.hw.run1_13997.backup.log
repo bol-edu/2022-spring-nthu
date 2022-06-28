@@ -1,0 +1,196 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link
+	Log files: /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/logs/link
+INFO: [v++ 60-1548] Creating build summary session with primary output /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/vadd.hw.run1.xclbin.link_summary, at Thu Mar 24 17:53:06 2022
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Thu Mar 24 17:53:06 2022
+INFO: [v++ 60-1315] Creating rulecheck session with output '/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link/v++_link_vadd.hw.run1_guidance.html', at Thu Mar 24 17:53:08 2022
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3/xilinx_u50_gen3x16_xdma_201920_3.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2021.2
+INFO: [v++ 60-1302] Platform 'xilinx_u50_gen3x16_xdma_201920_3.xpfm' has been explicitly enabled for this release.
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u50_gen3x16_xdma_201920_3
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [17:53:11] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/vadd.hw.xo -keep --config /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3/xilinx_u50_gen3x16_xdma_201920_3.xpfm --target hw --output_dir /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int --temp_dir /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/run_link
+INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Thu Mar 24 17:53:13 2022
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/vadd.hw.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [17:53:13] build_xd_ip_db started: /opt/Xilinx/Vitis/2021.2/bin/build_xd_ip_db -ip_search 0  -sds-pf /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/sys_link/hw.hpfm -clkid 0 -ip /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/sys_link/iprepo/xilinx_com_hls_vadd_1_0,vadd -o /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [17:53:17] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2148.113 ; gain = 0.000 ; free physical = 30519 ; free virtual = 234855
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [17:53:17] cfgen started: /opt/Xilinx/Vitis/2021.2/bin/cfgen  -nk vadd:15:vadd_1.vadd_2.vadd_3.vadd_4.vadd_5.vadd_6.vadd_7.vadd_8.vadd_9.vadd_10.vadd_11.vadd_12.vadd_13.vadd_14.vadd_15 -slr vadd_1:SLR1 -slr vadd_2:SLR1 -slr vadd_3:SLR1 -slr vadd_4:SLR1 -slr vadd_5:SLR1 -slr vadd_6:SLR1 -slr vadd_7:SLR1 -slr vadd_8:SLR1 -slr vadd_9:SLR1 -slr vadd_10:SLR1 -slr vadd_11:SLR1 -slr vadd_12:SLR1 -slr vadd_13:SLR1 -slr vadd_14:SLR1 -slr vadd_15:SLR1 -sp vadd_1.m_axi_gmem:HBM[0] -sp vadd_2.m_axi_gmem:HBM[1] -sp vadd_3.m_axi_gmem:HBM[2] -sp vadd_4.m_axi_gmem:HBM[3] -sp vadd_5.m_axi_gmem:HBM[4] -sp vadd_6.m_axi_gmem:HBM[5] -sp vadd_7.m_axi_gmem:HBM[6] -sp vadd_8.m_axi_gmem:HBM[7] -sp vadd_9.m_axi_gmem:HBM[8] -sp vadd_10.m_axi_gmem:HBM[9] -sp vadd_11.m_axi_gmem:HBM[10] -sp vadd_12.m_axi_gmem:HBM[11] -sp vadd_13.m_axi_gmem:HBM[12] -sp vadd_14.m_axi_gmem:HBM[13] -sp vadd_15.m_axi_gmem:HBM[14] -dmclkid 0 -r /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: vadd, num: 15  {vadd_1 vadd_2 vadd_3 vadd_4 vadd_5 vadd_6 vadd_7 vadd_8 vadd_9 vadd_10 vadd_11 vadd_12 vadd_13 vadd_14 vadd_15}
+INFO: [CFGEN 83-0] Port Specs: 
+INFO: [CFGEN 83-0]   kernel: vadd_1, k_port: m_axi_gmem, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: vadd_2, k_port: m_axi_gmem, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: vadd_3, k_port: m_axi_gmem, sptag: HBM[2]
+INFO: [CFGEN 83-0]   kernel: vadd_4, k_port: m_axi_gmem, sptag: HBM[3]
+INFO: [CFGEN 83-0]   kernel: vadd_5, k_port: m_axi_gmem, sptag: HBM[4]
+INFO: [CFGEN 83-0]   kernel: vadd_6, k_port: m_axi_gmem, sptag: HBM[5]
+INFO: [CFGEN 83-0]   kernel: vadd_7, k_port: m_axi_gmem, sptag: HBM[6]
+INFO: [CFGEN 83-0]   kernel: vadd_8, k_port: m_axi_gmem, sptag: HBM[7]
+INFO: [CFGEN 83-0]   kernel: vadd_9, k_port: m_axi_gmem, sptag: HBM[8]
+INFO: [CFGEN 83-0]   kernel: vadd_10, k_port: m_axi_gmem, sptag: HBM[9]
+INFO: [CFGEN 83-0]   kernel: vadd_11, k_port: m_axi_gmem, sptag: HBM[10]
+INFO: [CFGEN 83-0]   kernel: vadd_12, k_port: m_axi_gmem, sptag: HBM[11]
+INFO: [CFGEN 83-0]   kernel: vadd_13, k_port: m_axi_gmem, sptag: HBM[12]
+INFO: [CFGEN 83-0]   kernel: vadd_14, k_port: m_axi_gmem, sptag: HBM[13]
+INFO: [CFGEN 83-0]   kernel: vadd_15, k_port: m_axi_gmem, sptag: HBM[14]
+INFO: [CFGEN 83-0] SLR Specs: 
+INFO: [CFGEN 83-0]   instance: vadd_1, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: vadd_10, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: vadd_11, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: vadd_12, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: vadd_13, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: vadd_14, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: vadd_15, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: vadd_2, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: vadd_3, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: vadd_4, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: vadd_5, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: vadd_6, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: vadd_7, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: vadd_8, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: vadd_9, SLR: SLR1
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.in1 to HBM[0] for directive vadd_1.m_axi_gmem:HBM[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.in2 to HBM[0] for directive vadd_1.m_axi_gmem:HBM[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_1.out to HBM[0] for directive vadd_1.m_axi_gmem:HBM[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_2.in1 to HBM[1] for directive vadd_2.m_axi_gmem:HBM[1]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_2.in2 to HBM[1] for directive vadd_2.m_axi_gmem:HBM[1]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_2.out to HBM[1] for directive vadd_2.m_axi_gmem:HBM[1]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_3.in1 to HBM[2] for directive vadd_3.m_axi_gmem:HBM[2]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_3.in2 to HBM[2] for directive vadd_3.m_axi_gmem:HBM[2]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_3.out to HBM[2] for directive vadd_3.m_axi_gmem:HBM[2]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_4.in1 to HBM[3] for directive vadd_4.m_axi_gmem:HBM[3]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_4.in2 to HBM[3] for directive vadd_4.m_axi_gmem:HBM[3]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_4.out to HBM[3] for directive vadd_4.m_axi_gmem:HBM[3]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_5.in1 to HBM[4] for directive vadd_5.m_axi_gmem:HBM[4]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_5.in2 to HBM[4] for directive vadd_5.m_axi_gmem:HBM[4]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_5.out to HBM[4] for directive vadd_5.m_axi_gmem:HBM[4]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_6.in1 to HBM[5] for directive vadd_6.m_axi_gmem:HBM[5]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_6.in2 to HBM[5] for directive vadd_6.m_axi_gmem:HBM[5]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_6.out to HBM[5] for directive vadd_6.m_axi_gmem:HBM[5]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_7.in1 to HBM[6] for directive vadd_7.m_axi_gmem:HBM[6]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_7.in2 to HBM[6] for directive vadd_7.m_axi_gmem:HBM[6]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_7.out to HBM[6] for directive vadd_7.m_axi_gmem:HBM[6]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_8.in1 to HBM[7] for directive vadd_8.m_axi_gmem:HBM[7]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_8.in2 to HBM[7] for directive vadd_8.m_axi_gmem:HBM[7]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_8.out to HBM[7] for directive vadd_8.m_axi_gmem:HBM[7]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_9.in1 to HBM[8] for directive vadd_9.m_axi_gmem:HBM[8]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_9.in2 to HBM[8] for directive vadd_9.m_axi_gmem:HBM[8]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_9.out to HBM[8] for directive vadd_9.m_axi_gmem:HBM[8]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_10.in1 to HBM[9] for directive vadd_10.m_axi_gmem:HBM[9]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_10.in2 to HBM[9] for directive vadd_10.m_axi_gmem:HBM[9]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_10.out to HBM[9] for directive vadd_10.m_axi_gmem:HBM[9]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_11.in1 to HBM[10] for directive vadd_11.m_axi_gmem:HBM[10]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_11.in2 to HBM[10] for directive vadd_11.m_axi_gmem:HBM[10]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_11.out to HBM[10] for directive vadd_11.m_axi_gmem:HBM[10]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_12.in1 to HBM[11] for directive vadd_12.m_axi_gmem:HBM[11]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_12.in2 to HBM[11] for directive vadd_12.m_axi_gmem:HBM[11]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_12.out to HBM[11] for directive vadd_12.m_axi_gmem:HBM[11]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_13.in1 to HBM[12] for directive vadd_13.m_axi_gmem:HBM[12]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_13.in2 to HBM[12] for directive vadd_13.m_axi_gmem:HBM[12]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_13.out to HBM[12] for directive vadd_13.m_axi_gmem:HBM[12]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_14.in1 to HBM[13] for directive vadd_14.m_axi_gmem:HBM[13]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_14.in2 to HBM[13] for directive vadd_14.m_axi_gmem:HBM[13]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_14.out to HBM[13] for directive vadd_14.m_axi_gmem:HBM[13]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_15.in1 to HBM[14] for directive vadd_15.m_axi_gmem:HBM[14]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_15.in2 to HBM[14] for directive vadd_15.m_axi_gmem:HBM[14]
+INFO: [CFGEN 83-2228] Creating mapping for argument vadd_15.out to HBM[14] for directive vadd_15.m_axi_gmem:HBM[14]
+INFO: [SYSTEM_LINK 82-37] [17:53:21] cfgen finished successfully
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2148.113 ; gain = 0.000 ; free physical = 30439 ; free virtual = 234775
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [17:53:21] cf2bd started: /opt/Xilinx/Vitis/2021.2/bin/cf2bd  --linux --trace_buffer 1024 --input_file /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/sys_link/_sysl/.xsd --temp_dir /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/sys_link --output_dir /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int --target_bd ulp.bd
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd ulp.bd -dn dr -dp /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [17:53:26] cf2bd finished successfully
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2148.113 ; gain = 0.000 ; free physical = 30195 ; free virtual = 234535
+INFO: [v++ 60-1441] [17:53:26] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 2135.906 ; gain = 0.000 ; free physical = 30234 ; free virtual = 234573
+INFO: [v++ 60-1443] [17:53:26] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/sdsl.dat -rtd /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/cf2sw.rtd -nofilter /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/cf2sw_full.rtd -xclbin /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/xclbin_orig.xml -o /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/run_link
+INFO: [v++ 60-1441] [17:53:32] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2135.906 ; gain = 0.000 ; free physical = 30428 ; free virtual = 234797
+INFO: [v++ 60-1443] [17:53:32] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+INFO: [v++ 60-1454] Run Directory: /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/run_link
+INFO: [v++ 60-1441] [17:53:32] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.24 . Memory (MB): peak = 2135.906 ; gain = 0.000 ; free physical = 30419 ; free virtual = 234788
+INFO: [v++ 60-1443] [17:53:32] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f xilinx_u50_gen3x16_xdma_201920_3 --remote_ip_cache /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/.ipcache -s --output_dir /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int --log_dir /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/logs/link --report_dir /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/reports/link --config /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/vplConfig.ini -k /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link --no-info --iprepo /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/xo/ip_repo/xilinx_com_hls_vadd_1_0 --messageDb /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/run_link/vpl.pb /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/run_link
+
+****** vpl v2021.2 (64-bit)
+  **** SW Build 3363252 on 2021-10-14-04:41:01
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/int/kernel_info.dat'.
+INFO: [VPL 74-78] Compiler Version string: 2021.2
+INFO: [VPL 60-423]   Target device: xilinx_u50_gen3x16_xdma_201920_3
+INFO: [VPL 60-1032] Extracting hardware platform to /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/vivado/vpl/.local/hw_platform
+[17:54:04] Run vpl: Step create_project: Started
+Creating Vivado project.
+[17:54:12] Run vpl: Step create_project: Completed
+[17:54:12] Run vpl: Step create_bd: Started
+[17:55:31] Run vpl: Step create_bd: RUNNING...
+[17:55:34] Run vpl: Step create_bd: Completed
+[17:55:34] Run vpl: Step update_bd: Started
+[17:55:35] Run vpl: Step update_bd: Completed
+[17:55:35] Run vpl: Step generate_target: Started
+[17:56:52] Run vpl: Step generate_target: RUNNING...
+[17:58:11] Run vpl: Step generate_target: RUNNING...
+[17:58:17] Run vpl: Step generate_target: Completed
+[17:58:17] Run vpl: Step config_hw_runs: Started
+[17:58:28] Run vpl: Step config_hw_runs: Completed
+[17:58:28] Run vpl: Step synth: Started
+[17:59:04] Block-level synthesis in progress, 0 of 24 jobs complete, 8 jobs running.
+[17:59:35] Block-level synthesis in progress, 0 of 24 jobs complete, 8 jobs running.
+[18:00:07] Block-level synthesis in progress, 1 of 24 jobs complete, 7 jobs running.
+[18:00:38] Block-level synthesis in progress, 1 of 24 jobs complete, 7 jobs running.
+[18:01:10] Block-level synthesis in progress, 8 of 24 jobs complete, 1 job running.
+[18:01:41] Block-level synthesis in progress, 8 of 24 jobs complete, 1 job running.
+[18:02:12] Block-level synthesis in progress, 8 of 24 jobs complete, 1 job running.
+[18:02:44] Block-level synthesis in progress, 9 of 24 jobs complete, 0 jobs running.
+[18:03:15] Block-level synthesis in progress, 9 of 24 jobs complete, 1 job running.
+[18:03:47] Block-level synthesis in progress, 9 of 24 jobs complete, 1 job running.
+[18:04:15] Run vpl: Step synth: Completed
+[18:04:15] Run vpl: Step impl: Started
+[18:14:12] Finished 2nd of 6 tasks (FPGA linking synthesized kernels to platform). Elapsed time: 00h 20m 37s 
+
+[18:14:12] Starting logic optimization..
+[18:15:15] Phase 1 Retarget
+[18:15:46] Phase 2 Constant propagation
+[18:16:18] Phase 3 Sweep
+[18:16:49] Phase 4 BUFG optimization
+[18:17:21] Phase 5 Shift Register Optimization
+[18:17:21] Phase 6 Post Processing Netlist
+[18:19:27] Finished 3rd of 6 tasks (FPGA logic optimization). Elapsed time: 00h 05m 14s 
+
+[18:19:27] Starting logic placement..
+[18:20:43] Run vpl: Step impl: Failed
+[18:20:44] Run vpl: FINISHED. Run Status: impl ERROR
+
+===>The following messages were generated while processing /users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/vivado/vpl/prj/prj.runs/impl_1 :
+ERROR: [VPL UTLZ-1] Resource utilization: RAMB18 and RAMB36/FIFO over-utilized in Pblock pblock_dynamic_SLR1 (This design requires more RAMB18 and RAMB36/FIFO cells than are available in Pblock 'pblock_dynamic_SLR1'. This design requires 2280 of such cell types but only 1128 compatible sites are available in Pblock 'pblock_dynamic_SLR1'. Please consider increasing the span of Pblock 'pblock_dynamic_SLR1' or removing cells from it.)
+ERROR: [VPL UTLZ-1] Resource utilization: RAMB36/FIFO over-utilized in Pblock pblock_dynamic_SLR1 (This design requires more RAMB36/FIFO cells than are available in Pblock 'pblock_dynamic_SLR1'. This design requires 1125 of such cell types but only 564 compatible sites are available in Pblock 'pblock_dynamic_SLR1'. Please consider increasing the span of Pblock 'pblock_dynamic_SLR1' or removing cells from it.)
+ERROR: [VPL UTLZ-1] Resource utilization: RAMB36E2 over-utilized in Pblock pblock_dynamic_SLR1 (This design requires more RAMB36E2 cells than are available in Pblock 'pblock_dynamic_SLR1'. This design requires 1125 of such cell types but only 564 compatible sites are available in Pblock 'pblock_dynamic_SLR1'. Please consider increasing the span of Pblock 'pblock_dynamic_SLR1' or removing cells from it.)
+ERROR: [VPL 4-23] Error(s) found during DRC. Placer not run.
+ERROR: [VPL 60-773] In '/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/vivado/vpl/runme.log', caught Tcl error:  problem implementing dynamic region, impl_1: place_design ERROR, please look at the run log file '/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/vivado/vpl/prj/prj.runs/impl_1/runme.log' for more information
+WARNING: [VPL 60-732] Link warning: No monitor points found for BD automation.
+ERROR: [VPL 60-704] Integration error, problem implementing dynamic region, impl_1: place_design ERROR, please look at the run log file '/users/course/2022S/HLS17000000/g110061571/LAB_A/reference-files/_x/link/vivado/vpl/prj/prj.runs/impl_1/runme.log' for more information
+ERROR: [VPL 60-1328] Vpl run 'vpl' failed
+ERROR: [VPL 60-806] Failed to finish platform linker
+INFO: [v++ 60-1442] [18:20:47] Run run_link: Step vpl: Failed
+Time (s): cpu = 00:00:18 ; elapsed = 00:27:15 . Memory (MB): peak = 2135.906 ; gain = 0.000 ; free physical = 37594 ; free virtual = 242042
+ERROR: [v++ 60-661] v++ link run 'run_link' failed
+ERROR: [v++ 60-626] Kernel link failed to complete
+ERROR: [v++ 60-703] Failed to finish linking
+INFO: [v++ 60-1653] Closing dispatch client.

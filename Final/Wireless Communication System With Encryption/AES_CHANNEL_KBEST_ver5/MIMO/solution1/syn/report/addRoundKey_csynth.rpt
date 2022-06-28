@@ -1,0 +1,194 @@
+
+
+================================================================
+== Vitis HLS Report for 'addRoundKey'
+================================================================
+* Date:           Fri Jun 17 13:15:46 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        MIMO
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  40.00 ns|  1.588 ns|    10.80 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       15|       15|  0.600 us|  0.600 us|   16|   16|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     530|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|     369|    -|
+|Register         |        -|     -|     636|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     636|     899|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1824|  2520|  548160|  274080|    0|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------+----------+----+---+----+------------+------------+
+    |      Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------+----------+----+---+----+------------+------------+
+    |or_ln176_1_fu_380_p2    |        or|   0|  0|   6|           6|           2|
+    |or_ln176_2_fu_390_p2    |        or|   0|  0|   6|           6|           2|
+    |or_ln176_fu_341_p2      |        or|   0|  0|   6|           6|           1|
+    |xor_ln179_10_fu_439_p2  |       xor|   0|  0|  32|          32|          32|
+    |xor_ln179_11_fu_451_p2  |       xor|   0|  0|  32|          32|          32|
+    |xor_ln179_12_fu_457_p2  |       xor|   0|  0|  32|          32|          32|
+    |xor_ln179_13_fu_469_p2  |       xor|   0|  0|  32|          32|          32|
+    |xor_ln179_14_fu_475_p2  |       xor|   0|  0|  32|          32|          32|
+    |xor_ln179_15_fu_488_p2  |       xor|   0|  0|  32|          32|          32|
+    |xor_ln179_16_fu_494_p2  |       xor|   0|  0|  32|          32|          32|
+    |xor_ln179_17_fu_506_p2  |       xor|   0|  0|  32|          32|          32|
+    |xor_ln179_18_fu_512_p2  |       xor|   0|  0|  32|          32|          32|
+    |xor_ln179_19_fu_524_p2  |       xor|   0|  0|  32|          32|          32|
+    |xor_ln179_20_fu_530_p2  |       xor|   0|  0|  32|          32|          32|
+    |xor_ln179_6_fu_370_p2   |       xor|   0|  0|  32|          32|          32|
+    |xor_ln179_7_fu_407_p2   |       xor|   0|  0|  32|          32|          32|
+    |xor_ln179_8_fu_413_p2   |       xor|   0|  0|  32|          32|          32|
+    |xor_ln179_9_fu_433_p2   |       xor|   0|  0|  32|          32|          32|
+    |xor_ln179_fu_364_p2     |       xor|   0|  0|  32|          32|          32|
+    +------------------------+----------+----+---+----+------------+------------+
+    |Total                   |          |   0|  0| 530|         530|         517|
+    +------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------+----+-----------+-----+-----------+
+    |       Name       | LUT| Input Size| Bits| Total Bits|
+    +------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm         |  81|         17|    1|         17|
+    |array_r_address0  |  81|         17|    4|         68|
+    |array_r_address1  |  81|         17|    4|         68|
+    |array_r_d0        |  49|          9|   32|        288|
+    |array_r_d1        |  49|          9|   32|        288|
+    |w_address0        |  14|          3|    6|         18|
+    |w_address1        |  14|          3|    6|         18|
+    +------------------+----+-----------+-----+-----------+
+    |Total             | 369|         75|   85|        765|
+    +------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------+----+----+-----+-----------+
+    |         Name         | FF | LUT| Bits| Const Bits|
+    +----------------------+----+----+-----+-----------+
+    |ap_CS_fsm             |  16|   0|   16|          0|
+    |empty_134_reg_587     |   8|   0|    8|          0|
+    |empty_135_reg_637     |   8|   0|    8|          0|
+    |empty_136_reg_652     |   8|   0|    8|          0|
+    |empty_reg_572         |   8|   0|    8|          0|
+    |lshr_ln95_1_reg_592   |   8|   0|    8|          0|
+    |lshr_ln95_2_reg_642   |   8|   0|    8|          0|
+    |lshr_ln95_3_reg_657   |   8|   0|    8|          0|
+    |lshr_ln97_1_reg_597   |   8|   0|    8|          0|
+    |lshr_ln97_2_reg_647   |   8|   0|    8|          0|
+    |lshr_ln97_3_reg_662   |   8|   0|    8|          0|
+    |lshr_ln99_1_reg_602   |   8|   0|    8|          0|
+    |lshr_ln99_3_reg_667   |   8|   0|    8|          0|
+    |reg_324               |   8|   0|    8|          0|
+    |shl_ln_reg_546        |   4|   0|    6|          2|
+    |xor_ln179_10_reg_687  |  32|   0|   32|          0|
+    |xor_ln179_11_reg_702  |  32|   0|   32|          0|
+    |xor_ln179_12_reg_707  |  32|   0|   32|          0|
+    |xor_ln179_13_reg_722  |  32|   0|   32|          0|
+    |xor_ln179_14_reg_727  |  32|   0|   32|          0|
+    |xor_ln179_15_reg_742  |  32|   0|   32|          0|
+    |xor_ln179_16_reg_747  |  32|   0|   32|          0|
+    |xor_ln179_17_reg_762  |  32|   0|   32|          0|
+    |xor_ln179_18_reg_767  |  32|   0|   32|          0|
+    |xor_ln179_19_reg_772  |  32|   0|   32|          0|
+    |xor_ln179_20_reg_777  |  32|   0|   32|          0|
+    |xor_ln179_6_reg_582   |  32|   0|   32|          0|
+    |xor_ln179_7_reg_627   |  32|   0|   32|          0|
+    |xor_ln179_8_reg_632   |  32|   0|   32|          0|
+    |xor_ln179_9_reg_682   |  32|   0|   32|          0|
+    |xor_ln179_reg_577     |  32|   0|   32|          0|
+    +----------------------+----+----+-----+-----------+
+    |Total                 | 636|   0|  638|          2|
+    +----------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+------------+--------------+--------------+
+|     RTL Ports    | Dir | Bits|  Protocol  | Source Object|    C Type    |
++------------------+-----+-----+------------+--------------+--------------+
+|ap_clk            |   in|    1|  ap_ctrl_hs|   addRoundKey|  return value|
+|ap_rst            |   in|    1|  ap_ctrl_hs|   addRoundKey|  return value|
+|ap_start          |   in|    1|  ap_ctrl_hs|   addRoundKey|  return value|
+|ap_done           |  out|    1|  ap_ctrl_hs|   addRoundKey|  return value|
+|ap_idle           |  out|    1|  ap_ctrl_hs|   addRoundKey|  return value|
+|ap_ready          |  out|    1|  ap_ctrl_hs|   addRoundKey|  return value|
+|ap_ce             |   in|    1|  ap_ctrl_hs|   addRoundKey|  return value|
+|array_r_address0  |  out|    4|   ap_memory|       array_r|         array|
+|array_r_ce0       |  out|    1|   ap_memory|       array_r|         array|
+|array_r_we0       |  out|    1|   ap_memory|       array_r|         array|
+|array_r_d0        |  out|   32|   ap_memory|       array_r|         array|
+|array_r_q0        |   in|   32|   ap_memory|       array_r|         array|
+|array_r_address1  |  out|    4|   ap_memory|       array_r|         array|
+|array_r_ce1       |  out|    1|   ap_memory|       array_r|         array|
+|array_r_we1       |  out|    1|   ap_memory|       array_r|         array|
+|array_r_d1        |  out|   32|   ap_memory|       array_r|         array|
+|array_r_q1        |   in|   32|   ap_memory|       array_r|         array|
+|round             |   in|    4|     ap_none|         round|        scalar|
+|w_address0        |  out|    6|   ap_memory|             w|         array|
+|w_ce0             |  out|    1|   ap_memory|             w|         array|
+|w_q0              |   in|   32|   ap_memory|             w|         array|
+|w_address1        |  out|    6|   ap_memory|             w|         array|
+|w_ce1             |  out|    1|   ap_memory|             w|         array|
+|w_q1              |   in|   32|   ap_memory|             w|         array|
++------------------+-----+-----+------------+--------------+--------------+
+

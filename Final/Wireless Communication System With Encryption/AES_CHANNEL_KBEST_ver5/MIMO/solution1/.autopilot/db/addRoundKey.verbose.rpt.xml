@@ -1,0 +1,181 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'addRoundKey'" level="0">
+<item name = "Date">Fri Jun 17 13:15:46 2022
+</item>
+<item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)</item>
+<item name = "Project">MIMO</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu9eg-ffvb1156-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">40.00 ns, 1.588 ns, 10.80 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">15, 15, 0.600 us, 0.600 us, 16, 16, yes</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 530, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 369, -</column>
+<column name="Register">-, -, 636, -, -</column>
+<specialColumn name="Available">1824, 2520, 548160, 274080, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="or_ln176_1_fu_380_p2">or, 0, 0, 6, 6, 2</column>
+<column name="or_ln176_2_fu_390_p2">or, 0, 0, 6, 6, 2</column>
+<column name="or_ln176_fu_341_p2">or, 0, 0, 6, 6, 1</column>
+<column name="xor_ln179_10_fu_439_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln179_11_fu_451_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln179_12_fu_457_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln179_13_fu_469_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln179_14_fu_475_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln179_15_fu_488_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln179_16_fu_494_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln179_17_fu_506_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln179_18_fu_512_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln179_19_fu_524_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln179_20_fu_530_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln179_6_fu_370_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln179_7_fu_407_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln179_8_fu_413_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln179_9_fu_433_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln179_fu_364_p2">xor, 0, 0, 32, 32, 32</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">81, 17, 1, 17</column>
+<column name="array_r_address0">81, 17, 4, 68</column>
+<column name="array_r_address1">81, 17, 4, 68</column>
+<column name="array_r_d0">49, 9, 32, 288</column>
+<column name="array_r_d1">49, 9, 32, 288</column>
+<column name="w_address0">14, 3, 6, 18</column>
+<column name="w_address1">14, 3, 6, 18</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">16, 0, 16, 0</column>
+<column name="empty_134_reg_587">8, 0, 8, 0</column>
+<column name="empty_135_reg_637">8, 0, 8, 0</column>
+<column name="empty_136_reg_652">8, 0, 8, 0</column>
+<column name="empty_reg_572">8, 0, 8, 0</column>
+<column name="lshr_ln95_1_reg_592">8, 0, 8, 0</column>
+<column name="lshr_ln95_2_reg_642">8, 0, 8, 0</column>
+<column name="lshr_ln95_3_reg_657">8, 0, 8, 0</column>
+<column name="lshr_ln97_1_reg_597">8, 0, 8, 0</column>
+<column name="lshr_ln97_2_reg_647">8, 0, 8, 0</column>
+<column name="lshr_ln97_3_reg_662">8, 0, 8, 0</column>
+<column name="lshr_ln99_1_reg_602">8, 0, 8, 0</column>
+<column name="lshr_ln99_3_reg_667">8, 0, 8, 0</column>
+<column name="reg_324">8, 0, 8, 0</column>
+<column name="shl_ln_reg_546">4, 0, 6, 2</column>
+<column name="xor_ln179_10_reg_687">32, 0, 32, 0</column>
+<column name="xor_ln179_11_reg_702">32, 0, 32, 0</column>
+<column name="xor_ln179_12_reg_707">32, 0, 32, 0</column>
+<column name="xor_ln179_13_reg_722">32, 0, 32, 0</column>
+<column name="xor_ln179_14_reg_727">32, 0, 32, 0</column>
+<column name="xor_ln179_15_reg_742">32, 0, 32, 0</column>
+<column name="xor_ln179_16_reg_747">32, 0, 32, 0</column>
+<column name="xor_ln179_17_reg_762">32, 0, 32, 0</column>
+<column name="xor_ln179_18_reg_767">32, 0, 32, 0</column>
+<column name="xor_ln179_19_reg_772">32, 0, 32, 0</column>
+<column name="xor_ln179_20_reg_777">32, 0, 32, 0</column>
+<column name="xor_ln179_6_reg_582">32, 0, 32, 0</column>
+<column name="xor_ln179_7_reg_627">32, 0, 32, 0</column>
+<column name="xor_ln179_8_reg_632">32, 0, 32, 0</column>
+<column name="xor_ln179_9_reg_682">32, 0, 32, 0</column>
+<column name="xor_ln179_reg_577">32, 0, 32, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, addRoundKey, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, addRoundKey, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, addRoundKey, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, addRoundKey, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, addRoundKey, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, addRoundKey, return value</column>
+<column name="ap_ce">in, 1, ap_ctrl_hs, addRoundKey, return value</column>
+<column name="array_r_address0">out, 4, ap_memory, array_r, array</column>
+<column name="array_r_ce0">out, 1, ap_memory, array_r, array</column>
+<column name="array_r_we0">out, 1, ap_memory, array_r, array</column>
+<column name="array_r_d0">out, 32, ap_memory, array_r, array</column>
+<column name="array_r_q0">in, 32, ap_memory, array_r, array</column>
+<column name="array_r_address1">out, 4, ap_memory, array_r, array</column>
+<column name="array_r_ce1">out, 1, ap_memory, array_r, array</column>
+<column name="array_r_we1">out, 1, ap_memory, array_r, array</column>
+<column name="array_r_d1">out, 32, ap_memory, array_r, array</column>
+<column name="array_r_q1">in, 32, ap_memory, array_r, array</column>
+<column name="round">in, 4, ap_none, round, scalar</column>
+<column name="w_address0">out, 6, ap_memory, w, array</column>
+<column name="w_ce0">out, 1, ap_memory, w, array</column>
+<column name="w_q0">in, 32, ap_memory, w, array</column>
+<column name="w_address1">out, 6, ap_memory, w, array</column>
+<column name="w_ce1">out, 1, ap_memory, w, array</column>
+<column name="w_q1">in, 32, ap_memory, w, array</column>
+</table>
+</item>
+</section>
+</profile>

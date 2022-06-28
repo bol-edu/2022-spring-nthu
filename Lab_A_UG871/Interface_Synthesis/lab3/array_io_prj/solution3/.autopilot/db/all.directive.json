@@ -1,0 +1,127 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "array_io",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "array_io"
+              }]
+          }
+        },
+        {
+          "functionName": "array_io",
+          "label": "For_Loop",
+          "functionLabel": "",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "array_io",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "BIND_STORAGE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "d_i"
+              },
+              {
+                "name": "type",
+                "value": "ram_2p"
+              },
+              {
+                "name": "impl",
+                "value": "bram"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "array_io",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "ap_fifo",
+                "value": ""
+              },
+              {
+                "name": "port",
+                "value": "d_o"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "array_io",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "ARRAY_PARTITION",
+            "option": [
+              {
+                "name": "variable",
+                "value": "d_o"
+              },
+              {
+                "name": "block",
+                "value": ""
+              },
+              {
+                "name": "factor",
+                "value": "4"
+              },
+              {
+                "name": "dim",
+                "value": "1"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "array_io",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "ARRAY_PARTITION",
+            "option": [
+              {
+                "name": "variable",
+                "value": "d_i"
+              },
+              {
+                "name": "block",
+                "value": ""
+              },
+              {
+                "name": "factor",
+                "value": "2"
+              },
+              {
+                "name": "dim",
+                "value": "1"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "array_io",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "array_io"
+              }]
+          }
+        }
+      ]
+    }]}

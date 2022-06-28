@@ -1,0 +1,174 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/reports/_build.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/krnl_colordetect/link
+	Log files: /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/logs/link
+INFO: [v++ 60-1548] Creating build summary session with primary output /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/build_dir.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/krnl_colordetect.xclbin.link_summary, at Sun May  1 01:32:16 2022
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Sun May  1 01:32:16 2022
+INFO: [v++ 60-1315] Creating rulecheck session with output '/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/reports/_build.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/krnl_colordetect/link/v++_link_krnl_colordetect_guidance.html', at Sun May  1 01:32:18 2022
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3/xilinx_u50_gen3x16_xdma_201920_3.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2021.2
+INFO: [v++ 60-1302] Platform 'xilinx_u50_gen3x16_xdma_201920_3.xpfm' has been explicitly enabled for this release.
+INFO: [v++ 60-629] Linking for hardware emulation target
+INFO: [v++ 60-423]   Target device: xilinx_u50_gen3x16_xdma_201920_3
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [01:32:23] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/color_detect.xo -keep --xpfm /opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3/xilinx_u50_gen3x16_xdma_201920_3.xpfm --target emu --output_dir /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int --temp_dir /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/run_link
+INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Sun May  1 01:32:25 2022
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/color_detect.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [01:32:28] build_xd_ip_db started: /opt/Xilinx/Vitis/2021.2/bin/build_xd_ip_db -ip_search 0  -sds-pf /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/sys_link/emu/emu.hpfm -clkid 0 -ip /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/sys_link/iprepo/xilinx_com_hls_color_detect_1_0,color_detect -o /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [01:32:32] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2148.117 ; gain = 0.000 ; free physical = 42733 ; free virtual = 157232
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [01:32:32] cfgen started: /opt/Xilinx/Vitis/2021.2/bin/cfgen -dmclkid 0 -r /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: color_detect, num: 1  {color_detect_1}
+INFO: [CFGEN 83-2226] Inferring mapping for argument color_detect_1.img_in to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument color_detect_1.low_thresh to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument color_detect_1.high_thresh to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument color_detect_1.process_shape to HBM[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument color_detect_1.img_out to HBM[0]
+INFO: [SYSTEM_LINK 82-37] [01:32:37] cfgen finished successfully
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2148.117 ; gain = 0.000 ; free physical = 42729 ; free virtual = 157228
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [01:32:37] cf2bd started: /opt/Xilinx/Vitis/2021.2/bin/cf2bd  --linux --trace_buffer 1024 --input_file /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/sys_link/_sysl/.xsd --temp_dir /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/sys_link --output_dir /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int --target_bd emu/emu.bd
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd emu/emu.bd -dn dr -dp /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [01:32:39] cf2bd finished successfully
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2148.117 ; gain = 0.000 ; free physical = 42717 ; free virtual = 157220
+INFO: [v++ 60-1441] [01:32:39] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2167.676 ; gain = 0.000 ; free physical = 42757 ; free virtual = 157260
+INFO: [v++ 60-1443] [01:32:39] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/sdsl.dat -rtd /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/cf2sw.rtd -nofilter /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/cf2sw_full.rtd -xclbin /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/xclbin_orig.xml -o /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/run_link
+INFO: [v++ 60-1441] [01:32:42] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2167.676 ; gain = 0.000 ; free physical = 42754 ; free virtual = 157257
+INFO: [v++ 60-1443] [01:32:42] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+INFO: [v++ 60-1454] Run Directory: /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/run_link
+INFO: [v++ 60-1441] [01:32:43] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.26 . Memory (MB): peak = 2167.676 ; gain = 0.000 ; free physical = 42750 ; free virtual = 157253
+INFO: [v++ 60-1443] [01:32:43] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw_emu -f /opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3/xilinx_u50_gen3x16_xdma_201920_3.xpfm --remote_ip_cache /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/.ipcache -s --output_dir /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int --log_dir /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/logs/link --report_dir /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/reports/_build.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/krnl_colordetect/link --config /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/vplConfig.ini -k /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link --emulation_mode debug_waveform --no-info --iprepo /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/xo/ip_repo/xilinx_com_hls_color_detect_1_0 --messageDb /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/run_link/vpl.pb /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/run_link
+
+****** vpl v2021.2 (64-bit)
+  **** SW Build 3363252 on 2021-10-14-04:41:01
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/kernel_info.dat'.
+INFO: [VPL 74-78] Compiler Version string: 2021.2
+INFO: [VPL 60-423]   Target device: xilinx_u50_gen3x16_xdma_201920_3
+INFO: [VPL 60-1032] Extracting hardware platform to /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/vivado/vpl/.local/hw_platform
+[01:33:10] Run vpl: Step create_project: Started
+Creating Vivado project.
+[01:33:16] Run vpl: Step create_project: Completed
+[01:33:16] Run vpl: Step create_bd: Started
+[01:34:10] Run vpl: Step create_bd: Completed
+[01:34:10] Run vpl: Step update_bd: Started
+[01:34:11] Run vpl: Step update_bd: Completed
+[01:34:11] Run vpl: Step generate_target: Started
+[01:35:32] Run vpl: Step generate_target: RUNNING...
+[01:35:46] Run vpl: Step generate_target: Completed
+[01:35:46] Run vpl: Step config_hw_emu.gen_scripts: Started
+[01:36:24] Run vpl: Step config_hw_emu.gen_scripts: Completed
+[01:36:24] Run vpl: Step config_hw_emu.compile: Started
+[01:37:12] Run vpl: Step config_hw_emu.compile: Completed
+[01:37:12] Run vpl: Step config_hw_emu.elaborate: Started
+[01:37:51] Run vpl: Step config_hw_emu.elaborate: Completed
+[01:37:53] Run vpl: FINISHED. Run Status: config_hw_emu.elaborate Complete!
+INFO: [v++ 60-1441] [01:37:57] Run run_link: Step vpl: Completed
+Time (s): cpu = 00:00:10 ; elapsed = 00:05:15 . Memory (MB): peak = 2167.676 ; gain = 0.000 ; free physical = 40716 ; free virtual = 156907
+INFO: [v++ 60-1443] [01:37:57] Run run_link: Step rtdgen: Started
+INFO: [v++ 60-1453] Command Line: rtdgen
+INFO: [v++ 60-1454] Run Directory: /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/run_link
+INFO: [v++ 60-991] clock name 'kernel2_clk/clk' (clock ID '1') is being mapped to clock name 'KERNEL_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'kernel_clk/clk' (clock ID '0') is being mapped to clock name 'DATA_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'hbm_aclk' (clock ID '') is being mapped to clock name 'hbm_aclk' in the xclbin
+INFO: [v++ 60-1230] The compiler selected the following frequencies for the runtime controllable kernel clock(s) and scalable system clock(s): System (SYSTEM) clock: hbm_aclk = 450, Kernel (KERNEL) clock: kernel2_clk/clk = 500, Kernel (DATA) clock: kernel_clk/clk = 300
+INFO: [v++ 60-1453] Command Line: cf2sw -a /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/address_map.xml -sdsl /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/sdsl.dat -xclbin /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/xclbin_orig.xml -rtd /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/krnl_colordetect.rtd -o /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/krnl_colordetect.xml
+INFO: [v++ 60-1652] Cf2sw returned exit code: 0
+WARNING: [v++ 60-1455] Debuggable symbols are not generated successfully, clean up /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/consolidated.cf
+INFO: [v++ 60-1441] [01:38:06] Run run_link: Step rtdgen: Completed
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2167.676 ; gain = 0.000 ; free physical = 40650 ; free virtual = 156899
+INFO: [v++ 60-1443] [01:38:06] Run run_link: Step xclbinutil: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --add-section BITSTREAM:RAW:/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/behav.xse --force --target hw_emu --key-value SYS:dfx_enable:false --add-section :JSON:/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/krnl_colordetect.rtd --append-section :JSON:/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/krnl_colordetect_xml.rtd --add-section BUILD_METADATA:JSON:/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/krnl_colordetect_build.rtd --add-section EMBEDDED_METADATA:RAW:/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/krnl_colordetect.xml --add-section SYSTEM_METADATA:RAW:/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_u50_gen3x16_xdma_201920_3 --output /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/build_dir.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/krnl_colordetect.xclbin
+INFO: [v++ 60-1454] Run Directory: /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/run_link
+XRT Build Version: 2.12.427 (2021.2)
+       Build Date: 2021-10-09 05:06:49
+          Hash ID: 2719b6027e185000fc49783171631db03fc0ef79
+Creating a default 'in-memory' xclbin image.
+
+Section: 'BITSTREAM'(0) was successfully added.
+Size   : 60940501 bytes
+Format : RAW
+File   : '/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/behav.xse'
+
+Section: 'MEM_TOPOLOGY'(6) was successfully added.
+Format : JSON
+File   : 'mem_topology'
+
+Section: 'IP_LAYOUT'(8) was successfully added.
+Format : JSON
+File   : 'ip_layout'
+
+Section: 'CONNECTIVITY'(7) was successfully added.
+Format : JSON
+File   : 'connectivity'
+
+Section: 'CLOCK_FREQ_TOPOLOGY'(11) was successfully added.
+Size   : 410 bytes
+Format : JSON
+File   : '/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/krnl_colordetect_xml.rtd'
+
+Section: 'BUILD_METADATA'(14) was successfully added.
+Size   : 3782 bytes
+Format : JSON
+File   : '/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/krnl_colordetect_build.rtd'
+
+Section: 'EMBEDDED_METADATA'(2) was successfully added.
+Size   : 26453 bytes
+Format : RAW
+File   : '/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/krnl_colordetect.xml'
+
+Section: 'SYSTEM_METADATA'(22) was successfully added.
+Size   : 16757 bytes
+Format : RAW
+File   : '/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/int/systemDiagramModelSlrBaseAddress.json'
+
+Section: 'PARTITION_METADATA'(20) was successfully appended to.
+Format : JSON
+File   : 'partition_metadata'
+
+Section: 'IP_LAYOUT'(8) was successfully appended to.
+Format : JSON
+File   : 'ip_layout'
+Successfully wrote (61015554 bytes) to the output file: /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/build_dir.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/krnl_colordetect.xclbin
+Leaving xclbinutil.
+INFO: [v++ 60-1441] [01:38:07] Run run_link: Step xclbinutil: Completed
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.71 . Memory (MB): peak = 2167.676 ; gain = 0.000 ; free physical = 40589 ; free virtual = 156896
+INFO: [v++ 60-1443] [01:38:07] Run run_link: Step xclbinutilinfo: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --quiet --force --info /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/build_dir.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/krnl_colordetect.xclbin.info --input /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/build_dir.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/krnl_colordetect.xclbin
+INFO: [v++ 60-1454] Run Directory: /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/run_link
+INFO: [v++ 60-1441] [01:38:07] Run run_link: Step xclbinutilinfo: Completed
+Time (s): cpu = 00:00:00.47 ; elapsed = 00:00:00.60 . Memory (MB): peak = 2167.676 ; gain = 0.000 ; free physical = 40587 ; free virtual = 156894
+INFO: [v++ 60-1443] [01:38:07] Run run_link: Step generate_sc_driver: Started
+INFO: [v++ 60-1453] Command Line: 
+INFO: [v++ 60-1454] Run Directory: /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/link/run_link
+INFO: [v++ 60-1441] [01:38:07] Run run_link: Step generate_sc_driver: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2167.676 ; gain = 0.000 ; free physical = 40587 ; free virtual = 156894
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/reports/_build.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/krnl_colordetect/link/system_estimate_krnl_colordetect.xtxt
+INFO: [v++ 60-586] Created build_dir.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/krnl_colordetect.xclbin
+INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+	Guidance: /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/reports/_build.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/krnl_colordetect/link/v++_link_krnl_colordetect_guidance.html
+	Steps Log File: /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/_x_temp.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/logs/link/link.steps.log
+
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/06_4k_wo_pragma/vision/L3/examples/colordetect/build_dir.hw_emu.xilinx_u50_gen3x16_xdma_201920_3/krnl_colordetect.xclbin.link_summary 
+INFO: [v++ 60-791] Total elapsed time: 0h 6m 2s
+INFO: [v++ 60-1653] Closing dispatch client.

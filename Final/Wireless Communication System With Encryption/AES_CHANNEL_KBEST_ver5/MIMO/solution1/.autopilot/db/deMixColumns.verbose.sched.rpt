@@ -1,0 +1,428 @@
+
+
+================================================================
+== Vitis HLS Report for 'deMixColumns'
+================================================================
+* Date:           Fri Jun 17 13:15:28 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        MIMO
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  40.00 ns|  3.912 ns|    10.80 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       15|       15|  0.600 us|  0.600 us|   16|   16|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 16, depth = 16
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 16
+* Pipeline : 1
+  Pipeline-0 : II = 16, D = 16, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.67>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%array_addr = getelementptr i32 %array_r, i64 0, i64 0" [src/aes.cpp:406]   --->   Operation 17 'getelementptr' 'array_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%array_addr_1 = getelementptr i32 %array_r, i64 0, i64 1" [src/aes.cpp:406]   --->   Operation 18 'getelementptr' 'array_addr_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [2/2] (0.67ns)   --->   "%array_load = load i4 %array_addr" [src/aes.cpp:406]   --->   Operation 19 'load' 'array_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_1 : Operation 20 [2/2] (0.67ns)   --->   "%array_load_1 = load i4 %array_addr_1" [src/aes.cpp:406]   --->   Operation 20 'load' 'array_load_1' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+
+State 2 <SV = 1> <Delay = 3.56>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%array_addr_2 = getelementptr i32 %array_r, i64 0, i64 2" [src/aes.cpp:406]   --->   Operation 21 'getelementptr' 'array_addr_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%array_addr_3 = getelementptr i32 %array_r, i64 0, i64 3" [src/aes.cpp:406]   --->   Operation 22 'getelementptr' 'array_addr_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/2] (0.67ns)   --->   "%array_load = load i4 %array_addr" [src/aes.cpp:406]   --->   Operation 23 'load' 'array_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_2 : Operation 24 [1/2] (0.67ns)   --->   "%array_load_1 = load i4 %array_addr_1" [src/aes.cpp:406]   --->   Operation 24 'load' 'array_load_1' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_2 : Operation 25 [2/2] (0.67ns)   --->   "%array_load_2 = load i4 %array_addr_2" [src/aes.cpp:406]   --->   Operation 25 'load' 'array_load_2' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_2 : Operation 26 [2/2] (0.67ns)   --->   "%array_load_3 = load i4 %array_addr_3" [src/aes.cpp:406]   --->   Operation 26 'load' 'array_load_3' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_2 : Operation 27 [1/1] (2.88ns)   --->   "%tmp = call i32 @GFMul, i4 14, i32 %array_load" [src/aes.cpp:412]   --->   Operation 27 'call' 'tmp' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 28 [1/1] (2.88ns)   --->   "%tmp_0_1 = call i32 @GFMul, i4 14, i32 %array_load_1" [src/aes.cpp:412]   --->   Operation 28 'call' 'tmp_0_1' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 29 [1/1] (2.88ns)   --->   "%tmp_1 = call i32 @GFMul, i4 9, i32 %array_load" [src/aes.cpp:412]   --->   Operation 29 'call' 'tmp_1' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 30 [1/1] (2.88ns)   --->   "%tmp_1_1 = call i32 @GFMul, i4 9, i32 %array_load_1" [src/aes.cpp:412]   --->   Operation 30 'call' 'tmp_1_1' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 31 [1/1] (2.88ns)   --->   "%tmp_2 = call i32 @GFMul, i4 13, i32 %array_load" [src/aes.cpp:412]   --->   Operation 31 'call' 'tmp_2' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 3.56>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%array_addr_4 = getelementptr i32 %array_r, i64 0, i64 4" [src/aes.cpp:406]   --->   Operation 32 'getelementptr' 'array_addr_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%array_addr_5 = getelementptr i32 %array_r, i64 0, i64 5" [src/aes.cpp:406]   --->   Operation 33 'getelementptr' 'array_addr_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 34 [1/2] (0.67ns)   --->   "%array_load_2 = load i4 %array_addr_2" [src/aes.cpp:406]   --->   Operation 34 'load' 'array_load_2' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_3 : Operation 35 [1/2] (0.67ns)   --->   "%array_load_3 = load i4 %array_addr_3" [src/aes.cpp:406]   --->   Operation 35 'load' 'array_load_3' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_3 : Operation 36 [2/2] (0.67ns)   --->   "%array_load_4 = load i4 %array_addr_4" [src/aes.cpp:406]   --->   Operation 36 'load' 'array_load_4' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_3 : Operation 37 [2/2] (0.67ns)   --->   "%array_load_5 = load i4 %array_addr_5" [src/aes.cpp:406]   --->   Operation 37 'load' 'array_load_5' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_3 : Operation 38 [1/1] (2.88ns)   --->   "%tmp_0_2 = call i32 @GFMul, i4 14, i32 %array_load_2" [src/aes.cpp:412]   --->   Operation 38 'call' 'tmp_0_2' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 39 [1/1] (2.88ns)   --->   "%tmp_0_3 = call i32 @GFMul, i4 14, i32 %array_load_3" [src/aes.cpp:412]   --->   Operation 39 'call' 'tmp_0_3' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 40 [1/1] (2.88ns)   --->   "%tmp_1_2 = call i32 @GFMul, i4 9, i32 %array_load_2" [src/aes.cpp:412]   --->   Operation 40 'call' 'tmp_1_2' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 41 [1/1] (2.88ns)   --->   "%tmp_1_3 = call i32 @GFMul, i4 9, i32 %array_load_3" [src/aes.cpp:412]   --->   Operation 41 'call' 'tmp_1_3' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 42 [1/1] (2.88ns)   --->   "%tmp_2_1 = call i32 @GFMul, i4 13, i32 %array_load_1" [src/aes.cpp:412]   --->   Operation 42 'call' 'tmp_2_1' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 3.56>
+ST_4 : Operation 43 [1/1] (0.00ns)   --->   "%array_addr_6 = getelementptr i32 %array_r, i64 0, i64 6" [src/aes.cpp:406]   --->   Operation 43 'getelementptr' 'array_addr_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 44 [1/1] (0.00ns)   --->   "%array_addr_7 = getelementptr i32 %array_r, i64 0, i64 7" [src/aes.cpp:406]   --->   Operation 44 'getelementptr' 'array_addr_7' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 45 [1/2] (0.67ns)   --->   "%array_load_4 = load i4 %array_addr_4" [src/aes.cpp:406]   --->   Operation 45 'load' 'array_load_4' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_4 : Operation 46 [1/2] (0.67ns)   --->   "%array_load_5 = load i4 %array_addr_5" [src/aes.cpp:406]   --->   Operation 46 'load' 'array_load_5' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_4 : Operation 47 [2/2] (0.67ns)   --->   "%array_load_6 = load i4 %array_addr_6" [src/aes.cpp:406]   --->   Operation 47 'load' 'array_load_6' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_4 : Operation 48 [2/2] (0.67ns)   --->   "%array_load_7 = load i4 %array_addr_7" [src/aes.cpp:406]   --->   Operation 48 'load' 'array_load_7' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_4 : Operation 49 [1/1] (2.88ns)   --->   "%tmp_7 = call i32 @GFMul, i4 11, i32 %array_load_4" [src/aes.cpp:412]   --->   Operation 49 'call' 'tmp_7' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 50 [1/1] (2.88ns)   --->   "%tmp_7_0_1 = call i32 @GFMul, i4 11, i32 %array_load_5" [src/aes.cpp:412]   --->   Operation 50 'call' 'tmp_7_0_1' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 51 [1/1] (2.88ns)   --->   "%tmp_7_1 = call i32 @GFMul, i4 14, i32 %array_load_4" [src/aes.cpp:412]   --->   Operation 51 'call' 'tmp_7_1' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 52 [1/1] (2.88ns)   --->   "%tmp_7_1_1 = call i32 @GFMul, i4 14, i32 %array_load_5" [src/aes.cpp:412]   --->   Operation 52 'call' 'tmp_7_1_1' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 53 [1/1] (2.88ns)   --->   "%tmp_7_2 = call i32 @GFMul, i4 9, i32 %array_load_4" [src/aes.cpp:412]   --->   Operation 53 'call' 'tmp_7_2' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 3.56>
+ST_5 : Operation 54 [1/1] (0.00ns)   --->   "%array_addr_8 = getelementptr i32 %array_r, i64 0, i64 8" [src/aes.cpp:406]   --->   Operation 54 'getelementptr' 'array_addr_8' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 55 [1/1] (0.00ns)   --->   "%array_addr_9 = getelementptr i32 %array_r, i64 0, i64 9" [src/aes.cpp:406]   --->   Operation 55 'getelementptr' 'array_addr_9' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 56 [1/2] (0.67ns)   --->   "%array_load_6 = load i4 %array_addr_6" [src/aes.cpp:406]   --->   Operation 56 'load' 'array_load_6' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_5 : Operation 57 [1/2] (0.67ns)   --->   "%array_load_7 = load i4 %array_addr_7" [src/aes.cpp:406]   --->   Operation 57 'load' 'array_load_7' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_5 : Operation 58 [2/2] (0.67ns)   --->   "%array_load_8 = load i4 %array_addr_8" [src/aes.cpp:406]   --->   Operation 58 'load' 'array_load_8' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_5 : Operation 59 [2/2] (0.67ns)   --->   "%array_load_9 = load i4 %array_addr_9" [src/aes.cpp:406]   --->   Operation 59 'load' 'array_load_9' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_5 : Operation 60 [1/1] (2.88ns)   --->   "%tmp_7_0_2 = call i32 @GFMul, i4 11, i32 %array_load_6" [src/aes.cpp:412]   --->   Operation 60 'call' 'tmp_7_0_2' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 61 [1/1] (2.88ns)   --->   "%tmp_7_0_3 = call i32 @GFMul, i4 11, i32 %array_load_7" [src/aes.cpp:412]   --->   Operation 61 'call' 'tmp_7_0_3' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 62 [1/1] (2.88ns)   --->   "%tmp_7_1_2 = call i32 @GFMul, i4 14, i32 %array_load_6" [src/aes.cpp:412]   --->   Operation 62 'call' 'tmp_7_1_2' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 63 [1/1] (2.88ns)   --->   "%tmp_7_1_3 = call i32 @GFMul, i4 14, i32 %array_load_7" [src/aes.cpp:412]   --->   Operation 63 'call' 'tmp_7_1_3' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 64 [1/1] (2.88ns)   --->   "%tmp_7_2_1 = call i32 @GFMul, i4 9, i32 %array_load_5" [src/aes.cpp:412]   --->   Operation 64 'call' 'tmp_7_2_1' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 3.56>
+ST_6 : Operation 65 [1/1] (0.00ns)   --->   "%array_addr_10 = getelementptr i32 %array_r, i64 0, i64 10" [src/aes.cpp:406]   --->   Operation 65 'getelementptr' 'array_addr_10' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 66 [1/1] (0.00ns)   --->   "%array_addr_11 = getelementptr i32 %array_r, i64 0, i64 11" [src/aes.cpp:406]   --->   Operation 66 'getelementptr' 'array_addr_11' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 67 [1/2] (0.67ns)   --->   "%array_load_8 = load i4 %array_addr_8" [src/aes.cpp:406]   --->   Operation 67 'load' 'array_load_8' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_6 : Operation 68 [1/2] (0.67ns)   --->   "%array_load_9 = load i4 %array_addr_9" [src/aes.cpp:406]   --->   Operation 68 'load' 'array_load_9' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_6 : Operation 69 [2/2] (0.67ns)   --->   "%array_load_10 = load i4 %array_addr_10" [src/aes.cpp:406]   --->   Operation 69 'load' 'array_load_10' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_6 : Operation 70 [2/2] (0.67ns)   --->   "%array_load_11 = load i4 %array_addr_11" [src/aes.cpp:406]   --->   Operation 70 'load' 'array_load_11' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_6 : Operation 71 [1/1] (2.88ns)   --->   "%tmp_8 = call i32 @GFMul, i4 13, i32 %array_load_8" [src/aes.cpp:413]   --->   Operation 71 'call' 'tmp_8' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 72 [1/1] (2.88ns)   --->   "%tmp_8_0_1 = call i32 @GFMul, i4 13, i32 %array_load_9" [src/aes.cpp:413]   --->   Operation 72 'call' 'tmp_8_0_1' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 73 [1/1] (2.88ns)   --->   "%tmp_8_1 = call i32 @GFMul, i4 11, i32 %array_load_8" [src/aes.cpp:413]   --->   Operation 73 'call' 'tmp_8_1' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 74 [1/1] (2.88ns)   --->   "%tmp_8_1_1 = call i32 @GFMul, i4 11, i32 %array_load_9" [src/aes.cpp:413]   --->   Operation 74 'call' 'tmp_8_1_1' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 75 [1/1] (2.88ns)   --->   "%tmp_8_2 = call i32 @GFMul, i4 14, i32 %array_load_8" [src/aes.cpp:413]   --->   Operation 75 'call' 'tmp_8_2' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 3.56>
+ST_7 : Operation 76 [1/1] (0.00ns)   --->   "%array_addr_12 = getelementptr i32 %array_r, i64 0, i64 12" [src/aes.cpp:406]   --->   Operation 76 'getelementptr' 'array_addr_12' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 77 [1/1] (0.00ns)   --->   "%array_addr_13 = getelementptr i32 %array_r, i64 0, i64 13" [src/aes.cpp:406]   --->   Operation 77 'getelementptr' 'array_addr_13' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 78 [1/2] (0.67ns)   --->   "%array_load_10 = load i4 %array_addr_10" [src/aes.cpp:406]   --->   Operation 78 'load' 'array_load_10' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_7 : Operation 79 [1/2] (0.67ns)   --->   "%array_load_11 = load i4 %array_addr_11" [src/aes.cpp:406]   --->   Operation 79 'load' 'array_load_11' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_7 : Operation 80 [2/2] (0.67ns)   --->   "%array_load_12 = load i4 %array_addr_12" [src/aes.cpp:406]   --->   Operation 80 'load' 'array_load_12' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_7 : Operation 81 [2/2] (0.67ns)   --->   "%array_load_13 = load i4 %array_addr_13" [src/aes.cpp:406]   --->   Operation 81 'load' 'array_load_13' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_7 : Operation 82 [1/1] (2.88ns)   --->   "%tmp_8_0_2 = call i32 @GFMul, i4 13, i32 %array_load_10" [src/aes.cpp:413]   --->   Operation 82 'call' 'tmp_8_0_2' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 83 [1/1] (2.88ns)   --->   "%tmp_8_0_3 = call i32 @GFMul, i4 13, i32 %array_load_11" [src/aes.cpp:413]   --->   Operation 83 'call' 'tmp_8_0_3' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 84 [1/1] (2.88ns)   --->   "%tmp_8_1_2 = call i32 @GFMul, i4 11, i32 %array_load_10" [src/aes.cpp:413]   --->   Operation 84 'call' 'tmp_8_1_2' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 85 [1/1] (2.88ns)   --->   "%tmp_8_1_3 = call i32 @GFMul, i4 11, i32 %array_load_11" [src/aes.cpp:413]   --->   Operation 85 'call' 'tmp_8_1_3' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 86 [1/1] (2.88ns)   --->   "%tmp_8_2_1 = call i32 @GFMul, i4 14, i32 %array_load_9" [src/aes.cpp:413]   --->   Operation 86 'call' 'tmp_8_2_1' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 3.91>
+ST_8 : Operation 87 [1/1] (0.00ns)   --->   "%array_addr_14 = getelementptr i32 %array_r, i64 0, i64 14" [src/aes.cpp:406]   --->   Operation 87 'getelementptr' 'array_addr_14' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 88 [1/1] (0.00ns)   --->   "%array_addr_15 = getelementptr i32 %array_r, i64 0, i64 15" [src/aes.cpp:406]   --->   Operation 88 'getelementptr' 'array_addr_15' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 89 [1/2] (0.67ns)   --->   "%array_load_12 = load i4 %array_addr_12" [src/aes.cpp:406]   --->   Operation 89 'load' 'array_load_12' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_8 : Operation 90 [1/2] (0.67ns)   --->   "%array_load_13 = load i4 %array_addr_13" [src/aes.cpp:406]   --->   Operation 90 'load' 'array_load_13' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_8 : Operation 91 [2/2] (0.67ns)   --->   "%array_load_14 = load i4 %array_addr_14" [src/aes.cpp:406]   --->   Operation 91 'load' 'array_load_14' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_8 : Operation 92 [2/2] (0.67ns)   --->   "%array_load_15 = load i4 %array_addr_15" [src/aes.cpp:406]   --->   Operation 92 'load' 'array_load_15' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_8 : Operation 93 [1/1] (2.88ns)   --->   "%tmp_9 = call i32 @GFMul, i4 9, i32 %array_load_12" [src/aes.cpp:413]   --->   Operation 93 'call' 'tmp_9' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 94 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_1)   --->   "%xor_ln413 = xor i32 %tmp_7, i32 %tmp" [src/aes.cpp:413]   --->   Operation 94 'xor' 'xor_ln413' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 95 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_1)   --->   "%xor_ln413_2 = xor i32 %tmp_8, i32 %tmp_9" [src/aes.cpp:413]   --->   Operation 95 'xor' 'xor_ln413_2' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 96 [1/1] (0.35ns) (out node of the LUT)   --->   "%xor_ln413_1 = xor i32 %xor_ln413_2, i32 %xor_ln413" [src/aes.cpp:413]   --->   Operation 96 'xor' 'xor_ln413_1' <Predicate = true> <Delay = 0.35> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 97 [1/1] (2.88ns)   --->   "%tmp_9_0_1 = call i32 @GFMul, i4 9, i32 %array_load_13" [src/aes.cpp:413]   --->   Operation 97 'call' 'tmp_9_0_1' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 98 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_3)   --->   "%xor_ln413_4 = xor i32 %tmp_7_0_1, i32 %tmp_0_1" [src/aes.cpp:413]   --->   Operation 98 'xor' 'xor_ln413_4' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 99 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_3)   --->   "%xor_ln413_6 = xor i32 %tmp_8_0_1, i32 %tmp_9_0_1" [src/aes.cpp:413]   --->   Operation 99 'xor' 'xor_ln413_6' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 100 [1/1] (0.35ns) (out node of the LUT)   --->   "%xor_ln413_3 = xor i32 %xor_ln413_6, i32 %xor_ln413_4" [src/aes.cpp:413]   --->   Operation 100 'xor' 'xor_ln413_3' <Predicate = true> <Delay = 0.35> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 101 [1/1] (2.88ns)   --->   "%tmp_9_1 = call i32 @GFMul, i4 13, i32 %array_load_12" [src/aes.cpp:413]   --->   Operation 101 'call' 'tmp_9_1' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 102 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_9)   --->   "%xor_ln413_16 = xor i32 %tmp_7_1, i32 %tmp_1" [src/aes.cpp:413]   --->   Operation 102 'xor' 'xor_ln413_16' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 103 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_9)   --->   "%xor_ln413_18 = xor i32 %tmp_8_1, i32 %tmp_9_1" [src/aes.cpp:413]   --->   Operation 103 'xor' 'xor_ln413_18' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 104 [1/1] (0.35ns) (out node of the LUT)   --->   "%xor_ln413_9 = xor i32 %xor_ln413_18, i32 %xor_ln413_16" [src/aes.cpp:413]   --->   Operation 104 'xor' 'xor_ln413_9' <Predicate = true> <Delay = 0.35> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 105 [1/1] (2.88ns)   --->   "%tmp_9_1_1 = call i32 @GFMul, i4 13, i32 %array_load_13" [src/aes.cpp:413]   --->   Operation 105 'call' 'tmp_9_1_1' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 106 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_11)   --->   "%xor_ln413_20 = xor i32 %tmp_7_1_1, i32 %tmp_1_1" [src/aes.cpp:413]   --->   Operation 106 'xor' 'xor_ln413_20' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 107 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_11)   --->   "%xor_ln413_22 = xor i32 %tmp_8_1_1, i32 %tmp_9_1_1" [src/aes.cpp:413]   --->   Operation 107 'xor' 'xor_ln413_22' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 108 [1/1] (0.35ns) (out node of the LUT)   --->   "%xor_ln413_11 = xor i32 %xor_ln413_22, i32 %xor_ln413_20" [src/aes.cpp:413]   --->   Operation 108 'xor' 'xor_ln413_11' <Predicate = true> <Delay = 0.35> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 109 [1/1] (2.88ns)   --->   "%tmp_9_2 = call i32 @GFMul, i4 11, i32 %array_load_12" [src/aes.cpp:413]   --->   Operation 109 'call' 'tmp_9_2' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 110 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_17)   --->   "%xor_ln413_32 = xor i32 %tmp_7_2, i32 %tmp_2" [src/aes.cpp:413]   --->   Operation 110 'xor' 'xor_ln413_32' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 111 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_17)   --->   "%xor_ln413_33 = xor i32 %tmp_8_2, i32 %tmp_9_2" [src/aes.cpp:413]   --->   Operation 111 'xor' 'xor_ln413_33' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 112 [1/1] (0.35ns) (out node of the LUT)   --->   "%xor_ln413_17 = xor i32 %xor_ln413_33, i32 %xor_ln413_32" [src/aes.cpp:413]   --->   Operation 112 'xor' 'xor_ln413_17' <Predicate = true> <Delay = 0.35> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 3.91>
+ST_9 : Operation 113 [1/2] (0.67ns)   --->   "%array_load_14 = load i4 %array_addr_14" [src/aes.cpp:406]   --->   Operation 113 'load' 'array_load_14' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_9 : Operation 114 [1/2] (0.67ns)   --->   "%array_load_15 = load i4 %array_addr_15" [src/aes.cpp:406]   --->   Operation 114 'load' 'array_load_15' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_9 : Operation 115 [1/1] (0.67ns)   --->   "%store_ln412 = store i32 %xor_ln413_1, i4 %array_addr" [src/aes.cpp:412]   --->   Operation 115 'store' 'store_ln412' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_9 : Operation 116 [1/1] (0.67ns)   --->   "%store_ln412 = store i32 %xor_ln413_3, i4 %array_addr_1" [src/aes.cpp:412]   --->   Operation 116 'store' 'store_ln412' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_9 : Operation 117 [1/1] (2.88ns)   --->   "%tmp_9_0_2 = call i32 @GFMul, i4 9, i32 %array_load_14" [src/aes.cpp:413]   --->   Operation 117 'call' 'tmp_9_0_2' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 118 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_5)   --->   "%xor_ln413_8 = xor i32 %tmp_7_0_2, i32 %tmp_0_2" [src/aes.cpp:413]   --->   Operation 118 'xor' 'xor_ln413_8' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 119 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_5)   --->   "%xor_ln413_10 = xor i32 %tmp_8_0_2, i32 %tmp_9_0_2" [src/aes.cpp:413]   --->   Operation 119 'xor' 'xor_ln413_10' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 120 [1/1] (0.35ns) (out node of the LUT)   --->   "%xor_ln413_5 = xor i32 %xor_ln413_10, i32 %xor_ln413_8" [src/aes.cpp:413]   --->   Operation 120 'xor' 'xor_ln413_5' <Predicate = true> <Delay = 0.35> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 121 [1/1] (2.88ns)   --->   "%tmp_9_0_3 = call i32 @GFMul, i4 9, i32 %array_load_15" [src/aes.cpp:413]   --->   Operation 121 'call' 'tmp_9_0_3' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 122 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_7)   --->   "%xor_ln413_12 = xor i32 %tmp_7_0_3, i32 %tmp_0_3" [src/aes.cpp:413]   --->   Operation 122 'xor' 'xor_ln413_12' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 123 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_7)   --->   "%xor_ln413_14 = xor i32 %tmp_8_0_3, i32 %tmp_9_0_3" [src/aes.cpp:413]   --->   Operation 123 'xor' 'xor_ln413_14' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 124 [1/1] (0.35ns) (out node of the LUT)   --->   "%xor_ln413_7 = xor i32 %xor_ln413_14, i32 %xor_ln413_12" [src/aes.cpp:413]   --->   Operation 124 'xor' 'xor_ln413_7' <Predicate = true> <Delay = 0.35> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 125 [1/1] (2.88ns)   --->   "%tmp_9_1_2 = call i32 @GFMul, i4 13, i32 %array_load_14" [src/aes.cpp:413]   --->   Operation 125 'call' 'tmp_9_1_2' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 126 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_13)   --->   "%xor_ln413_24 = xor i32 %tmp_7_1_2, i32 %tmp_1_2" [src/aes.cpp:413]   --->   Operation 126 'xor' 'xor_ln413_24' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 127 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_13)   --->   "%xor_ln413_26 = xor i32 %tmp_8_1_2, i32 %tmp_9_1_2" [src/aes.cpp:413]   --->   Operation 127 'xor' 'xor_ln413_26' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 128 [1/1] (0.35ns) (out node of the LUT)   --->   "%xor_ln413_13 = xor i32 %xor_ln413_26, i32 %xor_ln413_24" [src/aes.cpp:413]   --->   Operation 128 'xor' 'xor_ln413_13' <Predicate = true> <Delay = 0.35> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 129 [1/1] (2.88ns)   --->   "%tmp_9_1_3 = call i32 @GFMul, i4 13, i32 %array_load_15" [src/aes.cpp:413]   --->   Operation 129 'call' 'tmp_9_1_3' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 130 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_15)   --->   "%xor_ln413_28 = xor i32 %tmp_7_1_3, i32 %tmp_1_3" [src/aes.cpp:413]   --->   Operation 130 'xor' 'xor_ln413_28' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 131 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_15)   --->   "%xor_ln413_30 = xor i32 %tmp_8_1_3, i32 %tmp_9_1_3" [src/aes.cpp:413]   --->   Operation 131 'xor' 'xor_ln413_30' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 132 [1/1] (0.35ns) (out node of the LUT)   --->   "%xor_ln413_15 = xor i32 %xor_ln413_30, i32 %xor_ln413_28" [src/aes.cpp:413]   --->   Operation 132 'xor' 'xor_ln413_15' <Predicate = true> <Delay = 0.35> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 133 [1/1] (2.88ns)   --->   "%tmp_9_2_1 = call i32 @GFMul, i4 11, i32 %array_load_13" [src/aes.cpp:413]   --->   Operation 133 'call' 'tmp_9_2_1' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 134 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_19)   --->   "%xor_ln413_34 = xor i32 %tmp_7_2_1, i32 %tmp_2_1" [src/aes.cpp:413]   --->   Operation 134 'xor' 'xor_ln413_34' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 135 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_19)   --->   "%xor_ln413_35 = xor i32 %tmp_8_2_1, i32 %tmp_9_2_1" [src/aes.cpp:413]   --->   Operation 135 'xor' 'xor_ln413_35' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 136 [1/1] (0.35ns) (out node of the LUT)   --->   "%xor_ln413_19 = xor i32 %xor_ln413_35, i32 %xor_ln413_34" [src/aes.cpp:413]   --->   Operation 136 'xor' 'xor_ln413_19' <Predicate = true> <Delay = 0.35> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 3.23>
+ST_10 : Operation 137 [1/1] (0.67ns)   --->   "%store_ln412 = store i32 %xor_ln413_5, i4 %array_addr_2" [src/aes.cpp:412]   --->   Operation 137 'store' 'store_ln412' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_10 : Operation 138 [1/1] (0.67ns)   --->   "%store_ln412 = store i32 %xor_ln413_7, i4 %array_addr_3" [src/aes.cpp:412]   --->   Operation 138 'store' 'store_ln412' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_10 : Operation 139 [1/1] (2.88ns)   --->   "%tmp_2_2 = call i32 @GFMul, i4 13, i32 %array_load_2" [src/aes.cpp:412]   --->   Operation 139 'call' 'tmp_2_2' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 140 [1/1] (2.88ns)   --->   "%tmp_7_2_2 = call i32 @GFMul, i4 9, i32 %array_load_6" [src/aes.cpp:412]   --->   Operation 140 'call' 'tmp_7_2_2' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 141 [1/1] (2.88ns)   --->   "%tmp_8_2_2 = call i32 @GFMul, i4 14, i32 %array_load_10" [src/aes.cpp:413]   --->   Operation 141 'call' 'tmp_8_2_2' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 142 [1/1] (2.88ns)   --->   "%tmp_9_2_2 = call i32 @GFMul, i4 11, i32 %array_load_14" [src/aes.cpp:413]   --->   Operation 142 'call' 'tmp_9_2_2' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 143 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_21)   --->   "%xor_ln413_36 = xor i32 %tmp_7_2_2, i32 %tmp_2_2" [src/aes.cpp:413]   --->   Operation 143 'xor' 'xor_ln413_36' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 144 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_21)   --->   "%xor_ln413_37 = xor i32 %tmp_8_2_2, i32 %tmp_9_2_2" [src/aes.cpp:413]   --->   Operation 144 'xor' 'xor_ln413_37' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 145 [1/1] (0.35ns) (out node of the LUT)   --->   "%xor_ln413_21 = xor i32 %xor_ln413_37, i32 %xor_ln413_36" [src/aes.cpp:413]   --->   Operation 145 'xor' 'xor_ln413_21' <Predicate = true> <Delay = 0.35> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 146 [1/1] (2.88ns)   --->   "%tmp_2_3 = call i32 @GFMul, i4 13, i32 %array_load_3" [src/aes.cpp:412]   --->   Operation 146 'call' 'tmp_2_3' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 3.23>
+ST_11 : Operation 147 [1/1] (0.67ns)   --->   "%store_ln412 = store i32 %xor_ln413_9, i4 %array_addr_4" [src/aes.cpp:412]   --->   Operation 147 'store' 'store_ln412' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_11 : Operation 148 [1/1] (0.67ns)   --->   "%store_ln412 = store i32 %xor_ln413_11, i4 %array_addr_5" [src/aes.cpp:412]   --->   Operation 148 'store' 'store_ln412' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_11 : Operation 149 [1/1] (2.88ns)   --->   "%tmp_7_2_3 = call i32 @GFMul, i4 9, i32 %array_load_7" [src/aes.cpp:412]   --->   Operation 149 'call' 'tmp_7_2_3' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 150 [1/1] (2.88ns)   --->   "%tmp_8_2_3 = call i32 @GFMul, i4 14, i32 %array_load_11" [src/aes.cpp:413]   --->   Operation 150 'call' 'tmp_8_2_3' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 151 [1/1] (2.88ns)   --->   "%tmp_9_2_3 = call i32 @GFMul, i4 11, i32 %array_load_15" [src/aes.cpp:413]   --->   Operation 151 'call' 'tmp_9_2_3' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 152 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_23)   --->   "%xor_ln413_38 = xor i32 %tmp_7_2_3, i32 %tmp_2_3" [src/aes.cpp:413]   --->   Operation 152 'xor' 'xor_ln413_38' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 153 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_23)   --->   "%xor_ln413_39 = xor i32 %tmp_8_2_3, i32 %tmp_9_2_3" [src/aes.cpp:413]   --->   Operation 153 'xor' 'xor_ln413_39' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 154 [1/1] (0.35ns) (out node of the LUT)   --->   "%xor_ln413_23 = xor i32 %xor_ln413_39, i32 %xor_ln413_38" [src/aes.cpp:413]   --->   Operation 154 'xor' 'xor_ln413_23' <Predicate = true> <Delay = 0.35> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 155 [1/1] (2.88ns)   --->   "%tmp_3 = call i32 @GFMul, i4 11, i32 %array_load" [src/aes.cpp:412]   --->   Operation 155 'call' 'tmp_3' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 156 [1/1] (2.88ns)   --->   "%tmp_7_3 = call i32 @GFMul, i4 13, i32 %array_load_4" [src/aes.cpp:412]   --->   Operation 156 'call' 'tmp_7_3' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 3.23>
+ST_12 : Operation 157 [1/1] (0.67ns)   --->   "%store_ln412 = store i32 %xor_ln413_13, i4 %array_addr_6" [src/aes.cpp:412]   --->   Operation 157 'store' 'store_ln412' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_12 : Operation 158 [1/1] (0.67ns)   --->   "%store_ln412 = store i32 %xor_ln413_15, i4 %array_addr_7" [src/aes.cpp:412]   --->   Operation 158 'store' 'store_ln412' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_12 : Operation 159 [1/1] (2.88ns)   --->   "%tmp_8_3 = call i32 @GFMul, i4 9, i32 %array_load_8" [src/aes.cpp:413]   --->   Operation 159 'call' 'tmp_8_3' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 160 [1/1] (2.88ns)   --->   "%tmp_9_3 = call i32 @GFMul, i4 14, i32 %array_load_12" [src/aes.cpp:413]   --->   Operation 160 'call' 'tmp_9_3' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 161 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_25)   --->   "%xor_ln413_40 = xor i32 %tmp_7_3, i32 %tmp_3" [src/aes.cpp:413]   --->   Operation 161 'xor' 'xor_ln413_40' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 162 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_25)   --->   "%xor_ln413_41 = xor i32 %tmp_8_3, i32 %tmp_9_3" [src/aes.cpp:413]   --->   Operation 162 'xor' 'xor_ln413_41' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 163 [1/1] (0.35ns) (out node of the LUT)   --->   "%xor_ln413_25 = xor i32 %xor_ln413_41, i32 %xor_ln413_40" [src/aes.cpp:413]   --->   Operation 163 'xor' 'xor_ln413_25' <Predicate = true> <Delay = 0.35> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 164 [1/1] (2.88ns)   --->   "%tmp_3_1 = call i32 @GFMul, i4 11, i32 %array_load_1" [src/aes.cpp:412]   --->   Operation 164 'call' 'tmp_3_1' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 165 [1/1] (2.88ns)   --->   "%tmp_7_3_1 = call i32 @GFMul, i4 13, i32 %array_load_5" [src/aes.cpp:412]   --->   Operation 165 'call' 'tmp_7_3_1' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 166 [1/1] (2.88ns)   --->   "%tmp_8_3_1 = call i32 @GFMul, i4 9, i32 %array_load_9" [src/aes.cpp:413]   --->   Operation 166 'call' 'tmp_8_3_1' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 3.23>
+ST_13 : Operation 167 [1/1] (0.67ns)   --->   "%store_ln412 = store i32 %xor_ln413_17, i4 %array_addr_8" [src/aes.cpp:412]   --->   Operation 167 'store' 'store_ln412' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_13 : Operation 168 [1/1] (0.67ns)   --->   "%store_ln412 = store i32 %xor_ln413_19, i4 %array_addr_9" [src/aes.cpp:412]   --->   Operation 168 'store' 'store_ln412' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_13 : Operation 169 [1/1] (2.88ns)   --->   "%tmp_9_3_1 = call i32 @GFMul, i4 14, i32 %array_load_13" [src/aes.cpp:413]   --->   Operation 169 'call' 'tmp_9_3_1' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 170 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_27)   --->   "%xor_ln413_42 = xor i32 %tmp_7_3_1, i32 %tmp_3_1" [src/aes.cpp:413]   --->   Operation 170 'xor' 'xor_ln413_42' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 171 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_27)   --->   "%xor_ln413_43 = xor i32 %tmp_8_3_1, i32 %tmp_9_3_1" [src/aes.cpp:413]   --->   Operation 171 'xor' 'xor_ln413_43' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 172 [1/1] (0.35ns) (out node of the LUT)   --->   "%xor_ln413_27 = xor i32 %xor_ln413_43, i32 %xor_ln413_42" [src/aes.cpp:413]   --->   Operation 172 'xor' 'xor_ln413_27' <Predicate = true> <Delay = 0.35> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 173 [1/1] (2.88ns)   --->   "%tmp_3_2 = call i32 @GFMul, i4 11, i32 %array_load_2" [src/aes.cpp:412]   --->   Operation 173 'call' 'tmp_3_2' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 174 [1/1] (2.88ns)   --->   "%tmp_7_3_2 = call i32 @GFMul, i4 13, i32 %array_load_6" [src/aes.cpp:412]   --->   Operation 174 'call' 'tmp_7_3_2' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 175 [1/1] (2.88ns)   --->   "%tmp_8_3_2 = call i32 @GFMul, i4 9, i32 %array_load_10" [src/aes.cpp:413]   --->   Operation 175 'call' 'tmp_8_3_2' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 176 [1/1] (2.88ns)   --->   "%tmp_9_3_2 = call i32 @GFMul, i4 14, i32 %array_load_14" [src/aes.cpp:413]   --->   Operation 176 'call' 'tmp_9_3_2' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 177 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_29)   --->   "%xor_ln413_44 = xor i32 %tmp_7_3_2, i32 %tmp_3_2" [src/aes.cpp:413]   --->   Operation 177 'xor' 'xor_ln413_44' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 178 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_29)   --->   "%xor_ln413_45 = xor i32 %tmp_8_3_2, i32 %tmp_9_3_2" [src/aes.cpp:413]   --->   Operation 178 'xor' 'xor_ln413_45' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 179 [1/1] (0.35ns) (out node of the LUT)   --->   "%xor_ln413_29 = xor i32 %xor_ln413_45, i32 %xor_ln413_44" [src/aes.cpp:413]   --->   Operation 179 'xor' 'xor_ln413_29' <Predicate = true> <Delay = 0.35> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 3.23>
+ST_14 : Operation 180 [1/1] (0.67ns)   --->   "%store_ln412 = store i32 %xor_ln413_21, i4 %array_addr_10" [src/aes.cpp:412]   --->   Operation 180 'store' 'store_ln412' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_14 : Operation 181 [1/1] (0.67ns)   --->   "%store_ln412 = store i32 %xor_ln413_23, i4 %array_addr_11" [src/aes.cpp:412]   --->   Operation 181 'store' 'store_ln412' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_14 : Operation 182 [1/1] (2.88ns)   --->   "%tmp_3_3 = call i32 @GFMul, i4 11, i32 %array_load_3" [src/aes.cpp:412]   --->   Operation 182 'call' 'tmp_3_3' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 183 [1/1] (2.88ns)   --->   "%tmp_7_3_3 = call i32 @GFMul, i4 13, i32 %array_load_7" [src/aes.cpp:412]   --->   Operation 183 'call' 'tmp_7_3_3' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 184 [1/1] (2.88ns)   --->   "%tmp_8_3_3 = call i32 @GFMul, i4 9, i32 %array_load_11" [src/aes.cpp:413]   --->   Operation 184 'call' 'tmp_8_3_3' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 185 [1/1] (2.88ns)   --->   "%tmp_9_3_3 = call i32 @GFMul, i4 14, i32 %array_load_15" [src/aes.cpp:413]   --->   Operation 185 'call' 'tmp_9_3_3' <Predicate = true> <Delay = 2.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 186 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_31)   --->   "%xor_ln413_46 = xor i32 %tmp_7_3_3, i32 %tmp_3_3" [src/aes.cpp:413]   --->   Operation 186 'xor' 'xor_ln413_46' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 187 [1/1] (0.00ns) (grouped into LUT with out node xor_ln413_31)   --->   "%xor_ln413_47 = xor i32 %tmp_8_3_3, i32 %tmp_9_3_3" [src/aes.cpp:413]   --->   Operation 187 'xor' 'xor_ln413_47' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 188 [1/1] (0.35ns) (out node of the LUT)   --->   "%xor_ln413_31 = xor i32 %xor_ln413_47, i32 %xor_ln413_46" [src/aes.cpp:413]   --->   Operation 188 'xor' 'xor_ln413_31' <Predicate = true> <Delay = 0.35> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 0.67>
+ST_15 : Operation 189 [1/1] (0.67ns)   --->   "%store_ln412 = store i32 %xor_ln413_25, i4 %array_addr_12" [src/aes.cpp:412]   --->   Operation 189 'store' 'store_ln412' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_15 : Operation 190 [1/1] (0.67ns)   --->   "%store_ln412 = store i32 %xor_ln413_27, i4 %array_addr_13" [src/aes.cpp:412]   --->   Operation 190 'store' 'store_ln412' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+
+State 16 <SV = 15> <Delay = 0.67>
+ST_16 : Operation 191 [1/1] (0.67ns)   --->   "%store_ln412 = store i32 %xor_ln413_29, i4 %array_addr_14" [src/aes.cpp:412]   --->   Operation 191 'store' 'store_ln412' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_16 : Operation 192 [1/1] (0.67ns)   --->   "%store_ln412 = store i32 %xor_ln413_31, i4 %array_addr_15" [src/aes.cpp:412]   --->   Operation 192 'store' 'store_ln412' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_16 : Operation 193 [1/1] (0.00ns)   --->   "%ret_ln417 = ret" [src/aes.cpp:417]   --->   Operation 193 'ret' 'ret_ln417' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 40ns, clock uncertainty: 10.8ns.
+
+ <State 1>: 0.677ns
+The critical path consists of the following:
+	'getelementptr' operation ('array_addr', src/aes.cpp:406) [2]  (0 ns)
+	'load' operation ('array_load', src/aes.cpp:406) on array 'array_r' [18]  (0.677 ns)
+
+ <State 2>: 3.56ns
+The critical path consists of the following:
+	'load' operation ('array_load', src/aes.cpp:406) on array 'array_r' [18]  (0.677 ns)
+	'call' operation ('tmp', src/aes.cpp:412) to 'GFMul' [34]  (2.88 ns)
+
+ <State 3>: 3.56ns
+The critical path consists of the following:
+	'load' operation ('array_load_2', src/aes.cpp:406) on array 'array_r' [20]  (0.677 ns)
+	'call' operation ('tmp_0_2', src/aes.cpp:412) to 'GFMul' [50]  (2.88 ns)
+
+ <State 4>: 3.56ns
+The critical path consists of the following:
+	'load' operation ('array_load_4', src/aes.cpp:406) on array 'array_r' [22]  (0.677 ns)
+	'call' operation ('tmp_7', src/aes.cpp:412) to 'GFMul' [35]  (2.88 ns)
+
+ <State 5>: 3.56ns
+The critical path consists of the following:
+	'load' operation ('array_load_6', src/aes.cpp:406) on array 'array_r' [24]  (0.677 ns)
+	'call' operation ('tmp_7_0_2', src/aes.cpp:412) to 'GFMul' [51]  (2.88 ns)
+
+ <State 6>: 3.56ns
+The critical path consists of the following:
+	'load' operation ('array_load_8', src/aes.cpp:406) on array 'array_r' [26]  (0.677 ns)
+	'call' operation ('tmp_8', src/aes.cpp:413) to 'GFMul' [36]  (2.88 ns)
+
+ <State 7>: 3.56ns
+The critical path consists of the following:
+	'load' operation ('array_load_10', src/aes.cpp:406) on array 'array_r' [28]  (0.677 ns)
+	'call' operation ('tmp_8_0_2', src/aes.cpp:413) to 'GFMul' [52]  (2.88 ns)
+
+ <State 8>: 3.91ns
+The critical path consists of the following:
+	'load' operation ('array_load_12', src/aes.cpp:406) on array 'array_r' [30]  (0.677 ns)
+	'call' operation ('tmp_9', src/aes.cpp:413) to 'GFMul' [37]  (2.88 ns)
+	'xor' operation ('xor_ln413_2', src/aes.cpp:413) [39]  (0 ns)
+	'xor' operation ('xor_ln413_1', src/aes.cpp:413) [40]  (0.351 ns)
+
+ <State 9>: 3.91ns
+The critical path consists of the following:
+	'load' operation ('array_load_14', src/aes.cpp:406) on array 'array_r' [32]  (0.677 ns)
+	'call' operation ('tmp_9_0_2', src/aes.cpp:413) to 'GFMul' [53]  (2.88 ns)
+	'xor' operation ('xor_ln413_10', src/aes.cpp:413) [55]  (0 ns)
+	'xor' operation ('xor_ln413_5', src/aes.cpp:413) [56]  (0.351 ns)
+
+ <State 10>: 3.23ns
+The critical path consists of the following:
+	'call' operation ('tmp_2_2', src/aes.cpp:412) to 'GFMul' [114]  (2.88 ns)
+	'xor' operation ('xor_ln413_36', src/aes.cpp:413) [118]  (0 ns)
+	'xor' operation ('xor_ln413_21', src/aes.cpp:413) [120]  (0.351 ns)
+
+ <State 11>: 3.23ns
+The critical path consists of the following:
+	'call' operation ('tmp_7_2_3', src/aes.cpp:412) to 'GFMul' [123]  (2.88 ns)
+	'xor' operation ('xor_ln413_38', src/aes.cpp:413) [126]  (0 ns)
+	'xor' operation ('xor_ln413_23', src/aes.cpp:413) [128]  (0.351 ns)
+
+ <State 12>: 3.23ns
+The critical path consists of the following:
+	'call' operation ('tmp_8_3', src/aes.cpp:413) to 'GFMul' [132]  (2.88 ns)
+	'xor' operation ('xor_ln413_41', src/aes.cpp:413) [135]  (0 ns)
+	'xor' operation ('xor_ln413_25', src/aes.cpp:413) [136]  (0.351 ns)
+
+ <State 13>: 3.23ns
+The critical path consists of the following:
+	'call' operation ('tmp_9_3_1', src/aes.cpp:413) to 'GFMul' [141]  (2.88 ns)
+	'xor' operation ('xor_ln413_43', src/aes.cpp:413) [143]  (0 ns)
+	'xor' operation ('xor_ln413_27', src/aes.cpp:413) [144]  (0.351 ns)
+
+ <State 14>: 3.23ns
+The critical path consists of the following:
+	'call' operation ('tmp_3_3', src/aes.cpp:412) to 'GFMul' [154]  (2.88 ns)
+	'xor' operation ('xor_ln413_46', src/aes.cpp:413) [158]  (0 ns)
+	'xor' operation ('xor_ln413_31', src/aes.cpp:413) [160]  (0.351 ns)
+
+ <State 15>: 0.677ns
+The critical path consists of the following:
+	'store' operation ('store_ln412', src/aes.cpp:412) of variable 'xor_ln413_25', src/aes.cpp:413 on array 'array_r' [137]  (0.677 ns)
+
+ <State 16>: 0.677ns
+The critical path consists of the following:
+	'store' operation ('store_ln412', src/aes.cpp:412) of variable 'xor_ln413_29', src/aes.cpp:413 on array 'array_r' [153]  (0.677 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

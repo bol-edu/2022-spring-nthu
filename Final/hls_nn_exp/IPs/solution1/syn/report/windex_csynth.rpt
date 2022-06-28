@@ -1,0 +1,177 @@
+
+
+================================================================
+== Vitis HLS Report for 'windex'
+================================================================
+* Date:           Sat Jun 18 17:03:45 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        test
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.744 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------+---------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                           |                                 |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                  Instance                 |              Module             |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-------------------------------------------+---------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_windex_Pipeline_VITIS_LOOP_21_1_fu_84  |windex_Pipeline_VITIS_LOOP_21_1  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |grp_windex_Pipeline_VITIS_LOOP_24_2_fu_92  |windex_Pipeline_VITIS_LOOP_24_2  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +-------------------------------------------+---------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     57|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        0|    -|     314|    479|    -|
+|Memory           |        0|    -|       6|      9|    -|
+|Multiplexer      |        -|    -|       -|     59|    -|
+|Register         |        -|    -|      46|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     366|    604|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|      1|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------+---------------------------------+---------+----+-----+-----+-----+
+    |                  Instance                 |              Module             | BRAM_18K| DSP|  FF | LUT | URAM|
+    +-------------------------------------------+---------------------------------+---------+----+-----+-----+-----+
+    |control_s_axi_U                            |control_s_axi                    |        0|   0|  113|  170|    0|
+    |grp_windex_Pipeline_VITIS_LOOP_21_1_fu_84  |windex_Pipeline_VITIS_LOOP_21_1  |        0|   0|  165|  156|    0|
+    |grp_windex_Pipeline_VITIS_LOOP_24_2_fu_92  |windex_Pipeline_VITIS_LOOP_24_2  |        0|   0|   36|  153|    0|
+    +-------------------------------------------+---------------------------------+---------+----+-----+-----+-----+
+    |Total                                      |                                 |        0|   0|  314|  479|    0|
+    +-------------------------------------------+---------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +---------+-------------------+---------+---+----+-----+------+-----+------+-------------+
+    |  Memory |       Module      | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +---------+-------------------+---------+---+----+-----+------+-----+------+-------------+
+    |cname_U  |cname_ROM_AUTO_1R  |        0|  6|   9|    0|    90|    6|     1|          540|
+    +---------+-------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total    |                   |        0|  6|   9|    0|    90|    6|     1|          540|
+    +---------+-------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                     Variable Name                     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------------------------+----------+----+---+----+------------+------------+
+    |add_ln21_1_fu_133_p2                                   |         +|   0|  0|  14|           7|           7|
+    |sub16_fu_144_p2                                        |         +|   0|  0|  39|          32|           2|
+    |empty_nbread_fu_72_p5_0                                |       and|   0|  0|   2|           1|           0|
+    |grp_windex_Pipeline_VITIS_LOOP_24_2_fu_92_word_TREADY  |       and|   0|  0|   2|           1|           1|
+    +-------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                  |          |   0|  0|  57|          41|          10|
+    +-------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------+----+-----------+-----+-----------+
+    |      Name      | LUT| Input Size| Bits| Total Bits|
+    +----------------+----+-----------+-----+-----------+
+    |ap_NS_fsm       |  31|          6|    1|          6|
+    |cname_address0  |  14|          3|    7|         21|
+    |cname_ce0       |  14|          3|    1|          3|
+    +----------------+----+-----------+-----+-----------+
+    |Total           |  59|         12|    9|         30|
+    +----------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------------+----+----+-----+-----------+
+    |                          Name                          | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------------+----+----+-----+-----------+
+    |add_ln21_1_reg_160                                      |   7|   0|    7|          0|
+    |ap_CS_fsm                                               |   5|   0|    5|          0|
+    |grp_windex_Pipeline_VITIS_LOOP_21_1_fu_84_ap_start_reg  |   1|   0|    1|          0|
+    |grp_windex_Pipeline_VITIS_LOOP_24_2_fu_92_ap_start_reg  |   1|   0|    1|          0|
+    |sub16_reg_169                                           |  32|   0|   32|          0|
+    +--------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                   |  46|   0|   46|          0|
+    +--------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+--------------+----------------+--------------+
+|       RTL Ports       | Dir | Bits|   Protocol   |  Source Object |    C Type    |
++-----------------------+-----+-----+--------------+----------------+--------------+
+|s_axi_control_AWVALID  |   in|    1|         s_axi|         control|        scalar|
+|s_axi_control_AWREADY  |  out|    1|         s_axi|         control|        scalar|
+|s_axi_control_AWADDR   |   in|    5|         s_axi|         control|        scalar|
+|s_axi_control_WVALID   |   in|    1|         s_axi|         control|        scalar|
+|s_axi_control_WREADY   |  out|    1|         s_axi|         control|        scalar|
+|s_axi_control_WDATA    |   in|   32|         s_axi|         control|        scalar|
+|s_axi_control_WSTRB    |   in|    4|         s_axi|         control|        scalar|
+|s_axi_control_ARVALID  |   in|    1|         s_axi|         control|        scalar|
+|s_axi_control_ARREADY  |  out|    1|         s_axi|         control|        scalar|
+|s_axi_control_ARADDR   |   in|    5|         s_axi|         control|        scalar|
+|s_axi_control_RVALID   |  out|    1|         s_axi|         control|        scalar|
+|s_axi_control_RREADY   |   in|    1|         s_axi|         control|        scalar|
+|s_axi_control_RDATA    |  out|   32|         s_axi|         control|        scalar|
+|s_axi_control_RRESP    |  out|    2|         s_axi|         control|        scalar|
+|s_axi_control_BVALID   |  out|    1|         s_axi|         control|        scalar|
+|s_axi_control_BREADY   |   in|    1|         s_axi|         control|        scalar|
+|s_axi_control_BRESP    |  out|    2|         s_axi|         control|        scalar|
+|ap_local_block         |  out|    1|  ap_ctrl_none|          windex|  return value|
+|ap_clk                 |   in|    1|  ap_ctrl_none|          windex|  return value|
+|ap_rst_n               |   in|    1|  ap_ctrl_none|          windex|  return value|
+|pout8_TDATA            |   in|    8|          axis|  pout8_V_data_V|       pointer|
+|pout8_TVALID           |   in|    1|          axis|  pout8_V_last_V|       pointer|
+|pout8_TREADY           |  out|    1|          axis|  pout8_V_last_V|       pointer|
+|pout8_TLAST            |   in|    1|          axis|  pout8_V_last_V|       pointer|
+|pout8_TKEEP            |   in|    1|          axis|  pout8_V_keep_V|       pointer|
+|pout8_TSTRB            |   in|    1|          axis|  pout8_V_strb_V|       pointer|
+|word_TDATA             |  out|    8|          axis|   word_V_data_V|       pointer|
+|word_TVALID            |  out|    1|          axis|   word_V_last_V|       pointer|
+|word_TREADY            |   in|    1|          axis|   word_V_last_V|       pointer|
+|word_TLAST             |  out|    1|          axis|   word_V_last_V|       pointer|
+|word_TKEEP             |  out|    1|          axis|   word_V_keep_V|       pointer|
+|word_TSTRB             |  out|    1|          axis|   word_V_strb_V|       pointer|
++-----------------------+-----+-----+--------------+----------------+--------------+
+

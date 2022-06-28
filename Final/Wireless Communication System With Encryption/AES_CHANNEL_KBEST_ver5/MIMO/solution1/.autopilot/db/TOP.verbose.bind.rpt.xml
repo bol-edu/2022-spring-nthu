@@ -1,0 +1,58 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'TOP'" level="0">
+<item name = "Date">Fri Jun 17 13:15:39 2022
+</item>
+<item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)</item>
+<item name = "Project">MIMO</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu9eg-ffvb1156-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">40.00 ns, 27.335 ns, 10.80 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">13134, 14054, 0.525 ms, 0.562 ms, 7558, 13958, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="call_ln0_entry_proc_fu_166">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_AES_En_De27_fu_173">AES_En_De27, 93, 10369, 3.720 us, 0.415 ms, 93, 10369, no</column>
+<column name="grp_Rayleigh_1_fu_189">Rayleigh_1, 711, 711, 28.440 us, 28.440 us, 711, 711, no</column>
+<column name="grp_Modulation_fu_197">Modulation, 67, 67, 2.680 us, 2.680 us, 67, 67, no</column>
+<column name="grp_split_fu_207">split, 18, 18, 0.720 us, 0.720 us, 18, 18, no</column>
+<column name="grp_split_1_fu_217">split_1, 18, 18, 0.720 us, 0.720 us, 18, 18, no</column>
+<column name="grp_QRD_fu_227">QRD, 3350, 9452, 0.134 ms, 0.378 ms, 3350, 9452, no</column>
+<column name="grp_channel_mult_fu_243">channel_mult, 163, 163, 6.520 us, 6.520 us, 163, 163, no</column>
+<column name="grp_AWGN_1_fu_257">AWGN_1, 810, 810, 32.400 us, 32.400 us, 810, 810, no</column>
+<column name="grp_matrix_mult_fu_266">matrix_mult, 212, 212, 8.480 us, 8.480 us, 212, 212, no</column>
+<column name="grp_KBEST_fu_276">KBEST, 7557, 13957, 0.302 ms, 0.558 ms, 7557, 13957, no</column>
+<column name="grp_DeModulation_fu_286">DeModulation, 130, 130, 5.200 us, 5.200 us, 130, 130, no</column>
+<column name="grp_AES_En_De_128_fu_294">AES_En_De_128, 93, 12514, 3.720 us, 0.501 ms, 93, 12514, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

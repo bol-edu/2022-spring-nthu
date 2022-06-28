@@ -1,0 +1,492 @@
+
+
+================================================================
+== Vitis HLS Report for 'AES_En_De27'
+================================================================
+* Date:           Fri Jun 17 13:14:54 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        MIMO
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  40.00 ns|  5.149 ns|    10.80 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |   Interval  | Pipeline|
+    |   min   |   max   |    min   |    max   | min |  max  |   Type  |
+    +---------+---------+----------+----------+-----+-------+---------+
+    |       93|    10369|  3.720 us|  0.415 ms|   93|  10369|       no|
+    +---------+---------+----------+----------+-----+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_508_2  |       93|    10368|   4 ~ 689|          -|          -|    16|        no|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 35
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 17 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 2 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.42>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%temp_key = alloca i64 1" [src/aes.cpp:492]   --->   Operation 36 'alloca' 'temp_key' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%w = alloca i64 1" [src/aes.cpp:495]   --->   Operation 37 'alloca' 'w' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%key_char = alloca i64 1" [src/aes.cpp:506]   --->   Operation 38 'alloca' 'key_char' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %AES_EN_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 39 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %AES_EN_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 40 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %AES_EN_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 41 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %AES_EN_out, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 42 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %in_data, void @empty_60, i32 0, i32 0, void @empty_59, i32 0, i32 0, void @empty_59, void @empty_59, void @empty_59, i32 0, i32 0, i32 0, i32 0, void @empty_59, void @empty_59"   --->   Operation 43 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.42ns)   --->   "%br_ln508 = br void %rewind_header" [src/aes.cpp:508]   --->   Operation 44 'br' 'br_ln508' <Predicate = true> <Delay = 0.42>
+
+State 2 <SV = 1> <Delay = 1.63>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%do_init = phi i1 1, void %entry, i1 0, void %.split._crit_edge.i, i1 1, void %AES_En_De27.exit"   --->   Operation 45 'phi' 'do_init' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%p_0_rewind = phi i8 0, void %entry, i8 %p_0_phi, void %.split._crit_edge.i, i8 0, void %AES_En_De27.exit" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 46 'phi' 'p_0_rewind' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%p_062_rewind = phi i8 0, void %entry, i8 %p_062_phi, void %.split._crit_edge.i, i8 0, void %AES_En_De27.exit" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 47 'phi' 'p_062_rewind' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%p_061_rewind = phi i8 0, void %entry, i8 %p_061_phi, void %.split._crit_edge.i, i8 0, void %AES_En_De27.exit" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 48 'phi' 'p_061_rewind' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%p_060_rewind = phi i8 0, void %entry, i8 %p_060_phi, void %.split._crit_edge.i, i8 0, void %AES_En_De27.exit" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 49 'phi' 'p_060_rewind' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%p_059_rewind = phi i8 0, void %entry, i8 %p_059_phi, void %.split._crit_edge.i, i8 0, void %AES_En_De27.exit" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 50 'phi' 'p_059_rewind' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%p_058_rewind = phi i8 0, void %entry, i8 %p_058_phi, void %.split._crit_edge.i, i8 0, void %AES_En_De27.exit" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 51 'phi' 'p_058_rewind' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%p_057_rewind = phi i8 0, void %entry, i8 %p_057_phi, void %.split._crit_edge.i, i8 0, void %AES_En_De27.exit" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 52 'phi' 'p_057_rewind' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%p_056_rewind = phi i8 0, void %entry, i8 %p_056_phi, void %.split._crit_edge.i, i8 0, void %AES_En_De27.exit" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 53 'phi' 'p_056_rewind' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%p_055_rewind = phi i8 0, void %entry, i8 %p_055_phi, void %.split._crit_edge.i, i8 0, void %AES_En_De27.exit" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 54 'phi' 'p_055_rewind' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%p_054_rewind = phi i8 0, void %entry, i8 %p_054_phi, void %.split._crit_edge.i, i8 0, void %AES_En_De27.exit" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 55 'phi' 'p_054_rewind' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%p_053_rewind = phi i8 0, void %entry, i8 %p_053_phi, void %.split._crit_edge.i, i8 0, void %AES_En_De27.exit" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 56 'phi' 'p_053_rewind' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%p_052_rewind = phi i8 0, void %entry, i8 %p_052_phi, void %.split._crit_edge.i, i8 0, void %AES_En_De27.exit" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 57 'phi' 'p_052_rewind' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%p_051_rewind = phi i8 0, void %entry, i8 %p_051_phi, void %.split._crit_edge.i, i8 0, void %AES_En_De27.exit" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 58 'phi' 'p_051_rewind' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%p_050_rewind = phi i8 0, void %entry, i8 %p_050_phi, void %.split._crit_edge.i, i8 0, void %AES_En_De27.exit" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 59 'phi' 'p_050_rewind' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%p_049_rewind = phi i8 0, void %entry, i8 %p_049_phi, void %.split._crit_edge.i, i8 0, void %AES_En_De27.exit" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 60 'phi' 'p_049_rewind' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%p_048_rewind = phi i8 0, void %entry, i8 %p_048_phi, void %.split._crit_edge.i, i8 0, void %AES_En_De27.exit" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 61 'phi' 'p_048_rewind' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%key_change_flag17 = phi i8 0, void %entry, i8 %key_change_flag, void %.split._crit_edge.i, i8 0, void %AES_En_De27.exit"   --->   Operation 62 'phi' 'key_change_flag17' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%i15 = phi i4 0, void %entry, i4 %i, void %.split._crit_edge.i, i4 0, void %AES_En_De27.exit"   --->   Operation 63 'phi' 'i15' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 64 [1/1] (0.42ns)   --->   "%br_ln0 = br i1 %do_init, void %.split.i, void %rewind_init"   --->   Operation 64 'br' 'br_ln0' <Predicate = true> <Delay = 0.42>
+ST_2 : Operation 65 [1/1] (1.63ns)   --->   "%bit128in_buffer = read i8 @_ssdm_op_Read.ap_fifo.volatile.i8P0A, i8 %in_data" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 65 'read' 'bit128in_buffer' <Predicate = (do_init)> <Delay = 1.63> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = -1> <FIFO>
+
+State 3 <SV = 2> <Delay = 1.63>
+ST_3 : Operation 66 [1/1] (1.63ns)   --->   "%bit128in_buffer_1 = read i8 @_ssdm_op_Read.ap_fifo.volatile.i8P0A, i8 %in_data" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 66 'read' 'bit128in_buffer_1' <Predicate = true> <Delay = 1.63> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = -1> <FIFO>
+
+State 4 <SV = 3> <Delay = 1.63>
+ST_4 : Operation 67 [1/1] (1.63ns)   --->   "%bit128in_buffer_2 = read i8 @_ssdm_op_Read.ap_fifo.volatile.i8P0A, i8 %in_data" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 67 'read' 'bit128in_buffer_2' <Predicate = true> <Delay = 1.63> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = -1> <FIFO>
+
+State 5 <SV = 4> <Delay = 1.63>
+ST_5 : Operation 68 [1/1] (1.63ns)   --->   "%bit128in_buffer_3 = read i8 @_ssdm_op_Read.ap_fifo.volatile.i8P0A, i8 %in_data" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 68 'read' 'bit128in_buffer_3' <Predicate = true> <Delay = 1.63> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = -1> <FIFO>
+
+State 6 <SV = 5> <Delay = 1.63>
+ST_6 : Operation 69 [1/1] (1.63ns)   --->   "%bit128in_buffer_4 = read i8 @_ssdm_op_Read.ap_fifo.volatile.i8P0A, i8 %in_data" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 69 'read' 'bit128in_buffer_4' <Predicate = true> <Delay = 1.63> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = -1> <FIFO>
+
+State 7 <SV = 6> <Delay = 1.63>
+ST_7 : Operation 70 [1/1] (1.63ns)   --->   "%bit128in_buffer_5 = read i8 @_ssdm_op_Read.ap_fifo.volatile.i8P0A, i8 %in_data" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 70 'read' 'bit128in_buffer_5' <Predicate = true> <Delay = 1.63> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = -1> <FIFO>
+
+State 8 <SV = 7> <Delay = 1.63>
+ST_8 : Operation 71 [1/1] (1.63ns)   --->   "%bit128in_buffer_6 = read i8 @_ssdm_op_Read.ap_fifo.volatile.i8P0A, i8 %in_data" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 71 'read' 'bit128in_buffer_6' <Predicate = true> <Delay = 1.63> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = -1> <FIFO>
+
+State 9 <SV = 8> <Delay = 1.63>
+ST_9 : Operation 72 [1/1] (1.63ns)   --->   "%bit128in_buffer_7 = read i8 @_ssdm_op_Read.ap_fifo.volatile.i8P0A, i8 %in_data" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 72 'read' 'bit128in_buffer_7' <Predicate = true> <Delay = 1.63> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = -1> <FIFO>
+
+State 10 <SV = 9> <Delay = 1.63>
+ST_10 : Operation 73 [1/1] (1.63ns)   --->   "%bit128in_buffer_8 = read i8 @_ssdm_op_Read.ap_fifo.volatile.i8P0A, i8 %in_data" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 73 'read' 'bit128in_buffer_8' <Predicate = true> <Delay = 1.63> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = -1> <FIFO>
+
+State 11 <SV = 10> <Delay = 1.63>
+ST_11 : Operation 74 [1/1] (1.63ns)   --->   "%bit128in_buffer_9 = read i8 @_ssdm_op_Read.ap_fifo.volatile.i8P0A, i8 %in_data" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 74 'read' 'bit128in_buffer_9' <Predicate = true> <Delay = 1.63> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = -1> <FIFO>
+
+State 12 <SV = 11> <Delay = 1.63>
+ST_12 : Operation 75 [1/1] (1.63ns)   --->   "%bit128in_buffer_10 = read i8 @_ssdm_op_Read.ap_fifo.volatile.i8P0A, i8 %in_data" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 75 'read' 'bit128in_buffer_10' <Predicate = true> <Delay = 1.63> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = -1> <FIFO>
+
+State 13 <SV = 12> <Delay = 1.63>
+ST_13 : Operation 76 [1/1] (1.63ns)   --->   "%bit128in_buffer_11 = read i8 @_ssdm_op_Read.ap_fifo.volatile.i8P0A, i8 %in_data" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 76 'read' 'bit128in_buffer_11' <Predicate = true> <Delay = 1.63> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = -1> <FIFO>
+
+State 14 <SV = 13> <Delay = 1.63>
+ST_14 : Operation 77 [1/1] (1.63ns)   --->   "%bit128in_buffer_12 = read i8 @_ssdm_op_Read.ap_fifo.volatile.i8P0A, i8 %in_data" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 77 'read' 'bit128in_buffer_12' <Predicate = true> <Delay = 1.63> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = -1> <FIFO>
+
+State 15 <SV = 14> <Delay = 1.63>
+ST_15 : Operation 78 [1/1] (1.63ns)   --->   "%bit128in_buffer_13 = read i8 @_ssdm_op_Read.ap_fifo.volatile.i8P0A, i8 %in_data" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 78 'read' 'bit128in_buffer_13' <Predicate = true> <Delay = 1.63> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = -1> <FIFO>
+
+State 16 <SV = 15> <Delay = 1.63>
+ST_16 : Operation 79 [1/1] (1.63ns)   --->   "%bit128in_buffer_14 = read i8 @_ssdm_op_Read.ap_fifo.volatile.i8P0A, i8 %in_data" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 79 'read' 'bit128in_buffer_14' <Predicate = true> <Delay = 1.63> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = -1> <FIFO>
+
+State 17 <SV = 16> <Delay = 1.63>
+ST_17 : Operation 80 [1/1] (1.63ns)   --->   "%bit128in_buffer_15 = read i8 @_ssdm_op_Read.ap_fifo.volatile.i8P0A, i8 %in_data" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144]   --->   Operation 80 'read' 'bit128in_buffer_15' <Predicate = (do_init)> <Delay = 1.63> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = -1> <FIFO>
+ST_17 : Operation 81 [1/1] (0.42ns)   --->   "%br_ln508 = br void %.split.i" [src/aes.cpp:508]   --->   Operation 81 'br' 'br_ln508' <Predicate = (do_init)> <Delay = 0.42>
+ST_17 : Operation 82 [1/1] (0.00ns)   --->   "%zext_ln508 = zext i4 %i15" [src/aes.cpp:508]   --->   Operation 82 'zext' 'zext_ln508' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 83 [1/1] (0.00ns)   --->   "%key_V31_addr = getelementptr i8 %key_V31, i64 0, i64 %zext_ln508"   --->   Operation 83 'getelementptr' 'key_V31_addr' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 84 [2/2] (0.67ns)   --->   "%key_V31_load = load i4 %key_V31_addr"   --->   Operation 84 'load' 'key_V31_load' <Predicate = true> <Delay = 0.67> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 16> <ROM>
+ST_17 : Operation 85 [1/1] (0.00ns)   --->   "%temp_key_addr = getelementptr i8 %temp_key, i64 0, i64 %zext_ln508" [src/aes.cpp:512]   --->   Operation 85 'getelementptr' 'temp_key_addr' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 86 [2/2] (0.67ns)   --->   "%temp_key_load = load i4 %temp_key_addr" [src/aes.cpp:512]   --->   Operation 86 'load' 'temp_key_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_17 : Operation 87 [1/1] (0.79ns)   --->   "%i = add i4 %i15, i4 1" [src/aes.cpp:508]   --->   Operation 87 'add' 'i' <Predicate = true> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 2.20>
+ST_18 : Operation 88 [1/1] (0.00ns)   --->   "%p_0_phi = phi i8 %bit128in_buffer_15, void %rewind_init, i8 %p_0_rewind, void %rewind_header"   --->   Operation 88 'phi' 'p_0_phi' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 89 [1/1] (0.00ns)   --->   "%p_062_phi = phi i8 %bit128in_buffer_14, void %rewind_init, i8 %p_062_rewind, void %rewind_header"   --->   Operation 89 'phi' 'p_062_phi' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 90 [1/1] (0.00ns)   --->   "%p_061_phi = phi i8 %bit128in_buffer_13, void %rewind_init, i8 %p_061_rewind, void %rewind_header"   --->   Operation 90 'phi' 'p_061_phi' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 91 [1/1] (0.00ns)   --->   "%p_060_phi = phi i8 %bit128in_buffer_12, void %rewind_init, i8 %p_060_rewind, void %rewind_header"   --->   Operation 91 'phi' 'p_060_phi' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 92 [1/1] (0.00ns)   --->   "%p_059_phi = phi i8 %bit128in_buffer_11, void %rewind_init, i8 %p_059_rewind, void %rewind_header"   --->   Operation 92 'phi' 'p_059_phi' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 93 [1/1] (0.00ns)   --->   "%p_058_phi = phi i8 %bit128in_buffer_10, void %rewind_init, i8 %p_058_rewind, void %rewind_header"   --->   Operation 93 'phi' 'p_058_phi' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 94 [1/1] (0.00ns)   --->   "%p_057_phi = phi i8 %bit128in_buffer_9, void %rewind_init, i8 %p_057_rewind, void %rewind_header"   --->   Operation 94 'phi' 'p_057_phi' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 95 [1/1] (0.00ns)   --->   "%p_056_phi = phi i8 %bit128in_buffer_8, void %rewind_init, i8 %p_056_rewind, void %rewind_header"   --->   Operation 95 'phi' 'p_056_phi' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 96 [1/1] (0.00ns)   --->   "%p_055_phi = phi i8 %bit128in_buffer_7, void %rewind_init, i8 %p_055_rewind, void %rewind_header"   --->   Operation 96 'phi' 'p_055_phi' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 97 [1/1] (0.00ns)   --->   "%p_054_phi = phi i8 %bit128in_buffer_6, void %rewind_init, i8 %p_054_rewind, void %rewind_header"   --->   Operation 97 'phi' 'p_054_phi' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 98 [1/1] (0.00ns)   --->   "%p_053_phi = phi i8 %bit128in_buffer_5, void %rewind_init, i8 %p_053_rewind, void %rewind_header"   --->   Operation 98 'phi' 'p_053_phi' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 99 [1/1] (0.00ns)   --->   "%p_052_phi = phi i8 %bit128in_buffer_4, void %rewind_init, i8 %p_052_rewind, void %rewind_header"   --->   Operation 99 'phi' 'p_052_phi' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 100 [1/1] (0.00ns)   --->   "%p_051_phi = phi i8 %bit128in_buffer_3, void %rewind_init, i8 %p_051_rewind, void %rewind_header"   --->   Operation 100 'phi' 'p_051_phi' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 101 [1/1] (0.00ns)   --->   "%p_050_phi = phi i8 %bit128in_buffer_2, void %rewind_init, i8 %p_050_rewind, void %rewind_header"   --->   Operation 101 'phi' 'p_050_phi' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 102 [1/1] (0.00ns)   --->   "%p_049_phi = phi i8 %bit128in_buffer_1, void %rewind_init, i8 %p_049_rewind, void %rewind_header"   --->   Operation 102 'phi' 'p_049_phi' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 103 [1/1] (0.00ns)   --->   "%p_048_phi = phi i8 %bit128in_buffer, void %rewind_init, i8 %p_048_rewind, void %rewind_header"   --->   Operation 103 'phi' 'p_048_phi' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 104 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 16, i64 16, i64 16"   --->   Operation 104 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 105 [1/1] (0.00ns)   --->   "%specpipeline_ln490 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_59" [src/aes.cpp:490]   --->   Operation 105 'specpipeline' 'specpipeline_ln490' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 106 [1/1] (0.00ns)   --->   "%specloopname_ln490 = specloopname void @_ssdm_op_SpecLoopName, void @empty_28" [src/aes.cpp:490]   --->   Operation 106 'specloopname' 'specloopname_ln490' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 107 [1/2] (0.67ns)   --->   "%key_V31_load = load i4 %key_V31_addr"   --->   Operation 107 'load' 'key_V31_load' <Predicate = true> <Delay = 0.67> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 16> <ROM>
+ST_18 : Operation 108 [1/1] (0.00ns)   --->   "%key_char_addr = getelementptr i8 %key_char, i64 0, i64 %zext_ln508" [src/aes.cpp:511]   --->   Operation 108 'getelementptr' 'key_char_addr' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 109 [1/1] (0.67ns)   --->   "%store_ln511 = store i8 %key_V31_load, i4 %key_char_addr" [src/aes.cpp:511]   --->   Operation 109 'store' 'store_ln511' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_18 : Operation 110 [1/2] (0.67ns)   --->   "%temp_key_load = load i4 %temp_key_addr" [src/aes.cpp:512]   --->   Operation 110 'load' 'temp_key_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_18 : Operation 111 [1/1] (0.84ns)   --->   "%icmp_ln512 = icmp_eq  i8 %temp_key_load, i8 %key_V31_load" [src/aes.cpp:512]   --->   Operation 111 'icmp' 'icmp_ln512' <Predicate = true> <Delay = 0.84> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 112 [1/1] (0.42ns)   --->   "%br_ln512 = br i1 %icmp_ln512, void, void %.split._crit_edge.i" [src/aes.cpp:512]   --->   Operation 112 'br' 'br_ln512' <Predicate = true> <Delay = 0.42>
+ST_18 : Operation 113 [1/1] (0.67ns)   --->   "%store_ln514 = store i8 %key_V31_load, i4 %temp_key_addr" [src/aes.cpp:514]   --->   Operation 113 'store' 'store_ln514' <Predicate = (!icmp_ln512)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_18 : Operation 114 [1/1] (0.42ns)   --->   "%br_ln516 = br void %.split._crit_edge.i" [src/aes.cpp:516]   --->   Operation 114 'br' 'br_ln516' <Predicate = (!icmp_ln512)> <Delay = 0.42>
+ST_18 : Operation 115 [1/1] (0.72ns)   --->   "%icmp_ln508 = icmp_eq  i4 %i15, i4 15" [src/aes.cpp:508]   --->   Operation 115 'icmp' 'icmp_ln508' <Predicate = true> <Delay = 0.72> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 0.44>
+ST_19 : Operation 116 [1/1] (0.00ns)   --->   "%key_change_flag = phi i8 1, void, i8 %key_change_flag17, void %.split.i"   --->   Operation 116 'phi' 'key_change_flag' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 117 [1/1] (0.00ns)   --->   "%br_ln508 = br i1 %icmp_ln508, void %rewind_header, void %_Z9AES_En_DeRN3hls6streamI7ap_uintILi8EELi0EEES4_S1_ILi1EEPS2__.exit.i" [src/aes.cpp:508]   --->   Operation 117 'br' 'br_ln508' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 118 [1/1] (0.44ns)   --->   "%icmp_ln519 = icmp_eq  i8 %key_change_flag, i8 1" [src/aes.cpp:519]   --->   Operation 118 'icmp' 'icmp_ln519' <Predicate = (icmp_ln508)> <Delay = 0.44> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 119 [1/1] (0.00ns)   --->   "%br_ln519 = br i1 %icmp_ln519, void %AES_En_De27.exit, void" [src/aes.cpp:519]   --->   Operation 119 'br' 'br_ln519' <Predicate = (icmp_ln508)> <Delay = 0.00>
+ST_19 : Operation 120 [2/2] (0.00ns)   --->   "%call_ln521 = call void @extendKey, i8 %key_char, i32 %w, i8 %S29, i32 %Rcon" [src/aes.cpp:521]   --->   Operation 120 'call' 'call_ln521' <Predicate = (icmp_ln508 & icmp_ln519)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 20 <SV = 19> <Delay = 1.83>
+ST_20 : Operation 121 [1/2] (0.00ns)   --->   "%call_ln521 = call void @extendKey, i8 %key_char, i32 %w, i8 %S29, i32 %Rcon" [src/aes.cpp:521]   --->   Operation 121 'call' 'call_ln521' <Predicate = (icmp_ln519)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_20 : Operation 122 [1/1] (0.00ns)   --->   "%br_ln522 = br void %AES_En_De27.exit" [src/aes.cpp:522]   --->   Operation 122 'br' 'br_ln522' <Predicate = (icmp_ln519)> <Delay = 0.00>
+ST_20 : Operation 123 [1/1] (1.83ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P0A, i8 %AES_EN_out, i8 %p_048_phi" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 123 'write' 'write_ln173' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+
+State 21 <SV = 20> <Delay = 1.83>
+ST_21 : Operation 124 [2/2] (1.16ns)   --->   "%call_ln527 = call void @aes_return, i8 %p_048_phi, i8 %p_049_phi, i8 %p_050_phi, i8 %p_051_phi, i8 %p_052_phi, i8 %p_053_phi, i8 %p_054_phi, i8 %p_055_phi, i8 %p_056_phi, i8 %p_057_phi, i8 %p_058_phi, i8 %p_059_phi, i8 %p_060_phi, i8 %p_061_phi, i8 %p_062_phi, i8 %p_0_phi, i32 %w, i8 %S" [src/aes.cpp:527]   --->   Operation 124 'call' 'call_ln527' <Predicate = true> <Delay = 1.16> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_21 : Operation 125 [1/1] (1.83ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P0A, i8 %AES_EN_out, i8 %p_049_phi" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 125 'write' 'write_ln173' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+
+State 22 <SV = 21> <Delay = 1.83>
+ST_22 : Operation 126 [1/2] (0.00ns)   --->   "%call_ln527 = call void @aes_return, i8 %p_048_phi, i8 %p_049_phi, i8 %p_050_phi, i8 %p_051_phi, i8 %p_052_phi, i8 %p_053_phi, i8 %p_054_phi, i8 %p_055_phi, i8 %p_056_phi, i8 %p_057_phi, i8 %p_058_phi, i8 %p_059_phi, i8 %p_060_phi, i8 %p_061_phi, i8 %p_062_phi, i8 %p_0_phi, i32 %w, i8 %S" [src/aes.cpp:527]   --->   Operation 126 'call' 'call_ln527' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_22 : Operation 127 [1/1] (1.83ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P0A, i8 %AES_EN_out, i8 %p_050_phi" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 127 'write' 'write_ln173' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+
+State 23 <SV = 22> <Delay = 1.83>
+ST_23 : Operation 128 [1/1] (1.83ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P0A, i8 %AES_EN_out, i8 %p_051_phi" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 128 'write' 'write_ln173' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+
+State 24 <SV = 23> <Delay = 1.83>
+ST_24 : Operation 129 [1/1] (1.83ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P0A, i8 %AES_EN_out, i8 %p_052_phi" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 129 'write' 'write_ln173' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+
+State 25 <SV = 24> <Delay = 1.83>
+ST_25 : Operation 130 [1/1] (1.83ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P0A, i8 %AES_EN_out, i8 %p_053_phi" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 130 'write' 'write_ln173' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+
+State 26 <SV = 25> <Delay = 1.83>
+ST_26 : Operation 131 [1/1] (1.83ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P0A, i8 %AES_EN_out, i8 %p_054_phi" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 131 'write' 'write_ln173' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+
+State 27 <SV = 26> <Delay = 1.83>
+ST_27 : Operation 132 [1/1] (1.83ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P0A, i8 %AES_EN_out, i8 %p_055_phi" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 132 'write' 'write_ln173' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+
+State 28 <SV = 27> <Delay = 1.83>
+ST_28 : Operation 133 [1/1] (1.83ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P0A, i8 %AES_EN_out, i8 %p_056_phi" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 133 'write' 'write_ln173' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+
+State 29 <SV = 28> <Delay = 1.83>
+ST_29 : Operation 134 [1/1] (1.83ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P0A, i8 %AES_EN_out, i8 %p_057_phi" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 134 'write' 'write_ln173' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+
+State 30 <SV = 29> <Delay = 1.83>
+ST_30 : Operation 135 [1/1] (1.83ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P0A, i8 %AES_EN_out, i8 %p_058_phi" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 135 'write' 'write_ln173' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+
+State 31 <SV = 30> <Delay = 1.83>
+ST_31 : Operation 136 [1/1] (1.83ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P0A, i8 %AES_EN_out, i8 %p_059_phi" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 136 'write' 'write_ln173' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+
+State 32 <SV = 31> <Delay = 1.83>
+ST_32 : Operation 137 [1/1] (1.83ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P0A, i8 %AES_EN_out, i8 %p_060_phi" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 137 'write' 'write_ln173' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+
+State 33 <SV = 32> <Delay = 1.83>
+ST_33 : Operation 138 [1/1] (1.83ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P0A, i8 %AES_EN_out, i8 %p_061_phi" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 138 'write' 'write_ln173' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+
+State 34 <SV = 33> <Delay = 1.83>
+ST_34 : Operation 139 [1/1] (1.83ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P0A, i8 %AES_EN_out, i8 %p_062_phi" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 139 'write' 'write_ln173' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+
+State 35 <SV = 34> <Delay = 1.83>
+ST_35 : Operation 140 [1/1] (1.83ns)   --->   "%write_ln173 = write void @_ssdm_op_Write.ap_fifo.volatile.i8P0A, i8 %AES_EN_out, i8 %p_0_phi" [D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173]   --->   Operation 140 'write' 'write_ln173' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+ST_35 : Operation 141 [1/1] (0.00ns)   --->   "%return_ln0 = return void @_ssdm_op_Return"   --->   Operation 141 'return' 'return_ln0' <Predicate = true> <Delay = 0.00>
+ST_35 : Operation 142 [1/1] (0.00ns)   --->   "%br_ln0 = br void %rewind_header"   --->   Operation 142 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 40ns, clock uncertainty: 10.8ns.
+
+ <State 1>: 0.427ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('do_init') [17]  (0.427 ns)
+
+ <State 2>: 1.64ns
+The critical path consists of the following:
+	fifo read operation ('bit128in_buffer', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) on port 'in_data' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) [38]  (1.64 ns)
+
+ <State 3>: 1.64ns
+The critical path consists of the following:
+	fifo read operation ('bit128in_buffer', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) on port 'in_data' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) [39]  (1.64 ns)
+
+ <State 4>: 1.64ns
+The critical path consists of the following:
+	fifo read operation ('bit128in_buffer', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) on port 'in_data' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) [40]  (1.64 ns)
+
+ <State 5>: 1.64ns
+The critical path consists of the following:
+	fifo read operation ('bit128in_buffer', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) on port 'in_data' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) [41]  (1.64 ns)
+
+ <State 6>: 1.64ns
+The critical path consists of the following:
+	fifo read operation ('bit128in_buffer', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) on port 'in_data' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) [42]  (1.64 ns)
+
+ <State 7>: 1.64ns
+The critical path consists of the following:
+	fifo read operation ('bit128in_buffer', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) on port 'in_data' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) [43]  (1.64 ns)
+
+ <State 8>: 1.64ns
+The critical path consists of the following:
+	fifo read operation ('bit128in_buffer', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) on port 'in_data' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) [44]  (1.64 ns)
+
+ <State 9>: 1.64ns
+The critical path consists of the following:
+	fifo read operation ('bit128in_buffer', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) on port 'in_data' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) [45]  (1.64 ns)
+
+ <State 10>: 1.64ns
+The critical path consists of the following:
+	fifo read operation ('bit128in_buffer', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) on port 'in_data' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) [46]  (1.64 ns)
+
+ <State 11>: 1.64ns
+The critical path consists of the following:
+	fifo read operation ('bit128in_buffer', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) on port 'in_data' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) [47]  (1.64 ns)
+
+ <State 12>: 1.64ns
+The critical path consists of the following:
+	fifo read operation ('bit128in_buffer', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) on port 'in_data' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) [48]  (1.64 ns)
+
+ <State 13>: 1.64ns
+The critical path consists of the following:
+	fifo read operation ('bit128in_buffer', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) on port 'in_data' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) [49]  (1.64 ns)
+
+ <State 14>: 1.64ns
+The critical path consists of the following:
+	fifo read operation ('bit128in_buffer', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) on port 'in_data' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) [50]  (1.64 ns)
+
+ <State 15>: 1.64ns
+The critical path consists of the following:
+	fifo read operation ('bit128in_buffer', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) on port 'in_data' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) [51]  (1.64 ns)
+
+ <State 16>: 1.64ns
+The critical path consists of the following:
+	fifo read operation ('bit128in_buffer', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) on port 'in_data' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) [52]  (1.64 ns)
+
+ <State 17>: 1.64ns
+The critical path consists of the following:
+	fifo read operation ('bit128in_buffer', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) on port 'in_data' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:144) [53]  (1.64 ns)
+
+ <State 18>: 2.2ns
+The critical path consists of the following:
+	'load' operation ('key_V31_load') on array 'key_V31' [77]  (0.677 ns)
+	'icmp' operation ('icmp_ln512', src/aes.cpp:512) [82]  (0.849 ns)
+	multiplexor before 'phi' operation ('key_change_flag') [89]  (0.427 ns)
+	blocking operation 0.25 ns on control path)
+
+ <State 19>: 0.446ns
+The critical path consists of the following:
+	'phi' operation ('key_change_flag') [89]  (0 ns)
+	'icmp' operation ('icmp_ln519', src/aes.cpp:519) [93]  (0.446 ns)
+
+ <State 20>: 1.84ns
+The critical path consists of the following:
+	fifo write operation ('write_ln173', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) on port 'AES_EN_out' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) [100]  (1.84 ns)
+
+ <State 21>: 1.84ns
+The critical path consists of the following:
+	fifo write operation ('write_ln173', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) on port 'AES_EN_out' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) [101]  (1.84 ns)
+
+ <State 22>: 1.84ns
+The critical path consists of the following:
+	fifo write operation ('write_ln173', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) on port 'AES_EN_out' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) [102]  (1.84 ns)
+
+ <State 23>: 1.84ns
+The critical path consists of the following:
+	fifo write operation ('write_ln173', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) on port 'AES_EN_out' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) [103]  (1.84 ns)
+
+ <State 24>: 1.84ns
+The critical path consists of the following:
+	fifo write operation ('write_ln173', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) on port 'AES_EN_out' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) [104]  (1.84 ns)
+
+ <State 25>: 1.84ns
+The critical path consists of the following:
+	fifo write operation ('write_ln173', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) on port 'AES_EN_out' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) [105]  (1.84 ns)
+
+ <State 26>: 1.84ns
+The critical path consists of the following:
+	fifo write operation ('write_ln173', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) on port 'AES_EN_out' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) [106]  (1.84 ns)
+
+ <State 27>: 1.84ns
+The critical path consists of the following:
+	fifo write operation ('write_ln173', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) on port 'AES_EN_out' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) [107]  (1.84 ns)
+
+ <State 28>: 1.84ns
+The critical path consists of the following:
+	fifo write operation ('write_ln173', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) on port 'AES_EN_out' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) [108]  (1.84 ns)
+
+ <State 29>: 1.84ns
+The critical path consists of the following:
+	fifo write operation ('write_ln173', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) on port 'AES_EN_out' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) [109]  (1.84 ns)
+
+ <State 30>: 1.84ns
+The critical path consists of the following:
+	fifo write operation ('write_ln173', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) on port 'AES_EN_out' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) [110]  (1.84 ns)
+
+ <State 31>: 1.84ns
+The critical path consists of the following:
+	fifo write operation ('write_ln173', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) on port 'AES_EN_out' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) [111]  (1.84 ns)
+
+ <State 32>: 1.84ns
+The critical path consists of the following:
+	fifo write operation ('write_ln173', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) on port 'AES_EN_out' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) [112]  (1.84 ns)
+
+ <State 33>: 1.84ns
+The critical path consists of the following:
+	fifo write operation ('write_ln173', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) on port 'AES_EN_out' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) [113]  (1.84 ns)
+
+ <State 34>: 1.84ns
+The critical path consists of the following:
+	fifo write operation ('write_ln173', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) on port 'AES_EN_out' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) [114]  (1.84 ns)
+
+ <State 35>: 1.84ns
+The critical path consists of the following:
+	fifo write operation ('write_ln173', D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) on port 'AES_EN_out' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:173) [115]  (1.84 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

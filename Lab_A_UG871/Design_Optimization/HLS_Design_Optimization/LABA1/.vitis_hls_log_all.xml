@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'matrixmul' (function 'matrixmul'): Unable to schedule 'store' operation ('res_addr_7_write_ln60', matrixmul.cpp:60) of variable 'add_ln60_15', matrixmul.cpp:60 on array 'res' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'res'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html" projectName="LABA1" solutionName="solution6" date="2022-03-26T21:35:56.188+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'matrixmul' (function 'matrixmul'): Unable to schedule 'store' operation ('res_addr_5_write_ln60', matrixmul.cpp:60) of variable 'add_ln60_11', matrixmul.cpp:60 on array 'res' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'res'.&#xD;&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html" projectName="LABA1" solutionName="solution6" date="2022-03-26T21:35:56.145+0800" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

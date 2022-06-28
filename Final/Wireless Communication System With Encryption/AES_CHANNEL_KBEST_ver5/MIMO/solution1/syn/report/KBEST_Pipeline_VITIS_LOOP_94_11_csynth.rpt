@@ -1,0 +1,164 @@
+
+
+================================================================
+== Vitis HLS Report for 'KBEST_Pipeline_VITIS_LOOP_94_11'
+================================================================
+* Date:           Fri Jun 17 13:16:14 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        MIMO
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  40.00 ns|  1.398 ns|    10.80 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       10|       10|  0.400 us|  0.400 us|   10|   10|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_94_11  |        8|        8|         1|          1|          1|     8|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      26|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       0|      86|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      27|    -|
+|Register         |        -|     -|       6|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|       6|     139|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1824|  2520|  548160|  274080|    0|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------+---------------+---------+----+---+----+-----+
+    |       Instance      |     Module    | BRAM_18K| DSP| FF| LUT| URAM|
+    +---------------------+---------------+---------+----+---+----+-----+
+    |mux_84_32_1_1_U1290  |mux_84_32_1_1  |        0|   0|  0|  43|    0|
+    |mux_84_32_1_1_U1291  |mux_84_32_1_1  |        0|   0|  0|  43|    0|
+    +---------------------+---------------+---------+----+---+----+-----+
+    |Total                |               |        0|   0|  0|  86|    0|
+    +---------------------+---------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |add_ln94_fu_203_p2   |         +|   0|  0|  12|           4|           1|
+    |icmp_ln94_fu_197_p2  |      icmp|   0|  0|   9|           4|           5|
+    |xor_ln97_fu_214_p2   |       xor|   0|  0|   5|           4|           5|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  26|          12|          11|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------+----+-----------+-----+-----------+
+    |          Name         | LUT| Input Size| Bits| Total Bits|
+    +-----------------------+----+-----------+-----+-----------+
+    |ap_done_int            |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_23  |   9|          2|    4|          8|
+    |i_fu_64                |   9|          2|    4|          8|
+    +-----------------------+----+-----------+-----+-----------+
+    |Total                  |  27|          6|    9|         18|
+    +-----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+---+----+-----+-----------+
+    |     Name    | FF| LUT| Bits| Const Bits|
+    +-------------+---+----+-----+-----------+
+    |ap_CS_fsm    |  1|   0|    1|          0|
+    |ap_done_reg  |  1|   0|    1|          0|
+    |i_fu_64      |  4|   0|    4|          0|
+    +-------------+---+----+-----+-----------+
+    |Total        |  6|   0|    6|          0|
+    +-------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+---------------------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |          Source Object          |    C Type    |
++------------------------+-----+-----+------------+---------------------------------+--------------+
+|ap_clk                  |   in|    1|  ap_ctrl_hs|  KBEST_Pipeline_VITIS_LOOP_94_11|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|  KBEST_Pipeline_VITIS_LOOP_94_11|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|  KBEST_Pipeline_VITIS_LOOP_94_11|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|  KBEST_Pipeline_VITIS_LOOP_94_11|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|  KBEST_Pipeline_VITIS_LOOP_94_11|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|  KBEST_Pipeline_VITIS_LOOP_94_11|  return value|
+|survival_path_address0  |  out|    4|   ap_memory|                    survival_path|         array|
+|survival_path_ce0       |  out|    1|   ap_memory|                    survival_path|         array|
+|survival_path_we0       |  out|    1|   ap_memory|                    survival_path|         array|
+|survival_path_d0        |  out|   32|   ap_memory|                    survival_path|         array|
+|survival_path_address1  |  out|    4|   ap_memory|                    survival_path|         array|
+|survival_path_ce1       |  out|    1|   ap_memory|                    survival_path|         array|
+|survival_path_we1       |  out|    1|   ap_memory|                    survival_path|         array|
+|survival_path_d1        |  out|   32|   ap_memory|                    survival_path|         array|
+|x_guess_62              |   in|   32|     ap_none|                       x_guess_62|        scalar|
+|x_guess_51              |   in|   32|     ap_none|                       x_guess_51|        scalar|
+|x_guess_50              |   in|   32|     ap_none|                       x_guess_50|        scalar|
+|x_guess_49              |   in|   32|     ap_none|                       x_guess_49|        scalar|
+|x_guess_48              |   in|   32|     ap_none|                       x_guess_48|        scalar|
+|x_guess_47              |   in|   32|     ap_none|                       x_guess_47|        scalar|
+|x_guess_46              |   in|   32|     ap_none|                       x_guess_46|        scalar|
+|x_guess_52              |   in|   32|     ap_none|                       x_guess_52|        scalar|
+|x_guess_63              |   in|   32|     ap_none|                       x_guess_63|        scalar|
+|x_guess_58              |   in|   32|     ap_none|                       x_guess_58|        scalar|
+|x_guess_57              |   in|   32|     ap_none|                       x_guess_57|        scalar|
+|x_guess_56              |   in|   32|     ap_none|                       x_guess_56|        scalar|
+|x_guess_55              |   in|   32|     ap_none|                       x_guess_55|        scalar|
+|x_guess_54              |   in|   32|     ap_none|                       x_guess_54|        scalar|
+|x_guess_53              |   in|   32|     ap_none|                       x_guess_53|        scalar|
+|x_guess_59              |   in|   32|     ap_none|                       x_guess_59|        scalar|
++------------------------+-----+-----+------------+---------------------------------+--------------+
+

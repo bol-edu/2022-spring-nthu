@@ -1,0 +1,60 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L3/examples/colordetect/reports/_x.hw.xilinx_u50_gen3x16_xdma_201920_3/color_detect
+	Log files: /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L3/examples/colordetect/_x_temp.hw.xilinx_u50_gen3x16_xdma_201920_3/logs/color_detect
+INFO: [v++ 60-1548] Creating build summary session with primary output /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L3/examples/colordetect/_x_temp.hw.xilinx_u50_gen3x16_xdma_201920_3/color_detect.xo.compile_summary, at Sat Apr 30 07:47:17 2022
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Sat Apr 30 07:47:17 2022
+INFO: [v++ 60-1315] Creating rulecheck session with output '/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L3/examples/colordetect/reports/_x.hw.xilinx_u50_gen3x16_xdma_201920_3/color_detect/v++_compile_color_detect_guidance.html', at Sat Apr 30 07:47:19 2022
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3/xilinx_u50_gen3x16_xdma_201920_3.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2021.2
+INFO: [v++ 60-1302] Platform 'xilinx_u50_gen3x16_xdma_201920_3.xpfm' has been explicitly enabled for this release.
+INFO: [v++ 60-585] Compiling for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u50_gen3x16_xdma_201920_3
+INFO: [v++ 60-242] Creating kernel: 'color_detect'
+
+===>The following messages were generated while  performing high-level synthesis for kernel: color_detect Log file: /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L3/examples/colordetect/_x_temp.hw.xilinx_u50_gen3x16_xdma_201920_3/color_detect/color_detect/vitis_hls.log :
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_1028_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_1028_1'
+INFO: [v++ 204-61] Pipelining loop 'MMIterInLoopRow'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'MMIterInLoopRow'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_128_1_VITIS_LOOP_132_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 14, loop 'VITIS_LOOP_128_1_VITIS_LOOP_132_2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_140_1'.
+WARNING: [v++ 200-885] The II Violation in module 'colorthresholding_9_0_3_2160_3840_1_Loop_VITIS_LOOP_140_1_proc' (loop 'VITIS_LOOP_140_1'): Unable to schedule bus read operation ('gmem1_addr_2_read_1', /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L1/include/imgproc/xf_colorthresholding.hpp:147) on port 'gmem1' (/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L1/include/imgproc/xf_colorthresholding.hpp:147) due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html
+WARNING: [v++ 200-885] The II Violation in module 'colorthresholding_9_0_3_2160_3840_1_Loop_VITIS_LOOP_140_1_proc' (loop 'VITIS_LOOP_140_1'): Unable to schedule bus read operation ('gmem1_addr_2_read', /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L1/include/imgproc/xf_colorthresholding.hpp:147) on port 'gmem1' (/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L1/include/imgproc/xf_colorthresholding.hpp:147) due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 76, loop 'VITIS_LOOP_140_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_92_1_VITIS_LOOP_96_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_92_1_VITIS_LOOP_96_2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_263_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_263_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_278_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_278_2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_295_3'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_295_3'
+INFO: [v++ 204-61] Pipelining function 'xfExtractPixels<1, 1, 0>'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, function 'xfExtractPixels<1, 1, 0>'
+INFO: [v++ 204-61] Pipelining loop 'Col_Loop'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 9, loop 'Col_Loop'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_259_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_259_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_274_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_274_2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_291_3'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_291_3'
+INFO: [v++ 204-61] Pipelining loop 'Col_Loop'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 9, loop 'Col_Loop'
+INFO: [v++ 204-61] Pipelining loop 'MMIterOutRow_MMIterOutCol'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'MMIterOutRow_MMIterOutCol'
+INFO: [v++ 204-61] Pipelining loop 'MMIterOutLoop2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'MMIterOutLoop2'
+INFO: [v++ 200-789] **** Estimated Fmax: 274.00 MHz
+INFO: [v++ 60-594] Finished kernel compilation
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L3/examples/colordetect/reports/_x.hw.xilinx_u50_gen3x16_xdma_201920_3/color_detect/system_estimate_color_detect.xtxt
+INFO: [v++ 60-586] Created _x_temp.hw.xilinx_u50_gen3x16_xdma_201920_3/color_detect.xo
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L3/examples/colordetect/_x_temp.hw.xilinx_u50_gen3x16_xdma_201920_3/color_detect.xo.compile_summary 
+INFO: [v++ 60-791] Total elapsed time: 0h 2m 7s
+INFO: [v++ 60-1653] Closing dispatch client.

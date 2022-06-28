@@ -1,0 +1,79 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "matrixmul",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "matrixmul"
+              }]
+          }
+        },
+        {
+          "functionName": "matrixmul",
+          "label": "Col",
+          "functionLabel": "",
+          "pragma": {"name": "PIPELINE"}
+        },
+        {
+          "functionName": "matrixmul",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "ARRAY_RESHAPE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "a"
+              },
+              {
+                "name": "complete",
+                "value": ""
+              },
+              {
+                "name": "dim",
+                "value": "2"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "matrixmul",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "ARRAY_RESHAPE",
+            "option": [
+              {
+                "name": "variable",
+                "value": "b"
+              },
+              {
+                "name": "complete",
+                "value": ""
+              },
+              {
+                "name": "dim",
+                "value": "1"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "matrixmul",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "matrixmul"
+              }]
+          }
+        }
+      ]
+    }]}

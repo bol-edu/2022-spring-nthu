@@ -1,0 +1,1935 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1655442980837">
+  <ports id="1" name="out_data" type="PortType" coreName="FIFO" coreId="1601200416" bitwidth="8" direction="DirOut" iftype="IfTypeRom">
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="6" name="demod_out" type="PortType" coreName="FIFO_SRL" coreId="1601200416" bitwidth="8" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="123" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="124" source_obj="//@blocks.2/@node_objs.15" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="125" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="126" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="127" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="128" source_obj="//@blocks.2/@node_objs.14" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="129" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="130" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="131" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="132" source_obj="//@blocks.2/@node_objs.13" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="133" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="134" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="135" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="136" source_obj="//@blocks.2/@node_objs.12" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="137" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="138" source_obj="//@blocks.1/@node_objs.4" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="139" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="140" source_obj="//@blocks.2/@node_objs.11" sink_obj="//@blocks.3/@node_objs.4"/>
+  <edges id="141" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.4"/>
+  <edges id="142" source_obj="//@blocks.1/@node_objs.5" sink_obj="//@blocks.3/@node_objs.4"/>
+  <edges id="143" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3/@node_objs.4"/>
+  <edges id="144" source_obj="//@blocks.2/@node_objs.10" sink_obj="//@blocks.3/@node_objs.5"/>
+  <edges id="145" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.5"/>
+  <edges id="146" source_obj="//@blocks.1/@node_objs.6" sink_obj="//@blocks.3/@node_objs.5"/>
+  <edges id="147" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3/@node_objs.5"/>
+  <edges id="148" source_obj="//@blocks.2/@node_objs.9" sink_obj="//@blocks.3/@node_objs.6"/>
+  <edges id="149" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.6"/>
+  <edges id="150" source_obj="//@blocks.1/@node_objs.7" sink_obj="//@blocks.3/@node_objs.6"/>
+  <edges id="151" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3/@node_objs.6"/>
+  <edges id="152" source_obj="//@blocks.2/@node_objs.8" sink_obj="//@blocks.3/@node_objs.7"/>
+  <edges id="153" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.7"/>
+  <edges id="154" source_obj="//@blocks.1/@node_objs.8" sink_obj="//@blocks.3/@node_objs.7"/>
+  <edges id="155" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3/@node_objs.7"/>
+  <edges id="156" source_obj="//@blocks.2/@node_objs.7" sink_obj="//@blocks.3/@node_objs.8"/>
+  <edges id="157" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.8"/>
+  <edges id="158" source_obj="//@blocks.1/@node_objs.9" sink_obj="//@blocks.3/@node_objs.8"/>
+  <edges id="159" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3/@node_objs.8"/>
+  <edges id="160" source_obj="//@blocks.2/@node_objs.6" sink_obj="//@blocks.3/@node_objs.9"/>
+  <edges id="161" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.9"/>
+  <edges id="162" source_obj="//@blocks.1/@node_objs.10" sink_obj="//@blocks.3/@node_objs.9"/>
+  <edges id="163" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3/@node_objs.9"/>
+  <edges id="164" source_obj="//@blocks.2/@node_objs.5" sink_obj="//@blocks.3/@node_objs.10"/>
+  <edges id="165" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.10"/>
+  <edges id="166" source_obj="//@blocks.1/@node_objs.11" sink_obj="//@blocks.3/@node_objs.10"/>
+  <edges id="167" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3/@node_objs.10"/>
+  <edges id="168" source_obj="//@blocks.2/@node_objs.4" sink_obj="//@blocks.3/@node_objs.11"/>
+  <edges id="169" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.11"/>
+  <edges id="170" source_obj="//@blocks.1/@node_objs.12" sink_obj="//@blocks.3/@node_objs.11"/>
+  <edges id="171" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3/@node_objs.11"/>
+  <edges id="172" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.3/@node_objs.12"/>
+  <edges id="173" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.12"/>
+  <edges id="174" source_obj="//@blocks.1/@node_objs.13" sink_obj="//@blocks.3/@node_objs.12"/>
+  <edges id="175" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3/@node_objs.12"/>
+  <edges id="176" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.3/@node_objs.13"/>
+  <edges id="177" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.13"/>
+  <edges id="178" source_obj="//@blocks.1/@node_objs.14" sink_obj="//@blocks.3/@node_objs.13"/>
+  <edges id="179" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3/@node_objs.13"/>
+  <edges id="180" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.3/@node_objs.14"/>
+  <edges id="181" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.14"/>
+  <edges id="182" source_obj="//@blocks.1/@node_objs.15" sink_obj="//@blocks.3/@node_objs.14"/>
+  <edges id="183" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3/@node_objs.14"/>
+  <edges id="184" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.3/@node_objs.15"/>
+  <edges id="185" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.15"/>
+  <edges id="186" source_obj="//@blocks.1/@node_objs.16" sink_obj="//@blocks.3/@node_objs.15"/>
+  <edges id="187" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3/@node_objs.15"/>
+  <edges id="188" source_obj="//@blocks.1/@node_objs.18" sink_obj="//@blocks.3/@node_objs.16"/>
+  <edges id="189" sink_obj="//@blocks.3/@node_objs.17"/>
+  <edges id="192" source_obj="//@blocks.3/@node_objs.16" sink_obj="//@blocks.3/@node_objs.17"/>
+  <edges id="193" source_obj="//@blocks.3/@node_objs.17" sink_obj="//@blocks.3/@node_objs.18"/>
+  <edges id="194" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.3/@node_objs.19"/>
+  <edges id="196" source_obj="//@blocks.3/@node_objs.16" sink_obj="//@blocks.3/@node_objs.19"/>
+  <edges id="197" source_obj="//@blocks.3/@node_objs.18" sink_obj="//@blocks.3/@node_objs.20"/>
+  <edges id="198" source_obj="//@blocks.3/@node_objs.19" sink_obj="//@blocks.3/@node_objs.20"/>
+  <edges id="199" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.3/@node_objs.21"/>
+  <edges id="201" source_obj="//@blocks.3/@node_objs.16" sink_obj="//@blocks.3/@node_objs.21"/>
+  <edges id="202" source_obj="//@blocks.3/@node_objs.21" sink_obj="//@blocks.3/@node_objs.22"/>
+  <edges id="203" source_obj="//@blocks.3/@node_objs.22" sink_obj="//@blocks.3/@node_objs.23"/>
+  <edges id="204" source_obj="//@blocks.3/@node_objs.18" sink_obj="//@blocks.3/@node_objs.23"/>
+  <edges id="205" source_obj="//@blocks.1/@node_objs.18" sink_obj="//@blocks.3/@node_objs.24"/>
+  <edges id="208" source_obj="//@blocks.3/@node_objs.23" sink_obj="//@blocks.3/@node_objs.25"/>
+  <edges id="209" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3/@node_objs.25"/>
+  <edges id="210" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.3/@node_objs.25"/>
+  <edges id="211" source_obj="//@blocks.3/@node_objs.18" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="212" source_obj="//@blocks.3/@node_objs.21" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="213" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="216" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="217" source_obj="//@blocks.1/@node_objs.17" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="218" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="219" source_obj="//@blocks.1/@node_objs.18" sink_obj="//@blocks.5/@node_objs.1"/>
+  <edges id="222" source_obj="//@blocks.5/@node_objs.1" sink_obj="//@blocks.5/@node_objs.2"/>
+  <edges id="223" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.5/@node_objs.2"/>
+  <edges id="224" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.5/@node_objs.2"/>
+  <edges id="225" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="227" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="228" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="229" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="232" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="233" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="234" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.7/@node_objs.1"/>
+  <edges id="237" source_obj="//@blocks.3/@node_objs.15" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="238" source_obj="//@blocks.3/@node_objs.14" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="239" source_obj="//@blocks.3/@node_objs.13" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="240" source_obj="//@blocks.3/@node_objs.12" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="241" source_obj="//@blocks.3/@node_objs.11" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="242" source_obj="//@blocks.3/@node_objs.10" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="243" source_obj="//@blocks.3/@node_objs.9" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="244" source_obj="//@blocks.3/@node_objs.8" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="245" source_obj="//@blocks.3/@node_objs.7" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="246" source_obj="//@blocks.3/@node_objs.6" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="247" source_obj="//@blocks.3/@node_objs.5" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="248" source_obj="//@blocks.3/@node_objs.4" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="249" source_obj="//@blocks.3/@node_objs.3" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="250" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="251" source_obj="//@blocks.3/@node_objs.1" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="252" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="253" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="256" source_obj="//@blocks.8/@node_objs.1" sink_obj="//@ports.0"/>
+  <edges id="257" source_obj="//@blocks.3/@node_objs.15" sink_obj="//@blocks.8/@node_objs.1"/>
+  <edges id="259" source_obj="//@blocks.8/@node_objs.2" sink_obj="//@ports.0"/>
+  <edges id="260" source_obj="//@blocks.3/@node_objs.14" sink_obj="//@blocks.8/@node_objs.2"/>
+  <edges id="262" source_obj="//@blocks.8/@node_objs.3" sink_obj="//@ports.0"/>
+  <edges id="263" source_obj="//@blocks.3/@node_objs.13" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="265" source_obj="//@blocks.8/@node_objs.4" sink_obj="//@ports.0"/>
+  <edges id="266" source_obj="//@blocks.3/@node_objs.12" sink_obj="//@blocks.8/@node_objs.4"/>
+  <edges id="268" source_obj="//@blocks.8/@node_objs.5" sink_obj="//@ports.0"/>
+  <edges id="269" source_obj="//@blocks.3/@node_objs.11" sink_obj="//@blocks.8/@node_objs.5"/>
+  <edges id="271" source_obj="//@blocks.8/@node_objs.6" sink_obj="//@ports.0"/>
+  <edges id="272" source_obj="//@blocks.3/@node_objs.10" sink_obj="//@blocks.8/@node_objs.6"/>
+  <edges id="274" source_obj="//@blocks.8/@node_objs.7" sink_obj="//@ports.0"/>
+  <edges id="275" source_obj="//@blocks.3/@node_objs.9" sink_obj="//@blocks.8/@node_objs.7"/>
+  <edges id="277" source_obj="//@blocks.8/@node_objs.8" sink_obj="//@ports.0"/>
+  <edges id="278" source_obj="//@blocks.3/@node_objs.8" sink_obj="//@blocks.8/@node_objs.8"/>
+  <edges id="280" source_obj="//@blocks.8/@node_objs.9" sink_obj="//@ports.0"/>
+  <edges id="281" source_obj="//@blocks.3/@node_objs.7" sink_obj="//@blocks.8/@node_objs.9"/>
+  <edges id="283" source_obj="//@blocks.8/@node_objs.10" sink_obj="//@ports.0"/>
+  <edges id="284" source_obj="//@blocks.3/@node_objs.6" sink_obj="//@blocks.8/@node_objs.10"/>
+  <edges id="286" source_obj="//@blocks.8/@node_objs.11" sink_obj="//@ports.0"/>
+  <edges id="287" source_obj="//@blocks.3/@node_objs.5" sink_obj="//@blocks.8/@node_objs.11"/>
+  <edges id="289" source_obj="//@blocks.8/@node_objs.12" sink_obj="//@ports.0"/>
+  <edges id="290" source_obj="//@blocks.3/@node_objs.4" sink_obj="//@blocks.8/@node_objs.12"/>
+  <edges id="292" source_obj="//@blocks.8/@node_objs.13" sink_obj="//@ports.0"/>
+  <edges id="293" source_obj="//@blocks.3/@node_objs.3" sink_obj="//@blocks.8/@node_objs.13"/>
+  <edges id="295" source_obj="//@blocks.8/@node_objs.14" sink_obj="//@ports.0"/>
+  <edges id="296" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.8/@node_objs.14"/>
+  <edges id="298" source_obj="//@blocks.8/@node_objs.15" sink_obj="//@ports.0"/>
+  <edges id="299" source_obj="//@blocks.3/@node_objs.1" sink_obj="//@blocks.8/@node_objs.15"/>
+  <edges id="301" source_obj="//@blocks.8/@node_objs.16" sink_obj="//@ports.0"/>
+  <edges id="302" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.8/@node_objs.16"/>
+  <edges id="305" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.8/@node_objs.18"/>
+  <edges id="308" source_obj="//@ports.1" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="310" source_obj="//@ports.1" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="312" source_obj="//@ports.1" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="314" source_obj="//@ports.1" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="316" source_obj="//@ports.1" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="318" source_obj="//@ports.1" sink_obj="//@blocks.2/@node_objs.5"/>
+  <edges id="320" source_obj="//@ports.1" sink_obj="//@blocks.2/@node_objs.6"/>
+  <edges id="322" source_obj="//@ports.1" sink_obj="//@blocks.2/@node_objs.7"/>
+  <edges id="324" source_obj="//@ports.1" sink_obj="//@blocks.2/@node_objs.8"/>
+  <edges id="326" source_obj="//@ports.1" sink_obj="//@blocks.2/@node_objs.9"/>
+  <edges id="328" source_obj="//@ports.1" sink_obj="//@blocks.2/@node_objs.10"/>
+  <edges id="330" source_obj="//@ports.1" sink_obj="//@blocks.2/@node_objs.11"/>
+  <edges id="332" source_obj="//@ports.1" sink_obj="//@blocks.2/@node_objs.12"/>
+  <edges id="334" source_obj="//@ports.1" sink_obj="//@blocks.2/@node_objs.13"/>
+  <edges id="336" source_obj="//@ports.1" sink_obj="//@blocks.2/@node_objs.14"/>
+  <edges id="338" source_obj="//@ports.1" sink_obj="//@blocks.2/@node_objs.15"/>
+  <edges id="339" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.2/@node_objs.16"/>
+  <edges id="342" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="345" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="347" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="350" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="351" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1" is_back_edge="1"/>
+  <edges id="352" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1/@node_objs.1" is_back_edge="1"/>
+  <edges id="354" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.1/@node_objs.1" is_back_edge="1"/>
+  <edges id="356" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="357" source_obj="//@blocks.3/@node_objs.1" sink_obj="//@blocks.1/@node_objs.2" is_back_edge="1"/>
+  <edges id="358" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1/@node_objs.2" is_back_edge="1"/>
+  <edges id="360" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.1/@node_objs.2" is_back_edge="1"/>
+  <edges id="362" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="363" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.1/@node_objs.3" is_back_edge="1"/>
+  <edges id="364" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1/@node_objs.3" is_back_edge="1"/>
+  <edges id="366" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.1/@node_objs.3" is_back_edge="1"/>
+  <edges id="368" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="369" source_obj="//@blocks.3/@node_objs.3" sink_obj="//@blocks.1/@node_objs.4" is_back_edge="1"/>
+  <edges id="370" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1/@node_objs.4" is_back_edge="1"/>
+  <edges id="372" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.1/@node_objs.4" is_back_edge="1"/>
+  <edges id="374" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.5"/>
+  <edges id="375" source_obj="//@blocks.3/@node_objs.4" sink_obj="//@blocks.1/@node_objs.5" is_back_edge="1"/>
+  <edges id="376" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1/@node_objs.5" is_back_edge="1"/>
+  <edges id="378" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.1/@node_objs.5" is_back_edge="1"/>
+  <edges id="380" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.6"/>
+  <edges id="381" source_obj="//@blocks.3/@node_objs.5" sink_obj="//@blocks.1/@node_objs.6" is_back_edge="1"/>
+  <edges id="382" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1/@node_objs.6" is_back_edge="1"/>
+  <edges id="384" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.1/@node_objs.6" is_back_edge="1"/>
+  <edges id="386" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.7"/>
+  <edges id="387" source_obj="//@blocks.3/@node_objs.6" sink_obj="//@blocks.1/@node_objs.7" is_back_edge="1"/>
+  <edges id="388" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1/@node_objs.7" is_back_edge="1"/>
+  <edges id="390" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.1/@node_objs.7" is_back_edge="1"/>
+  <edges id="392" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.8"/>
+  <edges id="393" source_obj="//@blocks.3/@node_objs.7" sink_obj="//@blocks.1/@node_objs.8" is_back_edge="1"/>
+  <edges id="394" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1/@node_objs.8" is_back_edge="1"/>
+  <edges id="396" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.1/@node_objs.8" is_back_edge="1"/>
+  <edges id="398" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.9"/>
+  <edges id="399" source_obj="//@blocks.3/@node_objs.8" sink_obj="//@blocks.1/@node_objs.9" is_back_edge="1"/>
+  <edges id="400" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1/@node_objs.9" is_back_edge="1"/>
+  <edges id="402" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.1/@node_objs.9" is_back_edge="1"/>
+  <edges id="404" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.10"/>
+  <edges id="405" source_obj="//@blocks.3/@node_objs.9" sink_obj="//@blocks.1/@node_objs.10" is_back_edge="1"/>
+  <edges id="406" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1/@node_objs.10" is_back_edge="1"/>
+  <edges id="408" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.1/@node_objs.10" is_back_edge="1"/>
+  <edges id="410" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.11"/>
+  <edges id="411" source_obj="//@blocks.3/@node_objs.10" sink_obj="//@blocks.1/@node_objs.11" is_back_edge="1"/>
+  <edges id="412" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1/@node_objs.11" is_back_edge="1"/>
+  <edges id="414" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.1/@node_objs.11" is_back_edge="1"/>
+  <edges id="416" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.12"/>
+  <edges id="417" source_obj="//@blocks.3/@node_objs.11" sink_obj="//@blocks.1/@node_objs.12" is_back_edge="1"/>
+  <edges id="418" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1/@node_objs.12" is_back_edge="1"/>
+  <edges id="420" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.1/@node_objs.12" is_back_edge="1"/>
+  <edges id="422" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.13"/>
+  <edges id="423" source_obj="//@blocks.3/@node_objs.12" sink_obj="//@blocks.1/@node_objs.13" is_back_edge="1"/>
+  <edges id="424" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1/@node_objs.13" is_back_edge="1"/>
+  <edges id="426" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.1/@node_objs.13" is_back_edge="1"/>
+  <edges id="428" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.14"/>
+  <edges id="429" source_obj="//@blocks.3/@node_objs.13" sink_obj="//@blocks.1/@node_objs.14" is_back_edge="1"/>
+  <edges id="430" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1/@node_objs.14" is_back_edge="1"/>
+  <edges id="432" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.1/@node_objs.14" is_back_edge="1"/>
+  <edges id="434" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.15"/>
+  <edges id="435" source_obj="//@blocks.3/@node_objs.14" sink_obj="//@blocks.1/@node_objs.15" is_back_edge="1"/>
+  <edges id="436" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1/@node_objs.15" is_back_edge="1"/>
+  <edges id="438" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.1/@node_objs.15" is_back_edge="1"/>
+  <edges id="440" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.16"/>
+  <edges id="441" source_obj="//@blocks.3/@node_objs.15" sink_obj="//@blocks.1/@node_objs.16" is_back_edge="1"/>
+  <edges id="442" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1/@node_objs.16" is_back_edge="1"/>
+  <edges id="444" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.1/@node_objs.16" is_back_edge="1"/>
+  <edges id="447" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.17"/>
+  <edges id="448" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.1/@node_objs.17" is_back_edge="1"/>
+  <edges id="449" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1/@node_objs.17" is_back_edge="1"/>
+  <edges id="451" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.1/@node_objs.17" is_back_edge="1"/>
+  <edges id="454" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.18"/>
+  <edges id="455" source_obj="//@blocks.3/@node_objs.24" sink_obj="//@blocks.1/@node_objs.18" is_back_edge="1"/>
+  <edges id="456" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1/@node_objs.18" is_back_edge="1"/>
+  <edges id="458" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.1/@node_objs.18" is_back_edge="1"/>
+  <edges id="459" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.19"/>
+  <edges id="460" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1/@node_objs.19"/>
+  <edges id="461" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.19"/>
+  <edges id="462" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="463" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="464" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="572" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="573" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="574" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3"/>
+  <edges id="575" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3"/>
+  <edges id="576" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.5"/>
+  <edges id="577" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.4"/>
+  <edges id="578" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.5"/>
+  <edges id="579" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.6"/>
+  <edges id="580" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <edges id="581" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.7"/>
+  <edges id="582" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.8"/>
+  <edges id="583" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.8"/>
+  <edges id="584" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <edges id="585" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.22" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="586" edge_type="VirtEdge" source_obj="//@blocks.3/@node_objs.20" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="587" edge_type="VirtEdge" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="588" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.14" sink_obj="//@blocks.2/@node_objs.15"/>
+  <edges id="589" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.13" sink_obj="//@blocks.2/@node_objs.14"/>
+  <edges id="590" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.12" sink_obj="//@blocks.2/@node_objs.13"/>
+  <edges id="591" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.11" sink_obj="//@blocks.2/@node_objs.12"/>
+  <edges id="592" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.10" sink_obj="//@blocks.2/@node_objs.11"/>
+  <edges id="593" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.9" sink_obj="//@blocks.2/@node_objs.10"/>
+  <edges id="594" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.8" sink_obj="//@blocks.2/@node_objs.9"/>
+  <edges id="595" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.7" sink_obj="//@blocks.2/@node_objs.8"/>
+  <edges id="596" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.6" sink_obj="//@blocks.2/@node_objs.7"/>
+  <edges id="597" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.5" sink_obj="//@blocks.2/@node_objs.6"/>
+  <edges id="598" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.4" sink_obj="//@blocks.2/@node_objs.5"/>
+  <edges id="599" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="600" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="601" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="602" edge_type="VirtEdge" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="603" edge_type="VirtEdge" source_obj="//@blocks.8/@node_objs.15" sink_obj="//@blocks.8/@node_objs.16"/>
+  <edges id="604" edge_type="VirtEdge" source_obj="//@blocks.8/@node_objs.14" sink_obj="//@blocks.8/@node_objs.15"/>
+  <edges id="605" edge_type="VirtEdge" source_obj="//@blocks.8/@node_objs.13" sink_obj="//@blocks.8/@node_objs.14"/>
+  <edges id="606" edge_type="VirtEdge" source_obj="//@blocks.8/@node_objs.12" sink_obj="//@blocks.8/@node_objs.13"/>
+  <edges id="607" edge_type="VirtEdge" source_obj="//@blocks.8/@node_objs.11" sink_obj="//@blocks.8/@node_objs.12"/>
+  <edges id="608" edge_type="VirtEdge" source_obj="//@blocks.8/@node_objs.10" sink_obj="//@blocks.8/@node_objs.11"/>
+  <edges id="609" edge_type="VirtEdge" source_obj="//@blocks.8/@node_objs.9" sink_obj="//@blocks.8/@node_objs.10"/>
+  <edges id="610" edge_type="VirtEdge" source_obj="//@blocks.8/@node_objs.8" sink_obj="//@blocks.8/@node_objs.9"/>
+  <edges id="611" edge_type="VirtEdge" source_obj="//@blocks.8/@node_objs.7" sink_obj="//@blocks.8/@node_objs.8"/>
+  <edges id="612" edge_type="VirtEdge" source_obj="//@blocks.8/@node_objs.6" sink_obj="//@blocks.8/@node_objs.7"/>
+  <edges id="613" edge_type="VirtEdge" source_obj="//@blocks.8/@node_objs.5" sink_obj="//@blocks.8/@node_objs.6"/>
+  <edges id="614" edge_type="VirtEdge" source_obj="//@blocks.8/@node_objs.4" sink_obj="//@blocks.8/@node_objs.5"/>
+  <edges id="615" edge_type="VirtEdge" source_obj="//@blocks.8/@node_objs.3" sink_obj="//@blocks.8/@node_objs.4"/>
+  <edges id="616" edge_type="VirtEdge" source_obj="//@blocks.8/@node_objs.2" sink_obj="//@blocks.8/@node_objs.3"/>
+  <edges id="617" edge_type="VirtEdge" source_obj="//@blocks.8/@node_objs.1" sink_obj="//@blocks.8/@node_objs.2"/>
+  <edges id="618" edge_type="VirtEdge" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@blocks.8/@node_objs.0"/>
+  <blocks id="16" name="entry" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>rewind_header</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="temp_key" lineNumber="492" originalName="temp_key" fileName="src/aes.cpp" fileDirectory=".." rtlName="temp_key_U" coreName="RAM" implIndex="auto" control="no" opType="ram_1p" coreId="83" contextFuncName="AES_En_De" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/aes.cpp" linenumber="492" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="AES_En_De"/>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="w" lineNumber="495" originalName="w" fileName="src/aes.cpp" fileDirectory=".." rtlName="w_U" coreName="RAM" implIndex="auto" control="no" opType="ram_t2p" coreId="83" contextFuncName="AES_En_De" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/aes.cpp" linenumber="495" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="AES_En_De"/>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="key_char" lineNumber="506" originalName="key_char" fileName="src/aes.cpp" fileDirectory=".." rtlName="key_char_U" coreName="RAM" implIndex="auto" control="no" opType="ram_s2p" coreId="83" contextFuncName="AES_En_De" bitwidth="8" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/aes.cpp" linenumber="506" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="AES_En_De"/>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="br_ln508" lineNumber="508" fileName="src/aes.cpp" fileDirectory=".." coreId="925966380" contextFuncName="AES_En_De" opcode="br" m_display="0" m_delay="0.42" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/aes.cpp" linenumber="508" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="AES_En_De"/>
+      <controlInputObjs>rewind_header</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/aes.cpp">
+      <validLinenumbers>492</validLinenumbers>
+      <validLinenumbers>495</validLinenumbers>
+      <validLinenumbers>506</validLinenumbers>
+      <validLinenumbers>508</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="37" name="rewind_header" type="BlockType">
+    <controlInputObjs>entry</controlInputObjs>
+    <controlInputObjs>.split._crit_edge.i</controlInputObjs>
+    <controlInputObjs>AES_En_De.128.exit</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>rewind_init</controlOutputObjs>
+    <controlOutputObjs>.split.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="do_init" coreId="942743596" bitwidth="1" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataOutputObjs>br</dataOutputObjs>
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>.split._crit_edge.i</controlInputObjs>
+      <controlInputObjs>AES_En_De.128.exit</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="p_0_rewind" lineNumber="144" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreId="741875756" contextFuncName="read" bitwidth="8" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>.split._crit_edge.i</controlInputObjs>
+      <controlInputObjs>AES_En_De.128.exit</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="p_062_rewind" lineNumber="144" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreId="741487420" contextFuncName="read" bitwidth="8" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>.split._crit_edge.i</controlInputObjs>
+      <controlInputObjs>AES_En_De.128.exit</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="p_061_rewind" lineNumber="144" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreId="942743596" contextFuncName="read" bitwidth="8" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>.split._crit_edge.i</controlInputObjs>
+      <controlInputObjs>AES_En_De.128.exit</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="p_060_rewind" lineNumber="144" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreId="925966380" contextFuncName="read" bitwidth="8" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>.split._crit_edge.i</controlInputObjs>
+      <controlInputObjs>AES_En_De.128.exit</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="p_059_rewind" lineNumber="144" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreId="909189164" contextFuncName="read" bitwidth="8" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>.split._crit_edge.i</controlInputObjs>
+      <controlInputObjs>AES_En_De.128.exit</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="p_058_rewind" lineNumber="144" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreId="909189164" contextFuncName="read" bitwidth="8" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>.split._crit_edge.i</controlInputObjs>
+      <controlInputObjs>AES_En_De.128.exit</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="p_057_rewind" lineNumber="144" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreId="925966380" contextFuncName="read" bitwidth="8" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>.split._crit_edge.i</controlInputObjs>
+      <controlInputObjs>AES_En_De.128.exit</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="p_056_rewind" lineNumber="144" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreId="942743596" contextFuncName="read" bitwidth="8" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>.split._crit_edge.i</controlInputObjs>
+      <controlInputObjs>AES_En_De.128.exit</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="p_055_rewind" lineNumber="144" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreId="741875756" contextFuncName="read" bitwidth="8" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>.split._crit_edge.i</controlInputObjs>
+      <controlInputObjs>AES_En_De.128.exit</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="p_054_rewind" lineNumber="144" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreId="741875756" contextFuncName="read" bitwidth="8" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>.split._crit_edge.i</controlInputObjs>
+      <controlInputObjs>AES_En_De.128.exit</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="p_053_rewind" lineNumber="144" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreId="741487420" contextFuncName="read" bitwidth="8" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>.split._crit_edge.i</controlInputObjs>
+      <controlInputObjs>AES_En_De.128.exit</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="p_052_rewind" lineNumber="144" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreId="925966380" contextFuncName="read" bitwidth="8" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>.split._crit_edge.i</controlInputObjs>
+      <controlInputObjs>AES_En_De.128.exit</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="p_051_rewind" lineNumber="144" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreId="925966380" contextFuncName="read" bitwidth="8" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>.split._crit_edge.i</controlInputObjs>
+      <controlInputObjs>AES_En_De.128.exit</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="p_050_rewind" lineNumber="144" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreId="942743596" contextFuncName="read" bitwidth="8" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>.split._crit_edge.i</controlInputObjs>
+      <controlInputObjs>AES_En_De.128.exit</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="p_049_rewind" lineNumber="144" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreId="741875756" contextFuncName="read" bitwidth="8" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>.split._crit_edge.i</controlInputObjs>
+      <controlInputObjs>AES_En_De.128.exit</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="p_048_rewind" lineNumber="144" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreId="925966380" contextFuncName="read" bitwidth="8" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>.split._crit_edge.i</controlInputObjs>
+      <controlInputObjs>AES_En_De.128.exit</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="key_change_flag17" originalName="key_change_flag" coreId="0" bitwidth="8" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>.split._crit_edge.i</controlInputObjs>
+      <controlInputObjs>AES_En_De.128.exit</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="i15" originalName="i" coreId="2165409664" bitwidth="4" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>.split._crit_edge.i</controlInputObjs>
+      <controlInputObjs>AES_En_De.128.exit</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="br_ln0" coreId="0" opcode="br" nodeLabel="1.0" m_display="0" m_delay="0.42" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <dataInputObjs>phi</dataInputObjs>
+      <controlInputObjs>.split.i</controlInputObjs>
+      <controlInputObjs>rewind_init</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h">
+      <validLinenumbers>144</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="55" name="rewind_init" type="BlockType">
+    <controlInputObjs>rewind_header</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>.split.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="bit128in_buffer" lineNumber="144" originalName="bit128in_buffer" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="read" bitwidth="8" opcode="read" nodeLabel="1.0" m_display="0" m_delay="1.83" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>demod_out</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="bit128in_buffer_16" lineNumber="144" originalName="bit128in_buffer" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="read" bitwidth="8" opcode="read" nodeLabel="2.0" m_display="0" m_delay="1.83" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>demod_out</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="bit128in_buffer_17" lineNumber="144" originalName="bit128in_buffer" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="read" bitwidth="8" opcode="read" nodeLabel="3.0" m_display="0" m_delay="1.83" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>demod_out</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="bit128in_buffer_18" lineNumber="144" originalName="bit128in_buffer" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="read" bitwidth="8" opcode="read" nodeLabel="4.0" m_display="0" m_delay="1.83" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>demod_out</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="bit128in_buffer_19" lineNumber="144" originalName="bit128in_buffer" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="read" bitwidth="8" opcode="read" nodeLabel="5.0" m_display="0" m_delay="1.83" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>demod_out</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="bit128in_buffer_20" lineNumber="144" originalName="bit128in_buffer" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="read" bitwidth="8" opcode="read" nodeLabel="6.0" m_display="0" m_delay="1.83" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>demod_out</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="bit128in_buffer_21" lineNumber="144" originalName="bit128in_buffer" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="read" bitwidth="8" opcode="read" nodeLabel="7.0" m_display="0" m_delay="1.83" m_topoIndex="31" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>demod_out</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="bit128in_buffer_22" lineNumber="144" originalName="bit128in_buffer" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="read" bitwidth="8" opcode="read" nodeLabel="8.0" m_display="0" m_delay="1.83" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>demod_out</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="bit128in_buffer_23" lineNumber="144" originalName="bit128in_buffer" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="read" bitwidth="8" opcode="read" nodeLabel="9.0" m_display="0" m_delay="1.83" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>demod_out</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="bit128in_buffer_24" lineNumber="144" originalName="bit128in_buffer" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="read" bitwidth="8" opcode="read" nodeLabel="10.0" m_display="0" m_delay="1.83" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>demod_out</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="bit128in_buffer_25" lineNumber="144" originalName="bit128in_buffer" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="read" bitwidth="8" opcode="read" nodeLabel="11.0" m_display="0" m_delay="1.83" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>demod_out</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="bit128in_buffer_26" lineNumber="144" originalName="bit128in_buffer" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="read" bitwidth="8" opcode="read" nodeLabel="12.0" m_display="0" m_delay="1.83" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>demod_out</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="bit128in_buffer_27" lineNumber="144" originalName="bit128in_buffer" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="read" bitwidth="8" opcode="read" nodeLabel="13.0" m_display="0" m_delay="1.83" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>demod_out</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="bit128in_buffer_28" lineNumber="144" originalName="bit128in_buffer" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="read" bitwidth="8" opcode="read" nodeLabel="14.0" m_display="0" m_delay="1.83" m_topoIndex="38" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>demod_out</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="bit128in_buffer_29" lineNumber="144" originalName="bit128in_buffer" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="read" bitwidth="8" opcode="read" nodeLabel="15.0" m_display="0" m_delay="1.83" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>demod_out</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="bit128in_buffer_30" lineNumber="144" originalName="bit128in_buffer" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="read" bitwidth="8" opcode="read" nodeLabel="16.0" m_display="0" m_delay="1.83" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+      <dataInputObjs>demod_out</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="br_ln508" lineNumber="508" fileName="src/aes.cpp" fileDirectory=".." coreId="0" contextFuncName="AES_En_De" opcode="br" nodeLabel="16.0" m_display="0" m_delay="0.42" m_topoIndex="41" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/aes.cpp" linenumber="508" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="AES_En_De"/>
+      <controlInputObjs>.split.i</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h">
+      <validLinenumbers>144</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="src/aes.cpp">
+      <validLinenumbers>508</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="85" name=".split.i" type="BlockType">
+    <controlInputObjs>rewind_header</controlInputObjs>
+    <controlInputObjs>rewind_init</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>.split._crit_edge.i</controlOutputObjs>
+    <controlOutputObjs>block_88</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="p_0_phi" originalName="tmp.V" coreId="2174220672" bitwidth="8" opcode="phi" nodeLabel="17.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>rewind_init</controlInputObjs>
+      <controlInputObjs>rewind_header</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="p_062_phi" originalName="tmp.V" coreId="2168708032" bitwidth="8" opcode="phi" nodeLabel="17.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>rewind_init</controlInputObjs>
+      <controlInputObjs>rewind_header</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="p_061_phi" originalName="tmp.V" coreId="3318369280" bitwidth="8" opcode="phi" nodeLabel="17.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>rewind_init</controlInputObjs>
+      <controlInputObjs>rewind_header</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="p_060_phi" originalName="tmp.V" coreId="2168704448" bitwidth="8" opcode="phi" nodeLabel="17.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>rewind_init</controlInputObjs>
+      <controlInputObjs>rewind_header</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="p_059_phi" originalName="tmp.V" coreId="2168699688" bitwidth="8" opcode="phi" nodeLabel="17.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>rewind_init</controlInputObjs>
+      <controlInputObjs>rewind_header</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="p_058_phi" originalName="tmp.V" coreId="1702257920" bitwidth="8" opcode="phi" nodeLabel="17.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>rewind_init</controlInputObjs>
+      <controlInputObjs>rewind_header</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="p_057_phi" originalName="tmp.V" coreId="0" bitwidth="8" opcode="phi" nodeLabel="17.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>rewind_init</controlInputObjs>
+      <controlInputObjs>rewind_header</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="p_056_phi" originalName="tmp.V" coreId="1768956025" bitwidth="8" opcode="phi" nodeLabel="17.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>rewind_init</controlInputObjs>
+      <controlInputObjs>rewind_header</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="p_055_phi" originalName="tmp.V" coreId="2168695208" bitwidth="8" opcode="phi" nodeLabel="17.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>rewind_init</controlInputObjs>
+      <controlInputObjs>rewind_header</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="p_054_phi" originalName="tmp.V" coreId="0" bitwidth="8" opcode="phi" nodeLabel="17.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>rewind_init</controlInputObjs>
+      <controlInputObjs>rewind_header</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="p_053_phi" originalName="tmp.V" coreId="0" bitwidth="8" opcode="phi" nodeLabel="17.0" m_display="0" m_topoIndex="58" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>rewind_init</controlInputObjs>
+      <controlInputObjs>rewind_header</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="p_052_phi" originalName="tmp.V" coreId="795766637" bitwidth="8" opcode="phi" nodeLabel="17.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>rewind_init</controlInputObjs>
+      <controlInputObjs>rewind_header</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="p_051_phi" originalName="tmp.V" coreId="0" bitwidth="8" opcode="phi" nodeLabel="17.0" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>rewind_init</controlInputObjs>
+      <controlInputObjs>rewind_header</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="p_050_phi" originalName="tmp.V" coreId="0" bitwidth="8" opcode="phi" nodeLabel="17.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>rewind_init</controlInputObjs>
+      <controlInputObjs>rewind_header</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="p_049_phi" originalName="tmp.V" coreId="542329856" bitwidth="8" opcode="phi" nodeLabel="17.0" m_display="0" m_topoIndex="62" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>rewind_init</controlInputObjs>
+      <controlInputObjs>rewind_header</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="p_048_phi" originalName="tmp.V" coreId="808598884" bitwidth="8" opcode="phi" nodeLabel="17.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>rewind_init</controlInputObjs>
+      <controlInputObjs>rewind_header</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="zext_ln508" lineNumber="508" fileName="src/aes.cpp" fileDirectory=".." rtlName="zext_ln508_fu_682_p1" coreId="2171188656" contextFuncName="AES_En_De" bitwidth="64" opcode="zext" nodeLabel="16.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/aes.cpp" linenumber="508" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="AES_En_De"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="key_V_addr" lineNumber="587" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h" fileDirectory=".." coreId="0" contextFuncName="operator_unsigned_long_long" bitwidth="4" opcode="getelementptr" nodeLabel="16.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h" linenumber="587" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="operator unsigned long long"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="key_V_load" lineNumber="587" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h" fileDirectory=".." coreName="ROM" implIndex="auto" control="no" opType="rom" coreId="101" contextFuncName="operator_unsigned_long_long" bitwidth="8" opcode="load" nodeLabel="16.0" nodeLatency="1" m_display="0" m_delay="0.67" m_topoIndex="44" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h" linenumber="587" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="operator unsigned long long"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="key_char_addr" lineNumber="511" fileName="src/aes.cpp" fileDirectory=".." coreId="2168684200" contextFuncName="AES_En_De" bitwidth="4" opcode="getelementptr" nodeLabel="17.0" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/aes.cpp" linenumber="511" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="AES_En_De"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="79" name="key_char_addr_write_ln511" lineNumber="511" fileName="src/aes.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="AES_En_De" opcode="store" nodeLabel="17.0" m_display="0" m_delay="0.67" m_topoIndex="65" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/aes.cpp" linenumber="511" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="AES_En_De"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="temp_key_addr" lineNumber="512" fileName="src/aes.cpp" fileDirectory=".." coreId="539437428" contextFuncName="AES_En_De" bitwidth="4" opcode="getelementptr" nodeLabel="16.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/aes.cpp" linenumber="512" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="AES_En_De"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="81" name="temp_key_load" lineNumber="512" fileName="src/aes.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="AES_En_De" bitwidth="8" opcode="load" nodeLabel="16.0" nodeLatency="1" m_display="0" m_delay="0.67" m_topoIndex="46" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/aes.cpp" linenumber="512" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="AES_En_De"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="icmp_ln512" lineNumber="512" fileName="src/aes.cpp" fileDirectory=".." rtlName="icmp_ln512_fu_694_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="AES_En_De" bitwidth="1" opcode="icmp" nodeLabel="17.0" m_display="0" m_delay="0.84" m_topoIndex="66" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/aes.cpp" linenumber="512" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="AES_En_De"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="83" name="i" lineNumber="508" fileName="src/aes.cpp" fileDirectory=".." rtlName="i_fu_688_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="AES_En_De" bitwidth="4" opcode="add" nodeLabel="16.0" m_display="0" m_delay="0.79" m_topoIndex="47" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/aes.cpp" linenumber="508" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="AES_En_De"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="84" name="br_ln512" lineNumber="512" fileName="src/aes.cpp" fileDirectory=".." coreId="2170133248" contextFuncName="AES_En_De" opcode="br" nodeLabel="17.0" m_display="0" m_delay="0.42" m_topoIndex="67" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/aes.cpp" linenumber="512" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="AES_En_De"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_88</controlInputObjs>
+      <controlInputObjs>.split._crit_edge.i</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/aes.cpp">
+      <validLinenumbers>508</validLinenumbers>
+      <validLinenumbers>511</validLinenumbers>
+      <validLinenumbers>512</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_int_base.h">
+      <validLinenumbers>587</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="88" name="block_88" type="BlockType">
+    <controlInputObjs>.split.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>.split._crit_edge.i</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="temp_key_addr_write_ln514" lineNumber="514" fileName="src/aes.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="AES_En_De" opcode="store" nodeLabel="17.0" m_display="0" m_delay="0.67" m_topoIndex="68" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/aes.cpp" linenumber="514" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="AES_En_De"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="87" name="br_ln516" lineNumber="516" fileName="src/aes.cpp" fileDirectory=".." coreId="1397508096" contextFuncName="AES_En_De" opcode="br" nodeLabel="17.0" m_display="0" m_delay="0.42" m_topoIndex="69" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/aes.cpp" linenumber="516" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="AES_En_De"/>
+      <controlInputObjs>.split._crit_edge.i</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/aes.cpp">
+      <validLinenumbers>514</validLinenumbers>
+      <validLinenumbers>516</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="92" name=".split._crit_edge.i" type="BlockType">
+    <controlInputObjs>.split.i</controlInputObjs>
+    <controlInputObjs>block_88</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>_Z9AES_En_DeRN3hls6streamI7ap_uintILi8EELi0EEES4_S1_ILi1EEPS2__.exit.i</controlOutputObjs>
+    <controlOutputObjs>rewind_header</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="89" name="key_change_flag" originalName="key_change_flag" coreId="2168696896" bitwidth="8" opcode="phi" nodeLabel="18.0" m_display="0" m_topoIndex="71" m_clusterGroupNumber="-1">
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <controlInputObjs>block_88</controlInputObjs>
+      <controlInputObjs>.split.i</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="90" name="icmp_ln508" lineNumber="508" fileName="src/aes.cpp" fileDirectory=".." rtlName="icmp_ln508_fu_700_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="AES_En_De" bitwidth="1" opcode="icmp" nodeLabel="17.0" m_display="0" m_delay="0.72" m_topoIndex="70" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/aes.cpp" linenumber="508" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="AES_En_De"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="91" name="br_ln508" lineNumber="508" fileName="src/aes.cpp" fileDirectory=".." coreId="0" contextFuncName="AES_En_De" opcode="br" nodeLabel="18.0" m_display="0" m_topoIndex="72" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/aes.cpp" linenumber="508" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="AES_En_De"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>rewind_header</controlInputObjs>
+      <controlInputObjs>_Z9AES_En_DeRN3hls6streamI7ap_uintILi8EELi0EEES4_S1_ILi1EEPS2__.exit.i</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/aes.cpp">
+      <validLinenumbers>508</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="95" name="_Z9AES_En_DeRN3hls6streamI7ap_uintILi8EELi0EEES4_S1_ILi1EEPS2__.exit.i" type="BlockType">
+    <controlInputObjs>.split._crit_edge.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_98</controlOutputObjs>
+    <controlOutputObjs>AES_En_De.128.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="93" name="icmp_ln519" lineNumber="519" fileName="src/aes.cpp" fileDirectory=".." rtlName="icmp_ln519_fu_706_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="AES_En_De" bitwidth="1" opcode="icmp" nodeLabel="18.0" m_display="0" m_delay="0.44" m_topoIndex="73" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/aes.cpp" linenumber="519" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="AES_En_De"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="94" name="br_ln519" lineNumber="519" fileName="src/aes.cpp" fileDirectory=".." coreId="1953394432" contextFuncName="AES_En_De" opcode="br" nodeLabel="18.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/aes.cpp" linenumber="519" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="AES_En_De"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>AES_En_De.128.exit</controlInputObjs>
+      <controlInputObjs>block_98</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/aes.cpp">
+      <validLinenumbers>519</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="98" name="block_98" type="BlockType">
+    <controlInputObjs>_Z9AES_En_DeRN3hls6streamI7ap_uintILi8EELi0EEES4_S1_ILi1EEPS2__.exit.i</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>AES_En_De.128.exit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="96" name="_ln521" lineNumber="521" fileName="src/aes.cpp" fileDirectory=".." rtlName="grp_extendKey_fu_633" coreId="6775040" contextFuncName="AES_En_De" opcode="call" nodeLabel="18.0" nodeLatency="1" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/aes.cpp" linenumber="521" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="AES_En_De"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>extendKey</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="97" name="br_ln522" lineNumber="522" fileName="src/aes.cpp" fileDirectory=".." coreId="2174220720" contextFuncName="AES_En_De" opcode="br" nodeLabel="19.0" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/aes.cpp" linenumber="522" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="AES_En_De"/>
+      <controlInputObjs>AES_En_De.128.exit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="src/aes.cpp">
+      <validLinenumbers>521</validLinenumbers>
+      <validLinenumbers>522</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="118" name="AES_En_De.128.exit" type="BlockType">
+    <controlInputObjs>_Z9AES_En_DeRN3hls6streamI7ap_uintILi8EELi0EEES4_S1_ILi1EEPS2__.exit.i</controlInputObjs>
+    <controlInputObjs>block_98</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>rewind_header</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="99" name="_ln531" lineNumber="531" fileName="src/aes.cpp" fileDirectory=".." rtlName="grp_deAes_return_fu_643" coreId="2168711208" contextFuncName="AES_En_De" opcode="call" nodeLabel="20.0" nodeLatency="1" m_display="0" m_delay="1.16" m_topoIndex="78" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/aes.cpp" linenumber="531" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="AES_En_De"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>deAes_return</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="100" name="out_data_write_ln173" lineNumber="173" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="write" opcode="write" nodeLabel="19.0" m_display="0" m_delay="1.63" m_topoIndex="77" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="173" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="write"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>out_data</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="101" name="out_data_write_ln173" lineNumber="173" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="write" opcode="write" nodeLabel="20.0" m_display="0" m_delay="1.63" m_topoIndex="79" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="173" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="write"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>out_data</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="102" name="out_data_write_ln173" lineNumber="173" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="write" opcode="write" nodeLabel="21.0" m_display="0" m_delay="1.63" m_topoIndex="80" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="173" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="write"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>out_data</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="103" name="out_data_write_ln173" lineNumber="173" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="write" opcode="write" nodeLabel="22.0" m_display="0" m_delay="1.63" m_topoIndex="81" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="173" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="write"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>out_data</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="104" name="out_data_write_ln173" lineNumber="173" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="write" opcode="write" nodeLabel="23.0" m_display="0" m_delay="1.63" m_topoIndex="82" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="173" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="write"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>out_data</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="105" name="out_data_write_ln173" lineNumber="173" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="write" opcode="write" nodeLabel="24.0" m_display="0" m_delay="1.63" m_topoIndex="83" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="173" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="write"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>out_data</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="106" name="out_data_write_ln173" lineNumber="173" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="write" opcode="write" nodeLabel="25.0" m_display="0" m_delay="1.63" m_topoIndex="84" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="173" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="write"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>out_data</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="107" name="out_data_write_ln173" lineNumber="173" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="write" opcode="write" nodeLabel="26.0" m_display="0" m_delay="1.63" m_topoIndex="85" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="173" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="write"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>out_data</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="108" name="out_data_write_ln173" lineNumber="173" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="write" opcode="write" nodeLabel="27.0" m_display="0" m_delay="1.63" m_topoIndex="86" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="173" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="write"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>out_data</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="109" name="out_data_write_ln173" lineNumber="173" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="write" opcode="write" nodeLabel="28.0" m_display="0" m_delay="1.63" m_topoIndex="87" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="173" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="write"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>out_data</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="110" name="out_data_write_ln173" lineNumber="173" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="write" opcode="write" nodeLabel="29.0" m_display="0" m_delay="1.63" m_topoIndex="88" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="173" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="write"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>out_data</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="111" name="out_data_write_ln173" lineNumber="173" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="write" opcode="write" nodeLabel="30.0" m_display="0" m_delay="1.63" m_topoIndex="89" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="173" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="write"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>out_data</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="112" name="out_data_write_ln173" lineNumber="173" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="write" opcode="write" nodeLabel="31.0" m_display="0" m_delay="1.63" m_topoIndex="90" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="173" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="write"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>out_data</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="113" name="out_data_write_ln173" lineNumber="173" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="write" opcode="write" nodeLabel="32.0" m_display="0" m_delay="1.63" m_topoIndex="91" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="173" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="write"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>out_data</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="114" name="out_data_write_ln173" lineNumber="173" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="write" opcode="write" nodeLabel="33.0" m_display="0" m_delay="1.63" m_topoIndex="92" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="173" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="write"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>out_data</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="115" name="out_data_write_ln173" lineNumber="173" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO" implIndex="memory" control="no" opType="fifo" coreId="78" contextFuncName="write" opcode="write" nodeLabel="34.0" m_display="0" m_delay="1.63" m_topoIndex="93" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="173" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="write"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>out_data</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="116" name="_ln0" coreId="2166172752" opcode="return" nodeLabel="34.0" m_display="0" m_topoIndex="94" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="117" name="br_ln0" coreId="2166172032" opcode="br" nodeLabel="34.0" m_display="0" m_topoIndex="95" m_clusterGroupNumber="-1">
+      <controlInputObjs>rewind_header</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h">
+      <validLinenumbers>173</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="src/aes.cpp">
+      <validLinenumbers>531</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <ScheduleInfo time="14"/>
+  <ScheduleInfo time="15"/>
+  <ScheduleInfo time="16"/>
+  <ScheduleInfo time="17"/>
+  <ScheduleInfo time="18"/>
+  <ScheduleInfo time="19"/>
+  <ScheduleInfo time="20"/>
+  <ScheduleInfo time="21"/>
+  <ScheduleInfo time="22"/>
+  <ScheduleInfo time="23"/>
+  <ScheduleInfo time="24"/>
+  <ScheduleInfo time="25"/>
+  <ScheduleInfo time="26"/>
+  <ScheduleInfo time="27"/>
+  <ScheduleInfo time="28"/>
+  <ScheduleInfo time="29"/>
+  <ScheduleInfo time="30"/>
+  <ScheduleInfo time="31"/>
+  <ScheduleInfo time="32"/>
+  <ScheduleInfo time="33"/>
+  <ScheduleInfo time="34"/>
+  <regnodes realName="bit128in_buffer_reg_714">
+    <nodeIds>38</nodeIds>
+  </regnodes>
+  <regnodes realName="p_060_rewind_reg_186">
+    <nodeIds>21</nodeIds>
+  </regnodes>
+  <regnodes realName="p_048_rewind_reg_366">
+    <nodeIds>33</nodeIds>
+  </regnodes>
+  <regnodes realName="bit128in_buffer_27_reg_774">
+    <nodeIds>50</nodeIds>
+  </regnodes>
+  <regnodes realName="p_054_rewind_reg_276">
+    <nodeIds>27</nodeIds>
+  </regnodes>
+  <regnodes realName="do_init_reg_124">
+    <nodeIds>17</nodeIds>
+  </regnodes>
+  <regnodes realName="bit128in_buffer_22_reg_749">
+    <nodeIds>45</nodeIds>
+  </regnodes>
+  <regnodes realName="p_050_phi_reg_580">
+    <nodeIds>69</nodeIds>
+  </regnodes>
+  <regnodes realName="p_058_rewind_reg_216">
+    <nodeIds>23</nodeIds>
+  </regnodes>
+  <regnodes realName="p_056_phi_reg_502">
+    <nodeIds>63</nodeIds>
+  </regnodes>
+  <regnodes realName="p_058_phi_reg_476">
+    <nodeIds>61</nodeIds>
+  </regnodes>
+  <regnodes realName="temp_key_addr_reg_804">
+    <nodeIds>80</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln519_reg_821">
+    <nodeIds>93</nodeIds>
+  </regnodes>
+  <regnodes realName="p_0_rewind_reg_141">
+    <nodeIds>18</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln508_reg_794">
+    <nodeIds>73</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_809">
+    <nodeIds>83</nodeIds>
+  </regnodes>
+  <regnodes realName="bit128in_buffer_29_reg_784">
+    <nodeIds>52</nodeIds>
+  </regnodes>
+  <regnodes realName="p_052_phi_reg_554">
+    <nodeIds>67</nodeIds>
+  </regnodes>
+  <regnodes realName="p_048_phi_reg_606">
+    <nodeIds>71</nodeIds>
+  </regnodes>
+  <regnodes realName="bit128in_buffer_20_reg_739">
+    <nodeIds>43</nodeIds>
+  </regnodes>
+  <regnodes realName="p_059_rewind_reg_201">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="p_055_phi_reg_515">
+    <nodeIds>64</nodeIds>
+  </regnodes>
+  <regnodes realName="p_055_rewind_reg_261">
+    <nodeIds>26</nodeIds>
+  </regnodes>
+  <regnodes realName="bit128in_buffer_25_reg_764">
+    <nodeIds>48</nodeIds>
+  </regnodes>
+  <regnodes realName="p_057_rewind_reg_231">
+    <nodeIds>24</nodeIds>
+  </regnodes>
+  <regnodes realName="p_053_rewind_reg_291">
+    <nodeIds>28</nodeIds>
+  </regnodes>
+  <regnodes realName="p_060_phi_reg_450">
+    <nodeIds>59</nodeIds>
+  </regnodes>
+  <regnodes realName="p_0_phi_reg_411">
+    <nodeIds>56</nodeIds>
+  </regnodes>
+  <regnodes realName="bit128in_buffer_18_reg_729">
+    <nodeIds>41</nodeIds>
+  </regnodes>
+  <regnodes realName="i15_reg_396">
+    <nodeIds>35</nodeIds>
+  </regnodes>
+  <regnodes realName="p_054_phi_reg_528">
+    <nodeIds>65</nodeIds>
+  </regnodes>
+  <regnodes realName="p_056_rewind_reg_246">
+    <nodeIds>25</nodeIds>
+  </regnodes>
+  <regnodes realName="p_062_phi_reg_424">
+    <nodeIds>57</nodeIds>
+  </regnodes>
+  <regnodes realName="bit128in_buffer_28_reg_779">
+    <nodeIds>51</nodeIds>
+  </regnodes>
+  <regnodes realName="p_049_phi_reg_593">
+    <nodeIds>70</nodeIds>
+  </regnodes>
+  <regnodes realName="p_051_phi_reg_567">
+    <nodeIds>68</nodeIds>
+  </regnodes>
+  <regnodes realName="bit128in_buffer_16_reg_719">
+    <nodeIds>39</nodeIds>
+  </regnodes>
+  <regnodes realName="p_051_rewind_reg_321">
+    <nodeIds>30</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln508_reg_817">
+    <nodeIds>90</nodeIds>
+  </regnodes>
+  <regnodes realName="p_062_rewind_reg_156">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <regnodes realName="p_057_phi_reg_489">
+    <nodeIds>62</nodeIds>
+  </regnodes>
+  <regnodes realName="key_V_addr_reg_799">
+    <nodeIds>76</nodeIds>
+  </regnodes>
+  <regnodes realName="bit128in_buffer_23_reg_754">
+    <nodeIds>46</nodeIds>
+  </regnodes>
+  <regnodes realName="bit128in_buffer_19_reg_734">
+    <nodeIds>42</nodeIds>
+  </regnodes>
+  <regnodes realName="bit128in_buffer_26_reg_769">
+    <nodeIds>49</nodeIds>
+  </regnodes>
+  <regnodes realName="bit128in_buffer_30_reg_789">
+    <nodeIds>53</nodeIds>
+  </regnodes>
+  <regnodes realName="p_061_phi_reg_437">
+    <nodeIds>58</nodeIds>
+  </regnodes>
+  <regnodes realName="p_049_rewind_reg_351">
+    <nodeIds>32</nodeIds>
+  </regnodes>
+  <regnodes realName="p_059_phi_reg_463">
+    <nodeIds>60</nodeIds>
+  </regnodes>
+  <regnodes realName="p_061_rewind_reg_171">
+    <nodeIds>20</nodeIds>
+  </regnodes>
+  <regnodes realName="bit128in_buffer_24_reg_759">
+    <nodeIds>47</nodeIds>
+  </regnodes>
+  <regnodes realName="p_050_rewind_reg_336">
+    <nodeIds>31</nodeIds>
+  </regnodes>
+  <regnodes realName="key_change_flag17_reg_381">
+    <nodeIds>34</nodeIds>
+  </regnodes>
+  <regnodes realName="p_052_rewind_reg_306">
+    <nodeIds>29</nodeIds>
+  </regnodes>
+  <regnodes realName="bit128in_buffer_17_reg_724">
+    <nodeIds>40</nodeIds>
+  </regnodes>
+  <regnodes realName="key_change_flag_reg_619">
+    <nodeIds>89</nodeIds>
+  </regnodes>
+  <regnodes realName="bit128in_buffer_21_reg_744">
+    <nodeIds>44</nodeIds>
+  </regnodes>
+  <regnodes realName="p_053_phi_reg_541">
+    <nodeIds>66</nodeIds>
+  </regnodes>
+  <expressionNodes realName="p_056_rewind_phi_fu_250">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="temp_key_addr_gep_fu_98">
+    <nodeIds>80</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_062_rewind_phi_fu_160">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_053_rewind_phi_fu_295">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_057_phi_phi_fu_494">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_060_phi_phi_fu_455">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_048_phi_phi_fu_611">
+    <nodeIds>71</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln508_fu_700">
+    <nodeIds>90</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="key_char_alloca_fu_68">
+    <nodeIds>9</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_051_rewind_phi_fu_325">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln508_fu_682">
+    <nodeIds>73</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_059_phi_phi_fu_468">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_062_phi_phi_fu_429">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_061_rewind_phi_fu_175">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_053_phi_phi_fu_546">
+    <nodeIds>66</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_054_rewind_phi_fu_280">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_058_rewind_phi_fu_220">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i15_phi_fu_400">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_055_phi_phi_fu_520">
+    <nodeIds>64</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_049_rewind_phi_fu_355">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_060_rewind_phi_fu_190">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_061_phi_phi_fu_442">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_049_phi_phi_fu_598">
+    <nodeIds>70</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="key_char_addr_gep_fu_110">
+    <nodeIds>78</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln519_fu_706">
+    <nodeIds>93</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="key_change_flag17_phi_fu_385">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="key_V_addr_gep_fu_85">
+    <nodeIds>76</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_054_phi_phi_fu_533">
+    <nodeIds>65</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_055_rewind_phi_fu_265">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_0_rewind_phi_fu_145">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="do_init_phi_fu_129">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="temp_key_alloca_fu_60">
+    <nodeIds>7</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_056_phi_phi_fu_507">
+    <nodeIds>63</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_057_rewind_phi_fu_235">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_0_phi_phi_fu_416">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_688">
+    <nodeIds>83</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln512_fu_694">
+    <nodeIds>82</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_059_rewind_phi_fu_205">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="w_alloca_fu_64">
+    <nodeIds>8</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_048_rewind_phi_fu_370">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_058_phi_phi_fu_481">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="return_ln0_fu_712">
+    <nodeIds>116</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_051_phi_phi_fu_572">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_050_phi_phi_fu_585">
+    <nodeIds>69</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="key_change_flag_phi_fu_624">
+    <nodeIds>89</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_050_rewind_phi_fu_340">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_052_rewind_phi_fu_310">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_052_phi_phi_fu_559">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_deAes_return_fu_643">
+    <nodeIds>99</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_extendKey_fu_633">
+    <nodeIds>96</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="grp_write_fu_78">
+    <nodeIds>100</nodeIds>
+    <nodeIds>101</nodeIds>
+    <nodeIds>102</nodeIds>
+    <nodeIds>103</nodeIds>
+    <nodeIds>104</nodeIds>
+    <nodeIds>105</nodeIds>
+    <nodeIds>106</nodeIds>
+    <nodeIds>107</nodeIds>
+    <nodeIds>108</nodeIds>
+    <nodeIds>109</nodeIds>
+    <nodeIds>110</nodeIds>
+    <nodeIds>111</nodeIds>
+    <nodeIds>112</nodeIds>
+    <nodeIds>113</nodeIds>
+    <nodeIds>114</nodeIds>
+    <nodeIds>115</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_read_fu_72">
+    <nodeIds>38</nodeIds>
+    <nodeIds>39</nodeIds>
+    <nodeIds>40</nodeIds>
+    <nodeIds>41</nodeIds>
+    <nodeIds>42</nodeIds>
+    <nodeIds>43</nodeIds>
+    <nodeIds>44</nodeIds>
+    <nodeIds>45</nodeIds>
+    <nodeIds>46</nodeIds>
+    <nodeIds>47</nodeIds>
+    <nodeIds>48</nodeIds>
+    <nodeIds>49</nodeIds>
+    <nodeIds>50</nodeIds>
+    <nodeIds>51</nodeIds>
+    <nodeIds>52</nodeIds>
+    <nodeIds>53</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="Rcon" portID="100">
+    <nodeIds>96</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="S2" portID="100">
+    <nodeIds>99</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="S29" portID="100">
+    <nodeIds>96</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="key_V">
+    <nodeIds>77</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="key_char">
+    <nodeIds>79</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="key_char" portID="100">
+    <nodeIds>96</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="temp_key">
+    <nodeIds>81</nodeIds>
+    <nodeIds>86</nodeIds>
+  </memoryPorts>
+  <ioPorts name="demod_out">
+    <contents name="read">
+      <nodeIds>38</nodeIds>
+      <nodeIds>39</nodeIds>
+      <nodeIds>40</nodeIds>
+      <nodeIds>41</nodeIds>
+      <nodeIds>42</nodeIds>
+      <nodeIds>43</nodeIds>
+      <nodeIds>44</nodeIds>
+      <nodeIds>45</nodeIds>
+      <nodeIds>46</nodeIds>
+      <nodeIds>47</nodeIds>
+      <nodeIds>48</nodeIds>
+      <nodeIds>49</nodeIds>
+      <nodeIds>50</nodeIds>
+      <nodeIds>51</nodeIds>
+      <nodeIds>52</nodeIds>
+      <nodeIds>53</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="out_data">
+    <contents name="write">
+      <nodeIds>100</nodeIds>
+      <nodeIds>101</nodeIds>
+      <nodeIds>102</nodeIds>
+      <nodeIds>103</nodeIds>
+      <nodeIds>104</nodeIds>
+      <nodeIds>105</nodeIds>
+      <nodeIds>106</nodeIds>
+      <nodeIds>107</nodeIds>
+      <nodeIds>108</nodeIds>
+      <nodeIds>109</nodeIds>
+      <nodeIds>110</nodeIds>
+      <nodeIds>111</nodeIds>
+      <nodeIds>112</nodeIds>
+      <nodeIds>113</nodeIds>
+      <nodeIds>114</nodeIds>
+      <nodeIds>115</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="39" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="40" stage="1" latency="1"/>
+    </states>
+    <states id="5">
+      <operations id="41" stage="1" latency="1"/>
+    </states>
+    <states id="6">
+      <operations id="42" stage="1" latency="1"/>
+    </states>
+    <states id="7">
+      <operations id="43" stage="1" latency="1"/>
+    </states>
+    <states id="8">
+      <operations id="44" stage="1" latency="1"/>
+    </states>
+    <states id="9">
+      <operations id="45" stage="1" latency="1"/>
+    </states>
+    <states id="10">
+      <operations id="46" stage="1" latency="1"/>
+    </states>
+    <states id="11">
+      <operations id="47" stage="1" latency="1"/>
+    </states>
+    <states id="12">
+      <operations id="48" stage="1" latency="1"/>
+    </states>
+    <states id="13">
+      <operations id="49" stage="1" latency="1"/>
+    </states>
+    <states id="14">
+      <operations id="50" stage="1" latency="1"/>
+    </states>
+    <states id="15">
+      <operations id="51" stage="1" latency="1"/>
+    </states>
+    <states id="16">
+      <operations id="52" stage="1" latency="1"/>
+    </states>
+    <states id="17">
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="77" stage="2" latency="2"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="81" stage="2" latency="2"/>
+      <operations id="83" stage="1" latency="1"/>
+    </states>
+    <states id="18">
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="2"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="2"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="90" stage="1" latency="1"/>
+    </states>
+    <states id="19">
+      <operations id="89" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="93" stage="1" latency="1"/>
+      <operations id="94" stage="1" latency="1"/>
+      <operations id="96" stage="2" latency="2"/>
+    </states>
+    <states id="20">
+      <operations id="96" stage="1" latency="2"/>
+      <operations id="97" stage="1" latency="1"/>
+      <operations id="100" stage="1" latency="1"/>
+    </states>
+    <states id="21">
+      <operations id="99" stage="2" latency="2"/>
+      <operations id="101" stage="1" latency="1"/>
+    </states>
+    <states id="22">
+      <operations id="99" stage="1" latency="2"/>
+      <operations id="102" stage="1" latency="1"/>
+    </states>
+    <states id="23">
+      <operations id="103" stage="1" latency="1"/>
+    </states>
+    <states id="24">
+      <operations id="104" stage="1" latency="1"/>
+    </states>
+    <states id="25">
+      <operations id="105" stage="1" latency="1"/>
+    </states>
+    <states id="26">
+      <operations id="106" stage="1" latency="1"/>
+    </states>
+    <states id="27">
+      <operations id="107" stage="1" latency="1"/>
+    </states>
+    <states id="28">
+      <operations id="108" stage="1" latency="1"/>
+    </states>
+    <states id="29">
+      <operations id="109" stage="1" latency="1"/>
+    </states>
+    <states id="30">
+      <operations id="110" stage="1" latency="1"/>
+    </states>
+    <states id="31">
+      <operations id="111" stage="1" latency="1"/>
+    </states>
+    <states id="32">
+      <operations id="112" stage="1" latency="1"/>
+    </states>
+    <states id="33">
+      <operations id="113" stage="1" latency="1"/>
+    </states>
+    <states id="34">
+      <operations id="114" stage="1" latency="1"/>
+    </states>
+    <states id="35">
+      <operations id="115" stage="1" latency="1"/>
+      <operations id="116" stage="1" latency="1"/>
+      <operations id="117" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="17">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="15">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="15" outState="16">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="16" outState="17">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="17" outState="18">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="18" outState="19">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="19" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="19" outState="20">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="20" outState="21">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="21" outState="22">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="22" outState="23">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="23" outState="24">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="24" outState="25">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="25" outState="26">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="26" outState="27">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="27" outState="28">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="28" outState="29">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="29" outState="30">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="30" outState="31">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="31" outState="32">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="32" outState="33">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="33" outState="34">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="34" outState="35">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="35" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="AES_En_De_128" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="93" mMaxLatency="12514">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>16</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="VITIS_LOOP_508_2" mII="-1" mDepth="-1" mMinTripCount="16" mMaxTripCount="16" mMinLatency="93" mMaxLatency="12513" mType="1">
+      <basicBlocks>37</basicBlocks>
+      <basicBlocks>55</basicBlocks>
+      <basicBlocks>85</basicBlocks>
+      <basicBlocks>88</basicBlocks>
+      <basicBlocks>92</basicBlocks>
+      <basicBlocks>95</basicBlocks>
+      <basicBlocks>98</basicBlocks>
+      <basicBlocks>118</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

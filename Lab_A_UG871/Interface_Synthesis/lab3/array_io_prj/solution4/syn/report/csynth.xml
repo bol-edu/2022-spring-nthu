@@ -1,0 +1,2906 @@
+<profile>
+    <ReportVersion>
+        <Version>2021.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>virtexuplus</ProductFamily>
+        <Part>xcvu9p-flgb2104-1-e</Part>
+        <TopModelName>array_io</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>6.212</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>0</Best-caseLatency>
+            <Average-caseLatency>0</Average-caseLatency>
+            <Worst-caseLatency>0</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+            <Interval-min>1</Interval-min>
+            <Interval-max>1</Interval-max>
+        </SummaryOfOverallLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <FF>257</FF>
+            <LUT>1930</LUT>
+            <BRAM_18K>0</BRAM_18K>
+            <DSP>0</DSP>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>4320</BRAM_18K>
+            <DSP>6840</DSP>
+            <FF>2364480</FF>
+            <LUT>1182240</LUT>
+            <URAM>960</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_local_block</name>
+            <Object>array_io</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_local_deadlock</name>
+            <Object>array_io</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>array_io</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst</name>
+            <Object>array_io</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_start</name>
+            <Object>array_io</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_done</name>
+            <Object>array_io</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_idle</name>
+            <Object>array_io</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_ready</name>
+            <Object>array_io</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_0_din</name>
+            <Object>d_o_0</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_0_full_n</name>
+            <Object>d_o_0</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_0_write</name>
+            <Object>d_o_0</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_1_din</name>
+            <Object>d_o_1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_1_full_n</name>
+            <Object>d_o_1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_1_write</name>
+            <Object>d_o_1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_2_din</name>
+            <Object>d_o_2</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_2_full_n</name>
+            <Object>d_o_2</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_2_write</name>
+            <Object>d_o_2</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_3_din</name>
+            <Object>d_o_3</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_3_full_n</name>
+            <Object>d_o_3</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_3_write</name>
+            <Object>d_o_3</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_4_din</name>
+            <Object>d_o_4</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_4_full_n</name>
+            <Object>d_o_4</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_4_write</name>
+            <Object>d_o_4</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_5_din</name>
+            <Object>d_o_5</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_5_full_n</name>
+            <Object>d_o_5</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_5_write</name>
+            <Object>d_o_5</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_6_din</name>
+            <Object>d_o_6</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_6_full_n</name>
+            <Object>d_o_6</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_6_write</name>
+            <Object>d_o_6</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_7_din</name>
+            <Object>d_o_7</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_7_full_n</name>
+            <Object>d_o_7</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_7_write</name>
+            <Object>d_o_7</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_8_din</name>
+            <Object>d_o_8</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_8_full_n</name>
+            <Object>d_o_8</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_8_write</name>
+            <Object>d_o_8</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_9_din</name>
+            <Object>d_o_9</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_9_full_n</name>
+            <Object>d_o_9</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_9_write</name>
+            <Object>d_o_9</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_10_din</name>
+            <Object>d_o_10</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_10_full_n</name>
+            <Object>d_o_10</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_10_write</name>
+            <Object>d_o_10</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_11_din</name>
+            <Object>d_o_11</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_11_full_n</name>
+            <Object>d_o_11</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_11_write</name>
+            <Object>d_o_11</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_12_din</name>
+            <Object>d_o_12</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_12_full_n</name>
+            <Object>d_o_12</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_12_write</name>
+            <Object>d_o_12</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_13_din</name>
+            <Object>d_o_13</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_13_full_n</name>
+            <Object>d_o_13</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_13_write</name>
+            <Object>d_o_13</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_14_din</name>
+            <Object>d_o_14</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_14_full_n</name>
+            <Object>d_o_14</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_14_write</name>
+            <Object>d_o_14</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_15_din</name>
+            <Object>d_o_15</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_15_full_n</name>
+            <Object>d_o_15</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_15_write</name>
+            <Object>d_o_15</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_16_din</name>
+            <Object>d_o_16</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_16_full_n</name>
+            <Object>d_o_16</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_16_write</name>
+            <Object>d_o_16</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_17_din</name>
+            <Object>d_o_17</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_17_full_n</name>
+            <Object>d_o_17</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_17_write</name>
+            <Object>d_o_17</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_18_din</name>
+            <Object>d_o_18</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_18_full_n</name>
+            <Object>d_o_18</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_18_write</name>
+            <Object>d_o_18</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_19_din</name>
+            <Object>d_o_19</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_19_full_n</name>
+            <Object>d_o_19</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_19_write</name>
+            <Object>d_o_19</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_20_din</name>
+            <Object>d_o_20</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_20_full_n</name>
+            <Object>d_o_20</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_20_write</name>
+            <Object>d_o_20</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_21_din</name>
+            <Object>d_o_21</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_21_full_n</name>
+            <Object>d_o_21</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_21_write</name>
+            <Object>d_o_21</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_22_din</name>
+            <Object>d_o_22</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_22_full_n</name>
+            <Object>d_o_22</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_22_write</name>
+            <Object>d_o_22</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_23_din</name>
+            <Object>d_o_23</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_23_full_n</name>
+            <Object>d_o_23</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_23_write</name>
+            <Object>d_o_23</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_24_din</name>
+            <Object>d_o_24</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_24_full_n</name>
+            <Object>d_o_24</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_24_write</name>
+            <Object>d_o_24</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_25_din</name>
+            <Object>d_o_25</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_25_full_n</name>
+            <Object>d_o_25</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_25_write</name>
+            <Object>d_o_25</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_26_din</name>
+            <Object>d_o_26</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_26_full_n</name>
+            <Object>d_o_26</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_26_write</name>
+            <Object>d_o_26</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_27_din</name>
+            <Object>d_o_27</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_27_full_n</name>
+            <Object>d_o_27</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_27_write</name>
+            <Object>d_o_27</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_28_din</name>
+            <Object>d_o_28</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_28_full_n</name>
+            <Object>d_o_28</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_28_write</name>
+            <Object>d_o_28</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_29_din</name>
+            <Object>d_o_29</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_29_full_n</name>
+            <Object>d_o_29</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_29_write</name>
+            <Object>d_o_29</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_30_din</name>
+            <Object>d_o_30</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_30_full_n</name>
+            <Object>d_o_30</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_30_write</name>
+            <Object>d_o_30</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_31_din</name>
+            <Object>d_o_31</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>16</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_31_full_n</name>
+            <Object>d_o_31</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_o_31_write</name>
+            <Object>d_o_31</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_0</name>
+            <Object>d_i_0</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_1</name>
+            <Object>d_i_1</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_2</name>
+            <Object>d_i_2</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_3</name>
+            <Object>d_i_3</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_4</name>
+            <Object>d_i_4</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_5</name>
+            <Object>d_i_5</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_6</name>
+            <Object>d_i_6</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_7</name>
+            <Object>d_i_7</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_8</name>
+            <Object>d_i_8</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_9</name>
+            <Object>d_i_9</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_10</name>
+            <Object>d_i_10</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_11</name>
+            <Object>d_i_11</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_12</name>
+            <Object>d_i_12</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_13</name>
+            <Object>d_i_13</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_14</name>
+            <Object>d_i_14</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_15</name>
+            <Object>d_i_15</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_16</name>
+            <Object>d_i_16</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_17</name>
+            <Object>d_i_17</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_18</name>
+            <Object>d_i_18</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_19</name>
+            <Object>d_i_19</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_20</name>
+            <Object>d_i_20</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_21</name>
+            <Object>d_i_21</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_22</name>
+            <Object>d_i_22</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_23</name>
+            <Object>d_i_23</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_24</name>
+            <Object>d_i_24</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_25</name>
+            <Object>d_i_25</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_26</name>
+            <Object>d_i_26</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_27</name>
+            <Object>d_i_27</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_28</name>
+            <Object>d_i_28</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_29</name>
+            <Object>d_i_29</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_30</name>
+            <Object>d_i_30</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>d_i_31</name>
+            <Object>d_i_31</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="2">
+            <ModuleName>array_io</ModuleName>
+            <BindInstances>add_ln69_fu_592_p2 add_ln69_1_fu_611_p2 add_ln69_2_fu_630_p2 add_ln69_3_fu_649_p2 add_ln69_4_fu_668_p2 add_ln69_5_fu_687_p2 add_ln69_6_fu_706_p2 add_ln69_7_fu_725_p2 add_ln69_8_fu_736_p2 add_ln69_9_fu_747_p2 add_ln69_10_fu_758_p2 add_ln69_11_fu_769_p2 add_ln69_12_fu_780_p2 add_ln69_13_fu_791_p2 add_ln69_14_fu_802_p2 add_ln69_15_fu_813_p2 add_ln69_16_fu_824_p2 add_ln69_17_fu_835_p2 add_ln69_18_fu_846_p2 add_ln69_19_fu_857_p2 add_ln69_20_fu_868_p2 add_ln69_21_fu_879_p2 add_ln69_22_fu_890_p2 add_ln69_23_fu_901_p2 add_ln67_fu_912_p2 add_ln67_1_fu_918_p2 add_ln67_2_fu_928_p2 temp_fu_938_p2 d_o_24_din add_ln67_4_fu_961_p2 add_ln67_5_fu_967_p2 add_ln67_6_fu_977_p2 temp_1_fu_987_p2 d_o_25_din add_ln67_8_fu_1010_p2 add_ln67_9_fu_1016_p2 add_ln67_10_fu_1026_p2 temp_2_fu_1036_p2 d_o_26_din add_ln67_12_fu_1059_p2 add_ln67_13_fu_1065_p2 add_ln67_14_fu_1075_p2 temp_3_fu_1085_p2 d_o_27_din add_ln67_16_fu_1108_p2 add_ln67_17_fu_1114_p2 add_ln67_18_fu_1124_p2 temp_4_fu_1134_p2 d_o_28_din add_ln67_20_fu_1157_p2 add_ln67_21_fu_1163_p2 add_ln67_22_fu_1173_p2 temp_5_fu_1183_p2 d_o_29_din add_ln67_24_fu_1206_p2 add_ln67_25_fu_1212_p2 add_ln67_26_fu_1222_p2 temp_6_fu_1232_p2 d_o_30_din add_ln67_28_fu_1255_p2 add_ln67_29_fu_1261_p2 add_ln67_30_fu_1271_p2 temp_7_fu_1281_p2 d_o_31_din</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>array_io</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>6.212</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>0</Best-caseLatency>
+                    <Average-caseLatency>0</Average-caseLatency>
+                    <Worst-caseLatency>0</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>257</FF>
+                    <AVAIL_FF>2364480</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1930</LUT>
+                    <AVAIL_LUT>1182240</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4320</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>6840</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_fu_592_p2" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_1_fu_611_p2" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_2_fu_630_p2" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_3_fu_649_p2" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_4_fu_668_p2" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_5_fu_687_p2" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_6_fu_706_p2" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_7_fu_725_p2" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_8_fu_736_p2" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_9_fu_747_p2" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_10_fu_758_p2" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_11_fu_769_p2" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_12_fu_780_p2" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_13_fu_791_p2" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_14_fu_802_p2" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_15_fu_813_p2" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_15"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_16_fu_824_p2" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_16"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_17_fu_835_p2" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_17"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_18_fu_846_p2" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_18"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_19_fu_857_p2" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_19"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_20_fu_868_p2" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_20"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_21_fu_879_p2" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_21"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_22_fu_890_p2" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_22"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln69_23_fu_901_p2" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_23"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_fu_912_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="add_ln67"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_1_fu_918_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="add_ln67_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_2_fu_928_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="add_ln67_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="temp_fu_938_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="temp"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="d_o_24_din" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_24"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_4_fu_961_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="add_ln67_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_5_fu_967_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="add_ln67_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_6_fu_977_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="add_ln67_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="temp_1_fu_987_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="temp_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="d_o_25_din" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_25"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_8_fu_1010_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="add_ln67_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_9_fu_1016_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="add_ln67_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_10_fu_1026_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="add_ln67_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="temp_2_fu_1036_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="temp_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="d_o_26_din" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_26"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_12_fu_1059_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="add_ln67_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_13_fu_1065_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="add_ln67_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_14_fu_1075_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="add_ln67_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="temp_3_fu_1085_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="temp_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="d_o_27_din" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_27"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_16_fu_1108_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="add_ln67_16"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_17_fu_1114_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="add_ln67_17"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_18_fu_1124_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="add_ln67_18"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="temp_4_fu_1134_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="temp_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="d_o_28_din" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_28"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_20_fu_1157_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="add_ln67_20"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_21_fu_1163_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="add_ln67_21"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_22_fu_1173_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="add_ln67_22"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="temp_5_fu_1183_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="temp_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="d_o_29_din" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_29"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_24_fu_1206_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="add_ln67_24"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_25_fu_1212_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="add_ln67_25"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_26_fu_1222_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="add_ln67_26"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="temp_6_fu_1232_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="temp_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="d_o_30_din" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_30"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_28_fu_1255_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="add_ln67_28"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_29_fu_1261_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="add_ln67_29"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_30_fu_1271_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="add_ln67_30"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="tadder" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="temp_7_fu_1281_p2" SOURCE="array_io.c:67" URAM="0" VARIABLE="temp_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="d_o_31_din" SOURCE="array_io.c:69" URAM="0" VARIABLE="add_ln69_31"/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands/>
+    <Args>
+        <Arg ArgName="d_o" index="0" direction="out" srcType="short*" srcSize="16">
+            <hwRefs>
+                <hwRef type="interface" interface="d_o_0" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_1" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_2" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_3" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_4" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_5" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_6" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_7" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_8" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_9" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_10" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_11" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_12" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_13" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_14" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_15" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_16" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_17" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_18" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_19" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_20" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_21" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_22" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_23" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_24" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_25" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_26" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_27" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_28" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_29" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_30" name="" usage="data" direction="out"/>
+                <hwRef type="interface" interface="d_o_31" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="d_i" index="1" direction="in" srcType="short*" srcSize="16">
+            <hwRefs>
+                <hwRef type="port" interface="d_i_0" name="d_i_0" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_1" name="d_i_1" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_2" name="d_i_2" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_3" name="d_i_3" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_4" name="d_i_4" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_5" name="d_i_5" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_6" name="d_i_6" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_7" name="d_i_7" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_8" name="d_i_8" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_9" name="d_i_9" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_10" name="d_i_10" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_11" name="d_i_11" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_12" name="d_i_12" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_13" name="d_i_13" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_14" name="d_i_14" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_15" name="d_i_15" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_16" name="d_i_16" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_17" name="d_i_17" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_18" name="d_i_18" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_19" name="d_i_19" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_20" name="d_i_20" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_21" name="d_i_21" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_22" name="d_i_22" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_23" name="d_i_23" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_24" name="d_i_24" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_25" name="d_i_25" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_26" name="d_i_26" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_27" name="d_i_27" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_28" name="d_i_28" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_29" name="d_i_29" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_30" name="d_i_30" usage="data" direction="in"/>
+                <hwRef type="port" interface="d_i_31" name="d_i_31" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+            <portMaps>
+                <portMap portMapName="ap_start">start</portMap>
+                <portMap portMapName="ap_done">done</portMap>
+                <portMap portMapName="ap_idle">idle</portMap>
+                <portMap portMapName="ap_ready">ready</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_done</port>
+                <port>ap_idle</port>
+                <port>ap_ready</port>
+                <port>ap_start</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="d_o_0" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_0_">
+            <portMaps>
+                <portMap portMapName="d_o_0_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_0_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_0_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_0_din</port>
+                <port>d_o_0_full_n</port>
+                <port>d_o_0_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_1" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_1_">
+            <portMaps>
+                <portMap portMapName="d_o_1_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_1_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_1_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_1_din</port>
+                <port>d_o_1_full_n</port>
+                <port>d_o_1_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_2" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_2_">
+            <portMaps>
+                <portMap portMapName="d_o_2_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_2_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_2_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_2_din</port>
+                <port>d_o_2_full_n</port>
+                <port>d_o_2_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_3" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_3_">
+            <portMaps>
+                <portMap portMapName="d_o_3_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_3_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_3_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_3_din</port>
+                <port>d_o_3_full_n</port>
+                <port>d_o_3_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_4" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_4_">
+            <portMaps>
+                <portMap portMapName="d_o_4_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_4_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_4_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_4_din</port>
+                <port>d_o_4_full_n</port>
+                <port>d_o_4_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_5" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_5_">
+            <portMaps>
+                <portMap portMapName="d_o_5_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_5_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_5_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_5_din</port>
+                <port>d_o_5_full_n</port>
+                <port>d_o_5_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_6" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_6_">
+            <portMaps>
+                <portMap portMapName="d_o_6_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_6_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_6_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_6_din</port>
+                <port>d_o_6_full_n</port>
+                <port>d_o_6_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_7" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_7_">
+            <portMaps>
+                <portMap portMapName="d_o_7_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_7_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_7_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_7_din</port>
+                <port>d_o_7_full_n</port>
+                <port>d_o_7_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_8" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_8_">
+            <portMaps>
+                <portMap portMapName="d_o_8_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_8_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_8_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_8_din</port>
+                <port>d_o_8_full_n</port>
+                <port>d_o_8_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_9" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_9_">
+            <portMaps>
+                <portMap portMapName="d_o_9_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_9_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_9_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_9_din</port>
+                <port>d_o_9_full_n</port>
+                <port>d_o_9_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_10" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_10_">
+            <portMaps>
+                <portMap portMapName="d_o_10_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_10_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_10_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_10_din</port>
+                <port>d_o_10_full_n</port>
+                <port>d_o_10_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_11" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_11_">
+            <portMaps>
+                <portMap portMapName="d_o_11_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_11_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_11_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_11_din</port>
+                <port>d_o_11_full_n</port>
+                <port>d_o_11_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_12" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_12_">
+            <portMaps>
+                <portMap portMapName="d_o_12_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_12_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_12_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_12_din</port>
+                <port>d_o_12_full_n</port>
+                <port>d_o_12_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_13" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_13_">
+            <portMaps>
+                <portMap portMapName="d_o_13_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_13_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_13_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_13_din</port>
+                <port>d_o_13_full_n</port>
+                <port>d_o_13_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_14" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_14_">
+            <portMaps>
+                <portMap portMapName="d_o_14_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_14_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_14_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_14_din</port>
+                <port>d_o_14_full_n</port>
+                <port>d_o_14_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_15" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_15_">
+            <portMaps>
+                <portMap portMapName="d_o_15_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_15_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_15_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_15_din</port>
+                <port>d_o_15_full_n</port>
+                <port>d_o_15_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_16" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_16_">
+            <portMaps>
+                <portMap portMapName="d_o_16_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_16_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_16_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_16_din</port>
+                <port>d_o_16_full_n</port>
+                <port>d_o_16_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_17" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_17_">
+            <portMaps>
+                <portMap portMapName="d_o_17_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_17_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_17_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_17_din</port>
+                <port>d_o_17_full_n</port>
+                <port>d_o_17_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_18" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_18_">
+            <portMaps>
+                <portMap portMapName="d_o_18_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_18_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_18_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_18_din</port>
+                <port>d_o_18_full_n</port>
+                <port>d_o_18_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_19" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_19_">
+            <portMaps>
+                <portMap portMapName="d_o_19_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_19_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_19_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_19_din</port>
+                <port>d_o_19_full_n</port>
+                <port>d_o_19_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_20" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_20_">
+            <portMaps>
+                <portMap portMapName="d_o_20_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_20_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_20_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_20_din</port>
+                <port>d_o_20_full_n</port>
+                <port>d_o_20_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_21" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_21_">
+            <portMaps>
+                <portMap portMapName="d_o_21_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_21_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_21_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_21_din</port>
+                <port>d_o_21_full_n</port>
+                <port>d_o_21_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_22" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_22_">
+            <portMaps>
+                <portMap portMapName="d_o_22_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_22_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_22_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_22_din</port>
+                <port>d_o_22_full_n</port>
+                <port>d_o_22_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_23" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_23_">
+            <portMaps>
+                <portMap portMapName="d_o_23_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_23_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_23_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_23_din</port>
+                <port>d_o_23_full_n</port>
+                <port>d_o_23_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_24" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_24_">
+            <portMaps>
+                <portMap portMapName="d_o_24_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_24_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_24_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_24_din</port>
+                <port>d_o_24_full_n</port>
+                <port>d_o_24_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_25" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_25_">
+            <portMaps>
+                <portMap portMapName="d_o_25_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_25_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_25_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_25_din</port>
+                <port>d_o_25_full_n</port>
+                <port>d_o_25_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_26" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_26_">
+            <portMaps>
+                <portMap portMapName="d_o_26_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_26_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_26_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_26_din</port>
+                <port>d_o_26_full_n</port>
+                <port>d_o_26_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_27" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_27_">
+            <portMaps>
+                <portMap portMapName="d_o_27_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_27_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_27_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_27_din</port>
+                <port>d_o_27_full_n</port>
+                <port>d_o_27_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_28" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_28_">
+            <portMaps>
+                <portMap portMapName="d_o_28_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_28_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_28_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_28_din</port>
+                <port>d_o_28_full_n</port>
+                <port>d_o_28_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_29" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_29_">
+            <portMaps>
+                <portMap portMapName="d_o_29_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_29_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_29_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_29_din</port>
+                <port>d_o_29_full_n</port>
+                <port>d_o_29_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_30" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_30_">
+            <portMaps>
+                <portMap portMapName="d_o_30_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_30_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_30_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_30_din</port>
+                <port>d_o_30_full_n</port>
+                <port>d_o_30_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_o_31" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="16" portPrefix="d_o_31_">
+            <portMaps>
+                <portMap portMapName="d_o_31_din">WR_DATA</portMap>
+                <portMap portMapName="d_o_31_full_n">FULL_N</portMap>
+                <portMap portMapName="d_o_31_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>d_o_31_din</port>
+                <port>d_o_31_full_n</port>
+                <port>d_o_31_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="d_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_0" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_1" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_2" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_2">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_2</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_3" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_3">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_3</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_4" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_4">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_4</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_5" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_5">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_5</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_6" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_6">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_6</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_7" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_7">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_7</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_8" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_8">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_8</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_9" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_9">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_9</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_10" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_10">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_10</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_11" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_11">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_11</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_12" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_12">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_12</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_13" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_13">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_13</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_14" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_14">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_14</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_15" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_15">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_15</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_16" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_16">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_16</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_17" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_17">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_17</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_18" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_18">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_18</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_19" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_19">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_19</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_20" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_20">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_20</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_21" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_21">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_21</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_22" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_22">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_22</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_23" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_23">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_23</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_24" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_24">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_24</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_25" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_25">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_25</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_26" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_26">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_26</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_27" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_27">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_27</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_28" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_28">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_28</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_29" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_29">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_29</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_30" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_30">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_30</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="d_i_31" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="d_i_31">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>d_i_31</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="d_i"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="AP_FIFO">
+                <table isCollapsed="0">
+                    <keys size="2">Interface, Data Width</keys>
+                    <column name="d_o_0">16</column>
+                    <column name="d_o_1">16</column>
+                    <column name="d_o_10">16</column>
+                    <column name="d_o_11">16</column>
+                    <column name="d_o_12">16</column>
+                    <column name="d_o_13">16</column>
+                    <column name="d_o_14">16</column>
+                    <column name="d_o_15">16</column>
+                    <column name="d_o_16">16</column>
+                    <column name="d_o_17">16</column>
+                    <column name="d_o_18">16</column>
+                    <column name="d_o_19">16</column>
+                    <column name="d_o_2">16</column>
+                    <column name="d_o_20">16</column>
+                    <column name="d_o_21">16</column>
+                    <column name="d_o_22">16</column>
+                    <column name="d_o_23">16</column>
+                    <column name="d_o_24">16</column>
+                    <column name="d_o_25">16</column>
+                    <column name="d_o_26">16</column>
+                    <column name="d_o_27">16</column>
+                    <column name="d_o_28">16</column>
+                    <column name="d_o_29">16</column>
+                    <column name="d_o_3">16</column>
+                    <column name="d_o_30">16</column>
+                    <column name="d_o_31">16</column>
+                    <column name="d_o_4">16</column>
+                    <column name="d_o_5">16</column>
+                    <column name="d_o_6">16</column>
+                    <column name="d_o_7">16</column>
+                    <column name="d_o_8">16</column>
+                    <column name="d_o_9">16</column>
+                </table>
+            </item>
+            <item name="REGISTER">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Mode, Bitwidth</keys>
+                    <column name="d_i_0">ap_none, 16</column>
+                    <column name="d_i_1">ap_none, 16</column>
+                    <column name="d_i_10">ap_none, 16</column>
+                    <column name="d_i_11">ap_none, 16</column>
+                    <column name="d_i_12">ap_none, 16</column>
+                    <column name="d_i_13">ap_none, 16</column>
+                    <column name="d_i_14">ap_none, 16</column>
+                    <column name="d_i_15">ap_none, 16</column>
+                    <column name="d_i_16">ap_none, 16</column>
+                    <column name="d_i_17">ap_none, 16</column>
+                    <column name="d_i_18">ap_none, 16</column>
+                    <column name="d_i_19">ap_none, 16</column>
+                    <column name="d_i_2">ap_none, 16</column>
+                    <column name="d_i_20">ap_none, 16</column>
+                    <column name="d_i_21">ap_none, 16</column>
+                    <column name="d_i_22">ap_none, 16</column>
+                    <column name="d_i_23">ap_none, 16</column>
+                    <column name="d_i_24">ap_none, 16</column>
+                    <column name="d_i_25">ap_none, 16</column>
+                    <column name="d_i_26">ap_none, 16</column>
+                    <column name="d_i_27">ap_none, 16</column>
+                    <column name="d_i_28">ap_none, 16</column>
+                    <column name="d_i_29">ap_none, 16</column>
+                    <column name="d_i_3">ap_none, 16</column>
+                    <column name="d_i_30">ap_none, 16</column>
+                    <column name="d_i_31">ap_none, 16</column>
+                    <column name="d_i_4">ap_none, 16</column>
+                    <column name="d_i_5">ap_none, 16</column>
+                    <column name="d_i_6">ap_none, 16</column>
+                    <column name="d_i_7">ap_none, 16</column>
+                    <column name="d_i_8">ap_none, 16</column>
+                    <column name="d_i_9">ap_none, 16</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst">reset, ap_rst</column>
+                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start</column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="d_o">out, short*</column>
+                    <column name="d_i">in, short*</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="d_o">d_o_0, interface</column>
+                    <column name="d_o">d_o_1, interface</column>
+                    <column name="d_o">d_o_2, interface</column>
+                    <column name="d_o">d_o_3, interface</column>
+                    <column name="d_o">d_o_4, interface</column>
+                    <column name="d_o">d_o_5, interface</column>
+                    <column name="d_o">d_o_6, interface</column>
+                    <column name="d_o">d_o_7, interface</column>
+                    <column name="d_o">d_o_8, interface</column>
+                    <column name="d_o">d_o_9, interface</column>
+                    <column name="d_o">d_o_10, interface</column>
+                    <column name="d_o">d_o_11, interface</column>
+                    <column name="d_o">d_o_12, interface</column>
+                    <column name="d_o">d_o_13, interface</column>
+                    <column name="d_o">d_o_14, interface</column>
+                    <column name="d_o">d_o_15, interface</column>
+                    <column name="d_o">d_o_16, interface</column>
+                    <column name="d_o">d_o_17, interface</column>
+                    <column name="d_o">d_o_18, interface</column>
+                    <column name="d_o">d_o_19, interface</column>
+                    <column name="d_o">d_o_20, interface</column>
+                    <column name="d_o">d_o_21, interface</column>
+                    <column name="d_o">d_o_22, interface</column>
+                    <column name="d_o">d_o_23, interface</column>
+                    <column name="d_o">d_o_24, interface</column>
+                    <column name="d_o">d_o_25, interface</column>
+                    <column name="d_o">d_o_26, interface</column>
+                    <column name="d_o">d_o_27, interface</column>
+                    <column name="d_o">d_o_28, interface</column>
+                    <column name="d_o">d_o_29, interface</column>
+                    <column name="d_o">d_o_30, interface</column>
+                    <column name="d_o">d_o_31, interface</column>
+                    <column name="d_i">d_i_0, port</column>
+                    <column name="d_i">d_i_1, port</column>
+                    <column name="d_i">d_i_2, port</column>
+                    <column name="d_i">d_i_3, port</column>
+                    <column name="d_i">d_i_4, port</column>
+                    <column name="d_i">d_i_5, port</column>
+                    <column name="d_i">d_i_6, port</column>
+                    <column name="d_i">d_i_7, port</column>
+                    <column name="d_i">d_i_8, port</column>
+                    <column name="d_i">d_i_9, port</column>
+                    <column name="d_i">d_i_10, port</column>
+                    <column name="d_i">d_i_11, port</column>
+                    <column name="d_i">d_i_12, port</column>
+                    <column name="d_i">d_i_13, port</column>
+                    <column name="d_i">d_i_14, port</column>
+                    <column name="d_i">d_i_15, port</column>
+                    <column name="d_i">d_i_16, port</column>
+                    <column name="d_i">d_i_17, port</column>
+                    <column name="d_i">d_i_18, port</column>
+                    <column name="d_i">d_i_19, port</column>
+                    <column name="d_i">d_i_20, port</column>
+                    <column name="d_i">d_i_21, port</column>
+                    <column name="d_i">d_i_22, port</column>
+                    <column name="d_i">d_i_23, port</column>
+                    <column name="d_i">d_i_24, port</column>
+                    <column name="d_i">d_i_25, port</column>
+                    <column name="d_i">d_i_26, port</column>
+                    <column name="d_i">d_i_27, port</column>
+                    <column name="d_i">d_i_28, port</column>
+                    <column name="d_i">d_i_29, port</column>
+                    <column name="d_i">d_i_30, port</column>
+                    <column name="d_i">d_i_31, port</column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <PragmaReport>
+        <Pragma type="array_partition" location="array_io.c:58" status="valid" parentFunction="array_io" variable="d_i" isDirective="1" options="variable=d_i complete dim=1"/>
+        <Pragma type="array_partition" location="array_io.c:58" status="valid" parentFunction="array_io" variable="d_o" isDirective="1" options="variable=d_o complete dim=1"/>
+        <Pragma type="interface" location="array_io.c:58" status="valid" parentFunction="array_io" variable="d_o" isDirective="1" options="ap_fifo port=d_o"/>
+        <Pragma type="unroll" location="array_io.c:66" status="valid" parentFunction="array_io" variable="" isDirective="1" options=""/>
+    </PragmaReport>
+</profile>
+

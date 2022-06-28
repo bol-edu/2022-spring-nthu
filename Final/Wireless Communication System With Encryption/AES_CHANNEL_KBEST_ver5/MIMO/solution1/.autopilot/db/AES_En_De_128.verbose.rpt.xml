@@ -1,0 +1,224 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'AES_En_De_128'" level="0">
+<item name = "Date">Fri Jun 17 13:16:20 2022
+</item>
+<item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)</item>
+<item name = "Project">MIMO</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu9eg-ffvb1156-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">40.00 ns, 3.912 ns, 10.80 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">93, 12514, 3.720 us, 0.501 ms, 93, 12514, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_extendKey_fu_633">extendKey, 255, 255, 10.200 us, 10.200 us, 255, 255, no</column>
+<column name="grp_deAes_return_fu_643">deAes_return, 543, 543, 21.720 us, 21.720 us, 543, 543, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_508_2">93, 12513, 4 ~ 832, -, -, 16, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 51, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">2, -, 6195, 16891, 0</column>
+<column name="Memory">2, -, 40, 6, 0</column>
+<column name="Multiplexer">-, -, -, 566, -</column>
+<column name="Register">-, -, 449, -, -</column>
+<specialColumn name="Available">1824, 2520, 548160, 274080, 0</specialColumn>
+<specialColumn name="Utilization (%)">~0, 0, 1, 6, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_deAes_return_fu_643">deAes_return, 1, 0, 5954, 16318, 0</column>
+<column name="grp_extendKey_fu_633">extendKey, 1, 0, 241, 573, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="key_V_U">AES_En_De27_key_V31_ROM_AUTO_1R, 0, 8, 2, 0, 16, 8, 1, 128</column>
+<column name="key_char_U">AES_En_De27_key_char_RAM_AUTO_1R1W, 0, 16, 2, 0, 16, 8, 1, 128</column>
+<column name="temp_key_U">AES_En_De27_temp_key_RAM_AUTO_1R1W, 0, 16, 2, 0, 16, 8, 1, 128</column>
+<column name="w_U">AES_En_De_128_w_RAM_AUTO_1R1W, 2, 0, 0, 0, 44, 32, 1, 1408</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="i_fu_688_p2">+, 0, 0, 12, 4, 1</column>
+<column name="ap_block_state17">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state20_on_subcall_done">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln508_fu_700_p2">icmp, 0, 0, 9, 4, 2</column>
+<column name="icmp_ln512_fu_694_p2">icmp, 0, 0, 11, 8, 8</column>
+<column name="icmp_ln519_fu_706_p2">icmp, 0, 0, 11, 8, 1</column>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">162, 36, 1, 36</column>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="demod_out_blk_n">9, 2, 1, 2</column>
+<column name="i15_reg_396">9, 2, 4, 8</column>
+<column name="key_change_flag17_reg_381">9, 2, 8, 16</column>
+<column name="key_change_flag_reg_619">9, 2, 8, 16</column>
+<column name="key_char_address0">14, 3, 4, 12</column>
+<column name="key_char_ce0">14, 3, 1, 3</column>
+<column name="key_char_ce1">9, 2, 1, 2</column>
+<column name="out_data_blk_n">9, 2, 1, 2</column>
+<column name="out_data_din">81, 17, 8, 136</column>
+<column name="p_048_phi_reg_606">9, 2, 8, 16</column>
+<column name="p_049_phi_reg_593">9, 2, 8, 16</column>
+<column name="p_050_phi_reg_580">9, 2, 8, 16</column>
+<column name="p_051_phi_reg_567">9, 2, 8, 16</column>
+<column name="p_052_phi_reg_554">9, 2, 8, 16</column>
+<column name="p_053_phi_reg_541">9, 2, 8, 16</column>
+<column name="p_054_phi_reg_528">9, 2, 8, 16</column>
+<column name="p_055_phi_reg_515">9, 2, 8, 16</column>
+<column name="p_056_phi_reg_502">9, 2, 8, 16</column>
+<column name="p_057_phi_reg_489">9, 2, 8, 16</column>
+<column name="p_058_phi_reg_476">9, 2, 8, 16</column>
+<column name="p_059_phi_reg_463">9, 2, 8, 16</column>
+<column name="p_060_phi_reg_450">9, 2, 8, 16</column>
+<column name="p_061_phi_reg_437">9, 2, 8, 16</column>
+<column name="p_062_phi_reg_424">9, 2, 8, 16</column>
+<column name="p_0_phi_reg_411">9, 2, 8, 16</column>
+<column name="temp_key_address0">14, 3, 4, 12</column>
+<column name="w_address0">14, 3, 6, 18</column>
+<column name="w_address1">14, 3, 6, 18</column>
+<column name="w_ce0">14, 3, 1, 3</column>
+<column name="w_ce1">14, 3, 1, 3</column>
+<column name="w_we0">9, 2, 1, 2</column>
+<column name="w_we1">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">35, 0, 35, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="bit128in_buffer_16_reg_719">8, 0, 8, 0</column>
+<column name="bit128in_buffer_17_reg_724">8, 0, 8, 0</column>
+<column name="bit128in_buffer_18_reg_729">8, 0, 8, 0</column>
+<column name="bit128in_buffer_19_reg_734">8, 0, 8, 0</column>
+<column name="bit128in_buffer_20_reg_739">8, 0, 8, 0</column>
+<column name="bit128in_buffer_21_reg_744">8, 0, 8, 0</column>
+<column name="bit128in_buffer_22_reg_749">8, 0, 8, 0</column>
+<column name="bit128in_buffer_23_reg_754">8, 0, 8, 0</column>
+<column name="bit128in_buffer_24_reg_759">8, 0, 8, 0</column>
+<column name="bit128in_buffer_25_reg_764">8, 0, 8, 0</column>
+<column name="bit128in_buffer_26_reg_769">8, 0, 8, 0</column>
+<column name="bit128in_buffer_27_reg_774">8, 0, 8, 0</column>
+<column name="bit128in_buffer_28_reg_779">8, 0, 8, 0</column>
+<column name="bit128in_buffer_29_reg_784">8, 0, 8, 0</column>
+<column name="bit128in_buffer_reg_714">8, 0, 8, 0</column>
+<column name="do_init_reg_124">1, 0, 1, 0</column>
+<column name="grp_deAes_return_fu_643_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_extendKey_fu_633_ap_start_reg">1, 0, 1, 0</column>
+<column name="i15_reg_396">4, 0, 4, 0</column>
+<column name="i_reg_809">4, 0, 4, 0</column>
+<column name="icmp_ln508_reg_817">1, 0, 1, 0</column>
+<column name="icmp_ln519_reg_821">1, 0, 1, 0</column>
+<column name="key_change_flag17_reg_381">8, 0, 8, 0</column>
+<column name="key_change_flag_reg_619">8, 0, 8, 0</column>
+<column name="p_048_phi_reg_606">8, 0, 8, 0</column>
+<column name="p_048_rewind_reg_366">8, 0, 8, 0</column>
+<column name="p_049_phi_reg_593">8, 0, 8, 0</column>
+<column name="p_049_rewind_reg_351">8, 0, 8, 0</column>
+<column name="p_050_phi_reg_580">8, 0, 8, 0</column>
+<column name="p_050_rewind_reg_336">8, 0, 8, 0</column>
+<column name="p_051_phi_reg_567">8, 0, 8, 0</column>
+<column name="p_051_rewind_reg_321">8, 0, 8, 0</column>
+<column name="p_052_phi_reg_554">8, 0, 8, 0</column>
+<column name="p_052_rewind_reg_306">8, 0, 8, 0</column>
+<column name="p_053_phi_reg_541">8, 0, 8, 0</column>
+<column name="p_053_rewind_reg_291">8, 0, 8, 0</column>
+<column name="p_054_phi_reg_528">8, 0, 8, 0</column>
+<column name="p_054_rewind_reg_276">8, 0, 8, 0</column>
+<column name="p_055_phi_reg_515">8, 0, 8, 0</column>
+<column name="p_055_rewind_reg_261">8, 0, 8, 0</column>
+<column name="p_056_phi_reg_502">8, 0, 8, 0</column>
+<column name="p_056_rewind_reg_246">8, 0, 8, 0</column>
+<column name="p_057_phi_reg_489">8, 0, 8, 0</column>
+<column name="p_057_rewind_reg_231">8, 0, 8, 0</column>
+<column name="p_058_phi_reg_476">8, 0, 8, 0</column>
+<column name="p_058_rewind_reg_216">8, 0, 8, 0</column>
+<column name="p_059_phi_reg_463">8, 0, 8, 0</column>
+<column name="p_059_rewind_reg_201">8, 0, 8, 0</column>
+<column name="p_060_phi_reg_450">8, 0, 8, 0</column>
+<column name="p_060_rewind_reg_186">8, 0, 8, 0</column>
+<column name="p_061_phi_reg_437">8, 0, 8, 0</column>
+<column name="p_061_rewind_reg_171">8, 0, 8, 0</column>
+<column name="p_062_phi_reg_424">8, 0, 8, 0</column>
+<column name="p_062_rewind_reg_156">8, 0, 8, 0</column>
+<column name="p_0_phi_reg_411">8, 0, 8, 0</column>
+<column name="p_0_rewind_reg_141">8, 0, 8, 0</column>
+<column name="temp_key_addr_reg_804">4, 0, 4, 0</column>
+<column name="zext_ln508_reg_794">4, 0, 64, 60</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, AES_En_De.128, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, AES_En_De.128, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, AES_En_De.128, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, AES_En_De.128, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, AES_En_De.128, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, AES_En_De.128, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, AES_En_De.128, return value</column>
+<column name="out_data_din">out, 8, ap_fifo, out_data, pointer</column>
+<column name="out_data_full_n">in, 1, ap_fifo, out_data, pointer</column>
+<column name="out_data_write">out, 1, ap_fifo, out_data, pointer</column>
+<column name="demod_out_dout">in, 8, ap_fifo, demod_out, pointer</column>
+<column name="demod_out_empty_n">in, 1, ap_fifo, demod_out, pointer</column>
+<column name="demod_out_read">out, 1, ap_fifo, demod_out, pointer</column>
+</table>
+</item>
+</section>
+</profile>

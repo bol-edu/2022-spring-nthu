@@ -1,0 +1,367 @@
+
+
+================================================================
+== Vitis HLS Report for 'QRD_Pipeline_LOOP_01'
+================================================================
+* Date:           Fri Jun 17 13:15:53 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        MIMO
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  40.00 ns|  1.378 ns|    10.80 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        6|        6|  0.240 us|  0.240 us|    6|    6|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+        |           |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- LOOP_01  |        4|        4|         1|          1|          1|     4|       yes|
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     104|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       0|     160|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      27|    -|
+|Register         |        -|     -|    1030|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|    1030|     291|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1824|  2520|  548160|  274080|    0|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------+---------------+---------+----+---+----+-----+
+    |      Instance      |     Module    | BRAM_18K| DSP| FF| LUT| URAM|
+    +--------------------+---------------+---------+----+---+----+-----+
+    |mux_42_16_1_1_U190  |mux_42_16_1_1  |        0|   0|  0|  20|    0|
+    |mux_42_16_1_1_U191  |mux_42_16_1_1  |        0|   0|  0|  20|    0|
+    |mux_42_16_1_1_U192  |mux_42_16_1_1  |        0|   0|  0|  20|    0|
+    |mux_42_16_1_1_U193  |mux_42_16_1_1  |        0|   0|  0|  20|    0|
+    |mux_42_16_1_1_U194  |mux_42_16_1_1  |        0|   0|  0|  20|    0|
+    |mux_42_16_1_1_U195  |mux_42_16_1_1  |        0|   0|  0|  20|    0|
+    |mux_42_16_1_1_U196  |mux_42_16_1_1  |        0|   0|  0|  20|    0|
+    |mux_42_16_1_1_U197  |mux_42_16_1_1  |        0|   0|  0|  20|    0|
+    +--------------------+---------------+---------+----+---+----+-----+
+    |Total               |               |        0|   0|  0| 160|    0|
+    +--------------------+---------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------+----------+----+---+----+------------+------------+
+    |      Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------+----------+----+---+----+------------+------------+
+    |add_ln247_fu_1582_p2    |         +|   0|  0|  12|           4|           2|
+    |sub_ln712_1_fu_1324_p2  |         -|   0|  0|  23|           1|          16|
+    |sub_ln712_2_fu_1410_p2  |         -|   0|  0|  23|           1|          16|
+    |sub_ln712_3_fu_1496_p2  |         -|   0|  0|  23|           1|          16|
+    |sub_ln712_fu_1238_p2    |         -|   0|  0|  23|           1|          16|
+    +------------------------+----------+----+---+----+------------+------------+
+    |Total                   |          |   0|  0| 104|           8|          66|
+    +------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------+----+-----------+-----+-----------+
+    |          Name         | LUT| Input Size| Bits| Total Bits|
+    +-----------------------+----+-----------+-----+-----------+
+    |ap_done_int            |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_14  |   9|          2|    4|          8|
+    |i_fu_226               |   9|          2|    4|          8|
+    +-----------------------+----+-----------+-----+-----------+
+    |Total                  |  27|          6|    9|         18|
+    +-----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------+----+----+-----+-----------+
+    |                  Name                 | FF | LUT| Bits| Const Bits|
+    +---------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                              |   1|   0|    1|          0|
+    |ap_done_reg                            |   1|   0|    1|          0|
+    |conv_i_i_i23841839_lcssa2000_i_fu_358  |  16|   0|   16|          0|
+    |conv_i_i_i23841842_lcssa2002_i_fu_362  |  16|   0|   16|          0|
+    |conv_i_i_i23841845_lcssa2004_i_fu_366  |  16|   0|   16|          0|
+    |conv_i_i_i23841848_lcssa2006_i_fu_370  |  16|   0|   16|          0|
+    |conv_i_i_i23841851_lcssa2008_i_fu_374  |  16|   0|   16|          0|
+    |conv_i_i_i23841854_lcssa2010_i_fu_378  |  16|   0|   16|          0|
+    |conv_i_i_i23841857_lcssa2012_i_fu_382  |  16|   0|   16|          0|
+    |conv_i_i_i23841860_lcssa2014_i_fu_386  |  16|   0|   16|          0|
+    |conv_i_i_i23841864_lcssa2016_i_fu_390  |  16|   0|   16|          0|
+    |conv_i_i_i23841867_lcssa2018_i_fu_394  |  16|   0|   16|          0|
+    |conv_i_i_i23841870_lcssa2020_i_fu_398  |  16|   0|   16|          0|
+    |conv_i_i_i23841873_lcssa2022_i_fu_402  |  16|   0|   16|          0|
+    |conv_i_i_i23841875_lcssa2024_i_fu_406  |  16|   0|   16|          0|
+    |conv_i_i_i23841878_lcssa2026_i_fu_410  |  16|   0|   16|          0|
+    |conv_i_i_i23841881_lcssa2028_i_fu_414  |  16|   0|   16|          0|
+    |conv_i_i_i23841884_lcssa2030_i_fu_418  |  16|   0|   16|          0|
+    |i_fu_226                               |   4|   0|    4|          0|
+    |p_0_0_033121791_lcssa1968_i_fu_294     |  16|   0|   16|          0|
+    |p_0_0_033121794_lcssa1970_i_fu_298     |  16|   0|   16|          0|
+    |p_0_0_033121797_lcssa1972_i_fu_302     |  16|   0|   16|          0|
+    |p_0_0_033121800_lcssa1974_i_fu_306     |  16|   0|   16|          0|
+    |p_0_0_033121803_lcssa1976_i_fu_310     |  16|   0|   16|          0|
+    |p_0_0_033121806_lcssa1978_i_fu_314     |  16|   0|   16|          0|
+    |p_0_0_033121809_lcssa1980_i_fu_318     |  16|   0|   16|          0|
+    |p_0_0_033121812_lcssa1982_i_fu_322     |  16|   0|   16|          0|
+    |p_0_0_033121816_lcssa1984_i_fu_326     |  16|   0|   16|          0|
+    |p_0_0_033121819_lcssa1986_i_fu_330     |  16|   0|   16|          0|
+    |p_0_0_033121822_lcssa1988_i_fu_334     |  16|   0|   16|          0|
+    |p_0_0_033121825_lcssa1990_i_fu_338     |  16|   0|   16|          0|
+    |p_0_0_033121827_lcssa1992_i_fu_342     |  16|   0|   16|          0|
+    |p_0_0_033121830_lcssa1994_i_fu_346     |  16|   0|   16|          0|
+    |p_0_0_033121833_lcssa1996_i_fu_350     |  16|   0|   16|          0|
+    |p_0_0_033121836_lcssa1998_i_fu_354     |  16|   0|   16|          0|
+    |p_0_0_033131743_lcssa1936_i_fu_230     |  16|   0|   16|          0|
+    |p_0_0_033131746_lcssa1938_i_fu_234     |  16|   0|   16|          0|
+    |p_0_0_033131749_lcssa1940_i_fu_238     |  16|   0|   16|          0|
+    |p_0_0_033131752_lcssa1942_i_fu_242     |  16|   0|   16|          0|
+    |p_0_0_033131755_lcssa1944_i_fu_246     |  16|   0|   16|          0|
+    |p_0_0_033131758_lcssa1946_i_fu_250     |  16|   0|   16|          0|
+    |p_0_0_033131761_lcssa1948_i_fu_254     |  16|   0|   16|          0|
+    |p_0_0_033131764_lcssa1950_i_fu_258     |  16|   0|   16|          0|
+    |p_0_0_033131768_lcssa1952_i_fu_262     |  16|   0|   16|          0|
+    |p_0_0_033131771_lcssa1954_i_fu_266     |  16|   0|   16|          0|
+    |p_0_0_033131774_lcssa1956_i_fu_270     |  16|   0|   16|          0|
+    |p_0_0_033131777_lcssa1958_i_fu_274     |  16|   0|   16|          0|
+    |p_0_0_033131779_lcssa1960_i_fu_278     |  16|   0|   16|          0|
+    |p_0_0_033131782_lcssa1962_i_fu_282     |  16|   0|   16|          0|
+    |p_0_0_033131785_lcssa1964_i_fu_286     |  16|   0|   16|          0|
+    |p_0_0_033131788_lcssa1966_i_fu_290     |  16|   0|   16|          0|
+    |p_0_0_033131887_lcssa2032_i_fu_422     |  16|   0|   16|          0|
+    |p_0_0_033131890_lcssa2034_i_fu_426     |  16|   0|   16|          0|
+    |p_0_0_033131893_lcssa2036_i_fu_430     |  16|   0|   16|          0|
+    |p_0_0_033131896_lcssa2038_i_fu_434     |  16|   0|   16|          0|
+    |p_0_0_033131899_lcssa2040_i_fu_438     |  16|   0|   16|          0|
+    |p_0_0_033131902_lcssa2042_i_fu_442     |  16|   0|   16|          0|
+    |p_0_0_033131905_lcssa2044_i_fu_446     |  16|   0|   16|          0|
+    |p_0_0_033131908_lcssa2046_i_fu_450     |  16|   0|   16|          0|
+    |p_0_0_033131912_lcssa2048_i_fu_454     |  16|   0|   16|          0|
+    |p_0_0_033131915_lcssa2050_i_fu_458     |  16|   0|   16|          0|
+    |p_0_0_033131918_lcssa2052_i_fu_462     |  16|   0|   16|          0|
+    |p_0_0_033131921_lcssa2054_i_fu_466     |  16|   0|   16|          0|
+    |p_0_0_033131923_lcssa2056_i_fu_470     |  16|   0|   16|          0|
+    |p_0_0_033131926_lcssa2058_i_fu_474     |  16|   0|   16|          0|
+    |p_0_0_033131929_lcssa2060_i_fu_478     |  16|   0|   16|          0|
+    |p_0_0_033131932_lcssa2062_i_fu_482     |  16|   0|   16|          0|
+    +---------------------------------------+----+----+-----+-----------+
+    |Total                                  |1030|   0| 1030|          0|
+    +---------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------------------+-----+-----+------------+------------------------------------+--------------+
+|                 RTL Ports                 | Dir | Bits|  Protocol  |            Source Object           |    C Type    |
++-------------------------------------------+-----+-----+------------+------------------------------------+--------------+
+|ap_clk                                     |   in|    1|  ap_ctrl_hs|                QRD_Pipeline_LOOP_01|  return value|
+|ap_rst                                     |   in|    1|  ap_ctrl_hs|                QRD_Pipeline_LOOP_01|  return value|
+|ap_start                                   |   in|    1|  ap_ctrl_hs|                QRD_Pipeline_LOOP_01|  return value|
+|ap_done                                    |  out|    1|  ap_ctrl_hs|                QRD_Pipeline_LOOP_01|  return value|
+|ap_idle                                    |  out|    1|  ap_ctrl_hs|                QRD_Pipeline_LOOP_01|  return value|
+|ap_ready                                   |  out|    1|  ap_ctrl_hs|                QRD_Pipeline_LOOP_01|  return value|
+|HH_V_46                                    |   in|   16|     ap_none|                             HH_V_46|        scalar|
+|HH_V_47                                    |   in|   16|     ap_none|                             HH_V_47|        scalar|
+|HH_V_81                                    |   in|   16|     ap_none|                             HH_V_81|        scalar|
+|HH_V_83                                    |   in|   16|     ap_none|                             HH_V_83|        scalar|
+|empty_105                                  |   in|   16|     ap_none|                           empty_105|        scalar|
+|HH_V_94                                    |   in|   16|     ap_none|                             HH_V_94|        scalar|
+|HH_V_95                                    |   in|   16|     ap_none|                             HH_V_95|        scalar|
+|HH_V_97                                    |   in|   16|     ap_none|                             HH_V_97|        scalar|
+|HH_V_102                                   |   in|   16|     ap_none|                            HH_V_102|        scalar|
+|HH_V_103                                   |   in|   16|     ap_none|                            HH_V_103|        scalar|
+|empty_106                                  |   in|   16|     ap_none|                           empty_106|        scalar|
+|HH_V_105                                   |   in|   16|     ap_none|                            HH_V_105|        scalar|
+|empty_107                                  |   in|   16|     ap_none|                           empty_107|        scalar|
+|HH_V_85                                    |   in|   16|     ap_none|                             HH_V_85|        scalar|
+|HH_V_87                                    |   in|   16|     ap_none|                             HH_V_87|        scalar|
+|HH_V_89                                    |   in|   16|     ap_none|                             HH_V_89|        scalar|
+|empty_108                                  |   in|   16|     ap_none|                           empty_108|        scalar|
+|empty_109                                  |   in|   16|     ap_none|                           empty_109|        scalar|
+|HH_V_99                                    |   in|   16|     ap_none|                             HH_V_99|        scalar|
+|HH_V_101                                   |   in|   16|     ap_none|                            HH_V_101|        scalar|
+|empty_110                                  |   in|   16|     ap_none|                           empty_110|        scalar|
+|empty_111                                  |   in|   16|     ap_none|                           empty_111|        scalar|
+|empty_112                                  |   in|   16|     ap_none|                           empty_112|        scalar|
+|HH_V_104                                   |   in|   16|     ap_none|                            HH_V_104|        scalar|
+|empty_113                                  |   in|   16|     ap_none|                           empty_113|        scalar|
+|empty_114                                  |   in|   16|     ap_none|                           empty_114|        scalar|
+|empty                                      |   in|   16|     ap_none|                               empty|        scalar|
+|p_0_0_033131932_lcssa2062_i_out            |  out|   16|      ap_vld|     p_0_0_033131932_lcssa2062_i_out|       pointer|
+|p_0_0_033131932_lcssa2062_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131932_lcssa2062_i_out|       pointer|
+|p_0_0_033131929_lcssa2060_i_out            |  out|   16|      ap_vld|     p_0_0_033131929_lcssa2060_i_out|       pointer|
+|p_0_0_033131929_lcssa2060_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131929_lcssa2060_i_out|       pointer|
+|p_0_0_033131926_lcssa2058_i_out            |  out|   16|      ap_vld|     p_0_0_033131926_lcssa2058_i_out|       pointer|
+|p_0_0_033131926_lcssa2058_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131926_lcssa2058_i_out|       pointer|
+|p_0_0_033131923_lcssa2056_i_out            |  out|   16|      ap_vld|     p_0_0_033131923_lcssa2056_i_out|       pointer|
+|p_0_0_033131923_lcssa2056_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131923_lcssa2056_i_out|       pointer|
+|p_0_0_033131921_lcssa2054_i_out            |  out|   16|      ap_vld|     p_0_0_033131921_lcssa2054_i_out|       pointer|
+|p_0_0_033131921_lcssa2054_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131921_lcssa2054_i_out|       pointer|
+|p_0_0_033131918_lcssa2052_i_out            |  out|   16|      ap_vld|     p_0_0_033131918_lcssa2052_i_out|       pointer|
+|p_0_0_033131918_lcssa2052_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131918_lcssa2052_i_out|       pointer|
+|p_0_0_033131915_lcssa2050_i_out            |  out|   16|      ap_vld|     p_0_0_033131915_lcssa2050_i_out|       pointer|
+|p_0_0_033131915_lcssa2050_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131915_lcssa2050_i_out|       pointer|
+|p_0_0_033131912_lcssa2048_i_out            |  out|   16|      ap_vld|     p_0_0_033131912_lcssa2048_i_out|       pointer|
+|p_0_0_033131912_lcssa2048_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131912_lcssa2048_i_out|       pointer|
+|p_0_0_033131908_lcssa2046_i_out            |  out|   16|      ap_vld|     p_0_0_033131908_lcssa2046_i_out|       pointer|
+|p_0_0_033131908_lcssa2046_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131908_lcssa2046_i_out|       pointer|
+|p_0_0_033131905_lcssa2044_i_out            |  out|   16|      ap_vld|     p_0_0_033131905_lcssa2044_i_out|       pointer|
+|p_0_0_033131905_lcssa2044_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131905_lcssa2044_i_out|       pointer|
+|p_0_0_033131902_lcssa2042_i_out            |  out|   16|      ap_vld|     p_0_0_033131902_lcssa2042_i_out|       pointer|
+|p_0_0_033131902_lcssa2042_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131902_lcssa2042_i_out|       pointer|
+|p_0_0_033131899_lcssa2040_i_out            |  out|   16|      ap_vld|     p_0_0_033131899_lcssa2040_i_out|       pointer|
+|p_0_0_033131899_lcssa2040_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131899_lcssa2040_i_out|       pointer|
+|p_0_0_033131896_lcssa2038_i_out            |  out|   16|      ap_vld|     p_0_0_033131896_lcssa2038_i_out|       pointer|
+|p_0_0_033131896_lcssa2038_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131896_lcssa2038_i_out|       pointer|
+|p_0_0_033131893_lcssa2036_i_out            |  out|   16|      ap_vld|     p_0_0_033131893_lcssa2036_i_out|       pointer|
+|p_0_0_033131893_lcssa2036_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131893_lcssa2036_i_out|       pointer|
+|p_0_0_033131890_lcssa2034_i_out            |  out|   16|      ap_vld|     p_0_0_033131890_lcssa2034_i_out|       pointer|
+|p_0_0_033131890_lcssa2034_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131890_lcssa2034_i_out|       pointer|
+|p_0_0_033131887_lcssa2032_i_out            |  out|   16|      ap_vld|     p_0_0_033131887_lcssa2032_i_out|       pointer|
+|p_0_0_033131887_lcssa2032_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131887_lcssa2032_i_out|       pointer|
+|conv_i_i_i23841884_lcssa2030_i_out         |  out|   16|      ap_vld|  conv_i_i_i23841884_lcssa2030_i_out|       pointer|
+|conv_i_i_i23841884_lcssa2030_i_out_ap_vld  |  out|    1|      ap_vld|  conv_i_i_i23841884_lcssa2030_i_out|       pointer|
+|conv_i_i_i23841881_lcssa2028_i_out         |  out|   16|      ap_vld|  conv_i_i_i23841881_lcssa2028_i_out|       pointer|
+|conv_i_i_i23841881_lcssa2028_i_out_ap_vld  |  out|    1|      ap_vld|  conv_i_i_i23841881_lcssa2028_i_out|       pointer|
+|conv_i_i_i23841878_lcssa2026_i_out         |  out|   16|      ap_vld|  conv_i_i_i23841878_lcssa2026_i_out|       pointer|
+|conv_i_i_i23841878_lcssa2026_i_out_ap_vld  |  out|    1|      ap_vld|  conv_i_i_i23841878_lcssa2026_i_out|       pointer|
+|conv_i_i_i23841875_lcssa2024_i_out         |  out|   16|      ap_vld|  conv_i_i_i23841875_lcssa2024_i_out|       pointer|
+|conv_i_i_i23841875_lcssa2024_i_out_ap_vld  |  out|    1|      ap_vld|  conv_i_i_i23841875_lcssa2024_i_out|       pointer|
+|conv_i_i_i23841873_lcssa2022_i_out         |  out|   16|      ap_vld|  conv_i_i_i23841873_lcssa2022_i_out|       pointer|
+|conv_i_i_i23841873_lcssa2022_i_out_ap_vld  |  out|    1|      ap_vld|  conv_i_i_i23841873_lcssa2022_i_out|       pointer|
+|conv_i_i_i23841870_lcssa2020_i_out         |  out|   16|      ap_vld|  conv_i_i_i23841870_lcssa2020_i_out|       pointer|
+|conv_i_i_i23841870_lcssa2020_i_out_ap_vld  |  out|    1|      ap_vld|  conv_i_i_i23841870_lcssa2020_i_out|       pointer|
+|conv_i_i_i23841867_lcssa2018_i_out         |  out|   16|      ap_vld|  conv_i_i_i23841867_lcssa2018_i_out|       pointer|
+|conv_i_i_i23841867_lcssa2018_i_out_ap_vld  |  out|    1|      ap_vld|  conv_i_i_i23841867_lcssa2018_i_out|       pointer|
+|conv_i_i_i23841864_lcssa2016_i_out         |  out|   16|      ap_vld|  conv_i_i_i23841864_lcssa2016_i_out|       pointer|
+|conv_i_i_i23841864_lcssa2016_i_out_ap_vld  |  out|    1|      ap_vld|  conv_i_i_i23841864_lcssa2016_i_out|       pointer|
+|conv_i_i_i23841860_lcssa2014_i_out         |  out|   16|      ap_vld|  conv_i_i_i23841860_lcssa2014_i_out|       pointer|
+|conv_i_i_i23841860_lcssa2014_i_out_ap_vld  |  out|    1|      ap_vld|  conv_i_i_i23841860_lcssa2014_i_out|       pointer|
+|conv_i_i_i23841857_lcssa2012_i_out         |  out|   16|      ap_vld|  conv_i_i_i23841857_lcssa2012_i_out|       pointer|
+|conv_i_i_i23841857_lcssa2012_i_out_ap_vld  |  out|    1|      ap_vld|  conv_i_i_i23841857_lcssa2012_i_out|       pointer|
+|conv_i_i_i23841854_lcssa2010_i_out         |  out|   16|      ap_vld|  conv_i_i_i23841854_lcssa2010_i_out|       pointer|
+|conv_i_i_i23841854_lcssa2010_i_out_ap_vld  |  out|    1|      ap_vld|  conv_i_i_i23841854_lcssa2010_i_out|       pointer|
+|conv_i_i_i23841851_lcssa2008_i_out         |  out|   16|      ap_vld|  conv_i_i_i23841851_lcssa2008_i_out|       pointer|
+|conv_i_i_i23841851_lcssa2008_i_out_ap_vld  |  out|    1|      ap_vld|  conv_i_i_i23841851_lcssa2008_i_out|       pointer|
+|conv_i_i_i23841848_lcssa2006_i_out         |  out|   16|      ap_vld|  conv_i_i_i23841848_lcssa2006_i_out|       pointer|
+|conv_i_i_i23841848_lcssa2006_i_out_ap_vld  |  out|    1|      ap_vld|  conv_i_i_i23841848_lcssa2006_i_out|       pointer|
+|conv_i_i_i23841845_lcssa2004_i_out         |  out|   16|      ap_vld|  conv_i_i_i23841845_lcssa2004_i_out|       pointer|
+|conv_i_i_i23841845_lcssa2004_i_out_ap_vld  |  out|    1|      ap_vld|  conv_i_i_i23841845_lcssa2004_i_out|       pointer|
+|conv_i_i_i23841842_lcssa2002_i_out         |  out|   16|      ap_vld|  conv_i_i_i23841842_lcssa2002_i_out|       pointer|
+|conv_i_i_i23841842_lcssa2002_i_out_ap_vld  |  out|    1|      ap_vld|  conv_i_i_i23841842_lcssa2002_i_out|       pointer|
+|conv_i_i_i23841839_lcssa2000_i_out         |  out|   16|      ap_vld|  conv_i_i_i23841839_lcssa2000_i_out|       pointer|
+|conv_i_i_i23841839_lcssa2000_i_out_ap_vld  |  out|    1|      ap_vld|  conv_i_i_i23841839_lcssa2000_i_out|       pointer|
+|p_0_0_033121836_lcssa1998_i_out            |  out|   16|      ap_vld|     p_0_0_033121836_lcssa1998_i_out|       pointer|
+|p_0_0_033121836_lcssa1998_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033121836_lcssa1998_i_out|       pointer|
+|p_0_0_033121833_lcssa1996_i_out            |  out|   16|      ap_vld|     p_0_0_033121833_lcssa1996_i_out|       pointer|
+|p_0_0_033121833_lcssa1996_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033121833_lcssa1996_i_out|       pointer|
+|p_0_0_033121830_lcssa1994_i_out            |  out|   16|      ap_vld|     p_0_0_033121830_lcssa1994_i_out|       pointer|
+|p_0_0_033121830_lcssa1994_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033121830_lcssa1994_i_out|       pointer|
+|p_0_0_033121827_lcssa1992_i_out            |  out|   16|      ap_vld|     p_0_0_033121827_lcssa1992_i_out|       pointer|
+|p_0_0_033121827_lcssa1992_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033121827_lcssa1992_i_out|       pointer|
+|p_0_0_033121825_lcssa1990_i_out            |  out|   16|      ap_vld|     p_0_0_033121825_lcssa1990_i_out|       pointer|
+|p_0_0_033121825_lcssa1990_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033121825_lcssa1990_i_out|       pointer|
+|p_0_0_033121822_lcssa1988_i_out            |  out|   16|      ap_vld|     p_0_0_033121822_lcssa1988_i_out|       pointer|
+|p_0_0_033121822_lcssa1988_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033121822_lcssa1988_i_out|       pointer|
+|p_0_0_033121819_lcssa1986_i_out            |  out|   16|      ap_vld|     p_0_0_033121819_lcssa1986_i_out|       pointer|
+|p_0_0_033121819_lcssa1986_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033121819_lcssa1986_i_out|       pointer|
+|p_0_0_033121816_lcssa1984_i_out            |  out|   16|      ap_vld|     p_0_0_033121816_lcssa1984_i_out|       pointer|
+|p_0_0_033121816_lcssa1984_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033121816_lcssa1984_i_out|       pointer|
+|p_0_0_033121812_lcssa1982_i_out            |  out|   16|      ap_vld|     p_0_0_033121812_lcssa1982_i_out|       pointer|
+|p_0_0_033121812_lcssa1982_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033121812_lcssa1982_i_out|       pointer|
+|p_0_0_033121809_lcssa1980_i_out            |  out|   16|      ap_vld|     p_0_0_033121809_lcssa1980_i_out|       pointer|
+|p_0_0_033121809_lcssa1980_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033121809_lcssa1980_i_out|       pointer|
+|p_0_0_033121806_lcssa1978_i_out            |  out|   16|      ap_vld|     p_0_0_033121806_lcssa1978_i_out|       pointer|
+|p_0_0_033121806_lcssa1978_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033121806_lcssa1978_i_out|       pointer|
+|p_0_0_033121803_lcssa1976_i_out            |  out|   16|      ap_vld|     p_0_0_033121803_lcssa1976_i_out|       pointer|
+|p_0_0_033121803_lcssa1976_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033121803_lcssa1976_i_out|       pointer|
+|p_0_0_033121800_lcssa1974_i_out            |  out|   16|      ap_vld|     p_0_0_033121800_lcssa1974_i_out|       pointer|
+|p_0_0_033121800_lcssa1974_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033121800_lcssa1974_i_out|       pointer|
+|p_0_0_033121797_lcssa1972_i_out            |  out|   16|      ap_vld|     p_0_0_033121797_lcssa1972_i_out|       pointer|
+|p_0_0_033121797_lcssa1972_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033121797_lcssa1972_i_out|       pointer|
+|p_0_0_033121794_lcssa1970_i_out            |  out|   16|      ap_vld|     p_0_0_033121794_lcssa1970_i_out|       pointer|
+|p_0_0_033121794_lcssa1970_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033121794_lcssa1970_i_out|       pointer|
+|p_0_0_033121791_lcssa1968_i_out            |  out|   16|      ap_vld|     p_0_0_033121791_lcssa1968_i_out|       pointer|
+|p_0_0_033121791_lcssa1968_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033121791_lcssa1968_i_out|       pointer|
+|p_0_0_033131788_lcssa1966_i_out            |  out|   16|      ap_vld|     p_0_0_033131788_lcssa1966_i_out|       pointer|
+|p_0_0_033131788_lcssa1966_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131788_lcssa1966_i_out|       pointer|
+|p_0_0_033131785_lcssa1964_i_out            |  out|   16|      ap_vld|     p_0_0_033131785_lcssa1964_i_out|       pointer|
+|p_0_0_033131785_lcssa1964_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131785_lcssa1964_i_out|       pointer|
+|p_0_0_033131782_lcssa1962_i_out            |  out|   16|      ap_vld|     p_0_0_033131782_lcssa1962_i_out|       pointer|
+|p_0_0_033131782_lcssa1962_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131782_lcssa1962_i_out|       pointer|
+|p_0_0_033131779_lcssa1960_i_out            |  out|   16|      ap_vld|     p_0_0_033131779_lcssa1960_i_out|       pointer|
+|p_0_0_033131779_lcssa1960_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131779_lcssa1960_i_out|       pointer|
+|p_0_0_033131777_lcssa1958_i_out            |  out|   16|      ap_vld|     p_0_0_033131777_lcssa1958_i_out|       pointer|
+|p_0_0_033131777_lcssa1958_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131777_lcssa1958_i_out|       pointer|
+|p_0_0_033131774_lcssa1956_i_out            |  out|   16|      ap_vld|     p_0_0_033131774_lcssa1956_i_out|       pointer|
+|p_0_0_033131774_lcssa1956_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131774_lcssa1956_i_out|       pointer|
+|p_0_0_033131771_lcssa1954_i_out            |  out|   16|      ap_vld|     p_0_0_033131771_lcssa1954_i_out|       pointer|
+|p_0_0_033131771_lcssa1954_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131771_lcssa1954_i_out|       pointer|
+|p_0_0_033131768_lcssa1952_i_out            |  out|   16|      ap_vld|     p_0_0_033131768_lcssa1952_i_out|       pointer|
+|p_0_0_033131768_lcssa1952_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131768_lcssa1952_i_out|       pointer|
+|p_0_0_033131764_lcssa1950_i_out            |  out|   16|      ap_vld|     p_0_0_033131764_lcssa1950_i_out|       pointer|
+|p_0_0_033131764_lcssa1950_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131764_lcssa1950_i_out|       pointer|
+|p_0_0_033131761_lcssa1948_i_out            |  out|   16|      ap_vld|     p_0_0_033131761_lcssa1948_i_out|       pointer|
+|p_0_0_033131761_lcssa1948_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131761_lcssa1948_i_out|       pointer|
+|p_0_0_033131758_lcssa1946_i_out            |  out|   16|      ap_vld|     p_0_0_033131758_lcssa1946_i_out|       pointer|
+|p_0_0_033131758_lcssa1946_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131758_lcssa1946_i_out|       pointer|
+|p_0_0_033131755_lcssa1944_i_out            |  out|   16|      ap_vld|     p_0_0_033131755_lcssa1944_i_out|       pointer|
+|p_0_0_033131755_lcssa1944_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131755_lcssa1944_i_out|       pointer|
+|p_0_0_033131752_lcssa1942_i_out            |  out|   16|      ap_vld|     p_0_0_033131752_lcssa1942_i_out|       pointer|
+|p_0_0_033131752_lcssa1942_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131752_lcssa1942_i_out|       pointer|
+|p_0_0_033131749_lcssa1940_i_out            |  out|   16|      ap_vld|     p_0_0_033131749_lcssa1940_i_out|       pointer|
+|p_0_0_033131749_lcssa1940_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131749_lcssa1940_i_out|       pointer|
+|p_0_0_033131746_lcssa1938_i_out            |  out|   16|      ap_vld|     p_0_0_033131746_lcssa1938_i_out|       pointer|
+|p_0_0_033131746_lcssa1938_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131746_lcssa1938_i_out|       pointer|
+|p_0_0_033131743_lcssa1936_i_out            |  out|   16|      ap_vld|     p_0_0_033131743_lcssa1936_i_out|       pointer|
+|p_0_0_033131743_lcssa1936_i_out_ap_vld     |  out|    1|      ap_vld|     p_0_0_033131743_lcssa1936_i_out|       pointer|
++-------------------------------------------+-----+-----+------------+------------------------------------+--------------+
+

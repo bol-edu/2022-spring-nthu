@@ -1,0 +1,90 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.007 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] Analyzing design file 'stream8rto8.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.167 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>::write(hls::axis<ap_uint<8>, 0ul, 0ul, 0ul> const&)' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_axi_sdata.h:304:51)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>::write(hls::axis<ap_uint<8>, 0ul, 0ul, 0ul> const&)' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_axi_sdata.h:307:26)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>::write(hls::axis<ap_uint<8>, 0ul, 0ul, 0ul> const&)' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_axi_sdata.h:306:68)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>::write(hls::axis<ap_uint<8>, 0ul, 0ul, 0ul> const&)' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_axi_sdata.h:306:37)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>::write(hls::axis<ap_uint<8>, 0ul, 0ul, 0ul> const&)' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_axi_sdata.h:305:40)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>::write(hls::axis<ap_uint<8>, 0ul, 0ul, 0ul> const&)' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_axi_sdata.h:305:24)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>::write(hls::axis<ap_uint<8>, 0ul, 0ul, 0ul> const&)' into 'stream8rto8(hls::stream<unsigned char, 0>*, hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>*, int&, int&)' (stream8rto8.cpp:19:10)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i16.sl_i1i8s' into 'stream8rto8(hls::stream<unsigned char, 0>*, hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>*, int&, int&)' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h:163:13)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i1.s_struct.ap_uint<1>s' into 'stream8rto8(hls::stream<unsigned char, 0>*, hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>*, int&, int&)' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i8.s_struct.ap_uint<8>s' into 'stream8rto8(hls::stream<unsigned char, 0>*, hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>*, int&, int&)' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_axi_sdata.h:304:5)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.901 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.022 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.045 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.062 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.034 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'stream8rto8' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stream8rto8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.073 seconds; current allocated memory: 1.255 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.017 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stream8rto8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream8rto8/pin8' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream8rto8/pout8_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream8rto8/pout8_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream8rto8/pout8_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream8rto8/pout8_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream8rto8/recv' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream8rto8/send' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'stream8rto8' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'recv_reg' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'send_reg' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'recv', 'send' and 'ap_local_deadlock' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stream8rto8'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.034 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.266 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.284 seconds; current allocated memory: 1.255 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for stream8rto8.
+INFO: [VLOG 209-307] Generating Verilog RTL for stream8rto8.
+INFO: [HLS 200-789] **** Estimated Fmax: 281.53 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 6.925 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 1 seconds. Total elapsed time: 9.032 seconds; peak allocated memory: 1.255 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -version=2.0.1
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -version 2.0.1 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file stream8rto8/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 8.067 seconds; current allocated memory: 3.273 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 9.808 seconds; peak allocated memory: 1.258 GB.

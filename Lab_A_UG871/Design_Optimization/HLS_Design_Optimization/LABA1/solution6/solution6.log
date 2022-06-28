@@ -1,0 +1,94 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_directive_top -name matrixmul matrixmul 
+INFO: [HLS 200-1510] Running: set_directive_array_reshape -type complete -dim 2 matrixmul a 
+INFO: [HLS 200-1510] Running: set_directive_array_reshape -type complete -dim 1 matrixmul b 
+INFO: [HLS 200-1510] Running: set_directive_pipeline matrixmul 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.018 seconds; current allocated memory: 1.236 GB.
+INFO: [HLS 200-10] Analyzing design file 'matrixmul.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.484 seconds; current allocated memory: 1.236 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-291] Loop 'Row' is marked as complete unroll implied by the pipeline pragma (matrixmul.cpp:54:9)
+INFO: [HLS 214-291] Loop 'Col' is marked as complete unroll implied by the pipeline pragma (matrixmul.cpp:56:12)
+INFO: [HLS 214-291] Loop 'Product' is marked as complete unroll implied by the pipeline pragma (matrixmul.cpp:59:19)
+INFO: [HLS 214-186] Unrolling loop 'Row' (matrixmul.cpp:54:9) in function 'matrixmul' completely with a factor of 3 (matrixmul.cpp:52:0)
+INFO: [HLS 214-186] Unrolling loop 'Col' (matrixmul.cpp:56:12) in function 'matrixmul' completely with a factor of 3 (matrixmul.cpp:52:0)
+INFO: [HLS 214-186] Unrolling loop 'Product' (matrixmul.cpp:59:19) in function 'matrixmul' completely with a factor of 3 (matrixmul.cpp:52:0)
+INFO: [HLS 214-248] Applying array_reshape to 'a': Complete reshaping on dimension 2. (matrixmul.cpp:52:0)
+INFO: [HLS 214-248] Applying array_reshape to 'b': Complete reshaping on dimension 1. (matrixmul.cpp:52:0)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 4.266 seconds; current allocated memory: 1.236 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 1.236 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.022 seconds; current allocated memory: 1.236 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.236 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.079 seconds; current allocated memory: 1.236 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.025 seconds; current allocated memory: 1.236 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrixmul' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrixmul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln60_25) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln60_26) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln60_22) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln60_23) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln60_19) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln60_20) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln60_16) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln60_17) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln60_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln60_14) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln60_10) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln60_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln60_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln60_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln60_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln60_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln60_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln60_2) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining function 'matrixmul'.
+WARNING: [HLS 200-885] The II Violation in module 'matrixmul' (function 'matrixmul'): Unable to schedule 'load' operation ('b_load_1', matrixmul.cpp:60) on array 'b' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'b'.
+WARNING: [HLS 200-885] The II Violation in module 'matrixmul' (function 'matrixmul'): Unable to schedule 'store' operation ('res_addr_3_write_ln60', matrixmul.cpp:60) of variable 'add_ln60_7', matrixmul.cpp:60 on array 'res' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'res'.
+WARNING: [HLS 200-885] The II Violation in module 'matrixmul' (function 'matrixmul'): Unable to schedule 'store' operation ('res_addr_5_write_ln60', matrixmul.cpp:60) of variable 'add_ln60_11', matrixmul.cpp:60 on array 'res' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'res'.
+WARNING: [HLS 200-885] The II Violation in module 'matrixmul' (function 'matrixmul'): Unable to schedule 'store' operation ('res_addr_7_write_ln60', matrixmul.cpp:60) of variable 'add_ln60_15', matrixmul.cpp:60 on array 'res' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'res'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 11, function 'matrixmul'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.415 seconds; current allocated memory: 1.236 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.153 seconds; current allocated memory: 1.236 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrixmul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul/a' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul/b' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixmul/res' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrixmul' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matrixmul' pipeline 'matrixmul' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_8s_16ns_16_4_1': 9 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_8s_16s_16_4_1': 9 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8s_8s_16_1_1': 9 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrixmul'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.212 seconds; current allocated memory: 1.236 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.886 seconds; current allocated memory: 1.236 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.478 seconds; current allocated memory: 1.236 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrixmul.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrixmul.
+INFO: [HLS 200-789] **** Estimated Fmax: 154.04 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 8.107 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 2 seconds. Total elapsed time: 10.921 seconds; peak allocated memory: 1.236 GB.

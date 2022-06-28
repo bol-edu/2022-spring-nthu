@@ -1,0 +1,160 @@
+
+
+================================================================
+== Vitis HLS Report for 'channel_mult'
+================================================================
+* Date:           Fri Jun 17 13:16:09 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        MIMO
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  40.00 ns|  2.691 ns|    10.80 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      163|      163|  6.520 us|  6.520 us|  163|  163|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------------+---------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                  |                                       |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                     Instance                     |                 Module                |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +--------------------------------------------------+---------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_channel_mult_Pipeline_CHANNEL2REAL_fu_282     |channel_mult_Pipeline_CHANNEL2REAL     |       18|       18|  0.720 us|  0.720 us|   18|   18|       no|
+        |grp_channel_mult_Pipeline_VITIS_LOOP_63_1_fu_354  |channel_mult_Pipeline_VITIS_LOOP_63_1  |      141|      141|  5.640 us|  5.640 us|  141|  141|       no|
+        +--------------------------------------------------+---------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|       2|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|    64|    2902|     327|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      85|    -|
+|Register         |        -|     -|       8|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|    64|    2910|     414|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1824|  2520|  548160|  274080|    0|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     2|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------------+---------------------------------------+---------+----+------+-----+-----+
+    |                     Instance                     |                 Module                | BRAM_18K| DSP|  FF  | LUT | URAM|
+    +--------------------------------------------------+---------------------------------------+---------+----+------+-----+-----+
+    |grp_channel_mult_Pipeline_CHANNEL2REAL_fu_282     |channel_mult_Pipeline_CHANNEL2REAL     |        0|   0|  1042|  105|    0|
+    |grp_channel_mult_Pipeline_VITIS_LOOP_63_1_fu_354  |channel_mult_Pipeline_VITIS_LOOP_63_1  |        0|  64|  1860|  222|    0|
+    +--------------------------------------------------+---------------------------------------+---------+----+------+-----+-----+
+    |Total                                             |                                       |        0|  64|  2902|  327|    0|
+    +--------------------------------------------------+---------------------------------------+---------+----+------+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------+----+-----------+-----+-----------+
+    |        Name       | LUT| Input Size| Bits| Total Bits|
+    +-------------------+----+-----------+-----+-----------+
+    |H_imag_spl0_read   |   9|          2|    1|          2|
+    |H_real_spl0_read   |   9|          2|    1|          2|
+    |ap_NS_fsm          |  31|          6|    1|          6|
+    |ap_done            |   9|          2|    1|          2|
+    |channel_out_write  |   9|          2|    1|          2|
+    |xi_read            |   9|          2|    1|          2|
+    |xr_read            |   9|          2|    1|          2|
+    +-------------------+----+-----------+-----+-----------+
+    |Total              |  85|         18|    7|         18|
+    +-------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------------------+---+----+-----+-----------+
+    |                              Name                             | FF| LUT| Bits| Const Bits|
+    +---------------------------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                                      |  5|   0|    5|          0|
+    |ap_done_reg                                                    |  1|   0|    1|          0|
+    |grp_channel_mult_Pipeline_CHANNEL2REAL_fu_282_ap_start_reg     |  1|   0|    1|          0|
+    |grp_channel_mult_Pipeline_VITIS_LOOP_63_1_fu_354_ap_start_reg  |  1|   0|    1|          0|
+    +---------------------------------------------------------------+---+----+-----+-----------+
+    |Total                                                          |  8|   0|    8|          0|
+    +---------------------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-----+------------+--------------+--------------+
+|      RTL Ports      | Dir | Bits|  Protocol  | Source Object|    C Type    |
++---------------------+-----+-----+------------+--------------+--------------+
+|ap_clk               |   in|    1|  ap_ctrl_hs|  channel_mult|  return value|
+|ap_rst               |   in|    1|  ap_ctrl_hs|  channel_mult|  return value|
+|ap_start             |   in|    1|  ap_ctrl_hs|  channel_mult|  return value|
+|ap_done              |  out|    1|  ap_ctrl_hs|  channel_mult|  return value|
+|ap_continue          |   in|    1|  ap_ctrl_hs|  channel_mult|  return value|
+|ap_idle              |  out|    1|  ap_ctrl_hs|  channel_mult|  return value|
+|ap_ready             |  out|    1|  ap_ctrl_hs|  channel_mult|  return value|
+|H_real_spl0_dout     |   in|   16|     ap_fifo|   H_real_spl0|       pointer|
+|H_real_spl0_empty_n  |   in|    1|     ap_fifo|   H_real_spl0|       pointer|
+|H_real_spl0_read     |  out|    1|     ap_fifo|   H_real_spl0|       pointer|
+|H_imag_spl0_dout     |   in|   16|     ap_fifo|   H_imag_spl0|       pointer|
+|H_imag_spl0_empty_n  |   in|    1|     ap_fifo|   H_imag_spl0|       pointer|
+|H_imag_spl0_read     |  out|    1|     ap_fifo|   H_imag_spl0|       pointer|
+|xr_dout              |   in|   16|     ap_fifo|            xr|       pointer|
+|xr_empty_n           |   in|    1|     ap_fifo|            xr|       pointer|
+|xr_read              |  out|    1|     ap_fifo|            xr|       pointer|
+|xi_dout              |   in|   16|     ap_fifo|            xi|       pointer|
+|xi_empty_n           |   in|    1|     ap_fifo|            xi|       pointer|
+|xi_read              |  out|    1|     ap_fifo|            xi|       pointer|
+|channel_out_din      |  out|   16|     ap_fifo|   channel_out|       pointer|
+|channel_out_full_n   |   in|    1|     ap_fifo|   channel_out|       pointer|
+|channel_out_write    |  out|    1|     ap_fifo|   channel_out|       pointer|
++---------------------+-----+-----+------------+--------------+--------------+
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+  <sourceFile>
+    <directive functionName="axi_interfaces" label="" functionLabel="">
+      <pragma name="ARRAY_PARTITION">
+        <option name="variable" value="d_o" positionalBoolean="4"/>
+        <option name="cyclic" value="" positionalBoolean="type"/>
+        <option name="factor" value="8"/>
+        <option name="dim" value="1"/>
+      </pragma>
+    </directive>
+    <directive functionName="axi_interfaces" label="" functionLabel="">
+      <pragma name="INTERFACE">
+        <option name="axis" value="" positionalBoolean="mode"/>
+        <option name="register" value="" positionalBoolean="1"/>
+        <option name="port" value="d_o" positionalBoolean="4"/>
+      </pragma>
+    </directive>
+    <directive functionName="axi_interfaces" label="" functionLabel="">
+      <pragma name="ARRAY_PARTITION">
+        <option name="variable" value="d_i" positionalBoolean="4"/>
+        <option name="cyclic" value="" positionalBoolean="type"/>
+        <option name="factor" value="8"/>
+        <option name="dim" value="1"/>
+      </pragma>
+    </directive>
+    <directive functionName="axi_interfaces" label="" functionLabel="">
+      <pragma name="INTERFACE">
+        <option name="axis" value="" positionalBoolean="mode"/>
+        <option name="register" value="" positionalBoolean="1"/>
+        <option name="port" value="d_i" positionalBoolean="4"/>
+      </pragma>
+    </directive>
+    <directive functionName="axi_interfaces" label="For_Loop" functionLabel="">
+      <pragma name="UNROLL">
+        <option name="factor" value="8"/>
+      </pragma>
+    </directive>
+    <directive functionName="axi_interfaces" label="For_Loop" functionLabel="">
+      <pragma name="PIPELINE">
+        <option name="rewind" value="" positionalBoolean="1"/>
+      </pragma>
+    </directive>
+  </sourceFile>
+</AutoPilot:ProjectResources>

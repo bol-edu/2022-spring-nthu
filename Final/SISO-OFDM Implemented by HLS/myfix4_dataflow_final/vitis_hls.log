@@ -1,0 +1,117 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vitis_HLS/2021.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'g110064539' on host 'ic21' (Linux_x86_64 version 3.10.0-1160.62.1.el7.x86_64) on Mon Jun 20 21:20:20 CST 2022
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
+INFO: [HLS 200-10] In directory '/users/course/2022S/HLS17000000/g110064539/Vitis_Libraries/dsp/L1/examples/OFDM_Implemented_by_HLS/myfix4_dataflow_final'
+Sourcing Tcl script 'run_hls.tcl'
+INFO: [HLS 200-1510] Running: open_project -reset prj_impulse_test.prj 
+INFO: [HLS 200-10] Creating and opening project '/users/course/2022S/HLS17000000/g110064539/Vitis_Libraries/dsp/L1/examples/OFDM_Implemented_by_HLS/myfix4_dataflow_final/prj_impulse_test.prj'.
+INFO: [HLS 200-1510] Running: add_files src/channel_stream/channel_gen.cpp src/equalizer/equalizer.hpp  -cflags -I/users/course/2022S/HLS17000000/g110064539/Vitis_Libraries/dsp/L1/include/hw/vitis_fft/fixed 
+INFO: [HLS 200-10] Adding design file 'src/channel_stream/channel_gen.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'src/equalizer/equalizer.hpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/equalizer/equalizer.cpp src/equalizer/equalizer.hpp  -cflags -I/users/course/2022S/HLS17000000/g110064539/Vitis_Libraries/dsp/L1/include/hw/vitis_fft/fixed 
+INFO: [HLS 200-10] Adding design file 'src/equalizer/equalizer.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'src/equalizer/equalizer.hpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/data_path.hpp  -cflags -I/users/course/2022S/HLS17000000/g110064539/Vitis_Libraries/dsp/L1/include/hw/vitis_fft/fixed 
+INFO: [HLS 200-10] Adding design file 'src/data_path.hpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/Tx.cpp src/Tx.h src/AWGN.cpp src/AWGN.h src/Rx.cpp src/Rx.h -cflags -I/users/course/2022S/HLS17000000/g110064539/Vitis_Libraries/dsp/L1/include/hw/vitis_fft/fixed 
+INFO: [HLS 200-10] Adding design file 'src/Tx.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'src/Tx.h' to the project
+INFO: [HLS 200-10] Adding design file 'src/AWGN.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'src/AWGN.h' to the project
+INFO: [HLS 200-10] Adding design file 'src/Rx.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'src/Rx.h' to the project
+INFO: [HLS 200-1510] Running: add_files src/CP_insertion/Cp_insertion.cpp src/CP_insertion/Cp_insertion.h -cflags -I/users/course/2022S/HLS17000000/g110064539/Vitis_Libraries/dsp/L1/include/hw/vitis_fft/fixed 
+INFO: [HLS 200-10] Adding design file 'src/CP_insertion/Cp_insertion.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'src/CP_insertion/Cp_insertion.h' to the project
+INFO: [HLS 200-1510] Running: add_files src/pilot_insertion/pilot_insertion.cpp src/pilot_insertion/pilot_insertion.h -cflags -I/users/course/2022S/HLS17000000/g110064539/Vitis_Libraries/dsp/L1/include/hw/vitis_fft/fixed 
+INFO: [HLS 200-10] Adding design file 'src/pilot_insertion/pilot_insertion.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'src/pilot_insertion/pilot_insertion.h' to the project
+INFO: [HLS 200-1510] Running: add_files src/top_module.cpp src/top_module.hpp -cflags -I/users/course/2022S/HLS17000000/g110064539/Vitis_Libraries/dsp/L1/include/hw/vitis_fft/fixed 
+INFO: [HLS 200-10] Adding design file 'src/top_module.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'src/top_module.hpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/picture_to_symbol/pixl_to_symbol.cpp src/picture_to_symbol/pixl_to_symbol.h -cflags -I/users/course/2022S/HLS17000000/g110064539/Vitis_Libraries/dsp/L1/include/hw/vitis_fft/fixed 
+INFO: [HLS 200-10] Adding design file 'src/picture_to_symbol/pixl_to_symbol.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'src/picture_to_symbol/pixl_to_symbol.h' to the project
+INFO: [HLS 200-1510] Running: add_files src/QAM/qam.cpp src/QAM/qam.hpp src/fft/fft.cpp src/fft/fft.hpp -cflags -I/users/course/2022S/HLS17000000/g110064539/Vitis_Libraries/dsp/L1/include/hw/vitis_fft/fixed 
+INFO: [HLS 200-10] Adding design file 'src/QAM/qam.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'src/QAM/qam.hpp' to the project
+INFO: [HLS 200-10] Adding design file 'src/fft/fft.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'src/fft/fft.hpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/deQAM_to_pixl/data2pic.h src/deQAM_to_pixl/data2pic.cpp src/deQAM_to_pixl/data_out_main.cpp src/deQAM_to_pixl/deQAM.cpp src/channel_stream/channel_gen.h src/channel_stream/channel_gen.cpp src/channel_stream/rand_func.cpp src/channel_stream/rand.cpp -cflags -I/users/course/2022S/HLS17000000/g110064539/Vitis_Libraries/dsp/L1/include/hw/vitis_fft/fixed -I/users/course/2022S/HLS17000000/g110064539/Vitis_Libraries/dsp/HLS_Final_Channel_Model/code/include -I/users/course/2022S/HLS17000000/g110064539/Vitis_Libraries/dsp/HLS_Final_Channel_Model/ext/dcmt/dcmt/include 
+INFO: [HLS 200-10] Adding design file 'src/deQAM_to_pixl/data2pic.h' to the project
+INFO: [HLS 200-10] Adding design file 'src/deQAM_to_pixl/data2pic.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'src/deQAM_to_pixl/data_out_main.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'src/deQAM_to_pixl/deQAM.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'src/channel_stream/channel_gen.h' to the project
+INFO: [HLS 200-10] Adding design file 'src/channel_stream/channel_gen.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'src/channel_stream/rand_func.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'src/channel_stream/rand.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb src/main.cpp src/picture_txt/pic_data.txt src/output_result/out.txt -cflags -I/users/course/2022S/HLS17000000/g110064539/Vitis_Libraries/dsp/L1/include/hw/vitis_fft/fixed 
+INFO: [HLS 200-10] Adding test bench file 'src/main.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'src/picture_txt/pic_data.txt' to the project
+INFO: [HLS 200-10] Adding test bench file 'src/output_result/out.txt' to the project
+INFO: [HLS 200-1510] Running: set_top top_module 
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 
+INFO: [HLS 200-10] Creating and opening solution '/users/course/2022S/HLS17000000/g110064539/Vitis_Libraries/dsp/L1/examples/OFDM_Implemented_by_HLS/myfix4_dataflow_final/prj_impulse_test.prj/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+WARNING: [HLS 200-40] No /users/course/2022S/HLS17000000/g110064539/Vitis_Libraries/dsp/L1/examples/OFDM_Implemented_by_HLS/myfix4_dataflow_final/prj_impulse_test.prj/solution1/solution1.aps file found.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xcu50-fsvh2104-2-e 
+INFO: [HLS 200-1611] Setting target device to 'xcu50-fsvh2104-2-e'
+INFO: [HLS 200-1510] Running: create_clock -period 10 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+make[1]: Entering directory `/users/course/2022S/HLS17000000/g110064539/Vitis_Libraries/dsp/L1/examples/OFDM_Implemented_by_HLS/myfix4_dataflow_final/prj_impulse_test.prj/solution1/csim/build'
+   Compiling ../../../../src/main.cpp in debug mode
+   Compiling ../../../../src/deQAM_to_pixl/data2pic.cpp in debug mode
+   Compiling ../../../../src/deQAM_to_pixl/data_out_main.cpp in debug mode
+   Compiling ../../../../src/deQAM_to_pixl/deQAM.cpp in debug mode
+   Compiling ../../../../src/channel_stream/channel_gen.cpp in debug mode
+   Compiling ../../../../src/channel_stream/rand_func.cpp in debug mode
+   Compiling ../../../../src/channel_stream/rand.cpp in debug mode
+   Compiling ../../../../src/QAM/qam.cpp in debug mode
+   Compiling ../../../../src/fft/fft.cpp in debug mode
+   Compiling ../../../../src/picture_to_symbol/pixl_to_symbol.cpp in debug mode
+   Compiling ../../../../src/top_module.cpp in debug mode
+   Compiling ../../../../src/pilot_insertion/pilot_insertion.cpp in debug mode
+   Compiling ../../../../src/CP_insertion/Cp_insertion.cpp in debug mode
+   Compiling ../../../../src/Tx.cpp in debug mode
+   Compiling ../../../../src/AWGN.cpp in debug mode
+   Compiling ../../../../src/Rx.cpp in debug mode
+   Compiling ../../../../src/equalizer/equalizer.cpp in debug mode
+   Generating csim.exe
+make[1]: Leaving directory `/users/course/2022S/HLS17000000/g110064539/Vitis_Libraries/dsp/L1/examples/OFDM_Implemented_by_HLS/myfix4_dataflow_final/prj_impulse_test.prj/solution1/csim/build'
+In file included from /opt/Xilinx/Vitis_HLS/2021.2/include/hls_hotbm_apfixed.h:45:0,
+                 from /opt/Xilinx/Vitis_HLS/2021.2/include/hls_math.h:1065,
+                 from /users/course/2022S/HLS17000000/g110064539/Vitis_Libraries/dsp/HLS_Final_Channel_Model/code/include/xf_fintech/rng.hpp:27,
+                 from ../../../../src/channel_stream/rand.cpp:4:
+/opt/Xilinx/Vitis_HLS/2021.2/include/utils/x_hls_utils.h:246:10: warning: ‘hls_preserve’ attribute directive ignored [-Wattributes]
+ T reg(T d)
+          ^
+>> Test Start
+>> Load Input
+>> Read Data
+>> Start Calculation
+>> Calculation Finished!
+>> Pixl_Error_Rate
+6.25%
+>> Symbol_Error_Rate
+4.01786%
+>> Bit_Error_Rate
+1.00446%
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 44.99 seconds. CPU system time: 4.54 seconds. Elapsed time: 49.68 seconds; current allocated memory: -937.109 MB.
+INFO: [HLS 200-112] Total CPU user time: 47.89 seconds. Total CPU system time: 5.23 seconds. Total elapsed time: 52.18 seconds; peak allocated memory: 264.160 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Mon Jun 20 21:21:11 2022...

@@ -1,0 +1,153 @@
+
+
+================================================================
+== Vitis HLS Report for 'windex_Pipeline_VITIS_LOOP_24_2'
+================================================================
+* Date:           Sat Jun 18 17:03:45 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        test
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.237 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_24_2  |        ?|        ?|         2|          1|          1|     ?|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    108|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     45|    -|
+|Register         |        -|    -|      36|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      36|    153|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |add_ln24_fu_117_p2         |         +|   0|  0|  39|          32|           1|
+    |add_ln26_fu_127_p2         |         +|   0|  0|  14|           7|           7|
+    |word_TDATA                 |         +|   0|  0|  15|           8|           8|
+    |ap_block_pp0_stage0_01001  |       and|   0|  0|   2|           1|           1|
+    |cpkg_last_V_fu_138_p2      |      icmp|   0|  0|  18|          32|          32|
+    |icmp_ln24_fu_111_p2        |      icmp|   0|  0|  18|          32|          32|
+    |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |Total                      |          |   0|  0| 108|         113|          83|
+    +---------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_1     |   9|          2|   32|         64|
+    |i_fu_50                  |   9|          2|   32|         64|
+    |word_TDATA_blk_n         |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  45|         10|   67|        134|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |cpkg_last_V_reg_179      |   1|   0|    1|          0|
+    |i_fu_50                  |  32|   0|   32|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    |  36|   0|   36|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------+-----+-----+------------+---------------------------------+--------------+
+|    RTL Ports   | Dir | Bits|  Protocol  |          Source Object          |    C Type    |
++----------------+-----+-----+------------+---------------------------------+--------------+
+|ap_clk          |   in|    1|  ap_ctrl_hs|  windex_Pipeline_VITIS_LOOP_24_2|  return value|
+|ap_rst          |   in|    1|  ap_ctrl_hs|  windex_Pipeline_VITIS_LOOP_24_2|  return value|
+|ap_start        |   in|    1|  ap_ctrl_hs|  windex_Pipeline_VITIS_LOOP_24_2|  return value|
+|ap_done         |  out|    1|  ap_ctrl_hs|  windex_Pipeline_VITIS_LOOP_24_2|  return value|
+|ap_idle         |  out|    1|  ap_ctrl_hs|  windex_Pipeline_VITIS_LOOP_24_2|  return value|
+|ap_ready        |  out|    1|  ap_ctrl_hs|  windex_Pipeline_VITIS_LOOP_24_2|  return value|
+|word_TREADY     |   in|    1|        axis|                    word_V_data_V|       pointer|
+|word_TDATA      |  out|    8|        axis|                    word_V_data_V|       pointer|
+|trunc_ln        |   in|   32|     ap_none|                         trunc_ln|        scalar|
+|add_ln21_1      |   in|    7|     ap_none|                       add_ln21_1|        scalar|
+|sub16           |   in|   32|     ap_none|                            sub16|        scalar|
+|word_TVALID     |  out|    1|        axis|                    word_V_last_V|       pointer|
+|word_TLAST      |  out|    1|        axis|                    word_V_last_V|       pointer|
+|word_TKEEP      |  out|    1|        axis|                    word_V_keep_V|       pointer|
+|word_TSTRB      |  out|    1|        axis|                    word_V_strb_V|       pointer|
+|cname_address0  |  out|    7|   ap_memory|                            cname|         array|
+|cname_ce0       |  out|    1|   ap_memory|                            cname|         array|
+|cname_q0        |   in|    6|   ap_memory|                            cname|         array|
++----------------+-----+-----+------------+---------------------------------+--------------+
+

@@ -1,0 +1,141 @@
+
+
+================================================================
+== Synthesis Summary Report of 'windex'
+================================================================
++ General Information: 
+    * Date:           Sat Jun 18 17:03:45 2022
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+    * Project:        test
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |               Modules              | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |    |           |           |     |
+    |               & Loops              | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT    | URAM|
+    +------------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |+ windex                            |     -|  0.56|        -|       -|         -|        -|     -|        no|     -|   -|  366 (~0%)|   604 (1%)|    -|
+    | + windex_Pipeline_VITIS_LOOP_21_1  |     -|  1.96|        -|       -|         -|        -|     -|        no|     -|   -|  165 (~0%)|  156 (~0%)|    -|
+    |  o VITIS_LOOP_21_1                 |    II|  7.30|        -|       -|         2|        2|     -|       yes|     -|   -|          -|          -|    -|
+    | + windex_Pipeline_VITIS_LOOP_24_2  |     -|  3.06|        -|       -|         -|        -|     -|        no|     -|   -|   36 (~0%)|  153 (~0%)|    -|
+    |  o VITIS_LOOP_24_2                 |     -|  7.30|        -|       -|         2|        1|     -|       yes|     -|   -|          -|          -|    -|
+    +------------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 5             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+---------------------+
+| Interface     | Register | Offset | Width | Access | Description         |
++---------------+----------+--------+-------+--------+---------------------+
+| s_axi_control | recv     | 0x10   | 32    | W      | Data signal of recv |
+| s_axi_control | sent     | 0x18   | 32    | W      | Data signal of sent |
++---------------+----------+--------+-------+--------+---------------------+
+
+* AXIS
++-----------+---------------+-------+-------+-------+--------+-------+--------+
+| Interface | Register Mode | TDATA | TKEEP | TLAST | TREADY | TSTRB | TVALID |
++-----------+---------------+-------+-------+-------+--------+-------+--------+
+| pout8     | both          | 8     | 1     | 1     | 1      | 1     | 1      |
+| word      | both          | 8     | 1     | 1     | 1      | 1     | 1      |
++-----------+---------------+-------+-------+-------+--------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+----------+
+| Interface | Type         | Ports    |
++-----------+--------------+----------+
+| ap_clk    | clock        | ap_clk   |
+| ap_rst_n  | reset        | ap_rst_n |
+| ap_ctrl   | ap_ctrl_none |          |
++-----------+--------------+----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+--------------------------------------------+
+| Argument | Direction | Datatype                                   |
++----------+-----------+--------------------------------------------+
+| pout8    | in        | stream<hls::axis<ap_uint<8>, 0, 0, 0>, 0>* |
+| word     | out       | stream<hls::axis<ap_uint<8>, 0, 0, 0>, 0>& |
+| recv     | unused    | int&                                       |
+| sent     | unused    | int&                                       |
++----------+-----------+--------------------------------------------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+--------------------------------+
+| Argument | HW Interface  | HW Type   | HW Info                        |
++----------+---------------+-----------+--------------------------------+
+| pout8    | pout8         | interface |                                |
+| word     | word          | interface |                                |
+| recv     | s_axi_control | register  | name=recv offset=0x10 range=32 |
+| sent     | s_axi_control | register  | name=sent offset=0x18 range=32 |
++----------+---------------+-----------+--------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------+-----+--------+-------------+-----+--------+---------+
+| Name                               | DSP | Pragma | Variable    | Op  | Impl   | Latency |
++------------------------------------+-----+--------+-------------+-----+--------+---------+
+| + windex                           | 0   |        |             |     |        |         |
+|   add_ln21_1_fu_133_p2             | -   |        | add_ln21_1  | add | fabric | 0       |
+|   sub16_fu_144_p2                  | -   |        | sub16       | add | fabric | 0       |
+|  + windex_Pipeline_VITIS_LOOP_21_1 | 0   |        |             |     |        |         |
+|    add_ln21_2_fu_76_p2             | -   |        | add_ln21_2  | add | fabric | 0       |
+|    add_ln21_fu_92_p2               | -   |        | add_ln21    | add | fabric | 0       |
+|  + windex_Pipeline_VITIS_LOOP_24_2 | 0   |        |             |     |        |         |
+|    add_ln24_fu_117_p2              | -   |        | add_ln24    | add | fabric | 0       |
+|    add_ln26_fu_127_p2              | -   |        | add_ln26    | add | fabric | 0       |
+|    word_TDATA                      | -   |        | cpkg_data_V | add | fabric | 0       |
++------------------------------------+-----+--------+-------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++-----------+------+------+--------+----------+---------+------+---------+
+| Name      | BRAM | URAM | Pragma | Variable | Storage | Impl | Latency |
++-----------+------+------+--------+----------+---------+------+---------+
+| + windex  | 0    | 0    |        |          |         |      |         |
+|   cname_U | -    | -    |        | cname    | rom_1p  | auto | 1       |
++-----------+------+------+--------+----------+---------+------+---------+
+
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+--------------------------+--------------------------------------+
+| Type      | Options                  | Location                             |
++-----------+--------------------------+--------------------------------------+
+| interface | axis port=pout8          | test/windex.cpp:6 in windex, pout8   |
+| interface | axis port=word           | test/windex.cpp:7 in windex, word    |
+| interface | s_axilite port=recv      | test/windex.cpp:8 in windex, recv    |
+| interface | s_axilite port=sent      | test/windex.cpp:9 in windex, sent    |
+| interface | ap_ctrl_none port=return | test/windex.cpp:10 in windex, return |
++-----------+--------------------------+--------------------------------------+
+
+

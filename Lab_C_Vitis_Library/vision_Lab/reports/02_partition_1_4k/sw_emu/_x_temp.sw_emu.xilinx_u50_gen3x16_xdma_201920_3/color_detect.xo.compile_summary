@@ -1,0 +1,174 @@
+<ENTRY>
+{
+ "thisFile": "/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L3/examples/colordetect/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_201920_3/color_detect.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Apr 29 23:31:44 2022",
+ "timestampMillis": "1651246304328",
+ "buildStep": {
+  "cmdId": "28886e12-05ef-4025-9e9c-e7a8be7542fa",
+  "name": "v++",
+  "logFile": "/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L3/examples/colordetect/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_201920_3/color_detect/color_detect.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2021.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -c -t sw_emu --platform /opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3/xilinx_u50_gen3x16_xdma_201920_3.xpfm --save-temps -I /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L3/examples/colordetect -I /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L1/include/ -k color_detect -I/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L3/examples/colordetect --temp_dir _x_temp.sw_emu.xilinx_u50_gen3x16_xdma_201920_3 --report_dir /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L3/examples/colordetect/reports/_x.sw_emu.xilinx_u50_gen3x16_xdma_201920_3 -o_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_201920_3/color_detect.xo /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L3/examples/colordetect/xf_colordetect_accel.cpp ",
+  "args": [
+   "-c",
+   "-t",
+   "sw_emu",
+   "--platform",
+   "/opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3/xilinx_u50_gen3x16_xdma_201920_3.xpfm",
+   "--save-temps",
+   "-I",
+   "/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L3/examples/colordetect",
+   "-I",
+   "/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L1/include/",
+   "-k",
+   "color_detect",
+   "-I/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L3/examples/colordetect",
+   "--temp_dir",
+   "_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_201920_3",
+   "--report_dir",
+   "/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L3/examples/colordetect/reports/_x.sw_emu.xilinx_u50_gen3x16_xdma_201920_3",
+   "-o_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_201920_3/color_detect.xo",
+   "/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L3/examples/colordetect/xf_colordetect_accel.cpp"
+  ],
+  "iniFiles": [],
+  "cwd": "/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L3/examples/colordetect"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Apr 29 23:31:44 2022",
+ "timestampMillis": "1651246304329",
+ "status": {
+  "cmdId": "28886e12-05ef-4025-9e9c-e7a8be7542fa",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Apr 29 23:31:49 2022",
+ "timestampMillis": "1651246309879",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u50_gen3x16_xdma_201920_3.xpfm",
+  "hardwareDsa": "hw.xsa",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_SW_EMU",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "color_detect",
+     "file": "/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L3/examples/colordetect/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_201920_3/color_detect.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L3/examples/colordetect/xf_colordetect_accel.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2021.2. SW Build 3363252 on 2021-10-14-04:41:01"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Apr 29 23:31:49 2022",
+ "timestampMillis": "1651246309885",
+ "buildStep": {
+  "cmdId": "f2ebccc6-65d8-4af2-87b1-eb89101f73e7",
+  "name": "vitis_hls",
+  "logFile": "/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L3/examples/colordetect/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_201920_3/color_detect/color_detect/vitis_hls.log",
+  "commandLine": "vitis_hls -f /users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L3/examples/colordetect/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_201920_3/color_detect/color_detect/color_detect.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L3/examples/colordetect/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_201920_3/color_detect/color_detect/color_detect.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L3/examples/colordetect"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Apr 29 23:31:49 2022",
+ "timestampMillis": "1651246309885",
+ "status": {
+  "cmdId": "f2ebccc6-65d8-4af2-87b1-eb89101f73e7",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Apr 29 23:32:07 2022",
+ "timestampMillis": "1651246327704",
+ "status": {
+  "cmdId": "f2ebccc6-65d8-4af2-87b1-eb89101f73e7",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Apr 29 23:32:07 2022",
+ "timestampMillis": "1651246327893",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L3/examples/colordetect/reports/_x.sw_emu.xilinx_u50_gen3x16_xdma_201920_3/color_detect/v++_compile_color_detect_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Apr 29 23:32:07 2022",
+ "timestampMillis": "1651246327894",
+ "report": {
+  "path": "/users/course/2022S/HLS17000000/g110061575/HLS/Lab_C/02_partition_1_4k/vision/L3/examples/colordetect/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_201920_3/v++_compile_color_detect_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Apr 29 23:32:07 2022",
+ "timestampMillis": "1651246327900",
+ "status": {
+  "cmdId": "28886e12-05ef-4025-9e9c-e7a8be7542fa",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

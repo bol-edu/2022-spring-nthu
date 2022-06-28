@@ -1,0 +1,60 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matrixmul.cpp:53:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="matrixmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=matrixmul" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matrixmul.cpp:53:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=b complete dim=1" ARG_PragmaType="array_reshape" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matrixmul.cpp:54:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=a complete dim=2" ARG_PragmaType="array_reshape" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matrixmul.cpp:55:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port=a" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matrixmul.cpp:56:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port=b" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matrixmul.cpp:57:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port=res" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matrixmul.cpp:66:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="rewind" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="matrixmul.cpp:71:20" msg_body="Loop 'Cache_Row' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="Cache_Row"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="matrixmul.cpp:76:24" msg_body="Loop 'Cache_Col' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="Cache_Col"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="matrixmul.cpp:79:16" msg_body="Loop 'Product' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="Product"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="matrixmul.cpp:52:0" msg_body="Unrolling loop 'Cache_Row' (matrixmul.cpp:71:20) in function 'matrixmul' completely with a factor of 3">
+        <args Factor="3" LoopLoc="matrixmul.cpp:71:20" LoopName="Cache_Row"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="matrixmul.cpp:52:0" msg_body="Unrolling loop 'Cache_Col' (matrixmul.cpp:76:24) in function 'matrixmul' completely with a factor of 3">
+        <args Factor="3" LoopLoc="matrixmul.cpp:76:24" LoopName="Cache_Col"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="matrixmul.cpp:52:0" msg_body="Unrolling loop 'Product' (matrixmul.cpp:79:16) in function 'matrixmul' completely with a factor of 3">
+        <args Factor="3" LoopLoc="matrixmul.cpp:79:16" LoopName="Product"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrixmul.cpp:52:0" msg_body="Applying array_reshape to 'a': Complete reshaping on dimension 2.">
+        <args Dim="2" Mode="Complete" UOName="a"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrixmul.cpp:52:0" msg_body="Applying array_reshape to 'b': Complete reshaping on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="b"/>
+    </msg>
+    <msg msg_groups="AUTOMATION" msg_id="214-270" msg_severity="INFO" msg_loc="matrixmul.cpp:59:11" msg_body="Inferring complete partitioning for array 'b_copy' on dimension 1">
+        <args Dim="1" Mode="complete" Name="b_copy"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-237" msg_severity="WARNING" msg_loc="matrixmul.cpp:52:0" msg_body="The INTERFACE pragma actions in object field. If on struct field, disaggregate pragma is required; If on array element, array_partition pragma is required. If no, this interface pragma will be viewed as invalid and ignored. In function 'matrixmul(char (*) [3], char (*) [3], short (*) [3])'">
+        <args Function="matrixmul(char (*) [3], char (*) [3], short (*) [3])"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="matrixmul.cpp:52:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'b'">
+        <args Name="b"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="matrixmul.cpp:52:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'res'">
+        <args Name="res"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

@@ -1,0 +1,189 @@
+
+
+================================================================
+== Vitis HLS Report for 'Filter2D'
+================================================================
+* Date:           Tue Mar 29 06:54:41 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        conv_filter_prj
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu200-fsgd2104-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.433 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+---------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   | min |   max   |   Type  |
+    +---------+---------+----------+----------+-----+---------+---------+
+    |      234|  2073859|  0.780 us|  6.912 ms|  234|  2073859|       no|
+    +---------+---------+----------+----------+-----+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------------------------+-------------------------------------------------+---------+---------+----------+----------+-----+---------+---------+
+        |                                                             |                                                 |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+        |                           Instance                          |                      Module                     |   min   |   max   |    min   |    max   | min |   max   |   Type  |
+        +-------------------------------------------------------------+-------------------------------------------------+---------+---------+----------+----------+-----+---------+---------+
+        |grp_Filter2D_Pipeline_load_coefs_VITIS_LOOP_158_1_fu_990     |Filter2D_Pipeline_load_coefs_VITIS_LOOP_158_1    |      227|      227|  0.757 us|  0.757 us|  227|      227|       no|
+        |grp_Filter2D_Pipeline_apply_filter_VITIS_LOOP_167_2_fu_1221  |Filter2D_Pipeline_apply_filter_VITIS_LOOP_167_2  |        2|  2073627|  6.666 ns|  6.911 ms|    2|  2073627|       no|
+        +-------------------------------------------------------------+-------------------------------------------------+---------+---------+----------+----------+-----+---------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     1|        -|        -|    -|
+|Expression           |        -|     -|        0|        2|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|   135|    16311|    17576|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|      127|    -|
+|Register             |        -|     -|      101|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|   136|    16412|    17705|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1440|  2280|   788160|   394080|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     5|        2|        4|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4320|  6840|  2364480|  1182240|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     1|       ~0|        1|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------------------------+-------------------------------------------------+---------+-----+-------+-------+-----+
+    |                           Instance                          |                      Module                     | BRAM_18K| DSP |   FF  |  LUT  | URAM|
+    +-------------------------------------------------------------+-------------------------------------------------+---------+-----+-------+-------+-----+
+    |grp_Filter2D_Pipeline_apply_filter_VITIS_LOOP_167_2_fu_1221  |Filter2D_Pipeline_apply_filter_VITIS_LOOP_167_2  |        0|  135|  14484|  17424|    0|
+    |grp_Filter2D_Pipeline_load_coefs_VITIS_LOOP_158_1_fu_990     |Filter2D_Pipeline_load_coefs_VITIS_LOOP_158_1    |        0|    0|   1827|    152|    0|
+    +-------------------------------------------------------------+-------------------------------------------------+---------+-----+-------+-------+-----+
+    |Total                                                        |                                                 |        0|  135|  16311|  17576|    0|
+    +-------------------------------------------------------------+-------------------------------------------------+---------+-----+-------+-------+-----+
+
+    * DSP: 
+    +-------------------------------+--------------------------+-----------+
+    |            Instance           |          Module          | Expression|
+    +-------------------------------+--------------------------+-----------+
+    |mul_mul_11ns_11ns_22_4_1_U757  |mul_mul_11ns_11ns_22_4_1  |    i0 * i1|
+    +-------------------------------+--------------------------+-----------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------+----+-----------+-----+-----------+
+    |          Name         | LUT| Input Size| Bits| Total Bits|
+    +-----------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm              |  37|          7|    1|          7|
+    |ap_done                |   9|          2|    1|          2|
+    |bias_blk_n             |   9|          2|    1|          2|
+    |coefs_stream19_read    |   9|          2|    1|          2|
+    |factor_blk_n           |   9|          2|    1|          2|
+    |height_blk_n           |   9|          2|    1|          2|
+    |height_c_blk_n         |   9|          2|    1|          2|
+    |output_stream21_write  |   9|          2|    1|          2|
+    |width_blk_n            |   9|          2|    1|          2|
+    |width_c_blk_n          |   9|          2|    1|          2|
+    |window_stream_read     |   9|          2|    1|          2|
+    +-----------------------+----+-----------+-----+-----------+
+    |Total                  | 127|         27|   11|         27|
+    +-----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                   Name                                   | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                                 |   6|   0|    6|          0|
+    |ap_done_reg                                                               |   1|   0|    1|          0|
+    |bias_read_reg_3734                                                        |  16|   0|   16|          0|
+    |factor_read_reg_3740                                                      |  32|   0|   32|          0|
+    |grp_Filter2D_Pipeline_apply_filter_VITIS_LOOP_167_2_fu_1221_ap_start_reg  |   1|   0|    1|          0|
+    |grp_Filter2D_Pipeline_load_coefs_VITIS_LOOP_158_1_fu_990_ap_start_reg     |   1|   0|    1|          0|
+    |mul_ln153_reg_3767                                                        |  22|   0|   22|          0|
+    |trunc_ln150_reg_3745                                                      |  11|   0|   11|          0|
+    |trunc_ln157_reg_3751                                                      |  11|   0|   11|          0|
+    +--------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                     | 101|   0|  101|          0|
+    +--------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+------+------------+-----------------+--------------+
+|        RTL Ports       | Dir | Bits |  Protocol  |  Source Object  |    C Type    |
++------------------------+-----+------+------------+-----------------+--------------+
+|ap_clk                  |   in|     1|  ap_ctrl_hs|         Filter2D|  return value|
+|ap_rst                  |   in|     1|  ap_ctrl_hs|         Filter2D|  return value|
+|ap_start                |   in|     1|  ap_ctrl_hs|         Filter2D|  return value|
+|ap_done                 |  out|     1|  ap_ctrl_hs|         Filter2D|  return value|
+|ap_continue             |   in|     1|  ap_ctrl_hs|         Filter2D|  return value|
+|ap_idle                 |  out|     1|  ap_ctrl_hs|         Filter2D|  return value|
+|ap_ready                |  out|     1|  ap_ctrl_hs|         Filter2D|  return value|
+|width_dout              |   in|    16|     ap_fifo|            width|       pointer|
+|width_empty_n           |   in|     1|     ap_fifo|            width|       pointer|
+|width_read              |  out|     1|     ap_fifo|            width|       pointer|
+|height_dout             |   in|    16|     ap_fifo|           height|       pointer|
+|height_empty_n          |   in|     1|     ap_fifo|           height|       pointer|
+|height_read             |  out|     1|     ap_fifo|           height|       pointer|
+|factor_dout             |   in|    32|     ap_fifo|           factor|       pointer|
+|factor_empty_n          |   in|     1|     ap_fifo|           factor|       pointer|
+|factor_read             |  out|     1|     ap_fifo|           factor|       pointer|
+|bias_dout               |   in|    16|     ap_fifo|             bias|       pointer|
+|bias_empty_n            |   in|     1|     ap_fifo|             bias|       pointer|
+|bias_read               |  out|     1|     ap_fifo|             bias|       pointer|
+|coefs_stream19_dout     |   in|     8|     ap_fifo|   coefs_stream19|       pointer|
+|coefs_stream19_empty_n  |   in|     1|     ap_fifo|   coefs_stream19|       pointer|
+|coefs_stream19_read     |  out|     1|     ap_fifo|   coefs_stream19|       pointer|
+|window_stream_dout      |   in|  1800|     ap_fifo|    window_stream|       pointer|
+|window_stream_empty_n   |   in|     1|     ap_fifo|    window_stream|       pointer|
+|window_stream_read      |  out|     1|     ap_fifo|    window_stream|       pointer|
+|output_stream21_din     |  out|     8|     ap_fifo|  output_stream21|       pointer|
+|output_stream21_full_n  |   in|     1|     ap_fifo|  output_stream21|       pointer|
+|output_stream21_write   |  out|     1|     ap_fifo|  output_stream21|       pointer|
+|width_c_din             |  out|    16|     ap_fifo|          width_c|       pointer|
+|width_c_full_n          |   in|     1|     ap_fifo|          width_c|       pointer|
+|width_c_write           |  out|     1|     ap_fifo|          width_c|       pointer|
+|height_c_din            |  out|    16|     ap_fifo|         height_c|       pointer|
+|height_c_full_n         |   in|     1|     ap_fifo|         height_c|       pointer|
+|height_c_write          |  out|     1|     ap_fifo|         height_c|       pointer|
++------------------------+-----+------+------------+-----------------+--------------+
+

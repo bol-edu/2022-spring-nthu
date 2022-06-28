@@ -1,0 +1,172 @@
+
+
+================================================================
+== Synthesis Summary Report of 'array_io'
+================================================================
++ General Information: 
+    * Date:           Fri Mar 25 02:58:50 2022
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+    * Project:        array_io_prj
+    * Solution:       solution2 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu9p-flgb2104-1-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------+------+------+---------+---------+----------+---------+------+----------+------+----+------------+------------+-----+
+    |   Modules  | Issue|      | Latency | Latency | Iteration|         | Trip |          |      |    |            |            |     |
+    |   & Loops  | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF     |     LUT    | URAM|
+    +------------+------+------+---------+---------+----------+---------+------+----------+------+----+------------+------------+-----+
+    |+ array_io  |     -|  3.42|       32|  320.000|         -|       33|     -|        no|     -|   -|  1169 (~0%)|  2115 (~0%)|    -|
+    +------------+------+------+---------+---------+----------+---------+------+----------+------+----+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_FIFO
++-----------+------------+
+| Interface | Data Width |
++-----------+------------+
+| d_o       | 16         |
++-----------+------------+
+
+* AP_MEMORY
++--------------+----------+
+| Interface    | Bitwidth |
++--------------+----------+
+| d_i_address0 | 5        |
+| d_i_address1 | 5        |
+| d_i_q0       | 16       |
+| d_i_q1       | 16       |
++--------------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| d_o      | out       | short*   |
+| d_i      | in        | short*   |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+--------------+-----------+----------+
+| Argument | HW Interface | HW Type   | HW Usage |
++----------+--------------+-----------+----------+
+| d_o      | d_o          | interface |          |
+| d_i      | d_i_address0 | port      | offset   |
+| d_i      | d_i_ce0      | port      |          |
+| d_i      | d_i_q0       | port      |          |
+| d_i      | d_i_address1 | port      | offset   |
+| d_i      | d_i_ce1      | port      |          |
+| d_i      | d_i_q1       | port      |          |
++----------+--------------+-----------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------+-----+--------+-------------+-----+--------+---------+
+| Name                     | DSP | Pragma | Variable    | Op  | Impl   | Latency |
++--------------------------+-----+--------+-------------+-----+--------+---------+
+| + array_io               | 0   |        |             |     |        |         |
+|   add_ln69_fu_416_p2     | -   |        | add_ln69    | add | fabric | 0       |
+|   add_ln69_1_fu_431_p2   | -   |        | add_ln69_1  | add | fabric | 0       |
+|   add_ln69_2_fu_445_p2   | -   |        | add_ln69_2  | add | fabric | 0       |
+|   add_ln69_3_fu_459_p2   | -   |        | add_ln69_3  | add | fabric | 0       |
+|   add_ln69_4_fu_473_p2   | -   |        | add_ln69_4  | add | fabric | 0       |
+|   add_ln69_5_fu_487_p2   | -   |        | add_ln69_5  | add | fabric | 0       |
+|   add_ln69_6_fu_501_p2   | -   |        | add_ln69_6  | add | fabric | 0       |
+|   add_ln69_7_fu_520_p2   | -   |        | add_ln69_7  | add | fabric | 0       |
+|   add_ln69_8_fu_526_p2   | -   |        | add_ln69_8  | add | fabric | 0       |
+|   add_ln69_9_fu_531_p2   | -   |        | add_ln69_9  | add | fabric | 0       |
+|   add_ln69_10_fu_536_p2  | -   |        | add_ln69_10 | add | fabric | 0       |
+|   add_ln69_11_fu_541_p2  | -   |        | add_ln69_11 | add | fabric | 0       |
+|   add_ln69_12_fu_507_p2  | -   |        | add_ln69_12 | add | fabric | 0       |
+|   add_ln69_13_fu_678_p2  | -   |        | add_ln69_13 | add | fabric | 0       |
+|   add_ln69_14_fu_803_p2  | -   |        | add_ln69_14 | add | fabric | 0       |
+|   add_ln69_15_fu_928_p2  | -   |        | add_ln69_15 | add | fabric | 0       |
+|   add_ln69_16_fu_561_p2  | -   |        | add_ln69_16 | add | fabric | 0       |
+|   add_ln69_17_fu_568_p2  | -   |        | add_ln69_17 | add | fabric | 0       |
+|   add_ln69_18_fu_686_p2  | -   |        | add_ln69_18 | add | fabric | 0       |
+|   add_ln69_19_fu_693_p2  | -   |        | add_ln69_19 | add | fabric | 0       |
+|   add_ln69_20_fu_811_p2  | -   |        | add_ln69_20 | add | fabric | 0       |
+|   add_ln69_21_fu_818_p2  | -   |        | add_ln69_21 | add | fabric | 0       |
+|   add_ln69_22_fu_936_p2  | -   |        | add_ln69_22 | add | fabric | 0       |
+|   add_ln69_23_fu_943_p2  | -   |        | add_ln69_23 | add | fabric | 0       |
+|   add_ln67_fu_576_p2     | -   |        | add_ln67    | add | tadder | 0       |
+|   add_ln67_1_fu_581_p2   | -   |        | add_ln67_1  | add | fabric | 0       |
+|   add_ln67_2_fu_591_p2   | -   |        | add_ln67_2  | add | fabric | 0       |
+|   temp_fu_601_p2         | -   |        | temp        | add | tadder | 0       |
+|   add_ln69_24_fu_613_p2  | -   |        | add_ln69_24 | add | fabric | 0       |
+|   add_ln67_4_fu_623_p2   | -   |        | add_ln67_4  | add | tadder | 0       |
+|   add_ln67_5_fu_628_p2   | -   |        | add_ln67_5  | add | fabric | 0       |
+|   add_ln67_6_fu_638_p2   | -   |        | add_ln67_6  | add | fabric | 0       |
+|   temp_1_fu_648_p2       | -   |        | temp_1      | add | tadder | 0       |
+|   add_ln69_25_fu_660_p2  | -   |        | add_ln69_25 | add | fabric | 0       |
+|   add_ln67_8_fu_701_p2   | -   |        | add_ln67_8  | add | tadder | 0       |
+|   add_ln67_9_fu_706_p2   | -   |        | add_ln67_9  | add | fabric | 0       |
+|   add_ln67_10_fu_716_p2  | -   |        | add_ln67_10 | add | fabric | 0       |
+|   temp_2_fu_726_p2       | -   |        | temp_2      | add | tadder | 0       |
+|   add_ln69_26_fu_738_p2  | -   |        | add_ln69_26 | add | fabric | 0       |
+|   add_ln67_12_fu_748_p2  | -   |        | add_ln67_12 | add | tadder | 0       |
+|   add_ln67_13_fu_753_p2  | -   |        | add_ln67_13 | add | fabric | 0       |
+|   add_ln67_14_fu_763_p2  | -   |        | add_ln67_14 | add | fabric | 0       |
+|   temp_3_fu_773_p2       | -   |        | temp_3      | add | tadder | 0       |
+|   add_ln69_27_fu_785_p2  | -   |        | add_ln69_27 | add | fabric | 0       |
+|   add_ln67_16_fu_826_p2  | -   |        | add_ln67_16 | add | tadder | 0       |
+|   add_ln67_17_fu_831_p2  | -   |        | add_ln67_17 | add | fabric | 0       |
+|   add_ln67_18_fu_841_p2  | -   |        | add_ln67_18 | add | fabric | 0       |
+|   temp_4_fu_851_p2       | -   |        | temp_4      | add | tadder | 0       |
+|   add_ln69_28_fu_863_p2  | -   |        | add_ln69_28 | add | fabric | 0       |
+|   add_ln67_20_fu_873_p2  | -   |        | add_ln67_20 | add | tadder | 0       |
+|   add_ln67_21_fu_878_p2  | -   |        | add_ln67_21 | add | fabric | 0       |
+|   add_ln67_22_fu_888_p2  | -   |        | add_ln67_22 | add | fabric | 0       |
+|   temp_5_fu_898_p2       | -   |        | temp_5      | add | tadder | 0       |
+|   add_ln69_29_fu_910_p2  | -   |        | add_ln69_29 | add | fabric | 0       |
+|   add_ln67_24_fu_952_p2  | -   |        | add_ln67_24 | add | tadder | 0       |
+|   add_ln67_25_fu_957_p2  | -   |        | add_ln67_25 | add | fabric | 0       |
+|   add_ln67_26_fu_967_p2  | -   |        | add_ln67_26 | add | fabric | 0       |
+|   temp_6_fu_977_p2       | -   |        | temp_6      | add | tadder | 0       |
+|   add_ln69_30_fu_989_p2  | -   |        | add_ln69_30 | add | fabric | 0       |
+|   add_ln67_28_fu_999_p2  | -   |        | add_ln67_28 | add | tadder | 0       |
+|   add_ln67_29_fu_1004_p2 | -   |        | add_ln67_29 | add | fabric | 0       |
+|   add_ln67_30_fu_1014_p2 | -   |        | add_ln67_30 | add | fabric | 0       |
+|   temp_7_fu_1024_p2      | -   |        | temp_7      | add | tadder | 0       |
+|   add_ln69_31_fu_1036_p2 | -   |        | add_ln69_31 | add | fabric | 0       |
++--------------------------+-----+--------+-------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++--------------+------------------------------------+----------------------------+
+| Type         | Options                            | Location                   |
++--------------+------------------------------------+----------------------------+
+| bind_storage | variable=d_i type=ram_2p impl=bram | DIRECTIVE in array_io, d_i |
+| interface    | ap_fifo port=d_o                   | DIRECTIVE in array_io, d_o |
+| unroll       |                                    | DIRECTIVE in array_io      |
++--------------+------------------------------------+----------------------------+
+
+

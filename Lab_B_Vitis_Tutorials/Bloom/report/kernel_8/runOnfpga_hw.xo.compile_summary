@@ -1,0 +1,253 @@
+<ENTRY>
+{
+ "thisFile": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/runOnfpga_hw.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Mar 25 14:36:04 2022",
+ "timestampMillis": "1648190164967",
+ "buildStep": {
+  "cmdId": "94e394cd-f7ef-4767-aba0-bddad7b9b2d5",
+  "name": "v++",
+  "logFile": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/runOnfpga_hw/runOnfpga_hw.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2021.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.param project.writeIntermediateCheckpoints=1 --advanced.param \"compiler.reportFailfast=pre_opt_design {__KERNEL_NAMES__} post_opt_design {__OCL_TOP__}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -c -g -t hw -R 1 -k runOnfpga --platform xilinx_u50_gen3x16_xdma_201920_3 --profile.data all:all:all --profile.stall all:all:all --profile.trace_memory HBM --save-temps --temp_dir ././build/single_buffer/kernel_8/hw/temp_dir --report_dir ././build/single_buffer/kernel_8/hw/report_dir --log_dir ././build/single_buffer/kernel_8/hw/log_dir -I../reference_files -DPARALLELISATION=8 ../reference_files/compute_score_fpga_kernel.cpp -o ././build/single_buffer/kernel_8/hw/runOnfpga_hw.xo ",
+  "args": [
+   "-c",
+   "-g",
+   "-t",
+   "hw",
+   "-R",
+   "1",
+   "-k",
+   "runOnfpga",
+   "--platform",
+   "xilinx_u50_gen3x16_xdma_201920_3",
+   "--profile.data",
+   "all:all:all",
+   "--profile.stall",
+   "all:all:all",
+   "--profile.trace_memory",
+   "HBM",
+   "--save-temps",
+   "--temp_dir",
+   "././build/single_buffer/kernel_8/hw/temp_dir",
+   "--report_dir",
+   "././build/single_buffer/kernel_8/hw/report_dir",
+   "--log_dir",
+   "././build/single_buffer/kernel_8/hw/log_dir",
+   "-I../reference_files",
+   "-DPARALLELISATION=8",
+   "../reference_files/compute_score_fpga_kernel.cpp",
+   "-o",
+   "././build/single_buffer/kernel_8/hw/runOnfpga_hw.xo"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/m110061639/02-bloom/makefile"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 14:36:04 2022",
+ "timestampMillis": "1648190164967",
+ "status": {
+  "cmdId": "94e394cd-f7ef-4767-aba0-bddad7b9b2d5",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Mar 25 14:36:08 2022",
+ "timestampMillis": "1648190168118",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u50_gen3x16_xdma_201920_3.xpfm",
+  "hardwareDsa": "hw.xsa",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "runOnfpga",
+     "file": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/runOnfpga_hw.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/m110061639/02-bloom/reference_files/compute_score_fpga_kernel.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2021.2. SW Build 3363252 on 2021-10-14-04:41:01"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Mar 25 14:36:08 2022",
+ "timestampMillis": "1648190168120",
+ "buildStep": {
+  "cmdId": "db3f93f4-8e9a-45e3-bbe0-14b5c085f8fe",
+  "name": "vitis_hls",
+  "logFile": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/runOnfpga_hw/runOnfpga/vitis_hls.log",
+  "commandLine": "vitis_hls -f /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/runOnfpga_hw/runOnfpga/runOnfpga.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/runOnfpga_hw/runOnfpga/runOnfpga.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/m110061639/02-bloom/makefile"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 14:36:08 2022",
+ "timestampMillis": "1648190168120",
+ "status": {
+  "cmdId": "db3f93f4-8e9a-45e3-bbe0-14b5c085f8fe",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 14:36:33 2022",
+ "timestampMillis": "1648190193242",
+ "status": {
+  "cmdId": "db3f93f4-8e9a-45e3-bbe0-14b5c085f8fe",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 14:36:33 2022",
+ "timestampMillis": "1648190193252",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/runOnfpga_hw/runOnfpga/runOnfpga/solution/.autopilot/db/runOnfpga.design.xml",
+  "name": "runOnfpga",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_REPORT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 14:36:33 2022",
+ "timestampMillis": "1648190193253",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/runOnfpga_hw/runOnfpga/runOnfpga/solution/.autopilot/db/.message_syn.xml",
+  "name": "runOnfpga",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_DRC_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 14:36:33 2022",
+ "timestampMillis": "1648190193253",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/report_dir/runOnfpga_hw/hls_reports/runOnfpga_csynth.rpt",
+  "name": "runOnfpga",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 14:36:33 2022",
+ "timestampMillis": "1648190193253",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/runOnfpga_hw/runOnfpga/runOnfpga/solution/syn/report/runOnfpga_csynth.xml",
+  "name": "runOnfpga",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 14:36:33 2022",
+ "timestampMillis": "1648190193259",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/report_dir/runOnfpga_hw/system_estimate_runOnfpga_hw.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 14:36:33 2022",
+ "timestampMillis": "1648190193416",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/report_dir/runOnfpga_hw/v++_compile_runOnfpga_hw_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 14:36:33 2022",
+ "timestampMillis": "1648190193416",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/v++_compile_runOnfpga_hw_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 14:36:33 2022",
+ "timestampMillis": "1648190193417",
+ "status": {
+  "cmdId": "94e394cd-f7ef-4767-aba0-bddad7b9b2d5",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

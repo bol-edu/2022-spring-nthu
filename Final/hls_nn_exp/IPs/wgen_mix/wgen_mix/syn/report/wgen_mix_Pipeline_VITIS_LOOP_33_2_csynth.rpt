@@ -1,0 +1,195 @@
+
+
+================================================================
+== Vitis HLS Report for 'wgen_mix_Pipeline_VITIS_LOOP_33_2'
+================================================================
+* Date:           Sat Jun 18 17:48:35 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        wgen_mix
+* Solution:       wgen_mix (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.014 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        3|        ?|  30.000 ns|         ?|    3|    ?|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count | Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |- VITIS_LOOP_33_2  |        1|        ?|         2|          1|          1|  1 ~ ?|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+-------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    183|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     95|    -|
+|Register         |        -|    -|     116|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     116|    278|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln43_fu_284_p2                |         +|   0|  0|  39|          32|           1|
+    |j_5_fu_246_p2                     |         +|   0|  0|  38|          31|           1|
+    |word_row_usage_1_fu_274_p2        |         +|   0|  0|  39|          32|           1|
+    |and_ln39_fu_262_p2                |       and|   0|  0|   2|           1|           1|
+    |ap_condition_148                  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_288                  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op36_read_state2     |       and|   0|  0|   2|           1|           1|
+    |pkg_last_V_fu_307_p2              |       and|   0|  0|   2|           1|           1|
+    |icmp_ln33_fu_241_p2               |      icmp|   0|  0|  17|          31|          31|
+    |icmp_ln39_fu_256_p2               |      icmp|   0|  0|  17|          31|           8|
+    |icmp_ln45_fu_302_p2               |      icmp|   0|  0|  17|          31|          31|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0| 183|         196|          82|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |                    Name                   | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                                |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1                    |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2                    |   9|          2|    1|          2|
+    |ap_phi_reg_pp0_iter2_pkg_data_V_3_reg_218  |  14|          3|   24|         72|
+    |dst_TDATA_blk_n                            |   9|          2|    1|          2|
+    |j_fu_106                                   |   9|          2|   31|         62|
+    |src_TDATA_blk_n                            |   9|          2|    1|          2|
+    |word_TDATA_blk_n                           |   9|          2|    1|          2|
+    |word_row_usage_fu_110                      |   9|          2|   32|         64|
+    |wrecv_n_local_o                            |   9|          2|   32|         64|
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |Total                                      |  95|         21|  125|        274|
+    +-------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------+----+----+-----+-----------+
+    |                    Name                   | FF | LUT| Bits| Const Bits|
+    +-------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                  |   1|   0|    1|          0|
+    |ap_done_reg                                |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                    |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                    |   1|   0|    1|          0|
+    |ap_phi_reg_pp0_iter1_pkg_data_V_3_reg_218  |  24|   0|   24|          0|
+    |ap_phi_reg_pp0_iter2_pkg_data_V_3_reg_218  |  24|   0|   24|          0|
+    |j_fu_106                                   |  31|   0|   31|          0|
+    |pkg_last_V_reg_374                         |   1|   0|    1|          0|
+    |word_row_usage_fu_110                      |  32|   0|   32|          0|
+    +-------------------------------------------+----+----+-----+-----------+
+    |Total                                      | 116|   0|  116|          0|
+    +-------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+-----------------------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |           Source Object           |    C Type    |
++---------------------------+-----+-----+------------+-----------------------------------+--------------+
+|ap_clk                     |   in|    1|  ap_ctrl_hs|  wgen_mix_Pipeline_VITIS_LOOP_33_2|  return value|
+|ap_rst                     |   in|    1|  ap_ctrl_hs|  wgen_mix_Pipeline_VITIS_LOOP_33_2|  return value|
+|ap_start                   |   in|    1|  ap_ctrl_hs|  wgen_mix_Pipeline_VITIS_LOOP_33_2|  return value|
+|ap_done                    |  out|    1|  ap_ctrl_hs|  wgen_mix_Pipeline_VITIS_LOOP_33_2|  return value|
+|ap_idle                    |  out|    1|  ap_ctrl_hs|  wgen_mix_Pipeline_VITIS_LOOP_33_2|  return value|
+|ap_ready                   |  out|    1|  ap_ctrl_hs|  wgen_mix_Pipeline_VITIS_LOOP_33_2|  return value|
+|src_TVALID                 |   in|    1|        axis|                       src_V_data_V|       pointer|
+|src_TDATA                  |   in|   24|        axis|                       src_V_data_V|       pointer|
+|word_TVALID                |   in|    1|        axis|                      word_V_data_V|       pointer|
+|word_TDATA                 |   in|   24|        axis|                      word_V_data_V|       pointer|
+|dst_TREADY                 |   in|    1|        axis|                       dst_V_data_V|       pointer|
+|dst_TDATA                  |  out|   24|        axis|                       dst_V_data_V|       pointer|
+|cols                       |   in|   31|     ap_none|                               cols|        scalar|
+|sub13                      |   in|   31|     ap_none|                              sub13|        scalar|
+|cmp12                      |   in|    1|     ap_none|                              cmp12|        scalar|
+|dst_TVALID                 |  out|    1|        axis|                       dst_V_dest_V|       pointer|
+|dst_TDEST                  |  out|    1|        axis|                       dst_V_dest_V|       pointer|
+|dst_TKEEP                  |  out|    3|        axis|                       dst_V_keep_V|       pointer|
+|dst_TSTRB                  |  out|    3|        axis|                       dst_V_strb_V|       pointer|
+|dst_TUSER                  |  out|    1|        axis|                       dst_V_user_V|       pointer|
+|dst_TLAST                  |  out|    1|        axis|                       dst_V_last_V|       pointer|
+|dst_TID                    |  out|    1|        axis|                         dst_V_id_V|       pointer|
+|src_TREADY                 |  out|    1|        axis|                       src_V_dest_V|       pointer|
+|src_TDEST                  |   in|    1|        axis|                       src_V_dest_V|       pointer|
+|src_TKEEP                  |   in|    3|        axis|                       src_V_keep_V|       pointer|
+|src_TSTRB                  |   in|    3|        axis|                       src_V_strb_V|       pointer|
+|src_TUSER                  |   in|    1|        axis|                       src_V_user_V|       pointer|
+|src_TLAST                  |   in|    1|        axis|                       src_V_last_V|       pointer|
+|src_TID                    |   in|    1|        axis|                         src_V_id_V|       pointer|
+|cmp5                       |   in|    1|     ap_none|                               cmp5|        scalar|
+|word_TREADY                |  out|    1|        axis|                      word_V_dest_V|       pointer|
+|word_TDEST                 |   in|    1|        axis|                      word_V_dest_V|       pointer|
+|word_TKEEP                 |   in|    3|        axis|                      word_V_keep_V|       pointer|
+|word_TSTRB                 |   in|    3|        axis|                      word_V_strb_V|       pointer|
+|word_TUSER                 |   in|    1|        axis|                      word_V_user_V|       pointer|
+|word_TLAST                 |   in|    1|        axis|                      word_V_last_V|       pointer|
+|word_TID                   |   in|    1|        axis|                        word_V_id_V|       pointer|
+|wrecv                      |  out|   32|      ap_vld|                              wrecv|       pointer|
+|wrecv_ap_vld               |  out|    1|      ap_vld|                              wrecv|       pointer|
+|word_row_usage_out         |  out|   32|      ap_vld|                 word_row_usage_out|       pointer|
+|word_row_usage_out_ap_vld  |  out|    1|      ap_vld|                 word_row_usage_out|       pointer|
+|wrecv_n_local_i            |   in|   32|     ap_ovld|                      wrecv_n_local|       pointer|
+|wrecv_n_local_o            |  out|   32|     ap_ovld|                      wrecv_n_local|       pointer|
+|wrecv_n_local_o_ap_vld     |  out|    1|     ap_ovld|                      wrecv_n_local|       pointer|
++---------------------------+-----+-----+------------+-----------------------------------+--------------+
+

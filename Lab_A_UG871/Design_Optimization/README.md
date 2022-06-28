@@ -1,0 +1,5 @@
+# 110061901_lab_a
+Design Optimization Source Code 為 來自Xilinx官方之教學用示範Code。
+HLS_Data_depend_and_limit_mem_example 為學生自行撰寫與合成之相關電路，亦包含測資，議題包含:data dependency與limit memory port之情形。
+HLS_dataflow example 為Xilinx提供之官方教學示範用Code，並且學生實際合成其電路結果。
+HLS_Design_Optimization 為學生按照Xilinx教學，對相關Code進行合成，與其相關測試結果。

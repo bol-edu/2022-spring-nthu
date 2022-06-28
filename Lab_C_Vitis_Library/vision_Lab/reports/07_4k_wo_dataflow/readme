@@ -1,0 +1,2 @@
+We changed the input into colordetect_4k_input.jpeg  in Makefile and commented the #pragma HLS DATAFLOW in xf_colordetect_accel.cpp.
+Kernel seems to halt mysteriously when dataflow is deactivated, so we don't have hardware emulation reports and hardware reports. (no xrt.run_summary)

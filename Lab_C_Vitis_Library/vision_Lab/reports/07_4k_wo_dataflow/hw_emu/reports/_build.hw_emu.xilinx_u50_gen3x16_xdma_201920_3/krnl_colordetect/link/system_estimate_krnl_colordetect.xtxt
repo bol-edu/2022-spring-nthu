@@ -1,0 +1,159 @@
+===============================================================================
+Version:    v++ v2021.2 (64-bit)
+Build:      SW Build 3363252 on 2021-10-14-04:41:01
+Copyright:  Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Created:    Sun May  1 01:38:07 2022
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             krnl_colordetect
+Target Device:           xilinx:u50:gen3x16_xdma:201920.3
+Target Clock:            300.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name   Type  Target              OpenCL Library    Compute Units
+------------  ----  ------------------  ----------------  -------------
+color_detect  c     fpga0:OCL_REGION_0  krnl_colordetect  1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     krnl_colordetect
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit    Kernel Name   Module Name                                                                    Target Frequency  Estimated Frequency
+--------------  ------------  -----------------------------------------------------------------------------  ----------------  -------------------
+color_detect_1  color_detect  Axi2AxiStream_Pipeline_VITIS_LOOP_1028_1                                       300.300293        411.015198
+color_detect_1  color_detect  Axi2AxiStream                                                                  300.300293        411.015198
+color_detect_1  color_detect  entry_proc29                                                                   300.300293        411.015198
+color_detect_1  color_detect  last_blk_pxl_width_1                                                           300.300293        821.692688
+color_detect_1  color_detect  AxiStream2MatStream_2_Pipeline_MMIterInLoopRow                                 300.300293        466.20047
+color_detect_1  color_detect  AxiStream2MatStream_2_s                                                        300.300293        466.20047
+color_detect_1  color_detect  AxiStream2Mat                                                                  300.300293        411.015198
+color_detect_1  color_detect  Axi2Mat                                                                        300.300293        411.015198
+color_detect_1  color_detect  bgr2hsv_9_2160_3840_1_Pipeline_VITIS_LOOP_128_1_VITIS_LOOP_132_2               300.300293        371.471039
+color_detect_1  color_detect  bgr2hsv_9_2160_3840_1_s                                                        300.300293        371.471039
+color_detect_1  color_detect  entry_proc30                                                                   300.300293        821.692688
+color_detect_1  color_detect  colorthresholding_9_0_3_2160_3840_1_Loop_VITIS_LOOP_138_1_proc                 300.300293        411.015198
+color_detect_1  color_detect  colorthresholding_9_0_3_2160_3840_1_Block_split2_proc                          300.300293        821.692688
+color_detect_1  color_detect  xFInRange_9_0_2160_3840_15_0_1_9_1_3_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_96_2  300.300293        520.833374
+color_detect_1  color_detect  xFInRange_9_0_2160_3840_15_0_1_9_1_3_s                                         300.300293        520.833374
+color_detect_1  color_detect  colorthresholding_9_0_3_2160_3840_1_s                                          300.300293        411.015198
+color_detect_1  color_detect  xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_263_1                   300.300293        1215.06677
+color_detect_1  color_detect  xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_278_2                   300.300293        813.008118
+color_detect_1  color_detect  xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_295_3                   300.300293        537.923645
+color_detect_1  color_detect  xfExtractPixels_1_1_0_s                                                        300.300293        inf
+color_detect_1  color_detect  xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_Col_Loop                           300.300293        425.713074
+color_detect_1  color_detect  xferode_2160_3840_1_0_1_0_3841_3_3_s                                           300.300293        425.713074
+color_detect_1  color_detect  erode_0_0_2160_3840_0_3_3_1_1_s                                                300.300293        425.713074
+color_detect_1  color_detect  xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_259_1                  300.300293        1215.06677
+color_detect_1  color_detect  xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_274_2                  300.300293        813.008118
+color_detect_1  color_detect  xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_291_3                  300.300293        537.923645
+color_detect_1  color_detect  xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_Col_Loop                          300.300293        425.713074
+color_detect_1  color_detect  xfdilate_2160_3840_1_0_1_0_3841_3_3_s                                          300.300293        425.713074
+color_detect_1  color_detect  dilate_0_0_2160_3840_0_3_3_1_1_s                                               300.300293        425.713074
+color_detect_1  color_detect  entry_proc31                                                                   300.300293        821.692688
+color_detect_1  color_detect  addrbound                                                                      300.300293        802.568176
+color_detect_1  color_detect  Mat2Axi_Block_split13_proc                                                     300.300293        821.692688
+color_detect_1  color_detect  entry_proc                                                                     300.300293        821.692688
+color_detect_1  color_detect  last_blk_pxl_width                                                             300.300293        821.692688
+color_detect_1  color_detect  MatStream2AxiStream_2_Pipeline_MMIterOutRow_MMIterOutCol                       300.300293        415.800415
+color_detect_1  color_detect  MatStream2AxiStream_2_s                                                        300.300293        415.800415
+color_detect_1  color_detect  Mat2AxiStream                                                                  300.300293        415.800415
+color_detect_1  color_detect  AxiStream2Axi_Pipeline_MMIterOutLoop2                                          300.300293        411.015198
+color_detect_1  color_detect  AxiStream2Axi                                                                  300.300293        411.015198
+color_detect_1  color_detect  Mat2Axi                                                                        300.300293        411.015198
+color_detect_1  color_detect  color_detect                                                                   300.300293        371.471039
+
+Latency Information
+Compute Unit    Kernel Name   Module Name                                                                    Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+--------------  ------------  -----------------------------------------------------------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+color_detect_1  color_detect  Axi2AxiStream_Pipeline_VITIS_LOOP_1028_1                                       4 ~ 2883        4              1443          2883            13.332 ns        4.810 us        9.609 us
+color_detect_1  color_detect  Axi2AxiStream                                                                  5 ~ 2958        5              762           2958            16.665 ns        2.540 us        9.859 us
+color_detect_1  color_detect  entry_proc29                                                                   0               0              0             0               0 ns             0 ns            0 ns
+color_detect_1  color_detect  last_blk_pxl_width_1                                                           0               0              0             0               0 ns             0 ns            0 ns
+color_detect_1  color_detect  AxiStream2MatStream_2_Pipeline_MMIterInLoopRow                                 6 ~ 8294405     6              4147205       8294405         19.998 ns        13.823 ms       27.645 ms
+color_detect_1  color_detect  AxiStream2MatStream_2_s                                                        10 ~ 8294409    10             4147209       8294409         33.330 ns        13.823 ms       27.645 ms
+color_detect_1  color_detect  AxiStream2Mat                                                                  11 ~ 8294410    11             4147210       8294410         36.663 ns        13.823 ms       27.645 ms
+color_detect_1  color_detect  Axi2Mat                                                                        11 ~ 8294410    82             4147281       8294481         0.273 us         13.823 ms       27.646 ms
+color_detect_1  color_detect  bgr2hsv_9_2160_3840_1_Pipeline_VITIS_LOOP_128_1_VITIS_LOOP_132_2               2 ~ 8294413     2              2073613       8294413         6.666 ns         6.911 ms        27.645 ms
+color_detect_1  color_detect  bgr2hsv_9_2160_3840_1_s                                                        7 ~ 8294418     7              2073618       8294418         23.331 ns        6.911 ms        27.645 ms
+color_detect_1  color_detect  entry_proc30                                                                   0               0              0             0               0 ns             0 ns            0 ns
+color_detect_1  color_detect  colorthresholding_9_0_3_2160_3840_1_Loop_VITIS_LOOP_138_1_proc                 87              87             87            87              0.290 us         0.290 us        0.290 us
+color_detect_1  color_detect  colorthresholding_9_0_3_2160_3840_1_Block_split2_proc                          0               0              0             0               0 ns             0 ns            0 ns
+color_detect_1  color_detect  xFInRange_9_0_2160_3840_15_0_1_9_1_3_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_96_2  2 ~ 8294403     2              2073603       8294403         6.666 ns         6.911 ms        27.645 ms
+color_detect_1  color_detect  xFInRange_9_0_2160_3840_15_0_1_9_1_3_s                                         6 ~ 8294407     6              2073607       8294407         19.998 ns        6.911 ms        27.645 ms
+color_detect_1  color_detect  colorthresholding_9_0_3_2160_3840_1_s                                          88 ~ 8294408    95             2073696       8294496         0.317 us         6.912 ms        27.646 ms
+color_detect_1  color_detect  xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_263_1                   5               5              5             5               16.665 ns        16.665 ns       16.665 ns
+color_detect_1  color_detect  xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_278_2                   4 ~ 3844        4              1924          3844            13.332 ns        6.413 us        12.812 us
+color_detect_1  color_detect  xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_295_3                   3 ~ 3843        3              1923          3843            9.999 ns         6.409 us        12.809 us
+color_detect_1  color_detect  xfExtractPixels_1_1_0_s                                                        1               0              0             0               0 ns             0 ns            0 ns
+color_detect_1  color_detect  xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_Col_Loop                           10 ~ 3850       10             1930          3850            33.330 ns        6.433 us        12.832 us
+color_detect_1  color_detect  xferode_2160_3840_1_0_1_0_3841_3_3_s                                           25 ~ 8328012    25             2090412       8328012         83.325 ns        6.967 ms        27.757 ms
+color_detect_1  color_detect  erode_0_0_2160_3840_0_3_3_1_1_s                                                26 ~ 8328013    26             2090413       8328013         86.658 ns        6.967 ms        27.757 ms
+color_detect_1  color_detect  xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_259_1                  5               5              5             5               16.665 ns        16.665 ns       16.665 ns
+color_detect_1  color_detect  xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_274_2                  4 ~ 3844        4              1924          3844            13.332 ns        6.413 us        12.812 us
+color_detect_1  color_detect  xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_291_3                  3 ~ 3843        3              1923          3843            9.999 ns         6.409 us        12.809 us
+color_detect_1  color_detect  xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_Col_Loop                          10 ~ 3850       10             1930          3850            33.330 ns        6.433 us        12.832 us
+color_detect_1  color_detect  xfdilate_2160_3840_1_0_1_0_3841_3_3_s                                          25 ~ 8328012    25             2090412       8328012         83.325 ns        6.967 ms        27.757 ms
+color_detect_1  color_detect  dilate_0_0_2160_3840_0_3_3_1_1_s                                               26 ~ 8328013    26             2090413       8328013         86.658 ns        6.967 ms        27.757 ms
+color_detect_1  color_detect  entry_proc31                                                                   0               0              0             0               0 ns             0 ns            0 ns
+color_detect_1  color_detect  addrbound                                                                      3               3              3             3               9.999 ns         9.999 ns        9.999 ns
+color_detect_1  color_detect  Mat2Axi_Block_split13_proc                                                     0               0              0             0               0 ns             0 ns            0 ns
+color_detect_1  color_detect  entry_proc                                                                     0               0              0             0               0 ns             0 ns            0 ns
+color_detect_1  color_detect  last_blk_pxl_width                                                             0               0              0             0               0 ns             0 ns            0 ns
+color_detect_1  color_detect  MatStream2AxiStream_2_Pipeline_MMIterOutRow_MMIterOutCol                       4 ~ 8294403     4              2073603       8294403         13.332 ns        6.911 ms        27.645 ms
+color_detect_1  color_detect  MatStream2AxiStream_2_s                                                        9 ~ 8294408     9              2073608       8294408         29.997 ns        6.911 ms        27.645 ms
+color_detect_1  color_detect  Mat2AxiStream                                                                  10 ~ 8294409    10             2073609       8294409         33.330 ns        6.911 ms        27.645 ms
+color_detect_1  color_detect  AxiStream2Axi_Pipeline_MMIterOutLoop2                                          4 ~ 8294403     4              4147203       8294403         13.332 ns        13.823 ms       27.645 ms
+color_detect_1  color_detect  AxiStream2Axi                                                                  1 ~ 8294474     1              2073638       8294474         3.333 ns         6.911 ms        27.645 ms
+color_detect_1  color_detect  Mat2Axi                                                                        10 ~ 8294475    10             2073642       8294478         33.330 ns        6.911 ms        27.645 ms
+color_detect_1  color_detect  color_detect                                                                   315 ~ 66489942  314            18729905      66489941        1.047 us         62.427 ms       0.222 sec
+
+Area Information
+Compute Unit    Kernel Name   Module Name                                                                    FF    LUT    DSP  BRAM  URAM
+--------------  ------------  -----------------------------------------------------------------------------  ----  -----  ---  ----  ----
+color_detect_1  color_detect  Axi2AxiStream_Pipeline_VITIS_LOOP_1028_1                                       62    107    0    0     0
+color_detect_1  color_detect  Axi2AxiStream                                                                  252   730    0    0     0
+color_detect_1  color_detect  entry_proc29                                                                   2     47     0    0     0
+color_detect_1  color_detect  last_blk_pxl_width_1                                                           3     20     0    0     0
+color_detect_1  color_detect  AxiStream2MatStream_2_Pipeline_MMIterInLoopRow                                 724   2059   0    0     0
+color_detect_1  color_detect  AxiStream2MatStream_2_s                                                        802   2197   0    0     0
+color_detect_1  color_detect  AxiStream2Mat                                                                  831   2344   0    0     0
+color_detect_1  color_detect  Axi2Mat                                                                        1223  3162   0    0     0
+color_detect_1  color_detect  bgr2hsv_9_2160_3840_1_Pipeline_VITIS_LOOP_128_1_VITIS_LOOP_132_2               648   756    0    5     0
+color_detect_1  color_detect  bgr2hsv_9_2160_3840_1_s                                                        679   811    0    5     0
+color_detect_1  color_detect  entry_proc30                                                                   2     29     0    0     0
+color_detect_1  color_detect  colorthresholding_9_0_3_2160_3840_1_Loop_VITIS_LOOP_138_1_proc                 984   1082   0    0     0
+color_detect_1  color_detect  colorthresholding_9_0_3_2160_3840_1_Block_split2_proc                          146   173    0    0     0
+color_detect_1  color_detect  xFInRange_9_0_2160_3840_15_0_1_9_1_3_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_96_2  32    375    0    0     0
+color_detect_1  color_detect  xFInRange_9_0_2160_3840_15_0_1_9_1_3_s                                         63    453    0    0     0
+color_detect_1  color_detect  colorthresholding_9_0_3_2160_3840_1_s                                          1963  2821   0    0     0
+color_detect_1  color_detect  xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_263_1                   4     88     0    0     0
+color_detect_1  color_detect  xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_278_2                   49    80     0    0     0
+color_detect_1  color_detect  xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_295_3                   14    58     0    0     0
+color_detect_1  color_detect  xfExtractPixels_1_1_0_s                                                        0     0      0    0     0
+color_detect_1  color_detect  xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_Col_Loop                           553   642    0    0     0
+color_detect_1  color_detect  xferode_2160_3840_1_0_1_0_3841_3_3_s                                           763   1186   0    6     0
+color_detect_1  color_detect  erode_0_0_2160_3840_0_3_3_1_1_s                                                766   1218   0    6     0
+color_detect_1  color_detect  xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_259_1                  4     88     0    0     0
+color_detect_1  color_detect  xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_274_2                  49    80     0    0     0
+color_detect_1  color_detect  xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_291_3                  14    58     0    0     0
+color_detect_1  color_detect  xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_Col_Loop                          553   642    0    0     0
+color_detect_1  color_detect  xfdilate_2160_3840_1_0_1_0_3841_3_3_s                                          763   1186   0    6     0
+color_detect_1  color_detect  dilate_0_0_2160_3840_0_3_3_1_1_s                                               766   1218   0    6     0
+color_detect_1  color_detect  entry_proc31                                                                   2     20     0    0     0
+color_detect_1  color_detect  addrbound                                                                      53    46     0    0     0
+color_detect_1  color_detect  Mat2Axi_Block_split13_proc                                                     26    20     0    0     0
+color_detect_1  color_detect  entry_proc                                                                     2     29     0    0     0
+color_detect_1  color_detect  last_blk_pxl_width                                                             3     20     0    0     0
+color_detect_1  color_detect  MatStream2AxiStream_2_Pipeline_MMIterOutRow_MMIterOutCol                       91    379    0    0     0
+color_detect_1  color_detect  MatStream2AxiStream_2_s                                                        152   517    0    0     0
+color_detect_1  color_detect  Mat2AxiStream                                                                  181   646    0    0     0
+color_detect_1  color_detect  AxiStream2Axi_Pipeline_MMIterOutLoop2                                          37    107    0    0     0
+color_detect_1  color_detect  AxiStream2Axi                                                                  176   649    0    0     0
+color_detect_1  color_detect  Mat2Axi                                                                        602   1561   0    0     0
+color_detect_1  color_detect  color_detect                                                                   9173  14806  0    25    0
+-------------------------------------------------------------------------------

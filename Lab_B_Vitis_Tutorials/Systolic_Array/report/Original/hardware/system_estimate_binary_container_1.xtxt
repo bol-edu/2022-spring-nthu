@@ -1,0 +1,51 @@
+===============================================================================
+Version:    v++ v2021.2 (64-bit)
+Build:      SW Build 3363252 on 2021-10-14-04:41:01
+Copyright:  Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Created:    Sat Mar 26 01:15:34 2022
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             binary_container_1
+Target Device:           xilinx:u50:gen3x16_xdma:201920.3
+Target Clock:            300.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library      Compute Units
+-----------  ----  ------------------  ------------------  -------------
+mmult        c     fpga0:OCL_REGION_0  binary_container_1  1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     binary_container_1
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name                                   Target Frequency  Estimated Frequency
+------------  -----------  --------------------------------------------  ----------------  -------------------
+mmult_1       mmult        mmult_Pipeline_readA                          300.300293        411.015198
+mmult_1       mmult        mmult_Pipeline_readB                          300.300293        411.015198
+mmult_1       mmult        mmult_Pipeline_systolic1_systolic2_systolic3  300.300293        435.729828
+mmult_1       mmult        mmult_Pipeline_writeC                         300.300293        411.015198
+mmult_1       mmult        mmult                                         300.300293        411.015198
+
+Latency Information
+Compute Unit  Kernel Name  Module Name                                   Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------  -----------  --------------------------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+mmult_1       mmult        mmult_Pipeline_readA                          259             259            259           259             0.863 us         0.863 us        0.863 us
+mmult_1       mmult        mmult_Pipeline_readB                          259             259            259           259             0.863 us         0.863 us        0.863 us
+mmult_1       mmult        mmult_Pipeline_systolic1_systolic2_systolic3  4102            4102           4102          4102            13.672 us        13.672 us       13.672 us
+mmult_1       mmult        mmult_Pipeline_writeC                         260             260            260           260             0.867 us         0.867 us        0.867 us
+mmult_1       mmult        mmult                                         4114 ~ 5103     4113           4608          5102            13.709 us        15.358 us       17.005 us
+
+Area Information
+Compute Unit  Kernel Name  Module Name                                   FF    LUT   DSP  BRAM  URAM
+------------  -----------  --------------------------------------------  ----  ----  ---  ----  ----
+mmult_1       mmult        mmult_Pipeline_readA                          141   303   0    0     0
+mmult_1       mmult        mmult_Pipeline_readB                          141   303   0    0     0
+mmult_1       mmult        mmult_Pipeline_systolic1_systolic2_systolic3  575   867   0    0     0
+mmult_1       mmult        mmult_Pipeline_writeC                         145   301   0    0     0
+mmult_1       mmult        mmult                                         3018  4967  0    6     0
+-------------------------------------------------------------------------------

@@ -1,0 +1,25 @@
+
+
+================================================================
+== Synthesis Summary Report of 'aaa'
+================================================================
++ General Information: 
+    * Date:           Mon Mar 28 17:09:01 2022
+    * Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)
+    * Project:        labtest
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xczu7ev-ffvc1156-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------+------+-------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    | Modules| Issue|       | Latency | Latency| Iteration|         | Trip |          |      |    |           |           |     |
+    | & Loops| Type | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT    | URAM|
+    +--------+------+-------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |+ aaa   |     -|  -4.54|        -|       -|         -|        -|     -|        no|     -|   -|  647 (~0%)|  2679 (1%)|    -|
+    | o add  |     -|  -7.30|        -|       -|         1|        1|     -|       yes|     -|   -|          -|          -|    -|
+    +--------+------+-------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+

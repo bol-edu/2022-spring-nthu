@@ -1,0 +1,153 @@
+
+
+================================================================
+== Synthesis Summary Report of 'hls_real2xfft'
+================================================================
++ General Information: 
+    * Date:           Tue Mar 22 00:36:09 2022
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+    * Project:        labA_2
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+---------+-----------+-----------+-----+
+    |                                       Modules                                       |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |         |         |           |           |     |
+    |                                       & Loops                                       |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |   DSP   |     FF    |    LUT    | URAM|
+    +-------------------------------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+---------+-----------+-----------+-----+
+    |+ hls_real2xfft*                                                                     |  Timing|  -0.00|      523|  2.615e+03|         -|      512|     -|  dataflow|   6 (2%)|  2 (~0%)|  1416 (1%)|  1229 (2%)|    -|
+    | + Loop_sliding_win_delay_proc1                                                      |       -|   0.21|      513|  2.565e+03|         -|      513|     -|        no|        -|        -|  105 (~0%)|  178 (~0%)|    -|
+    |  o sliding_win_delay                                                                |       -|   3.65|      512|  2.560e+03|         2|        1|   512|       yes|        -|        -|          -|          -|    -|
+    | + Loop_sliding_win_output_proc2                                                     |  Timing|  -0.00|      514|  2.570e+03|         -|      514|     -|        no|        -|        -|   61 (~0%)|  181 (~0%)|    -|
+    |  o sliding_win_output                                                               |       -|   3.65|      513|  2.565e+03|         3|        1|   512|       yes|        -|        -|          -|          -|    -|
+    | + window_fn_ap_fixed_16_1_5_3_0_ap_fixed_16_1_5_3_0_ap_fixed_16_1_5_0_0_1024_2_2_s  |       -|   0.40|      518|  2.590e+03|         -|      518|     -|        no|  2 (~0%)|  2 (~0%)|  189 (~0%)|  165 (~0%)|    -|
+    |  o apply_win_fn                                                                     |       -|   3.65|      517|  2.585e+03|         7|        1|   512|       yes|        -|        -|          -|          -|    -|
+    | + Loop_real2xfft_output_proc3                                                       |       -|   1.82|      513|  2.565e+03|         -|      513|     -|        no|        -|        -|   25 (~0%)|  119 (~0%)|    -|
+    |  o real2xfft_output                                                                 |       -|   3.65|      512|  2.560e+03|         2|        1|   512|       yes|        -|        -|          -|          -|    -|
+    +-------------------------------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+---------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AXIS
++-----------+---------------+-------+--------+--------+
+| Interface | Register Mode | TDATA | TREADY | TVALID |
++-----------+---------------+-------+--------+--------+
+| din       | both          | 16    | 1      | 1      |
+| dout      | both          | 48    | 1      | 1      |
++-----------+---------------+-------+--------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst_n  | reset      | ap_rst_n                          |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+---------------------------------------------------------------+
+| Argument | Direction | Datatype                                                      |
++----------+-----------+---------------------------------------------------------------+
+| din      | in        | stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>&               |
+| dout     | out       | stream<xfft_axis_t<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> >, 0>& |
++----------+-----------+---------------------------------------------------------------+
+
+* SW-to-HW Mapping
++----------+--------------+-----------+
+| Argument | HW Interface | HW Type   |
++----------+--------------+-----------+
+| din      | din          | interface |
+| dout     | dout         | interface |
++----------+--------------+-----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------------------------------------------------------------------+-----+--------+----------+-----+--------+---------+
+| Name                                                                                | DSP | Pragma | Variable | Op  | Impl   | Latency |
++-------------------------------------------------------------------------------------+-----+--------+----------+-----+--------+---------+
+| + hls_real2xfft                                                                     | 2   |        |          |     |        |         |
+|  + Loop_sliding_win_delay_proc1                                                     | 0   |        |          |     |        |         |
+|    i_fu_106_p2                                                                      | -   |        | i        | add | fabric | 0       |
+|  + Loop_sliding_win_output_proc2                                                    | 0   |        |          |     |        |         |
+|    i_fu_124_p2                                                                      | -   |        | i        | add | fabric | 0       |
+|  + window_fn_ap_fixed_16_1_5_3_0_ap_fixed_16_1_5_3_0_ap_fixed_16_1_5_0_0_1024_2_2_s | 2   |        |          |     |        |         |
+|    mul_mul_16s_15ns_31_4_1_U14                                                      | 1   |        | r_V_1    | mul | dsp    | 3       |
+|    mul_mul_16s_15ns_31_4_1_U15                                                      | 1   |        | r_V_3    | mul | dsp    | 3       |
+|    i_fu_144_p2                                                                      | -   |        | i        | add | fabric | 0       |
+|  + Loop_real2xfft_output_proc3                                                      | 0   |        |          |     |        |         |
+|    i_fu_106_p2                                                                      | -   |        | i        | add | fabric | 0       |
++-------------------------------------------------------------------------------------+-----+--------+----------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++-------------------------------------------------------------------------------------+------+------+--------+------------------+---------+--------+---------+
+| Name                                                                                | BRAM | URAM | Pragma | Variable         | Storage | Impl   | Latency |
++-------------------------------------------------------------------------------------+------+------+--------+------------------+---------+--------+---------+
+| + hls_real2xfft                                                                     | 6    | 0    |        |                  |         |        |         |
+|   nodelay_V_U                                                                       | 1    | -    |        | nodelay_V        | fifo    | memory | 0       |
+|   nodelay_V_1_U                                                                     | 1    | -    |        | nodelay_V_1      | fifo    | memory | 0       |
+|   delayed_V_U                                                                       | 1    | -    |        | delayed_V        | fifo    | memory | 0       |
+|   delayed_V_1_U                                                                     | 1    | -    |        | delayed_V_1      | fifo    | memory | 0       |
+|   data2window_V_U                                                                   | -    | -    |        | data2window_V    | fifo    | srl    | 0       |
+|   data2window_V_2_U                                                                 | -    | -    |        | data2window_V_2  | fifo    | srl    | 0       |
+|   windowed_V_U                                                                      | -    | -    |        | windowed_V       | fifo    | srl    | 0       |
+|   windowed_V_1_U                                                                    | -    | -    |        | windowed_V_1     | fifo    | srl    | 0       |
+|  + Loop_sliding_win_delay_proc1                                                     | 0    | 0    |        |                  |         |        |         |
+|    delay_line_Array_U                                                               | -    | -    |        | delay_line_Array | ram_1p  | auto   | 0       |
+|  + window_fn_ap_fixed_16_1_5_3_0_ap_fixed_16_1_5_3_0_ap_fixed_16_1_5_0_0_1024_2_2_s | 2    | 0    |        |                  |         |        |         |
+|    coeff_tab_0_U                                                                    | 1    | -    |        | coeff_tab_0      | rom_1p  | auto   | 1       |
+|    coeff_tab_1_U                                                                    | 1    | -    |        | coeff_tab_1      | rom_1p  | auto   | 1       |
++-------------------------------------------------------------------------------------+------+------+--------+------------------+---------+--------+---------+
+
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+---------------------------------------------+----------------------------------------------------------------------+
+| Type            | Options                                     | Location                                                             |
++-----------------+---------------------------------------------+----------------------------------------------------------------------+
+| interface       | axis port=dout                              | hls_designs/real2xfft.cpp:63 in hls_real2xfft, dout                  |
+| interface       | axis port=din                               | hls_designs/real2xfft.cpp:64 in hls_real2xfft, din                   |
+| array_partition | variable=data2window cyclic factor=2        | hls_designs/real2xfft.cpp:66 in hls_real2xfft, data2window           |
+| array_partition | variable=windowed cyclic factor=2           | hls_designs/real2xfft.cpp:67 in hls_real2xfft, windowed              |
+| stream          | variable=data2window,windowed depth=2       | hls_designs/real2xfft.cpp:68 in hls_real2xfft, data2window,windowed  |
+| dataflow        |                                             | hls_designs/real2xfft.cpp:69 in hls_real2xfft                        |
+| pipeline        | rewind                                      | hls_designs/real2xfft.cpp:78 in hls_real2xfft                        |
+| bind_op         | variable=fft_axis_d.last op=sub impl=fabric | hls_designs/real2xfft.cpp:83 in hls_real2xfft, fft_axis_d.last       |
+| array_partition | variable=nodelay,delayed cyclic factor=2    | hls_designs/sliding_win.h:67 in sliding_win_1in2out, nodelay,delayed |
+| stream          | depth=DELAY_LEN variable=nodelay            | hls_designs/sliding_win.h:68 in sliding_win_1in2out, nodelay         |
+| stream          | depth=DELAY_FIFO_DEPTH variable=delayed     | hls_designs/sliding_win.h:69 in sliding_win_1in2out, delayed         |
+| inline          |                                             | hls_designs/sliding_win.h:70 in sliding_win_1in2out                  |
+| dataflow        |                                             | hls_designs/sliding_win.h:71 in sliding_win_1in2out                  |
+| pipeline        | rewind                                      | hls_designs/sliding_win.h:76 in sliding_win_1in2out                  |
+| unroll          | factor=2                                    | hls_designs/sliding_win.h:84 in sliding_win_1in2out                  |
+| pipeline        | rewind                                      | hls_designs/sliding_win.h:85 in sliding_win_1in2out                  |
+| array_partition | variable=coeff_tab cyclic factor=UF         | hls_designs/window_fn.h:52 in window_fn, coeff_tab                   |
+| unroll          | factor=UF                                   | hls_designs/window_fn.h:56 in window_fn                              |
+| pipeline        | rewind                                      | hls_designs/window_fn.h:57 in window_fn                              |
++-----------------+---------------------------------------------+----------------------------------------------------------------------+
+
+

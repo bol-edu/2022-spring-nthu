@@ -1,0 +1,142 @@
+
+
+================================================================
+== Synthesis Summary Report of 'mer_ori'
+================================================================
++ General Information: 
+    * Date:           Mon Mar 21 17:50:11 2022
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+    * Project:        mer_ori
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |                Modules               |  Issue |       | Latency | Latency | Iteration|         | Trip |          |      |    |           |           |     |
+    |                & Loops               |  Type  | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT    | URAM|
+    +--------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |+ mer_ori                             |  Timing|  -0.00|        -|        -|         -|        -|     -|        no|     -|   -|  1576 (1%)|  1205 (2%)|    -|
+    | + mer_ori_Pipeline_data_in           |       -|   2.66|       18|  180.000|         -|       18|     -|        no|     -|   -|   13 (~0%)|   61 (~0%)|    -|
+    |  o data_in                           |       -|   7.30|       16|  160.000|         2|        1|    16|       yes|     -|   -|          -|          -|    -|
+    | + mer_ori_Pipeline_data_out          |       -|   2.66|       18|  180.000|         -|       18|     -|        no|     -|   -|   13 (~0%)|   61 (~0%)|    -|
+    |  o data_out                          |       -|   7.30|       16|  160.000|         2|        1|    16|       yes|     -|   -|          -|          -|    -|
+    | o stage                              |       -|   7.30|        -|        -|         -|        -|     -|        no|     -|   -|          -|          -|    -|
+    |  + mer_ori_Pipeline_copy             |       -|   2.66|       18|  180.000|         -|       18|     -|        no|     -|   -|   13 (~0%)|   61 (~0%)|    -|
+    |   o copy                             |       -|   7.30|       16|  160.000|         2|        1|    16|       yes|     -|   -|          -|          -|    -|
+    |  o merge_arrays                      |       -|   7.30|        -|        -|         -|        -|     -|        no|     -|   -|          -|          -|    -|
+    |   + mer_ori_Pipeline_VITIS_LOOP_7_1  |       -|   0.92|        -|        -|         -|        -|     -|        no|     -|   -|  331 (~0%)|  355 (~0%)|    -|
+    |    o VITIS_LOOP_7_1                  |       -|   7.30|        -|        -|         3|        1|     -|       yes|     -|   -|          -|          -|    -|
+    +--------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 8             | 64     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                               |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                 |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN 5=CHAN2_INT_EN             |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST 5=CHAN2_INT_ST             |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| in       | in        | int*     |
+| out      | out       | int*     |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+
+| Argument | HW Interface  | HW Type   |
++----------+---------------+-----------+
+| in       | s_axi_control | interface |
+| out      | s_axi_control | interface |
++----------+---------------+-----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------+-----+--------+----------+-----+--------+---------+
+| Name                               | DSP | Pragma | Variable | Op  | Impl   | Latency |
++------------------------------------+-----+--------+----------+-----+--------+---------+
+| + mer_ori                          | 0   |        |          |     |        |         |
+|   i2_fu_170_p2                     | -   |        | i2       | add | fabric | 0       |
+|   i3_fu_175_p2                     | -   |        | i3       | add | fabric | 0       |
+|   add_ln42_fu_231_p2               | -   |        | add_ln42 | add | fabric | 0       |
+|  + mer_ori_Pipeline_data_in        | 0   |        |          |     |        |         |
+|    add_ln33_fu_89_p2               | -   |        | add_ln33 | add | fabric | 0       |
+|  + mer_ori_Pipeline_data_out       | 0   |        |          |     |        |         |
+|    add_ln61_fu_89_p2               | -   |        | add_ln61 | add | fabric | 0       |
+|  + mer_ori_Pipeline_VITIS_LOOP_7_1 | 0   |        |          |     |        |         |
+|    f2_1_fu_226_p2                  | -   |        | f2_1     | add | fabric | 0       |
+|    f1_1_fu_245_p2                  | -   |        | f1_1     | add | fabric | 0       |
+|    add_ln7_fu_201_p2               | -   |        | add_ln7  | add | fabric | 0       |
+|  + mer_ori_Pipeline_copy           | 0   |        |          |     |        |         |
+|    add_ln55_fu_75_p2               | -   |        | add_ln55 | add | fabric | 0       |
++------------------------------------+-----+--------+----------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++-----------+------+------+--------+----------+---------+------+---------+
+| Name      | BRAM | URAM | Pragma | Variable | Storage | Impl | Latency |
++-----------+------+------+--------+----------+---------+------+---------+
+| + mer_ori | 0    | 0    |        |          |         |      |         |
+|   temp_U  | -    | -    |        | temp     | ram_1p  | auto | 1       |
+|   A_U     | -    | -    |        | A        | rom_np  | auto | 1       |
++-----------+------+------+--------+----------+---------+------+---------+
+
+
+================================================================
+== User Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+-----------------------------+--------------------------------------+
+| Type      | Options                     | Location                             |
++-----------+-----------------------------+--------------------------------------+
+| interface | s_axilite port=return       | ../mer_ori.cpp:25 in mer_ori, return |
+| interface | s_axilite register port=in  | ../mer_ori.cpp:26 in mer_ori, in     |
+| interface | s_axilite register port=out | ../mer_ori.cpp:27 in mer_ori, out    |
+| unroll    |                             | ../mer_ori.cpp:45 in mer_ori         |
++-----------+-----------------------------+--------------------------------------+
+
+

@@ -1,0 +1,182 @@
+
+
+================================================================
+== Vitis HLS Report for 'DeModulation'
+================================================================
+* Date:           Fri Jun 17 13:16:16 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        MIMO
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  40.00 ns|  5.269 ns|    10.80 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      130|      130|  5.200 us|  5.200 us|  130|  130|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_14_1  |      128|      128|         9|          8|          1|    16|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     175|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|     130|    -|
+|Register         |        -|     -|     130|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     130|     305|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1824|  2520|  548160|  274080|    0|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |data_idx_10_fu_87_p2              |         +|   0|  0|  12|           5|           1|
+    |ap_block_pp0_stage2_11001         |       and|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage1_iter0  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_251                  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln14_fu_81_p2                |      icmp|   0|  0|  10|           5|           6|
+    |icmp_ln1547_1_fu_103_p2           |      icmp|   0|  0|  13|          16|           1|
+    |icmp_ln1547_2_fu_108_p2           |      icmp|   0|  0|  13|          16|           1|
+    |icmp_ln1547_3_fu_113_p2           |      icmp|   0|  0|  13|          16|           1|
+    |icmp_ln1547_4_fu_118_p2           |      icmp|   0|  0|  13|          16|           1|
+    |icmp_ln1547_5_fu_123_p2           |      icmp|   0|  0|  13|          16|           1|
+    |icmp_ln1547_6_fu_128_p2           |      icmp|   0|  0|  13|          16|           1|
+    |icmp_ln1547_7_fu_133_p2           |      icmp|   0|  0|  13|          16|           1|
+    |icmp_ln1547_fu_98_p2              |      icmp|   0|  0|  13|          16|           1|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage1_11001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state9_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |demod_out_din                     |    select|   0|  0|   8|           1|           8|
+    |select_ln39_1_fu_171_p3           |    select|   0|  0|   3|           1|           3|
+    |select_ln39_2_fu_191_p3           |    select|   0|  0|   4|           1|           4|
+    |select_ln39_3_fu_211_p3           |    select|   0|  0|   5|           1|           5|
+    |select_ln39_4_fu_231_p3           |    select|   0|  0|   6|           1|           6|
+    |select_ln39_5_fu_251_p3           |    select|   0|  0|   7|           1|           7|
+    |select_ln39_fu_151_p3             |    select|   0|  0|   2|           1|           2|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0| 175|         152|          58|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------+----+-----------+-----+-----------+
+    |             Name            | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------+----+-----------+-----+-----------+
+    |KB_out_blk_n                 |   9|          2|    1|          2|
+    |ap_NS_fsm                    |  49|          9|    1|          9|
+    |ap_done_int                  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0      |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0_reg  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1      |   9|          2|    1|          2|
+    |ap_sig_allocacmp_data_idx_9  |   9|          2|    5|         10|
+    |data_idx_fu_56               |   9|          2|    5|         10|
+    |demod_out_blk_n              |   9|          2|    1|          2|
+    |real_start                   |   9|          2|    1|          2|
+    +-----------------------------+----+-----------+-----+-----------+
+    |Total                        | 130|         27|   18|         43|
+    +-----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+----+----+-----+-----------+
+    |             Name            | FF | LUT| Bits| Const Bits|
+    +-----------------------------+----+----+-----+-----------+
+    |KB_out_read_1_reg_296        |  16|   0|   16|          0|
+    |KB_out_read_2_reg_301        |  16|   0|   16|          0|
+    |KB_out_read_3_reg_306        |  16|   0|   16|          0|
+    |KB_out_read_4_reg_311        |  16|   0|   16|          0|
+    |KB_out_read_5_reg_316        |  16|   0|   16|          0|
+    |KB_out_read_6_reg_321        |  16|   0|   16|          0|
+    |KB_out_read_reg_291          |  16|   0|   16|          0|
+    |ap_CS_fsm                    |   8|   0|    8|          0|
+    |ap_done_reg                  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0_reg  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1      |   1|   0|    1|          0|
+    |data_idx_fu_56               |   5|   0|    5|          0|
+    |icmp_ln14_reg_287            |   1|   0|    1|          0|
+    |start_once_reg               |   1|   0|    1|          0|
+    +-----------------------------+----+----+-----+-----------+
+    |Total                        | 130|   0|  130|          0|
+    +-----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+------------+--------------+--------------+
+|     RTL Ports    | Dir | Bits|  Protocol  | Source Object|    C Type    |
++------------------+-----+-----+------------+--------------+--------------+
+|ap_clk            |   in|    1|  ap_ctrl_hs|  DeModulation|  return value|
+|ap_rst            |   in|    1|  ap_ctrl_hs|  DeModulation|  return value|
+|ap_start          |   in|    1|  ap_ctrl_hs|  DeModulation|  return value|
+|start_full_n      |   in|    1|  ap_ctrl_hs|  DeModulation|  return value|
+|ap_done           |  out|    1|  ap_ctrl_hs|  DeModulation|  return value|
+|ap_continue       |   in|    1|  ap_ctrl_hs|  DeModulation|  return value|
+|ap_idle           |  out|    1|  ap_ctrl_hs|  DeModulation|  return value|
+|ap_ready          |  out|    1|  ap_ctrl_hs|  DeModulation|  return value|
+|start_out         |  out|    1|  ap_ctrl_hs|  DeModulation|  return value|
+|start_write       |  out|    1|  ap_ctrl_hs|  DeModulation|  return value|
+|KB_out_dout       |   in|   16|     ap_fifo|        KB_out|       pointer|
+|KB_out_empty_n    |   in|    1|     ap_fifo|        KB_out|       pointer|
+|KB_out_read       |  out|    1|     ap_fifo|        KB_out|       pointer|
+|demod_out_din     |  out|    8|     ap_fifo|     demod_out|       pointer|
+|demod_out_full_n  |   in|    1|     ap_fifo|     demod_out|       pointer|
+|demod_out_write   |  out|    1|     ap_fifo|     demod_out|       pointer|
++------------------+-----+-----+------------+--------------+--------------+
+

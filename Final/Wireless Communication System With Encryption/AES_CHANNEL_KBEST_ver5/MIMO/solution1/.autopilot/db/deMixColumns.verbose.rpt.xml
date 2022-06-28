@@ -1,0 +1,252 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'deMixColumns'" level="0">
+<item name = "Date">Fri Jun 17 13:16:16 2022
+</item>
+<item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)</item>
+<item name = "Project">MIMO</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu9eg-ffvb1156-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">40.00 ns, 3.912 ns, 10.80 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">15, 15, 0.600 us, 0.600 us, 16, 16, yes</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_GFMul_fu_197">GFMul, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="grp_GFMul_fu_205">GFMul, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="grp_GFMul_fu_213">GFMul, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="grp_GFMul_fu_221">GFMul, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="grp_GFMul_fu_229">GFMul, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 1536, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 0, 4405, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 668, -</column>
+<column name="Register">-, -, 2000, -, -</column>
+<specialColumn name="Available">1824, 2520, 548160, 274080, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, 2, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_GFMul_fu_197">GFMul, 0, 0, 0, 881, 0</column>
+<column name="grp_GFMul_fu_205">GFMul, 0, 0, 0, 881, 0</column>
+<column name="grp_GFMul_fu_213">GFMul, 0, 0, 0, 881, 0</column>
+<column name="grp_GFMul_fu_221">GFMul, 0, 0, 0, 881, 0</column>
+<column name="grp_GFMul_fu_229">GFMul, 0, 0, 0, 881, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="xor_ln413_10_fu_346_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_11_fu_320_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_12_fu_357_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_13_fu_381_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_14_fu_361_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_15_fu_396_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_16_fu_294_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_17_fu_336_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_18_fu_299_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_19_fu_411_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_1_fu_273_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_20_fu_310_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_21_fu_429_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_22_fu_315_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_23_fu_447_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_24_fu_372_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_25_fu_465_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_26_fu_376_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_27_fu_483_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_28_fu_387_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_29_fu_501_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_2_fu_268_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_30_fu_391_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_31_fu_519_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_32_fu_326_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_33_fu_331_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_34_fu_402_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_35_fu_406_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_36_fu_417_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_37_fu_423_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_38_fu_435_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_39_fu_441_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_3_fu_288_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_40_fu_453_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_41_fu_459_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_42_fu_471_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_43_fu_477_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_44_fu_489_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_45_fu_495_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_46_fu_507_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_47_fu_513_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_4_fu_279_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_5_fu_351_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_6_fu_283_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_7_fu_366_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_8_fu_342_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_9_fu_304_p2">xor, 0, 0, 32, 32, 32</column>
+<column name="xor_ln413_fu_264_p2">xor, 0, 0, 32, 32, 32</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">81, 17, 1, 17</column>
+<column name="array_r_address0">81, 17, 4, 68</column>
+<column name="array_r_address1">81, 17, 4, 68</column>
+<column name="array_r_d0">49, 9, 32, 288</column>
+<column name="array_r_d1">49, 9, 32, 288</column>
+<column name="grp_GFMul_fu_197_n">26, 5, 4, 20</column>
+<column name="grp_GFMul_fu_197_s">37, 7, 32, 224</column>
+<column name="grp_GFMul_fu_205_n">26, 5, 4, 20</column>
+<column name="grp_GFMul_fu_205_s">37, 7, 32, 224</column>
+<column name="grp_GFMul_fu_213_n">26, 5, 4, 20</column>
+<column name="grp_GFMul_fu_213_s">37, 7, 32, 224</column>
+<column name="grp_GFMul_fu_221_n">26, 5, 4, 20</column>
+<column name="grp_GFMul_fu_221_s">37, 7, 32, 224</column>
+<column name="grp_GFMul_fu_229_n">26, 5, 4, 20</column>
+<column name="grp_GFMul_fu_229_s">49, 9, 32, 288</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">16, 0, 16, 0</column>
+<column name="array_load_10_reg_761">32, 0, 32, 0</column>
+<column name="array_load_11_reg_767">32, 0, 32, 0</column>
+<column name="array_load_12_reg_808">32, 0, 32, 0</column>
+<column name="array_load_13_reg_813">32, 0, 32, 0</column>
+<column name="array_load_14_reg_844">32, 0, 32, 0</column>
+<column name="array_load_15_reg_850">32, 0, 32, 0</column>
+<column name="array_load_1_reg_550">32, 0, 32, 0</column>
+<column name="array_load_2_reg_576">32, 0, 32, 0</column>
+<column name="array_load_3_reg_582">32, 0, 32, 0</column>
+<column name="array_load_4_reg_623">32, 0, 32, 0</column>
+<column name="array_load_5_reg_628">32, 0, 32, 0</column>
+<column name="array_load_6_reg_669">32, 0, 32, 0</column>
+<column name="array_load_7_reg_675">32, 0, 32, 0</column>
+<column name="array_load_8_reg_716">32, 0, 32, 0</column>
+<column name="array_load_9_reg_721">32, 0, 32, 0</column>
+<column name="array_load_reg_545">32, 0, 32, 0</column>
+<column name="reg_252">32, 0, 32, 0</column>
+<column name="reg_256">32, 0, 32, 0</column>
+<column name="reg_260">32, 0, 32, 0</column>
+<column name="tmp_0_1_reg_561">32, 0, 32, 0</column>
+<column name="tmp_0_2_reg_588">32, 0, 32, 0</column>
+<column name="tmp_0_3_reg_593">32, 0, 32, 0</column>
+<column name="tmp_1_2_reg_598">32, 0, 32, 0</column>
+<column name="tmp_1_3_reg_603">32, 0, 32, 0</column>
+<column name="tmp_2_1_reg_608">32, 0, 32, 0</column>
+<column name="tmp_7_0_1_reg_639">32, 0, 32, 0</column>
+<column name="tmp_7_0_2_reg_681">32, 0, 32, 0</column>
+<column name="tmp_7_0_3_reg_686">32, 0, 32, 0</column>
+<column name="tmp_7_1_1_reg_649">32, 0, 32, 0</column>
+<column name="tmp_7_1_2_reg_691">32, 0, 32, 0</column>
+<column name="tmp_7_1_3_reg_696">32, 0, 32, 0</column>
+<column name="tmp_7_1_reg_644">32, 0, 32, 0</column>
+<column name="tmp_7_2_1_reg_701">32, 0, 32, 0</column>
+<column name="tmp_7_2_reg_654">32, 0, 32, 0</column>
+<column name="tmp_7_reg_634">32, 0, 32, 0</column>
+<column name="tmp_8_0_1_reg_731">32, 0, 32, 0</column>
+<column name="tmp_8_0_2_reg_773">32, 0, 32, 0</column>
+<column name="tmp_8_0_3_reg_778">32, 0, 32, 0</column>
+<column name="tmp_8_1_1_reg_741">32, 0, 32, 0</column>
+<column name="tmp_8_1_2_reg_783">32, 0, 32, 0</column>
+<column name="tmp_8_1_3_reg_788">32, 0, 32, 0</column>
+<column name="tmp_8_1_reg_736">32, 0, 32, 0</column>
+<column name="tmp_8_2_1_reg_793">32, 0, 32, 0</column>
+<column name="tmp_8_2_reg_746">32, 0, 32, 0</column>
+<column name="tmp_8_reg_726">32, 0, 32, 0</column>
+<column name="tmp_reg_556">32, 0, 32, 0</column>
+<column name="xor_ln413_11_reg_834">32, 0, 32, 0</column>
+<column name="xor_ln413_13_reg_866">32, 0, 32, 0</column>
+<column name="xor_ln413_15_reg_871">32, 0, 32, 0</column>
+<column name="xor_ln413_17_reg_839">32, 0, 32, 0</column>
+<column name="xor_ln413_19_reg_876">32, 0, 32, 0</column>
+<column name="xor_ln413_1_reg_819">32, 0, 32, 0</column>
+<column name="xor_ln413_21_reg_881">32, 0, 32, 0</column>
+<column name="xor_ln413_23_reg_886">32, 0, 32, 0</column>
+<column name="xor_ln413_25_reg_891">32, 0, 32, 0</column>
+<column name="xor_ln413_27_reg_896">32, 0, 32, 0</column>
+<column name="xor_ln413_29_reg_901">32, 0, 32, 0</column>
+<column name="xor_ln413_31_reg_906">32, 0, 32, 0</column>
+<column name="xor_ln413_3_reg_824">32, 0, 32, 0</column>
+<column name="xor_ln413_5_reg_856">32, 0, 32, 0</column>
+<column name="xor_ln413_7_reg_861">32, 0, 32, 0</column>
+<column name="xor_ln413_9_reg_829">32, 0, 32, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, deMixColumns, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, deMixColumns, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, deMixColumns, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, deMixColumns, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, deMixColumns, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, deMixColumns, return value</column>
+<column name="array_r_address0">out, 4, ap_memory, array_r, array</column>
+<column name="array_r_ce0">out, 1, ap_memory, array_r, array</column>
+<column name="array_r_we0">out, 1, ap_memory, array_r, array</column>
+<column name="array_r_d0">out, 32, ap_memory, array_r, array</column>
+<column name="array_r_q0">in, 32, ap_memory, array_r, array</column>
+<column name="array_r_address1">out, 4, ap_memory, array_r, array</column>
+<column name="array_r_ce1">out, 1, ap_memory, array_r, array</column>
+<column name="array_r_we1">out, 1, ap_memory, array_r, array</column>
+<column name="array_r_d1">out, 32, ap_memory, array_r, array</column>
+<column name="array_r_q1">in, 32, ap_memory, array_r, array</column>
+</table>
+</item>
+</section>
+</profile>

@@ -1,0 +1,129 @@
+===============================================================================
+Version:    v++ v2021.2 (64-bit)
+Build:      SW Build 3363252 on 2021-10-14-04:41:01
+Copyright:  Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Created:    Tue Jun 14 16:18:16 2022
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             face_detect
+Target Device:           xilinx:u50:gen3x16_xdma:201920.3
+Target Clock:            300.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library  Compute Units
+-----------  ----  ------------------  --------------  -------------
+face_detect  c     fpga0:OCL_REGION_0  face_detect     1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     face_detect
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit   Kernel Name  Module Name                                               Target Frequency  Estimated Frequency
+-------------  -----------  --------------------------------------------------------  ----------------  -------------------
+face_detect_1  face_detect  face_detect_Pipeline_VITIS_LOOP_2820_1_VITIS_LOOP_2821_2  300.300293        411.015198
+face_detect_1  face_detect  face_detect_Pipeline_imageScalerL1_imageScalerL1_1        300.300293        464.03714
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x                        300.300293        566.893433
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x6                       300.300293        566.893433
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x7                       300.300293        566.893433
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x8                       300.300293        566.893433
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x9                       300.300293        566.893433
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x10                      300.300293        566.893433
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x11                      300.300293        566.893433
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x12                      300.300293        566.893433
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x13                      300.300293        566.893433
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x14                      300.300293        566.893433
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x15                      300.300293        566.893433
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x16                      300.300293        566.893433
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x17                      300.300293        566.893433
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x18                      300.300293        566.893433
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x19                      300.300293        566.893433
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x20                      300.300293        566.893433
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x21                      300.300293        566.893433
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x22                      300.300293        566.893433
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x23                      300.300293        566.893433
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x24                      300.300293        566.893433
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x25                      300.300293        566.893433
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x26                      300.300293        566.893433
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x27                      300.300293        566.893433
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x28                      300.300293        566.893433
+face_detect_1  face_detect  int_sqrt                                                  300.300293        411.861633
+face_detect_1  face_detect  processImage_Pipeline_Filters                             300.300293        371.471039
+face_detect_1  face_detect  processImage                                              300.300293        371.471039
+face_detect_1  face_detect  face_detect_Pipeline_VITIS_LOOP_2875_3                    300.300293        411.015198
+face_detect_1  face_detect  face_detect                                               300.300293        371.471039
+
+Latency Information
+Compute Unit   Kernel Name  Module Name                                               Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+-------------  -----------  --------------------------------------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+face_detect_1  face_detect  face_detect_Pipeline_VITIS_LOOP_2820_1_VITIS_LOOP_2821_2  76803           76803          76803         76803           0.256 ms         0.256 ms        0.256 ms
+face_detect_1  face_detect  face_detect_Pipeline_imageScalerL1_imageScalerL1_1        76807           76807          76807         76807           0.256 ms         0.256 ms        0.256 ms
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x                        322             322            322           322             1.073 us         1.073 us        1.073 us
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x6                       322             322            322           322             1.073 us         1.073 us        1.073 us
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x7                       322             322            322           322             1.073 us         1.073 us        1.073 us
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x8                       322             322            322           322             1.073 us         1.073 us        1.073 us
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x9                       322             322            322           322             1.073 us         1.073 us        1.073 us
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x10                      322             322            322           322             1.073 us         1.073 us        1.073 us
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x11                      322             322            322           322             1.073 us         1.073 us        1.073 us
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x12                      322             322            322           322             1.073 us         1.073 us        1.073 us
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x13                      322             322            322           322             1.073 us         1.073 us        1.073 us
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x14                      322             322            322           322             1.073 us         1.073 us        1.073 us
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x15                      322             322            322           322             1.073 us         1.073 us        1.073 us
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x16                      322             322            322           322             1.073 us         1.073 us        1.073 us
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x17                      322             322            322           322             1.073 us         1.073 us        1.073 us
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x18                      322             322            322           322             1.073 us         1.073 us        1.073 us
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x19                      322             322            322           322             1.073 us         1.073 us        1.073 us
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x20                      322             322            322           322             1.073 us         1.073 us        1.073 us
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x21                      322             322            322           322             1.073 us         1.073 us        1.073 us
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x22                      322             322            322           322             1.073 us         1.073 us        1.073 us
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x23                      322             322            322           322             1.073 us         1.073 us        1.073 us
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x24                      322             322            322           322             1.073 us         1.073 us        1.073 us
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x25                      322             322            322           322             1.073 us         1.073 us        1.073 us
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x26                      322             322            322           322             1.073 us         1.073 us        1.073 us
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x27                      322             322            322           322             1.073 us         1.073 us        1.073 us
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x28                      322             322            322           322             1.073 us         1.073 us        1.073 us
+face_detect_1  face_detect  int_sqrt                                                  8               8              8             8               26.664 ns        26.664 ns       26.664 ns
+face_detect_1  face_detect  processImage_Pipeline_Filters                             31 ~ 233        31             undef         233             0.103 us         undef           0.777 us
+face_detect_1  face_detect  processImage                                              undef           undef          undef         undef           undef            undef           undef
+face_detect_1  face_detect  face_detect_Pipeline_VITIS_LOOP_2875_3                    238             238            238           238             0.793 us         0.793 us        0.793 us
+face_detect_1  face_detect  face_detect                                               undef           undef          undef         undef           undef            undef           undef
+
+Area Information
+Compute Unit   Kernel Name  Module Name                                               FF     LUT     DSP  BRAM  URAM
+-------------  -----------  --------------------------------------------------------  -----  ------  ---  ----  ----
+face_detect_1  face_detect  face_detect_Pipeline_VITIS_LOOP_2820_1_VITIS_LOOP_2821_2  1087   666     0    0     0
+face_detect_1  face_detect  face_detect_Pipeline_imageScalerL1_imageScalerL1_1        396    432     0    0     0
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x                        11     54      0    0     0
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x6                       11     54      0    0     0
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x7                       11     54      0    0     0
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x8                       11     54      0    0     0
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x9                       11     54      0    0     0
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x10                      11     54      0    0     0
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x11                      11     54      0    0     0
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x12                      11     54      0    0     0
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x13                      11     54      0    0     0
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x14                      11     54      0    0     0
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x15                      11     54      0    0     0
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x16                      11     54      0    0     0
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x17                      11     54      0    0     0
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x18                      11     54      0    0     0
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x19                      11     54      0    0     0
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x20                      11     54      0    0     0
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x21                      11     54      0    0     0
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x22                      11     54      0    0     0
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x23                      11     54      0    0     0
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x24                      11     54      0    0     0
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x25                      11     54      0    0     0
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x26                      11     54      0    0     0
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x27                      11     54      0    0     0
+face_detect_1  face_detect  processImage_Pipeline_Initialize2x28                      11     54      0    0     0
+face_detect_1  face_detect  int_sqrt                                                  527    1691    0    0     0
+face_detect_1  face_detect  processImage_Pipeline_Filters                             16067  20198   0    68    0
+face_detect_1  face_detect  processImage                                              67922  91277   0    92    0
+face_detect_1  face_detect  face_detect_Pipeline_VITIS_LOOP_2875_3                    1091   1230    0    0     0
+face_detect_1  face_detect  face_detect                                               78646  105620  0    164   0
+-------------------------------------------------------------------------------

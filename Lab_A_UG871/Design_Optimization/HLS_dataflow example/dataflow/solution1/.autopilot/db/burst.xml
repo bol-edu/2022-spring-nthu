@@ -1,0 +1,9 @@
+<VitisHLS:BurstInfo>
+    <burst group="BURST_VERBOSE_PASSED" fe_name="BurstInferredPassed" src_info="aaa.cpp:71:5" msg_id="214-116" msg_severity="INFO" msg_body="Sequential read of variable length has been inferred over loop 'mem_rd'" OldID="bb2.load.7" ID="in.seq" BundleName="gmem" VarName="in"/>
+    <burst group="BURST_VERBOSE_PASSED" fe_name="BurstInferredPassed" src_info="aaa.cpp:99:5" msg_id="214-116" msg_severity="INFO" msg_body="Sequential write of variable length has been inferred over loop 'mem_wr'" OldID="bb2.store.7" ID="out.seq" BundleName="gmem" VarName="out"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="GreaterOrEqualAlignmentMissed" src_info="aaa.cpp:71:5" msg_id="214-120" msg_severity="INFO" msg_body="Could not widen since Type i32 size is greater than or equal to alignment 0(bytes)" ID="in.seq" BundleName="gmem" VarName="in"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="GreaterOrEqualAlignmentMissed" src_info="aaa.cpp:99:5" msg_id="214-120" msg_severity="INFO" msg_body="Could not widen since Type i32 size is greater than or equal to alignment 0(bytes)" ID="out.seq" BundleName="gmem" VarName="out"/>
+    <burst group="BURST_SUMMARY" fe_name="BurstInferredSummaryPassed" src_info="aaa.cpp:71:5" msg_id="214-115" msg_severity="INFO" msg_body="Multiple burst reads of variable length and bit width 32 in loop 'mem_rd' has been inferred on port 'gmem'"/>
+    <burst group="BURST_SUMMARY" fe_name="BurstInferredSummaryPassed" src_info="aaa.cpp:99:5" msg_id="214-115" msg_severity="INFO" msg_body="Multiple burst writes of variable length and bit width 32 in loop 'mem_wr' has been inferred on port 'gmem'"/>
+</VitisHLS:BurstInfo>
+

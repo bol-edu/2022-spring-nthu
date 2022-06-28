@@ -1,0 +1,1168 @@
+<ENTRY>
+{
+ "thisFile": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/runOnfpga_hw.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Mar 25 14:36:44 2022",
+ "timestampMillis": "1648190204436",
+ "buildStep": {
+  "cmdId": "0a8be554-1a8f-4fb1-9c2e-62363d14ac0f",
+  "name": "v++",
+  "logFile": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2021.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.param project.writeIntermediateCheckpoints=1 --advanced.param \"compiler.reportFailfast=pre_opt_design {__KERNEL_NAMES__} post_opt_design {__OCL_TOP__}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -l -g -t hw -R 1 --platform xilinx_u50_gen3x16_xdma_201920_3 --profile.data all:all:all --profile.stall all:all:all --profile.trace_memory HBM --save-temps --temp_dir ././build/single_buffer/kernel_8/hw/temp_dir --report_dir ././build/single_buffer/kernel_8/hw/report_dir --log_dir ././build/single_buffer/kernel_8/hw/log_dir -I../reference_files ././build/single_buffer/kernel_8/hw/runOnfpga_hw.xo -o ././build/single_buffer/kernel_8/hw/runOnfpga_hw.xclbin ",
+  "args": [
+   "-l",
+   "-g",
+   "-t",
+   "hw",
+   "-R",
+   "1",
+   "--platform",
+   "xilinx_u50_gen3x16_xdma_201920_3",
+   "--profile.data",
+   "all:all:all",
+   "--profile.stall",
+   "all:all:all",
+   "--profile.trace_memory",
+   "HBM",
+   "--save-temps",
+   "--temp_dir",
+   "././build/single_buffer/kernel_8/hw/temp_dir",
+   "--report_dir",
+   "././build/single_buffer/kernel_8/hw/report_dir",
+   "--log_dir",
+   "././build/single_buffer/kernel_8/hw/log_dir",
+   "-I../reference_files",
+   "././build/single_buffer/kernel_8/hw/runOnfpga_hw.xo",
+   "-o",
+   "././build/single_buffer/kernel_8/hw/runOnfpga_hw.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/m110061639/02-bloom/makefile"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 14:36:44 2022",
+ "timestampMillis": "1648190204436",
+ "status": {
+  "cmdId": "0a8be554-1a8f-4fb1-9c2e-62363d14ac0f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Mar 25 14:36:47 2022",
+ "timestampMillis": "1648190207830",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u50_gen3x16_xdma_201920_3.xpfm",
+  "hardwareDsa": "hw.xsa",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "runOnfpga_hw",
+    "file": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/runOnfpga_hw.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "runOnfpga",
+     "file": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/runOnfpga_hw.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/xo/runOnfpga/runOnfpga/cpu_sources/compute_score_fpga_kernel.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "runOnfpga_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2021.2. SW Build 3363252 on 2021-10-14-04:41:01"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Mar 25 14:36:47 2022",
+ "timestampMillis": "1648190207921",
+ "buildStep": {
+  "cmdId": "6b4d80b2-82e4-44ec-8b2c-568f79c69c7d",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/runOnfpga_hw.xo -keep --xpfm /opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3/xilinx_u50_gen3x16_xdma_201920_3.xpfm --target hw --output_dir /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int --temp_dir /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/runOnfpga_hw.xo",
+   "-keep",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_201920_3/xilinx_u50_gen3x16_xdma_201920_3.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int",
+   "--temp_dir",
+   "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/sys_link"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/m110061639/02-bloom/makefile"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 14:36:47 2022",
+ "timestampMillis": "1648190207921",
+ "status": {
+  "cmdId": "6b4d80b2-82e4-44ec-8b2c-568f79c69c7d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 14:36:54 2022",
+ "timestampMillis": "1648190214585",
+ "status": {
+  "cmdId": "6b4d80b2-82e4-44ec-8b2c-568f79c69c7d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Mar 25 14:36:54 2022",
+ "timestampMillis": "1648190214587",
+ "buildStep": {
+  "cmdId": "9cd7631f-203d-4943-b540-eef1bbcd9e11",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/sdsl.dat -rtd /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/cf2sw.rtd -nofilter /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/cf2sw_full.rtd -xclbin /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/xclbin_orig.xml -o /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/sdsl.dat",
+   "-rtd",
+   "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/cf2sw.rtd",
+   "-nofilter",
+   "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/m110061639/02-bloom/makefile"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 14:36:54 2022",
+ "timestampMillis": "1648190214587",
+ "status": {
+  "cmdId": "9cd7631f-203d-4943-b540-eef1bbcd9e11",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 14:36:55 2022",
+ "timestampMillis": "1648190215824",
+ "status": {
+  "cmdId": "9cd7631f-203d-4943-b540-eef1bbcd9e11",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Mar 25 14:36:55 2022",
+ "timestampMillis": "1648190215824",
+ "buildStep": {
+  "cmdId": "758ecfee-c235-4736-9da8-214de469c0e9",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/m110061639/02-bloom/makefile"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 14:36:55 2022",
+ "timestampMillis": "1648190215825",
+ "status": {
+  "cmdId": "758ecfee-c235-4736-9da8-214de469c0e9",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 14:36:55 2022",
+ "timestampMillis": "1648190215968",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 14:36:55 2022",
+ "timestampMillis": "1648190215968",
+ "status": {
+  "cmdId": "758ecfee-c235-4736-9da8-214de469c0e9",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Mar 25 14:36:55 2022",
+ "timestampMillis": "1648190215969",
+ "buildStep": {
+  "cmdId": "ce982a42-fe59-4a37-8c0f-c1d1357c5a6e",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_u50_gen3x16_xdma_201920_3 -g --remote_ip_cache /home/m110061639/02-bloom/makefile/.ipcache -s --trace_memory HBM --output_dir /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int --log_dir /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/log_dir/link --report_dir /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/report_dir/link --config /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/vplConfig.ini -k /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link --no-info --iprepo /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/xo/ip_repo/xilinx_com_hls_runOnfpga_1_0 --messageDb /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/run_link/vpl.pb /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_u50_gen3x16_xdma_201920_3",
+   "-g",
+   "--remote_ip_cache",
+   "/home/m110061639/02-bloom/makefile/.ipcache",
+   "-s",
+   "--trace_memory",
+   "HBM",
+   "--output_dir",
+   "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int",
+   "--log_dir",
+   "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/log_dir/link",
+   "--report_dir",
+   "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/report_dir/link",
+   "--config",
+   "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/vplConfig.ini",
+   "-k",
+   "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link",
+   "--no-info",
+   "--iprepo",
+   "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/xo/ip_repo/xilinx_com_hls_runOnfpga_1_0",
+   "--messageDb",
+   "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/run_link/vpl.pb",
+   "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/vplConfig.ini",
+    "content": "[advanced]\nparam=compiler.reportFailfast=pre_opt_design {__KERNEL_NAMES__} post_opt_design {__OCL_TOP__}\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=hw_emu.enableDebugWaveform=1\nparam=hw_emu.enableProfiling=1\nparam=compiler.vppCurrentWorkingDir=/home/m110061639/02-bloom/makefile\nmisc=BinaryName=runOnfpga_hw\n\n[connectivity]\nnk=runOnfpga:1:runOnfpga_1\n\n[vivado]\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\nparam=project.writeIntermediateCheckpoints=1\n\n"
+   }
+  ],
+  "cwd": "/home/m110061639/02-bloom/makefile"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 14:36:55 2022",
+ "timestampMillis": "1648190215969",
+ "status": {
+  "cmdId": "ce982a42-fe59-4a37-8c0f-c1d1357c5a6e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Mar 25 14:36:56 2022",
+ "timestampMillis": "1648190216921",
+ "buildStep": {
+  "cmdId": "a98010cf-fb97-4011-a9b1-9552224d2f3b",
+  "name": "vpl",
+  "logFile": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2021.2/bin/unwrapped/lnx64.o/vpl -t hw -f xilinx_u50_gen3x16_xdma_201920_3 -g --remote_ip_cache /home/m110061639/02-bloom/makefile/.ipcache -s --trace_memory HBM --output_dir /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int --log_dir /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/log_dir/link --report_dir /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/report_dir/link --config /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/vplConfig.ini -k /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link --no-info --iprepo /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/xo/ip_repo/xilinx_com_hls_runOnfpga_1_0 --messageDb /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/run_link/vpl.pb /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 14:36:56 2022",
+ "timestampMillis": "1648190216921",
+ "status": {
+  "cmdId": "a98010cf-fb97-4011-a9b1-9552224d2f3b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Fri Mar 25 14:36:59 2022",
+ "timestampMillis": "1648190219852",
+ "vivadoProject": {
+  "openDir": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Mar 25 14:36:59 2022",
+ "timestampMillis": "1648190219852",
+ "buildStep": {
+  "cmdId": "456e520d-6402-4b20-b911-2bbbffbd62c9",
+  "name": "vivado",
+  "logFile": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 14:36:59 2022",
+ "timestampMillis": "1648190219852",
+ "status": {
+  "cmdId": "456e520d-6402-4b20-b911-2bbbffbd62c9",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 14:37:30 2022",
+ "timestampMillis": "1648190250498",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/debug_ip_layout.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "DEBUG_IP_LAYOUT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Mar 25 14:38:43 2022",
+ "timestampMillis": "1648190323147",
+ "buildStep": {
+  "cmdId": "01e6d6a6-4515-461a-9122-3d9484632447",
+  "name": "vivado.impl",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/vivado/vpl"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 14:38:43 2022",
+ "timestampMillis": "1648190323148",
+ "status": {
+  "cmdId": "01e6d6a6-4515-461a-9122-3d9484632447",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Mar 25 14:38:43 2022",
+ "timestampMillis": "1648190323148",
+ "buildStep": {
+  "cmdId": "43df6a03-03ab-46ef-a9c6-8b93effe8c0f",
+  "name": "vivado.impl.impl_1",
+  "logFile": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/vivado/vpl/prj/prj.runs/impl_1/runme.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/vivado/vpl/prj/prj.runs/impl_1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 14:38:43 2022",
+ "timestampMillis": "1648190323148",
+ "status": {
+  "cmdId": "43df6a03-03ab-46ef-a9c6-8b93effe8c0f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:06:27 2022",
+ "timestampMillis": "1648191987106",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/vivado/vpl/prj/prj.runs/impl_1/system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:07:01 2022",
+ "timestampMillis": "1648192021310",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/kernel_service.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:07:01 2022",
+ "timestampMillis": "1648192021310",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/kernel_service.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 15:12:20 2022",
+ "timestampMillis": "1648192340919",
+ "status": {
+  "cmdId": "456e520d-6402-4b20-b911-2bbbffbd62c9",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:12:20 2022",
+ "timestampMillis": "1648192340935",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/report_dir/link/imp/impl_1_kernel_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:12:20 2022",
+ "timestampMillis": "1648192340936",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/report_dir/link/imp/impl_1_slr_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:12:20 2022",
+ "timestampMillis": "1648192340936",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/report_dir/link/imp/impl_1_kernel_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:12:20 2022",
+ "timestampMillis": "1648192340936",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/report_dir/link/imp/impl_1_kernel_util_placed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:12:20 2022",
+ "timestampMillis": "1648192340937",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/report_dir/link/imp/impl_1_slr_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:12:20 2022",
+ "timestampMillis": "1648192340937",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/report_dir/link/imp/impl_1_slr_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:12:20 2022",
+ "timestampMillis": "1648192340937",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/report_dir/link/imp/impl_1_full_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:12:20 2022",
+ "timestampMillis": "1648192340937",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/report_dir/link/imp/impl_1_full_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:12:20 2022",
+ "timestampMillis": "1648192340938",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/report_dir/link/imp/impl_1_kernel_util_routed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:12:20 2022",
+ "timestampMillis": "1648192340938",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/report_dir/link/imp/impl_1_kernel_util_synthed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:12:20 2022",
+ "timestampMillis": "1648192340938",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/report_dir/link/imp/impl_1_slr_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:12:20 2022",
+ "timestampMillis": "1648192340938",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/report_dir/link/imp/impl_1_full_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:12:20 2022",
+ "timestampMillis": "1648192340938",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/report_dir/link/imp/impl_1_full_util_synthed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:12:20 2022",
+ "timestampMillis": "1648192340939",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/report_dir/link/imp/impl_1_kernel_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:12:20 2022",
+ "timestampMillis": "1648192340950",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/report_dir/link/imp/impl_1_system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": "43df6a03-03ab-46ef-a9c6-8b93effe8c0f"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:12:20 2022",
+ "timestampMillis": "1648192340956",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/report_dir/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "43df6a03-03ab-46ef-a9c6-8b93effe8c0f"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:12:20 2022",
+ "timestampMillis": "1648192340962",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/report_dir/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "43df6a03-03ab-46ef-a9c6-8b93effe8c0f"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:12:20 2022",
+ "timestampMillis": "1648192340962",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/report_dir/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "43df6a03-03ab-46ef-a9c6-8b93effe8c0f"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 15:12:20 2022",
+ "timestampMillis": "1648192340971",
+ "status": {
+  "cmdId": "a98010cf-fb97-4011-a9b1-9552224d2f3b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 15:12:20 2022",
+ "timestampMillis": "1648192340981",
+ "status": {
+  "cmdId": "ce982a42-fe59-4a37-8c0f-c1d1357c5a6e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Mar 25 15:12:20 2022",
+ "timestampMillis": "1648192340983",
+ "buildStep": {
+  "cmdId": "a63a519b-fd4c-4093-8f96-00b7ef389273",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/m110061639/02-bloom/makefile"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 15:12:20 2022",
+ "timestampMillis": "1648192340983",
+ "status": {
+  "cmdId": "a63a519b-fd4c-4093-8f96-00b7ef389273",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:12:20 2022",
+ "timestampMillis": "1648192340985",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/runOnfpga_hw_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Mar 25 15:12:20 2022",
+ "timestampMillis": "1648192340985",
+ "buildStep": {
+  "cmdId": "5130ce5e-0a78-4154-a71e-f5d0b182fb08",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -force-enable-memory HBM -a /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/address_map.xml -sdsl /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/sdsl.dat -xclbin /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/xclbin_orig.xml -rtd /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/runOnfpga_hw.rtd -o /home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/runOnfpga_hw.xml",
+  "args": [
+   "-force-enable-memory",
+   "HBM",
+   "-a",
+   "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/address_map.xml",
+   "-sdsl",
+   "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/runOnfpga_hw.rtd",
+   "-o",
+   "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/runOnfpga_hw.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/m110061639/02-bloom/makefile"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 15:12:20 2022",
+ "timestampMillis": "1648192340985",
+ "status": {
+  "cmdId": "5130ce5e-0a78-4154-a71e-f5d0b182fb08",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 15:12:22 2022",
+ "timestampMillis": "1648192342269",
+ "status": {
+  "cmdId": "5130ce5e-0a78-4154-a71e-f5d0b182fb08",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Mar 25 15:12:22 2022",
+ "timestampMillis": "1648192342269",
+ "buildStep": {
+  "cmdId": "cdacba5f-d5ab-4b34-831b-60ee6b93061b",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/runOnfpga_hw.rtd",
+   "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/m110061639/02-bloom/makefile"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 15:12:22 2022",
+ "timestampMillis": "1648192342270",
+ "status": {
+  "cmdId": "cdacba5f-d5ab-4b34-831b-60ee6b93061b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:12:22 2022",
+ "timestampMillis": "1648192342271",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 15:12:22 2022",
+ "timestampMillis": "1648192342271",
+ "status": {
+  "cmdId": "cdacba5f-d5ab-4b34-831b-60ee6b93061b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 15:12:22 2022",
+ "timestampMillis": "1648192342271",
+ "status": {
+  "cmdId": "a63a519b-fd4c-4093-8f96-00b7ef389273",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Mar 25 15:12:22 2022",
+ "timestampMillis": "1648192342272",
+ "buildStep": {
+  "cmdId": "1c8ed906-e0ab-4df4-a04a-98777892b57a",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section DEBUG_IP_LAYOUT:JSON:/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/debug_ip_layout.rtd --add-section BITSTREAM:RAW:/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/partial.bit --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/runOnfpga_hw.rtd --append-section :JSON:/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/runOnfpga_hw_xml.rtd --add-section BUILD_METADATA:JSON:/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/runOnfpga_hw_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/runOnfpga_hw.xml --add-section SYSTEM_METADATA:RAW:/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_u50_gen3x16_xdma_201920_3 --output /home/m110061639/02-bloom/makefile/././build/single_buffer/kernel_8/hw/runOnfpga_hw.xclbin",
+  "args": [
+   "--add-section",
+   "DEBUG_IP_LAYOUT:JSON:/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/debug_ip_layout.rtd",
+   "--add-section",
+   "BITSTREAM:RAW:/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/partial.bit",
+   "--force",
+   "--target",
+   "hw",
+   "--key-value",
+   "SYS:dfx_enable:true",
+   "--add-section",
+   ":JSON:/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/runOnfpga_hw.rtd",
+   "--append-section",
+   ":JSON:/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/runOnfpga_hw_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/runOnfpga_hw_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/runOnfpga_hw.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--key-value",
+   "SYS:PlatformVBNV:xilinx_u50_gen3x16_xdma_201920_3",
+   "--output",
+   "/home/m110061639/02-bloom/makefile/././build/single_buffer/kernel_8/hw/runOnfpga_hw.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/m110061639/02-bloom/makefile"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 15:12:22 2022",
+ "timestampMillis": "1648192342272",
+ "status": {
+  "cmdId": "1c8ed906-e0ab-4df4-a04a-98777892b57a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 15:12:22 2022",
+ "timestampMillis": "1648192342369",
+ "status": {
+  "cmdId": "1c8ed906-e0ab-4df4-a04a-98777892b57a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Mar 25 15:12:22 2022",
+ "timestampMillis": "1648192342370",
+ "buildStep": {
+  "cmdId": "ce0109df-3028-44b5-82ee-9060d65c2ce0",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /home/m110061639/02-bloom/makefile/././build/single_buffer/kernel_8/hw/runOnfpga_hw.xclbin.info --input /home/m110061639/02-bloom/makefile/././build/single_buffer/kernel_8/hw/runOnfpga_hw.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/home/m110061639/02-bloom/makefile/././build/single_buffer/kernel_8/hw/runOnfpga_hw.xclbin.info",
+   "--input",
+   "/home/m110061639/02-bloom/makefile/././build/single_buffer/kernel_8/hw/runOnfpga_hw.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/m110061639/02-bloom/makefile"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 15:12:22 2022",
+ "timestampMillis": "1648192342370",
+ "status": {
+  "cmdId": "ce0109df-3028-44b5-82ee-9060d65c2ce0",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 15:12:22 2022",
+ "timestampMillis": "1648192342590",
+ "status": {
+  "cmdId": "ce0109df-3028-44b5-82ee-9060d65c2ce0",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Mar 25 15:12:22 2022",
+ "timestampMillis": "1648192342591",
+ "buildStep": {
+  "cmdId": "7d9b39eb-98e8-4d49-8bc9-a70884801edf",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/m110061639/02-bloom/makefile"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 15:12:22 2022",
+ "timestampMillis": "1648192342591",
+ "status": {
+  "cmdId": "7d9b39eb-98e8-4d49-8bc9-a70884801edf",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 15:12:22 2022",
+ "timestampMillis": "1648192342591",
+ "status": {
+  "cmdId": "7d9b39eb-98e8-4d49-8bc9-a70884801edf",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:12:22 2022",
+ "timestampMillis": "1648192342603",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/report_dir/link/system_estimate_runOnfpga_hw.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:12:22 2022",
+ "timestampMillis": "1648192342700",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/report_dir/link/v++_link_runOnfpga_hw_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:12:22 2022",
+ "timestampMillis": "1648192342700",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/temp_dir/v++_link_runOnfpga_hw_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Mar 25 15:12:22 2022",
+ "timestampMillis": "1648192342701",
+ "report": {
+  "path": "/home/m110061639/02-bloom/makefile/build/single_buffer/kernel_8/hw/log_dir/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Mar 25 15:12:22 2022",
+ "timestampMillis": "1648192342701",
+ "status": {
+  "cmdId": "0a8be554-1a8f-4fb1-9c2e-62363d14ac0f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

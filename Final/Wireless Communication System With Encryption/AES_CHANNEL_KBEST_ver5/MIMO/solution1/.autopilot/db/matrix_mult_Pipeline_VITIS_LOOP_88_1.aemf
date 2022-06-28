@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1655442971551">
+  <ports id="1" name="Q_TEMP_V" type="PortType" coreName="RAM_1WnR" coreId="1717530721" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="64">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="2" name="Q" type="PortType" coreName="FIFO_SRL" coreId="1717530721" bitwidth="16" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="30" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="31" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="32" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="33" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="36" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="39" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="40" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="41" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="44" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="45" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="46" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="47" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@ports.0"/>
+  <edges id="50" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="51" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="52" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="53" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="54" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="55" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="96" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="97" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="98" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="99" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="100" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="101" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="102" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <blocks id="7" name="newFuncRoot" type="BlockType">
+    <controlOutputObjs>block_14</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="i" originalName="i" coreId="741875756" bitwidth="7" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="i_write_ln0" coreId="741875756" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="br_ln0" coreId="909189164" opcode="br" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <controlInputObjs>block_14</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="25" name=".preheader5.i.preheader.exitStub" type="BlockType">
+    <controlInputObjs>block_14</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="_ln0" coreId="741487420" opcode="ret" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1"/>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="85" pipe_depth="2" RegionName="VITIS_LOOP_88_1">
+    <basic_blocks id="14" name="block_14" type="BlockType">
+      <controlInputObjs>newFuncRoot</controlInputObjs>
+      <controlInputObjs>.split7.i</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>.preheader5.i.preheader.exitStub</controlOutputObjs>
+      <controlOutputObjs>.split7.i</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="8" name="i_5" lineNumber="89" originalName="i" fileName="src/MIMO.cpp" fileDirectory=".." coreId="925966380" contextFuncName="matrix_mult" bitwidth="7" opcode="load" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/MIMO.cpp" linenumber="89" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="matrix_mult"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="10" name="icmp_ln88" lineNumber="88" fileName="src/MIMO.cpp" fileDirectory=".." rtlName="icmp_ln88_fu_70_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="matrix_mult" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.81" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/MIMO.cpp" linenumber="88" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="matrix_mult"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="i_6" lineNumber="88" originalName="i" fileName="src/MIMO.cpp" fileDirectory=".." rtlName="i_6_fu_76_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="matrix_mult" bitwidth="7" opcode="add" m_display="0" m_delay="0.77" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/MIMO.cpp" linenumber="88" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="matrix_mult"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="br_ln88" lineNumber="88" fileName="src/MIMO.cpp" fileDirectory=".." coreId="741487420" contextFuncName="matrix_mult" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/MIMO.cpp" linenumber="88" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="matrix_mult"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>.split7.i</controlInputObjs>
+        <controlInputObjs>.preheader5.i.preheader.exitStub</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="src/MIMO.cpp">
+        <validLinenumbers>89</validLinenumbers>
+        <validLinenumbers>88</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="23" name=".split7.i" type="BlockType">
+      <controlInputObjs>block_14</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_14</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="tmp" lineNumber="144" originalName="tmp" fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="read" bitwidth="16" opcode="read" nodeLabel="1.0" m_display="0" m_delay="1.83" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h" linenumber="144" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="read"/>
+        <dataInputObjs>Q</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="trunc_ln89" lineNumber="89" fileName="src/MIMO.cpp" fileDirectory=".." rtlName="trunc_ln89_fu_82_p1" coreId="741875756" contextFuncName="matrix_mult" bitwidth="6" opcode="trunc" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/MIMO.cpp" linenumber="89" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="matrix_mult"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="zext_ln89" lineNumber="89" fileName="src/MIMO.cpp" fileDirectory=".." rtlName="zext_ln89_fu_91_p1" coreId="942743596" contextFuncName="matrix_mult" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/MIMO.cpp" linenumber="89" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="matrix_mult"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="Q_TEMP_V_addr" lineNumber="89" fileName="src/MIMO.cpp" fileDirectory=".." coreId="741487420" contextFuncName="matrix_mult" bitwidth="6" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/MIMO.cpp" linenumber="89" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="matrix_mult"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>Q_TEMP_V</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="Q_TEMP_V_addr_write_ln89" lineNumber="89" fileName="src/MIMO.cpp" fileDirectory=".." coreName="RAM_1WnR" implIndex="auto" control="no" opType="ram_1wnr" coreId="84" contextFuncName="matrix_mult" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.23" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/MIMO.cpp" linenumber="89" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="matrix_mult"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="i_write_ln88" lineNumber="88" fileName="src/MIMO.cpp" fileDirectory=".." coreId="942743596" contextFuncName="matrix_mult" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/MIMO.cpp" linenumber="88" fileDirectory="D:\NTHU\HLS\FINAL\ASE_CHANNEL_KBEST_ver5" functionName="matrix_mult"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="br_ln0" coreId="741487420" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <controlInputObjs>block_14</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot/hls_stream_39.h">
+        <validLinenumbers>144</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="src/MIMO.cpp">
+        <validLinenumbers>89</validLinenumbers>
+        <validLinenumbers>88</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <regnodes realName="trunc_ln89_reg_105">
+    <nodeIds>17</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_95">
+    <nodeIds>3</nodeIds>
+  </regnodes>
+  <expressionNodes realName="trunc_ln89_fu_82">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_38">
+    <nodeIds>3</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_6_fu_76">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Q_TEMP_V_addr_gep_fu_48">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln89_fu_91">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln88_fu_70">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="store_ln0_store_fu_62">
+    <nodeIds>5</nodeIds>
+  </ioNodes>
+  <ioNodes realName="tmp_read_fu_42">
+    <nodeIds>16</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln88_store_fu_86">
+    <nodeIds>21</nodeIds>
+  </ioNodes>
+  <ioNodes realName="i_5_load_fu_67">
+    <nodeIds>8</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="Q_TEMP_V">
+    <nodeIds>20</nodeIds>
+  </memoryPorts>
+  <ioPorts name="Q">
+    <contents name="read">
+      <nodeIds>16</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="Q_TEMP_V(p0)">
+    <contents name="store">
+      <nodeIds>20</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="3" stage="1" latency="1"/>
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="matrix_mult_Pipeline_VITIS_LOOP_88_1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="66" mMaxLatency="66">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>7</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="VITIS_LOOP_88_1" mII="1" mDepth="2" mMinTripCount="64" mMaxTripCount="64" mMinLatency="64" mMaxLatency="64" mType="1">
+      <basicBlocks>14</basicBlocks>
+      <basicBlocks>23</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>25</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

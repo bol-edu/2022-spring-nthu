@@ -1,0 +1,205 @@
+
+
+================================================================
+== Vitis HLS Report for 'resize_accel'
+================================================================
+* Date:           Sat Jun 18 18:21:43 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        resize
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.655 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+-----------+-----+---------+----------+
+    |  Latency (cycles) |  Latency (absolute)  |    Interval   | Pipeline |
+    |   min   |   max   |    min   |    max    | min |   max   |   Type   |
+    +---------+---------+----------+-----------+-----+---------+----------+
+    |      175|  8369117|  1.750 us|  83.691 ms|  175|  8369117|  dataflow|
+    +---------+---------+----------+-----------+-----+---------+----------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------+--------------------------------------+---------+---------+-----------+-----------+-----+---------+---------+
+        |                                       |                                      |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
+        |                Instance               |                Module                |   min   |   max   |    min    |    max    | min |   max   |   Type  |
+        +---------------------------------------+--------------------------------------+---------+---------+-----------+-----------+-----+---------+---------+
+        |Block_split1_proc_U0                   |Block_split1_proc                     |        0|        0|       0 ns|       0 ns|    0|        0|       no|
+        |axis2xfMat_24_9_2160_3840_1_U0         |axis2xfMat_24_9_2160_3840_1_s         |        1|  8303041|  10.000 ns|  83.030 ms|    1|  8303041|       no|
+        |resize_1_9_2160_3840_2160_3840_1_9_U0  |resize_1_9_2160_3840_2160_3840_1_9_s  |      174|  8369116|   1.740 us|  83.691 ms|  174|  8369116|       no|
+        |xfMat2axis_24_9_2160_3840_1_U0         |xfMat2axis_24_9_2160_3840_1_s         |        2|  8303042|  20.000 ns|  83.030 ms|    2|  8303042|       no|
+        +---------------------------------------+--------------------------------------+---------+---------+-----------+-----------+-----+---------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     24|    -|
+|FIFO             |        -|    -|     990|    680|    -|
+|Instance         |       36|   14|    5402|   5252|    0|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     36|    -|
+|Register         |        -|    -|       4|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |       36|   14|    6396|   5992|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |       12|    6|       6|     11|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------+--------------------------------------+---------+----+------+------+-----+
+    |                Instance               |                Module                | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +---------------------------------------+--------------------------------------+---------+----+------+------+-----+
+    |Block_split1_proc_U0                   |Block_split1_proc                     |        0|   0|   130|    47|    0|
+    |axis2xfMat_24_9_2160_3840_1_U0         |axis2xfMat_24_9_2160_3840_1_s         |        0|   0|    56|   196|    0|
+    |control_s_axi_U                        |control_s_axi                         |        0|   0|   195|   298|    0|
+    |resize_1_9_2160_3840_2160_3840_1_9_U0  |resize_1_9_2160_3840_2160_3840_1_9_s  |       36|  14|  4858|  4401|    0|
+    |xfMat2axis_24_9_2160_3840_1_U0         |xfMat2axis_24_9_2160_3840_1_s         |        0|   0|   163|   310|    0|
+    +---------------------------------------+--------------------------------------+---------+----+------+------+-----+
+    |Total                                  |                                      |       36|  14|  5402|  5252|    0|
+    +---------------------------------------+--------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +----------------------------+---------+----+----+-----+------+-----+---------+
+    |            Name            | BRAM_18K| FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +----------------------------+---------+----+----+-----+------+-----+---------+
+    |dst_mat_cols_c12_channel_U  |        0|  99|   0|    -|     3|   32|       96|
+    |dst_mat_cols_c_U            |        0|  99|   0|    -|     2|   32|       64|
+    |dst_mat_data_U              |        0|  99|   0|    -|     2|   24|       48|
+    |dst_mat_rows_c11_channel_U  |        0|  99|   0|    -|     3|   32|       96|
+    |dst_mat_rows_c_U            |        0|  99|   0|    -|     2|   32|       64|
+    |src_mat_cols_c10_channel_U  |        0|  99|   0|    -|     2|   32|       64|
+    |src_mat_cols_c_U            |        0|  99|   0|    -|     2|   32|       64|
+    |src_mat_data_U              |        0|  99|   0|    -|     2|   24|       48|
+    |src_mat_rows_c9_channel_U   |        0|  99|   0|    -|     2|   32|       64|
+    |src_mat_rows_c_U            |        0|  99|   0|    -|     2|   32|       64|
+    +----------------------------+---------+----+----+-----+------+-----+---------+
+    |Total                       |        0| 990|   0|    0|    22|  304|      672|
+    +----------------------------+---------+----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +------------------------------------------------+----------+----+---+----+------------+------------+
+    |                  Variable Name                 | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------------------------+----------+----+---+----+------------+------------+
+    |Block_split1_proc_U0_ap_continue                |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_dst_mat_cols_c12_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_dst_mat_rows_c11_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_src_mat_cols_c10_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_src_mat_rows_c9_channel         |       and|   0|  0|   2|           1|           1|
+    |ap_idle                                         |       and|   0|  0|   2|           1|           1|
+    |axis2xfMat_24_9_2160_3840_1_U0_ap_start         |       and|   0|  0|   2|           1|           1|
+    |resize_1_9_2160_3840_2160_3840_1_9_U0_ap_start  |       and|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_dst_mat_cols_c12_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_dst_mat_rows_c11_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_src_mat_cols_c10_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_src_mat_rows_c9_channel   |        or|   0|  0|   2|           1|           1|
+    +------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                           |          |   0|  0|  24|          12|          12|
+    +------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------------------+----+-----------+-----+-----------+
+    |                        Name                        | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_channel_write_dst_mat_cols_c12_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_dst_mat_rows_c11_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_src_mat_cols_c10_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_src_mat_rows_c9_channel   |   9|          2|    1|          2|
+    +----------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                               |  36|          8|    4|          8|
+    +----------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------+---+----+-----+-----------+
+    |                        Name                        | FF| LUT| Bits| Const Bits|
+    +----------------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_channel_write_dst_mat_cols_c12_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_dst_mat_rows_c11_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_src_mat_cols_c10_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_src_mat_rows_c9_channel   |  1|   0|    1|          0|
+    +----------------------------------------------------+---+----+-----+-----------+
+    |Total                                               |  4|   0|    4|          0|
+    +----------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+--------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------------------+-----+-----+------------+--------------+--------------+
+|s_axi_control_AWVALID  |   in|    1|       s_axi|       control|        scalar|
+|s_axi_control_AWREADY  |  out|    1|       s_axi|       control|        scalar|
+|s_axi_control_AWADDR   |   in|    6|       s_axi|       control|        scalar|
+|s_axi_control_WVALID   |   in|    1|       s_axi|       control|        scalar|
+|s_axi_control_WREADY   |  out|    1|       s_axi|       control|        scalar|
+|s_axi_control_WDATA    |   in|   32|       s_axi|       control|        scalar|
+|s_axi_control_WSTRB    |   in|    4|       s_axi|       control|        scalar|
+|s_axi_control_ARVALID  |   in|    1|       s_axi|       control|        scalar|
+|s_axi_control_ARREADY  |  out|    1|       s_axi|       control|        scalar|
+|s_axi_control_ARADDR   |   in|    6|       s_axi|       control|        scalar|
+|s_axi_control_RVALID   |  out|    1|       s_axi|       control|        scalar|
+|s_axi_control_RREADY   |   in|    1|       s_axi|       control|        scalar|
+|s_axi_control_RDATA    |  out|   32|       s_axi|       control|        scalar|
+|s_axi_control_RRESP    |  out|    2|       s_axi|       control|        scalar|
+|s_axi_control_BVALID   |  out|    1|       s_axi|       control|        scalar|
+|s_axi_control_BREADY   |   in|    1|       s_axi|       control|        scalar|
+|s_axi_control_BRESP    |  out|    2|       s_axi|       control|        scalar|
+|ap_local_block         |  out|    1|  ap_ctrl_hs|  resize_accel|  return value|
+|ap_clk                 |   in|    1|  ap_ctrl_hs|  resize_accel|  return value|
+|ap_rst_n               |   in|    1|  ap_ctrl_hs|  resize_accel|  return value|
+|interrupt              |  out|    1|  ap_ctrl_hs|  resize_accel|  return value|
+|src_TDATA              |   in|   24|        axis|  src_V_data_V|       pointer|
+|src_TKEEP              |   in|    3|        axis|  src_V_keep_V|       pointer|
+|src_TSTRB              |   in|    3|        axis|  src_V_strb_V|       pointer|
+|src_TUSER              |   in|    1|        axis|  src_V_user_V|       pointer|
+|src_TLAST              |   in|    1|        axis|  src_V_last_V|       pointer|
+|src_TID                |   in|    1|        axis|    src_V_id_V|       pointer|
+|src_TDEST              |   in|    1|        axis|  src_V_dest_V|       pointer|
+|src_TVALID             |   in|    1|        axis|  src_V_dest_V|       pointer|
+|src_TREADY             |  out|    1|        axis|  src_V_dest_V|       pointer|
+|dst_TDATA              |  out|   24|        axis|  dst_V_data_V|       pointer|
+|dst_TKEEP              |  out|    3|        axis|  dst_V_keep_V|       pointer|
+|dst_TSTRB              |  out|    3|        axis|  dst_V_strb_V|       pointer|
+|dst_TUSER              |  out|    1|        axis|  dst_V_user_V|       pointer|
+|dst_TLAST              |  out|    1|        axis|  dst_V_last_V|       pointer|
+|dst_TID                |  out|    1|        axis|    dst_V_id_V|       pointer|
+|dst_TDEST              |  out|    1|        axis|  dst_V_dest_V|       pointer|
+|dst_TVALID             |  out|    1|        axis|  dst_V_dest_V|       pointer|
+|dst_TREADY             |   in|    1|        axis|  dst_V_dest_V|       pointer|
++-----------------------+-----+-----+------------+--------------+--------------+
+

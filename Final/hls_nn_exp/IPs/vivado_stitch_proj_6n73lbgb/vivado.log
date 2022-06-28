@@ -1,0 +1,530 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sat Jun 18 12:18:29 2022
+# Process ID: 4315
+# Current directory: /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb
+# Command line: vivado -mode batch -source make_project.tcl
+# Log file: /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb/vivado.log
+# Journal file: /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb/vivado.jou
+#-----------------------------------------------------------
+source make_project.tcl
+# create_project finn_vivado_stitch_proj /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb -part xc7z020clg400-1
+# set_property ip_repo_paths [list /workspace/finn/finn-rtllib/memstream /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFIFO_0_5zq0wcy6/project_StreamingDataflowPartition_1_StreamingFIFO_0/sol1/impl/verilog /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_Thresholding_Batch_0_7xvapk4_/project_StreamingDataflowPartition_1_Thresholding_Batch_0/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_0_m8tou0py/project_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_0/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_ConvolutionInputGenerator_0_4ndc7jjk/project_StreamingDataflowPartition_1_ConvolutionInputGenerator_0/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFIFO_1_qwjzzylc/project_StreamingDataflowPartition_1_StreamingFIFO_1/sol1/impl/verilog /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_0_kid44056/project_StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_ConvolutionInputGenerator_1_qts7t79b/project_StreamingDataflowPartition_1_ConvolutionInputGenerator_1/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFIFO_2_n2ymv40f/project_StreamingDataflowPartition_1_StreamingFIFO_2/sol1/impl/verilog /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_1_rlyb3f5l/project_StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_1_w_6q1cte/project_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_1/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingMaxPool_Batch_0_4zgjpahz/project_StreamingDataflowPartition_1_StreamingMaxPool_Batch_0/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_2_635gk5g4/project_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_2/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_ConvolutionInputGenerator_2_0yy6di7f/project_StreamingDataflowPartition_1_ConvolutionInputGenerator_2/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFIFO_3_uz33nb69/project_StreamingDataflowPartition_1_StreamingFIFO_3/sol1/impl/verilog /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_2_vsby_qo2/project_StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_ConvolutionInputGenerator_3_4e8djtfd/project_StreamingDataflowPartition_1_ConvolutionInputGenerator_3/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFIFO_4_c21nvyhq/project_StreamingDataflowPartition_1_StreamingFIFO_4/sol1/impl/verilog /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_3__u8l5m1b/project_StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_3_va9os8f4/project_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_3/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingMaxPool_Batch_1_z6dif_eo/project_StreamingDataflowPartition_1_StreamingMaxPool_Batch_1/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_4_7rqfe8ft/project_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_4/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_ConvolutionInputGenerator_4_l06dkrzz/project_StreamingDataflowPartition_1_ConvolutionInputGenerator_4/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFIFO_5_t71yrlf9/project_StreamingDataflowPartition_1_StreamingFIFO_5/sol1/impl/verilog /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_4_t3s34udo/project_StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_5_x2smvdcx/project_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_5/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_ConvolutionInputGenerator_5_ytvby1y8/project_StreamingDataflowPartition_1_ConvolutionInputGenerator_5/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_5_xarv85n1/project_StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_6__9mykkzg/project_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_6/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_6_dl_v0rnd/project_StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_7_weslpx0e/project_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_7/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFIFO_6_irg7szyu/project_StreamingDataflowPartition_1_StreamingFIFO_6/sol1/impl/verilog /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_7_xs5d2uis/project_StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFIFO_7_jcc1haew/project_StreamingDataflowPartition_1_StreamingFIFO_7/sol1/impl/verilog /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_8_pti02s77/project_StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_8__6j3kz6o/project_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_8/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_Batch_0_hqihul4w/project_StreamingDataflowPartition_1_LabelSelect_Batch_0/sol1/impl/ip /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFIFO_8_5zdwu5s5/project_StreamingDataflowPartition_1_StreamingFIFO_8/sol1/impl/verilog] [current_project]
+# update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/workspace/finn/finn-rtllib/memstream'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFIFO_0_5zq0wcy6/project_StreamingDataflowPartition_1_StreamingFIFO_0/sol1/impl/verilog'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_Thresholding_Batch_0_7xvapk4_/project_StreamingDataflowPartition_1_Thresholding_Batch_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_0_m8tou0py/project_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_ConvolutionInputGenerator_0_4ndc7jjk/project_StreamingDataflowPartition_1_ConvolutionInputGenerator_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFIFO_1_qwjzzylc/project_StreamingDataflowPartition_1_StreamingFIFO_1/sol1/impl/verilog'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_0_kid44056/project_StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_ConvolutionInputGenerator_1_qts7t79b/project_StreamingDataflowPartition_1_ConvolutionInputGenerator_1/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFIFO_2_n2ymv40f/project_StreamingDataflowPartition_1_StreamingFIFO_2/sol1/impl/verilog'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_1_rlyb3f5l/project_StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_1_w_6q1cte/project_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_1/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingMaxPool_Batch_0_4zgjpahz/project_StreamingDataflowPartition_1_StreamingMaxPool_Batch_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_2_635gk5g4/project_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_2/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_ConvolutionInputGenerator_2_0yy6di7f/project_StreamingDataflowPartition_1_ConvolutionInputGenerator_2/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFIFO_3_uz33nb69/project_StreamingDataflowPartition_1_StreamingFIFO_3/sol1/impl/verilog'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_2_vsby_qo2/project_StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_ConvolutionInputGenerator_3_4e8djtfd/project_StreamingDataflowPartition_1_ConvolutionInputGenerator_3/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFIFO_4_c21nvyhq/project_StreamingDataflowPartition_1_StreamingFIFO_4/sol1/impl/verilog'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_3__u8l5m1b/project_StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_3_va9os8f4/project_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_3/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingMaxPool_Batch_1_z6dif_eo/project_StreamingDataflowPartition_1_StreamingMaxPool_Batch_1/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_4_7rqfe8ft/project_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_4/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_ConvolutionInputGenerator_4_l06dkrzz/project_StreamingDataflowPartition_1_ConvolutionInputGenerator_4/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFIFO_5_t71yrlf9/project_StreamingDataflowPartition_1_StreamingFIFO_5/sol1/impl/verilog'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_4_t3s34udo/project_StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_5_x2smvdcx/project_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_5/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_ConvolutionInputGenerator_5_ytvby1y8/project_StreamingDataflowPartition_1_ConvolutionInputGenerator_5/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_5_xarv85n1/project_StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_6__9mykkzg/project_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_6/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_6_dl_v0rnd/project_StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_7_weslpx0e/project_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_7/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFIFO_6_irg7szyu/project_StreamingDataflowPartition_1_StreamingFIFO_6/sol1/impl/verilog'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_7_xs5d2uis/project_StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFIFO_7_jcc1haew/project_StreamingDataflowPartition_1_StreamingFIFO_7/sol1/impl/verilog'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_8_pti02s77/project_StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_8__6j3kz6o/project_StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_8/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_Batch_0_hqihul4w/project_StreamingDataflowPartition_1_LabelSelect_Batch_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFIFO_8_5zdwu5s5/project_StreamingDataflowPartition_1_StreamingFIFO_8/sol1/impl/verilog'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.1/data/ip'.
+# create_bd_design "StreamingDataflowPartition_1"
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+Wrote  : </mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_1/StreamingDataflowPartition_1.bd> 
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingFIFO_0:1.0 StreamingDataflowPartition_1_StreamingFIFO_0
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFIFO_0' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_Thresholding_Batch_0:1.0 StreamingDataflowPartition_1_Thresholding_Batch_0
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_Thresholding_Batch_0' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_0:1.0 StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_0
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_0' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_ConvolutionInputGenerator_0:1.0 StreamingDataflowPartition_1_ConvolutionInputGenerator_0
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_ConvolutionInputGenerator_0' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingFIFO_1:1.0 StreamingDataflowPartition_1_StreamingFIFO_1
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFIFO_1' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type hier StreamingDataflowPartition_1_StreamingFCLayer_Batch_0
+# create_bd_pin -dir I -type clk /StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/ap_clk
+# create_bd_pin -dir I -type rst /StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/ap_rst_n
+# create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/out_V_V
+# create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/in0_V_V
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingFCLayer_Batch_0:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/StreamingDataflowPartition_1_StreamingFCLayer_Batch_0
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFCLayer_Batch_0' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/StreamingDataflowPartition_1_StreamingFCLayer_Batch_0_wstrm
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFCLayer_Batch_0_wstrm' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# set_property -dict [list CONFIG.NSTREAMS {1} CONFIG.MEM_DEPTH {36} CONFIG.MEM_WIDTH {48} CONFIG.MEM_INIT {/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_0_kid44056/} CONFIG.RAM_STYLE {auto} CONFIG.STRM0_DEPTH {36} CONFIG.STRM0_WIDTH {48} CONFIG.STRM0_OFFSET {0} ] [get_bd_cells /StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/StreamingDataflowPartition_1_StreamingFCLayer_Batch_0_wstrm]
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 17.0 is provided. The value is converted to long type(17)
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 9.0 is provided. The value is converted to long type(9)
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/StreamingDataflowPartition_1_StreamingFCLayer_Batch_0_wstrm/m_axis_0] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/weights_V_V]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/StreamingDataflowPartition_1_StreamingFCLayer_Batch_0_wstrm/aresetn]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/StreamingDataflowPartition_1_StreamingFCLayer_Batch_0_wstrm/aclk]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/ap_rst_n]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/in0_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/in0_V_V]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/out_V_V]
+# save_bd_design
+Wrote  : </mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_1/StreamingDataflowPartition_1.bd> 
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_ConvolutionInputGenerator_1:1.0 StreamingDataflowPartition_1_ConvolutionInputGenerator_1
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_ConvolutionInputGenerator_1' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingFIFO_2:1.0 StreamingDataflowPartition_1_StreamingFIFO_2
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFIFO_2' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type hier StreamingDataflowPartition_1_StreamingFCLayer_Batch_1
+# create_bd_pin -dir I -type clk /StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/ap_clk
+# create_bd_pin -dir I -type rst /StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/ap_rst_n
+# create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/out_V_V
+# create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/in0_V_V
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingFCLayer_Batch_1:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/StreamingDataflowPartition_1_StreamingFCLayer_Batch_1
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFCLayer_Batch_1' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/StreamingDataflowPartition_1_StreamingFCLayer_Batch_1_wstrm
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFCLayer_Batch_1_wstrm' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# set_property -dict [list CONFIG.NSTREAMS {1} CONFIG.MEM_DEPTH {72} CONFIG.MEM_WIDTH {512} CONFIG.MEM_INIT {/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_1_rlyb3f5l/} CONFIG.RAM_STYLE {auto} CONFIG.STRM0_DEPTH {72} CONFIG.STRM0_WIDTH {512} CONFIG.STRM0_OFFSET {0} ] [get_bd_cells /StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/StreamingDataflowPartition_1_StreamingFCLayer_Batch_1_wstrm]
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 20.0 is provided. The value is converted to long type(20)
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 13.0 is provided. The value is converted to long type(13)
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/StreamingDataflowPartition_1_StreamingFCLayer_Batch_1_wstrm/m_axis_0] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/weights_V_V]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/StreamingDataflowPartition_1_StreamingFCLayer_Batch_1_wstrm/aresetn]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/StreamingDataflowPartition_1_StreamingFCLayer_Batch_1_wstrm/aclk]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/ap_rst_n]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/in0_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/in0_V_V]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/out_V_V]
+# save_bd_design
+Wrote  : </mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_1/StreamingDataflowPartition_1.bd> 
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_1:1.0 StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_1
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_1' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingMaxPool_Batch_0:1.0 StreamingDataflowPartition_1_StreamingMaxPool_Batch_0
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingMaxPool_Batch_0' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_2:1.0 StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_2
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_2' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_ConvolutionInputGenerator_2:1.0 StreamingDataflowPartition_1_ConvolutionInputGenerator_2
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_ConvolutionInputGenerator_2' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingFIFO_3:1.0 StreamingDataflowPartition_1_StreamingFIFO_3
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFIFO_3' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type hier StreamingDataflowPartition_1_StreamingFCLayer_Batch_2
+# create_bd_pin -dir I -type clk /StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/ap_clk
+# create_bd_pin -dir I -type rst /StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/ap_rst_n
+# create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/out_V_V
+# create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/in0_V_V
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingFCLayer_Batch_2:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/StreamingDataflowPartition_1_StreamingFCLayer_Batch_2
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFCLayer_Batch_2' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/StreamingDataflowPartition_1_StreamingFCLayer_Batch_2_wstrm
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFCLayer_Batch_2_wstrm' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# set_property -dict [list CONFIG.NSTREAMS {1} CONFIG.MEM_DEPTH {288} CONFIG.MEM_WIDTH {256} CONFIG.MEM_INIT {/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_2_vsby_qo2/} CONFIG.RAM_STYLE {auto} CONFIG.STRM0_DEPTH {288} CONFIG.STRM0_WIDTH {256} CONFIG.STRM0_OFFSET {0} ] [get_bd_cells /StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/StreamingDataflowPartition_1_StreamingFCLayer_Batch_2_wstrm]
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 19.0 is provided. The value is converted to long type(19)
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 14.0 is provided. The value is converted to long type(14)
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/StreamingDataflowPartition_1_StreamingFCLayer_Batch_2_wstrm/m_axis_0] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/weights_V_V]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/StreamingDataflowPartition_1_StreamingFCLayer_Batch_2_wstrm/aresetn]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/StreamingDataflowPartition_1_StreamingFCLayer_Batch_2_wstrm/aclk]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/ap_rst_n]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/in0_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/in0_V_V]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/out_V_V]
+# save_bd_design
+Wrote  : </mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_1/StreamingDataflowPartition_1.bd> 
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_ConvolutionInputGenerator_3:1.0 StreamingDataflowPartition_1_ConvolutionInputGenerator_3
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_ConvolutionInputGenerator_3' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingFIFO_4:1.0 StreamingDataflowPartition_1_StreamingFIFO_4
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFIFO_4' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type hier StreamingDataflowPartition_1_StreamingFCLayer_Batch_3
+# create_bd_pin -dir I -type clk /StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/ap_clk
+# create_bd_pin -dir I -type rst /StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/ap_rst_n
+# create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/out_V_V
+# create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/in0_V_V
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingFCLayer_Batch_3:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/StreamingDataflowPartition_1_StreamingFCLayer_Batch_3
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFCLayer_Batch_3' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/StreamingDataflowPartition_1_StreamingFCLayer_Batch_3_wstrm
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFCLayer_Batch_3_wstrm' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# set_property -dict [list CONFIG.NSTREAMS {1} CONFIG.MEM_DEPTH {576} CONFIG.MEM_WIDTH {256} CONFIG.MEM_INIT {/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_3__u8l5m1b/} CONFIG.RAM_STYLE {auto} CONFIG.STRM0_DEPTH {576} CONFIG.STRM0_WIDTH {256} CONFIG.STRM0_OFFSET {0} ] [get_bd_cells /StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/StreamingDataflowPartition_1_StreamingFCLayer_Batch_3_wstrm]
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 19.0 is provided. The value is converted to long type(19)
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 15.0 is provided. The value is converted to long type(15)
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/StreamingDataflowPartition_1_StreamingFCLayer_Batch_3_wstrm/m_axis_0] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/weights_V_V]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/StreamingDataflowPartition_1_StreamingFCLayer_Batch_3_wstrm/aresetn]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/StreamingDataflowPartition_1_StreamingFCLayer_Batch_3_wstrm/aclk]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/ap_rst_n]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/in0_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/in0_V_V]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/out_V_V]
+# save_bd_design
+Wrote  : </mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_1/StreamingDataflowPartition_1.bd> 
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_3:1.0 StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_3
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_3' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingMaxPool_Batch_1:1.0 StreamingDataflowPartition_1_StreamingMaxPool_Batch_1
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingMaxPool_Batch_1' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_4:1.0 StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_4
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_4' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_ConvolutionInputGenerator_4:1.0 StreamingDataflowPartition_1_ConvolutionInputGenerator_4
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_ConvolutionInputGenerator_4' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingFIFO_5:1.0 StreamingDataflowPartition_1_StreamingFIFO_5
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFIFO_5' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type hier StreamingDataflowPartition_1_StreamingFCLayer_Batch_4
+# create_bd_pin -dir I -type clk /StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/ap_clk
+# create_bd_pin -dir I -type rst /StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/ap_rst_n
+# create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/out_V_V
+# create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/in0_V_V
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingFCLayer_Batch_4:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/StreamingDataflowPartition_1_StreamingFCLayer_Batch_4
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFCLayer_Batch_4' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/StreamingDataflowPartition_1_StreamingFCLayer_Batch_4_wstrm
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFCLayer_Batch_4_wstrm' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# set_property -dict [list CONFIG.NSTREAMS {1} CONFIG.MEM_DEPTH {4608} CONFIG.MEM_WIDTH {64} CONFIG.MEM_INIT {/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_4_t3s34udo/} CONFIG.RAM_STYLE {auto} CONFIG.STRM0_DEPTH {4608} CONFIG.STRM0_WIDTH {64} CONFIG.STRM0_OFFSET {0} ] [get_bd_cells /StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/StreamingDataflowPartition_1_StreamingFCLayer_Batch_4_wstrm]
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 17.0 is provided. The value is converted to long type(17)
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 16.0 is provided. The value is converted to long type(16)
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/StreamingDataflowPartition_1_StreamingFCLayer_Batch_4_wstrm/m_axis_0] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/weights_V_V]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/StreamingDataflowPartition_1_StreamingFCLayer_Batch_4_wstrm/aresetn]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/StreamingDataflowPartition_1_StreamingFCLayer_Batch_4_wstrm/aclk]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/ap_rst_n]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/in0_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/in0_V_V]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/out_V_V]
+# save_bd_design
+Wrote  : </mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_1/StreamingDataflowPartition_1.bd> 
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_5:1.0 StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_5
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_5' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_ConvolutionInputGenerator_5:1.0 StreamingDataflowPartition_1_ConvolutionInputGenerator_5
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_ConvolutionInputGenerator_5' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type hier StreamingDataflowPartition_1_StreamingFCLayer_Batch_5
+# create_bd_pin -dir I -type clk /StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/ap_clk
+# create_bd_pin -dir I -type rst /StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/ap_rst_n
+# create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/out_V_V
+# create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/in0_V_V
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingFCLayer_Batch_5:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/StreamingDataflowPartition_1_StreamingFCLayer_Batch_5
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFCLayer_Batch_5' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/StreamingDataflowPartition_1_StreamingFCLayer_Batch_5_wstrm
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFCLayer_Batch_5_wstrm' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# set_property -dict [list CONFIG.NSTREAMS {1} CONFIG.MEM_DEPTH {36864} CONFIG.MEM_WIDTH {16} CONFIG.MEM_INIT {/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_5_xarv85n1/} CONFIG.RAM_STYLE {auto} CONFIG.STRM0_DEPTH {36864} CONFIG.STRM0_WIDTH {16} CONFIG.STRM0_OFFSET {0} ] [get_bd_cells /StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/StreamingDataflowPartition_1_StreamingFCLayer_Batch_5_wstrm]
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 16.0 is provided. The value is converted to long type(16)
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 18.0 is provided. The value is converted to long type(18)
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/StreamingDataflowPartition_1_StreamingFCLayer_Batch_5_wstrm/m_axis_0] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/weights_V_V]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/StreamingDataflowPartition_1_StreamingFCLayer_Batch_5_wstrm/aresetn]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/StreamingDataflowPartition_1_StreamingFCLayer_Batch_5_wstrm/aclk]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/ap_rst_n]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/in0_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/in0_V_V]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/out_V_V]
+# save_bd_design
+Wrote  : </mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_1/StreamingDataflowPartition_1.bd> 
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_6:1.0 StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_6
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_6' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type hier StreamingDataflowPartition_1_StreamingFCLayer_Batch_6
+# create_bd_pin -dir I -type clk /StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/ap_clk
+# create_bd_pin -dir I -type rst /StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/ap_rst_n
+# create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/out_V_V
+# create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/in0_V_V
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingFCLayer_Batch_6:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/StreamingDataflowPartition_1_StreamingFCLayer_Batch_6
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFCLayer_Batch_6' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/StreamingDataflowPartition_1_StreamingFCLayer_Batch_6_wstrm
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFCLayer_Batch_6_wstrm' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# set_property -dict [list CONFIG.NSTREAMS {1} CONFIG.MEM_DEPTH {32768} CONFIG.MEM_WIDTH {8} CONFIG.MEM_INIT {/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_6_dl_v0rnd/} CONFIG.RAM_STYLE {auto} CONFIG.STRM0_DEPTH {32768} CONFIG.STRM0_WIDTH {8} CONFIG.STRM0_OFFSET {0} ] [get_bd_cells /StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/StreamingDataflowPartition_1_StreamingFCLayer_Batch_6_wstrm]
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 16.0 is provided. The value is converted to long type(16)
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 17.0 is provided. The value is converted to long type(17)
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/StreamingDataflowPartition_1_StreamingFCLayer_Batch_6_wstrm/m_axis_0] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/weights_V_V]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/StreamingDataflowPartition_1_StreamingFCLayer_Batch_6_wstrm/aresetn]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/StreamingDataflowPartition_1_StreamingFCLayer_Batch_6_wstrm/aclk]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/ap_rst_n]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/in0_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/in0_V_V]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/out_V_V]
+# save_bd_design
+Wrote  : </mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_1/StreamingDataflowPartition_1.bd> 
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_7:1.0 StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_7
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_7' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingFIFO_6:1.0 StreamingDataflowPartition_1_StreamingFIFO_6
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFIFO_6' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type hier StreamingDataflowPartition_1_StreamingFCLayer_Batch_7
+# create_bd_pin -dir I -type clk /StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/ap_clk
+# create_bd_pin -dir I -type rst /StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/ap_rst_n
+# create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/out_V_V
+# create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/in0_V_V
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingFCLayer_Batch_7:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/StreamingDataflowPartition_1_StreamingFCLayer_Batch_7
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFCLayer_Batch_7' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/StreamingDataflowPartition_1_StreamingFCLayer_Batch_7_wstrm
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFCLayer_Batch_7_wstrm' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# set_property -dict [list CONFIG.NSTREAMS {1} CONFIG.MEM_DEPTH {32768} CONFIG.MEM_WIDTH {8} CONFIG.MEM_INIT {/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_7_xs5d2uis/} CONFIG.RAM_STYLE {auto} CONFIG.STRM0_DEPTH {32768} CONFIG.STRM0_WIDTH {8} CONFIG.STRM0_OFFSET {0} ] [get_bd_cells /StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/StreamingDataflowPartition_1_StreamingFCLayer_Batch_7_wstrm]
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 16.0 is provided. The value is converted to long type(16)
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 17.0 is provided. The value is converted to long type(17)
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/StreamingDataflowPartition_1_StreamingFCLayer_Batch_7_wstrm/m_axis_0] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/weights_V_V]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/StreamingDataflowPartition_1_StreamingFCLayer_Batch_7_wstrm/aresetn]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/StreamingDataflowPartition_1_StreamingFCLayer_Batch_7_wstrm/aclk]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/ap_rst_n]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/in0_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/in0_V_V]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/out_V_V]
+# save_bd_design
+Wrote  : </mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_1/StreamingDataflowPartition_1.bd> 
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingFIFO_7:1.0 StreamingDataflowPartition_1_StreamingFIFO_7
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFIFO_7' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type hier StreamingDataflowPartition_1_StreamingFCLayer_Batch_8
+# create_bd_pin -dir I -type clk /StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/ap_clk
+# create_bd_pin -dir I -type rst /StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/ap_rst_n
+# create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/out_V_V
+# create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/in0_V_V
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingFCLayer_Batch_8:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/StreamingDataflowPartition_1_StreamingFCLayer_Batch_8
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFCLayer_Batch_8' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:user:memstream:1.0 /StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/StreamingDataflowPartition_1_StreamingFCLayer_Batch_8_wstrm
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFCLayer_Batch_8_wstrm' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# set_property -dict [list CONFIG.NSTREAMS {1} CONFIG.MEM_DEPTH {1024} CONFIG.MEM_WIDTH {8} CONFIG.MEM_INIT {/mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/code_gen_ipgen_StreamingDataflowPartition_1_StreamingFCLayer_Batch_8_pti02s77/} CONFIG.RAM_STYLE {auto} CONFIG.STRM0_DEPTH {1024} CONFIG.STRM0_WIDTH {8} CONFIG.STRM0_OFFSET {0} ] [get_bd_cells /StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/StreamingDataflowPartition_1_StreamingFCLayer_Batch_8_wstrm]
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 16.0 is provided. The value is converted to long type(16)
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 12.0 is provided. The value is converted to long type(12)
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/StreamingDataflowPartition_1_StreamingFCLayer_Batch_8_wstrm/m_axis_0] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/weights_V_V]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/StreamingDataflowPartition_1_StreamingFCLayer_Batch_8_wstrm/aresetn]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/StreamingDataflowPartition_1_StreamingFCLayer_Batch_8_wstrm/aclk]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/ap_rst_n]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/in0_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/in0_V_V]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/out_V_V]
+# save_bd_design
+Wrote  : </mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_1/StreamingDataflowPartition_1.bd> 
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_8:1.0 StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_8
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_8' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_LabelSelect_Batch_0:1.0 StreamingDataflowPartition_1_LabelSelect_Batch_0
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_LabelSelect_Batch_0' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# create_bd_cell -type ip -vlnv xilinx.com:hls:StreamingDataflowPartition_1_StreamingFIFO_8:1.0 StreamingDataflowPartition_1_StreamingFIFO_8
+WARNING: [BD 41-1753] The name 'StreamingDataflowPartition_1_StreamingFIFO_8' you have specified is long. The Windows OS has path length limitations. It is recommended you use shorter names(less than 25 characters) to reduce the likelihood of issues when/if running on windows OS.
+# make_bd_pins_external [get_bd_pins StreamingDataflowPartition_1_StreamingFIFO_0/ap_clk]
+# set_property name ap_clk [get_bd_ports ap_clk_0]
+# make_bd_pins_external [get_bd_pins StreamingDataflowPartition_1_StreamingFIFO_0/ap_rst_n]
+# set_property name ap_rst_n [get_bd_ports ap_rst_n_0]
+# make_bd_intf_pins_external [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFIFO_0/in0_V_V]
+# set_property name s_axis_0 [get_bd_intf_ports in0_V_V_0]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_Thresholding_Batch_0/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_Thresholding_Batch_0/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFIFO_0/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_Thresholding_Batch_0/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_0/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_0/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_Thresholding_Batch_0/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_0/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_ConvolutionInputGenerator_0/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_ConvolutionInputGenerator_0/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_0/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_ConvolutionInputGenerator_0/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFIFO_1/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFIFO_1/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_ConvolutionInputGenerator_0/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFIFO_1/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFIFO_1/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_ConvolutionInputGenerator_1/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_ConvolutionInputGenerator_1/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_ConvolutionInputGenerator_1/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFIFO_2/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFIFO_2/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_ConvolutionInputGenerator_1/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFIFO_2/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFIFO_2/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_1/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_1/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_1/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingMaxPool_Batch_0/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingMaxPool_Batch_0/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_1/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingMaxPool_Batch_0/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_2/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_2/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingMaxPool_Batch_0/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_2/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_ConvolutionInputGenerator_2/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_ConvolutionInputGenerator_2/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_2/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_ConvolutionInputGenerator_2/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFIFO_3/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFIFO_3/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_ConvolutionInputGenerator_2/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFIFO_3/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFIFO_3/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_ConvolutionInputGenerator_3/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_ConvolutionInputGenerator_3/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_ConvolutionInputGenerator_3/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFIFO_4/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFIFO_4/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_ConvolutionInputGenerator_3/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFIFO_4/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFIFO_4/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_3/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_3/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_3/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingMaxPool_Batch_1/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingMaxPool_Batch_1/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_3/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingMaxPool_Batch_1/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_4/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_4/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingMaxPool_Batch_1/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_4/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_ConvolutionInputGenerator_4/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_ConvolutionInputGenerator_4/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_4/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_ConvolutionInputGenerator_4/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFIFO_5/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFIFO_5/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_ConvolutionInputGenerator_4/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFIFO_5/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFIFO_5/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_5/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_5/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_5/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_ConvolutionInputGenerator_5/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_ConvolutionInputGenerator_5/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_5/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_ConvolutionInputGenerator_5/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_ConvolutionInputGenerator_5/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_6/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_6/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_6/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_6/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_7/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_7/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_7/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFIFO_6/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFIFO_6/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_7/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFIFO_6/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFIFO_6/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFIFO_7/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFIFO_7/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFIFO_7/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFIFO_7/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_8/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_8/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_8/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_LabelSelect_Batch_0/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_LabelSelect_Batch_0/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_8/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_LabelSelect_Batch_0/in0_V_V]
+# connect_bd_net [get_bd_ports ap_rst_n] [get_bd_pins StreamingDataflowPartition_1_StreamingFIFO_8/ap_rst_n]
+# connect_bd_net [get_bd_ports ap_clk] [get_bd_pins StreamingDataflowPartition_1_StreamingFIFO_8/ap_clk]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1_LabelSelect_Batch_0/out_V_V] [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFIFO_8/in0_V_V]
+# make_bd_intf_pins_external [get_bd_intf_pins StreamingDataflowPartition_1_StreamingFIFO_8/out_V_V]
+# set_property name m_axis_0 [get_bd_intf_ports out_V_V_0]
+# set_property CONFIG.FREQ_HZ 100000000.000000 [get_bd_ports /ap_clk]
+# regenerate_bd_layout
+# validate_bd_design
+WARNING: [BD 41-927] Following properties on pin /StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/StreamingDataflowPartition_1_StreamingFCLayer_Batch_0_wstrm/aclk have been updated from connected ip, but BD cell '/StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/StreamingDataflowPartition_1_StreamingFCLayer_Batch_0_wstrm' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 100000000.000000 
+Please resolve any mismatches by directly setting properties on BD cell </StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/StreamingDataflowPartition_1_StreamingFCLayer_Batch_0_wstrm> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/StreamingDataflowPartition_1_StreamingFCLayer_Batch_1_wstrm/aclk have been updated from connected ip, but BD cell '/StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/StreamingDataflowPartition_1_StreamingFCLayer_Batch_1_wstrm' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 100000000.000000 
+Please resolve any mismatches by directly setting properties on BD cell </StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/StreamingDataflowPartition_1_StreamingFCLayer_Batch_1_wstrm> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/StreamingDataflowPartition_1_StreamingFCLayer_Batch_2_wstrm/aclk have been updated from connected ip, but BD cell '/StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/StreamingDataflowPartition_1_StreamingFCLayer_Batch_2_wstrm' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 100000000.000000 
+Please resolve any mismatches by directly setting properties on BD cell </StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/StreamingDataflowPartition_1_StreamingFCLayer_Batch_2_wstrm> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/StreamingDataflowPartition_1_StreamingFCLayer_Batch_3_wstrm/aclk have been updated from connected ip, but BD cell '/StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/StreamingDataflowPartition_1_StreamingFCLayer_Batch_3_wstrm' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 100000000.000000 
+Please resolve any mismatches by directly setting properties on BD cell </StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/StreamingDataflowPartition_1_StreamingFCLayer_Batch_3_wstrm> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/StreamingDataflowPartition_1_StreamingFCLayer_Batch_4_wstrm/aclk have been updated from connected ip, but BD cell '/StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/StreamingDataflowPartition_1_StreamingFCLayer_Batch_4_wstrm' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 100000000.000000 
+Please resolve any mismatches by directly setting properties on BD cell </StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/StreamingDataflowPartition_1_StreamingFCLayer_Batch_4_wstrm> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/StreamingDataflowPartition_1_StreamingFCLayer_Batch_5_wstrm/aclk have been updated from connected ip, but BD cell '/StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/StreamingDataflowPartition_1_StreamingFCLayer_Batch_5_wstrm' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 100000000.000000 
+Please resolve any mismatches by directly setting properties on BD cell </StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/StreamingDataflowPartition_1_StreamingFCLayer_Batch_5_wstrm> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/StreamingDataflowPartition_1_StreamingFCLayer_Batch_6_wstrm/aclk have been updated from connected ip, but BD cell '/StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/StreamingDataflowPartition_1_StreamingFCLayer_Batch_6_wstrm' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 100000000.000000 
+Please resolve any mismatches by directly setting properties on BD cell </StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/StreamingDataflowPartition_1_StreamingFCLayer_Batch_6_wstrm> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/StreamingDataflowPartition_1_StreamingFCLayer_Batch_7_wstrm/aclk have been updated from connected ip, but BD cell '/StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/StreamingDataflowPartition_1_StreamingFCLayer_Batch_7_wstrm' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 100000000.000000 
+Please resolve any mismatches by directly setting properties on BD cell </StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/StreamingDataflowPartition_1_StreamingFCLayer_Batch_7_wstrm> to completely resolve these warnings.
+WARNING: [BD 41-927] Following properties on pin /StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/StreamingDataflowPartition_1_StreamingFCLayer_Batch_8_wstrm/aclk have been updated from connected ip, but BD cell '/StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/StreamingDataflowPartition_1_StreamingFCLayer_Batch_8_wstrm' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 100000000.000000 
+Please resolve any mismatches by directly setting properties on BD cell </StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/StreamingDataflowPartition_1_StreamingFCLayer_Batch_8_wstrm> to completely resolve these warnings.
+# save_bd_design
+Wrote  : </mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_1/StreamingDataflowPartition_1.bd> 
+# make_wrapper -files [get_files /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_1/StreamingDataflowPartition_1.bd] -top
+INFO: [BD 41-1662] The design 'StreamingDataflowPartition_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_1/synth/StreamingDataflowPartition_1.v
+VHDL Output written to : /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_1/sim/StreamingDataflowPartition_1.v
+VHDL Output written to : /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_1/hdl/StreamingDataflowPartition_1_wrapper.v
+# add_files -norecurse /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_1/hdl/StreamingDataflowPartition_1_wrapper.v
+# ipx::package_project -root_dir /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb/ip -vendor xilinx_finn -library finn -taxonomy /UserIP -module StreamingDataflowPartition_1 -import_files
+INFO: [BD 41-1662] The design 'StreamingDataflowPartition_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_1/synth/StreamingDataflowPartition_1.v
+VHDL Output written to : /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_1/sim/StreamingDataflowPartition_1.v
+VHDL Output written to : /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_1/hdl/StreamingDataflowPartition_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFIFO_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_Thresholding_Batch_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_ConvolutionInputGenerator_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFIFO_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/StreamingDataflowPartition_1_StreamingFCLayer_Batch_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFCLayer_Batch_0/StreamingDataflowPartition_1_StreamingFCLayer_Batch_0_wstrm .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_ConvolutionInputGenerator_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFIFO_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/StreamingDataflowPartition_1_StreamingFCLayer_Batch_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFCLayer_Batch_1/StreamingDataflowPartition_1_StreamingFCLayer_Batch_1_wstrm .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingMaxPool_Batch_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_ConvolutionInputGenerator_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFIFO_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/StreamingDataflowPartition_1_StreamingFCLayer_Batch_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFCLayer_Batch_2/StreamingDataflowPartition_1_StreamingFCLayer_Batch_2_wstrm .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_ConvolutionInputGenerator_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFIFO_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/StreamingDataflowPartition_1_StreamingFCLayer_Batch_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFCLayer_Batch_3/StreamingDataflowPartition_1_StreamingFCLayer_Batch_3_wstrm .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingMaxPool_Batch_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_ConvolutionInputGenerator_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFIFO_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/StreamingDataflowPartition_1_StreamingFCLayer_Batch_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFCLayer_Batch_4/StreamingDataflowPartition_1_StreamingFCLayer_Batch_4_wstrm .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_ConvolutionInputGenerator_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/StreamingDataflowPartition_1_StreamingFCLayer_Batch_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFCLayer_Batch_5/StreamingDataflowPartition_1_StreamingFCLayer_Batch_5_wstrm .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/StreamingDataflowPartition_1_StreamingFCLayer_Batch_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFCLayer_Batch_6/StreamingDataflowPartition_1_StreamingFCLayer_Batch_6_wstrm .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFIFO_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/StreamingDataflowPartition_1_StreamingFCLayer_Batch_7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFCLayer_Batch_7/StreamingDataflowPartition_1_StreamingFCLayer_Batch_7_wstrm .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFIFO_7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/StreamingDataflowPartition_1_StreamingFCLayer_Batch_8 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFCLayer_Batch_8/StreamingDataflowPartition_1_StreamingFCLayer_Batch_8_wstrm .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingDataWidthConverter_Batch_8 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_LabelSelect_Batch_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1_StreamingFIFO_8 .
+Exporting to file /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_1/hw_handoff/StreamingDataflowPartition_1.hwh
+Generated Block Design Tcl file /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_1/hw_handoff/StreamingDataflowPartition_1_bd.tcl
+Generated Hardware Definition File /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb/finn_vivado_stitch_proj.srcs/sources_1/bd/StreamingDataflowPartition_1/synth/StreamingDataflowPartition_1.hwdef
+CRITICAL WARNING: [IP_Flow 19-5234] Found an invalid attribute: 'Misformed interface info attr: xilinx.com:interface:axis:1.0 m_axis_0'
+CRITICAL WARNING: [IP_Flow 19-5234] Found an invalid attribute: 'Misformed interface info attr: xilinx.com:interface:axis:1.0 m_axis_0'
+CRITICAL WARNING: [IP_Flow 19-5234] Found an invalid attribute: 'Misformed interface info attr: xilinx.com:interface:axis:1.0 m_axis_0'
+CRITICAL WARNING: [IP_Flow 19-5234] Found an invalid attribute: 'Misformed interface info attr: xilinx.com:interface:axis:1.0 s_axis_0'
+CRITICAL WARNING: [IP_Flow 19-5234] Found an invalid attribute: 'Misformed interface info attr: xilinx.com:interface:axis:1.0 s_axis_0'
+CRITICAL WARNING: [IP_Flow 19-5234] Found an invalid attribute: 'Misformed interface info attr: xilinx.com:interface:axis:1.0 s_axis_0'
+WARNING: [IP_Flow 19-3157] Bus Interface 'RST.AP_RST_N': Bus parameter POLARITY is ACTIVE_LOW but port 'ap_rst_n' is not *resetn - please double check the POLARITY setting.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+# set_property core_revision 2 [ipx::find_open_core xilinx_finn:finn:StreamingDataflowPartition_1:1.0]
+# ipx::create_xgui_files [ipx::find_open_core xilinx_finn:finn:StreamingDataflowPartition_1:1.0]
+# set_property value_resolve_type user [ipx::get_bus_parameters -of [ipx::get_bus_interfaces -of [ipx::current_core ]]]
+# ipx::update_checksums [ipx::find_open_core xilinx_finn:finn:StreamingDataflowPartition_1:1.0]
+# ipx::save_core [ipx::find_open_core xilinx_finn:finn:StreamingDataflowPartition_1:1.0]
+# set all_v_files [get_files -filter {FILE_TYPE == Verilog && USED_IN_SYNTHESIS == 1} ]
+# set fp [open /mnt/HLSNAS/nthu02/FINN_vision/finn/build/dir/vivado_stitch_proj_6n73lbgb/all_verilog_srcs.txt w]
+# foreach vf $all_v_files {puts $fp $vf}
+# close $fp
+INFO: [Common 17-206] Exiting Vivado at Sat Jun 18 12:18:45 2022...

@@ -1,0 +1,408 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Sat Apr 30 17:21:40 2022
+| Host         : ic21 running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : report_drc -file hw_bb_locked_drc_routed.rpt -pb hw_bb_locked_drc_routed.pb -rpx hw_bb_locked_drc_routed.rpx
+| Design       : level0_wrapper
+| Device       : xcu50-fsvh2104-2-e
+| Speed File   : -2
+| Design State : Fully Routed
+------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 66
++-----------+----------+----------------------------------------------------+------------+
+| Rule      | Severity | Description                                        | Violations |
++-----------+----------+----------------------------------------------------+------------+
+| DPIP-2    | Warning  | Input pipelining                                   | 4          |
+| DPOP-3    | Warning  | PREG Output pipelining                             | 3          |
+| DPOP-4    | Warning  | MREG Output pipelining                             | 8          |
+| FLBO-1    | Warning  | Pblock overlap                                     | 2          |
+| NTCN-8    | Warning  | CLOCK_DELAY_GROUP net segment not driven by buffer | 16         |
+| PDCN-1569 | Warning  | LUT equation term check                            | 2          |
+| REQP-1774 | Warning  | RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32         | 2          |
+| REQP-1776 | Warning  | RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72         | 2          |
+| REQP-1858 | Warning  | RAMB36E2_writefirst_collision_advisory             | 22         |
+| RTSTAT-10 | Warning  | No routable loads                                  | 1          |
+| HDPRA-53  | Advisory | Edge with Location Constraints                     | 1          |
+| HDPRA-55  | Advisory | Narrow Gap with Location Constraints               | 1          |
+| HDPRA-57  | Advisory | Gap with Location Constraints                      | 2          |
++-----------+----------+----------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+DPIP-2#1 Warning
+Input pipelining  
+DSP level0_i/blp/blp_i/blp_cmc/inst/microblaze_cmc/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.Doing_mul64.Virtex_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1 input level0_i/blp/blp_i/blp_cmc/inst/microblaze_cmc/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.Doing_mul64.Virtex_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#2 Warning
+Input pipelining  
+DSP level0_i/blp/blp_i/blp_cmc/inst/microblaze_cmc/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.Doing_mul64.Virtex_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1 input level0_i/blp/blp_i/blp_cmc/inst/microblaze_cmc/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.Doing_mul64.Virtex_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#3 Warning
+Input pipelining  
+DSP level0_i/blp/blp_i/blp_cmc/inst/microblaze_cmc/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.Doing_mul64.Virtex_MUL64.dsp_module_I4/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1 input level0_i/blp/blp_i/blp_cmc/inst/microblaze_cmc/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.Doing_mul64.Virtex_MUL64.dsp_module_I4/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#4 Warning
+Input pipelining  
+DSP level0_i/blp/blp_i/blp_cmc/inst/microblaze_cmc/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1 input level0_i/blp/blp_i/blp_cmc/inst/microblaze_cmc/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1/Using_FPGA.DSP48E1_I1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-3#1 Warning
+PREG Output pipelining  
+DSP level0_i/ulp/color_detect_1/inst/Array2xfMat_32_9_2160_3840_1_U0/grp_Axi2Mat_fu_82/AxiStream2Mat_U0/AxiStream2MatStream_2_U0/mul_32s_32s_32_2_1_U32/tmp_product__0 output level0_i/ulp/color_detect_1/inst/Array2xfMat_32_9_2160_3840_1_U0/grp_Axi2Mat_fu_82/AxiStream2Mat_U0/AxiStream2MatStream_2_U0/mul_32s_32s_32_2_1_U32/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#2 Warning
+PREG Output pipelining  
+DSP level0_i/ulp/color_detect_1/inst/bgr2hsv_9_2160_3840_1_U0/mul_32ns_32ns_64_2_1_U72/tmp_product output level0_i/ulp/color_detect_1/inst/bgr2hsv_9_2160_3840_1_U0/mul_32ns_32ns_64_2_1_U72/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#3 Warning
+PREG Output pipelining  
+DSP level0_i/ulp/color_detect_1/inst/bgr2hsv_9_2160_3840_1_U0/mul_32ns_32ns_64_2_1_U72/tmp_product__0 output level0_i/ulp/color_detect_1/inst/bgr2hsv_9_2160_3840_1_U0/mul_32ns_32ns_64_2_1_U72/tmp_product__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-4#1 Warning
+MREG Output pipelining  
+DSP level0_i/ulp/color_detect_1/inst/Array2xfMat_32_9_2160_3840_1_U0/grp_Axi2Mat_fu_82/Axi2AxiStream_U0/mul_mul_16ns_16ns_32_3_1_U9/color_detect_mul_mul_16ns_16ns_32_3_1_DSP48_0_U/p_reg_reg multiplier stage level0_i/ulp/color_detect_1/inst/Array2xfMat_32_9_2160_3840_1_U0/grp_Axi2Mat_fu_82/Axi2AxiStream_U0/mul_mul_16ns_16ns_32_3_1_U9/color_detect_mul_mul_16ns_16ns_32_3_1_DSP48_0_U/p_reg_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#2 Warning
+MREG Output pipelining  
+DSP level0_i/ulp/color_detect_1/inst/Array2xfMat_32_9_2160_3840_1_U0/grp_Axi2Mat_fu_82/AxiStream2Mat_U0/AxiStream2MatStream_2_U0/mul_32s_32s_32_2_1_U32/dout_reg multiplier stage level0_i/ulp/color_detect_1/inst/Array2xfMat_32_9_2160_3840_1_U0/grp_Axi2Mat_fu_82/AxiStream2Mat_U0/AxiStream2MatStream_2_U0/mul_32s_32s_32_2_1_U32/dout_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#3 Warning
+MREG Output pipelining  
+DSP level0_i/ulp/color_detect_1/inst/Array2xfMat_32_9_2160_3840_1_U0/grp_Axi2Mat_fu_82/AxiStream2Mat_U0/AxiStream2MatStream_2_U0/mul_32s_32s_32_2_1_U32/tmp_product multiplier stage level0_i/ulp/color_detect_1/inst/Array2xfMat_32_9_2160_3840_1_U0/grp_Axi2Mat_fu_82/AxiStream2Mat_U0/AxiStream2MatStream_2_U0/mul_32s_32s_32_2_1_U32/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#4 Warning
+MREG Output pipelining  
+DSP level0_i/ulp/color_detect_1/inst/Array2xfMat_32_9_2160_3840_1_U0/grp_Axi2Mat_fu_82/AxiStream2Mat_U0/AxiStream2MatStream_2_U0/mul_32s_32s_32_2_1_U32/tmp_product__0 multiplier stage level0_i/ulp/color_detect_1/inst/Array2xfMat_32_9_2160_3840_1_U0/grp_Axi2Mat_fu_82/AxiStream2Mat_U0/AxiStream2MatStream_2_U0/mul_32s_32s_32_2_1_U32/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#5 Warning
+MREG Output pipelining  
+DSP level0_i/ulp/color_detect_1/inst/bgr2hsv_9_2160_3840_1_U0/mul_32ns_32ns_64_2_1_U72/dout_reg multiplier stage level0_i/ulp/color_detect_1/inst/bgr2hsv_9_2160_3840_1_U0/mul_32ns_32ns_64_2_1_U72/dout_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#6 Warning
+MREG Output pipelining  
+DSP level0_i/ulp/color_detect_1/inst/bgr2hsv_9_2160_3840_1_U0/mul_32ns_32ns_64_2_1_U72/dout_reg__0 multiplier stage level0_i/ulp/color_detect_1/inst/bgr2hsv_9_2160_3840_1_U0/mul_32ns_32ns_64_2_1_U72/dout_reg__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#7 Warning
+MREG Output pipelining  
+DSP level0_i/ulp/color_detect_1/inst/bgr2hsv_9_2160_3840_1_U0/mul_32ns_32ns_64_2_1_U72/tmp_product multiplier stage level0_i/ulp/color_detect_1/inst/bgr2hsv_9_2160_3840_1_U0/mul_32ns_32ns_64_2_1_U72/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#8 Warning
+MREG Output pipelining  
+DSP level0_i/ulp/color_detect_1/inst/bgr2hsv_9_2160_3840_1_U0/mul_32ns_32ns_64_2_1_U72/tmp_product__0 multiplier stage level0_i/ulp/color_detect_1/inst/bgr2hsv_9_2160_3840_1_U0/mul_32ns_32ns_64_2_1_U72/tmp_product__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+FLBO-1#1 Warning
+Pblock overlap  - PBlock:pblock_blp
+pblock_blp overlaps with pblock_plp:16.18%.
+Related violations: <none>
+
+FLBO-1#2 Warning
+Pblock overlap  - PBlock:pblock_plp
+pblock_plp overlaps with pblock_blp:11.73%, pblock_level0_blp:99.86%.
+Related violations: <none>
+
+NTCN-8#1 Warning
+CLOCK_DELAY_GROUP net segment not driven by buffer  
+Net (segment) level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[24].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/txoutclk_out[0] is assigned constraint CLOCK_DELAY_GROUP 'level0_i_blp_blp_i_blp_hif_inst_pcie_inst_group_i0' but is not the net segment directly connected to the driving clock buffer. Instead the driver is GTYE4_CHANNEL cell level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[24].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST. In order to have your clock network properly constrained, the CLOCK_DELAY_GROUP constraint must be applied to the net segment directly driven by a clock buffer that requires its clock tree to be balanced. Please check your constraints.
+Related violations: <none>
+
+NTCN-8#2 Warning
+CLOCK_DELAY_GROUP net segment not driven by buffer  
+Net (segment) level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[24].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/txoutclk_out[1] is assigned constraint CLOCK_DELAY_GROUP 'level0_i_blp_blp_i_blp_hif_inst_pcie_inst_group_i0' but is not the net segment directly connected to the driving clock buffer. Instead the driver is GTYE4_CHANNEL cell level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[24].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[1].GTYE4_CHANNEL_PRIM_INST. In order to have your clock network properly constrained, the CLOCK_DELAY_GROUP constraint must be applied to the net segment directly driven by a clock buffer that requires its clock tree to be balanced. Please check your constraints.
+Related violations: <none>
+
+NTCN-8#3 Warning
+CLOCK_DELAY_GROUP net segment not driven by buffer  
+Net (segment) level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[24].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/txoutclk_out[2] is assigned constraint CLOCK_DELAY_GROUP 'level0_i_blp_blp_i_blp_hif_inst_pcie_inst_group_i0' but is not the net segment directly connected to the driving clock buffer. Instead the driver is GTYE4_CHANNEL cell level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[24].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[2].GTYE4_CHANNEL_PRIM_INST. In order to have your clock network properly constrained, the CLOCK_DELAY_GROUP constraint must be applied to the net segment directly driven by a clock buffer that requires its clock tree to be balanced. Please check your constraints.
+Related violations: <none>
+
+NTCN-8#4 Warning
+CLOCK_DELAY_GROUP net segment not driven by buffer  
+Net (segment) level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[24].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/txoutclk_out[3] is assigned constraint CLOCK_DELAY_GROUP 'level0_i_blp_blp_i_blp_hif_inst_pcie_inst_group_i0' but is not the net segment directly connected to the driving clock buffer. Instead the driver is GTYE4_CHANNEL cell level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[24].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[3].GTYE4_CHANNEL_PRIM_INST. In order to have your clock network properly constrained, the CLOCK_DELAY_GROUP constraint must be applied to the net segment directly driven by a clock buffer that requires its clock tree to be balanced. Please check your constraints.
+Related violations: <none>
+
+NTCN-8#5 Warning
+CLOCK_DELAY_GROUP net segment not driven by buffer  
+Net (segment) level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[25].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/txoutclk_out[0] is assigned constraint CLOCK_DELAY_GROUP 'level0_i_blp_blp_i_blp_hif_inst_pcie_inst_group_i0' but is not the net segment directly connected to the driving clock buffer. Instead the driver is GTYE4_CHANNEL cell level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[25].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST. In order to have your clock network properly constrained, the CLOCK_DELAY_GROUP constraint must be applied to the net segment directly driven by a clock buffer that requires its clock tree to be balanced. Please check your constraints.
+Related violations: <none>
+
+NTCN-8#6 Warning
+CLOCK_DELAY_GROUP net segment not driven by buffer  
+Net (segment) level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[25].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/txoutclk_out[1] is assigned constraint CLOCK_DELAY_GROUP 'level0_i_blp_blp_i_blp_hif_inst_pcie_inst_group_i0' but is not the net segment directly connected to the driving clock buffer. Instead the driver is GTYE4_CHANNEL cell level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[25].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[1].GTYE4_CHANNEL_PRIM_INST. In order to have your clock network properly constrained, the CLOCK_DELAY_GROUP constraint must be applied to the net segment directly driven by a clock buffer that requires its clock tree to be balanced. Please check your constraints.
+Related violations: <none>
+
+NTCN-8#7 Warning
+CLOCK_DELAY_GROUP net segment not driven by buffer  
+Net (segment) level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[25].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/txoutclk_out[2] is assigned constraint CLOCK_DELAY_GROUP 'level0_i_blp_blp_i_blp_hif_inst_pcie_inst_group_i0' but is not the net segment directly connected to the driving clock buffer. Instead the driver is GTYE4_CHANNEL cell level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[25].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[2].GTYE4_CHANNEL_PRIM_INST. In order to have your clock network properly constrained, the CLOCK_DELAY_GROUP constraint must be applied to the net segment directly driven by a clock buffer that requires its clock tree to be balanced. Please check your constraints.
+Related violations: <none>
+
+NTCN-8#8 Warning
+CLOCK_DELAY_GROUP net segment not driven by buffer  
+Net (segment) level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[25].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/txoutclk_out[3] is assigned constraint CLOCK_DELAY_GROUP 'level0_i_blp_blp_i_blp_hif_inst_pcie_inst_group_i0' but is not the net segment directly connected to the driving clock buffer. Instead the driver is GTYE4_CHANNEL cell level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[25].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[3].GTYE4_CHANNEL_PRIM_INST. In order to have your clock network properly constrained, the CLOCK_DELAY_GROUP constraint must be applied to the net segment directly driven by a clock buffer that requires its clock tree to be balanced. Please check your constraints.
+Related violations: <none>
+
+NTCN-8#9 Warning
+CLOCK_DELAY_GROUP net segment not driven by buffer  
+Net (segment) level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[26].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/txoutclk_out[0] is assigned constraint CLOCK_DELAY_GROUP 'level0_i_blp_blp_i_blp_hif_inst_pcie_inst_group_i0' but is not the net segment directly connected to the driving clock buffer. Instead the driver is GTYE4_CHANNEL cell level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[26].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST. In order to have your clock network properly constrained, the CLOCK_DELAY_GROUP constraint must be applied to the net segment directly driven by a clock buffer that requires its clock tree to be balanced. Please check your constraints.
+Related violations: <none>
+
+NTCN-8#10 Warning
+CLOCK_DELAY_GROUP net segment not driven by buffer  
+Net (segment) level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[26].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/txoutclk_out[1] is assigned constraint CLOCK_DELAY_GROUP 'level0_i_blp_blp_i_blp_hif_inst_pcie_inst_group_i0' but is not the net segment directly connected to the driving clock buffer. Instead the driver is GTYE4_CHANNEL cell level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[26].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[1].GTYE4_CHANNEL_PRIM_INST. In order to have your clock network properly constrained, the CLOCK_DELAY_GROUP constraint must be applied to the net segment directly driven by a clock buffer that requires its clock tree to be balanced. Please check your constraints.
+Related violations: <none>
+
+NTCN-8#11 Warning
+CLOCK_DELAY_GROUP net segment not driven by buffer  
+Net (segment) level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[26].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/txoutclk_out[2] is assigned constraint CLOCK_DELAY_GROUP 'level0_i_blp_blp_i_blp_hif_inst_pcie_inst_group_i0' but is not the net segment directly connected to the driving clock buffer. Instead the driver is GTYE4_CHANNEL cell level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[26].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[2].GTYE4_CHANNEL_PRIM_INST. In order to have your clock network properly constrained, the CLOCK_DELAY_GROUP constraint must be applied to the net segment directly driven by a clock buffer that requires its clock tree to be balanced. Please check your constraints.
+Related violations: <none>
+
+NTCN-8#12 Warning
+CLOCK_DELAY_GROUP net segment not driven by buffer  
+Net (segment) level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[26].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/txoutclk_out[3] is assigned constraint CLOCK_DELAY_GROUP 'level0_i_blp_blp_i_blp_hif_inst_pcie_inst_group_i0' but is not the net segment directly connected to the driving clock buffer. Instead the driver is GTYE4_CHANNEL cell level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[26].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[3].GTYE4_CHANNEL_PRIM_INST. In order to have your clock network properly constrained, the CLOCK_DELAY_GROUP constraint must be applied to the net segment directly driven by a clock buffer that requires its clock tree to be balanced. Please check your constraints.
+Related violations: <none>
+
+NTCN-8#13 Warning
+CLOCK_DELAY_GROUP net segment not driven by buffer  
+Net (segment) level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[27].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/txoutclk_out[0] is assigned constraint CLOCK_DELAY_GROUP 'level0_i_blp_blp_i_blp_hif_inst_pcie_inst_group_i0' but is not the net segment directly connected to the driving clock buffer. Instead the driver is GTYE4_CHANNEL cell level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[27].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[0].GTYE4_CHANNEL_PRIM_INST. In order to have your clock network properly constrained, the CLOCK_DELAY_GROUP constraint must be applied to the net segment directly driven by a clock buffer that requires its clock tree to be balanced. Please check your constraints.
+Related violations: <none>
+
+NTCN-8#14 Warning
+CLOCK_DELAY_GROUP net segment not driven by buffer  
+Net (segment) level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[27].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/txoutclk_out[1] is assigned constraint CLOCK_DELAY_GROUP 'level0_i_blp_blp_i_blp_hif_inst_pcie_inst_group_i0' but is not the net segment directly connected to the driving clock buffer. Instead the driver is GTYE4_CHANNEL cell level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[27].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[1].GTYE4_CHANNEL_PRIM_INST. In order to have your clock network properly constrained, the CLOCK_DELAY_GROUP constraint must be applied to the net segment directly driven by a clock buffer that requires its clock tree to be balanced. Please check your constraints.
+Related violations: <none>
+
+NTCN-8#15 Warning
+CLOCK_DELAY_GROUP net segment not driven by buffer  
+Net (segment) level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[27].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/txoutclk_out[2] is assigned constraint CLOCK_DELAY_GROUP 'level0_i_blp_blp_i_blp_hif_inst_pcie_inst_group_i0' but is not the net segment directly connected to the driving clock buffer. Instead the driver is GTYE4_CHANNEL cell level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[27].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[2].GTYE4_CHANNEL_PRIM_INST. In order to have your clock network properly constrained, the CLOCK_DELAY_GROUP constraint must be applied to the net segment directly driven by a clock buffer that requires its clock tree to be balanced. Please check your constraints.
+Related violations: <none>
+
+NTCN-8#16 Warning
+CLOCK_DELAY_GROUP net segment not driven by buffer  
+Net (segment) level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[27].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/txoutclk_out[3] is assigned constraint CLOCK_DELAY_GROUP 'level0_i_blp_blp_i_blp_hif_inst_pcie_inst_group_i0' but is not the net segment directly connected to the driving clock buffer. Instead the driver is GTYE4_CHANNEL cell level0_i/blp/blp_i/blp_hif/inst/pcie/inst/gt_top_i/diablo_gt.diablo_gt_phy_wrapper/gt_wizard.gtwizard_top_i/bd_1be0_pcie_0_gt_i/inst/gen_gtwizard_gtye4_top.bd_1be0_pcie_0_gt_gtwizard_gtye4_inst/gen_gtwizard_gtye4.gen_channel_container[27].gen_enabled_channel.gtye4_channel_wrapper_inst/channel_inst/gtye4_channel_gen.gen_gtye4_channel_inst[3].GTYE4_CHANNEL_PRIM_INST. In order to have your clock network properly constrained, the CLOCK_DELAY_GROUP constraint must be applied to the net segment directly driven by a clock buffer that requires its clock tree to be balanced. Please check your constraints.
+Related violations: <none>
+
+PDCN-1569#1 Warning
+LUT equation term check  
+Used physical LUT pin 'A1' of cell level0_i/ulp/user_debug_bridge/inst/bs_switch_1/inst/BSCAN_SWITCH.EXT_BSCAN.bscan_switch/temp_curid[31]_i_1 (pin level0_i/ulp/user_debug_bridge/inst/bs_switch_1/inst/BSCAN_SWITCH.EXT_BSCAN.bscan_switch/temp_curid[31]_i_1/I0) is not included in the LUT equation: 'O6=(A6+~A6)*((A4*A3)+(A4*(~A3)*(~A2))+((~A4)))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+PDCN-1569#2 Warning
+LUT equation term check  
+Used physical LUT pin 'A5' of cell level0_i/ulp/user_debug_bridge/inst/bs_switch_1/inst/BSCAN_SWITCH.EXT_BSCAN.bscan_switch/temp_curid[31]_i_1 (pin level0_i/ulp/user_debug_bridge/inst/bs_switch_1/inst/BSCAN_SWITCH.EXT_BSCAN.bscan_switch/temp_curid[31]_i_1/I1) is not included in the LUT equation: 'O6=(A6+~A6)*((A4*A3)+(A4*(~A3)*(~A2))+((~A4)))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Related violations: <none>
+
+REQP-1774#1 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell level0_i/blp/blp_i/blp_cmc/inst/reg_map_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#2 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell level0_i/blp/blp_i/blp_cmc/inst/reg_map_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#1 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell level0_i/blp/blp_i/blp_cmc/inst/reg_map_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#2 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell level0_i/blp/blp_i/blp_cmc/inst/reg_map_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1858#1 Warning
+RAMB36E2_writefirst_collision_advisory  
+Synchronous clocking is detected for BRAM (level0_i/blp/blp_i/blp_hif/inst/pcie/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/RAM32K.bram_comp_inst/bram_16k_0_int/ECC_RAM.RAMB36E2[0].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-1858#2 Warning
+RAMB36E2_writefirst_collision_advisory  
+Synchronous clocking is detected for BRAM (level0_i/blp/blp_i/blp_hif/inst/pcie/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/RAM32K.bram_comp_inst/bram_16k_0_int/ECC_RAM.RAMB36E2[1].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-1858#3 Warning
+RAMB36E2_writefirst_collision_advisory  
+Synchronous clocking is detected for BRAM (level0_i/blp/blp_i/blp_hif/inst/pcie/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/RAM32K.bram_comp_inst/bram_16k_0_int/ECC_RAM.RAMB36E2[2].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-1858#4 Warning
+RAMB36E2_writefirst_collision_advisory  
+Synchronous clocking is detected for BRAM (level0_i/blp/blp_i/blp_hif/inst/pcie/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/RAM32K.bram_comp_inst/bram_16k_0_int/ECC_RAM.RAMB36E2[3].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-1858#5 Warning
+RAMB36E2_writefirst_collision_advisory  
+Synchronous clocking is detected for BRAM (level0_i/blp/blp_i/blp_hif/inst/pcie/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/RAM32K.bram_comp_inst/bram_16k_0_int/ECC_RAM.RAMB36E2[4].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-1858#6 Warning
+RAMB36E2_writefirst_collision_advisory  
+Synchronous clocking is detected for BRAM (level0_i/blp/blp_i/blp_hif/inst/pcie/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/RAM32K.bram_comp_inst/bram_16k_0_int/ECC_RAM.RAMB36E2[5].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-1858#7 Warning
+RAMB36E2_writefirst_collision_advisory  
+Synchronous clocking is detected for BRAM (level0_i/blp/blp_i/blp_hif/inst/pcie/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/RAM32K.bram_comp_inst/bram_16k_1_int/ECC_RAM.RAMB36E2[0].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-1858#8 Warning
+RAMB36E2_writefirst_collision_advisory  
+Synchronous clocking is detected for BRAM (level0_i/blp/blp_i/blp_hif/inst/pcie/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/RAM32K.bram_comp_inst/bram_16k_1_int/ECC_RAM.RAMB36E2[1].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-1858#9 Warning
+RAMB36E2_writefirst_collision_advisory  
+Synchronous clocking is detected for BRAM (level0_i/blp/blp_i/blp_hif/inst/pcie/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/RAM32K.bram_comp_inst/bram_16k_1_int/ECC_RAM.RAMB36E2[2].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-1858#10 Warning
+RAMB36E2_writefirst_collision_advisory  
+Synchronous clocking is detected for BRAM (level0_i/blp/blp_i/blp_hif/inst/pcie/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/RAM32K.bram_comp_inst/bram_16k_1_int/ECC_RAM.RAMB36E2[3].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-1858#11 Warning
+RAMB36E2_writefirst_collision_advisory  
+Synchronous clocking is detected for BRAM (level0_i/blp/blp_i/blp_hif/inst/pcie/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/RAM32K.bram_comp_inst/bram_16k_1_int/ECC_RAM.RAMB36E2[4].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-1858#12 Warning
+RAMB36E2_writefirst_collision_advisory  
+Synchronous clocking is detected for BRAM (level0_i/blp/blp_i/blp_hif/inst/pcie/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/RAM32K.bram_comp_inst/bram_16k_1_int/ECC_RAM.RAMB36E2[5].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-1858#13 Warning
+RAMB36E2_writefirst_collision_advisory  
+Synchronous clocking is detected for BRAM (level0_i/blp/blp_i/blp_hif/inst/pcie/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/bram_post_inst/bram_16k_int/ECC_RAM.RAMB36E2[0].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-1858#14 Warning
+RAMB36E2_writefirst_collision_advisory  
+Synchronous clocking is detected for BRAM (level0_i/blp/blp_i/blp_hif/inst/pcie/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/bram_post_inst/bram_16k_int/ECC_RAM.RAMB36E2[1].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-1858#15 Warning
+RAMB36E2_writefirst_collision_advisory  
+Synchronous clocking is detected for BRAM (level0_i/blp/blp_i/blp_hif/inst/pcie/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/bram_post_inst/bram_16k_int/ECC_RAM.RAMB36E2[2].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-1858#16 Warning
+RAMB36E2_writefirst_collision_advisory  
+Synchronous clocking is detected for BRAM (level0_i/blp/blp_i/blp_hif/inst/pcie/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/bram_post_inst/bram_16k_int/ECC_RAM.RAMB36E2[3].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-1858#17 Warning
+RAMB36E2_writefirst_collision_advisory  
+Synchronous clocking is detected for BRAM (level0_i/blp/blp_i/blp_hif/inst/pcie/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/bram_post_inst/bram_16k_int/ECC_RAM.RAMB36E2[4].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-1858#18 Warning
+RAMB36E2_writefirst_collision_advisory  
+Synchronous clocking is detected for BRAM (level0_i/blp/blp_i/blp_hif/inst/pcie/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/bram_post_inst/bram_16k_int/ECC_RAM.RAMB36E2[5].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-1858#19 Warning
+RAMB36E2_writefirst_collision_advisory  
+Synchronous clocking is detected for BRAM (level0_i/blp/blp_i/blp_hif/inst/pcie/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/bram_repl_inst/bram_rep_int_0/ECC_RAM.RAMB36E2[0].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-1858#20 Warning
+RAMB36E2_writefirst_collision_advisory  
+Synchronous clocking is detected for BRAM (level0_i/blp/blp_i/blp_hif/inst/pcie/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/bram_repl_inst/bram_rep_int_0/ECC_RAM.RAMB36E2[1].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-1858#21 Warning
+RAMB36E2_writefirst_collision_advisory  
+Synchronous clocking is detected for BRAM (level0_i/blp/blp_i/blp_hif/inst/pcie/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/bram_repl_inst/bram_rep_int_0/ECC_RAM.RAMB36E2[2].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-1858#22 Warning
+RAMB36E2_writefirst_collision_advisory  
+Synchronous clocking is detected for BRAM (level0_i/blp/blp_i/blp_hif/inst/pcie/inst/pcie_4_0_pipe_inst/pcie_4_0_bram_inst/bram_repl_inst/bram_rep_int_0/ECC_RAM.RAMB36E2[3].ramb36e2_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+RTSTAT-10#1 Warning
+No routable loads  
+168 net(s) have no routable loads. The problem bus(es) and/or net(s) are level0_i/blp/blp_i/blp_cmp/inst/mgmt_debug_hub/inst/xsdbm/inst/BSCANID.u_xsdbm_id/EXT_BSCAN.reset_i,
+level0_i/blp/blp_i/blp_cmp/inst/mgmt_debug_hub/inst/xsdbm/inst/BSCANID.u_xsdbm_id/EXT_BSCAN.runtest_i,
+level0_i/blp/blp_i/blp_cmp/inst/mgmt_debug_hub/inst/xsdbm/inst/BSCANID.u_xsdbm_id/EXT_BSCAN.tck_i,
+level0_i/blp/blp_i/blp_cmp/inst/mgmt_debug_hub/inst/xsdbm/inst/BSCANID.u_xsdbm_id/EXT_BSCAN.tms_i,
+level0_i/ulp/debug_bridge_xsdbm/inst/xsdbm/inst/BSCANID.u_xsdbm_id/ZERO_SLAVES.bscanid_en_i,
+level0_i/ulp/debug_bridge_xsdbm/inst/xsdbm/inst/BSCANID.u_xsdbm_id/ZERO_SLAVES.capture_i,
+level0_i/ulp/debug_bridge_xsdbm/inst/xsdbm/inst/BSCANID.u_xsdbm_id/ZERO_SLAVES.drck_i,
+level0_i/ulp/debug_bridge_xsdbm/inst/xsdbm/inst/BSCANID.u_xsdbm_id/ZERO_SLAVES.reset_i,
+level0_i/ulp/debug_bridge_xsdbm/inst/xsdbm/inst/BSCANID.u_xsdbm_id/ZERO_SLAVES.runtest_i,
+level0_i/ulp/debug_bridge_xsdbm/inst/xsdbm/inst/BSCANID.u_xsdbm_id/ZERO_SLAVES.sel_i,
+level0_i/ulp/debug_bridge_xsdbm/inst/xsdbm/inst/BSCANID.u_xsdbm_id/ZERO_SLAVES.shift_i,
+level0_i/ulp/debug_bridge_xsdbm/inst/xsdbm/inst/BSCANID.u_xsdbm_id/ZERO_SLAVES.tdi_i,
+level0_i/ulp/debug_bridge_xsdbm/inst/xsdbm/inst/BSCANID.u_xsdbm_id/ZERO_SLAVES.tms_i,
+level0_i/ulp/ulp_ucs/inst/clock_throttling_kernel/U0/Gate_Div_d1,
+level0_i/ulp/ulp_ucs/inst/clock_throttling_kernel2/U0/Gate_Div_d1
+ (the first 15 of 87 listed).
+Related violations: <none>
+
+HDPRA-53#1 Advisory
+Edge with Location Constraints  
+Static Logic contains edges with location constraints that may impact implementation results.  It is best to create an EXCLUDE_PLACEMENT static pblock to cover the edge which prevents unnecessary logic from getting placed in narrow gap.  TAG='53_RE_S_RP1'.  Sites on edge: SLICE_X222Y359, SLICE_X223Y359, SLICE_X224Y359, SLICE_X225Y359,
+SLICE_X226Y359, SLICE_X227Y359, SLICE_X228Y359, SLICE_X229Y358,
+SLICE_X229Y359, SLICE_X230Y358, SLICE_X230Y359, SLICE_X231Y358,
+SLICE_X231Y359, SLICE_X232Y358, SLICE_X232Y359
+ (the first 15 of 2550 listed)
+Related violations: <none>
+
+HDPRA-55#1 Advisory
+Narrow Gap with Location Constraints  
+RP pblock 'pblock_level0_ulp' contains a narrow gap with location constraints that may impact implementation results.  If possible, it is best to avoid gaps within a RP. If that cannot be done, it is best to PROHIBIT the CLBs inside the gap to avoid congestion.  If additional logic is needed nearby, instead add a static EXCLUDE_PLACEMENT pblock that covers the gap and add only essential logic to this pblock.  TAG='55_G79_RP1_S'.   Sites in gap: SLICE_X117Y285, SLICE_X117Y286, SLICE_X117Y287, SLICE_X117Y288,
+SLICE_X117Y289, SLICE_X117Y290, SLICE_X117Y291, SLICE_X117Y292,
+SLICE_X117Y293, SLICE_X117Y294, SLICE_X117Y295, SLICE_X117Y296,
+SLICE_X117Y297, SLICE_X117Y298, SLICE_X117Y299
+ (the first 15 of 120 listed)
+Related violations: <none>
+
+HDPRA-57#1 Advisory
+Gap with Location Constraints  
+RP pblock 'pblock_level0_ulp' contains a gap with location constraints that likely will impact implementation results.  If possible, it is best to avoid gaps within an RP. If that cannot be done, nested pblock may be required in the pblock to minimize crossings. Also, you may need to add a static EXCLUDE_PLACEMENT pblock that covers the gap and add contains only essential logic to this pblock.  TAG='57_G139_RP1_S'.   Sites in gap: SLICE_X206Y358, SLICE_X206Y359, SLICE_X207Y359, SLICE_X208Y359,
+SLICE_X209Y359, SLICE_X210Y359, SLICE_X211Y359, SLICE_X212Y359,
+SLICE_X213Y359, SLICE_X214Y359, SLICE_X215Y359, SLICE_X216Y359,
+SLICE_X217Y359, SLICE_X218Y359, SLICE_X219Y359
+ (the first 15 of 1200 listed)
+Related violations: <none>
+
+HDPRA-57#2 Advisory
+Gap with Location Constraints  
+RP pblock 'pblock_level0_ulp' contains a gap with location constraints that likely will impact implementation results.  If possible, it is best to avoid gaps within an RP. If that cannot be done, nested pblock may be required in the pblock to minimize crossings. Also, you may need to add a static EXCLUDE_PLACEMENT pblock that covers the gap and add contains only essential logic to this pblock.  TAG='57_G146_RP1_S'.   Sites in gap: SLICE_X218Y28, SLICE_X218Y29, SLICE_X219Y28, SLICE_X219Y29, SLICE_X220Y29,
+SLICE_X220Y29, SLICE_X221Y29, SLICE_X221Y29, SLICE_X222Y29, SLICE_X223Y29,
+SLICE_X224Y29, SLICE_X225Y29, SLICE_X226Y29, SLICE_X227Y29, SLICE_X228Y29
+ (the first 15 of 426 listed)
+Related violations: <none>
+
+

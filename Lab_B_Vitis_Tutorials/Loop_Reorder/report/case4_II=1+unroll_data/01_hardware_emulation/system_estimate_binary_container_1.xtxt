@@ -1,0 +1,51 @@
+===============================================================================
+Version:    v++ v2021.2 (64-bit)
+Build:      SW Build 3363252 on 2021-10-14-04:41:01
+Copyright:  Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Created:    Sat Mar 26 17:59:09 2022
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             binary_container_1
+Target Device:           xilinx:u50:gen3x16_xdma:201920.3
+Target Clock:            300.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library      Compute Units
+-----------  ----  ------------------  ------------------  -------------
+mmult        c     fpga0:OCL_REGION_0  binary_container_1  1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     binary_container_1
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name                         Target Frequency  Estimated Frequency
+------------  -----------  ----------------------------------  ----------------  -------------------
+mmult_1       mmult        mmult_Pipeline_lreorder1_lreorder2  300.300293        424.98938
+mmult_1       mmult        mmult_Pipeline_1                    300.300293        411.015198
+mmult_1       mmult        mmult_Pipeline_2                    300.300293        411.015198
+mmult_1       mmult        mmult_Pipeline_4                    300.300293        411.015198
+mmult_1       mmult        mmult                               300.300293        411.015198
+
+Latency Information
+Compute Unit  Kernel Name  Module Name                         Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------  -----------  ----------------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+mmult_1       mmult        mmult_Pipeline_lreorder1_lreorder2  1030            1030           1030          1030            3.433 us         3.433 us        3.433 us
+mmult_1       mmult        mmult_Pipeline_1                    1027            1027           1027          1027            3.423 us         3.423 us        3.423 us
+mmult_1       mmult        mmult_Pipeline_2                    1027            1027           1027          1027            3.423 us         3.423 us        3.423 us
+mmult_1       mmult        mmult_Pipeline_4                    1027            1027           1027          1027            3.423 us         3.423 us        3.423 us
+mmult_1       mmult        mmult                               1039 ~ 4331     1038           2684          4330            3.460 us         8.946 us        14.432 us
+
+Area Information
+Compute Unit  Kernel Name  Module Name                         FF     LUT    DSP  BRAM  URAM
+------------  -----------  ----------------------------------  -----  -----  ---  ----  ----
+mmult_1       mmult        mmult_Pipeline_lreorder1_lreorder2  8792   4317   0    0     0
+mmult_1       mmult        mmult_Pipeline_1                    143    313    0    0     0
+mmult_1       mmult        mmult_Pipeline_2                    146    296    0    0     0
+mmult_1       mmult        mmult_Pipeline_4                    166    442    0    0     0
+mmult_1       mmult        mmult                               13268  12766  0    4     0
+-------------------------------------------------------------------------------

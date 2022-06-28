@@ -1,0 +1,137 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "axi_interfaces",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "ARRAY_PARTITION",
+            "option": [
+              {
+                "name": "variable",
+                "value": "d_o"
+              },
+              {
+                "name": "cyclic",
+                "value": ""
+              },
+              {
+                "name": "factor",
+                "value": "8"
+              },
+              {
+                "name": "dim",
+                "value": "1"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "axi_interfaces",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "axis",
+                "value": ""
+              },
+              {
+                "name": "register",
+                "value": ""
+              },
+              {
+                "name": "port",
+                "value": "d_o"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "axi_interfaces",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "ARRAY_PARTITION",
+            "option": [
+              {
+                "name": "variable",
+                "value": "d_i"
+              },
+              {
+                "name": "cyclic",
+                "value": ""
+              },
+              {
+                "name": "factor",
+                "value": "8"
+              },
+              {
+                "name": "dim",
+                "value": "1"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "axi_interfaces",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "axis",
+                "value": ""
+              },
+              {
+                "name": "register",
+                "value": ""
+              },
+              {
+                "name": "port",
+                "value": "d_i"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "axi_interfaces",
+          "label": "For_Loop",
+          "functionLabel": "",
+          "pragma": {
+            "name": "UNROLL",
+            "option": [{
+                "name": "factor",
+                "value": "8"
+              }]
+          }
+        },
+        {
+          "functionName": "axi_interfaces",
+          "label": "For_Loop",
+          "functionLabel": "",
+          "pragma": {
+            "name": "PIPELINE",
+            "option": [{
+                "name": "rewind",
+                "value": ""
+              }]
+          }
+        },
+        {
+          "functionName": "axi_interfaces",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "axi_interfaces"
+              }]
+          }
+        }
+      ]
+    }]}

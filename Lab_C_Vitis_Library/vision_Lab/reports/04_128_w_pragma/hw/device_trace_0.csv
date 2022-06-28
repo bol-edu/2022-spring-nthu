@@ -1,0 +1,61 @@
+HEADER
+VTF File Version,1.1
+VTF File Type,1
+PID,10768
+Generated on,2022-05-01 00:53:07
+Resolution,ms
+Min Resolution,ns
+Trace Version,1.1
+TraceID,10769
+XRT  Version,2.12.427
+Tool Version,2021.1
+Platform,xilinx_u50_gen3x16_xdma_201920_3
+Target,System Run
+
+STRUCTURE
+Group_Start,xilinx_u50_gen3x16_xdma_201920_3
+Group_Start,krnl_colordetect.xclbin
+Group_Start,Compute Unit color_detect_1 - No Trace,Activity in accelerator color_detect:color_detect_1
+Group_End,color_detect_1
+Group_End,krnl_colordetect.xclbin
+Group_End,xilinx_u50_gen3x16_xdma_201920_3
+
+MAPPING
+24,0:0:0
+23,1:1:1
+14,HBM[0]
+11,clCreateBuffer
+7,clCreateCommandQueue
+6,clCreateContext
+10,clCreateKernel
+9,clCreateProgramWithBinary
+16,clEnqueueMigrateMemObjects
+25,clEnqueueReadBuffer
+18,clEnqueueTask
+13,clEnqueueWriteBuffer
+26,clFinish
+4,clGetDeviceIDs
+8,clGetDeviceInfo
+1,clGetExtensionFunctionAddress
+2,clGetExtensionFunctionAddressForPlatform
+3,clGetPlatformInfo
+30,clReleaseCommandQueue
+31,clReleaseContext
+32,clReleaseDevice
+27,clReleaseEvent
+28,clReleaseKernel
+17,clReleaseMemObject
+29,clReleaseProgram
+5,clRetainDevice
+15,clRetainMemObject
+12,clSetKernelArg
+19,clWaitForEvents
+22,color_detect
+33,color_detect_1
+21,krnl_colordetect
+20,xilinx_u50_gen3x16_xdma_201920_3
+
+EVENTS
+
+DEPENDENCIES
+

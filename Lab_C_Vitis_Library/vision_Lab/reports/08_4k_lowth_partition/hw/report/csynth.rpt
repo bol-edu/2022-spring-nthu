@@ -1,0 +1,775 @@
+
+
+================================================================
+== Synthesis Summary Report of 'color_detect'
+================================================================
++ General Information: 
+    * Date:           Sun May  1 11:32:19 2022
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+    * Project:        color_detect
+    * Solution:       solution (Vitis Kernel Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcu50-fsvh2104-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+---------+----------+---------+----------+-------------+------------+-----+
+    |                                       Modules                                      |  Issue |       | Latency |  Latency  | Iteration|         |   Trip  |          |         |          |             |            |     |
+    |                                       & Loops                                      |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval|  Count  | Pipelined|  BRAM   |    DSP   |      FF     |     LUT    | URAM|
+    +------------------------------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+---------+----------+---------+----------+-------------+------------+-----+
+    |+ color_detect*                                                                     |  Timing|  -1.22|  8328075|  3.039e+07|         -|  8328014|        -|  dataflow|  37 (1%)|  12 (~0%)|  12281 (~0%)|  18634 (2%)|    -|
+    | + entry_proc31                                                                     |       -|   1.22|        0|      0.000|         -|        0|        -|        no|        -|         -|      2 (~0%)|    20 (~0%)|    -|
+    | + Block_ZN2xf2cv3MatILi9ELi2160ELi3840ELi1ELi2EEC2Eii_exit1_proc                   |       -|   2.43|        0|      0.000|         -|        0|        -|        no|        -|         -|    450 (~0%)|   137 (~0%)|    -|
+    | + Array2xfMat_32_9_2160_3840_1_s                                                   |       -|   0.00|  8294480|  3.027e+07|         -|  8294480|        -|        no|        -|   4 (~0%)|   1542 (~0%)|  3505 (~0%)|    -|
+    |  + Axi2Mat*                                                                        |       -|   0.00|  8294478|  3.027e+07|         -|  8294409|        -|  dataflow|        -|   4 (~0%)|   1534 (~0%)|  3416 (~0%)|    -|
+    |   + addrbound_1                                                                    |       -|   1.22|        4|     14.599|         -|        4|        -|        no|        -|   1 (~0%)|     55 (~0%)|   136 (~0%)|    -|
+    |   + Axi2Mat_Block_split35_proc                                                     |       -|   1.22|        0|      0.000|         -|        0|        -|        no|        -|         -|     26 (~0%)|    20 (~0%)|    -|
+    |   + Axi2AxiStream                                                                  |       -|   0.00|  6220875|  2.270e+07|         -|  6220875|        -|        no|        -|         -|    200 (~0%)|   626 (~0%)|    -|
+    |    + Axi2AxiStream_Pipeline_MMIterInLoop1                                          |       -|   0.00|  6220803|  2.270e+07|         -|  6220803|        -|        no|        -|         -|     62 (~0%)|   107 (~0%)|    -|
+    |     o MMIterInLoop1                                                                |       -|   2.43|  6220801|  2.270e+07|         3|        1|  6220800|       yes|        -|         -|            -|           -|    -|
+    |   + AxiStream2Mat*                                                                 |       -|   0.00|  8294409|  3.027e+07|         -|  8294409|        -|  dataflow|        -|   3 (~0%)|   1037 (~0%)|  2432 (~0%)|    -|
+    |    + entry_proc28                                                                  |       -|   0.00|        0|      0.000|         -|        0|        -|        no|        -|         -|      2 (~0%)|    47 (~0%)|    -|
+    |    + last_blk_pxl_width_1                                                          |       -|   1.22|        0|      0.000|         -|        0|        -|        no|        -|         -|      3 (~0%)|    20 (~0%)|    -|
+    |    + AxiStream2MatStream_2_s                                                       |       -|   0.14|  8294408|  3.027e+07|         -|  8294408|        -|        no|        -|   3 (~0%)|   1008 (~0%)|  2271 (~0%)|    -|
+    |     + AxiStream2MatStream_2_Pipeline_MMIterInLoopRow                               |       -|   0.29|  8294405|  3.027e+07|         -|  8294405|        -|        no|        -|         -|    687 (~0%)|  2070 (~0%)|    -|
+    |      o MMIterInLoopRow                                                             |       -|   2.43|  8294403|  3.027e+07|         5|        1|  8294400|       yes|        -|         -|            -|           -|    -|
+    | + bgr2hsv_9_2160_3840_1_s                                                          |  Timing|  -0.26|  8294417|  3.027e+07|         -|  8294417|        -|        no|  5 (~0%)|   5 (~0%)|    989 (~0%)|   936 (~0%)|    -|
+    |  + bgr2hsv_9_2160_3840_1_Pipeline_VITIS_LOOP_128_1_VITIS_LOOP_132_2                |  Timing|  -0.26|  8294413|  3.027e+07|         -|  8294413|        -|        no|  5 (~0%)|   2 (~0%)|    689 (~0%)|   809 (~0%)|    -|
+    |   o VITIS_LOOP_128_1_VITIS_LOOP_132_2                                              |       -|   2.43|  8294411|  3.027e+07|        13|        1|  8294400|       yes|        -|         -|            -|           -|    -|
+    | + colorthresholding_9_0_3_2160_3840_1_s*                                           |  Timing|  -1.22|  8294496|  3.027e+07|         -|  8294408|        -|  dataflow|        -|   1 (~0%)|   2085 (~0%)|  2923 (~0%)|    -|
+    |  + entry_proc30                                                                    |       -|   0.00|        0|      0.000|         -|        0|        -|        no|        -|         -|      2 (~0%)|    29 (~0%)|    -|
+    |  + colorthresholding_9_0_3_2160_3840_1_Loop_VITIS_LOOP_138_1_proc                  |       -|   0.00|       87|    317.518|         -|       87|        -|        no|        -|         -|    984 (~0%)|  1082 (~0%)|    -|
+    |   o VITIS_LOOP_138_1                                                               |      II|   2.43|       85|    310.219|        76|        5|        3|       yes|        -|         -|            -|           -|    -|
+    |  + colorthresholding_9_0_3_2160_3840_1_Block_split2_proc                           |       -|   1.22|        0|      0.000|         -|        0|        -|        no|        -|         -|    178 (~0%)|   209 (~0%)|    -|
+    |  + xFInRange_9_0_2160_3840_15_0_1_9_1_3_s                                          |       -|   0.51|  8294407|  3.027e+07|         -|  8294407|        -|        no|        -|   1 (~0%)|     79 (~0%)|   447 (~0%)|    -|
+    |   + xFInRange_9_0_2160_3840_15_0_1_9_1_3_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_96_2  |       -|   0.51|  8294403|  3.027e+07|         -|  8294403|        -|        no|        -|         -|     40 (~0%)|   387 (~0%)|    -|
+    |    o VITIS_LOOP_92_1_VITIS_LOOP_96_2                                               |       -|   2.43|  8294401|  3.027e+07|         3|        1|  8294400|       yes|        -|         -|            -|           -|    -|
+    | + erode_0_0_2160_3840_0_3_3_1_1_s                                                  |       -|   0.08|  8328013|  3.039e+07|         -|  8328013|        -|        no|  6 (~0%)|         -|    810 (~0%)|  1241 (~0%)|    -|
+    |  + xferode_2160_3840_1_0_1_0_3841_3_3_s                                            |       -|   0.08|  8328012|  3.039e+07|         -|  8328012|        -|        no|  6 (~0%)|         -|    774 (~0%)|  1198 (~0%)|    -|
+    |   + xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_263_1                   |       -|   1.61|        5|     18.248|         -|        5|        -|        no|        -|         -|      4 (~0%)|    88 (~0%)|    -|
+    |    o VITIS_LOOP_263_1                                                              |       -|   2.43|        3|     10.949|         1|        1|        3|       yes|        -|         -|            -|           -|    -|
+    |   + xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_278_2                   |       -|   1.20|     3844|  1.403e+04|         -|     3844|        -|        no|        -|         -|     52 (~0%)|    82 (~0%)|    -|
+    |    o VITIS_LOOP_278_2                                                              |       -|   2.43|     3842|  1.402e+04|         3|        1|     3841|       yes|        -|         -|            -|           -|    -|
+    |   + xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_295_3                   |       -|   0.53|     3843|  1.403e+04|         -|     3843|        -|        no|        -|         -|     15 (~0%)|    60 (~0%)|    -|
+    |    o VITIS_LOOP_295_3                                                              |       -|   2.43|     3841|  1.402e+04|         1|        1|     3841|       yes|        -|         -|            -|           -|    -|
+    |   o Row_Loop                                                                       |       -|   2.43|  8320320|  3.037e+07|      3852|        -|     2160|        no|        -|         -|            -|           -|    -|
+    |    + xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_Col_Loop                          |       -|   0.08|     3850|  1.405e+04|         -|     3850|        -|        no|        -|         -|    553 (~0%)|   643 (~0%)|    -|
+    |     o Col_Loop                                                                     |       -|   2.43|     3848|  1.404e+04|         9|        1|     3841|       yes|        -|         -|            -|           -|    -|
+    |      + xfExtractPixels_1_1_0_s                                                     |      II|   2.43|        0|      0.000|         -|        1|        -|       yes|        -|         -|            -|           -|    -|
+    |      + xfExtractPixels_1_1_0_s                                                     |      II|   2.43|        0|      0.000|         -|        1|        -|       yes|        -|         -|            -|           -|    -|
+    |      + xfExtractPixels_1_1_0_s                                                     |      II|   2.43|        0|      0.000|         -|        1|        -|       yes|        -|         -|            -|           -|    -|
+    | + dilate_0_0_2160_3840_0_3_3_1_1_s                                                 |       -|   0.08|  8328013|  3.039e+07|         -|  8328013|        -|        no|  6 (~0%)|         -|    810 (~0%)|  1241 (~0%)|    -|
+    |  + xfdilate_2160_3840_1_0_1_0_3841_3_3_s                                           |       -|   0.08|  8328012|  3.039e+07|         -|  8328012|        -|        no|  6 (~0%)|         -|    774 (~0%)|  1198 (~0%)|    -|
+    |   + xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_259_1                  |       -|   1.61|        5|     18.248|         -|        5|        -|        no|        -|         -|      4 (~0%)|    88 (~0%)|    -|
+    |    o VITIS_LOOP_259_1                                                              |       -|   2.43|        3|     10.949|         1|        1|        3|       yes|        -|         -|            -|           -|    -|
+    |   + xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_274_2                  |       -|   1.20|     3844|  1.403e+04|         -|     3844|        -|        no|        -|         -|     52 (~0%)|    82 (~0%)|    -|
+    |    o VITIS_LOOP_274_2                                                              |       -|   2.43|     3842|  1.402e+04|         3|        1|     3841|       yes|        -|         -|            -|           -|    -|
+    |   + xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_291_3                  |       -|   0.53|     3843|  1.403e+04|         -|     3843|        -|        no|        -|         -|     15 (~0%)|    60 (~0%)|    -|
+    |    o VITIS_LOOP_291_3                                                              |       -|   2.43|     3841|  1.402e+04|         1|        1|     3841|       yes|        -|         -|            -|           -|    -|
+    |   o Row_Loop                                                                       |       -|   2.43|  8320320|  3.037e+07|      3852|        -|     2160|        no|        -|         -|            -|           -|    -|
+    |    + xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_Col_Loop                         |       -|   0.08|     3850|  1.405e+04|         -|     3850|        -|        no|        -|         -|    553 (~0%)|   643 (~0%)|    -|
+    |     o Col_Loop                                                                     |       -|   2.43|     3848|  1.404e+04|         9|        1|     3841|       yes|        -|         -|            -|           -|    -|
+    |      + xfExtractPixels_1_1_0_s                                                     |      II|   2.43|        0|      0.000|         -|        1|        -|       yes|        -|         -|            -|           -|    -|
+    |      + xfExtractPixels_1_1_0_s                                                     |      II|   2.43|        0|      0.000|         -|        1|        -|       yes|        -|         -|            -|           -|    -|
+    |      + xfExtractPixels_1_1_0_s                                                     |      II|   2.43|        0|      0.000|         -|        1|        -|       yes|        -|         -|            -|           -|    -|
+    | + dilate_0_0_2160_3840_0_3_3_1_1_1                                                 |       -|   0.08|  8328013|  3.039e+07|         -|  8328013|        -|        no|  6 (~0%)|         -|    810 (~0%)|  1241 (~0%)|    -|
+    |  + xfdilate_2160_3840_1_0_1_0_3841_3_3_s                                           |       -|   0.08|  8328012|  3.039e+07|         -|  8328012|        -|        no|  6 (~0%)|         -|    774 (~0%)|  1198 (~0%)|    -|
+    |   + xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_259_1                  |       -|   1.61|        5|     18.248|         -|        5|        -|        no|        -|         -|      4 (~0%)|    88 (~0%)|    -|
+    |    o VITIS_LOOP_259_1                                                              |       -|   2.43|        3|     10.949|         1|        1|        3|       yes|        -|         -|            -|           -|    -|
+    |   + xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_274_2                  |       -|   1.20|     3844|  1.403e+04|         -|     3844|        -|        no|        -|         -|     52 (~0%)|    82 (~0%)|    -|
+    |    o VITIS_LOOP_274_2                                                              |       -|   2.43|     3842|  1.402e+04|         3|        1|     3841|       yes|        -|         -|            -|           -|    -|
+    |   + xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_291_3                  |       -|   0.53|     3843|  1.403e+04|         -|     3843|        -|        no|        -|         -|     15 (~0%)|    60 (~0%)|    -|
+    |    o VITIS_LOOP_291_3                                                              |       -|   2.43|     3841|  1.402e+04|         1|        1|     3841|       yes|        -|         -|            -|           -|    -|
+    |   o Row_Loop                                                                       |       -|   2.43|  8320320|  3.037e+07|      3852|        -|     2160|        no|        -|         -|            -|           -|    -|
+    |    + xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_Col_Loop                         |       -|   0.08|     3850|  1.405e+04|         -|     3850|        -|        no|        -|         -|    553 (~0%)|   643 (~0%)|    -|
+    |     o Col_Loop                                                                     |       -|   2.43|     3848|  1.404e+04|         9|        1|     3841|       yes|        -|         -|            -|           -|    -|
+    |      + xfExtractPixels_1_1_0_s                                                     |      II|   2.43|        0|      0.000|         -|        1|        -|       yes|        -|         -|            -|           -|    -|
+    |      + xfExtractPixels_1_1_0_s                                                     |      II|   2.43|        0|      0.000|         -|        1|        -|       yes|        -|         -|            -|           -|    -|
+    |      + xfExtractPixels_1_1_0_s                                                     |      II|   2.43|        0|      0.000|         -|        1|        -|       yes|        -|         -|            -|           -|    -|
+    | + erode_0_0_2160_3840_0_3_3_1_1_1                                                  |       -|   0.08|  8328013|  3.039e+07|         -|  8328013|        -|        no|  6 (~0%)|         -|    810 (~0%)|  1241 (~0%)|    -|
+    |  + xferode_2160_3840_1_0_1_0_3841_3_3_s                                            |       -|   0.08|  8328012|  3.039e+07|         -|  8328012|        -|        no|  6 (~0%)|         -|    774 (~0%)|  1198 (~0%)|    -|
+    |   + xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_263_1                   |       -|   1.61|        5|     18.248|         -|        5|        -|        no|        -|         -|      4 (~0%)|    88 (~0%)|    -|
+    |    o VITIS_LOOP_263_1                                                              |       -|   2.43|        3|     10.949|         1|        1|        3|       yes|        -|         -|            -|           -|    -|
+    |   + xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_278_2                   |       -|   1.20|     3844|  1.403e+04|         -|     3844|        -|        no|        -|         -|     52 (~0%)|    82 (~0%)|    -|
+    |    o VITIS_LOOP_278_2                                                              |       -|   2.43|     3842|  1.402e+04|         3|        1|     3841|       yes|        -|         -|            -|           -|    -|
+    |   + xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_295_3                   |       -|   0.53|     3843|  1.403e+04|         -|     3843|        -|        no|        -|         -|     15 (~0%)|    60 (~0%)|    -|
+    |    o VITIS_LOOP_295_3                                                              |       -|   2.43|     3841|  1.402e+04|         1|        1|     3841|       yes|        -|         -|            -|           -|    -|
+    |   o Row_Loop                                                                       |       -|   2.43|  8320320|  3.037e+07|      3852|        -|     2160|        no|        -|         -|            -|           -|    -|
+    |    + xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_Col_Loop                          |       -|   0.08|     3850|  1.405e+04|         -|     3850|        -|        no|        -|         -|    553 (~0%)|   643 (~0%)|    -|
+    |     o Col_Loop                                                                     |       -|   2.43|     3848|  1.404e+04|         9|        1|     3841|       yes|        -|         -|            -|           -|    -|
+    |      + xfExtractPixels_1_1_0_s                                                     |      II|   2.43|        0|      0.000|         -|        1|        -|       yes|        -|         -|            -|           -|    -|
+    |      + xfExtractPixels_1_1_0_s                                                     |      II|   2.43|        0|      0.000|         -|        1|        -|       yes|        -|         -|            -|           -|    -|
+    |      + xfExtractPixels_1_1_0_s                                                     |      II|   2.43|        0|      0.000|         -|        1|        -|       yes|        -|         -|            -|           -|    -|
+    | + xfMat2Array_8_0_2160_3840_1_1_s                                                  |       -|   0.00|  8294480|  3.027e+07|         -|  8294480|        -|        no|        -|   2 (~0%)|    740 (~0%)|  1704 (~0%)|    -|
+    |  + Mat2Axi*                                                                        |       -|   0.00|  8294478|  3.027e+07|         -|  8294475|        -|  dataflow|        -|   2 (~0%)|    653 (~0%)|  1624 (~0%)|    -|
+    |   + addrbound                                                                      |       -|   0.68|        3|     10.949|         -|        3|        -|        no|        -|   1 (~0%)|     29 (~0%)|    46 (~0%)|    -|
+    |   + Mat2AxiStream*                                                                 |       -|   0.03|  8294409|  3.027e+07|         -|  8294409|        -|  dataflow|        -|   1 (~0%)|    256 (~0%)|   709 (~0%)|    -|
+    |    + entry_proc                                                                    |       -|   1.22|        0|      0.000|         -|        0|        -|        no|        -|         -|      2 (~0%)|    29 (~0%)|    -|
+    |    + last_blk_pxl_width                                                            |       -|   1.22|        0|      0.000|         -|        0|        -|        no|        -|         -|      3 (~0%)|    20 (~0%)|    -|
+    |    + MatStream2AxiStream_2_s                                                       |       -|   0.03|  8294408|  3.027e+07|         -|  8294408|        -|        no|        -|   1 (~0%)|    227 (~0%)|   573 (~0%)|    -|
+    |     + MatStream2AxiStream_2_Pipeline_MMIterOutRow_MMIterOutCol                     |       -|   0.03|  8294403|  3.027e+07|         -|  8294403|        -|        no|        -|         -|    103 (~0%)|   416 (~0%)|    -|
+    |      o MMIterOutRow_MMIterOutCol                                                   |       -|   2.43|  8294401|  3.027e+07|         3|        1|  8294400|       yes|        -|         -|            -|           -|    -|
+    |   + entry_proc29                                                                   |       -|   1.22|        0|      0.000|         -|        0|        -|        no|        -|         -|      2 (~0%)|    20 (~0%)|    -|
+    |   + Mat2Axi_Block_split24_proc                                                     |       -|   1.22|        0|      0.000|         -|        0|        -|        no|        -|         -|     26 (~0%)|    20 (~0%)|    -|
+    |   + AxiStream2Axi                                                                  |       -|   0.00|  8294474|  3.027e+07|         -|  8294474|        -|        no|        -|         -|    176 (~0%)|   649 (~0%)|    -|
+    |    + AxiStream2Axi_Pipeline_MMIterOutLoop2                                         |       -|   0.00|  8294403|  3.027e+07|         -|  8294403|        -|        no|        -|         -|     37 (~0%)|   107 (~0%)|    -|
+    |     o MMIterOutLoop2                                                               |       -|   2.43|  8294401|  3.027e+07|         3|        1|  8294400|       yes|        -|         -|            -|           -|    -|
+    +------------------------------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+---------+----------+---------+----------+-------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface   | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|             | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem0 | 32 -> 32   | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          | BRAM=2            |
+| m_axi_gmem1 | 8 -> 8     | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          | BRAM=2            |
+| m_axi_gmem2 | 8 -> 8     | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          | BRAM=2            |
+| m_axi_gmem3 | 8 -> 8     | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          |                   |
+| m_axi_gmem4 | 8 -> 8     | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          | BRAM=2            |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 7             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+-----------------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------+
+| Interface     | Register        | Offset | Width | Access | Description                      | Bit Fields                                                             |
++---------------+-----------------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------+
+| s_axi_control | CTRL            | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 4=AP_CONTINUE 7=AUTO_RESTART |
+| s_axi_control | GIER            | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                               |
+| s_axi_control | IP_IER          | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN 5=CHAN2_INT_EN                           |
+| s_axi_control | IP_ISR          | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST 5=CHAN2_INT_ST                           |
+| s_axi_control | img_in_1        | 0x10   | 32    | W      | Data signal of img_in            |                                                                        |
+| s_axi_control | img_in_2        | 0x14   | 32    | W      | Data signal of img_in            |                                                                        |
+| s_axi_control | low_thresh_1    | 0x1c   | 32    | W      | Data signal of low_thresh        |                                                                        |
+| s_axi_control | low_thresh_2    | 0x20   | 32    | W      | Data signal of low_thresh        |                                                                        |
+| s_axi_control | high_thresh_1   | 0x28   | 32    | W      | Data signal of high_thresh       |                                                                        |
+| s_axi_control | high_thresh_2   | 0x2c   | 32    | W      | Data signal of high_thresh       |                                                                        |
+| s_axi_control | process_shape_1 | 0x34   | 32    | W      | Data signal of process_shape     |                                                                        |
+| s_axi_control | process_shape_2 | 0x38   | 32    | W      | Data signal of process_shape     |                                                                        |
+| s_axi_control | img_out_1       | 0x40   | 32    | W      | Data signal of img_out           |                                                                        |
+| s_axi_control | img_out_2       | 0x44   | 32    | W      | Data signal of img_out           |                                                                        |
+| s_axi_control | rows            | 0x4c   | 32    | W      | Data signal of rows              |                                                                        |
+| s_axi_control | cols            | 0x54   | 32    | W      | Data signal of cols              |                                                                        |
++---------------+-----------------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+---------------+-----------+
+| Interface | Type          | Ports     |
++-----------+---------------+-----------+
+| ap_clk    | clock         | ap_clk    |
+| ap_rst_n  | reset         | ap_rst_n  |
+| interrupt | interrupt     | interrupt |
+| ap_ctrl   | ap_ctrl_chain |           |
++-----------+---------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++---------------+-----------+----------------+
+| Argument      | Direction | Datatype       |
++---------------+-----------+----------------+
+| img_in        | in        | ap_uint<32>*   |
+| low_thresh    | in        | unsigned char* |
+| high_thresh   | in        | unsigned char* |
+| process_shape | unused    | unsigned char* |
+| img_out       | out       | ap_uint<8>*    |
+| rows          | in        | int            |
+| cols          | in        | int            |
++---------------+-----------+----------------+
+
+* SW-to-HW Mapping
++---------------+---------------+-----------+----------+-------------------------------------------+
+| Argument      | HW Interface  | HW Type   | HW Usage | HW Info                                   |
++---------------+---------------+-----------+----------+-------------------------------------------+
+| img_in        | m_axi_gmem0   | interface |          |                                           |
+| img_in        | s_axi_control | register  | offset   | name=img_in_1 offset=0x10 range=32        |
+| img_in        | s_axi_control | register  | offset   | name=img_in_2 offset=0x14 range=32        |
+| low_thresh    | m_axi_gmem1   | interface |          |                                           |
+| low_thresh    | s_axi_control | register  | offset   | name=low_thresh_1 offset=0x1c range=32    |
+| low_thresh    | s_axi_control | register  | offset   | name=low_thresh_2 offset=0x20 range=32    |
+| high_thresh   | m_axi_gmem2   | interface |          |                                           |
+| high_thresh   | s_axi_control | register  | offset   | name=high_thresh_1 offset=0x28 range=32   |
+| high_thresh   | s_axi_control | register  | offset   | name=high_thresh_2 offset=0x2c range=32   |
+| process_shape | m_axi_gmem3   | interface |          |                                           |
+| process_shape | s_axi_control | register  | offset   | name=process_shape_1 offset=0x34 range=32 |
+| process_shape | s_axi_control | register  | offset   | name=process_shape_2 offset=0x38 range=32 |
+| img_out       | m_axi_gmem4   | interface |          |                                           |
+| img_out       | s_axi_control | register  | offset   | name=img_out_1 offset=0x40 range=32       |
+| img_out       | s_axi_control | register  | offset   | name=img_out_2 offset=0x44 range=32       |
+| rows          | s_axi_control | register  |          | name=rows offset=0x4c range=32            |
+| cols          | s_axi_control | register  |          | name=cols offset=0x54 range=32            |
++---------------+---------------+-----------+----------+-------------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+----------------+-----------+----------+-------+-----------------------------------------------------------------------------------------------------------+
+| HW Interface | Loop           | Direction | Length   | Width | Location                                                                                                  |
++--------------+----------------+-----------+----------+-------+-----------------------------------------------------------------------------------------------------------+
+| m_axi_gmem0  | MMIterInLoop1  | read      | variable | 32    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:964:9  |
+| m_axi_gmem4  | MMIterOutLoop2 | write     | variable | 8     | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1332:9 |
++--------------+----------------+-----------+----------+-------+-----------------------------------------------------------------------------------------------------------+
+
+* Inferred Bursts and Widening Missed
++--------------+-------------+------------------+------------------------------------------------+------------+----------------------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable    | Loop             | Problem                                        | Resolution | Location                                                                                                             |
++--------------+-------------+------------------+------------------------------------------------+------------+----------------------------------------------------------------------------------------------------------------------+
+| m_axi_gmem1  | low_thresh  | VITIS_LOOP_138_1 | Access load is in the conditional branch       | 214-232    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_colorthresholding.hpp:138:23 |
+| m_axi_gmem1  | low_thresh  | VITIS_LOOP_138_1 | Access load is in the conditional branch       | 214-232    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_colorthresholding.hpp:138:23 |
+| m_axi_gmem1  | low_thresh  | VITIS_LOOP_138_1 | Access load is in the conditional branch       | 214-232    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_colorthresholding.hpp:138:23 |
+| m_axi_gmem2  | high_thresh | VITIS_LOOP_138_1 | Access load is in the conditional branch       | 214-232    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_colorthresholding.hpp:138:23 |
+| m_axi_gmem2  | high_thresh | VITIS_LOOP_138_1 | Access load is in the conditional branch       | 214-232    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_colorthresholding.hpp:138:23 |
+| m_axi_gmem2  | high_thresh | VITIS_LOOP_138_1 | Access load is in the conditional branch       | 214-232    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_colorthresholding.hpp:138:23 |
+| m_axi_gmem4  | dout        | MMIterOutLoop2   | Sequential access length is not divisible by 2 | 214-234    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1332:9            |
+| m_axi_gmem0  | din         | MMIterInLoop1    | Sequential access length is not divisible by 2 | 214-234    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:964:9             |
++--------------+-------------+------------------+------------------------------------------------+------------+----------------------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------------------------------------------------------+-----+--------+---------------------------+------+--------+---------+
+| Name                                                                               | DSP | Pragma | Variable                  | Op   | Impl   | Latency |
++------------------------------------------------------------------------------------+-----+--------+---------------------------+------+--------+---------+
+| + color_detect                                                                     | 12  |        |                           |      |        |         |
+|   imgInput_cols_c20_channel_U                                                      | -   |        | imgInput_cols_c20_channel | fifo | srl    | 0       |
+|   imgInput_rows_c19_channel_U                                                      | -   |        | imgInput_rows_c19_channel | fifo | srl    | 0       |
+|   imgOutput_cols_channel_U                                                         | -   |        | imgOutput_cols_channel    | fifo | srl    | 0       |
+|   imgOutput_rows_channel_U                                                         | -   |        | imgOutput_rows_channel    | fifo | srl    | 0       |
+|   imgHelper4_cols_channel_U                                                        | -   |        | imgHelper4_cols_channel   | fifo | srl    | 0       |
+|   imgHelper4_rows_channel_U                                                        | -   |        | imgHelper4_rows_channel   | fifo | srl    | 0       |
+|   imgHelper3_cols_channel_U                                                        | -   |        | imgHelper3_cols_channel   | fifo | srl    | 0       |
+|   imgHelper3_rows_channel_U                                                        | -   |        | imgHelper3_rows_channel   | fifo | srl    | 0       |
+|   imgHelper2_cols_channel_U                                                        | -   |        | imgHelper2_cols_channel   | fifo | srl    | 0       |
+|   imgHelper2_rows_channel_U                                                        | -   |        | imgHelper2_rows_channel   | fifo | srl    | 0       |
+|   imgHelper1_cols_channel_U                                                        | -   |        | imgHelper1_cols_channel   | fifo | srl    | 0       |
+|   imgHelper1_rows_channel_U                                                        | -   |        | imgHelper1_rows_channel   | fifo | srl    | 0       |
+|   rgb2hsv_rows_channel_U                                                           | -   |        | rgb2hsv_rows_channel      | fifo | srl    | 0       |
+|   rgb2hsv_cols_channel_U                                                           | -   |        | rgb2hsv_cols_channel      | fifo | srl    | 0       |
+|  + Array2xfMat_32_9_2160_3840_1_s                                                  | 4   |        |                           |      |        |         |
+|   + Axi2Mat                                                                        | 4   |        |                           |      |        |         |
+|     p_channel_U                                                                    | -   |        | p_channel                 | fifo | srl    | 0       |
+|     axibound_V_U                                                                   | -   |        | axibound_V                | fifo | srl    | 0       |
+|    + addrbound_1                                                                   | 1   |        |                           |      |        |         |
+|      mul_mul_16ns_16ns_29_4_1_U5                                                   | 1   |        | mul_ln1539                | mul  | dsp    | 3       |
+|      ret_fu_103_p2                                                                 | -   |        | ret                       | add  | tadder | 0       |
+|      add_ln587_fu_109_p2                                                           | -   |        | add_ln587                 | add  | tadder | 0       |
+|    + Axi2AxiStream                                                                 | 0   |        |                           |      |        |         |
+|     + Axi2AxiStream_Pipeline_MMIterInLoop1                                         | 0   |        |                           |      |        |         |
+|       i_V_4_fu_102_p2                                                              | -   |        | i_V_4                     | add  | fabric | 0       |
+|    + AxiStream2Mat                                                                 | 3   |        |                           |      |        |         |
+|      last_blk_width_channel_U                                                      | -   |        | last_blk_width_channel    | fifo | srl    | 0       |
+|     + AxiStream2MatStream_2_s                                                      | 3   |        |                           |      |        |         |
+|       mul_32s_32s_32_2_1_U35                                                       | 3   |        | bound                     | mul  | auto   | 1       |
+|       sub_fu_89_p2                                                                 | -   |        | sub                       | add  | fabric | 0       |
+|       sub4_fu_95_p2                                                                | -   |        | sub4                      | sub  | fabric | 0       |
+|       sub31_fu_102_p2                                                              | -   |        | sub31                     | add  | fabric | 0       |
+|       add_ln1033_fu_109_p2                                                         | -   |        | add_ln1033                | add  | fabric | 0       |
+|      + AxiStream2MatStream_2_Pipeline_MMIterInLoopRow                              | 0   |        |                           |      |        |         |
+|        add_ln1013_fu_216_p2                                                        | -   |        | add_ln1013                | add  | fabric | 0       |
+|        sub_ln1033_fu_313_p2                                                        | -   |        | sub_ln1033                | sub  | fabric | 0       |
+|        grp_fu_174_p2                                                               | -   |        | sub_ln1033_1              | sub  | fabric | 0       |
+|        sub_ln674_4_fu_438_p2                                                       | -   |        | sub_ln674_4               | sub  | fabric | 0       |
+|        sub_ln674_5_fu_442_p2                                                       | -   |        | sub_ln674_5               | sub  | fabric | 0       |
+|        sub_ln674_6_fu_447_p2                                                       | -   |        | sub_ln674_6               | sub  | fabric | 0       |
+|        sub_ln674_7_fu_471_p2                                                       | -   |        | sub_ln674_7               | sub  | fabric | 0       |
+|        rem_2_fu_333_p2                                                             | -   |        | rem_2                     | sub  | fabric | 0       |
+|        grp_fu_174_p2                                                               | -   |        | sub_ln1026                | sub  | fabric | 0       |
+|        add_ln674_fu_497_p2                                                         | -   |        | add_ln674                 | add  | fabric | 0       |
+|        grp_fu_179_p2                                                               | -   |        | sub_ln674                 | sub  | fabric | 0       |
+|        grp_fu_179_p2                                                               | -   |        | sub_ln674_1               | sub  | fabric | 0       |
+|        sub_ln674_2_fu_522_p2                                                       | -   |        | sub_ln674_2               | sub  | fabric | 0       |
+|        sub_ln414_fu_630_p2                                                         | -   |        | sub_ln414                 | sub  | fabric | 0       |
+|        add_ln1030_fu_374_p2                                                        | -   |        | add_ln1030                | add  | fabric | 0       |
+|        sub_ln674_3_fu_388_p2                                                       | -   |        | sub_ln674_3               | add  | tadder | 0       |
+|        add_ln674_1_fu_394_p2                                                       | -   |        | add_ln674_1               | add  | tadder | 0       |
+|        sub_ln414_1_fu_557_p2                                                       | -   |        | sub_ln414_1               | sub  | fabric | 0       |
+|        sub_ln414_2_fu_573_p2                                                       | -   |        | sub_ln414_2               | sub  | fabric | 0       |
+|        rem_1_fu_414_p2                                                             | -   |        | rem_1                     | add  | fabric | 0       |
+|        sub_ln674_8_fu_730_p2                                                       | -   |        | sub_ln674_8               | sub  | fabric | 0       |
+|        add_ln1045_fu_241_p2                                                        | -   |        | add_ln1045                | add  | fabric | 0       |
+|  + bgr2hsv_9_2160_3840_1_s                                                         | 5   |        |                           |      |        |         |
+|    mul_32ns_32ns_64_2_1_U77                                                        | 3   |        | bound                     | mul  | auto   | 1       |
+|   + bgr2hsv_9_2160_3840_1_Pipeline_VITIS_LOOP_128_1_VITIS_LOOP_132_2               | 2   |        |                           |      |        |         |
+|     add_ln128_fu_221_p2                                                            | -   |        | add_ln128                 | add  | fabric | 0       |
+|     ret_38_fu_262_p2                                                               | -   |        | ret_38                    | add  | tadder | 0       |
+|     add_ln1540_fu_268_p2                                                           | -   |        | add_ln1540                | add  | tadder | 0       |
+|     v_3_fu_283_p2                                                                  | -   |        | v_3                       | add  | fabric | 0       |
+|     ret_39_fu_309_p2                                                               | -   |        | ret_39                    | add  | tadder | 0       |
+|     ret_fu_315_p2                                                                  | -   |        | ret                       | add  | tadder | 0       |
+|     v_fu_335_p2                                                                    | -   |        | v                         | add  | fabric | 0       |
+|     ret_40_fu_288_p2                                                               | -   |        | ret_40                    | sub  | fabric | 0       |
+|     vmin_V_fu_326_p2                                                               | -   |        | vmin_V                    | sub  | fabric | 0       |
+|     ret_41_fu_346_p2                                                               | -   |        | ret_41                    | sub  | fabric | 0       |
+|     add_ln229_fu_363_p2                                                            | -   |        | add_ln229                 | add  | tadder | 0       |
+|     add_ln229_1_fu_368_p2                                                          | -   |        | add_ln229_1               | add  | tadder | 0       |
+|     sub_ln229_fu_373_p2                                                            | -   |        | sub_ln229                 | add  | tadder | 0       |
+|     diff_V_fu_378_p2                                                               | -   |        | diff_V                    | add  | tadder | 0       |
+|     mac_muladd_20s_8ns_12ns_20_4_1_U67                                             | 1   |        | mul_ln1540                | mul  | dsp    | 3       |
+|     mac_muladd_20s_8ns_12ns_20_4_1_U67                                             | 1   |        | ret_33                    | add  | dsp    | 3       |
+|     ret_42_fu_399_p2                                                               | -   |        | ret_42                    | sub  | fabric | 0       |
+|     ret_36_fu_403_p2                                                               | -   |        | ret_36                    | sub  | fabric | 0       |
+|     add_ln157_fu_464_p2                                                            | -   |        | add_ln157                 | add  | fabric | 0       |
+|     ret_37_fu_407_p2                                                               | -   |        | ret_37                    | sub  | fabric | 0       |
+|     add_ln157_1_fu_507_p2                                                          | -   |        | add_ln157_1               | add  | fabric | 0       |
+|     add_ln157_2_fu_523_p2                                                          | -   |        | add_ln157_2               | add  | fabric | 0       |
+|     ama_addmuladd_13s_9s_17ns_12ns_30_4_1_U68                                      | 1   |        | h                         | add  | dsp    | 3       |
+|     ama_addmuladd_13s_9s_17ns_12ns_30_4_1_U68                                      | 1   |        | mul_ln158                 | mul  | dsp    | 3       |
+|     ama_addmuladd_13s_9s_17ns_12ns_30_4_1_U68                                      | 1   |        | add_ln158                 | add  | dsp    | 3       |
+|     add_ln161_fu_586_p2                                                            | -   |        | add_ln161                 | add  | fabric | 0       |
+|  + colorthresholding_9_0_3_2160_3840_1_s                                           | 1   |        |                           |      |        |         |
+|    p_loc_0_loc_channel_U                                                           | -   |        | p_loc_0_loc_channel       | fifo | srl    | 0       |
+|    p_loc1_0_loc_channel_U                                                          | -   |        | p_loc1_0_loc_channel      | fifo | srl    | 0       |
+|    p_loc2_0_loc_channel_U                                                          | -   |        | p_loc2_0_loc_channel      | fifo | srl    | 0       |
+|    p_loc3_0_loc_channel_U                                                          | -   |        | p_loc3_0_loc_channel      | fifo | srl    | 0       |
+|    p_loc4_0_loc_channel_U                                                          | -   |        | p_loc4_0_loc_channel      | fifo | srl    | 0       |
+|    p_loc5_0_loc_channel_U                                                          | -   |        | p_loc5_0_loc_channel      | fifo | srl    | 0       |
+|    p_loc6_0_loc_channel_U                                                          | -   |        | p_loc6_0_loc_channel      | fifo | srl    | 0       |
+|    p_loc7_0_loc_channel_U                                                          | -   |        | p_loc7_0_loc_channel      | fifo | srl    | 0       |
+|    p_loc8_0_loc_channel_U                                                          | -   |        | p_loc8_0_loc_channel      | fifo | srl    | 0       |
+|    p_loc9_0_loc_channel_U                                                          | -   |        | p_loc9_0_loc_channel      | fifo | srl    | 0       |
+|    p_loc10_0_loc_channel_U                                                         | -   |        | p_loc10_0_loc_channel     | fifo | srl    | 0       |
+|    p_loc11_0_loc_channel_U                                                         | -   |        | p_loc11_0_loc_channel     | fifo | srl    | 0       |
+|    p_loc12_0_loc_channel_U                                                         | -   |        | p_loc12_0_loc_channel     | fifo | srl    | 0       |
+|    p_loc13_0_loc_channel_U                                                         | -   |        | p_loc13_0_loc_channel     | fifo | srl    | 0       |
+|    p_loc14_0_loc_channel_U                                                         | -   |        | p_loc14_0_loc_channel     | fifo | srl    | 0       |
+|    p_loc15_0_loc_channel_U                                                         | -   |        | p_loc15_0_loc_channel     | fifo | srl    | 0       |
+|    p_loc16_0_loc_channel_U                                                         | -   |        | p_loc16_0_loc_channel     | fifo | srl    | 0       |
+|    p_loc17_0_loc_channel_U                                                         | -   |        | p_loc17_0_loc_channel     | fifo | srl    | 0       |
+|    low_th_0_U                                                                      | -   |        | low_th_0                  | fifo | srl    | 0       |
+|    low_th_0_1_U                                                                    | -   |        | low_th_0_1                | fifo | srl    | 0       |
+|    low_th_0_2_U                                                                    | -   |        | low_th_0_2                | fifo | srl    | 0       |
+|    low_th_1_U                                                                      | -   |        | low_th_1                  | fifo | srl    | 0       |
+|    low_th_1_1_U                                                                    | -   |        | low_th_1_1                | fifo | srl    | 0       |
+|    low_th_1_2_U                                                                    | -   |        | low_th_1_2                | fifo | srl    | 0       |
+|    low_th_2_U                                                                      | -   |        | low_th_2                  | fifo | srl    | 0       |
+|    low_th_2_1_U                                                                    | -   |        | low_th_2_1                | fifo | srl    | 0       |
+|    low_th_2_2_U                                                                    | -   |        | low_th_2_2                | fifo | srl    | 0       |
+|    high_th_0_U                                                                     | -   |        | high_th_0                 | fifo | srl    | 0       |
+|    high_th_0_1_U                                                                   | -   |        | high_th_0_1               | fifo | srl    | 0       |
+|    high_th_0_2_U                                                                   | -   |        | high_th_0_2               | fifo | srl    | 0       |
+|    high_th_1_U                                                                     | -   |        | high_th_1                 | fifo | srl    | 0       |
+|    high_th_1_1_U                                                                   | -   |        | high_th_1_1               | fifo | srl    | 0       |
+|    high_th_1_2_U                                                                   | -   |        | high_th_1_2               | fifo | srl    | 0       |
+|    high_th_2_U                                                                     | -   |        | high_th_2                 | fifo | srl    | 0       |
+|    high_th_2_1_U                                                                   | -   |        | high_th_2_1               | fifo | srl    | 0       |
+|    high_th_2_2_U                                                                   | -   |        | high_th_2_2               | fifo | srl    | 0       |
+|    img_height_loc_channel_U                                                        | -   |        | img_height_loc_channel    | fifo | srl    | 0       |
+|    img_width_loc_channel_U                                                         | -   |        | img_width_loc_channel     | fifo | srl    | 0       |
+|   + colorthresholding_9_0_3_2160_3840_1_Loop_VITIS_LOOP_138_1_proc                 | 0   |        |                           |      |        |         |
+|     add_ln138_fu_245_p2                                                            | -   |        | add_ln138                 | add  | fabric | 0       |
+|     add_ln144_fu_258_p2                                                            | -   |        | add_ln144                 | add  | fabric | 0       |
+|     add_ln145_fu_305_p2                                                            | -   |        | add_ln145                 | add  | fabric | 0       |
+|     add_ln145_1_fu_314_p2                                                          | -   |        | add_ln145_1               | add  | fabric | 0       |
+|     add_ln146_fu_339_p2                                                            | -   |        | add_ln146                 | add  | fabric | 0       |
+|     add_ln146_1_fu_349_p2                                                          | -   |        | add_ln146_1               | add  | fabric | 0       |
+|     add_ln147_fu_274_p2                                                            | -   |        | add_ln147                 | add  | fabric | 0       |
+|     add_ln148_fu_325_p2                                                            | -   |        | add_ln148                 | add  | fabric | 0       |
+|     add_ln149_fu_360_p2                                                            | -   |        | add_ln149                 | add  | fabric | 0       |
+|     add_ln150_fu_289_p2                                                            | -   |        | add_ln150                 | add  | fabric | 0       |
+|   + xFInRange_9_0_2160_3840_15_0_1_9_1_3_s                                         | 1   |        |                           |      |        |         |
+|     mul_mul_16ns_16ns_32_4_1_U132                                                  | 1   |        | bound                     | mul  | dsp    | 3       |
+|    + xFInRange_9_0_2160_3840_15_0_1_9_1_3_Pipeline_VITIS_LOOP_92_1_VITIS_LOOP_96_2 | 0   |        |                           |      |        |         |
+|      add_ln92_fu_239_p2                                                            | -   |        | add_ln92                  | add  | fabric | 0       |
+|  + erode_0_0_2160_3840_0_3_3_1_1_s                                                 | 0   |        |                           |      |        |         |
+|   + xferode_2160_3840_1_0_1_0_3841_3_3_s                                           | 0   |        |                           |      |        |         |
+|     op2_assign_fu_147_p2                                                           | -   |        | op2_assign                | add  | fabric | 0       |
+|     add_ln1810_fu_153_p2                                                           | -   |        | add_ln1810                | add  | fabric | 0       |
+|     row_V_3_fu_197_p2                                                              | -   |        | row_V_3                   | add  | fabric | 0       |
+|    + xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_263_1                  | 0   |        |                           |      |        |         |
+|      init_row_ind_fu_68_p2                                                         | -   |        | init_row_ind              | add  | fabric | 0       |
+|    + xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_278_2                  | 0   |        |                           |      |        |         |
+|      add_ln885_fu_101_p2                                                           | -   |        | add_ln885                 | add  | fabric | 0       |
+|    + xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_295_3                  | 0   |        |                           |      |        |         |
+|      add_ln885_fu_90_p2                                                            | -   |        | add_ln885                 | add  | fabric | 0       |
+|    + xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_Col_Loop                          | 0   |        |                           |      |        |         |
+|      col_V_2_fu_376_p2                                                             | -   |        | col_V_2                   | add  | fabric | 0       |
+|  + dilate_0_0_2160_3840_0_3_3_1_1_s                                                | 0   |        |                           |      |        |         |
+|   + xfdilate_2160_3840_1_0_1_0_3841_3_3_s                                          | 0   |        |                           |      |        |         |
+|     op2_assign_fu_147_p2                                                           | -   |        | op2_assign                | add  | fabric | 0       |
+|     add_ln1810_fu_153_p2                                                           | -   |        | add_ln1810                | add  | fabric | 0       |
+|     row_V_5_fu_197_p2                                                              | -   |        | row_V_5                   | add  | fabric | 0       |
+|    + xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_259_1                 | 0   |        |                           |      |        |         |
+|      init_row_ind_fu_68_p2                                                         | -   |        | init_row_ind              | add  | fabric | 0       |
+|    + xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_274_2                 | 0   |        |                           |      |        |         |
+|      add_ln885_fu_101_p2                                                           | -   |        | add_ln885                 | add  | fabric | 0       |
+|    + xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_291_3                 | 0   |        |                           |      |        |         |
+|      add_ln885_fu_90_p2                                                            | -   |        | add_ln885                 | add  | fabric | 0       |
+|    + xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_Col_Loop                         | 0   |        |                           |      |        |         |
+|      col_V_4_fu_376_p2                                                             | -   |        | col_V_4                   | add  | fabric | 0       |
+|  + dilate_0_0_2160_3840_0_3_3_1_1_1                                                | 0   |        |                           |      |        |         |
+|   + xfdilate_2160_3840_1_0_1_0_3841_3_3_s                                          | 0   |        |                           |      |        |         |
+|     op2_assign_fu_147_p2                                                           | -   |        | op2_assign                | add  | fabric | 0       |
+|     add_ln1810_fu_153_p2                                                           | -   |        | add_ln1810                | add  | fabric | 0       |
+|     row_V_5_fu_197_p2                                                              | -   |        | row_V_5                   | add  | fabric | 0       |
+|    + xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_259_1                 | 0   |        |                           |      |        |         |
+|      init_row_ind_fu_68_p2                                                         | -   |        | init_row_ind              | add  | fabric | 0       |
+|    + xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_274_2                 | 0   |        |                           |      |        |         |
+|      add_ln885_fu_101_p2                                                           | -   |        | add_ln885                 | add  | fabric | 0       |
+|    + xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_291_3                 | 0   |        |                           |      |        |         |
+|      add_ln885_fu_90_p2                                                            | -   |        | add_ln885                 | add  | fabric | 0       |
+|    + xfdilate_2160_3840_1_0_1_0_3841_3_3_Pipeline_Col_Loop                         | 0   |        |                           |      |        |         |
+|      col_V_4_fu_376_p2                                                             | -   |        | col_V_4                   | add  | fabric | 0       |
+|  + erode_0_0_2160_3840_0_3_3_1_1_1                                                 | 0   |        |                           |      |        |         |
+|   + xferode_2160_3840_1_0_1_0_3841_3_3_s                                           | 0   |        |                           |      |        |         |
+|     op2_assign_fu_147_p2                                                           | -   |        | op2_assign                | add  | fabric | 0       |
+|     add_ln1810_fu_153_p2                                                           | -   |        | add_ln1810                | add  | fabric | 0       |
+|     row_V_3_fu_197_p2                                                              | -   |        | row_V_3                   | add  | fabric | 0       |
+|    + xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_263_1                  | 0   |        |                           |      |        |         |
+|      init_row_ind_fu_68_p2                                                         | -   |        | init_row_ind              | add  | fabric | 0       |
+|    + xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_278_2                  | 0   |        |                           |      |        |         |
+|      add_ln885_fu_101_p2                                                           | -   |        | add_ln885                 | add  | fabric | 0       |
+|    + xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_VITIS_LOOP_295_3                  | 0   |        |                           |      |        |         |
+|      add_ln885_fu_90_p2                                                            | -   |        | add_ln885                 | add  | fabric | 0       |
+|    + xferode_2160_3840_1_0_1_0_3841_3_3_Pipeline_Col_Loop                          | 0   |        |                           |      |        |         |
+|      col_V_2_fu_376_p2                                                             | -   |        | col_V_2                   | add  | fabric | 0       |
+|  + xfMat2Array_8_0_2160_3840_1_1_s                                                 | 2   |        |                           |      |        |         |
+|   + Mat2Axi                                                                        | 2   |        |                           |      |        |         |
+|     p_channel_U                                                                    | -   |        | p_channel                 | fifo | srl    | 0       |
+|     axibound_V_U                                                                   | -   |        | axibound_V                | fifo | srl    | 0       |
+|    + addrbound                                                                     | 1   |        |                           |      |        |         |
+|      mul_mul_16ns_16ns_24_4_1_U279                                                 | 1   |        | mul_ln1539                | mul  | dsp    | 3       |
+|    + Mat2AxiStream                                                                 | 1   |        |                           |      |        |         |
+|      last_blk_width_channel_U                                                      | -   |        | last_blk_width_channel    | fifo | srl    | 0       |
+|     + MatStream2AxiStream_2_s                                                      | 1   |        |                           |      |        |         |
+|       op2_assign_fu_106_p2                                                         | -   |        | op2_assign                | add  | fabric | 0       |
+|       mul_mul_16ns_16ns_32_4_1_U299                                                | 1   |        | bound                     | mul  | dsp    | 3       |
+|      + MatStream2AxiStream_2_Pipeline_MMIterOutRow_MMIterOutCol                    | 0   |        |                           |      |        |         |
+|        add_ln1254_fu_199_p2                                                        | -   |        | add_ln1254                | add  | fabric | 0       |
+|        sub_ln1277_fu_269_p2                                                        | -   |        | sub_ln1277                | sub  | fabric | 0       |
+|        ret_43_fu_321_p2                                                            | -   |        | ret_43                    | sub  | fabric | 0       |
+|        sub_ln599_fu_342_p2                                                         | -   |        | sub_ln599                 | sub  | fabric | 0       |
+|        filled_V_2_fu_291_p2                                                        | -   |        | filled_V_2                | add  | fabric | 0       |
+|        j_V_1_fu_235_p2                                                             | -   |        | j_V_1                     | add  | fabric | 0       |
+|    + AxiStream2Axi                                                                 | 0   |        |                           |      |        |         |
+|     + AxiStream2Axi_Pipeline_MMIterOutLoop2                                        | 0   |        |                           |      |        |         |
+|       i_V_2_fu_108_p2                                                              | -   |        | i_V_2                     | add  | fabric | 0       |
++------------------------------------------------------------------------------------+-----+--------+---------------------------+------+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++-------------------------------------------------------------------------------+------+------+--------+-------------------------------------------------------------------------+---------+------+---------+
+| Name                                                                          | BRAM | URAM | Pragma | Variable                                                                | Storage | Impl | Latency |
++-------------------------------------------------------------------------------+------+------+--------+-------------------------------------------------------------------------+---------+------+---------+
+| + color_detect                                                                | 37   | 0    |        |                                                                         |         |      |         |
+|   imgInput_cols_c_U                                                           | -    | -    |        | imgInput_cols_c                                                         | fifo    | srl  | 0       |
+|   imgInput_rows_c_U                                                           | -    | -    |        | imgInput_rows_c                                                         | fifo    | srl  | 0       |
+|   img_out_c_U                                                                 | -    | -    |        | img_out_c                                                               | fifo    | srl  | 0       |
+|   imgInput_data_U                                                             | -    | -    |        | imgInput_data                                                           | fifo    | srl  | 0       |
+|   rgb2hsv_data_U                                                              | -    | -    |        | rgb2hsv_data                                                            | fifo    | srl  | 0       |
+|   imgHelper1_data_U                                                           | -    | -    |        | imgHelper1_data                                                         | fifo    | srl  | 0       |
+|   imgHelper2_data_U                                                           | -    | -    |        | imgHelper2_data                                                         | fifo    | srl  | 0       |
+|   imgHelper3_data_U                                                           | -    | -    |        | imgHelper3_data                                                         | fifo    | srl  | 0       |
+|   imgHelper4_data_U                                                           | -    | -    |        | imgHelper4_data                                                         | fifo    | srl  | 0       |
+|   imgOutput_data_U                                                            | -    | -    |        | imgOutput_data                                                          | fifo    | srl  | 0       |
+|  + Array2xfMat_32_9_2160_3840_1_s                                             | 0    | 0    |        |                                                                         |         |      |         |
+|   + Axi2Mat                                                                   | 0    | 0    |        |                                                                         |         |      |         |
+|     cols_c_U                                                                  | -    | -    |        | cols_c                                                                  | fifo    | srl  | 0       |
+|     rows_c_U                                                                  | -    | -    |        | rows_c                                                                  | fifo    | srl  | 0       |
+|     ldata_U                                                                   | -    | -    |        | ldata                                                                   | fifo    | srl  | 0       |
+|    + AxiStream2Mat                                                            | 0    | 0    |        |                                                                         |         |      |         |
+|      cols_c_U                                                                 | -    | -    |        | cols_c                                                                  | fifo    | srl  | 0       |
+|      rows_c_U                                                                 | -    | -    |        | rows_c                                                                  | fifo    | srl  | 0       |
+|  + bgr2hsv_9_2160_3840_1_s                                                    | 5    | 0    |        |                                                                         |         |      |         |
+|   + bgr2hsv_9_2160_3840_1_Pipeline_VITIS_LOOP_128_1_VITIS_LOOP_132_2          | 5    | 0    |        |                                                                         |         |      |         |
+|     xf_cv_icvSaturate8u_cv_U                                                  | 1    | -    |        | xf_cv_icvSaturate8u_cv                                                  | rom_np  | auto | 1       |
+|     void_bgr2hsv_9_2160_3840_1_Mat_9_2160_3840_1_2_Mat_9_2160_3840_1_2_sdiv_U | 1    | -    |        | void_bgr2hsv_9_2160_3840_1_Mat_9_2160_3840_1_2_Mat_9_2160_3840_1_2_sdiv | rom_1p  | auto | 1       |
+|     void_bgr2hsv_9_2160_3840_1_Mat_9_2160_3840_1_2_Mat_9_2160_3840_1_2_hdiv_U | 1    | -    |        | void_bgr2hsv_9_2160_3840_1_Mat_9_2160_3840_1_2_Mat_9_2160_3840_1_2_hdiv | rom_1p  | auto | 1       |
+|  + colorthresholding_9_0_3_2160_3840_1_s                                      | 0    | 0    |        |                                                                         |         |      |         |
+|    p_src_mat_cols_c_U                                                         | -    | -    |        | p_src_mat_cols_c                                                        | fifo    | srl  | 0       |
+|    p_src_mat_rows_c_U                                                         | -    | -    |        | p_src_mat_rows_c                                                        | fifo    | srl  | 0       |
+|  + erode_0_0_2160_3840_0_3_3_1_1_s                                            | 6    | 0    |        |                                                                         |         |      |         |
+|   + xferode_2160_3840_1_0_1_0_3841_3_3_s                                      | 6    | 0    |        |                                                                         |         |      |         |
+|     buf_V_U                                                                   | 2    | -    | yes    | buf_V                                                                   | ram_s2p | bram | 1       |
+|     buf_V_1_U                                                                 | 2    | -    | yes    | buf_V_1                                                                 | ram_s2p | bram | 1       |
+|     buf_V_2_U                                                                 | 2    | -    | yes    | buf_V_2                                                                 | ram_s2p | bram | 1       |
+|  + dilate_0_0_2160_3840_0_3_3_1_1_s                                           | 6    | 0    |        |                                                                         |         |      |         |
+|   + xfdilate_2160_3840_1_0_1_0_3841_3_3_s                                     | 6    | 0    |        |                                                                         |         |      |         |
+|     buf_V_U                                                                   | 2    | -    | yes    | buf_V                                                                   | ram_s2p | bram | 1       |
+|     buf_V_3_U                                                                 | 2    | -    | yes    | buf_V_3                                                                 | ram_s2p | bram | 1       |
+|     buf_V_4_U                                                                 | 2    | -    | yes    | buf_V_4                                                                 | ram_s2p | bram | 1       |
+|  + dilate_0_0_2160_3840_0_3_3_1_1_1                                           | 6    | 0    |        |                                                                         |         |      |         |
+|   + xfdilate_2160_3840_1_0_1_0_3841_3_3_s                                     | 6    | 0    |        |                                                                         |         |      |         |
+|     buf_V_U                                                                   | 2    | -    | yes    | buf_V                                                                   | ram_s2p | bram | 1       |
+|     buf_V_3_U                                                                 | 2    | -    | yes    | buf_V_3                                                                 | ram_s2p | bram | 1       |
+|     buf_V_4_U                                                                 | 2    | -    | yes    | buf_V_4                                                                 | ram_s2p | bram | 1       |
+|  + erode_0_0_2160_3840_0_3_3_1_1_1                                            | 6    | 0    |        |                                                                         |         |      |         |
+|   + xferode_2160_3840_1_0_1_0_3841_3_3_s                                      | 6    | 0    |        |                                                                         |         |      |         |
+|     buf_V_U                                                                   | 2    | -    | yes    | buf_V                                                                   | ram_s2p | bram | 1       |
+|     buf_V_1_U                                                                 | 2    | -    | yes    | buf_V_1                                                                 | ram_s2p | bram | 1       |
+|     buf_V_2_U                                                                 | 2    | -    | yes    | buf_V_2                                                                 | ram_s2p | bram | 1       |
+|  + xfMat2Array_8_0_2160_3840_1_1_s                                            | 0    | 0    |        |                                                                         |         |      |         |
+|   + Mat2Axi                                                                   | 0    | 0    |        |                                                                         |         |      |         |
+|     dout_c_U                                                                  | -    | -    |        | dout_c                                                                  | fifo    | srl  | 0       |
+|     ldata_U                                                                   | -    | -    |        | ldata                                                                   | fifo    | srl  | 0       |
+|    + Mat2AxiStream                                                            | 0    | 0    |        |                                                                         |         |      |         |
+|      cols_c_U                                                                 | -    | -    |        | cols_c                                                                  | fifo    | srl  | 0       |
+|      rows_c_U                                                                 | -    | -    |        | rows_c                                                                  | fifo    | srl  | 0       |
++-------------------------------------------------------------------------------+------+------+--------+-------------------------------------------------------------------------+---------+------+---------+
+
+
+================================================================
+== User Pragma Report
+================================================================
+* Pragmas with Warnings
++----------+--------------------------------+---------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
+| Type     | Options                        | Location                                                                                                                  | Messages                                                                   |
++----------+--------------------------------+---------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
+| resource | variable=buf core=RAM_S2P_BRAM | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:253 in xfdilate, buf | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead |
+| resource | variable=buf core=RAM_S2P_BRAM | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:257 in xferode, buf   | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead |
++----------+--------------------------------+---------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------------+----------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type            | Options                                            | Location                                                                                                                                             |
++-----------------+----------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:245 in scalar<n, t>                               |
+| array_partition | variable=val dim=1 complete                        | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:246 in scalar<n, t>, val                          |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:252 in scalar<n, t>                               |
+| array_partition | variable=val dim=1 complete                        | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:253 in scalar<n, t>, val                          |
+| array_partition | variable=val dim=1 complete                        | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:260 in scalar<n, t>, val                          |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:261 in scalar<n, t>                               |
+| array_partition | variable=val dim=1 complete                        | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:269 in scalar<n, t>, val                          |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:270 in scalar<n, t>                               |
+| array_partition | variable=val dim=1 complete                        | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:279 in scalar<n, t>, val                          |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:280 in scalar<n, t>                               |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:305 in operator=                                  |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:309 in operator=                                  |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:318 in operator+                                  |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:323 in operator+                                  |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:333 in operator+                                  |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:338 in operator+                                  |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:348 in operator-                                  |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:353 in operator-                                  |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:363 in operator-                                  |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:368 in operator-                                  |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:378 in operator*                                  |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:383 in operator*                                  |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:393 in operator*                                  |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:398 in operator*                                  |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:408 in operator/                                  |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:413 in operator/                                  |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:423 in operator/                                  |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:428 in operator/                                  |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:584 in type                                       |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:592 in depth                                      |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:599 in channels                                   |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:607 in init                                       |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:654 in mat<t, rows, cols, npc, xfcvdepth>         |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:663 in mat<t, rows, cols, npc, xfcvdepth>         |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:672 in mat<t, rows, cols, npc, xfcvdepth>         |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:681 in mat<t, rows, cols, npc, xfcvdepth>         |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:708 in copyto                                     |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:742 in copyfrom                                   |
+| loop_tripcount  | min=1 max=ADDRBOUND                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:966 in axi2axistream                              |
+| pipeline        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:967 in axi2axistream                              |
+| loop_tripcount  | min=1 max=ADDRBOUND                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:980 in axi2axistream                              |
+| pipeline        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:981 in axi2axistream                              |
+| loop_tripcount  | min=1 max=LOOPBOUND                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1015 in axistream2matstream                       |
+| pipeline        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1016 in axistream2matstream                       |
+| loop_tripcount  | min=1 max=LOOPBOUND                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1059 in matstream2mat                             |
+| pipeline        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1060 in matstream2mat                             |
+| dataflow        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1072 in axistream2mat                             |
+| dataflow        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1085 in axistream2mat                             |
+| dataflow        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1100 in axi2mat                                   |
+| dataflow        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1120 in axi2mat                                   |
+| dataflow        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1132 in axi2mat                                   |
+| dataflow        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1152 in axi2mat                                   |
+| loop_tripcount  | min=1 max=LOOPBOUND                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1226 in mat2matstream                             |
+| pipeline        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1227 in mat2matstream                             |
+| loop_tripcount  | min=1 max=ROWS                                     | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1256 in matstream2axistream                       |
+| loop_tripcount  | min=1 max=COLS_BOUND_PER_NPC                       | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1261 in matstream2axistream                       |
+| pipeline        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1262 in matstream2axistream                       |
+| dataflow        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1304 in mat2axistream                             |
+| dataflow        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1317 in mat2axistream                             |
+| loop_tripcount  | min=1 max=ADDRBOUND                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1334 in axistream2axi                             |
+| pipeline        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1335 in axistream2axi                             |
+| loop_tripcount  | min=1 max=ADDRBOUND                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1349 in axistream2axi                             |
+| pipeline        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1350 in axistream2axi                             |
+| dataflow        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1364 in mat2axi                                   |
+| dataflow        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1391 in mat2axi                                   |
+| dataflow        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1422 in mat2axi                                   |
+| dataflow        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_structs.hpp:1452 in mat2axi                                   |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:37 in xfpackpixels                                |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:43 in xfpackpixels                                |
+| inline          | off                                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:55 in xfextractpixels                             |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:64 in xfextractpixels                             |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:87 in xfextractdata                               |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:107 in xfcopydata                                 |
+| loop_tripcount  | min=6 max=6                                        | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:115 in xfcopydata                                 |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:116 in xfcopydata                                 |
+| loop_tripcount  | min=IN_BH max=IN_BH                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:186 in xfduplicatestream                          |
+| loop_flatten    | off                                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:187 in xfduplicatestream                          |
+| pipeline        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:191 in xfduplicatestream                          |
+| loop_tripcount  | min=IN_BW max=IN_BW                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:192 in xfduplicatestream                          |
+| loop_tripcount  | min=1 max=TRIPCOUNT                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:217 in array2hlsstrm                              |
+| pipeline        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:218 in array2hlsstrm                              |
+| loop_tripcount  | min=1 max=TRIPCOUNT                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:253 in hlsstrm2xfmat                              |
+| pipeline        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:254 in hlsstrm2xfmat                              |
+| loop_tripcount  | min=1 max=TRIPCOUNT                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:332 in axistrm2hlsstrm                            |
+| pipeline        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:333 in axistrm2hlsstrm                            |
+| dataflow        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:343 in axistrm2xfmat                              |
+| loop_tripcount  | min=1 max=TRIPCOUNT                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:392 in xfmat2hlsstrm                              |
+| pipeline        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:393 in xfmat2hlsstrm                              |
+| loop_tripcount  | min=1 max=TRIPCOUNT                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:438 in hlsstrm2array                              |
+| pipeline        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:439 in hlsstrm2array                              |
+| loop_tripcount  | min=1 max=TRIPCOUNT                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:481 in hlsstrm2axistrm                            |
+| pipeline        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:482 in hlsstrm2axistrm                            |
+| dataflow        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/common/xf_utility.hpp:493 in xfmat2axistrm                              |
+| inline          | OFF                                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_bgr2hsv.hpp:75 in bgr2hsv                                    |
+| loop_tripcount  | max=ROWS                                           | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_bgr2hsv.hpp:130 in bgr2hsv                                   |
+| loop_tripcount  | max=COLS                                           | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_bgr2hsv.hpp:134 in bgr2hsv                                   |
+| pipeline        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_bgr2hsv.hpp:135 in bgr2hsv                                   |
+| loop_flatten    | off                                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_channel_combine.hpp:51 in xfchannelcombinekernel             |
+| loop_tripcount  | min=ROWS max=ROWS                                  | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_channel_combine.hpp:52 in xfchannelcombinekernel             |
+| loop_tripcount  | min=TC max=TC                                      | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_channel_combine.hpp:57 in xfchannelcombinekernel             |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_channel_combine.hpp:69 in xfchannelcombinekernel             |
+| loop_flatten    | off                                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_channel_combine.hpp:103 in xfchannelcombinekernel            |
+| loop_tripcount  | min=ROWS max=ROWS                                  | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_channel_combine.hpp:104 in xfchannelcombinekernel            |
+| loop_tripcount  | min=TC max=TC                                      | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_channel_combine.hpp:109 in xfchannelcombinekernel            |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_channel_combine.hpp:120 in xfchannelcombinekernel            |
+| loop_flatten    | off                                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_channel_combine.hpp:152 in xfchannelcombinekernel            |
+| loop_tripcount  | min=ROWS max=ROWS                                  | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_channel_combine.hpp:153 in xfchannelcombinekernel            |
+| loop_tripcount  | min=TC max=TC                                      | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_channel_combine.hpp:158 in xfchannelcombinekernel            |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_channel_combine.hpp:168 in xfchannelcombinekernel            |
+| inline          | off                                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_channel_combine.hpp:203 in merge                             |
+| inline          | off                                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_channel_combine.hpp:233 in merge                             |
+| inline          | off                                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_channel_combine.hpp:265 in merge                             |
+| inline          | off                                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_colorthresholding.hpp:40 in apply_threshold                  |
+| loop_tripcount  | max = ROWS                                         | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_colorthresholding.hpp:94 in xfinrange                        |
+| pipeline        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_colorthresholding.hpp:98 in xfinrange                        |
+| loop_tripcount  | max = COLS                                         | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_colorthresholding.hpp:99 in xfinrange                        |
+| inline          | OFF                                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_colorthresholding.hpp:128 in colorthresholding               |
+| dataflow        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_colorthresholding.hpp:129 in colorthresholding               |
+| array_partition | variable = low_th dim = 1 complete                 | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_colorthresholding.hpp:134 in colorthresholding               |
+| array_partition | variable = high_th dim = 1 complete                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_colorthresholding.hpp:135 in colorthresholding               |
+| pipeline        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_colorthresholding.hpp:140 in colorthresholding               |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:33 in dilate_function_apply                     |
+| loop_tripcount  | min=1 max=PLANES                                   | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:41 in dilate_function_apply                     |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:42 in dilate_function_apply                     |
+| loop_tripcount  | min=1 max=K_ROWS                                   | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:47 in dilate_function_apply                     |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:48 in dilate_function_apply                     |
+| loop_tripcount  | min=1 max=K_COLS                                   | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:52 in dilate_function_apply                     |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:53 in dilate_function_apply                     |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:84 in process_function_d                        |
+| array_partition | variable=buf_cop complete dim=1                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:90 in process_function_d, buf_cop               |
+| loop_tripcount  | min=1 max=K_ROWS                                   | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:99 in process_function_d                        |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:100 in process_function_d                       |
+| loop_tripcount  | min=1 max=K_COLS                                   | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:104 in process_function_d                       |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:105 in process_function_d                       |
+| loop_tripcount  | min=1 max=TC                                       | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:116 in process_function_d                       |
+| pipeline        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:117 in process_function_d                       |
+| loop_flatten    | OFF                                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:118 in process_function_d                       |
+| loop_tripcount  | min=K_ROWS max=K_ROWS                              | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:132 in process_function_d                       |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:133 in process_function_d                       |
+| loop_tripcount  | min=1 max=K_ROWS                                   | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:147 in process_function_d                       |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:148 in process_function_d                       |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:155 in process_function_d                       |
+| pipeline        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:167 in process_function_d                       |
+| loop_tripcount  | min=K_ROWS max=K_ROWS                              | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:212 in process_function_d                       |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:216 in process_function_d                       |
+| loop_tripcount  | min=K_COLS max=K_COLS                              | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:217 in process_function_d                       |
+| array_partition | variable=row_ind complete dim=1                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:237 in xfdilate, row_ind                        |
+| array_partition | variable=src_buf complete dim=1                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:245 in xfdilate, src_buf                        |
+| array_partition | variable=src_buf complete dim=2                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:246 in xfdilate, src_buf                        |
+| array_partition | variable=buf complete dim=1                        | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:254 in xfdilate, buf                            |
+| loop_tripcount  | min=1 max=K_ROWS                                   | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:261 in xfdilate                                 |
+| loop_tripcount  | min=1 max=K_ROWS                                   | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:272 in xfdilate                                 |
+| loop_tripcount  | min=1 max=TC/NPC                                   | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:276 in xfdilate                                 |
+| pipeline        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:277 in xfdilate                                 |
+| loop_flatten    | OFF                                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:278 in xfdilate                                 |
+| loop_tripcount  | min=1 max=K_ROWS                                   | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:289 in xfdilate                                 |
+| loop_tripcount  | min=1 max=TC/NPC                                   | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:293 in xfdilate                                 |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:294 in xfdilate                                 |
+| loop_tripcount  | min=1 max=ROWS                                     | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:304 in xfdilate                                 |
+| loop_tripcount  | min=1 max=K_ROWS                                   | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:315 in xfdilate                                 |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:316 in xfdilate                                 |
+| inline          | OFF                                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:337 in dilate                                   |
+| array_partition | variable=kernel_new dim=0                          | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:368 in dilate, kernel_new                       |
+| array_partition | variable=kernel complete dim=0                     | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_dilation.hpp:381 in dilate, kernel                           |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:33 in function_apply                             |
+| loop_tripcount  | min=1 max=PLANES                                   | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:41 in function_apply                             |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:42 in function_apply                             |
+| loop_tripcount  | min=1 max=K_ROWS                                   | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:47 in function_apply                             |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:48 in function_apply                             |
+| loop_tripcount  | min=1 max=K_COLS                                   | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:52 in function_apply                             |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:53 in function_apply                             |
+| inline          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:84 in process_function                           |
+| array_partition | variable=buf_cop complete dim=1                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:90 in process_function, buf_cop                  |
+| loop_tripcount  | min=1 max=K_ROWS                                   | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:99 in process_function                           |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:100 in process_function                          |
+| loop_tripcount  | min=1 max=K_COLS                                   | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:104 in process_function                          |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:105 in process_function                          |
+| loop_tripcount  | min=1 max=TC                                       | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:117 in process_function                          |
+| pipeline        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:118 in process_function                          |
+| loop_flatten    | OFF                                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:119 in process_function                          |
+| loop_tripcount  | min=K_ROWS max=K_ROWS                              | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:134 in process_function                          |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:135 in process_function                          |
+| loop_tripcount  | min=1 max=K_ROWS                                   | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:151 in process_function                          |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:152 in process_function                          |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:159 in process_function                          |
+| pipeline        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:171 in process_function                          |
+| loop_tripcount  | min=K_ROWS max=K_ROWS                              | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:216 in process_function                          |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:220 in process_function                          |
+| loop_tripcount  | min=K_COLS max=K_COLS                              | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:221 in process_function                          |
+| array_partition | variable=row_ind complete dim=1                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:241 in xferode, row_ind                          |
+| array_partition | variable=src_buf complete dim=1                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:249 in xferode, src_buf                          |
+| array_partition | variable=src_buf complete dim=2                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:250 in xferode, src_buf                          |
+| array_partition | variable=buf complete dim=1                        | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:258 in xferode, buf                              |
+| loop_tripcount  | min=1 max=K_ROWS                                   | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:265 in xferode                                   |
+| loop_tripcount  | min=1 max=K_ROWS                                   | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:276 in xferode                                   |
+| loop_tripcount  | min=1 max=TC/NPC                                   | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:280 in xferode                                   |
+| pipeline        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:281 in xferode                                   |
+| loop_flatten    | OFF                                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:282 in xferode                                   |
+| loop_tripcount  | min=1 max=K_ROWS                                   | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:293 in xferode                                   |
+| loop_tripcount  | min=1 max=TC/NPC                                   | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:297 in xferode                                   |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:298 in xferode                                   |
+| loop_tripcount  | min=1 max=ROWS                                     | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:308 in xferode                                   |
+| loop_tripcount  | min=1 max=K_ROWS                                   | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:319 in xferode                                   |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:320 in xferode                                   |
+| inline          | OFF                                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:341 in erode                                     |
+| array_partition | variable=kernel_new dim=0                          | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:357 in erode, kernel_new                         |
+| array_partition | variable=kernel complete dim=0                     | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_erosion.hpp:370 in erode, kernel                             |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_inrange.hpp:46 in inrangeproc                                |
+| unroll          |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_inrange.hpp:52 in inrangeproc                                |
+| loop_tripcount  | min=ROWS max=ROWS                                  | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_inrange.hpp:107 in xfinrangekernel                           |
+| loop_flatten    | off                                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_inrange.hpp:108 in xfinrangekernel                           |
+| loop_tripcount  | min=COLS_TRIP max=COLS_TRIP                        | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_inrange.hpp:114 in xfinrangekernel                           |
+| pipeline        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_inrange.hpp:115 in xfinrangekernel                           |
+| inline          | OFF                                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L1/include/imgproc/xf_inrange.hpp:147 in inrange                                   |
+| interface       | m_axi port=img_in offset=slave bundle=gmem0        | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L3/examples/colordetect/xf_colordetect_accel.cpp:29 in color_detect, img_in        |
+| interface       | m_axi port=low_thresh offset=slave bundle=gmem1    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L3/examples/colordetect/xf_colordetect_accel.cpp:31 in color_detect, low_thresh    |
+| interface       | s_axilite port=low_thresh                          | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L3/examples/colordetect/xf_colordetect_accel.cpp:32 in color_detect, low_thresh    |
+| interface       | m_axi port=high_thresh offset=slave bundle=gmem2   | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L3/examples/colordetect/xf_colordetect_accel.cpp:33 in color_detect, high_thresh   |
+| interface       | s_axilite port=high_thresh                         | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L3/examples/colordetect/xf_colordetect_accel.cpp:34 in color_detect, high_thresh   |
+| interface       | s_axilite port=rows                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L3/examples/colordetect/xf_colordetect_accel.cpp:35 in color_detect, rows          |
+| interface       | s_axilite port=cols                                | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L3/examples/colordetect/xf_colordetect_accel.cpp:36 in color_detect, cols          |
+| interface       | m_axi port=process_shape offset=slave bundle=gmem3 | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L3/examples/colordetect/xf_colordetect_accel.cpp:37 in color_detect, process_shape |
+| interface       | s_axilite port=process_shape                       | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L3/examples/colordetect/xf_colordetect_accel.cpp:38 in color_detect, process_shape |
+| interface       | m_axi port=img_out offset=slave bundle=gmem4       | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L3/examples/colordetect/xf_colordetect_accel.cpp:39 in color_detect, img_out       |
+| interface       | s_axilite port=return                              | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L3/examples/colordetect/xf_colordetect_accel.cpp:41 in color_detect, return        |
+| pipeline        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L3/examples/colordetect/xf_colordetect_accel.cpp:56 in color_detect                |
+| dataflow        |                                                    | /users/course/2022S/HLS17000000/g109061806/Vitis_Libraries/vision/L3/examples/colordetect/xf_colordetect_accel.cpp:62 in color_detect                |
++-----------------+----------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+

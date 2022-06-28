@@ -1,0 +1,123 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="array_io.c:58:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="array_io" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=d_i complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="array_io.c:58:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="array_io" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=d_o complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="array_io.c:58:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="array_io" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_fifo port=d_o" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="array_io.c:58:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="array_io" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=array_io" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="array_io.c:66:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="array_io" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="array_io.c:57:0" msg_body="Unrolling loop 'For_Loop' (array_io.c:65:12) in function 'array_io' completely with a factor of 32">
+        <args Factor="32" LoopLoc="array_io.c:65:12" LoopName="For_Loop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="array_io.c:57:0" msg_body="Applying array_partition to 'd_o': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="d_o"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="array_io.c:57:0" msg_body="Applying array_partition to 'd_i': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="d_i"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_0'">
+        <args Name="d_o_0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_1'">
+        <args Name="d_o_1"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_2'">
+        <args Name="d_o_2"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_3'">
+        <args Name="d_o_3"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_4'">
+        <args Name="d_o_4"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_5'">
+        <args Name="d_o_5"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_6'">
+        <args Name="d_o_6"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_7'">
+        <args Name="d_o_7"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_8'">
+        <args Name="d_o_8"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_9'">
+        <args Name="d_o_9"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_10'">
+        <args Name="d_o_10"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_11'">
+        <args Name="d_o_11"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_12'">
+        <args Name="d_o_12"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_13'">
+        <args Name="d_o_13"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_14'">
+        <args Name="d_o_14"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_15'">
+        <args Name="d_o_15"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_16'">
+        <args Name="d_o_16"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_17'">
+        <args Name="d_o_17"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_18'">
+        <args Name="d_o_18"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_19'">
+        <args Name="d_o_19"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_20'">
+        <args Name="d_o_20"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_21'">
+        <args Name="d_o_21"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_22'">
+        <args Name="d_o_22"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_23'">
+        <args Name="d_o_23"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_24'">
+        <args Name="d_o_24"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_25'">
+        <args Name="d_o_25"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_26'">
+        <args Name="d_o_26"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_27'">
+        <args Name="d_o_27"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_28'">
+        <args Name="d_o_28"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_29'">
+        <args Name="d_o_29"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_30'">
+        <args Name="d_o_30"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-142" msg_severity="WARNING" msg_loc="array_io.c:57:0" msg_body="Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'd_o_31'">
+        <args Name="d_o_31"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

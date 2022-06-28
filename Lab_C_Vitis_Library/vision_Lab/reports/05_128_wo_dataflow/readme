@@ -1,0 +1,3 @@
+We comment the #pragma HLS DATAFLOW in xf_colordetect_accel.cpp.
+We use the figure colordetect_128x128.jpeg as our input.
+Kernel seems to halt mysteriously when dataflow is deactivated, so we don't have hardware emulation reports and hardware reports. (no xrt.run_summary)

@@ -1,0 +1,608 @@
+
+
+================================================================
+== Synthesis Summary Report of 'resize_accel'
+================================================================
++ General Information: 
+    * Date:           Sat Jun 18 18:21:43 2022
+    * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+    * Project:        resize
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+---------+-----------+------------+-----+
+    |                                            Modules                                           |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |          |         |           |            |     |
+    |                                            & Loops                                           |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM   |   DSP   |     FF    |     LUT    | URAM|
+    +----------------------------------------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+---------+-----------+------------+-----+
+    |+ resize_accel*                                                                               |  Timing|  -0.36|  8369117|  8.369e+07|         -|  8369117|     -|  dataflow|  36 (12%)|  14 (6%)|  6396 (6%)|  5992 (11%)|    -|
+    | + Block_split1_proc                                                                          |       -|   7.30|        0|      0.000|         -|        0|     -|        no|         -|        -|  130 (~0%)|    47 (~0%)|    -|
+    | + axis2xfMat_24_9_2160_3840_1_s                                                              |       -|   0.03|  8303041|  8.303e+07|         -|  8303041|     -|        no|         -|        -|   56 (~0%)|   196 (~0%)|    -|
+    |  o loop_row_axi2mat                                                                          |       -|   7.30|  8303040|  8.303e+07|      3844|        -|  2160|        no|         -|        -|          -|           -|    -|
+    |   + axis2xfMat_24_9_2160_3840_1_Pipeline_loop_col_zxi2mat                                    |       -|   3.24|     3842|  3.842e+04|         -|     3842|     -|        no|         -|        -|   39 (~0%)|    90 (~0%)|    -|
+    |    o loop_col_zxi2mat                                                                        |       -|   7.30|     3840|  3.840e+04|         2|        1|  3840|       yes|         -|        -|          -|           -|    -|
+    | + resize_1_9_2160_3840_2160_3840_1_9_s                                                       |  Timing|  -0.36|  8369116|  8.369e+07|         -|  8369116|     -|        no|  36 (12%)|  14 (6%)|  4858 (4%)|   4401 (8%)|    -|
+    |  + resizeNNBilinear_9_2160_3840_1_2160_3840_1_9_s                                            |  Timing|  -0.36|  8369115|  8.369e+07|         -|  8369115|     -|        no|  36 (12%)|  14 (6%)|  4789 (4%)|   4313 (8%)|    -|
+    |   + xfUDivResize                                                                             |       -|   2.23|       68|    680.000|         -|       68|     -|        no|         -|        -|  911 (~0%)|    791 (1%)|    -|
+    |   + resizeNNBilinear_9_2160_3840_1_2160_3840_1_9_Pipeline_VITIS_LOOP_337_1_VITIS_LOOP_342_2  |       -|   0.41|     7682|  7.682e+04|         -|     7682|     -|        no|         -|        -|  104 (~0%)|   235 (~0%)|    -|
+    |    o VITIS_LOOP_337_1_VITIS_LOOP_342_2                                                       |       -|   7.30|     7680|  7.680e+04|         2|        1|  7680|       yes|         -|        -|          -|           -|    -|
+    |   o VITIS_LOOP_387_4                                                                         |       -|   7.30|  8361360|  8.361e+07|      3871|        -|  2160|        no|         -|        -|          -|           -|    -|
+    |    + scaleCompute_17_42_20_48_16_1_s                                                         |      II|   1.64|        5|     50.000|         -|        1|     -|       yes|         -|   4 (1%)|  525 (~0%)|   219 (~0%)|    -|
+    |    + resizeNNBilinear_9_2160_3840_1_2160_3840_1_9_Pipeline_VITIS_LOOP_394_5                  |  Timing|  -0.36|     3858|  3.858e+04|         -|     3858|     -|        no|   12 (4%)|  10 (4%)|  2240 (2%)|   1571 (2%)|    -|
+    |     o VITIS_LOOP_394_5                                                                       |       -|   7.30|     3856|  3.856e+04|        18|        1|  3840|       yes|         -|        -|          -|           -|    -|
+    |      + scaleCompute_17_42_20_48_16_1_s                                                       |      II|   1.64|        5|     50.000|         -|        1|     -|       yes|         -|   4 (1%)|  525 (~0%)|   219 (~0%)|    -|
+    | + xfMat2axis_24_9_2160_3840_1_s                                                              |       -|   0.77|  8303042|  8.303e+07|         -|  8303042|     -|        no|         -|        -|  163 (~0%)|   310 (~0%)|    -|
+    |  o loop_row_mat2axi                                                                          |       -|   7.30|  8303040|  8.303e+07|      3844|        -|  2160|        no|         -|        -|          -|           -|    -|
+    |   + xfMat2axis_24_9_2160_3840_1_Pipeline_loop_col_mat2axi                                    |       -|   3.24|     3842|  3.842e+04|         -|     3842|     -|        no|         -|        -|   16 (~0%)|   110 (~0%)|    -|
+    |    o loop_col_mat2axi                                                                        |       -|   7.30|     3840|  3.840e+04|         2|        1|  3840|       yes|         -|        -|          -|           -|    -|
+    +----------------------------------------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+---------+-----------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 6             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                               |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                 |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN 5=CHAN2_INT_EN             |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST 5=CHAN2_INT_ST             |
+| s_axi_control | src_rows | 0x10   | 32    | W      | Data signal of src_rows          |                                                          |
+| s_axi_control | src_cols | 0x18   | 32    | W      | Data signal of src_cols          |                                                          |
+| s_axi_control | dst_rows | 0x20   | 32    | W      | Data signal of dst_rows          |                                                          |
+| s_axi_control | dst_cols | 0x28   | 32    | W      | Data signal of dst_cols          |                                                          |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------+
+
+* AXIS
++-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| Interface | Register Mode | TDATA | TDEST | TID | TKEEP | TLAST | TREADY | TSTRB | TUSER | TVALID |
++-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| dst       | both          | 24    | 1     | 1   | 3     | 1     | 1      | 3     | 1     | 1      |
+| src       | both          | 24    | 1     | 1   | 3     | 1     | 1      | 3     | 1     | 1      |
++-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+---------------------------------------------+
+| Argument | Direction | Datatype                                    |
++----------+-----------+---------------------------------------------+
+| src      | in        | stream<hls::axis<ap_uint<24>, 1, 1, 1>, 0>& |
+| dst      | out       | stream<hls::axis<ap_uint<24>, 1, 1, 1>, 0>& |
+| src_rows | in        | int                                         |
+| src_cols | in        | int                                         |
+| dst_rows | in        | int                                         |
+| dst_cols | in        | int                                         |
++----------+-----------+---------------------------------------------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+------------------------------------+
+| Argument | HW Interface  | HW Type   | HW Info                            |
++----------+---------------+-----------+------------------------------------+
+| src      | src           | interface |                                    |
+| dst      | dst           | interface |                                    |
+| src_rows | s_axi_control | register  | name=src_rows offset=0x10 range=32 |
+| src_cols | s_axi_control | register  | name=src_cols offset=0x18 range=32 |
+| dst_rows | s_axi_control | register  | name=dst_rows offset=0x20 range=32 |
+| dst_cols | s_axi_control | register  | name=dst_cols offset=0x28 range=32 |
++----------+---------------+-----------+------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------------------------------------------------------------+-----+--------+--------------------------+------+--------+---------+
+| Name                                                                                         | DSP | Pragma | Variable                 | Op   | Impl   | Latency |
++----------------------------------------------------------------------------------------------+-----+--------+--------------------------+------+--------+---------+
+| + resize_accel                                                                               | 14  |        |                          |      |        |         |
+|   src_mat_rows_c9_channel_U                                                                  | -   |        | src_mat_rows_c9_channel  | fifo | srl    | 0       |
+|   src_mat_cols_c10_channel_U                                                                 | -   |        | src_mat_cols_c10_channel | fifo | srl    | 0       |
+|   dst_mat_rows_c11_channel_U                                                                 | -   |        | dst_mat_rows_c11_channel | fifo | srl    | 0       |
+|   dst_mat_cols_c12_channel_U                                                                 | -   |        | dst_mat_cols_c12_channel | fifo | srl    | 0       |
+|  + axis2xfMat_24_9_2160_3840_1_s                                                             | 0   |        |                          |      |        |         |
+|    i_5_fu_140_p2                                                                             | -   |        | i_5                      | add  | fabric | 0       |
+|   + axis2xfMat_24_9_2160_3840_1_Pipeline_loop_col_zxi2mat                                    | 0   |        |                          |      |        |         |
+|     j_3_fu_107_p2                                                                            | -   |        | j_3                      | add  | fabric | 0       |
+|  + resize_1_9_2160_3840_2160_3840_1_9_s                                                      | 14  |        |                          |      |        |         |
+|   + resizeNNBilinear_9_2160_3840_1_2160_3840_1_9_s                                           | 14  |        |                          |      |        |         |
+|     sub272_fu_357_p2                                                                         | -   |        | sub272                   | add  | fabric | 0       |
+|     tmp_V_fu_362_p2                                                                          | -   |        | tmp_V                    | add  | fabric | 0       |
+|     i_op_assign_fu_370_p2                                                                    | -   |        | i_op_assign              | add  | fabric | 0       |
+|     sub_ln902_fu_415_p2                                                                      | -   |        | sub_ln902                | sub  | fabric | 0       |
+|     i_3_fu_428_p2                                                                            | -   |        | i_3                      | add  | fabric | 0       |
+|     op2_assign_fu_557_p2                                                                     | -   |        | op2_assign               | add  | fabric | 0       |
+|     op2_assign_1_fu_573_p2                                                                   | -   |        | op2_assign_1             | add  | fabric | 0       |
+|     p_Val2_s_fu_469_p2                                                                       | -   |        | p_Val2_s                 | add  | fabric | 0       |
+|     add_i_i_i_i_i286_i_fu_499_p2                                                             | -   |        | add_i_i_i_i_i286_i       | add  | fabric | 0       |
+|     add_ln516_fu_642_p2                                                                      | -   |        | add_ln516                | add  | fabric | 0       |
+|     first_row_index_fu_606_p2                                                                | -   |        | first_row_index          | add  | fabric | 0       |
+|     read_rows_count_1_fu_681_p2                                                              | -   |        | read_rows_count_1        | add  | fabric | 0       |
+|    + resizeNNBilinear_9_2160_3840_1_2160_3840_1_9_Pipeline_VITIS_LOOP_337_1_VITIS_LOOP_342_2 | 0   |        |                          |      |        |         |
+|      add_ln337_fu_135_p2                                                                     | -   |        | add_ln337                | add  | fabric | 0       |
+|      add_ln337_1_fu_160_p2                                                                   | -   |        | add_ln337_1              | add  | fabric | 0       |
+|      add_ln342_fu_193_p2                                                                     | -   |        | add_ln342                | add  | fabric | 0       |
+|     + scaleCompute_17_42_20_48_16_1_s                                                        | 4   |        |                          |      |        |         |
+|       mul_48ns_42s_74_5_0_U42                                                                | 4   |        | r_V_1                    | mul  | auto   | 4       |
+|       ret_V_fu_66_p2                                                                         | -   |        | ret_V                    | add  | fabric | 0       |
+|    + resizeNNBilinear_9_2160_3840_1_2160_3840_1_9_Pipeline_VITIS_LOOP_394_5                  | 10  |        |                          |      |        |         |
+|      add_ln394_fu_618_p2                                                                     | -   |        | add_ln394                | add  | fabric | 0       |
+|      ret_V_fu_644_p2                                                                         | -   |        | ret_V                    | add  | fabric | 0       |
+|      ret_V_4_fu_901_p2                                                                       | -   |        | ret_V_4                  | sub  | fabric | 0       |
+|      ret_V_5_fu_800_p2                                                                       | -   |        | ret_V_5                  | add  | fabric | 0       |
+|      ret_V_7_fu_838_p2                                                                       | -   |        | ret_V_7                  | sub  | fabric | 0       |
+|      idx_nxt_fu_869_p2                                                                       | -   |        | idx_nxt                  | add  | fabric | 0       |
+|      mul_mul_12ns_12ns_24_4_1_U46                                                            | 1   |        | r_V                      | mul  | dsp    | 3       |
+|      sub_ln70_fu_973_p2                                                                      | -   |        | sub_ln70                 | sub  | fabric | 0       |
+|      sub_ln70_1_fu_983_p2                                                                    | -   |        | sub_ln70_1               | add  | tadder | 0       |
+|      val0_V_fu_989_p2                                                                        | -   |        | val0_V                   | add  | tadder | 0       |
+|      val1_V_fu_995_p2                                                                        | -   |        | val1_V                   | sub  | fabric | 0       |
+|      val2_V_fu_1001_p2                                                                       | -   |        | val2_V                   | sub  | fabric | 0       |
+|      mac_muladd_12ns_10s_22s_23_4_1_U53                                                      | 1   |        | r_V_11                   | mul  | dsp    | 3       |
+|      mul_mul_12ns_9s_21_4_1_U47                                                              | 1   |        | r_V_12                   | mul  | dsp    | 3       |
+|      mac_muladd_12ns_9s_21s_22_4_1_U50                                                       | 1   |        | r_V_13                   | mul  | dsp    | 3       |
+|      mac_muladd_12ns_9s_21s_22_4_1_U50                                                       | 1   |        | add_ln1245               | add  | dsp    | 3       |
+|      mac_muladd_12ns_10s_22s_23_4_1_U53                                                      | 1   |        | ret_V_21                 | add  | dsp    | 3       |
+|      ret_V_9_fu_1276_p2                                                                      | -   |        | ret_V_9                  | add  | fabric | 0       |
+|      ret_V_10_fu_1389_p2                                                                     | -   |        | ret_V_10                 | add  | fabric | 0       |
+|      sub_ln70_4_fu_1074_p2                                                                   | -   |        | sub_ln70_4               | sub  | fabric | 0       |
+|      sub_ln70_5_fu_1084_p2                                                                   | -   |        | sub_ln70_5               | add  | tadder | 0       |
+|      val0_V_1_fu_1090_p2                                                                     | -   |        | val0_V_1                 | add  | tadder | 0       |
+|      val1_V_1_fu_1096_p2                                                                     | -   |        | val1_V_1                 | sub  | fabric | 0       |
+|      val2_V_1_fu_1102_p2                                                                     | -   |        | val2_V_1                 | sub  | fabric | 0       |
+|      mac_muladd_12ns_10s_22s_23_4_1_U54                                                      | 1   |        | r_V_14                   | mul  | dsp    | 3       |
+|      mul_mul_12ns_9s_21_4_1_U48                                                              | 1   |        | r_V_15                   | mul  | dsp    | 3       |
+|      mac_muladd_12ns_9s_21s_22_4_1_U51                                                       | 1   |        | r_V_16                   | mul  | dsp    | 3       |
+|      mac_muladd_12ns_9s_21s_22_4_1_U51                                                       | 1   |        | add_ln1245_3             | add  | dsp    | 3       |
+|      mac_muladd_12ns_10s_22s_23_4_1_U54                                                      | 1   |        | ret_V_22                 | add  | dsp    | 3       |
+|      ret_V_13_fu_1316_p2                                                                     | -   |        | ret_V_13                 | add  | fabric | 0       |
+|      ret_V_14_fu_1414_p2                                                                     | -   |        | ret_V_14                 | add  | fabric | 0       |
+|      sub_ln70_8_fu_1172_p2                                                                   | -   |        | sub_ln70_8               | sub  | fabric | 0       |
+|      sub_ln70_9_fu_1182_p2                                                                   | -   |        | sub_ln70_9               | add  | tadder | 0       |
+|      val0_V_2_fu_1188_p2                                                                     | -   |        | val0_V_2                 | add  | tadder | 0       |
+|      val1_V_2_fu_1194_p2                                                                     | -   |        | val1_V_2                 | sub  | fabric | 0       |
+|      val2_V_2_fu_1200_p2                                                                     | -   |        | val2_V_2                 | sub  | fabric | 0       |
+|      mac_muladd_12ns_10s_22s_23_4_1_U55                                                      | 1   |        | r_V_17                   | mul  | dsp    | 3       |
+|      mul_mul_12ns_9s_21_4_1_U49                                                              | 1   |        | r_V_18                   | mul  | dsp    | 3       |
+|      mac_muladd_12ns_9s_21s_22_4_1_U52                                                       | 1   |        | r_V_19                   | mul  | dsp    | 3       |
+|      mac_muladd_12ns_9s_21s_22_4_1_U52                                                       | 1   |        | add_ln1245_6             | add  | dsp    | 3       |
+|      mac_muladd_12ns_10s_22s_23_4_1_U55                                                      | 1   |        | ret_V_23                 | add  | dsp    | 3       |
+|      ret_V_17_fu_1356_p2                                                                     | -   |        | ret_V_17                 | add  | fabric | 0       |
+|      ret_V_18_fu_1439_p2                                                                     | -   |        | ret_V_18                 | add  | fabric | 0       |
+|     + scaleCompute_17_42_20_48_16_1_s                                                        | 4   |        |                          |      |        |         |
+|       mul_48ns_42s_74_5_0_U42                                                                | 4   |        | r_V_1                    | mul  | auto   | 4       |
+|       ret_V_fu_66_p2                                                                         | -   |        | ret_V                    | add  | fabric | 0       |
+|  + xfMat2axis_24_9_2160_3840_1_s                                                             | 0   |        |                          |      |        |         |
+|    sub_fu_105_p2                                                                             | -   |        | sub                      | add  | fabric | 0       |
+|    sub9_fu_111_p2                                                                            | -   |        | sub9                     | add  | fabric | 0       |
+|    i_2_fu_134_p2                                                                             | -   |        | i_2                      | add  | fabric | 0       |
+|   + xfMat2axis_24_9_2160_3840_1_Pipeline_loop_col_mat2axi                                    | 0   |        |                          |      |        |         |
+|     j_2_fu_143_p2                                                                            | -   |        | j_2                      | add  | fabric | 0       |
++----------------------------------------------------------------------------------------------+-----+--------+--------------------------+------+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++-----------------------------------------------------------------------------+------+------+--------+-----------------+---------+------+---------+
+| Name                                                                        | BRAM | URAM | Pragma | Variable        | Storage | Impl | Latency |
++-----------------------------------------------------------------------------+------+------+--------+-----------------+---------+------+---------+
+| + resize_accel                                                              | 36   | 0    |        |                 |         |      |         |
+|   dst_mat_cols_c_U                                                          | -    | -    |        | dst_mat_cols_c  | fifo    | srl  | 0       |
+|   dst_mat_rows_c_U                                                          | -    | -    |        | dst_mat_rows_c  | fifo    | srl  | 0       |
+|   src_mat_cols_c_U                                                          | -    | -    |        | src_mat_cols_c  | fifo    | srl  | 0       |
+|   src_mat_rows_c_U                                                          | -    | -    |        | src_mat_rows_c  | fifo    | srl  | 0       |
+|   src_mat_data_U                                                            | -    | -    |        | src_mat_data    | fifo    | srl  | 0       |
+|   dst_mat_data_U                                                            | -    | -    |        | dst_mat_data    | fifo    | srl  | 0       |
+|  + resize_1_9_2160_3840_2160_3840_1_9_s                                     | 36   | 0    |        |                 |         |      |         |
+|   + resizeNNBilinear_9_2160_3840_1_2160_3840_1_9_s                          | 36   | 0    |        |                 |         |      |         |
+|     line_buffer_V_U                                                         | 12   | -    |        | line_buffer_V   | rom_np  | auto | 1       |
+|     line_buffer_V_1_U                                                       | 12   | -    |        | line_buffer_V_1 | rom_np  | auto | 1       |
+|    + resizeNNBilinear_9_2160_3840_1_2160_3840_1_9_Pipeline_VITIS_LOOP_394_5 | 12   | 0    |        |                 |         |      |         |
+|      line_buffer_V_2_U                                                      | 12   | -    |        | line_buffer_V_2 | rom_np  | auto | 1       |
++-----------------------------------------------------------------------------+------+------+--------+-----------------+---------+------+---------+
+
+
+================================================================
+== User Pragma Report
+================================================================
+* Pragmas with Warnings
++---------------+------------------------------------------+-----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
+| Type          | Options                                  | Location                                                                                      | Messages                                                                   |
++---------------+------------------------------------------+-----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
+| resource      | variable=val core=RAM_1P_BRAM            | include/need/xf_video_mem.hpp:711 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead |
+| resource      | variable=val core=RAM_1P_URAM            | include/need/xf_video_mem.hpp:716 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead |
+| resource      | variable=val core=RAM_2P_BRAM            | include/need/xf_video_mem.hpp:721 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead |
+| resource      | variable=val core=RAM_2P_URAM            | include/need/xf_video_mem.hpp:726 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead |
+| resource      | variable=val core=RAM_S2P_BRAM           | include/need/xf_video_mem.hpp:731 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead |
+| resource      | variable=val core=RAM_S2P_URAM           | include/need/xf_video_mem.hpp:736 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead |
+| resource      | variable=val core=RAM_T2P_BRAM           | include/need/xf_video_mem.hpp:741 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead |
+| resource      | variable=val core=RAM_T2P_URAM           | include/need/xf_video_mem.hpp:746 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead |
+| array_reshape | variable=val factor=RESHAPE_FACTOR dim=1 | include/need/xf_video_mem.hpp:759 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val | 'factor' in '#pragma HLS array_reshape' is ignored                         |
++---------------+------------------------------------------+-----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------------+----------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+
+| Type            | Options                                                                                                                          | Location                                                                                      |
++-----------------+----------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+
+| loop_flatten    | off                                                                                                                              | include/need/org_xf_resize_accel_stream.cpp:48 in axis2xfmat                                  |
+| pipeline        | II=1                                                                                                                             | include/need/org_xf_resize_accel_stream.cpp:49 in axis2xfmat                                  |
+| loop_flatten    | off                                                                                                                              | include/need/org_xf_resize_accel_stream.cpp:73 in xfmat2axis                                  |
+| pipeline        | II = 1                                                                                                                           | include/need/org_xf_resize_accel_stream.cpp:74 in xfmat2axis                                  |
+| interface       | axis register both port=src                                                                                                      | include/need/org_xf_resize_accel_stream.cpp:97 in resize_accel, src                           |
+| interface       | axis register both port=dst                                                                                                      | include/need/org_xf_resize_accel_stream.cpp:98 in resize_accel, dst                           |
+| interface       | s_axilite port=src_rows                                                                                                          | include/need/org_xf_resize_accel_stream.cpp:100 in resize_accel, src_rows                     |
+| interface       | s_axilite port=src_cols                                                                                                          | include/need/org_xf_resize_accel_stream.cpp:101 in resize_accel, src_cols                     |
+| interface       | s_axilite port=dst_rows                                                                                                          | include/need/org_xf_resize_accel_stream.cpp:102 in resize_accel, dst_rows                     |
+| interface       | s_axilite port=dst_cols                                                                                                          | include/need/org_xf_resize_accel_stream.cpp:103 in resize_accel, dst_cols                     |
+| interface       | s_axilite port=return                                                                                                            | include/need/org_xf_resize_accel_stream.cpp:104 in resize_accel, return                       |
+| dataflow        |                                                                                                                                  | include/need/org_xf_resize_accel_stream.cpp:109 in resize_accel                               |
+| inline          |                                                                                                                                  | include/need/xf_axi_io.hpp:28 in axigetbitfields                                              |
+| inline          |                                                                                                                                  | include/need/xf_axi_io.hpp:37 in axigetbitfields                                              |
+| inline          |                                                                                                                                  | include/need/xf_axi_io.hpp:47 in axigetbitfields                                              |
+| inline          |                                                                                                                                  | include/need/xf_axi_io.hpp:57 in axigetbitfields                                              |
+| inline          |                                                                                                                                  | include/need/xf_axi_io.hpp:65 in axisetbitfields                                              |
+| inline          |                                                                                                                                  | include/need/xf_axi_io.hpp:74 in axisetbitfields                                              |
+| inline          |                                                                                                                                  | include/need/xf_axi_io.hpp:84 in axisetbitfields                                              |
+| inline          |                                                                                                                                  | include/need/xf_axi_io.hpp:94 in axisetbitfields                                              |
+| inline          |                                                                                                                                  | include/need/xf_infra.hpp:39 in write                                                         |
+| inline          |                                                                                                                                  | include/need/xf_infra.hpp:50 in fetchingmatdata                                               |
+| inline          |                                                                                                                                  | include/need/xf_infra.hpp:59 in read                                                          |
+| inline          |                                                                                                                                  | include/need/xf_infra.hpp:73 in fillingdata                                                   |
+| pipeline        | II=1                                                                                                                             | include/need/xf_infra.hpp:119 in axivideo2xfmat                                               |
+| loop_tripcount  | avg=1 max=1                                                                                                                      | include/need/xf_infra.hpp:120 in axivideo2xfmat                                               |
+| loop_flatten    | off                                                                                                                              | include/need/xf_infra.hpp:134 in axivideo2xfmat                                               |
+| pipeline        | II=1                                                                                                                             | include/need/xf_infra.hpp:135 in axivideo2xfmat                                               |
+| pipeline        | II=1                                                                                                                             | include/need/xf_infra.hpp:160 in axivideo2xfmat                                               |
+| loop_tripcount  | avg=1 max=1                                                                                                                      | include/need/xf_infra.hpp:161 in axivideo2xfmat                                               |
+| loop_flatten    | off                                                                                                                              | include/need/xf_infra.hpp:200 in xfmat2axivideo                                               |
+| pipeline        | II = 1                                                                                                                           | include/need/xf_infra.hpp:201 in xfmat2axivideo                                               |
+| loop_tripcount  | min=4 max=4 avg=4                                                                                                                | include/need/xf_math.h:2884 in inverse32                                                      |
+| pipeline        |                                                                                                                                  | include/need/xf_math.h:2885 in inverse32                                                      |
+| loop_tripcount  | min=4 max=4 avg=4                                                                                                                | include/need/xf_math.h:2898 in inverse32                                                      |
+| pipeline        |                                                                                                                                  | include/need/xf_math.h:2899 in inverse32                                                      |
+| loop_tripcount  | min=4 max=4 avg=4                                                                                                                | include/need/xf_math.h:2912 in inverse32                                                      |
+| pipeline        |                                                                                                                                  | include/need/xf_math.h:2913 in inverse32                                                      |
+| loop_tripcount  | min=4 max=4 avg=4                                                                                                                | include/need/xf_math.h:2926 in inverse32                                                      |
+| pipeline        |                                                                                                                                  | include/need/xf_math.h:2927 in inverse32                                                      |
+| inline          | off                                                                                                                              | include/need/xf_math.h:2952 in inverse                                                        |
+| loop_tripcount  | min=24 max=24                                                                                                                    | include/need/xf_math.h:3017 in identifysignbits                                               |
+| pipeline        |                                                                                                                                  | include/need/xf_math.h:3018 in identifysignbits                                               |
+| pipeline        |                                                                                                                                  | include/need/xf_math.h:3349 in sqrt                                                           |
+| inline          | OFF                                                                                                                              | include/need/xf_resize.hpp:38 in resize                                                       |
+| inline          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:58 in flag_index_generator                               |
+| unroll          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:110 in flag_index_generator                              |
+| unroll          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:114 in flag_index_generator                              |
+| unroll          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:227 in flag_index_generator                              |
+| unroll          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:231 in flag_index_generator                              |
+| array_partition | variable=in1 complete dim=1                                                                                                      | include/need/xf_resize_down_area.hpp:252 in treeadder, in1                                    |
+| inline          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:253 in treeadder                                         |
+| unroll          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:264 in treeadder                                         |
+| unroll          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:273 in treeadder                                         |
+| unroll          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:282 in treeadder                                         |
+| unroll          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:291 in treeadder                                         |
+| unroll          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:321 in processblock                                      |
+| unroll          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:364 in coreprocessdownarea                               |
+| unroll          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:368 in coreprocessdownarea                               |
+| unroll          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:380 in coreprocessdownarea                               |
+| unroll          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:384 in coreprocessdownarea                               |
+| inline          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:430 in update_output_buffer                              |
+| unroll          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:442 in update_output_buffer                              |
+| unroll          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:447 in update_output_buffer                              |
+| unroll          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:455 in update_output_buffer                              |
+| unroll          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:509 in update_output_buffer                              |
+| unroll          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:513 in update_output_buffer                              |
+| array_partition | variable=Xindex_output complete dim=0                                                                                            | include/need/xf_resize_down_area.hpp:583 in xfresizeareadownscale, Xindex_output              |
+| array_partition | variable=Xindex_output_initial complete dim=0                                                                                    | include/need/xf_resize_down_area.hpp:587 in xfresizeareadownscale, Xindex_output_initial      |
+| array_partition | variable=inflag_TA_prev complete dim=0                                                                                           | include/need/xf_resize_down_area.hpp:595 in xfresizeareadownscale, inflag_TA_prev             |
+| pipeline        |                                                                                                                                  | include/need/xf_resize_down_area.hpp:599 in xfresizeareadownscale                             |
+| array_partition | variable=ouput_buffer complete dim=1                                                                                             | include/need/xf_resize_down_area.hpp:632 in xfresizeareadownscale, ouput_buffer               |
+| array_partition | variable=ouput_buffer complete dim=2                                                                                             | include/need/xf_resize_down_area.hpp:633 in xfresizeareadownscale, ouput_buffer               |
+| array_partition | variable=accum_reg complete dim=0                                                                                                | include/need/xf_resize_down_area.hpp:638 in xfresizeareadownscale, accum_reg                  |
+| array_partition | variable=accum_reg_overlap complete dim=0                                                                                        | include/need/xf_resize_down_area.hpp:642 in xfresizeareadownscale, accum_reg_overlap          |
+| unroll          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:646 in xfresizeareadownscale                             |
+| unroll          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:647 in xfresizeareadownscale                             |
+| unroll          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:651 in xfresizeareadownscale                             |
+| pipeline        |                                                                                                                                  | include/need/xf_resize_down_area.hpp:660 in xfresizeareadownscale                             |
+| unroll          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:664 in xfresizeareadownscale                             |
+| unroll          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:668 in xfresizeareadownscale                             |
+| loop_tripcount  | min=1 max=SRC_ROWS                                                                                                               | include/need/xf_resize_down_area.hpp:688 in xfresizeareadownscale                             |
+| loop_tripcount  | min=1 max=SRC_TC                                                                                                                 | include/need/xf_resize_down_area.hpp:694 in xfresizeareadownscale                             |
+| pipeline        |                                                                                                                                  | include/need/xf_resize_down_area.hpp:695 in xfresizeareadownscale                             |
+| dependence      | variable=ouput_buffer inter false                                                                                                | include/need/xf_resize_down_area.hpp:696 in xfresizeareadownscale, ouput_buffer               |
+| unroll          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:701 in xfresizeareadownscale                             |
+| array_partition | variable=output_buffer_index complete dim=0                                                                                      | include/need/xf_resize_down_area.hpp:726 in xfresizeareadownscale, output_buffer_index        |
+| array_partition | variable=inflag_TA complete dim=0                                                                                                | include/need/xf_resize_down_area.hpp:731 in xfresizeareadownscale, inflag_TA                  |
+| array_partition | variable=Wx complete dim=0                                                                                                       | include/need/xf_resize_down_area.hpp:737 in xfresizeareadownscale, Wx                         |
+| array_partition | variable=PB_out complete dim=0                                                                                                   | include/need/xf_resize_down_area.hpp:769 in xfresizeareadownscale, PB_out                     |
+| array_partition | variable=PB_out_overlap complete dim=0                                                                                           | include/need/xf_resize_down_area.hpp:773 in xfresizeareadownscale, PB_out_overlap             |
+| array_partition | variable=DDR_write_data complete dim=0                                                                                           | include/need/xf_resize_down_area.hpp:787 in xfresizeareadownscale, DDR_write_data             |
+| unroll          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:799 in xfresizeareadownscale                             |
+| unroll          |                                                                                                                                  | include/need/xf_resize_down_area.hpp:803 in xfresizeareadownscale                             |
+| inline          |                                                                                                                                  | include/need/xf_resize_nn_bilinear.hpp:37 in interpolatepixel                                 |
+| inline          |                                                                                                                                  | include/need/xf_resize_nn_bilinear.hpp:79 in computeoutputpixel                               |
+| array_partition | variable=unpackX1 complete dim=1                                                                                                 | include/need/xf_resize_nn_bilinear.hpp:92 in computeoutputpixel, unpackX1                     |
+| array_partition | variable=unpackX2 complete dim=1                                                                                                 | include/need/xf_resize_nn_bilinear.hpp:96 in computeoutputpixel, unpackX2                     |
+| array_partition | variable=outputPixel complete dim=1                                                                                              | include/need/xf_resize_nn_bilinear.hpp:100 in computeoutputpixel, outputPixel                 |
+| unroll          |                                                                                                                                  | include/need/xf_resize_nn_bilinear.hpp:104 in computeoutputpixel                              |
+| unroll          |                                                                                                                                  | include/need/xf_resize_nn_bilinear.hpp:108 in computeoutputpixel                              |
+| unroll          |                                                                                                                                  | include/need/xf_resize_nn_bilinear.hpp:120 in computeoutputpixel                              |
+| unroll          |                                                                                                                                  | include/need/xf_resize_nn_bilinear.hpp:125 in computeoutputpixel                              |
+| array_partition | variable=unpackX1temp complete dim=1                                                                                             | include/need/xf_resize_nn_bilinear.hpp:129 in computeoutputpixel, unpackX1temp                |
+| array_partition | variable=unpackX2temp complete dim=1                                                                                             | include/need/xf_resize_nn_bilinear.hpp:133 in computeoutputpixel, unpackX2temp                |
+| unroll          |                                                                                                                                  | include/need/xf_resize_nn_bilinear.hpp:137 in computeoutputpixel                              |
+| unroll          |                                                                                                                                  | include/need/xf_resize_nn_bilinear.hpp:155 in computeoutputpixel                              |
+| inline          | OFF                                                                                                                              | include/need/xf_resize_nn_bilinear.hpp:163 in xfudivresize                                    |
+| inline          |                                                                                                                                  | include/need/xf_resize_nn_bilinear.hpp:173 in scalemult                                       |
+| pipeline        |                                                                                                                                  | include/need/xf_resize_nn_bilinear.hpp:177 in scalemult                                       |
+| allocation      | function instances=scaleCompute<INDEX_INT, COMP_INDEX_WIDTH, COMP_INDEX_INT, SCALE_WIDTH, SCALE_INT, INTERPOLATION_TYPE> limit=1 | include/need/xf_resize_nn_bilinear.hpp:310 in resizennbilinear                                |
+| allocation      | function instances=xfUDivResize limit=1                                                                                          | include/need/xf_resize_nn_bilinear.hpp:311 in resizennbilinear                                |
+| array_partition | variable=scaleXParallel complete dim=1                                                                                           | include/need/xf_resize_nn_bilinear.hpp:325 in resizennbilinear, scaleXParallel                |
+| array_partition | variable=line_buffer complete dim=1                                                                                              | include/need/xf_resize_nn_bilinear.hpp:331 in resizennbilinear, line_buffer                   |
+| array_partition | variable=line_buffer complete dim=2                                                                                              | include/need/xf_resize_nn_bilinear.hpp:332 in resizennbilinear, line_buffer                   |
+| loop_tripcount  | min=1 max=2                                                                                                                      | include/need/xf_resize_nn_bilinear.hpp:340 in resizennbilinear                                |
+| pipeline        |                                                                                                                                  | include/need/xf_resize_nn_bilinear.hpp:344 in resizennbilinear                                |
+| loop_tripcount  | min=1 max=INWIDTH/NPPC                                                                                                           | include/need/xf_resize_nn_bilinear.hpp:345 in resizennbilinear                                |
+| array_partition | variable=indexx complete dim=1                                                                                                   | include/need/xf_resize_nn_bilinear.hpp:366 in resizennbilinear, indexx                        |
+| array_partition | variable=WeightX complete dim=1                                                                                                  | include/need/xf_resize_nn_bilinear.hpp:372 in resizennbilinear, WeightX                       |
+| array_partition | variable=P0Buf complete dim=1                                                                                                    | include/need/xf_resize_nn_bilinear.hpp:377 in resizennbilinear, P0Buf                         |
+| array_partition | variable=P1Buf complete dim=1                                                                                                    | include/need/xf_resize_nn_bilinear.hpp:381 in resizennbilinear, P1Buf                         |
+| loop_tripcount  | min=1 max=LOOPCOUNTROW                                                                                                           | include/need/xf_resize_nn_bilinear.hpp:389 in resizennbilinear                                |
+| pipeline        |                                                                                                                                  | include/need/xf_resize_nn_bilinear.hpp:396 in resizennbilinear                                |
+| loop_tripcount  | min=1 max=LOOPCOUNTCOL/NPPC                                                                                                      | include/need/xf_resize_nn_bilinear.hpp:397 in resizennbilinear                                |
+| unroll          |                                                                                                                                  | include/need/xf_resize_nn_bilinear.hpp:430 in resizennbilinear                                |
+| unroll          |                                                                                                                                  | include/need/xf_resize_nn_bilinear.hpp:443 in resizennbilinear                                |
+| unroll          |                                                                                                                                  | include/need/xf_resize_nn_bilinear.hpp:451 in resizennbilinear                                |
+| unroll          |                                                                                                                                  | include/need/xf_resize_nn_bilinear.hpp:464 in resizennbilinear                                |
+| unroll          |                                                                                                                                  | include/need/xf_resize_nn_bilinear.hpp:472 in resizennbilinear                                |
+| unroll          |                                                                                                                                  | include/need/xf_resize_nn_bilinear.hpp:485 in resizennbilinear                                |
+| unroll          |                                                                                                                                  | include/need/xf_resize_nn_bilinear.hpp:498 in resizennbilinear                                |
+| pipeline        |                                                                                                                                  | include/need/xf_resize_up_area.hpp:36 in coreprocessuparea                                    |
+| array_partition | variable=D0 dim=1                                                                                                                | include/need/xf_resize_up_area.hpp:68 in processblockareaup, D0                               |
+| array_partition | variable=D1 dim=1                                                                                                                | include/need/xf_resize_up_area.hpp:69 in processblockareaup, D1                               |
+| inline          |                                                                                                                                  | include/need/xf_resize_up_area.hpp:70 in processblockareaup                                   |
+| array_partition | variable=line0 complete dim=1                                                                                                    | include/need/xf_resize_up_area.hpp:75 in processblockareaup, line0                            |
+| array_partition | variable=line1 complete dim=1                                                                                                    | include/need/xf_resize_up_area.hpp:76 in processblockareaup, line1                            |
+| array_partition | variable=line0_0 complete dim=1                                                                                                  | include/need/xf_resize_up_area.hpp:90 in processblockareaup, line0_0                          |
+| array_partition | variable=line0_1 complete dim=1                                                                                                  | include/need/xf_resize_up_area.hpp:91 in processblockareaup, line0_1                          |
+| array_partition | variable=line1_0 complete dim=1                                                                                                  | include/need/xf_resize_up_area.hpp:96 in processblockareaup, line1_0                          |
+| array_partition | variable=line1_1 complete dim=1                                                                                                  | include/need/xf_resize_up_area.hpp:97 in processblockareaup, line1_1                          |
+| unroll          |                                                                                                                                  | include/need/xf_resize_up_area.hpp:107 in processblockareaup                                  |
+| unroll          |                                                                                                                                  | include/need/xf_resize_up_area.hpp:123 in processblockareaup                                  |
+| inline          | OFF                                                                                                                              | include/need/xf_resize_up_area.hpp:152 in xfudivareaup                                        |
+| array_partition | variable=Hoffset cyclic factor=8 dim=1                                                                                           | include/need/xf_resize_up_area.hpp:182 in xfresizeareaupscale, Hoffset                        |
+| array_partition | variable=Hweight cyclic factor=8 dim=1                                                                                           | include/need/xf_resize_up_area.hpp:183 in xfresizeareaupscale, Hweight                        |
+| array_partition | variable=Hoffset cyclic factor=4 dim=1                                                                                           | include/need/xf_resize_up_area.hpp:187 in xfresizeareaupscale, Hoffset                        |
+| array_partition | variable=Hweight cyclic factor=4 dim=1                                                                                           | include/need/xf_resize_up_area.hpp:188 in xfresizeareaupscale, Hweight                        |
+| array_partition | variable=Hoffset cyclic factor=2 dim=1                                                                                           | include/need/xf_resize_up_area.hpp:192 in xfresizeareaupscale, Hoffset                        |
+| array_partition | variable=Hweight cyclic factor=2 dim=1                                                                                           | include/need/xf_resize_up_area.hpp:193 in xfresizeareaupscale, Hweight                        |
+| array_partition | variable=D0 dim=1                                                                                                                | include/need/xf_resize_up_area.hpp:217 in xfresizeareaupscale, D0                             |
+| array_partition | variable=D1 dim=1                                                                                                                | include/need/xf_resize_up_area.hpp:218 in xfresizeareaupscale, D1                             |
+| allocation      | function instances=xFUDivAreaUp limit=1                                                                                          | include/need/xf_resize_up_area.hpp:227 in xfresizeareaupscale                                 |
+| pipeline        |                                                                                                                                  | include/need/xf_resize_up_area.hpp:242 in xfresizeareaupscale                                 |
+| loop_tripcount  | min=1 max=DST_COLS                                                                                                               | include/need/xf_resize_up_area.hpp:243 in xfresizeareaupscale                                 |
+| pipeline        |                                                                                                                                  | include/need/xf_resize_up_area.hpp:267 in xfresizeareaupscale                                 |
+| loop_tripcount  | min=1 max=DST_ROWS                                                                                                               | include/need/xf_resize_up_area.hpp:268 in xfresizeareaupscale                                 |
+| pipeline        |                                                                                                                                  | include/need/xf_resize_up_area.hpp:294 in xfresizeareaupscale                                 |
+| loop_tripcount  | min=1 max = SRC_TC                                                                                                               | include/need/xf_resize_up_area.hpp:295 in xfresizeareaupscale                                 |
+| pipeline        |                                                                                                                                  | include/need/xf_resize_up_area.hpp:304 in xfresizeareaupscale                                 |
+| loop_tripcount  | min=1 max = SRC_TC                                                                                                               | include/need/xf_resize_up_area.hpp:305 in xfresizeareaupscale                                 |
+| loop_tripcount  | min=1 max = DST_ROWS                                                                                                             | include/need/xf_resize_up_area.hpp:316 in xfresizeareaupscale                                 |
+| pipeline        |                                                                                                                                  | include/need/xf_resize_up_area.hpp:360 in xfresizeareaupscale                                 |
+| loop_flatten    | OFF                                                                                                                              | include/need/xf_resize_up_area.hpp:361 in xfresizeareaupscale                                 |
+| loop_tripcount  | min=1 max=DST_TC avg=DST_TC                                                                                                      | include/need/xf_resize_up_area.hpp:362 in xfresizeareaupscale                                 |
+| unroll          |                                                                                                                                  | include/need/xf_resize_up_area.hpp:376 in xfresizeareaupscale                                 |
+| unroll          |                                                                                                                                  | include/need/xf_resize_up_area.hpp:390 in xfresizeareaupscale                                 |
+| unroll          |                                                                                                                                  | include/need/xf_resize_up_area.hpp:404 in xfresizeareaupscale                                 |
+| unroll          |                                                                                                                                  | include/need/xf_resize_up_area.hpp:418 in xfresizeareaupscale                                 |
+| inline          |                                                                                                                                  | include/need/xf_structs.hpp:245 in scalar<n, t>                                               |
+| array_partition | variable=val dim=1 complete                                                                                                      | include/need/xf_structs.hpp:246 in scalar<n, t>, val                                          |
+| inline          |                                                                                                                                  | include/need/xf_structs.hpp:252 in scalar<n, t>                                               |
+| array_partition | variable=val dim=1 complete                                                                                                      | include/need/xf_structs.hpp:253 in scalar<n, t>, val                                          |
+| array_partition | variable=val dim=1 complete                                                                                                      | include/need/xf_structs.hpp:260 in scalar<n, t>, val                                          |
+| inline          |                                                                                                                                  | include/need/xf_structs.hpp:261 in scalar<n, t>                                               |
+| array_partition | variable=val dim=1 complete                                                                                                      | include/need/xf_structs.hpp:269 in scalar<n, t>, val                                          |
+| inline          |                                                                                                                                  | include/need/xf_structs.hpp:270 in scalar<n, t>                                               |
+| array_partition | variable=val dim=1 complete                                                                                                      | include/need/xf_structs.hpp:279 in scalar<n, t>, val                                          |
+| inline          |                                                                                                                                  | include/need/xf_structs.hpp:280 in scalar<n, t>                                               |
+| inline          |                                                                                                                                  | include/need/xf_structs.hpp:305 in operator=                                                  |
+| unroll          |                                                                                                                                  | include/need/xf_structs.hpp:309 in operator=                                                  |
+| inline          |                                                                                                                                  | include/need/xf_structs.hpp:318 in operator+                                                  |
+| unroll          |                                                                                                                                  | include/need/xf_structs.hpp:323 in operator+                                                  |
+| inline          |                                                                                                                                  | include/need/xf_structs.hpp:333 in operator+                                                  |
+| unroll          |                                                                                                                                  | include/need/xf_structs.hpp:338 in operator+                                                  |
+| inline          |                                                                                                                                  | include/need/xf_structs.hpp:348 in operator-                                                  |
+| unroll          |                                                                                                                                  | include/need/xf_structs.hpp:353 in operator-                                                  |
+| inline          |                                                                                                                                  | include/need/xf_structs.hpp:363 in operator-                                                  |
+| unroll          |                                                                                                                                  | include/need/xf_structs.hpp:368 in operator-                                                  |
+| inline          |                                                                                                                                  | include/need/xf_structs.hpp:378 in operator*                                                  |
+| unroll          |                                                                                                                                  | include/need/xf_structs.hpp:383 in operator*                                                  |
+| inline          |                                                                                                                                  | include/need/xf_structs.hpp:393 in operator*                                                  |
+| unroll          |                                                                                                                                  | include/need/xf_structs.hpp:398 in operator*                                                  |
+| inline          |                                                                                                                                  | include/need/xf_structs.hpp:408 in operator/                                                  |
+| unroll          |                                                                                                                                  | include/need/xf_structs.hpp:413 in operator/                                                  |
+| inline          |                                                                                                                                  | include/need/xf_structs.hpp:423 in operator/                                                  |
+| unroll          |                                                                                                                                  | include/need/xf_structs.hpp:428 in operator/                                                  |
+| inline          |                                                                                                                                  | include/need/xf_structs.hpp:584 in type                                                       |
+| inline          |                                                                                                                                  | include/need/xf_structs.hpp:592 in depth                                                      |
+| inline          |                                                                                                                                  | include/need/xf_structs.hpp:599 in channels                                                   |
+| inline          |                                                                                                                                  | include/need/xf_structs.hpp:607 in init                                                       |
+| inline          |                                                                                                                                  | include/need/xf_structs.hpp:654 in mat<t, rows, cols, npc, xfcvdepth>                         |
+| inline          |                                                                                                                                  | include/need/xf_structs.hpp:663 in mat<t, rows, cols, npc, xfcvdepth>                         |
+| inline          |                                                                                                                                  | include/need/xf_structs.hpp:672 in mat<t, rows, cols, npc, xfcvdepth>                         |
+| inline          |                                                                                                                                  | include/need/xf_structs.hpp:681 in mat<t, rows, cols, npc, xfcvdepth>                         |
+| inline          |                                                                                                                                  | include/need/xf_structs.hpp:708 in copyto                                                     |
+| inline          |                                                                                                                                  | include/need/xf_structs.hpp:742 in copyfrom                                                   |
+| bind_op         | variable=mul_rows_cols op=mul impl=dsp latency=2                                                                                 | include/need/xf_structs.hpp:956 in addrbound, mul_rows_cols                                   |
+| loop_tripcount  | min=1 max=ADDRBOUND                                                                                                              | include/need/xf_structs.hpp:991 in axi2axistream                                              |
+| pipeline        |                                                                                                                                  | include/need/xf_structs.hpp:992 in axi2axistream                                              |
+| loop_tripcount  | min=1 max=ADDRBOUND                                                                                                              | include/need/xf_structs.hpp:1005 in axi2axistream                                             |
+| pipeline        |                                                                                                                                  | include/need/xf_structs.hpp:1006 in axi2axistream                                             |
+| loop_tripcount  | min=1 max=ROWS                                                                                                                   | include/need/xf_structs.hpp:1026 in axi2axistream                                             |
+| loop_tripcount  | min=1 max=COLS_ADDRBOUND                                                                                                         | include/need/xf_structs.hpp:1030 in axi2axistream                                             |
+| pipeline        | II=1                                                                                                                             | include/need/xf_structs.hpp:1031 in axi2axistream                                             |
+| loop_tripcount  | min=1 max=LOOPBOUND                                                                                                              | include/need/xf_structs.hpp:1064 in axistream2matstream                                       |
+| pipeline        |                                                                                                                                  | include/need/xf_structs.hpp:1065 in axistream2matstream                                       |
+| loop_tripcount  | min=1 max=LOOPBOUND                                                                                                              | include/need/xf_structs.hpp:1108 in matstream2mat                                             |
+| pipeline        |                                                                                                                                  | include/need/xf_structs.hpp:1109 in matstream2mat                                             |
+| dataflow        |                                                                                                                                  | include/need/xf_structs.hpp:1121 in axistream2mat                                             |
+| dataflow        |                                                                                                                                  | include/need/xf_structs.hpp:1134 in axistream2mat                                             |
+| dataflow        |                                                                                                                                  | include/need/xf_structs.hpp:1149 in axi2mat                                                   |
+| dataflow        |                                                                                                                                  | include/need/xf_structs.hpp:1172 in axi2mat                                                   |
+| dataflow        |                                                                                                                                  | include/need/xf_structs.hpp:1184 in axi2mat                                                   |
+| dataflow        |                                                                                                                                  | include/need/xf_structs.hpp:1207 in axi2mat                                                   |
+| loop_tripcount  | min=1 max=LOOPBOUND                                                                                                              | include/need/xf_structs.hpp:1281 in mat2matstream                                             |
+| pipeline        |                                                                                                                                  | include/need/xf_structs.hpp:1282 in mat2matstream                                             |
+| loop_tripcount  | min=1 max=ROWS                                                                                                                   | include/need/xf_structs.hpp:1311 in matstream2axistream                                       |
+| loop_tripcount  | min=1 max=COLS_BOUND_PER_NPC                                                                                                     | include/need/xf_structs.hpp:1316 in matstream2axistream                                       |
+| pipeline        |                                                                                                                                  | include/need/xf_structs.hpp:1317 in matstream2axistream                                       |
+| dataflow        |                                                                                                                                  | include/need/xf_structs.hpp:1359 in mat2axistream                                             |
+| dataflow        |                                                                                                                                  | include/need/xf_structs.hpp:1372 in mat2axistream                                             |
+| loop_tripcount  | min=1 max=ADDRBOUND                                                                                                              | include/need/xf_structs.hpp:1389 in axistream2axi                                             |
+| pipeline        |                                                                                                                                  | include/need/xf_structs.hpp:1390 in axistream2axi                                             |
+| loop_tripcount  | min=1 max=ADDRBOUND                                                                                                              | include/need/xf_structs.hpp:1404 in axistream2axi                                             |
+| pipeline        |                                                                                                                                  | include/need/xf_structs.hpp:1405 in axistream2axi                                             |
+| dataflow        |                                                                                                                                  | include/need/xf_structs.hpp:1419 in mat2axi                                                   |
+| dataflow        |                                                                                                                                  | include/need/xf_structs.hpp:1446 in mat2axi                                                   |
+| dataflow        |                                                                                                                                  | include/need/xf_structs.hpp:1477 in mat2axi                                                   |
+| dataflow        |                                                                                                                                  | include/need/xf_structs.hpp:1507 in mat2axi                                                   |
+| inline          | OFF                                                                                                                              | include/need/xf_utility.hpp:34 in ptr2xfmat                                                   |
+| pipeline        | II = 1                                                                                                                           | include/need/xf_utility.hpp:39 in ptr2xfmat                                                   |
+| loop_tripcount  | min = c_TRIP_COUNT max = c_TRIP_COUNT                                                                                            | include/need/xf_utility.hpp:40 in ptr2xfmat                                                   |
+| inline          | OFF                                                                                                                              | include/need/xf_utility.hpp:52 in xfmat2ptr                                                   |
+| pipeline        | II = 1                                                                                                                           | include/need/xf_utility.hpp:58 in xfmat2ptr                                                   |
+| loop_tripcount  | min = c_TRIP_COUNT max = c_TRIP_COUNT                                                                                            | include/need/xf_utility.hpp:59 in xfmat2ptr                                                   |
+| inline          | OFF                                                                                                                              | include/need/xf_utility.hpp:74 in xfduplicatemat_ptrmat                                       |
+| pipeline        | II = 1                                                                                                                           | include/need/xf_utility.hpp:80 in xfduplicatemat_ptrmat                                       |
+| loop_tripcount  | min = c_TRIP_COUNT max = c_TRIP_COUNT                                                                                            | include/need/xf_utility.hpp:81 in xfduplicatemat_ptrmat                                       |
+| inline          | OFF                                                                                                                              | include/need/xf_utility.hpp:100 in xfduplicatemat_ptrmat2                                     |
+| pipeline        | II = 1                                                                                                                           | include/need/xf_utility.hpp:106 in xfduplicatemat_ptrmat2                                     |
+| loop_tripcount  | min = c_TRIP_COUNT max = c_TRIP_COUNT                                                                                            | include/need/xf_utility.hpp:107 in xfduplicatemat_ptrmat2                                     |
+| inline          | OFF                                                                                                                              | include/need/xf_utility.hpp:128 in xfduplicatemat_ptr_mat_axi                                 |
+| pipeline        | II = 1                                                                                                                           | include/need/xf_utility.hpp:134 in xfduplicatemat_ptr_mat_axi                                 |
+| loop_tripcount  | min = c_TRIP_COUNT max = c_TRIP_COUNT                                                                                            | include/need/xf_utility.hpp:135 in xfduplicatemat_ptr_mat_axi                                 |
+| inline          | OFF                                                                                                                              | include/need/xf_utility.hpp:155 in xfmat2axi_strm                                             |
+| pipeline        | II = 1                                                                                                                           | include/need/xf_utility.hpp:161 in xfmat2axi_strm                                             |
+| loop_tripcount  | min = c_TRIP_COUNT max = c_TRIP_COUNT                                                                                            | include/need/xf_utility.hpp:162 in xfmat2axi_strm                                             |
+| inline          | OFF                                                                                                                              | include/need/xf_utility.hpp:178 in axi_strm2xfmat                                             |
+| pipeline        | II = 1                                                                                                                           | include/need/xf_utility.hpp:184 in axi_strm2xfmat                                             |
+| loop_tripcount  | min = c_TRIP_COUNT max = c_TRIP_COUNT                                                                                            | include/need/xf_utility.hpp:185 in axi_strm2xfmat                                             |
+| inline          | OFF                                                                                                                              | include/need/xf_utility.hpp:201 in xfduplicatemat_ptr_axi                                     |
+| pipeline        | II = 1                                                                                                                           | include/need/xf_utility.hpp:207 in xfduplicatemat_ptr_axi                                     |
+| loop_tripcount  | min = c_TRIP_COUNT max = c_TRIP_COUNT                                                                                            | include/need/xf_utility.hpp:208 in xfduplicatemat_ptr_axi                                     |
+| inline          | OFF                                                                                                                              | include/need/xf_utility.hpp:230 in xfsetborder                                                |
+| unroll          |                                                                                                                                  | include/need/xf_utility.hpp:242 in xfsetborder                                                |
+| unroll          |                                                                                                                                  | include/need/xf_utility.hpp:244 in xfsetborder                                                |
+| inline          |                                                                                                                                  | include/need/xf_utility.hpp:299 in xfpackpixels                                               |
+| unroll          |                                                                                                                                  | include/need/xf_utility.hpp:305 in xfpackpixels                                               |
+| inline          | off                                                                                                                              | include/need/xf_utility.hpp:317 in xfextractpixels                                            |
+| unroll          |                                                                                                                                  | include/need/xf_utility.hpp:326 in xfextractpixels                                            |
+| inline          |                                                                                                                                  | include/need/xf_utility.hpp:349 in xfextractdata                                              |
+| inline          |                                                                                                                                  | include/need/xf_utility.hpp:369 in xfcopydata                                                 |
+| loop_tripcount  | min=6 max=6                                                                                                                      | include/need/xf_utility.hpp:377 in xfcopydata                                                 |
+| unroll          |                                                                                                                                  | include/need/xf_utility.hpp:378 in xfcopydata                                                 |
+| loop_tripcount  | min=IN_BH max=IN_BH                                                                                                              | include/need/xf_utility.hpp:448 in xfduplicatestream                                          |
+| loop_flatten    | off                                                                                                                              | include/need/xf_utility.hpp:449 in xfduplicatestream                                          |
+| pipeline        |                                                                                                                                  | include/need/xf_utility.hpp:453 in xfduplicatestream                                          |
+| loop_tripcount  | min=IN_BW max=IN_BW                                                                                                              | include/need/xf_utility.hpp:454 in xfduplicatestream                                          |
+| loop_tripcount  | min=1 max=TRIPCOUNT                                                                                                              | include/need/xf_utility.hpp:479 in array2hlsstrm                                              |
+| pipeline        |                                                                                                                                  | include/need/xf_utility.hpp:480 in array2hlsstrm                                              |
+| loop_tripcount  | min=1 max=TRIPCOUNT                                                                                                              | include/need/xf_utility.hpp:515 in hlsstrm2xfmat                                              |
+| pipeline        |                                                                                                                                  | include/need/xf_utility.hpp:516 in hlsstrm2xfmat                                              |
+| loop_tripcount  | min=1 max=TRIPCOUNT                                                                                                              | include/need/xf_utility.hpp:594 in axistrm2hlsstrm                                            |
+| pipeline        |                                                                                                                                  | include/need/xf_utility.hpp:595 in axistrm2hlsstrm                                            |
+| dataflow        |                                                                                                                                  | include/need/xf_utility.hpp:605 in axistrm2xfmat                                              |
+| loop_tripcount  | min=1 max=TRIPCOUNT                                                                                                              | include/need/xf_utility.hpp:654 in xfmat2hlsstrm                                              |
+| pipeline        |                                                                                                                                  | include/need/xf_utility.hpp:655 in xfmat2hlsstrm                                              |
+| loop_tripcount  | min=1 max=TRIPCOUNT                                                                                                              | include/need/xf_utility.hpp:700 in hlsstrm2array                                              |
+| pipeline        |                                                                                                                                  | include/need/xf_utility.hpp:701 in hlsstrm2array                                              |
+| loop_tripcount  | min=1 max=TRIPCOUNT                                                                                                              | include/need/xf_utility.hpp:743 in hlsstrm2axistrm                                            |
+| pipeline        |                                                                                                                                  | include/need/xf_utility.hpp:744 in hlsstrm2axistrm                                            |
+| dataflow        |                                                                                                                                  | include/need/xf_utility.hpp:755 in xfmat2axistrm                                              |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:46 in window<rows, cols, t>                                     |
+| array_partition | variable=val dim=1 complete                                                                                                      | include/need/xf_video_mem.hpp:47 in window<rows, cols, t>, val                                |
+| array_partition | variable=val dim=2 complete                                                                                                      | include/need/xf_video_mem.hpp:48 in window<rows, cols, t>, val                                |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:112 in shift_pixels_left                                        |
+| unroll          |                                                                                                                                  | include/need/xf_video_mem.hpp:124 in shift_pixels_left                                        |
+| unroll          |                                                                                                                                  | include/need/xf_video_mem.hpp:128 in shift_pixels_left                                        |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:156 in shift_pixels_right                                       |
+| unroll          |                                                                                                                                  | include/need/xf_video_mem.hpp:168 in shift_pixels_right                                       |
+| unroll          |                                                                                                                                  | include/need/xf_video_mem.hpp:172 in shift_pixels_right                                       |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:200 in shift_pixels_up                                          |
+| unroll          |                                                                                                                                  | include/need/xf_video_mem.hpp:212 in shift_pixels_up                                          |
+| unroll          |                                                                                                                                  | include/need/xf_video_mem.hpp:216 in shift_pixels_up                                          |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:244 in shift_pixels_down                                        |
+| unroll          |                                                                                                                                  | include/need/xf_video_mem.hpp:256 in shift_pixels_down                                        |
+| unroll          |                                                                                                                                  | include/need/xf_video_mem.hpp:260 in shift_pixels_down                                        |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:287 in insert_pixel                                             |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:320 in insert_row                                               |
+| unroll          |                                                                                                                                  | include/need/xf_video_mem.hpp:332 in insert_row                                               |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:359 in insert_top_row                                           |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:392 in insert_bottom_row                                        |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:425 in insert_col                                               |
+| unroll          |                                                                                                                                  | include/need/xf_video_mem.hpp:437 in insert_col                                               |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:464 in insert_left_col                                          |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:497 in insert_right_col                                         |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:530 in getval                                                   |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:542 in operator()                                               |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:579 in shift_left                                               |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:592 in shift_right                                              |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:605 in shift_up                                                 |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:618 in shift_down                                               |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:631 in insert                                                   |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:644 in insert_top                                               |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:657 in insert_bottom                                            |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:670 in insert_left                                              |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:683 in insert_right                                             |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:700 in linebuffer<rows, cols, t, mem_type, reshape_factor>      |
+| dependence      | variable=val inter false                                                                                                         | include/need/xf_video_mem.hpp:701 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val |
+| dependence      | variable=val intra false                                                                                                         | include/need/xf_video_mem.hpp:702 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val |
+| array_partition | variable=val complete dim=1                                                                                                      | include/need/xf_video_mem.hpp:755 in linebuffer<rows, cols, t, mem_type, reshape_factor>, val |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:813 in shift_pixels_down                                        |
+| unroll          |                                                                                                                                  | include/need/xf_video_mem.hpp:826 in shift_pixels_down                                        |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:856 in shift_pixels_up                                          |
+| unroll          |                                                                                                                                  | include/need/xf_video_mem.hpp:869 in shift_pixels_up                                          |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:898 in insert_bottom_row                                        |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:931 in insert_top_row                                           |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:964 in get_col                                                  |
+| unroll          |                                                                                                                                  | include/need/xf_video_mem.hpp:970 in get_col                                                  |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:981 in getval                                                   |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:992 in operator()                                               |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:1004 in shift_down                                              |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:1016 in shift_up                                                |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:1028 in insert_bottom                                           |
+| inline          |                                                                                                                                  | include/need/xf_video_mem.hpp:1040 in insert_top                                              |
++-----------------+----------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+
+
+

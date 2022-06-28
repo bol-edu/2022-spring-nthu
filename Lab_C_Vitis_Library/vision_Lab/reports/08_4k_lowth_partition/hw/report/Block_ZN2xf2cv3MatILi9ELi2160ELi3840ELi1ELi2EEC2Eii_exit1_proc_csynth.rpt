@@ -1,0 +1,172 @@
+
+
+================================================================
+== Vitis HLS Report for 'Block_ZN2xf2cv3MatILi9ELi2160ELi3840ELi1ELi2EEC2Eii_exit1_proc'
+================================================================
+* Date:           Sun May  1 11:31:58 2022
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:47:39 MDT 2021)
+* Project:        color_detect
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu50-fsvh2104-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|      0 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    0|    0|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+--------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT  | URAM|
++---------------------+---------+------+---------+--------+-----+
+|DSP                  |        -|     -|        -|       -|    -|
+|Expression           |        -|     -|        0|       2|    -|
+|FIFO                 |        -|     -|        -|       -|    -|
+|Instance             |        -|     -|        -|       -|    -|
+|Memory               |        -|     -|        -|       -|    -|
+|Multiplexer          |        -|     -|        -|     135|    -|
+|Register             |        -|     -|      450|       -|    -|
++---------------------+---------+------+---------+--------+-----+
+|Total                |        0|     0|      450|     137|    0|
++---------------------+---------+------+---------+--------+-----+
+|Available SLR        |     1344|  2976|   871680|  435840|  320|
++---------------------+---------+------+---------+--------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|      ~0|    0|
++---------------------+---------+------+---------+--------+-----+
+|Available            |     2688|  5952|  1743360|  871680|  640|
++---------------------+---------+------+---------+--------+-----+
+|Utilization (%)      |        0|     0|       ~0|      ~0|    0|
++---------------------+---------+------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------+----+-----------+-----+-----------+
+    |     Name     | LUT| Input Size| Bits| Total Bits|
+    +--------------+----+-----------+-----+-----------+
+    |ap_done       |   9|          2|    1|          2|
+    |ap_return_0   |   9|          2|   32|         64|
+    |ap_return_1   |   9|          2|   32|         64|
+    |ap_return_10  |   9|          2|   32|         64|
+    |ap_return_11  |   9|          2|   32|         64|
+    |ap_return_12  |   9|          2|   32|         64|
+    |ap_return_13  |   9|          2|   32|         64|
+    |ap_return_2   |   9|          2|   32|         64|
+    |ap_return_3   |   9|          2|   32|         64|
+    |ap_return_4   |   9|          2|   32|         64|
+    |ap_return_5   |   9|          2|   32|         64|
+    |ap_return_6   |   9|          2|   32|         64|
+    |ap_return_7   |   9|          2|   32|         64|
+    |ap_return_8   |   9|          2|   32|         64|
+    |ap_return_9   |   9|          2|   32|         64|
+    +--------------+----+-----------+-----+-----------+
+    |Total         | 135|         30|  449|        898|
+    +--------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------+----+----+-----+-----------+
+    |        Name       | FF | LUT| Bits| Const Bits|
+    +-------------------+----+----+-----+-----------+
+    |ap_CS_fsm          |   1|   0|    1|          0|
+    |ap_done_reg        |   1|   0|    1|          0|
+    |ap_return_0_preg   |  32|   0|   32|          0|
+    |ap_return_10_preg  |  32|   0|   32|          0|
+    |ap_return_11_preg  |  32|   0|   32|          0|
+    |ap_return_12_preg  |  32|   0|   32|          0|
+    |ap_return_13_preg  |  32|   0|   32|          0|
+    |ap_return_1_preg   |  32|   0|   32|          0|
+    |ap_return_2_preg   |  32|   0|   32|          0|
+    |ap_return_3_preg   |  32|   0|   32|          0|
+    |ap_return_4_preg   |  32|   0|   32|          0|
+    |ap_return_5_preg   |  32|   0|   32|          0|
+    |ap_return_6_preg   |  32|   0|   32|          0|
+    |ap_return_7_preg   |  32|   0|   32|          0|
+    |ap_return_8_preg   |  32|   0|   32|          0|
+    |ap_return_9_preg   |  32|   0|   32|          0|
+    +-------------------+----+----+-----+-----------+
+    |Total              | 450|   0|  450|          0|
+    +-------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------+-----+-----+------------+-----------------------------------------------------------------+--------------+
+|   RTL Ports  | Dir | Bits|  Protocol  |                          Source Object                          |    C Type    |
++--------------+-----+-----+------------+-----------------------------------------------------------------+--------------+
+|ap_clk        |   in|    1|  ap_ctrl_hs|  Block__ZN2xf2cv3MatILi9ELi2160ELi3840ELi1ELi2EEC2Eii.exit1_proc|  return value|
+|ap_rst        |   in|    1|  ap_ctrl_hs|  Block__ZN2xf2cv3MatILi9ELi2160ELi3840ELi1ELi2EEC2Eii.exit1_proc|  return value|
+|ap_start      |   in|    1|  ap_ctrl_hs|  Block__ZN2xf2cv3MatILi9ELi2160ELi3840ELi1ELi2EEC2Eii.exit1_proc|  return value|
+|ap_done       |  out|    1|  ap_ctrl_hs|  Block__ZN2xf2cv3MatILi9ELi2160ELi3840ELi1ELi2EEC2Eii.exit1_proc|  return value|
+|ap_continue   |   in|    1|  ap_ctrl_hs|  Block__ZN2xf2cv3MatILi9ELi2160ELi3840ELi1ELi2EEC2Eii.exit1_proc|  return value|
+|ap_idle       |  out|    1|  ap_ctrl_hs|  Block__ZN2xf2cv3MatILi9ELi2160ELi3840ELi1ELi2EEC2Eii.exit1_proc|  return value|
+|ap_ready      |  out|    1|  ap_ctrl_hs|  Block__ZN2xf2cv3MatILi9ELi2160ELi3840ELi1ELi2EEC2Eii.exit1_proc|  return value|
+|ap_return_0   |  out|   32|  ap_ctrl_hs|  Block__ZN2xf2cv3MatILi9ELi2160ELi3840ELi1ELi2EEC2Eii.exit1_proc|  return value|
+|ap_return_1   |  out|   32|  ap_ctrl_hs|  Block__ZN2xf2cv3MatILi9ELi2160ELi3840ELi1ELi2EEC2Eii.exit1_proc|  return value|
+|ap_return_2   |  out|   32|  ap_ctrl_hs|  Block__ZN2xf2cv3MatILi9ELi2160ELi3840ELi1ELi2EEC2Eii.exit1_proc|  return value|
+|ap_return_3   |  out|   32|  ap_ctrl_hs|  Block__ZN2xf2cv3MatILi9ELi2160ELi3840ELi1ELi2EEC2Eii.exit1_proc|  return value|
+|ap_return_4   |  out|   32|  ap_ctrl_hs|  Block__ZN2xf2cv3MatILi9ELi2160ELi3840ELi1ELi2EEC2Eii.exit1_proc|  return value|
+|ap_return_5   |  out|   32|  ap_ctrl_hs|  Block__ZN2xf2cv3MatILi9ELi2160ELi3840ELi1ELi2EEC2Eii.exit1_proc|  return value|
+|ap_return_6   |  out|   32|  ap_ctrl_hs|  Block__ZN2xf2cv3MatILi9ELi2160ELi3840ELi1ELi2EEC2Eii.exit1_proc|  return value|
+|ap_return_7   |  out|   32|  ap_ctrl_hs|  Block__ZN2xf2cv3MatILi9ELi2160ELi3840ELi1ELi2EEC2Eii.exit1_proc|  return value|
+|ap_return_8   |  out|   32|  ap_ctrl_hs|  Block__ZN2xf2cv3MatILi9ELi2160ELi3840ELi1ELi2EEC2Eii.exit1_proc|  return value|
+|ap_return_9   |  out|   32|  ap_ctrl_hs|  Block__ZN2xf2cv3MatILi9ELi2160ELi3840ELi1ELi2EEC2Eii.exit1_proc|  return value|
+|ap_return_10  |  out|   32|  ap_ctrl_hs|  Block__ZN2xf2cv3MatILi9ELi2160ELi3840ELi1ELi2EEC2Eii.exit1_proc|  return value|
+|ap_return_11  |  out|   32|  ap_ctrl_hs|  Block__ZN2xf2cv3MatILi9ELi2160ELi3840ELi1ELi2EEC2Eii.exit1_proc|  return value|
+|ap_return_12  |  out|   32|  ap_ctrl_hs|  Block__ZN2xf2cv3MatILi9ELi2160ELi3840ELi1ELi2EEC2Eii.exit1_proc|  return value|
+|ap_return_13  |  out|   32|  ap_ctrl_hs|  Block__ZN2xf2cv3MatILi9ELi2160ELi3840ELi1ELi2EEC2Eii.exit1_proc|  return value|
+|rows          |   in|   32|     ap_none|                                                             rows|        scalar|
+|cols          |   in|   32|     ap_none|                                                             cols|        scalar|
++--------------+-----+-----+------------+-----------------------------------------------------------------+--------------+
+

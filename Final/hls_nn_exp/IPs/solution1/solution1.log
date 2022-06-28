@@ -1,0 +1,145 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.006 seconds; current allocated memory: 1.252 GB.
+INFO: [HLS 200-10] Analyzing design file 'test/windex.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 8.415 seconds; current allocated memory: 1.252 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>::read_nb(hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>&)' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_axi_sdata.h:314:57)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>::read_nb(hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>&)' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_axi_sdata.h:317:61)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>::read_nb(hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>&)' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_axi_sdata.h:317:43)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>::read_nb(hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>&)' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_axi_sdata.h:316:54)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>::read_nb(hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>&)' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_axi_sdata.h:315:46)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>::read_nb(hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>&)' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_axi_sdata.h:315:30)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>::write(hls::axis<ap_uint<8>, 0ul, 0ul, 0ul> const&)' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_axi_sdata.h:304:51)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>::write(hls::axis<ap_uint<8>, 0ul, 0ul, 0ul> const&)' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_axi_sdata.h:307:26)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>::write(hls::axis<ap_uint<8>, 0ul, 0ul, 0ul> const&)' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_axi_sdata.h:306:68)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>::write(hls::axis<ap_uint<8>, 0ul, 0ul, 0ul> const&)' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_axi_sdata.h:306:37)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>::write(hls::axis<ap_uint<8>, 0ul, 0ul, 0ul> const&)' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_axi_sdata.h:305:40)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>::write(hls::axis<ap_uint<8>, 0ul, 0ul, 0ul> const&)' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_axi_sdata.h:305:24)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>::read_nb(hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>&)' into 'windex(hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>*, hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>&, int&, int&)' (test/windex.cpp:18:13)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>::write(hls::axis<ap_uint<8>, 0ul, 0ul, 0ul> const&)' into 'windex(hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>*, hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>&, int&, int&)' (test/windex.cpp:30:9)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::operator unsigned long long() const' into 'windex(hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>*, hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>&, int&, int&)' (test/windex.cpp:20:13)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<8>s.i8' into 'windex(hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>*, hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>&, int&, int&)' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_axi_sdata.h:314:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i1.s_struct.ap_uint<1>s' into 'windex(hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>*, hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>&, int&, int&)' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i8.s_struct.ap_uint<8>s' into 'windex(hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>*, hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>&, int&, int&)' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<1>s.i1' into 'windex(hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>*, hls::stream<hls::axis<ap_uint<8>, 0ul, 0ul, 0ul>, 0>&, int&, int&)' (D:/Xilinx/Vitis_HLS/2021.2/common/technology/autopilot\ap_axi_sdata.h:314:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 5.417 seconds; current allocated memory: 1.252 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 1.252 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.487 seconds; current allocated memory: 1.252 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.293 seconds; current allocated memory: 1.252 GB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_21_1' (test/windex.cpp:21) in function 'windex' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_24_2' (test/windex.cpp:24) in function 'windex' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.145 seconds; current allocated memory: 1.252 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.252 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'windex' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'windex_Pipeline_VITIS_LOOP_21_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_21_1'.
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln21', test/windex.cpp:21)) in the first pipeline iteration (II = 1 cycles).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'VITIS_LOOP_21_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.042 seconds; current allocated memory: 1.252 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.158 seconds; current allocated memory: 1.252 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'windex_Pipeline_VITIS_LOOP_24_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_24_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_24_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.054 seconds; current allocated memory: 1.252 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.055 seconds; current allocated memory: 1.252 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'windex' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.037 seconds; current allocated memory: 1.252 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.252 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'windex_Pipeline_VITIS_LOOP_21_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'windex_Pipeline_VITIS_LOOP_21_1' pipeline 'VITIS_LOOP_21_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'windex_Pipeline_VITIS_LOOP_21_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.205 seconds; current allocated memory: 1.252 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'windex_Pipeline_VITIS_LOOP_24_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'windex_Pipeline_VITIS_LOOP_24_2' pipeline 'VITIS_LOOP_24_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'windex_Pipeline_VITIS_LOOP_24_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.156 seconds; current allocated memory: 1.252 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'windex' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'windex/pout8_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'windex/pout8_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'windex/pout8_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'windex/pout8_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'windex/word_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'windex/word_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'windex/word_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'windex/word_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'windex/recv' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'windex/sent' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'windex' to 'ap_ctrl_none'.
+INFO: [RTGEN 206-100] Bundling port 'recv', 'sent' and 'ap_local_deadlock' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'windex'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.086 seconds; current allocated memory: 1.252 GB.
+INFO: [RTMG 210-279] Implementing memory 'windex_cname_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.469 seconds; current allocated memory: 1.252 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.359 seconds; current allocated memory: 1.252 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for windex.
+INFO: [VLOG 209-307] Generating Verilog RTL for windex.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 148.28 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 17.577 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 1 seconds. Total elapsed time: 20.251 seconds; peak allocated memory: 1.252 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -version=2.0.1
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -version 2.0.1 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file test/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 71.729 seconds; current allocated memory: 2.816 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 73.443 seconds; peak allocated memory: 1.258 GB.
